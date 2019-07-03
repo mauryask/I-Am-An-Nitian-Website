@@ -1,0 +1,303 @@
+*{
+    word-wrap: break-word;
+    font-family: sans-serif;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    outline:none;
+  }
+
+  body{
+    background: rgba(250,250,250,1);
+}
+
+#loader{
+  width:100%;
+  height:100vh;
+  background:#DfDfDf url('loader.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:18rem;
+  position: fixed;
+  z-index:555;
+}
+
+
+  html{
+ scroll-behavior: smooth;
+  }
+
+  .wrapper{
+    width:100%;
+    height:100%;
+    position:absolute;
+    }
+  
+  .explore{
+      width:75%;
+      margin:6rem 0 2rem 0;
+  }
+  
+  .explore .expo{
+      display:flex;
+      flex-direction:row;
+      justify-content:space-evenly;
+      margin:0 1rem 0 1rem;
+  }
+  
+  
+  .explore .expo  div{
+  
+      flex:1 1rem;
+      height:auto;
+      border-radius:12px;
+      box-shadow:1px 1px 1px 1px rgba(220,220,220,1);
+      margin:1.3rem;
+      cursor: pointer;
+  }
+  
+  .explore .expo div img{
+   width:100px;
+   height:100px;
+   left:50%;
+   transform: translate(-50%);
+   position: relative;
+   margin-top:1rem;
+     }
+  
+  .explore .expo div p{
+   text-align:center;
+      color:gray;
+      padding: 0.5rem 0 0.5rem 0;
+  }
+  
+  .explore .expo  .xnnn{
+      margin:1rem;
+      height:auto;
+      border-radius:0;
+  box-shadow:none;
+  }
+  
+  .explore .expo  .xnnn p{
+      padding:5px 5px 2px 5px;
+      color:rgba(70,70,70,1);
+      text-align:justify;
+      line-height:1.4rem;
+      font-size: 15px;
+  }
+  
+  
+  
+  .explore .expo  .xnnn p a
+  {
+   cursor: pointer;
+  text-decoration: none;
+  padding:5px;
+  border-radius:2px;
+  font-weight: bold;
+  font-size:15px;
+    }
+  
+  
+    .explore .expo  .xnnn p a:hover
+    {
+     color:rgba(256,0,0,0.8);
+      }
+  
+     .explore .expo .xnnn .zoom{
+      width:100%;
+      height:125px;
+      margin:0;
+      padding: 0;
+      overflow: hidden;
+      border-radius: 0;
+      box-shadow: none;
+     }
+  .explore .expo .xnnn img,video{
+      outline: none;
+     width:100%;
+    height:125px;
+      margin-top:0;
+      cursor:pointer;
+           transition: all 0.4s ease;
+        }
+  
+        .explore .expo .xnnn img:hover{
+            outline: none;
+            width:110%;
+            height:130px;
+        }
+  
+        .explore .expo .xnnn video{
+           height:130px;
+        }
+   .explore .expo .xnnn video:hover{
+     height:135px;
+     width:101%;
+  }
+  
+ 
+  
+  
+  /*scroll Indicator*/
+        .progress-container {
+          width: 100%;
+          height: 6px;
+          background:rgba(80,80,80,0.1);
+          z-index: 1;
+          position: fixed;
+        }
+        
+        .progress-bar {
+          height: 6px;
+          background:  #4caf50;
+          width: 0%;
+        }
+
+
+  /*================= Ad Side Bar =================*/
+
+  .nad{
+      width:25%;
+      top:7rem;
+      right:0;
+      position: absolute;
+  }
+
+  
+.nad .nad-img{
+    width:100%;
+    height:250px;
+}
+
+  /*================= Custom Scroll Bar =================*/
+  
+  /* width */
+  ::-webkit-scrollbar {
+      width: 13px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1; 
+    }
+     
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: rgb(168, 166, 166); 
+    }
+    
+  
+/*================  Fooetr Section Common to all  =================*/ 
+    	
+.datay{
+	background:rgba(0,0,0,0.9);
+	width:100%; 
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+.datay div{
+   flex-basis: 12rem;
+ margin:1.5rem;
+ height:200px;
+ color:white;
+}
+
+.datay div a{
+text-decoration: none;
+color:rgba(256,256,256,0.7);
+	 }
+
+	 .datay div a:hover
+	 {
+		color:rgba(256,256,256,1);
+	 }
+	
+
+.datay div p{
+line-height:2rem;
+padding-left:10px;
+font-size:14.2px;
+letter-spacing: 0.7px;
+ }
+
+ .datay div .y{
+	 letter-spacing: 0.8px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color:rgba(256,256,256,0.7);
+ }
+
+ .datay div .linex{
+	 width:3rem;
+	 height:3px;
+	 background:rgba(255,165,0,0.55);
+	 margin:0;
+	margin-left:0.6rem;
+ }
+
+ .datad{
+  width:100%;
+  background: rgba(0,0,0,0.8);
+  box-shadow:1px 0 1px 0 rgba(0,0,0,0.6);
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+    
+  }
+   .datad p{
+  text-align:center;
+  color:rgba(256,256,256,0.7);
+  font-size:16px;
+  font-weight: normal;
+  letter-spacing:0.7px;
+  }
+   .datad .x{
+  letter-spacing: 0;
+    margin-bottom:12px;
+  font-size: 24px;
+  text-transform:uppercase;
+  font-weight:bold;
+  text-align:center;
+  }
+
+.container{
+  background:rgba(0,0,0,0.9);
+  width:100%;
+padding-top:1.6rem;
+padding-bottom:1.6rem;
+}
+
+.container p{
+  font-size:12.3px;
+   letter-spacing:0.8px;
+  font-weight:bold;
+  color:rgba(256,256,256,0.7);
+  text-align:center;
+}
+
+/*================  Fooetr Section  =================*/ 
+
+footer{
+	margin-top:3%;
+}
+
+
+
+
+
+/*scroll Indicator*/
+ .progress-container {
+  width: 100%;
+  height: 6px;
+  background:rgba(80,80,80,0.1);
+  z-index: 1;
+  position: fixed;
+}
+
+ .progress-bar {
+  height: 6px;
+  background:  #4caf50;
+  width: 0%;
+}

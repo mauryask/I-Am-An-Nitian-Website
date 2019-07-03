@@ -1,0 +1,554 @@
+/*
+* I AM AN NITIAN
+* v1.0
+* Start Date : May 17 2019
+* Developer : Shubham Maurya
+* National Institute Of Technology Srinagar J&K India 190006
+* GitHub : https://github.com/pnstech
+* LinkedIn : https://www.linkedin.com/in/cyberthreatatnit/
+*/
+
+*{
+  font-family: sans-serif;
+  word-wrap:break-word;
+}
+
+body{
+  overflow-x:hidden;
+  outline:none;
+ }
+ 
+ /*------------------------*/
+ 
+  #mySidenav, #mySidenavx{
+ float:right;
+ }
+ #mySidenav a, #mySidenavx a{
+   position: absolute;
+   right: -15px;
+   transition: 0.2s;
+   width: 10px;
+   padding:20px 28px 0 25px;
+   text-decoration: none;
+   font-size: 20px;
+   color: white;
+   border-radius: 4px 0 0 4px;
+   letter-spacing:0.2px;
+ }
+ 
+ 
+  #mySidenav a:hover, #mySidenavx a:hover {
+   right:-10px;
+ }
+ 
+ #feedback{
+ top:150%;
+   background-color: #4CAF50;
+   height:120px;
+   cursor: pointer;
+ }
+
+ #update{
+  top:170%;
+    background-color: #4CAF50;
+    height:112px;
+    cursor: pointer;
+  }
+ 
+ #feedback span, #update span{
+   transform: rotate(90deg);
+   transform-origin: left 0;
+   float: left;
+   font-weight:bold;
+   font-size:17px;
+ }
+ 
+ 
+ /* feedback popup*/
+ 
+ .popup, .popupx{
+             background:transparent;
+             width:100%;
+             height: 100vh;
+             position:absolute;
+             top:120%;
+             display: flex;
+             justify-content: flex-end;
+             align-items: center;
+             text-align: center;
+             transform-origin:right;
+             transform:scaleX(0);
+             position: absolute;
+             z-index:1;
+         }
+ 
+         .popup .popup-content{
+             height:auto;
+             width:430px;
+             box-shadow:0 0 4px 2px rgba(0,0,0,0.7);
+               background:rgba(252,252,252,1);
+             border-radius:5px 0 0 5px;
+             position:relative;
+         }
+
+         .popup .popup-content p,.popupx .popupx-content .uph{
+           color:rgba(80,80,80,1);
+           font-size:23px;
+           font-weight:bold;
+           text-align: center;
+         text-transform: uppercase;
+         margin:5% 0 5% 0;
+         }
+ 
+ 
+      .popup .popup-content   input,.textarr{
+        resize: none;
+               margin:20px auto;
+             display:block;
+             width:85%;
+             padding: 8px;
+           text-align: center;
+           border-radius:4px;
+           outline: none;
+           border: 1px solid rgba(200,200,200,1);
+           background: transparent;
+           font-size:15px;
+           color:rgba(130,130,130,1);
+           letter-spacing:0.6px;
+         }
+ 
+       
+ 
+         .popup .popup-content .close, .popupx .popupx-content .close{
+             top:5px;
+             left:5px;
+             position:absolute;
+             border-radius:50%;
+             cursor:pointer;
+             opacity:0.7;
+         }
+ 
+         .popup .popup-content .btn-send{
+           padding:10px;
+           background:#4CAF50;
+               cursor:pointer;
+               color:white;
+               border:none;
+               outline:none;
+               margin-top:10% 0 5% 0;
+         }
+ 
+
+/*============ Update Popup  ================*/
+
+.popupx .popupx-content{
+  height:auto;
+  width:370px;
+  box-shadow:0 0 4px 2px rgba(0,0,0,0.7);
+    background:rgba(252,252,252,1);
+  border-radius:5px 0 0 5px;
+  position:relative;
+}
+
+.popupx .popupx-content .upd{
+display: flex;
+flex-direction:column;
+align-items: center;
+justify-content: center;
+margin:10px 25px 25px 25px;
+}
+
+.popupx .popupx-content .upd .updx{
+width:100%;
+height:80px;
+text-align:justify;
+padding:10px 0 8px 0;
+border-bottom:1px solid rgba(200,200,200,1);
+color:rgba(20,20,20,1);
+line-height:20px;
+}
+
+  .popupx .popupx-content .upd .updx p .blinker{
+    animation: blinker 1.5s linear infinite;
+    font-size:13px;
+ background: -webkit-linear-gradient(45deg,rgba(256,0,0,0.6),rgba(0,256,0,0.6),yellow);
+    padding:2px 10px 2px 10px;
+    width: 160px;
+    height:130px;
+    border-radius: 50%;
+    font-style: italic;
+    color:rgba(0,0,0,1);
+    font-family:Arial, Helvetica, sans-serif;
+    letter-spacing: 0.4px;
+    }
+    @keyframes blinker {
+
+    0%{
+  opacity:0.2;
+
+    }
+
+    50%{
+      opacity:0.6;
+
+    }
+
+   100%{
+      opacity:1;
+  
+    }
+    }
+
+
+.up-line{
+  width:80px;
+  height:3px;
+  background:red;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  position: relative;
+}
+
+ 
+         /*Signup popup*/
+ 
+         .signup{
+           background: rgba(0,0,0,0.7);
+           width:100%;
+           height: 100vh; /*it covers entire verrical height(full screen)*/
+           top:0;
+           position: fixed;
+           z-index:4;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           transform-origin: bottom;
+           transform:scaleY(0);
+            }
+ 
+            .signup .sign-card{
+             
+                box-shadow:5px 5px 5px 5px rgba(0,0,0,0.9);
+                background:rgba(220,220,220,1);
+                 width:60%;
+                height:auto;
+                display:flex;
+                border-radius:0.4%;
+              }
+              
+              .sign-card div{
+                flex:1 1 50%;
+              }
+ 
+              .sign-card .sign-img{
+                display:flex;
+              }
+             
+              .sign-card .sign-img  .links .msgx{
+                width:100%;
+                color:red;
+                height:25px;
+                text-align:center;
+                font-size:15px;
+                letter-spacing: 0.1px;
+              }
+
+              .sign-card .sign-img .links{
+               flex:1 1 100%;
+               border-right:1px solid rgba(200,200,200,1);
+              }
+ 
+              .sign-card .sign-img div ul {
+                margin:14% 3% 0 3%;
+              padding:2%;
+              border-radius: 5px;
+              background: rgba(200,200,200,1);
+              box-shadow: 0 5px 5px 0 rgba(230,230,230,1);
+              }
+              .sign-card .sign-img .links ul li{
+              list-style-type:none;
+              border: 1px solid rgba(170,170,170,1);
+              text-align: center;
+              border-radius: 5px;
+              padding:2%;
+              margin: 3px;
+              background: rgba(230,230,230,1);
+              cursor: pointer;
+             }
+ 
+             .sign-card .sign-img .links ul a li{
+               text-decoration:none;
+               font-size: 15px;
+               color:rgba(80,80,80,1);
+              }
+              .sign-card .sign-img .links ul a {
+               text-decoration:none;
+              }
+              .sign-card .sign-img .links ul a li:hover{
+              background: white;
+              transition: 0.2s;
+              }
+ 
+              .sign-card .sign-img div .p1{
+              font-size:18px;
+              font-weight: bold;
+              color:rgba(80,80,80,1);
+              background: rgb(0,255,255);
+              -webkit-clip-path: polygon(76% 0, 0 0, 0 44%, 79% 45%, 54% 23%);
+              clip-path: polygon(76% 0, 0 0, 0 44%, 79% 45%, 54% 23%);
+              padding:4.5% 0 22% 8%;
+              
+             }
+             .sign-card .sign-img div .p2{
+               text-decoration: none;
+               top:18%;
+              left:58%;
+               transform: translate(-18%,-58%);
+               position: relative;
+             }
+             .sign-card .sign-img div .p2 a{
+               text-decoration: none;
+               font-size:16px;
+               letter-spacing: 0.7px;
+               cursor: pointer;
+               color:rgba(110,110,110,1);
+             }
+             .sign-card .sign-img div .p2 a:hover{
+               color:red;
+              transition: 0.2s;
+             }
+ 
+              .sign-card .sign-form .cancel{
+               width:21px;
+               height:21px;
+               border-radius:50%;
+              float:right;
+              margin:6px 6px 0 0;
+               cursor:pointer;
+               opacity:0.9;
+              }
+ 
+             .sign-card .sign-form div form{
+                 display: flex;
+                 flex-direction: column;
+                 padding-top:1.5rem;
+                 align-items: center;
+                 }
+                     
+                
+               .signup .sign-card .sign-form div form input,select{
+                   margin:6px;
+                   width:80%;
+                   padding:10px 0 10px 2px;
+                   outline: none;
+                   border:none;
+                   border-bottom: 1px solid rgba(170,170,170,1);
+                   background: transparent;
+                   font-size:15px;
+                   color:rgba(100,100,100,1);
+                   letter-spacing:0.6px;
+               }
+                   .sign-card .sign-form div form button{
+                     width:80%;
+                     margin-top:2rem;
+                     padding:10px;
+                     background:#4CAF50;
+                     border:none;
+                     border-radius:4px;
+                     font-size:17px;
+                     color:white;
+                     cursor: pointer;
+                   
+                   }
+ 
+                   .sign-card .sign-form div p{
+                     text-decoration: none;
+                     margin:1.3rem 0 1.4rem 0;
+                     font-size:14px;
+                     letter-spacing:0.6px;
+                     cursor: pointer;
+                     color:rgba(58, 83, 155, 0.9);
+                     text-align:center;
+                   }
+                   .sign-card .sign-form div p:hover{
+                     color:red;
+                     transition: 0.3s;
+                   }
+                   
+              .sign-card .sign-form  .mainh{
+               color:rgba(80,80,80,1);
+               font-size:31px;
+               font-weight:bold;
+               text-align: center;
+               margin-top:35px;
+               text-transform: uppercase;
+             }
+
+ /*Login Popup*/
+
+             .login{
+               background: rgba(0,0,0,0.7);
+               width:100%;
+               height: 100vh; 
+               top:0;
+               position: fixed;
+               z-index:4;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               transform-origin: top;
+               transform:scaleY(0);
+             }
+ 
+             .login .log-card{
+               box-shadow:5px 5px 5px 5px rgba(0,0,0,0.9);
+               background:rgba(220,220,220,1);
+               width:33%;
+               height:auto;
+               display:flex;
+               flex-direction:column;
+               border-radius:1.3%;
+               position: relative;
+             }
+             .login .log-card div
+             {
+               flex:1 1 70%;
+               padding:2% 10% 0 10%;
+             }
+             .login .log-card div input
+             {
+               margin:7px;
+               width:90%;
+               padding:10px 2px 10px 2px;
+               outline: none;
+               border:none;
+               border-bottom: 1px solid rgba(170,170,170,1);
+               background: transparent;
+               font-size:15px;
+               color:rgba(100,100,100,1);
+               letter-spacing:0.6px;
+             }
+ 
+             .login .log-card .logx{
+               color:rgba(80,80,80,1);
+               font-size:31px;
+               font-weight:bold;
+               text-align: center;
+               text-transform: uppercase;
+             }
+ 
+             .login .log-card div .signx {
+               font-size: 16px;
+               text-align:center;
+               margin:20px 0 25px 0;
+               letter-spacing: 0.5px;
+             }
+ 
+             .login .log-card div .signx a{
+               color:rgba(58, 83, 155, 0.9);
+               text-decoration: none;
+               font-size:14px;
+               letter-spacing:0.8px;
+               cursor: pointer;
+               
+             }
+             .login .log-card div .signx a:hover{
+               color:rgba(256,0,0,0.7);
+               transition: 0.2s;
+               }
+ 
+              .login .log-card div .log-msg{
+                 width:100%;
+                 text-align:center;
+                 color:red;
+                 letter-spacing: 0.5px;
+                 height:30px;
+                font-size:13px;
+               }
+
+             .login .log-card div button{
+               width:90%;
+               margin:0.4rem 0 0 10px;
+               padding:10px;
+               background:#4CAF50;
+               border:none;
+               border-radius:4px;
+               font-size:17px;
+               color:white;
+               cursor: pointer;
+             }
+ 
+             .login .log-card .cancel-log
+             {
+                width:21px;
+               height:21px;
+               border-radius:50%;
+               margin:6px 0 0 6px;
+               cursor:pointer;
+               opacity:0.8;
+             }
+ 
+             /*Search popup*/
+             .search-popup
+             {
+               box-shadow:0 0 10px 0 rgba(0,0,0,0.9);
+               z-index:111;
+               width:26%;
+               right:19%;
+               top:11.2%;
+               position: fixed;
+               clip-path: polygon(93% 0, 90% 35%, 100% 47%, 100% 100%, 0 100%, 0 38%, 77% 38%);
+               padding:3.5% 7.7px 0.8% 7px;
+               background:rgba(120,120,120,1);
+               
+             }
+           
+             .search-popup div{
+               height:2.22rem;
+               overflow:hidden; 
+             }
+             .search-popup button{
+               width:10%;
+               padding:2px 7.7px 0.8% 3px;
+               height:2.22rem;
+               border:none;
+               border-left:1px solid rgba(160,160,160,1);
+               background:rgba(230,230,230,0.9);
+               border-radius:0 5px 5px 0;
+               cursor:pointer;
+               letter-spacing:0.8px;
+             }
+
+             @media (max-height:7680px) /* for search to be responsive*/
+             {
+              .search-popup button
+              {
+                padding:1.5px 7.7px 0.8% 3px;
+              }
+             }
+           
+             .search-popup i{
+               color:rgba(110,110,110,1);
+               font-size:16px;
+             }
+             .search-popup button:hover{
+               background:rgba(280,280,280,1);
+               transition: 0.2s;
+             }
+ 
+             .search-popup input
+             {
+               border-radius:5px 0 0 5px;
+               background:rgba(230,230,230,0.9);
+               text-align:center;
+               font-size:15.5px;
+               padding:2.7%;
+               width:90%;
+               height:2.22rem;
+               outline:none;
+               border:none;
+               position: relative;
+               color:rgba(110,110,110,1);
+ }
+ 

@@ -1,0 +1,432 @@
+/*
+* I AM AN NITIAN
+* v1.0
+* Start Date : May 17 2019
+* Developer : Shubham Maurya
+* National Institute Of Technology Srinagar J&K India 190006
+* GitHub : https://github.com/pnstech
+* LinkedIn : https://www.linkedin.com/in/cyberthreatatnit/
+*/
+
+
+
+/*================  Custom GOT Font  =================*/ 
+
+@font-face {
+	font-family: "got";
+	src: url("fonts/Game of Thrones.ttf");
+	}
+	
+	*{
+	outline:none;
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family:sans-serif;
+	word-wrap: break-word;
+	}
+
+	body{
+		background: rgba(250,250,250,1);
+	}
+
+/*================  Page Preloader  =================*/ 
+
+	#loader{
+		width:100%;
+		height:100vh;
+		background:#DfDfDf url('loader.gif');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size:18rem;
+		position: fixed;
+		z-index:555;
+	}
+	
+	.wrapper{
+	width:100%;
+	height:100%;
+	position:absolute;
+	}
+	
+	.wrapper .banner{
+	width:100%;
+	height:98%;
+	background:linear-gradient(rgba(256,256,256,0.05),rgba(256,256,256,0.05)), 
+	url(peopleyc.jpg) 100% 100% no-repeat;
+	background-size:cover;
+	-webkit-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 89%);
+	clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 89%);
+	background-attachment:fixed;
+	background-position:center;
+	}
+	
+	.banner .textx{
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		position:absolute;
+		width:100%;
+		text-align:center;
+	}
+	
+	.dynamic-text
+	{
+		font-weight:bold;
+		font-size:40px;
+		color:rgba(256,256,256,0.9);
+		letter-spacing:1.5px;
+		padding-bottom:20px;
+	}
+	.text{
+		color:rgba(256,0,0,0.9);
+		font-weight:bold;
+		font-size:46px;
+		text-align:center;
+		letter-spacing:2px;
+	}
+	
+	
+	 .textx .msg{
+		text-transform:uppercase;
+		color:rgba(256,256,256,0.9);
+		font-size:41px;
+		font-weight:bold;
+		padding-bottom:30px;
+	}
+	
+/*================  Join Now Button  =================*/ 
+
+	.join{
+		text-transform:uppercase;
+		color:rgba(255,255,255,0.8);
+		background:transparent;
+		padding:6.5px 70px;
+		border:2px solid rgba(255,255,255,0.8);
+		border-radius:22px;
+		font-size:16.5px;
+		font-weight:bold;
+		letter-spacing:1.6px;
+		box-sizing:border-box;
+		cursor:pointer;
+	}
+	
+	.join:hover{
+		background:rgba(253, 38, 0, 0.986);
+		color:rgba(255,255,255,0.8);
+		transition: 0.1s;
+	}
+	
+/*================  Banner Social Icons  =================*/ 
+
+	.banner .textx .social{
+		margin-top:2%;
+		
+	}
+	.banner .textx .social a{
+		text-decoration: none;
+	}
+	.banner .textx .social a img{
+		cursor: pointer;
+		width:40px;
+		height:40px;
+		border-radius: 50%;
+	    border: 2px solid rgba(250,250,250,0.8);
+		box-shadow:2px 2px 2px 1px rgba(256,0,0,0.2);
+	}
+	.banner .textx .social a img:hover{
+		border: 2px solid rgba(256,256,256,1);
+		transition:0.3s;
+	}
+	
+	/*================  Scroll Down Mouse Indecator  =================*/ 
+
+	.center{
+		top:95%;
+		left:50%;
+		transform:translate(-50%,-95%);
+		position:absolute;
+	}
+	.down{
+		position:relative;
+		width:32px;
+		height:60px;
+		border-radius:25px;
+		background:transparent;
+		border:2px solid rgba(255,255,255,0.7);
+		overflow:hidden;
+	}
+	
+	.down:before{
+		content:'';
+		position:absolute;
+		width:6px;
+		height:6px;
+		border-radius:50%;
+		background:#fff;
+		left:50%;
+		top:10px;
+		transform:translate(-50%,0);
+		animation:animate 1.2s linear infinite;
+	}
+	
+	.down:after{
+		content:'';
+		position:absolute;
+		width:5px;
+		height:14px;
+		border-radius:50%;
+		background:rgba(255,255,255,0.8);
+		left:50%;
+		top:5px;
+		transform:translate(-50%,0);
+		border-radius:3px;
+	}
+	
+	@keyframes animate{
+		0%{
+			transform:translate(-50%,20px);
+			opacity:0.8;
+		}
+		
+		50%{
+			transform:translate(-50%,60px);
+			opacity:0.8;
+		}
+		
+		100%{
+			transform:translate(-50%,100px);
+		}
+	}
+	
+
+/*================  About Us Section  =================*/ 
+
+	.about{
+		border-radius:5px;
+		display:flex;
+		 flex-direction:row;
+		  width:77%;
+		left:50%;
+		transform: translate(-50%);
+		position: relative;
+		height: 300px;
+	/*	background:linear-gradient(45deg, rgba(245,245,245,1),rgba(256,256,256,1),rgba(245,245,245,1));*/
+	}
+	.about .about-img{
+		margin-right:4%;
+		flex: 55%;
+		align-items: center;
+		justify-content: center;
+		display: flex;
+		height: 300px;
+	}
+	.about .about-text{
+		font-weight: normal;
+		height: 300px;
+		flex: 45%;
+		align-self:center;
+		padding:0.8rem 1rem 0 0;
+		color:rgba(70,70,70,1);
+		text-align:justify;
+		font-size: 15px;
+		}
+	
+	.about div  p
+	{ 
+		letter-spacing:0.7px;
+		line-height:31px;
+		word-spacing:0.5px;
+	}
+	
+	 .datad{
+		width:100%;
+		background: rgba(0,0,0,0.8);
+		box-shadow:1px 0 1px 0 rgba(0,0,0,0.6);
+		padding-top: 1.2rem;
+		padding-bottom: 1.2rem;
+      
+	  }
+	   .datad p{
+	  text-align:center;
+	  color:rgba(256,256,256,0.7);
+	  font-size:16px;
+	  font-weight: normal;
+	  letter-spacing:0.7px;
+	  }
+	   .datad .x{
+		letter-spacing: 0;
+		  margin-bottom:12px;
+	  font-size: 24px;
+	  text-transform:uppercase;
+	  font-weight:bold;
+	  text-align:center;
+	  }
+	
+	.container{
+		background:rgba(0,0,0,0.9);
+		width:100%;
+	padding-top:1.6rem;
+	padding-bottom:1.6rem;
+	}
+	
+	.container p{
+		font-size:12.3px;
+	   letter-spacing:0.8px;
+		font-weight:bold;
+		color:rgba(256,256,256,0.7);
+		text-align:center;
+	}
+	
+	
+	@media (max-width:991px)
+	{
+		
+		header{
+		padding:0 20px;
+		}
+		
+	/*For dynamic Texts*/
+	.dynamic-text
+		{
+			
+			font-size:25px;
+			text-align:center;
+			
+		}
+		
+		.text
+		{
+			text-align:center;
+			 font-size:25px;
+		}	
+		.textx .msg{
+			font-size:32px;
+		}
+		.join{
+		color:rgba(255,255,255,0.8);
+		background:transparent;
+		padding:6px 45px;
+		border:2px solid rgba(255,255,255,0.8);
+		border-radius:20px;
+		font-size:15px;
+		letter-spacing:1.4px;
+		
+	}
+	
+	}
+	.contact .cnt-box{
+	height:100%;
+	box-sizing:border-box;
+	}
+	
+	
+.datay{
+	background:rgba(0,0,0,0.9);
+	width:100%; 
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+.datay div{
+   flex-basis: 12rem;
+ margin:1.5rem;
+ height:200px;
+ color:white;
+}
+
+.datay div a{
+text-decoration: none;
+color:rgba(256,256,256,0.7);
+	 }
+
+	 .datay div a:hover
+	 {
+		color:rgba(256,256,256,1);
+	 }
+	
+
+.datay div p{
+line-height:2rem;
+padding-left:10px;
+font-size:14.2px;
+letter-spacing: 0.7px;
+ }
+
+ .datay div .y{
+	 letter-spacing: 0.8px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color:rgba(256,256,256,0.7);
+ }
+
+ .datay div .linex{
+	 width:3rem;
+	 height:3px;
+	 background:rgba(255,165,0,0.55);
+	 margin:0;
+	margin-left:0.6rem;
+ }
+
+
+/*================  Download Our App  =================*/ 
+
+ /*.app{
+	background: rgba(0,0,0,0.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow:1px 0 1px 0 rgba(0,0,0,0.6);
+ }
+ .app div{
+	 flex:1 1 5rem;
+	 width:100%;
+ }
+ .app div p{
+	 letter-spacing: 0.7px;
+	 text-transform: uppercase;
+ font-size:33px;
+ text-align: center;
+ font-weight:bold;
+ color:rgba(256,256,256,0.7);
+}
+
+.app div img{
+	left:50%;
+	transform: translate(-50%);
+	position: relative;
+   }
+.app div button{
+	background:rgba(256,0,0,0.9);
+	font-size:15px;
+	border:none;
+	margin-top:5%;
+	width:12.5rem;
+	padding:9.3px;
+	left:50%;
+	transform: translate(-50%);
+	position: relative;
+	border-radius:20px;
+	color:rgba(256,256,256,0.8);
+	cursor:pointer;
+	outline: none;
+}
+
+*/
+
+
+/*================  Fooetr Section  =================*/ 
+
+footer{
+	margin-top:3%;
+}
+
+
+
+/*================  Smooth Scrolling Property  =================*/ 
+
+html{
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}

@@ -1,0 +1,334 @@
+*{
+   margin:0;
+   padding:0;
+   word-wrap:break-word;
+   font-family: sans-serif;
+}
+
+html{
+   scroll-behavior: smooth;
+   overflow-x: hidden;
+}
+
+body{
+   background: rgba(250,250,250,1);
+   color:rgba(80,80,80,1);
+}
+
+
+#loader{
+   width:100%;
+   height:100vh;
+   background:#DfDfDf url('loader.gif');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size:18rem;
+   position: fixed;
+   z-index:555;
+ }
+
+
+.wrapper{
+   width:100%;
+   height:100%;
+   position:absolute;
+   }
+
+.news-body{
+   width:60%;
+   height:auto;
+   background: transparent;
+   margin:6rem 1rem 0 100px;
+}
+
+.news-body .news-img{
+   width:100%;
+   overflow: hidden;
+   margin-bottom:10px;
+}
+
+.news-body .news-img img{
+   width:100%;
+   height:360px;
+   cursor:pointer;
+}
+
+.news-body .news-content{
+height:auto;
+padding:0.5rem;
+text-align:justify;
+line-height:34px;
+font-size:17px;
+word-spacing:1px;
+letter-spacing:0.5px;
+}
+
+.news-body .news-content p span{
+  font-size:38px;
+  font-family:serif;
+  line-height:40px;
+   }
+
+.news-body .news-content .ldc{
+   font-size:18px;
+   margin-top:15px;
+}
+
+.news-body .news-content .ldc .x{
+   font-size:14px;
+   font-family: sans-serif;
+}
+
+.news-body .news-content .cmnt{
+   font-size:22px;
+   margin-top:10px;
+}
+.news-body .txtar{
+   margin-left:5px;
+   margin-bottom:20px;
+}
+.news-body .txtar textarea{
+   resize: none;
+   width:50%;
+   border-radius:5px;
+   outline:none;
+   padding:10px;
+   font-size:15px;
+   letter-spacing: 0.5px;
+}
+.news-body .txtar .btnx{
+   margin-top:10px;
+   border-radius:5px;
+   outline: none;
+   border:none;
+   width:7rem;
+   padding:10px;
+   cursor:pointer;
+   background:#4CAF50;
+   color:white;
+   font-size:15px;
+}
+
+.news-body .comments{
+   margin-bottom:30px;
+   display:flex;
+   flex-direction:column;
+}
+
+.news-body .comments div{
+   margin:3px;
+}
+.news-body .comments div p{
+   margin-top:8px;
+   letter-spacing: 0.5px;
+}
+.news-body .comments .cmt-line{
+   width:20rem;
+   height:1px;
+   background:rgba(200,200,200,1);
+   margin-top:10px;
+}
+
+
+.ad-body{
+   width:30%;
+   top:5rem;
+   right:0;
+   position: absolute;
+   display:flex;
+   align-items:center;
+   flex-direction: column;
+   padding:0.5rem 1rem;
+
+   }
+
+   .ad-body .flash{
+      background:white;
+      width:100%;
+      display: flex;
+      flex-direction:row;
+      height:100px;
+      overflow: hidden;
+      margin-top:10px;
+   }
+   .ad-body .flash .nimg{
+      height:100px;
+      width:30%;
+      overflow: hidden; 
+   }
+   .ad-body .flash .nimg img{
+      width:100%;
+      height:100%;
+      cursor:pointer;
+      transition: all 0.4s ease;
+   }
+
+   .ad-body .flash .nimg img:hover{
+          width:107%;
+          height:107%;
+   }
+   .ad-body .flash .ncontent{
+      width:70%;
+      text-align: justify;
+      padding:9px;
+   }
+
+   .ad-body .flash .ncontent p{
+      font-size:15px;
+      line-height:20px;
+   }
+   
+   .ad-body .flash .ncontent p a{
+      text-decoration: none;
+      font-weight:bold;
+   }
+
+   .ad-body .flash .ncontent p a:hover{
+      color:red;
+   }
+
+   .ad-body .nad{
+      width:100%;
+      margin-top:10px;
+   }
+
+   .ad-body .nad .nad-img{
+      width:100%;
+      cursor: pointer;
+   }
+
+/*================= Custom Scroll Bar =================*/
+/* width */
+::-webkit-scrollbar {
+   width: 13px;
+ }
+ 
+ /* Track */
+ ::-webkit-scrollbar-track {
+   background: #f1f1f1; 
+ }
+  
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+   background: rgb(168, 166, 166); 
+ }
+ 
+
+   
+/*================  Fooetr Section Common to all  =================*/ 
+    	
+.datay{
+	background:rgba(0,0,0,0.9);
+	width:100%; 
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+.datay div{
+   flex-basis: 12rem;
+ margin:1.5rem;
+ height:200px;
+ color:white;
+}
+
+.datay div a{
+text-decoration: none;
+color:rgba(256,256,256,0.7);
+	 }
+
+	 .datay div a:hover
+	 {
+		color:rgba(256,256,256,1);
+	 }
+	
+
+.datay div p{
+line-height:2rem;
+padding-left:10px;
+font-size:14.2px;
+letter-spacing: 0.7px;
+ }
+
+ .datay div .y{
+	 letter-spacing: 0.8px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  color:rgba(256,256,256,0.7);
+ }
+
+ .datay div .linex{
+	 width:3rem;
+	 height:3px;
+	 background:rgba(255,165,0,0.55);
+	 margin:0;
+	margin-left:0.6rem;
+ }
+
+ .datad{
+  width:100%;
+  background: rgba(0,0,0,0.8);
+  box-shadow:1px 0 1px 0 rgba(0,0,0,0.6);
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  }
+
+.datad p
+ {
+  text-align:center;
+  color:rgba(256,256,256,0.7);
+  font-size:16px;
+  font-weight: normal;
+  letter-spacing:0.7px;
+  }
+   .datad .x
+   {
+  letter-spacing: 0;
+    margin-bottom:12px;
+  font-size: 24px;
+  text-transform:uppercase;
+  font-weight:bold;
+  text-align:center;
+  }
+
+.container
+{
+background:rgba(0,0,0,0.9);
+width:100%;
+padding-top:1.6rem;
+padding-bottom:1.6rem;
+}
+
+.container p{
+  font-size:12.3px;
+   letter-spacing:0.8px;
+  font-weight:bold;
+  color:rgba(256,256,256,0.7);
+  text-align:center;
+}
+
+/*================  Fooetr Section  =================*/ 
+
+footer{
+	margin-top:3%;
+}
+
+
+
+ 
+   
+
+/*scroll Indicator*/
+ .progress-container {
+   width: 100%;
+   height: 6px;
+   background:rgba(80,80,80,0.1);
+   z-index: 1;
+   position: fixed;
+ }
+ 
+ .progress-container .progress-bar {
+   height: 6px;
+   background:  #4caf50;
+   width:0%;
+ }

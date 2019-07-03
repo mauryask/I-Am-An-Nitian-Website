@@ -1,0 +1,254 @@
+/*
+* I AM AN NITIAN
+* v1.0
+* Start Date : May 17 2019
+* Developer : Shubham Maurya
+* National Institute Of Technology Srinagar J&K India 190006
+* GitHub : https://github.com/pnstech
+* LinkedIn : https://www.linkedin.com/in/cyberthreatatnit/
+*/
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:sans-serif;
+}
+
+header{
+	position:absolute;
+	top:0;
+	left:0;
+	padding:12px 60px 0 60px;
+	width:100%;
+	background-color:transparent;
+	box-sizing:border-box;
+	 z-index:3;
+}
+
+header .logo{
+height:80px;
+float:left;
+text-align:center;
+font-weight:bold;
+
+}
+
+header .logo img{
+width:55px;
+height:55px;
+}
+
+header .logo li{
+list-style:none;
+position:relative;
+font-size:13px;
+font-weight: bold;
+}
+
+header .logo ul li a{
+text-decoration:none;
+color:rgba(256,256,256,0.8);
+}
+
+header nav{
+	float:right;
+	padding-top:12px;
+}
+
+ .black{
+	position:fixed;
+	background:rgba(0,0,0,1);
+	width:100%;
+}
+
+header nav ul{
+	text-transform:uppercase;
+	margin:0;
+	padding:0;
+	display:flex;
+}
+
+header nav ul li{
+list-style:none;
+position:relative;
+padding-right:5px;
+font-size:15px;
+}
+
+header nav  ul li ul{
+	position:absolute;
+	background:rgba(0,0,0,1);
+	display:none;
+	z-index:1.5;
+}
+
+.home /* active in case of home*/
+{
+background:rgba(0,0,0,0.4);		
+border-bottom:1px solid rgba(256,0,0,0.9);
+color:rgba(256,0,0,0.9);
+}
+
+.homex:hover{
+background:rgba(0,0,0,0.4);		
+border-bottom:1px solid rgba(256,0,0,0.9);
+color:rgba(256,0,0,0.9);
+}
+
+header nav  ul li:hover ul{
+	display:block;
+}
+/* for submenu */
+/*=====================================================================================*/
+
+header nav  ul li ul li{
+	display:block;
+	width:155px;
+	font-weight:normal;
+	text-align:center;
+	font-size:15px;
+}
+
+
+.sub-menu:hover{
+background:rgba(0,0,0,0.4);	
+border-bottom:1px solid rgba(256,0,0,0.9);
+color:rgba(256,0,0,0.9);
+}
+
+
+
+header nav  ul li ul li:hover{
+	border-bottom:1px solid rgba(256,0,0,0.9);
+	font-weight: bold;
+}
+
+header nav  ul li ul li a:hover
+{
+	color:rgba(256,0,0,0.9);
+}
+
+header nav ul li a{
+	text-decoration:none;
+	display:block;
+	height:50px;
+	line-height:50px;
+	padding:0 18px;
+	color:rgba(256,256,256,0.8);
+	font-weight:bold;
+	letter-spacing:0.8px;
+}
+
+header nav ul li button{
+	font-size:15.22px;
+	text-decoration:none;
+	display:block;
+	height:50px;
+	line-height:50px;
+	padding:0 20px;
+	color:rgba(256,256,256,0.8);
+	font-weight:bold;
+	letter-spacing:2px;
+	background:transparent;
+	border:none;
+	outline:none;
+	cursor:pointer;
+}
+
+header nav ul li button:hover{
+	color:rgba(256,0,0,0.9);
+	background:rgba(0,0,0,0.4);	
+	border-bottom:1px solid rgba(256,0,0,1);
+}
+
+.menu-toggle{
+	float:right;
+	line-height:50px;
+	color:white;
+	cursor:pointer;
+	display:none;
+}
+
+
+/*Media queries*/
+@media (max-width:991px)
+{
+	.nit-logos{
+		margin-top:9%;
+	}
+
+	header{
+	padding:0 20px;
+	}
+	
+	.menu-toggle{
+		displaY:block;
+		padding-top:15px;
+	}
+	
+	header nav{
+		/*display:none;*/
+		position:absolute;
+		width:100%;
+		height:100vh;
+		background:rgba(0,0,0,1);	
+		top:80px;
+		left:-100%;
+		transition:0.7s;
+		}
+		
+		header nav.active{
+			left:0;
+		}
+
+    header nav ul{
+		display:block;
+		text-align:center;
+	}
+	
+	 header nav ul li:hover{
+		border-bottom:none;
+	}
+	
+header .logo{
+height:80px;
+padding:16px 0 10px 0;
+font-size:11px;
+}
+
+header .logo img{
+width:45px;
+height:45px;
+}
+
+header nav  ul li{
+	border:none;
+font-size:13px;
+}	
+	
+header nav  ul li ul li{
+	padding-left:10px;
+	width:5px;
+  font-size:10px;
+}
+header nav  ul li ul li{
+	display:none;
+}
+	
+.home{
+background:rgba(0,0,0,1);	
+border-bottom:1px solid rgba(0,0,0,0.1);
+color:rgba(256,0,0,0.9);
+}
+
+.homex:hover,.sub-menu:hover{
+background:rgba(0,0,0,0.04);	
+border-bottom:1px solid rgba(0,0,0,0.1);
+border-top:1px solid rgba(0,0,0,0.1);
+color:rgba(256,0,0,0.9);	
+}
+}
+
+
+

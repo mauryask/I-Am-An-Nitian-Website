@@ -1,0 +1,16 @@
+.frag{
+    displaY:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content:center;
+
+}
+
+.frag1{
+width:70%;
+
+}
+
+.frag2{
+width:30%;
+}

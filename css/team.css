@@ -1,0 +1,182 @@
+*{
+	font-family:sans-serif;
+}
+body{
+	display:grid;
+	justify-content:center;
+	align-items:center;
+	min-height:100vh;
+	background:rgb(0,0,0,0.9)
+}
+
+.heading{
+text-align:center;
+margin-top:17%;
+margin-bottom:10px;
+color:#fff;
+text-transform:uppercase;
+font-size:4em;
+}
+.container-f .line{
+    width: 28em;
+    max-width:70%;
+    border-bottom: 0.3em solid #fff;
+    margin: 0 auto 100px;
+}
+
+.container{
+	display:grid;
+	grid-template-columns:repeat(3, minmax(280px,1fr));
+	grid-row-gap:7px;
+	grid-column-gap:5px;
+	margin:0 auto;
+	height:auto;
+	width:850px;
+	box-sizing:border-box;
+}
+
+
+
+.container .box{
+	
+	background:#fff;
+	padding:30px 40px 40px;
+	text-align:center;
+	overflow:hidden;
+	border-radius:3px;
+	margin-bottom:5px;
+}
+
+.container .box:nth-child(odd)
+{
+	 background-image: linear-gradient(-90deg, #DA4453, #89216B);
+}
+
+.container .box:nth-child(even)
+{
+	 background-image: linear-gradient(-90deg, #f12711, #f5af19);
+
+}
+
+.container .box img{
+	margin:0;
+	padding:0;
+	width:150px;
+	height:150px;
+	border-radius:50%;
+	border:6px solid rgb(0,0,128,0.1);
+}
+
+
+.container .box h3{
+	color:#fff;
+	font-size:20px;
+	padding-top:10px;
+	}
+
+.container .box p{
+	letter-spacing:.5px;
+	color:#fff;
+	font-size:16px;
+	padding-top:12px;
+	line-height:1.2em;
+}
+
+.container .box .team{
+	font-weight:bold;
+	letter-spacing:1px;
+	color:	#E8E8E8;
+	font-size:16px;
+}
+ 
+
+
+.container .box .social{
+	margin-bottom:-1em;
+	width:100%;
+	list-style:none;
+	display:  flex;
+   justify-content: space-evenly;
+   padding-top: 0.8rem;
+   margin-top: 1.5rem;
+   border-top: 1px solid rgba(0,0,0,.2);
+}
+
+
+a{
+	text-decoration:none;
+}
+
+.social i{
+ font-size:2rem;
+ transition: color .5s;
+}
+
+.fa-facebook-square{
+color:#000;
+}
+
+.fa-instagram{
+ color:#000; 
+}
+
+.fa-linkedin{
+ color:#000;
+}
+
+.fa-github-square{
+	 color:#000;
+}
+
+.fa-linkedin:hover{
+ color:white;
+ opacity:0.5;
+}
+
+.fa-github-square:hover{
+	color:white;
+ opacity:0.5;
+}
+
+
+.fa-facebook-square:hover{
+color:white;
+ opacity:0.5;
+}
+
+.fa-instagram:hover{
+ color:white;
+ opacity:0.5; 
+}
+
+@media screen and (max-width:700px)
+{
+	.container{
+	display:grid;
+	grid-template-columns:repeat(1, minmax(280px,1fr));
+	grid-row-gap:2px;
+	margin:0 auto;
+	height:auto;
+	width:280px;
+	box-sizing:border-box;
+}
+
+
+.heading{
+text-align:center;
+margin-top:80px;
+margin-bottom:8px;
+color:#fff;
+text-transform:uppercase;
+font-size:2em;
+}
+
+.container-f> .line{
+    width: 8em;
+    max-width:70%;
+    border-bottom: 0.25em solid #fff;
+    margin: 0 auto 60px;
+}
+
+
+ 
