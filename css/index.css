@@ -11,11 +11,6 @@
 
 
 /*================  Custom GOT Font  =================*/ 
-
-@font-face {
-	font-family: "got";
-	src: url("fonts/Game of Thrones.ttf");
-	}
 	
 	*{
 	outline:none;
