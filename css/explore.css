@@ -50,11 +50,14 @@ position: absolute;
  margin-top:1rem;
    }
 
+
+
 .explore .expo div p{
  text-align:center;
     color:gray;
     padding: 0.5rem 0 0.5rem 0;
 }
+
 
 .explore .expo  .xnnn{
     margin:1rem;
@@ -81,6 +84,11 @@ font-weight: bold;
 font-size:15px;
   }
 
+
+  .explore .expo  .xnnn p .heading{
+    font-weight:bold;
+    color:rgba(60,60,60,1);
+  }
 
   .explore .expo  .xnnn p a:hover
   {

@@ -87,11 +87,14 @@ crossorigin="anonymous">
               <div class="xnnn">
                 <?php echo '<div class="zoom"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>'?>
                   
-                  <p>
-                        Lorem Ipsum is simply dummy text of the printing and
-                          typesetting industry. 
-                           Lorem Ipsum has been the industry's standard...
-                           <a href="news.html">Read More <i class="fas fa-chevron-circle-right"></i></a></p> 
+                <?php 
+              $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
+
+              $text = implode(' ',array_slice(explode(' ', $row['text']),0,18)); //getting fires 18 words from text
+
+              echo '<p>'.'<span class="heading">'.$head.'</span>'." ".$text.'....<a href="news.html">'." Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>';
+                  ?>   
+                  
                 </div>  
           
           

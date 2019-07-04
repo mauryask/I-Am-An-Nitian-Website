@@ -85,8 +85,7 @@
       line-height:1.4rem;
       font-size: 15px;
   }
-  
-  
+    
   
   .explore .expo  .xnnn p a
   {
@@ -96,9 +95,14 @@
   border-radius:2px;
   font-weight: bold;
   font-size:15px;
+  }
+  
+  
+    .explore .expo  .xnnn p .heading
+    {
+      font-weight:bold;
+      color:rgba(60,60,60,1);
     }
-  
-  
     .explore .expo  .xnnn p a:hover
     {
      color:rgba(256,0,0,0.8);
