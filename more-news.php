@@ -78,7 +78,9 @@ crossorigin="anonymous">
                 if (mysqli_num_rows($result)>0) 
                 {
                     $i=0;
-                    while ($row = mysqli_fetch_assoc($result)) {
+                    while ($row = mysqli_fetch_assoc($result))
+                     {
+                      $id = $row["id"];
                   if ($i++ % 4 == 0) echo "<div class='expo'>";
           
                 ?>
@@ -90,11 +92,11 @@ crossorigin="anonymous">
                 <?php 
               $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
 
-              $text = implode(' ',array_slice(explode(' ', $row['text']),0,18)); //getting fires 18 words from text
+              $text = implode(' ',array_slice(explode(' ', $row['text']),0,12)); //getting fires 18 words from text
 
-              echo '<p>'.'<span class="heading">'.$head.'</span>'." ".$text.'....<a href="news.html">'." Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>';
+              echo '<p>'.'<span class="heading">'.$head.'</span>'." ".$text.'....<a href="news.php?id='.$id.'">'." Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>';
                   ?>   
-                  
+
                 </div>  
           
           

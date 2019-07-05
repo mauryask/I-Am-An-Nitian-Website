@@ -1,5 +1,5 @@
 <?php
-
+$charset = "UTF8";
 $servername = "localhost";
 $username = "root";
 $password = "proxyx";

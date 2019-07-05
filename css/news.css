@@ -58,9 +58,10 @@ height:auto;
 padding:0.5rem;
 text-align:justify;
 line-height:34px;
-font-size:17px;
-word-spacing:1px;
+font-size:15px;
+word-spacing:0.5px;
 letter-spacing:0.5px;
+font-weight: normal;
 }
 
 .news-body .news-content p span{

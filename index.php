@@ -221,6 +221,7 @@ crossorigin="anonymous">
   
  
 <!--================ News Section ====================-->
+
 <div style="width:100%;height:1%;background:transparent;margin-top:4%;"></div>
 <div class="explore" style="margin-top:0;">
   <p class="main-expo">News & Articles</p>
@@ -228,28 +229,30 @@ crossorigin="anonymous">
 
   <?php 
             $query = "select * from tbl_images order by id desc limit 8";
-            $result = mysqli_query ($conn, $query);
-          
+             $result = mysqli_query ($conn, $query);
                 if (mysqli_num_rows($result)>0) 
                 {
                     $i=0;
-                    while ($row = mysqli_fetch_assoc($result)) {
-                  if ($i++ % 4 == 0) echo "<div class='expo'>";
+                    while ($row = mysqli_fetch_assoc($result))
+                     {
+                       $id = $row["id"];
+                      if ($i++ % 4 == 0) 
+                      {
+                      
+                        echo "<div class='expo'>";
+                      }
           
                 ?>        
           
               <div class="xnnn">
                 <?php echo '<div class="zoom"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>'?>
-                  
               <?php 
               $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
 
-              $text = implode(' ',array_slice(explode(' ', $row['text']),0,20)); //getting fires 19 words from text
+              $text = implode(' ',array_slice(explode(' ', $row['text']),0,15)); //getting fires 19 words from text
 
-              echo '<p>'.'<span class="heading">'.$head.'</span>'." ".$text.'.........<a href="news.html">'." Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>';
-                  ?>                        
-
-                        
+              echo '<p>'.'<span class="heading">'.$head.'</span>'." ".$text.'..<a href="news.php?id='.$id.'">'." Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>';
+                  ?>                                               
                 </div>   
           
           <?php
@@ -258,6 +261,8 @@ crossorigin="anonymous">
           
            <?php
                   }
+                  $_SESSION['x']=$ids;
+
                   if ($i % 4 != 0) echo "</div>";
                  }
                else 
