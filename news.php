@@ -1,22 +1,25 @@
 <?php
+
 include_once('connection.php');
 $id = $_GET['id'];
-$sample_rate=100;
+
+$sample_rate=1;
+
 $query="select * from tbl_images where  id='".$id."'  ";
 $result = mysqli_query($conn, $query);
 if(mysqli_num_rows($result)>0)
 {
 
-  if(mt_rand(1,$sample_rate) == 1) 
-  {
-    $sql = " UPDATE tbl_images SET views = views + {$sample_rate} WHERE id = '".$id."' ";
-    $rslt = mysqli_query($conn,$sql);
-  }
-  $row=mysqli_fetch_array($result);
- 
+    $sql = " UPDATE tbl_images SET views = views + {$sample_rate} WHERE id = ".$id." ";
+    mysqli_query($conn,$sql); //counting page views
+     $result = mysqli_query($conn, $query);
+     $row=mysqli_fetch_array($result);
+
 }
 
 ?>
+
+
 
 <html>
 <head>
@@ -93,19 +96,19 @@ crossorigin="anonymous">
         <div class="news-img">
      <?php
       echo  '<img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/>';
-        ?>
-        
+        ?>        
         </div>
         <div class="news-content">
+        <p style="font-weight:bold;font-size:13px;"><?php  echo $row['inserted_at'] ?></p>
             <p>
         <span><?php  echo $row['heading'];  ?></span><br>
          <?php echo $row['text']; ?>
         </p>
         <p class="ldc">
-            <i class="far fa-thumbs-up" style="cursor:pointer;"></i> <span class="x">55</span>
-            &nbsp <i class="far fa-thumbs-down" style="cursor:pointer;"></i> <span  class="x">12</span>
+            <i class="far fa-thumbs-up" style="cursor:pointer;" name="likes"></i> <span class="x"><?php echo $row['likes'];  ?></span>
+            &nbsp <i class="far fa-thumbs-down" style="cursor:pointer;" name="dislikes"></i> <span  class="x">12</span>
             &nbsp <i class="fas fa-eye" style="cursor:pointer;"></i> <span  class="x"><?php echo $row['views'];  ?></span>
-            &nbsp <i class="far fa-comment" style="cursor:pointer;"></i> <span  class="x">36</span>
+            &nbsp <i class="far fa-comment" style="cursor:pointer;" name="comment"></i> <span  class="x">100</span>
             </p>
         <p class="cmnt">Comments</p>
     </div>
@@ -153,20 +156,7 @@ crossorigin="anonymous">
                }
               ?>
              
-            
-
-
-
-
-
-
-
-
-
-
-
-
-        
+       
                      <div class="nad">
                    <img src="images/ad-demo.jpg" class="nad-img" >
                       </div>  
