@@ -92,7 +92,7 @@ crossorigin="anonymous">
                 <?php 
               $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
 
-              $text = implode(' ',array_slice(explode(' ', $row['text']),0,12)); //getting fires 18 words from text
+              $text = implode(' ',array_slice(explode(' ', $row['text']),0,14)); //getting fires 18 words from text
 
               echo '<p>'.'<span class="heading">'.$head.'</span>'." ".$text.'....<a href="news.php?id='.$id.'">'." Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>';
                   ?>   
