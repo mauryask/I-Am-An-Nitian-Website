@@ -152,6 +152,14 @@ font-weight: normal;
       overflow: hidden;
       margin-top:10px;
    }
+
+   .ad-body .flash p  .heading
+   {
+     font-weight:bold;
+     color:rgba(60,60,60,1);
+   }
+
+
    .ad-body .flash .nimg{
       height:100px;
       width:30%;

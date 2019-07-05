@@ -1,10 +1,21 @@
 <?php
 include_once('connection.php');
 $id = $_GET['id'];
+$sample_rate=100;
 $query="select * from tbl_images where  id='".$id."'  ";
 $result = mysqli_query($conn, $query);
 if(mysqli_num_rows($result)>0)
-$row=mysqli_fetch_array($result);
+{
+
+  if(mt_rand(1,$sample_rate) == 1) 
+  {
+    $sql = " UPDATE tbl_images SET views = views + {$sample_rate} WHERE id = '".$id."' ";
+    $rslt = mysqli_query($conn,$sql);
+  }
+  $row=mysqli_fetch_array($result);
+ 
+}
+
 ?>
 
 <html>
@@ -93,7 +104,7 @@ crossorigin="anonymous">
         <p class="ldc">
             <i class="far fa-thumbs-up" style="cursor:pointer;"></i> <span class="x">55</span>
             &nbsp <i class="far fa-thumbs-down" style="cursor:pointer;"></i> <span  class="x">12</span>
-            &nbsp <i class="fas fa-eye" style="cursor:pointer;"></i> <span  class="x">120</span>
+            &nbsp <i class="fas fa-eye" style="cursor:pointer;"></i> <span  class="x"><?php echo $row['views'];  ?></span>
             &nbsp <i class="far fa-comment" style="cursor:pointer;"></i> <span  class="x">36</span>
             </p>
         <p class="cmnt">Comments</p>
@@ -117,55 +128,46 @@ crossorigin="anonymous">
         </div>
 <div class="ad-body">
 
-        <div class="flash">
-            <div class="nimg"> <img src="images/nature srix.jpg"></div>
-            <div class="ncontent"><p>Hollywood star Leonardo DiCaprio is renowned for his work.
-                    This is an insult to democracy and demands strictest action. 
-                     <a href="#">Read More  <i class="fas fa-chevron-circle-right"></i></a>
-            </p></div>
-        </div> 
+<?php 
+            $query = "select * from tbl_images order by id asc limit 6";
+             $result = mysqli_query ($conn, $query);
+                if (mysqli_num_rows($result)>0) 
+                {
+                    while ($row = mysqli_fetch_assoc($result))
+                     {
+                      $id = $row["id"];
+                      $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
+
+                      $text = implode(' ',array_slice(explode(' ', $row['text']),0,15)); //getting fires 19 words from text
+
+                    echo   '<div class="flash">
+                      <div class="nimg"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>';
+                  echo    '<div class="ncontent">'."<p>".'<span class="heading">'.$head.'</span>'." ".$text.'..<a href="news.php?id='.$id.'">'." Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>'.'</div>';
+                 echo '</div>'; 
+
+                     }
+                }
+               else 
+               {
+                 echo 'No result found';
+               }
+              ?>
+             
+            
+
+
+
+
+
+
+
+
+
+
+
+
         
-        <div class="flash">
-                <div class="nimg"> <img src="images/nature sri.jpg"></div>
-                <div class="ncontent"><p>Hollywood star Leonardo DiCaprio is renowned for his work.
-                        This is an insult to democracy and demands strictest action. 
-                         <a href="#">Read More  <i class="fas fa-chevron-circle-right"></i></a>
-                </p></div>
-            </div> 
-
-            <div class="flash">
-                    <div class="nimg"> <img src="images/nature srix.jpg"></div>
-                    <div class="ncontent"><p>Hollywood star Leonardo DiCaprio is renowned for his work.
-                            This is an insult to democracy and demands strictest action. 
-                             <a href="#">Read More  <i class="fas fa-chevron-circle-right"></i></a>
-                    </p></div>
-                </div>
-
-                <div class="flash">
-                        <div class="nimg"> <img src="images/nitsri.jpg"></div>
-                        <div class="ncontent"><p>Hollywood star Leonardo DiCaprio is renowned for his work.
-                                This is an insult to democracy and demands strictest action. 
-                                 <a href="#">Read More  <i class="fas fa-chevron-circle-right"></i></a>
-                        </p></div>
-                    </div>
-
-                    <div class="flash">
-                            <div class="nimg"> <img src="images/nature sri.jpg"></div>
-                            <div class="ncontent"><p>Hollywood star Leonardo DiCaprio is renowned for his work.
-                                    This is an insult to democracy and demands strictest action. 
-                                     <a href="#">Read More  <i class="fas fa-chevron-circle-right"></i></a>
-                            </p></div>
-                        </div>
-
-                        <div class="flash">
-                            <div class="nimg"> <img src="images/nature sri.jpg"></div>
-                            <div class="ncontent"><p>Hollywood star Leonardo DiCaprio is renowned for his work.
-                                    This is an insult to democracy and demands strictest action. 
-                                     <a href="#">Read More  <i class="fas fa-chevron-circle-right"></i></a>
-                            </p></div>
-                        </div>
-
-                      <div class="nad">
+                     <div class="nad">
                    <img src="images/ad-demo.jpg" class="nad-img" >
                       </div>  
     </div>
