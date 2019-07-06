@@ -441,7 +441,7 @@ line-height:20px;
              .login .log-card div .signx {
                font-size: 16px;
                text-align:center;
-               margin:20px 0 25px 0;
+               margin:20px 0 35px 0;
                letter-spacing: 0.5px;
              }
  
@@ -463,13 +463,13 @@ line-height:20px;
                  text-align:center;
                  color:red;
                  letter-spacing: 0.5px;
-                 height:30px;
+                 height:20px;
                 font-size:13px;
                }
 
              .login .log-card div button{
                width:90%;
-               margin:0.4rem 0 0 10px;
+               margin:0.5rem 0 0 10px;
                padding:10px;
                background:#4CAF50;
                border:none;
@@ -488,7 +488,33 @@ line-height:20px;
                cursor:pointer;
                opacity:0.8;
              }
+
+/*======================== Radio Buttons =========================*/
+
+             .login .log-card div .select {
+              display:flex;
+              flex-direction:row;
+              align-items: center;
+              justify-content: center;
+              width:100%;
+              margin:5px 0 5px 0;
+             }
  
+             .login .log-card div .select input{
+              width:auto;
+              cursor:pointer;
+              margin:0;
+              padding:0;
+             }
+
+             .login .log-card div .select label{
+             font-size:13px;
+             color:rgba(100,100,100,1);
+            }
+             .login .log-card div .select .lab1{
+               margin-right:4rem;
+             }
+
              /*Search popup*/
              .search-popup
              {

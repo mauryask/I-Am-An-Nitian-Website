@@ -3,11 +3,12 @@ $(document).ready(function(){
 		
 		var email = $('#email').val().trim();
 		var pass = $('#pass').val().trim();
-		
+		var check = $("input[name=user]:checked").val(); //getting the value of selected radio button
+
 		$.ajax({
 		url:'login.php',
 		type:'post',
-		data: { email:email,pass:pass},
+		data: { email:email,pass:pass,check:check},
 		success: function(response)
 		{
 		   if(response == 1)

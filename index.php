@@ -60,7 +60,7 @@ crossorigin="anonymous">
 </div>
 <nav class="active">
 <ul>
-<li><a href="index.php" class="home">Home</a></li>
+<li><a href="index.php" class="home" >Home</a></li>
 <li><a href="team.html" class="homex">Our team</a></li>
 <li><a href="more-news.php" class="homex">News</a></li>
 <li><a href="#about" class="homex">About Us</a></li>
@@ -76,9 +76,9 @@ crossorigin="anonymous">
 <li>
 <button onclick="search()" style="text-transform: uppercase;letter-spacing: 0.8px; font-weight: bold;">Search <i class="fas fa-search"></i></button>
 </li>
-<li><a class="homex" style="cursor:pointer; width:155px;text-align:center;">
+<li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;">
 <?php
-  if(isset($_SESSION['name']))
+  if(isset($_SESSION['name'])&& !empty($_SESSION['name']))
   {
     echo $_SESSION['name'];
   }
@@ -88,9 +88,27 @@ crossorigin="anonymous">
   }
 ?>
 &nbsp <i class="fas fa-user-graduate"></i></a>
-<ul>
-<li><a style="cursor:pointer;"  onclick="show_log()">Login</a></li>
+<ul style="margin-left:-1rem;">
+<!-- Hide and Show login and php buttons -->
+
+<?php
+if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
+{
+  if($_SESSION['user_type'] == 1)
+  {
+    echo '<li><a href="insert.php" class="homex" >Admin</a></li>';
+  }
+}
+?>
+
+<?php if( isset($_SESSION['name']) && !empty($_SESSION['name']))
+{
+?>
 <li><a style="cursor:pointer;"  href="logout.php" >Logout</a></li>
+<?php }else{ ?>
+<li><a style="cursor:pointer;"  onclick="show_log()">Login</a></li>
+<?php } ?>
+
 </ul>
 </li>
 </ul>
@@ -328,7 +346,6 @@ crossorigin="anonymous">
   </div>
  </div>
 
-
  <div class="sign-form">
    <img class="cancel" onclick="cancel()" src="images/cut.png">
     <p class="mainh">Register Here</p>
@@ -372,12 +389,16 @@ crossorigin="anonymous">
 <div class="login" id="log" >
 <div class="log-card">
     <img class="cancel-log"  src="images/cut.png" onclick="cancel_log()">
-    <p class="logx">Login</p>
 <div>
-  <form  method="post">
-  <input name="email"  id="email" type="text" placeholder="Email" autocomplete="off"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
-  <input  name="pass" id="pass" type="password" placeholder="Password" autocomplete="off"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
-  <div class="log-msg"  ><p id="message"><p></div>
+
+<div class="log-msg"  ><p id="message"><p></div>
+  <form  method="post" autocomplete="off">
+  <input name="email"  id="email" type="text" placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+  <input  name="pass" id="pass" type="password" placeholder="Password"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+<div class="select">
+  <input type="radio" name="user" id="user" value="1" checked>&nbsp <label class="lab1">User</label>
+  <input type="radio" name="user" id="admin" value="2">&nbsp <label>Admin</label>
+ </div>
   <button type="button"  name="login" id="login">Login</button>
 </form>
   <p class="signx"><a onclick="show_signup();cancel_log();">new member? register</a></p>
@@ -553,5 +574,24 @@ crossorigin="anonymous">
 <script src="js/index.js" type="text/javascript"></script>
 <script   type="text/javascript" src="js/ajax-register.js"></script>
 <script   type="text/javascript" src="js/ajax-login.js"></script>
+
+
+/*============  Check and Uncheck the radio button ===========*/
+
+<script>
+  /*
+$('input[type=radio]').change(function()
+{
+    if (this.checked)
+    {
+        $(this).closest('.select')
+            .find('input[type=radio]').not(this)
+            .prop('checked', false);
+    }
+});
+
+*/
+  </script>
+
 
  

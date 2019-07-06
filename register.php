@@ -102,8 +102,9 @@ else
         exit;
     }
 else{  //if new user then insert data into database
-   $query = "INSERT INTO user (name, email, phone, clg, state, pswd)
-   VALUES ('$name','$email', '$phone', '$clg', '$state', '$pass')";
+   $user_type=2;
+   $query = "INSERT INTO user (name, email, phone, clg, state, pswd,user_type)
+   VALUES ('$name','$email', '$phone', '$clg', '$state', '$pass','$user_type')";
    
     if ($conn->query($query) === TRUE) 
     {
