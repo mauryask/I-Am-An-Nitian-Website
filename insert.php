@@ -1,5 +1,23 @@
 <?php
 include_once('connection.php');
+
+
+if(isset($_POST['submit']))
+{
+    $file= addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
+    $head = $_POST['heading'];
+    $news = $_POST['news'];
+    $query="insert into tbl_images (name,heading, text) values('$file', '$head', '$news')";
+    if(mysqli_query($conn, $query))
+    {
+        echo  "<script>alert('Inserted successfully')</script>";
+    }
+    else
+    {
+        echo  "<script>alert('Insertion Failed')</script>";
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +39,7 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 <body>
 
 <div class="main">
-
+<p class="mainh">Add News</p>
 <!--=================  Menu Button   ===================-->
 <button id="show"><i class="fas fa-bars"></i></button>
 
@@ -58,6 +76,40 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+
+
+<script>
+$(document).ready(function(){
+    $('#submit').click(function(){
+        var image_name = $('#image').val();
+        var head = $('#heading').val();
+        var text = $('#news').val();
+        if(image_name== '') 
+        {
+            alert('Please choose a file');
+            return false;
+        } 
+        else if( head == '' || text == '')
+        {
+            alert('Please fill all the fields');
+            return false;
+        }
+        else
+        {
+            var extension = $('#image').val().split('.').pop().toLowerCase();
+            if(jQuery.inArray(extension, ['png', 'gif','jpg','tif','jpeg','mp4'])== -1)
+            {
+                alert("invalid image format");
+                $('#image').val('');
+                return false;
+            }
+            
+        }
+    })
+})
+</script>
+
+
 
 <!--Hiding and Showing Side Menu bar-->
 <script>

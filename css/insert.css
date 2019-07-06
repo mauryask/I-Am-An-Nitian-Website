@@ -127,6 +127,18 @@ justify-content:center;
     position: absolute;
     background:rgba(256,0,0,1);
 }
+
+.main .mainh{
+    text-transform: uppercase;
+    font-weight: bold;
+    color:rgba(230,230,230,1);
+    letter-spacing:0.5px;
+    font-size:30px;
+    text-align:center;
+    margin-top:3rem;
+}
+
+
 .left-menu  p{
  top:4rem;
  position:absolute;
