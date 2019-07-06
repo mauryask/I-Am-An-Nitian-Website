@@ -5,7 +5,7 @@
 
 
 
-/*============  Logo Slider ===========*/
+/*============  Logo Slider ===========*/  
 $('.owl-carousel').owlCarousel({
   loop:true,
   margin:10,
