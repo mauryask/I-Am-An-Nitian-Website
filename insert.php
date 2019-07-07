@@ -39,7 +39,7 @@ if(isset($_POST['submit']))
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <link href="css/left-menu.css" type="text/css" rel="stylesheet">
-
+<link href="css/insert.css" type="text/css" rel="stylesheet">
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <style>
@@ -70,52 +70,14 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 </div>
 
 
-<!--================= Edit News   ===================-->
-<div class="mainx" style="display:none;" id="mainx">
-    <p class="mainh">Edit News</p>
- <div class="edit-news">
-<table>
-<tr>
- <th>Id</th>
-<th>Image</th>
-<th>Heading</th>
-<th>News</th>
-<th>Edit</th>
-<th>Delete</th>
-</tr>
-
-<?php
-$query = "select * from tbl_images";
-$result=mysqli_query($conn, $query);
-while($row=mysqli_fetch_array($result))
-{
-  ?>
-  <tr>
-    <td style="font-weight:bold;"><?php echo $row['id']  ?></td>
-    <td><?php echo '<img class="imgx" alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/>' ?></td>
-    <td class="thead"><?php  echo $row['heading']  ?></td>
-    <td><?php echo $row['text'] ?></td>
-    <td> <a href="edit.php?edit=<?php echo  $row['id']; ?>">Edit</a> </td>
-    <td> <button name="delete" id="<?php  $row['id']; ?>" class="delbutton">Delete</button></td>    
-  </tr>
-  <?php 
-}
-?>
-
-</table>
-</div>
-</div>
-
-
-
-
 <!--=================  Left Side MAnu Bar   ===================-->
 <div class="left-menu" class="popup" id="demo">
     <p>Admin Panel</p>
     <button id="add" type="button" onclick="func()">add news</button>
-    <button id="edit" type="button" onclick="fune()">edit news</button>
+    <button id="edit" type="button">edit news</button>
     <button id="delete" type="button">view news</button>
     <button id="statics" type="button">statics</button>
+    <button id="home" type="button">Home</button>
 </div>
 
 </body>
@@ -125,39 +87,26 @@ while($row=mysqli_fetch_array($result))
 
 
 <script type="text/javascript" >
-        $(document).ready(function() {
+        $(function(){
+    $(document).on('click','.delbtn',function(){
+        var del_id= $(this).attr('id');
+        var $ele = $(this).parent().parent();
+        $.ajax({
+            type:'POST',
+            url:'delete.php',
+            data:{del_id:del_id},
+            success: function(data){
+                 if(data == "YES"){
+                     $ele.fadeOut().remove();
+                 }else{
+                        alert("Deletion Failed");
+                 }
+             }
 
-            $(".delbutton").click(function(e) {
-                var del_id = $(e.relatedTarget).data('id');
-               // var del_id = $(this).attr("id");
-
-                if (confirm("Are You Sure? This Can not Be Undone Later.")) {
-                    $.ajax({
-                        type : "POST",
-                        url : "delete.php", //URL to the delete php script
-                        data : 'id=' + del_id,
-                        success : function() {
-                            alert('Success');
-                        }
-                    });
-                    $(this).parents(".record").animate("fast").animate({
-                        opacity : "hide"
-                    }, "slow");
-                }
-                return false;
             });
         });
+});
  </script>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -179,15 +128,16 @@ function load_insert() //on page loading insertion will be shown
  
 
 $(document).ready(function(){
+    $("#home").click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0}); 
+    setTimeout(function() {
+        window.location.href="index.php";
+    },500);  
+  })
 
 /*================  Add News ===================*/ 
   $("#add").click(function(){
-    TweenMax.to('#demo',0.5,{scaleX: 0});
-    $('head').append('<link rel="stylesheet" href="css/insert.css" type="text/css"/>');
-    document.getElementById('main').style.display='block';
-    document.getElementById('mainx').style.display='none';
-    $('head').remove('<link rel="stylesheet" href="css/edit.css" type="text/css"/>');
-    
+    TweenMax.to('#demo',0.5,{scaleX: 0});   
   })
 
 
@@ -195,11 +145,14 @@ $(document).ready(function(){
 
   $("#edit").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0});
-    $('head').append('<link rel="stylesheet" href="css/edit.css" type="text/css"/>');
-    document.getElementById('mainx').style.display='block';
-    document.getElementById('main').style.display='none';
-    $('head').remove('<link rel="stylesheet" href="css/insert.css" type="text/css"/>');
+    setTimeout(function() {
+        window.location.href="edit.php";
+    },500); 
   })
+
+$("#demo").on('click',function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0}); 
+})
 
     /*================  Form Validation ===================*/   
     $('#submit').click(function(){
@@ -228,12 +181,6 @@ $(document).ready(function(){
             
         }
     })
-
-/*=======================Hiding and Showing Side Menu bar======================*/
-    $('#cut').on('click', function(){
-        TweenMax.to('#demo',0.5,{scaleX: 0});
-    });
-
 
     $('#show').on('click', function(){
         TweenMax.to('#demo',0.5,{scaleX:1});

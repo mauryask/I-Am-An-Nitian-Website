@@ -41,7 +41,7 @@ crossorigin="anonymous">
  <!--================ Back to top Button ====================-->
   <button id="back-to-top"><i class="fas fa-angle-double-up"></i></button>
 
-  <!--================== Preloader =========================-->
+  <!--================== Preloader ==========================-->
 <div id="loader">
 </div>
 

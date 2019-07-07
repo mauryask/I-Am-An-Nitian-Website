@@ -1,23 +1,27 @@
 <!--
-@ This file consists of code for updating and editing news
+@ This file consists of code for adding news and links to edit news
 -->
+
 <?php
 include_once('connection.php');
-
-if(isset($_POST['update']))
+if(isset($_POST['submit']))
 {
-    $id=$_GET['edit'];
     $file= addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
-    $head = addslashes($_POST['heading']); //here add slashes is used to allow insertion of single quoptes commas
+    $head = addslashes($_POST['heading']);
     $news = addslashes($_POST['news']);
-    $query="update tbl_images set name='$file', heading='$head', text='$news' where id='".$id."'";
+    $views=0;
+    $likes=0;
+    $comments=0;
+    $dislikes=0;
+    $query="insert into tbl_images (name,heading, text,views,likes,dislikes,comments) 
+    values('$file', '$head', '$news','$views','$likes','$dislikes','$comments')";
     if(mysqli_query($conn, $query))  
     {
-        echo  "<script>alert('Updated successfully')</script>";
+        echo  "<script>alert('Inserted successfully')</script>";
     }
     else
     {
-        echo  "<script>alert('Upadtion Failed')</script>";
+        echo  "<script>alert('Insertion Failed')</script>";
     }
 }
 
@@ -34,111 +38,78 @@ if(isset($_POST['update']))
 <meta name="author" content="Shubham Maurya">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-<link href="css/update.css" type="text/css" rel="stylesheet">
+<link href="css/edit.css" type="text/css" rel="stylesheet">
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <style>
 
 </style>
 </head>
-<body>
+<body onload="load_insert()">
 
-<div class="main">
-<p class="mainh" id="mainh" >Update News</p>
+<!--================= Edit News   ===================-->
+<div class="mainx"  id="mainx">
+    <p class="mainh">Edit News</p>
+ <div class="edit-news">
+<table>
+<tr>
+ <th>Id</th>
+<th>Image</th>
+<th>Heading</th>
+<th>News</th>
+<th>Edit</th>
+<th>Delete</th>
+</tr>
 
-<!--=================  Editing News  ===================-->
-<div class="add-news" id="add-news">
-<form method="post" enctype="multipart/form-data" autocomplete="off">
-
-<input type="file" name="image" id="image"> 
 <?php
-$id = $_GET['edit'];
-$query = "select * from tbl_images where id=".$id." ";
-$result = mysqli_query($conn, $query);
-if(mysqli_num_rows($result)>0)
+$query = "select * from tbl_images";
+$result=mysqli_query($conn, $query);
+while($row=mysqli_fetch_array($result))
 {
-  $row=mysqli_fetch_array($result);
+  ?>
+  <tr>
+    <td style="font-weight:bold;"><?php echo $row['id']  ?></td>
+    <td><?php echo '<img class="imgx" alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/>' ?></td>
+    <td class="thead"><?php  echo $row['heading']  ?></td>
+    <td><?php echo $row['text'] ?></td>
+    <td> <a href="update.php?update=<?php echo  $row['id']; ?>">Edit</a> </td>
+    <td> <button name="delete" id="<?php  $row['id']; ?>" class="delbtn">Delete</button></td>    
+  </tr>
+  <?php 
 }
-else
-{
-echo '<script>alert("Failed")</script>';
-}
-
- echo  '<input type="heading" name="heading" id="heading"  value="'.$row['heading'].'">';
-
- echo '<textarea  name="news" id="news" rows="12">'.$row['text'].'</textarea>';
-
 ?>
-<input type="submit" name="update" id="update" value="Update"> 
 
-</form>
-
+</table>
 </div>
 </div>
+
 
 </body>
 
 </html>
 
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 
 
-<script>
-$(document).ready(function(){
-    $('#update').click(function(){
-        var image_name = $('#image').val();
-        var head = $('#heading').val();
-        var text = $('#news').val();
-       if(image_name== '') 
-        {
-            alert('Please choose a file');
-            return false;
-        } 
-        else if( head == '' || text == '')
-        {
-            alert('Please fill all the fields');
-            return false;
-        }
-        else
-        {
-            var extension = $('#image').val().split('.').pop().toLowerCase();
-            if(jQuery.inArray(extension, ['png', 'gif','jpg','tif','jpeg','mp4'])== -1)
-            {
-                alert("invalid image format");
-                $('#image').val('');
-                return false;
-            }
-            
-        }
-    })
-})
-</script>
+<script type="text/javascript" >
+        $(function(){
+    $(document).on('click','.delbtn',function(){
+        var del_id= $(this).attr('id');
+        var $ele = $(this).parent().parent();
+        $.ajax({
+            type:'POST',
+            url:'delete.php',
+            data:{del_id:del_id},
+            success: function(data){
+                 if(data == "YES"){
+                     $ele.fadeOut().remove();
+                 }else{
+                        alert("Deletion Failed");
+                 }
+             }
 
-
-
-<!--Hiding and Showing Side Menu bar-->
-<script>
-    $(document).ready(function(){
-    $('#cut').on('click', function(){
-        TweenMax.to('#demo',0.5,{scaleX: 0});
-    });
-
-
-    $('#show').on('click', function(){
-        TweenMax.to('#demo',0.5,{scaleX:1});
-    });
+            });
+        });
 });
+ </script>
 
-</script>
 
-<script>
-function func()
-{
-    document.getElementById('mainh').style.display='block';
-    document.getElementById('add-news').style.display='block';
-}
-function fund()
-{
-    document.getElementById('mainh').style.display='none';
-    document.getElementById('add-news').style.display='none';
-}
-</script>

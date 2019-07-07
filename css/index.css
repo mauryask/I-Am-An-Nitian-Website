@@ -18,7 +18,7 @@
 	}
 
 	body{
-		/*background: rgba(250,250,250,1);*/
+		background: rgba(250,250,250,1);
 	}
 
 /*================  Page Preloader  =================*/ 
@@ -118,12 +118,12 @@
 		text-decoration: none;
 	}
 	.banner .textx .social a img{
+		box-shadow: rgba(0, 0, 0, 0.8) 0 0px 10px, rgba(0, 0, 0, 0.65) 0 0 10px 1px, inset rgba(255, 255, 255, 0.15) 0 1px 0, inset rgba(0, 0, 0, 0.25) 0 -1px 0;
 		cursor: pointer;
 		width:40px;
 		height:40px;
 		border-radius: 50%;
 	    border: 2px solid rgba(250,250,250,0.8);
-		box-shadow:2px 2px 2px 1px rgba(256,0,0,0.2);
 	}
 	.banner .textx .social a img:hover{
 		border: 2px solid rgba(256,256,256,1);
@@ -359,53 +359,6 @@ letter-spacing: 0.7px;
 	 margin:0;
 	margin-left:0.6rem;
  }
-
-
-/*================  Download Our App  =================*/ 
-
- /*.app{
-	background: rgba(0,0,0,0.8);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	box-shadow:1px 0 1px 0 rgba(0,0,0,0.6);
- }
- .app div{
-	 flex:1 1 5rem;
-	 width:100%;
- }
- .app div p{
-	 letter-spacing: 0.7px;
-	 text-transform: uppercase;
- font-size:33px;
- text-align: center;
- font-weight:bold;
- color:rgba(256,256,256,0.7);
-}
-
-.app div img{
-	left:50%;
-	transform: translate(-50%);
-	position: relative;
-   }
-.app div button{
-	background:rgba(256,0,0,0.9);
-	font-size:15px;
-	border:none;
-	margin-top:5%;
-	width:12.5rem;
-	padding:9.3px;
-	left:50%;
-	transform: translate(-50%);
-	position: relative;
-	border-radius:20px;
-	color:rgba(256,256,256,0.8);
-	cursor:pointer;
-	outline: none;
-}
-
-*/
-
 
 /*================  Fooetr Section  =================*/ 
 
