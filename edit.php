@@ -1,3 +1,6 @@
+<!--
+@ This file consists of code for updating and editing news
+-->
 <?php
 include_once('connection.php');
 
@@ -5,8 +8,8 @@ if(isset($_POST['update']))
 {
     $id=$_GET['edit'];
     $file= addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
-    $head = $_POST['heading'];
-    $news = $_POST['news'];
+    $head = addslashes($_POST['heading']); //here add slashes is used to allow insertion of single quoptes commas
+    $news = addslashes($_POST['news']);
     $query="update tbl_images set name='$file', heading='$head', text='$news' where id='".$id."'";
     if(mysqli_query($conn, $query))  
     {
@@ -64,7 +67,7 @@ echo '<script>alert("Failed")</script>';
  echo '<textarea  name="news" id="news" rows="12">'.$row['text'].'</textarea>';
 
 ?>
-<input type="submit" name="update" id="update" value="Update" > 
+<input type="submit" name="update" id="update" value="Update"> 
 
 </form>
 
