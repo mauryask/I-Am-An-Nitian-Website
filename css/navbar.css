@@ -8,13 +8,6 @@
 * LinkedIn : https://www.linkedin.com/in/cyberthreatatnit/
 */
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:sans-serif;
-}
-
 header{
 	position:absolute;
 	top:0;

@@ -96,7 +96,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 {
   if($_SESSION['user_type'] == 1)
   {
-    echo '<li><a href="insert.php" class="homex" >Admin</a></li>';
+    echo '<li><a href="edit.php" class="homex" >Admin</a></li>';
   }
 }
 ?>
@@ -145,31 +145,25 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 </div>
 </div>
-
 <!--================ Explore Section ====================-->
 <div class="explore" >
   <p class="main-expo">Explore</p>
   <div class="expo-line"></div>
-
   <div class="expo" style="margin-top:3rem;" >
-
    <div class="appx">
      <img src="images/school.svg">
      <p>Colleges</p>
     </div>
-
     
    <div class="appx">
       <img src="images/exam.svg">
       <p>Exams</p>
      </div>
-
      
    <div class="appx">
       <img src="images/infographic.svg">
       <p>College Ranking</p>
      </div>
-
      
    <div class="appx">
       <img src="images/research.svg">
@@ -181,9 +175,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         <p>College Reviews</p>
        </div>
   </div>
-
   <div class="expo">
-
       <div class="appx">
           <img src="images/calendar.svg">
           <p>College Events</p>
@@ -199,8 +191,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
             <img src="images/dj.svg">
             <p>Clubs</p>
            </div>
-
-
       <div class="appx">
         <img src="images/books.svg">
         <p>Donate Books</p>
@@ -213,9 +203,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         </div>
    
      </div>
-
 </div>
-
 <!--================ Ask Section ====================-->
 <div class="ask">
   <div class="txtr">
@@ -239,12 +227,10 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   
  
 <!--================ News Section ====================-->
-
 <div style="width:100%;height:1%;background:transparent;margin-top:4%;"></div>
 <div class="explore" style="margin-top:0;">
   <p class="main-expo">News & Articles</p>
   <div class="expo-line" style="width:18rem;position:relative;margin-bottom:3rem;"></div>
-
   <?php 
             $query = "select * from tbl_images order by id desc limit 8";
              $result = mysqli_query ($conn, $query);
@@ -266,9 +252,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                 <?php echo '<div class="zoom"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>'?>
               <?php 
               $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
-
               $text = implode(' ',array_slice(explode(' ', $row['text']),0,15)); //getting fires 19 words from text
-
               echo '<p>'.'<span class="heading">'.$head.'</span>'." ".$text.'..<a href="news.php?id='.$id.'">'." Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>';
                   ?>                                               
                 </div>   
@@ -280,7 +264,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
            <?php
                   }
                   $_SESSION['x']=$ids;
-
                   if ($i % 4 != 0) echo "</div>";
                  }
                else 
@@ -293,7 +276,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                   
      <a href="more-news.php" class="more">More News  <i class="fas fa-chevron-circle-right"></i></a>
     </div>
-
 <!--================ About Section ====================-->
     <a id="about"></a>
     <div style="width:100%;height:5%;margin-top:2%;"></div>
@@ -313,23 +295,16 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
     Here you can check out the news & events related to each and every NIT.</p>
     </div>
     </div>
-
-
-
 <!--============== Side Buttons ==================-->
 <div id="mySidenav" class="sidenav">
 <a  id="feedback" style=" padding:15px 28px 0 25px;" onclick="fun1()"><span>FEEDBACK</span></a>
 </div>
-
 <div id="mySidenavx" class="sidenavx">
   <a  id="update" style=" padding:16px 28px 0 25px;" onclick="fun3()"><span>UPDATES</span></a>
   </div>
-
-
 <!--============== Signup Popup ==================-->
 <div class="signup" id="sign">
 <div class="sign-card">
-
  <div class="sign-img">
   <div class="links">
     <p class="p1">Quick Links</p>
@@ -345,7 +320,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
     <p class="p2"><a href="#">privacy policy</a></p>
   </div>
  </div>
-
  <div class="sign-form">
    <img class="cancel" onclick="cancel()" src="images/cut.png">
     <p class="mainh">Register Here</p>
@@ -379,18 +353,13 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
          <p> <a onclick="show_log();cancel();">already a member? login</a></p>
   </div>
  </div>
-
-
 </div>
 </div>
-
-
 <!--=============== Login Popup =================-->
 <div class="login" id="log" >
 <div class="log-card">
     <img class="cancel-log"  src="images/cut.png" onclick="cancel_log()">
 <div>
-
 <div class="log-msg"  ><p id="message"><p></div>
   <form  method="post" autocomplete="off">
   <input name="email"  id="email" type="text" placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
@@ -405,7 +374,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 </div>
 </div>
-
 <!--============== Feedback Popup ==================-->
 <div class="popup">
     <div class="popup-content">
@@ -417,7 +385,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
     <input type="submit" value="Send" class="btn-send" onclick="funalert()">
   </div>
    </div>
-
    <div class="popupx">
     <div class="popupx-content">
     <img src="images\cut.png" alt="close" width="21px" height="21px" onclick="fun4()" class="close">
@@ -439,7 +406,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
            Ipsum has been. <span class="blinker">New</span>
         </p>
  </div>
-
  <div class="updx">
     <p>
         Lorem Ipsum is simply dummy text of the 
@@ -454,7 +420,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
          Ipsum has been.
       </p>
 </div>
-
 <div class="updx">
     <p>
         Lorem Ipsum is simply dummy text of the 
@@ -462,12 +427,10 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
          Ipsum has been.
       </p>
 </div>
-
     </div>
     
   </div>
    </div>
-
    
   <!--============== Nits Logo =====================-->
    <div class="nit-logos">
@@ -504,8 +467,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
     <div class="item"><img src="images\nit-logo\nit mizoram.png"><p>nit Mizoram</p></div>
     </div>
     </div>
-
-
  <!--============== Footer Section ==================-->
   <footer>
     <div class="datay">
@@ -543,7 +504,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   <p class="x">Feel Free To Contact Us</p>
   <p>iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-9055667606 &nbsp | &nbsp  +91-9055667606</p>
   </div>
-
 <!--============== Bottom Container =====================-->
  <div class="container">
 <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
@@ -552,32 +512,22 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </footer>
 </div>
 </body>
-
 </html>
-
 <!--===============  Microsoft's JQuery CDN =================-->
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
-
 <!--===================  TypedJs CDN  =======================-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js" type="text/javascript"></script>
-
 <!--================  Owl Carousel Libraray  ==============-->
 <script src="js/owl.carousel.min.js" type="text/javascript"></script>
-
 <!--==================  TweenMax CDN  ==================-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-
 <!--==================  SweetAlert2 CDN  ==================-->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>
-
 <!--==================  Local Js Files  ==================-->
 <script src="js/index.js" type="text/javascript"></script>
 <script   type="text/javascript" src="js/ajax-register.js"></script>
 <script   type="text/javascript" src="js/ajax-login.js"></script>
-
-
 /*============  Check and Uncheck the radio button ===========*/
-
 <script>
   /*
 $('input[type=radio]').change(function()
@@ -589,9 +539,5 @@ $('input[type=radio]').change(function()
             .prop('checked', false);
     }
 });
-
 */
   </script>
-
-
- 

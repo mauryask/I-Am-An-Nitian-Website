@@ -46,11 +46,11 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 
 </style>
 </head>
-<body onload="load_insert()">
+<body>
 
 <!--=================  Menu Button   ===================-->
 <button id="show"><i class="fas fa-bars"></i></button>
-<div class="main" style="display:none;" id="main">
+<div class="main" id="main">
 <p class="mainh" id="mainh">Add News</p>
 
 <!--=================  Adding News  ===================-->
@@ -69,11 +69,10 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 </div>
 </div>
 
-
 <!--=================  Left Side MAnu Bar   ===================-->
 <div class="left-menu" class="popup" id="demo">
     <p>Admin Panel</p>
-    <button id="add" type="button" onclick="func()">add news</button>
+    <button id="add" type="button" style="display:none;">add news</button>
     <button id="edit" type="button">edit news</button>
     <button id="delete" type="button">view news</button>
     <button id="statics" type="button">statics</button>
@@ -85,46 +84,7 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 </html>
 
 
-
-<script type="text/javascript" >
-        $(function(){
-    $(document).on('click','.delbtn',function(){
-        var del_id= $(this).attr('id');
-        var $ele = $(this).parent().parent();
-        $.ajax({
-            type:'POST',
-            url:'delete.php',
-            data:{del_id:del_id},
-            success: function(data){
-                 if(data == "YES"){
-                     $ele.fadeOut().remove();
-                 }else{
-                        alert("Deletion Failed");
-                 }
-             }
-
-            });
-        });
-});
- </script>
-
-
-
-
-
-
-
-
-
-
-
 <script>
-
-function load_insert() //on page loading insertion will be shown
-        {
-            $('head').append('<link rel="stylesheet" href="css/insert.css" type="text/css"/>');
-            document.getElementById('main').style.display='block';
-        }
  
 
 $(document).ready(function(){
@@ -133,11 +93,6 @@ $(document).ready(function(){
     setTimeout(function() {
         window.location.href="index.php";
     },500);  
-  })
-
-/*================  Add News ===================*/ 
-  $("#add").click(function(){
-    TweenMax.to('#demo',0.5,{scaleX: 0});   
   })
 
 
@@ -188,3 +143,6 @@ $("#demo").on('click',function(){
 
 })
 </script>
+
+
+

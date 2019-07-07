@@ -39,14 +39,19 @@ if(isset($_POST['submit']))
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <link href="css/edit.css" type="text/css" rel="stylesheet">
+<link href="css/left-menu.css" type="text/css" rel="stylesheet">
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <style>
-
+body{
+    overflow-y: scroll;
+    height:100%;
+}
 </style>
 </head>
-<body onload="load_insert()">
-
+<body >
+<!--=================  Menu Button   ===================-->
+<button id="show"><i class="fas fa-bars"></i></button>
 <!--================= Edit News   ===================-->
 <div class="mainx"  id="mainx">
     <p class="mainh">Edit News</p>
@@ -84,9 +89,53 @@ while($row=mysqli_fetch_array($result))
 </div>
 
 
+<!--=================  Left Side MAnu Bar   ===================-->
+<div class="left-menu" class="popup" id="demo">
+    <p>Admin Panel</p>
+    <button id="add" type="button" >add news</button>
+    <button id="delete" type="button">view news</button>
+    <button id="statics" type="button">statics</button>
+    <button id="home" type="button">Home</button>
+</div>
+
+
 </body>
 
 </html>
+
+
+
+<script>
+
+$(document).ready(function(){
+    $("#home").click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0}); 
+    setTimeout(function() {
+        window.location.href="index.php";
+    },500);  
+  })
+
+/*================  Add News ===================*/ 
+  $("#add").click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0});   
+    setTimeout(function() {
+        window.location.href="insert.php";
+    },500); 
+  })
+
+
+$("#demo").on('click',function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0}); 
+})
+
+    $('#show').on('click', function(){
+        TweenMax.to('#demo',0.5,{scaleX:1});
+    });
+
+})
+</script>
+
+
 
 
 
