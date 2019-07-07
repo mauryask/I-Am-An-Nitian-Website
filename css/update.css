@@ -37,7 +37,6 @@ body {
     top:50%;
     transform:translate(-50%,-50%);
     position:absolute;
-    display: none;
 }
 .add-news form{
     display: flex;
@@ -51,7 +50,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.8) 0 0px 10px, rgba(0, 0, 0, 0.65) 0 0 10px 1px, inset rgba(255, 255, 255, 0.15) 0 1px 0, inset rgba(0, 0, 0, 0.25) 0 -1px 0;
 }
 
-.add-news form #heading, #submit{
+.add-news form #heading, #update{
     color:rgba(0,0,0,1);
    font-size:15px;
    width:52rem;
@@ -83,7 +82,7 @@ body {
     color:rgba(230,230,230,1);
 }
 
- #submit{
+ #update{
      cursor:pointer;
      height:2.4rem;
      font-size:15px;

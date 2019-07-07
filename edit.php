@@ -1,19 +1,20 @@
 <?php
 include_once('connection.php');
 
-if(isset($_POST['submit']))
+if(isset($_POST['update']))
 {
+    $id=$_GET['edit'];
     $file= addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
     $head = $_POST['heading'];
     $news = $_POST['news'];
-    $query="insert into tbl_images (name,heading, text) values('$file', '$head', '$news')";
+    $query="update tbl_images set name='$file', heading='$head', text='$news' where id='".$id."'";
     if(mysqli_query($conn, $query))  
     {
-        echo  "<script>alert('Inserted successfully')</script>";
+        echo  "<script>alert('Updated successfully')</script>";
     }
     else
     {
-        echo  "<script>alert('Insertion Failed')</script>";
+        echo  "<script>alert('Upadtion Failed')</script>";
     }
 }
 
@@ -30,82 +31,44 @@ if(isset($_POST['submit']))
 <meta name="author" content="Shubham Maurya">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-<link href="css/insert.css" type="text/css" rel="stylesheet">
-<link href="css/edit.css" type="text/css" rel="stylesheet">
+<link href="css/update.css" type="text/css" rel="stylesheet">
 <style>
 
 </style>
 </head>
 <body>
 
-<div class="main" >
-<p class="mainh" id="mainh" style="display:none;">Add News</p>
-<!--=================  Menu Button   ===================-->
-<button id="show"><i class="fas fa-bars"></i></button>
+<div class="main">
+<p class="mainh" id="mainh" >Update News</p>
 
-<!--=================  Adding News  ===================-->
+<!--=================  Editing News  ===================-->
 <div class="add-news" id="add-news">
 <form method="post" enctype="multipart/form-data" autocomplete="off">
 
 <input type="file" name="image" id="image"> 
+<?php
+$id = $_GET['edit'];
+$query = "select * from tbl_images where id=".$id." ";
+$result = mysqli_query($conn, $query);
+if(mysqli_num_rows($result)>0)
+{
+  $row=mysqli_fetch_array($result);
+}
+else
+{
+echo '<script>alert("Failed")</script>';
+}
 
-<input type="heading" name="heading" id="heading" placeholder="Heading">
+ echo  '<input type="heading" name="heading" id="heading"  value="'.$row['heading'].'">';
 
-<textarea placeholder="Enter News Here..." name="news" id="news" rows="12" ></textarea>
+ echo '<textarea  name="news" id="news" rows="12">'.$row['text'].'</textarea>';
 
-<input type="submit" name="submit" id="submit" value="Insert" > 
+?>
+<input type="submit" name="update" id="update" value="Update" > 
 
 </form>
+
 </div>
-</div>
-
-<!--================= Edit News   ===================-->
-<div class="mainx">
-    <p class="mainh">Edit News</p>
- <div class="edit-news">
-<table>
-<tr>
- <th>Id</th>
-<th>Image</th>
-<th>Heading</th>
-<th>News</th>
-<th>Edit</th>
-<th>Delete</th>
-</tr>
-
-<?php
-$query = "select * from tbl_images";
-$result=mysqli_query($conn, $query);
-while($row=mysqli_fetch_array($result))
-{
-  ?>
-  <tr>
-    <td style="font-weight:bold;"><?php echo $row['id']  ?></td>
-    <td><?php echo '<img class="imgx" alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/>' ?></td>
-    <td class="thead"><?php  echo $row['heading']  ?></td>
-    <td><?php echo $row['text'] ?></td>
-    <td> <a href="edit.php?edit=<?php echo  $row['id']; ?>">Edit</a> </td>
-    <td><?php echo '<button>Delete</button>' ?></td>
-  </tr>
-  <?php  
-}
-?>
-
-</table>
-</div>
-</div>
-
-
-
-
-<!--=================  Left Side MAnu Bar   ===================-->
-<div class="left-menu" class="popup" id="demo">
-    <img src="images/cutk.png" id="cut">
-    <p>Admin Panel</p>
-    <button id="add" type="button" onclick="func()">add news</button>
-    <button id="delete" type="button" onclick="fund()">delete news</button>
-    <button id="edit" type="button">edit news</button>
-    <button id="statics" type="button">statics</button>
 </div>
 
 </body>
@@ -118,11 +81,11 @@ while($row=mysqli_fetch_array($result))
 
 <script>
 $(document).ready(function(){
-    $('#submit').click(function(){
+    $('#update').click(function(){
         var image_name = $('#image').val();
         var head = $('#heading').val();
         var text = $('#news').val();
-        if(image_name== '') 
+       if(image_name== '') 
         {
             alert('Please choose a file');
             return false;
