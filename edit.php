@@ -55,7 +55,7 @@ body{
 }
 </style>
 </head>
-<body >
+<body>
 <!--=================  Menu Button   ===================-->
 <button id="show"><i class="fas fa-bars"></i></button>
 <!--================= Edit News   ===================-->
