@@ -2,7 +2,6 @@
 <?php
 include_once('connection.php');
 $id = $_GET['id'];
-
 $sample_rate=1;
 
 $query="select * from tbl_images where  id='".$id."'  ";
