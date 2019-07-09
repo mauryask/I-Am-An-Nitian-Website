@@ -177,7 +177,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
        </div>
   </div>
   <div class="expo">
-      <div class="appx">
+      <div class="appx" onclick="location.href='story.php'">
           <img src="images/growth.svg">
           <p>Success Stories</p>
          </div>
@@ -249,7 +249,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
           
                 ?>        
           
-              <div class="xnnn">
+              <div class="xnnn" style="box-shadow:none;">
                 <?php echo '<div class="zoom"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>'?>
               <?php 
               $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
@@ -363,8 +363,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div>
 <div class="log-msg"  ><p id="message"><p></div>
   <form  method="post" autocomplete="off">
-  <input name="email"  id="email" type="text" placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
-  <input  name="pass" id="pass" type="password" placeholder="Password"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+  <input name="text" autocomplete="pnstech" id="email" type="text" placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+  <input  name="pass" autocomplete="pnstech" id="pass" type="password" placeholder="Password"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
 <div class="select">
   <input type="radio" name="user" id="user" value="1" checked>&nbsp <label class="lab1">User</label>
   <input type="radio" name="user" id="admin" value="2">&nbsp <label>Admin</label>
