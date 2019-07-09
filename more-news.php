@@ -1,9 +1,5 @@
-
 <?php 
-
 include_once('connection.php');
-
-
  ?>
 
 <html lang="en">
@@ -13,63 +9,95 @@ include_once('connection.php');
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
 crossorigin="anonymous">
         <link rel="icon" href="images/imnitian.png"> 
-        <link href="css/more-news.css" type="text/css" rel="stylesheet">
+
         <link href="css/navbar.css" type="text/css" rel="stylesheet">
         <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+        <link href="css/footer.css" type="text/css" rel="stylesheet">
+        <link href="css/more-news.css" type="text/css" rel="stylesheet">
+     <style>
+    .homex:hover,.sub-menu:hover{
+    background:rgba(0,0,0,0.8);
+    transition:0.3s;
+    }
+
+    header nav ul li a,.homex{
+    color:rgba(256,256,256,1);
+    }
+
+    header .logo ul li a{
+        color:rgba(256,256,256,1);
+    }
+        </style>
     </head>
     <body onload="loadme()">
 
             <button id="back-to-top"><i class="fas fa-angle-double-up"></i></button>
-
             <div id="loader">
                </div>
+ <!--================ Scroll Indicator ======================-->
+ <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div> 
 
-            <div class="wrapper">
-            <div class="progress-container">
-               <div class="progress-bar" id="myBar"></div>
-             </div>
+            
+<header id="f">
+<div class="logo">
+<ul>
+<li><a href="index.php"><img src="images\imnitian.png"></a></li>
+<li><a href="index.php" style="font-family: 'Dancing Script', cursive;color:white;font-weight:bold;font-size:13px;letter-spacing: 0.7px;">I AM AN NITIAN</a></li>
+</ul>
+</div>
+<nav class="active">
+<ul>
+<li><a href="index.php" class="homex" >Home</a></li>
+<li><a href="team.html" class="homex">Our team</a></li>
+<li><a href="more-news.php" class="homex">News</a></li>
+<li><a href="index.php#about" class="homex">About Us</a></li>
+<li><a class="sub-menu" style="width:115px;">Exams <i class="fas fa-caret-square-down"></i></a>
+<ul>
+<li style="width:115px;"><a href="#">Jee</a></li>
+<li style="width:115px;"><a href="#">Gate</a></li>
+<li style="width:115px;"><a href="#">Neet</a></li>
+<li style="width:115px;"><a href="#">Camt</a></li>
+<li style="width:115px;"><a href="#">Gre</a></li>
+</ul>
+</li>
+<li>
+<button class="homex" onclick="search()" style="text-transform: uppercase;letter-spacing: 0.8px; font-weight: bold;">Search <i class="fas fa-search"></i></button>
+</li>
+<li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;">User
 
-            <header id="f" style="background:rgba(0,0,0,0.9);">
-                    <div class="logo">
-                    <ul>
-                    <li><a href="index.php"><img src="images\imnitian.png"></a></li>
-                    <li><a href="index.php" style="font-family: 'Dancing Script', cursive;color:white;font-weight:bold;font-size:13px;letter-spacing: 0.7px;">I AM AN NITIAN</a></li>
-                    </ul>
-                    </div>
-                    <nav class="active">
-                    <ul>
-                    <li><a href="index.php" class="homex">Home</a></li>
-                    <li><a href="team.html" class="homex">Our team</a></li>
-                    <li><a href="more-news.php" class="home">News</a></li>
-                    <li><a href="index.php#about"  class="homex">About Us</a></li>
-                    <li><a class="sub-menu">Exams <i class="fas fa-caret-square-down"></i></a>
-                    <ul>
-                    <li><a href="#">Jee</a></li>
-                    <li><a href="#">Gate</a></li>
-                    <li><a href="#">Neet</a></li>
-                    <li><a href="#">Camt</a></li>
-                    <li><a href="#">Gre</a></li>
-                    </ul>
-                    </li>
-                    <li>
-                    <button onclick="search()" style="text-transform: uppercase;letter-spacing: 0.8px; font-weight: bold;">Search <i class="fas fa-search"></i></button>
-                    </li>
-                    <li><a class="homex" style="cursor:pointer;">User &nbsp<i class="fas fa-user-graduate"></i></a></li>
-                    </ul>
-                    </nav>
-                    
-                    <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                    </div>
-                    
-                    <!--serach Box-->
-                    <div class="search-popup" id="searchx" style="display:none;">
-                        <input type="text"  placeholder="Search"><button><i class="fas fa-search"></i></button>
-                      </div>
-                      <!--xxxxx-->
-                    
-                    </header>
+&nbsp <i class="fas fa-user-graduate"></i></a>
+<ul style="margin-left:-1rem;">
+<!-- Hide and Show login and php buttons -->
+
+
+
+</ul>
+</li>
+</ul>
+</nav>
+<!--================ Mobile Version Menu ====================-->
+<div class="menu-toggle">
+<i class="fas fa-bars"></i>
+</div>
+
+<!--================ Search Box ====================-->
+<div class="search-popup" id="searchx" style="display:none;">
+    <div><input type="text"  placeholder="Search"><button><i class="fas fa-search"></i></button></div>
+  </div>
+
+</header>
+<!--===============   Main Banner   ==================-->
+ <div class="banner">
+  <div class="overlay">
+</div>
+<div class="center">
+<p>News</p>
+<p class="sub-center">Read news related to nits</p>
+</div>
+</div>
 
 
         <div class="explore"> 
@@ -95,7 +123,7 @@ crossorigin="anonymous">
                 <?php 
               $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
               $text = implode(' ',array_slice(explode(' ', $row['text']),0,14)); //getting fires 18 words from text
-              echo '<p>'.'<span class="heading">'.$head.'</span>'." ".$text.'....<a href="news.php?id='.$id.'">'." Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>';
+              echo '<p>'.'<span class="heading">'.$head.'</span>'." ".$text.'....<a href="news.php?id='.$id.'">'."Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>';
                   ?>   
 
                 </div>  
@@ -117,6 +145,7 @@ crossorigin="anonymous">
           
               </div>
               <div class="nad">
+  <img src="images/dynamo.gif"  class="nad-img">
   <img src="images/ad-demo.jpg"  class="nad-img">
               </div>
 
@@ -138,7 +167,7 @@ crossorigin="anonymous">
                       <p><a href="#">Neet</a></p>  
                       <p><a href="#">Gre</a></p>  
                     </div>
-                <div><p class="y">Cutoff</p>
+                <div><p class="y">Cutoff</p> 
                   <div class="linex"></div>
                   <p><a href="#">IITs </a></p>
                   <p><a href="#">NITs</a></p>
@@ -161,8 +190,10 @@ crossorigin="anonymous">
           2019 &nbsp| &nbsp I AM AN NITIAN &nbsp | &nbsp DESIGNED AND DEVELOPED BY SHUBHAM MAURYA &nbsp|&nbsp NIT SRINAGAR</p>
           </div>
           </footer>
-</div>
+
     </body>
 </html>
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+<!--===============  Microsoft's JQuery CDN =================-->
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
+<!--==================  Local Js Files  ==================-->
+<script src="js/main.js" type="text/javascript"></script>

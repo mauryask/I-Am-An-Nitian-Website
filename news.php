@@ -19,8 +19,6 @@ if(mysqli_num_rows($result)>0)
 
 ?>
 
-
-
 <html>
 <head>
 <title>I Am An Nitian | News</title>
@@ -36,6 +34,7 @@ crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 <link href="css/navbar.css" type="text/css" rel="stylesheet">
 <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
+<link href="css/footer.css" type="text/css" rel="stylesheet">
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 </head>
 
@@ -49,47 +48,79 @@ crossorigin="anonymous">
             <div class="progress-container">
                <div class="progress-bar" id="myBar"></div>
              </div>
-        <header id="f" style="background:black;">
-                <div class="logo">
-                <ul>
-                <li><a href="index.php"><img src="images\imnitian.png"></a></li>
-                <li><a href="index.php" style="font-family: 'Dancing Script', cursive;color:white;font-weight:bold;font-size:13px;letter-spacing: 0.7px;">I AM AN NITIAN</a></li>
-                </ul>
-                </div>
-                <nav class="active">
-                <ul>
-                <li><a href="index.php" class="homex">Home</a></li>
-                <li><a href="team.html" class="homex">Our team</a></li>
-                <li><a href="more-news.php" class="home">News</a></li>
-                <li><a href="index.php#about" class="homex">About Us</a></li>
-                <li><a class="sub-menu">Exams <i class="fas fa-caret-square-down"></i></a>
-                <ul>
-                <li><a href="#">Jee</a></li>
-                <li><a href="#">Gate</a></li>
-                <li><a href="#">Neet</a></li>
-                <li><a href="#">Camt</a></li>
-                <li><a href="#">Gre</a></li>
-                </ul>
-                </li>
-                <li>
-                <button onclick="search()" style="text-transform: uppercase;letter-spacing: 0.8px; font-weight: bold;">Search <i class="fas fa-search"></i></button>
-                </li>
-                <li><a class="homex" style="cursor:pointer;">User &nbsp<i class="fas fa-user-graduate"></i></a></li>
-                </ul>
-                </nav>
-                
-                <div class="menu-toggle">
-                <i class="fas fa-bars"></i>
-                </div>
-                
-                
-                <!--serach Box-->
-                <div class="search-popup" id="searchx" style="display:none;">
-                    <input type="text"  placeholder="Search"><button><i class="fas fa-search"></i></button>
-                  </div>
-                  <!--xxxxx-->
-                
-                </header>
+   <header id="f" style="background:black;">
+<div class="logo">
+<ul>
+<li><a href="index.php"><img src="images\imnitian.png"></a></li>
+<li><a href="index.php" style="font-family: 'Dancing Script', cursive;color:white;font-weight:bold;font-size:13px;letter-spacing: 0.7px;">I AM AN NITIAN</a></li>
+</ul>
+</div>
+<nav class="active">
+<ul>
+<li><a href="index.php" class="home" >Home</a></li>
+<li><a href="team.html" class="homex">Our team</a></li>
+<li><a href="more-news.php" class="homex">News</a></li>
+<li><a href="#about" class="homex">About Us</a></li>
+<li><a class="sub-menu" style="width:115px;">Exams <i class="fas fa-caret-square-down"></i></a>
+<ul>
+<li style="width:115px;"><a href="#">Jee</a></li>
+<li style="width:115px;"><a href="#">Gate</a></li>
+<li style="width:115px;"><a href="#">Neet</a></li>
+<li style="width:115px;"><a href="#">Camt</a></li>
+<li style="width:115px;"><a href="#">Gre</a></li>
+</ul>
+</li>
+<li>
+<button onclick="search()" style="text-transform: uppercase;letter-spacing: 0.8px; font-weight: bold;">Search <i class="fas fa-search"></i></button>
+</li>
+<li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;">
+<?php
+  if(isset($_SESSION['name'])&& !empty($_SESSION['name']))
+  {
+    echo $_SESSION['name'];
+  }
+  else
+  {
+    echo 'User';
+  }
+?>
+&nbsp <i class="fas fa-user-graduate"></i></a>
+<ul style="margin-left:-1rem;">
+<!-- Hide and Show login and php buttons -->
+
+<?php
+if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
+{
+  if($_SESSION['user_type'] == 1)
+  {
+    echo '<li><a href="edit.php" class="homex" >Admin</a></li>';
+  }
+}
+?>
+
+<?php if( isset($_SESSION['name']) && !empty($_SESSION['name']))
+{
+?>
+<li><a style="cursor:pointer;"  href="logout.php" >Logout</a></li>
+<?php }else{ ?>
+<li><a style="cursor:pointer;"  onclick="show_log()">Login</a></li>
+<?php } ?>
+
+</ul>
+</li>
+</ul>
+</nav>
+<!--================ Mobile Version Menu ====================-->
+<div class="menu-toggle">
+<i class="fas fa-bars"></i>
+</div>
+
+<!--================ Search Box ====================-->
+<div class="search-popup" id="searchx" style="display:none;">
+    <div><input type="text"  placeholder="Search"><button><i class="fas fa-search"></i></button></div>
+  </div>
+
+</header>
                 
 
 <div class="news-body">

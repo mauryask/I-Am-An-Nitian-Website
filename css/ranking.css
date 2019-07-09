@@ -1,0 +1,108 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    outline:none;
+    box-sizing: border-box;
+}
+
+.progress-container{
+    top:0;
+    position:fixed;
+}
+
+body{
+    background: rgba(250,250,250,1);
+}
+
+
+.banner{
+    width:100%;
+    height:400px;
+    background:
+    url(cglx.jpg)
+    100% 100% no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+.banner .overlay{
+    width:100%;
+    height:100%;
+    opacity:0.4;
+    background:black;
+}
+
+.banner .center{
+    top: 30%;
+    left:50%;
+    transform: translate(-50%,-30%);
+    position:absolute;
+    width:100%;
+    color:rgba(240,240,240,1);
+    font-weight:bold;
+    font-size:50px;
+    text-transform: uppercase;
+}
+
+.banner .center p{
+    text-align:center;
+   
+}
+
+.banner .center .sub-center{
+   font-size:31px;
+}
+
+th,td{
+    padding:7px 2px 7px 2px;
+    text-align:center;
+}
+
+body  .clg{
+ margin:5rem 0 0 4rem;
+width:70%;
+padding:1rem 0 1rem 0;
+}
+
+ .clg table{
+    left:50%;
+    transform:translate(-50%);
+    position:relative;
+}
+
+tr{
+    border:1px solid rgba(180,180,180,1);
+}
+ .clg table,th,td{
+    text-transform: capitalize;
+    background: rgba(250,250,250,1);
+    border-collapse: collapse;
+    color:rgba(80,80,80,1);
+}
+
+ .ads{
+   margin-top:31rem;
+    height:100vh;
+   width:23%;
+   float:right;
+}
+
+.ads img{
+  width:100%;
+  height:350px;
+  margin-bottom:10px;
+ }
+
+footer{
+    margin-top:0;
+    width:100%;
+    bottom:0;
+    position:-webkit-sticky;
+}
+
+
+
+
+
+

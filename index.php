@@ -33,6 +33,7 @@ crossorigin="anonymous">
 <link rel="stylesheet" href="css/owl.carousel.min.css" />
 <link rel="stylesheet" href="css/owl.theme.default.min.css" />
 <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
+<link href="css/footer.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 
@@ -160,7 +161,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
       <p>Exams</p>
      </div>
      
-   <div class="appx">
+   <div class="appx" onclick="location.href='ranking.php'">
       <img src="images/infographic.svg">
       <p>College Ranking</p>
      </div>

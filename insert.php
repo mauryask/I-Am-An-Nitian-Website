@@ -42,21 +42,6 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 <link href="css/insert.css" type="text/css" rel="stylesheet">
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-
-<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"></script>
-<script>
-tinymce.init
-({
-selector:'#news'
-});
-</script>
-
-<style>
-#news{
-    resize:none;
-    width:100%;
-}
-</style>
 </head>
 
 <body>
