@@ -67,7 +67,7 @@ body{
 </tr>
 
 <?php
-$query = "select * from tbl_images";
+$query = "select * from tbl_images order by id desc";
 $result=mysqli_query($conn, $query);
 while($row=mysqli_fetch_array($result))
 {
@@ -78,7 +78,8 @@ while($row=mysqli_fetch_array($result))
     <td class="thead"><?php  echo $row['heading']  ?></td>
     <td><?php echo $row['text'] ?></td>
     <td> <a href="update.php?update=<?php echo  $row['id']; ?>">Edit</a> </td>
-    <td> <button name="delete" id="<?php  $row['id']; ?>" class="delbtn">Delete</button></td>    
+
+    <td> <button name="delete" onclick="location.href='delete.php?del=<?php echo $row['id']; ?>'">Delete</button>
   </tr>
   <?php 
 }
@@ -87,7 +88,6 @@ while($row=mysqli_fetch_array($result))
 </table>
 </div>
 </div>
-
 
 <!--=================  Left Side MAnu Bar   ===================-->
 <div class="left-menu" class="popup" id="demo">
@@ -104,9 +104,7 @@ while($row=mysqli_fetch_array($result))
 </html>
 
 
-
 <script>
-
 $(document).ready(function(){
     $("#home").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0}); 
@@ -135,30 +133,5 @@ $("#demo").on('click',function(){
 })
 </script>
 
-
-
-
-
-<script type="text/javascript" >
-        $(function(){
-    $(document).on('click','.delbtn',function(){
-        var del_id= $(this).attr('id');
-        var $ele = $(this).parent().parent();
-        $.ajax({
-            type:'POST',
-            url:'delete.php',
-            data:{del_id:del_id},
-            success: function(data){
-                 if(data == "YES"){
-                     $ele.fadeOut().remove();
-                 }else{
-                        alert("Deletion Failed");
-                 }
-             }
-
-            });
-        });
-});
- </script>
 
 

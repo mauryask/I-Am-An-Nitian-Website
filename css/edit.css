@@ -11,7 +11,6 @@ body{
     background-image: -moz-radial-gradient(50% 100%, ellipse cover, rgba(61, 110, 178, 0.2) 50%, rgba(28, 45, 83, 0) 100%), -moz-radial-gradient(100% 10%, ellipse cover, rgba(185, 75, 12, 0.6) 20%, rgba(72, 154, 50, 0.3) 80%), -moz-linear-gradient(left top, #475ead 1%, #ae8439 50%, #1d2541 100%);
     background-image: -webkit-radial-gradient(50% 100%, ellipse cover, rgba(61, 110, 178, 0.2) 50%, rgba(28, 45, 83, 0) 100%), -webkit-radial-gradient(100% 10%, ellipse cover, rgba(185, 75, 12, 0.6) 20%, rgba(72, 154, 50, 0.3) 80%), -webkit-linear-gradient(left top, #475ead 1%, #ae8439 50%, #1d2541 100%);
     background-image: radial-gradient(ellipse cover at 50% 100%, rgba(61, 110, 178, 0.2) 50%, rgba(28, 45, 83, 0) 100%), radial-gradient(ellipse cover at 100% 10%, rgba(185, 75, 12, 0.6) 20%, rgba(72, 154, 50, 0.3) 80%), linear-gradient(to right bottom, #475ead 1%, #ae8439 50%, #1d2541 100%);
-    overflow-y:scroll;
     height:100%;
     background-repeat: no-repeat;
 }
@@ -49,6 +48,7 @@ table,th,td{
 }
 
 table{
+    height:100%;
     border-collapse:collapse;
     width:90%;
     box-shadow: rgba(0, 0, 0, 0.8) 0 0px 10px, rgba(0, 0, 0, 0.65) 0 0 10px 1px, inset rgba(255, 255, 255, 0.15) 0 1px 0, inset rgba(0, 0, 0, 0.25) 0 -1px 0;

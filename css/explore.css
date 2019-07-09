@@ -36,10 +36,17 @@ position: absolute;
     flex:1 1rem;
     height:auto;
     border-radius:12px;
-    box-shadow:1px 1px 1px 1px rgba(220,220,220,1);
     margin:1.3rem;
     cursor: pointer;
+    box-shadow:1px 1px 1px 1px rgba(220,220,220,1);
 }
+
+.explore .expo  div:hover
+{
+ transition:0.3s;
+  box-shadow:1px 1px 1px 1px rgba(75, 71, 71, 0.4);
+}
+
 
 .explore .expo div img{
  width:100px;
@@ -50,6 +57,7 @@ position: absolute;
  margin-top:1rem;
    }
 
+   
 
 
 .explore .expo div p{

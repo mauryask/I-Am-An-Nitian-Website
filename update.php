@@ -6,7 +6,7 @@ include_once('connection.php');
 
 if(isset($_POST['update']))
 {
-    $id=$_GET['edit'];
+    $id=$_GET['update'];
     $file= addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
     $head = addslashes($_POST['heading']); //here add slashes is used to allow insertion of single quoptes commas
     $news = addslashes($_POST['news']);

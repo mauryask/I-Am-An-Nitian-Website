@@ -1,5 +1,5 @@
-<?php
 
+<?php
 include_once('connection.php');
 $id = $_GET['id'];
 
@@ -60,7 +60,7 @@ crossorigin="anonymous">
                 <ul>
                 <li><a href="index.php" class="homex">Home</a></li>
                 <li><a href="team.html" class="homex">Our team</a></li>
-                <li><a href="news.html" class="home">News</a></li>
+                <li><a href="more-news.php" class="home">News</a></li>
                 <li><a href="index.php#about" class="homex">About Us</a></li>
                 <li><a class="sub-menu">Exams <i class="fas fa-caret-square-down"></i></a>
                 <ul>
@@ -101,11 +101,11 @@ crossorigin="anonymous">
         <div class="news-content">
         <p style="font-weight:bold;font-size:13px;"><?php  echo $row['inserted_at'] ?></p>
             <p>
-        <span><?php  echo $row['heading'];  ?></span><br>
+         <span><?php  echo $row['heading'];  ?></span><br>
          <?php echo $row['text']; ?>
         </p>
-        <p class="ldc">
-            <i class="far fa-thumbs-up" style="cursor:pointer;" name="likes"></i> <span class="x"><?php echo $row['likes'];  ?></span>
+         <p class="ldc">
+            <i class="far fa-thumbs-up" style="cursor:pointer;" name="likes" id="<?php echo $row['id'];  ?>"></i> <span id="x" class="x"></span>
             &nbsp <i class="far fa-thumbs-down" style="cursor:pointer;" name="dislikes"></i> <span  class="x">12</span>
             &nbsp <i class="fas fa-eye" style="cursor:pointer;"></i> <span  class="x"><?php echo $row['views'];  ?></span>
             &nbsp <i class="far fa-comment" style="cursor:pointer;" name="comment"></i> <span  class="x">100</span>
@@ -132,7 +132,7 @@ crossorigin="anonymous">
 <div class="ad-body">
 
 <?php 
-            $query = "select * from tbl_images order by id asc limit 6";
+            $query = "select * from tbl_images where id!='$id'  order by id asc limit 7 ";
              $result = mysqli_query ($conn, $query);
                 if (mysqli_num_rows($result)>0) 
                 {
@@ -215,3 +215,29 @@ crossorigin="anonymous">
 
 
 <script src="js/main.js" type="text/javascript"></script>
+
+<script>
+
+$(document).ready(function()
+    {
+        $(".far").on("click", function(e)
+            {
+                e.preventDefault();
+                var id = $(this).data("id");
+              //  console.log (id); // i am getting value in this id 
+                $.ajax({
+                type : "post",
+                url : "like.php",
+                data :  {id: id},
+                cache : false,
+                success : function(response)
+                { 
+                  alert(response);
+                   // $('#msg').html(html);
+                }
+                });
+  });
+});
+
+</script>
+
