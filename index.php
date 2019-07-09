@@ -178,8 +178,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   </div>
   <div class="expo">
       <div class="appx">
-          <img src="images/calendar.svg">
-          <p>College Events</p>
+          <img src="images/growth.svg">
+          <p>Success Stories</p>
          </div>
     
          
@@ -192,13 +192,13 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
             <img src="images/dj.svg">
             <p>Clubs</p>
            </div>
-      <div class="appx">
+      <div class="appx" onclick="location.href='donate.php'">
         <img src="images/books.svg">
         <p>Donate Books</p>
        </div>
    
        
-      <div class="appx">
+      <div class="appx" onclick="location.href='project.php'">
          <img src="images/project.svg">
          <p>Sell Project</p>
         </div>

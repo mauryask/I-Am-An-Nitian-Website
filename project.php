@@ -30,7 +30,7 @@ crossorigin="anonymous">
 <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
 <link href="css/footer.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
-<link href="css/donate.css" type="text/css" rel="stylesheet">
+<link href="css/project.css" type="text/css" rel="stylesheet">
 <style>
 .homex:hover,.sub-menu:hover{
 background:rgba(0,0,0,0.8);
@@ -114,8 +114,8 @@ header .logo ul li a{
     <div class="overlay">
 </div>
 <div class="center">
-<p>Donate Books</p>
-<p class="sub-center">donte your books help someone</p>
+<p>Sell &amp Buy project</p>
+<p class="sub-center">sell your project here</p>
 </div>
 </div>
 
