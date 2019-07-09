@@ -134,7 +134,7 @@ else{  //if new user then insert data into database
 } // if name field exits
 else 
 {  // if name field does not exits then you can't go to the welcome.php
-    header('location: index.php');
+    exit('access denied page 404 not found');
 }
 
  /*===== extra security layer (protection from spamers and hackers) =======*/

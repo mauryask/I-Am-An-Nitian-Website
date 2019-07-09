@@ -44,6 +44,10 @@ if(empty($_POST['email']) || empty($_POST['pass']))
   }
 }
 }
+else 
+{  // if email field does not exits then you can't go to the welcome.php
+    exit('access denied page 404 not found');
+}
 //extra security layer (protection from spamers and hackers)
 function test_input($data)
 {

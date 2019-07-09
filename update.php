@@ -4,7 +4,7 @@
 <?php
 
 session_start(); //preventing direct access of this page
-if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']))
+if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION['user_type']!=1)
 {
   exit('access denied page 404 not found');
 }
@@ -66,10 +66,6 @@ $result = mysqli_query($conn, $query);
 if(mysqli_num_rows($result)>0)
 {
   $row=mysqli_fetch_array($result);
-}
-else
-{
-echo '<script>alert("Failed")</script>';
 }
 
  echo  '<input type="heading" name="heading" id="heading"  value="'.$row['heading'].'">';
