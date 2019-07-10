@@ -57,7 +57,7 @@ body{
 }
 
 .banner .center p{
-    text-align:center;
+    text-align:center; 
    
 }
 
@@ -66,8 +66,23 @@ body{
 }
 
 footer{
-    margin-top:10rem;
+    margin-top:20rem;
     width:100%;
     bottom:0;
     position:-webkit-sticky;
+}
+
+body .ping{
+    top:80%;
+    left:70%;
+transform:translate(-70%,-80%);
+position:absolute;
+width:100%;
+}
+.ping p{
+    text-align: center;
+    text-transform:uppercase;
+    font-weight:bold;
+    font-size:40px;
+    color: rgba(80,80,80,1);
 }

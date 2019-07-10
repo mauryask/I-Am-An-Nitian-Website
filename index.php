@@ -151,12 +151,12 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   <p class="main-expo">Explore</p>
   <div class="expo-line"></div>
   <div class="expo" style="margin-top:3rem;" >
-   <div class="appx">
+   <div class="appx" onclick="location.href='college.php'">
      <img src="images/school.svg">
      <p>Colleges</p>
     </div>
     
-   <div class="appx">
+   <div class="appx" onclick="location.href='exam.php'">
       <img src="images/exam.svg">
       <p>Exams</p>
      </div>
@@ -166,12 +166,12 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
       <p>College Ranking</p>
      </div>
      
-   <div class="appx">
+   <div class="appx" onclick="location.href='cutoff.php'">
       <img src="images/research.svg">
       <p>Cutoff</p>
      </div>
    
-     <div class="appx">
+     <div class="appx" onclick="location.href='review.php'">
         <img src="images/review.svg">
         <p>College Reviews</p>
        </div>
@@ -184,13 +184,13 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
     
          
        <div class="appx">
-          <img src="images/stage.svg">
+          <img src="images/stage.svg" onclick="location.href='fests.php'">
           <p>College Fests</p>
          </div>
        
-         <div class="appx">
-            <img src="images/dj.svg">
-            <p>Clubs</p>
+         <div class="appx" onclick="location.href='question.php'">
+            <img src="images/conversation.svg">
+            <p>Ask Questions</p>
            </div>
       <div class="appx" onclick="location.href='donate.php'">
         <img src="images/books.svg">

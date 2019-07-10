@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-.progress-container{
+.progress-container{ 
     top:0;
     position:fixed;
 }
@@ -30,10 +30,9 @@ body{
     width:100%;
     height:400px;
     background:
-    url(man.jpg)
+    url(examx.jpg)
     100% 100% no-repeat;
     background-size:cover;
-    background-position:center;
     background-attachment:fixed;
 }
 
