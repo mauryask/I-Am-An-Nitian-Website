@@ -156,8 +156,13 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <!--====================  Notification Bell   ========================-->
 <div class="nt_img">
 <img src="images/notificationx.svg" class="notify">
-<span class="not_num">25<span>
+<span class="not_num" id="count"><span>
 </div>
+
+
+<div class="notify-popup"></div>
+
+
 <!--================ Explore Section ====================-->
 <div class="explore" >
   <p class="main-expo">Explore</p>
@@ -168,7 +173,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
      <p>Colleges</p>
     </div>
     
-   <div class="appx" onclick="location.href='exam.php'">
+   <div class="appx" onclick="location.href='explore/exam.php'">
       <img src="images/exam.svg">
       <p>Exams</p>
      </div>
@@ -540,8 +545,11 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <script src="js/index.js" type="text/javascript"></script>
 <script   type="text/javascript" src="js/ajax-register.js"></script>
 <script   type="text/javascript" src="js/ajax-login.js"></script>
-/*============  Check and Uncheck the radio button ===========*/
+<!--===================   Get total Number of notifications   ====================-->
+<script   type="text/javascript" src="js/notification.js"></script>
+
 <script>
+  /*============  Check and Uncheck the radio button ===========*/
   /*
 $('input[type=radio]').change(function()
 {
