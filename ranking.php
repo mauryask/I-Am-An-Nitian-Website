@@ -46,7 +46,7 @@ header .logo ul li a{
 }
     </style>
 </head>
-
+ 
 <body onload="loadme()">
 
  <!--================ Back to top Button ====================-->
@@ -110,11 +110,6 @@ header .logo ul li a{
 
 </header>
 
-<div class="ads">
-<img src="images/dynamo.gif">
-<img src="images/ad-book.gif">
-<img src="images/ad-demo.jpg">
-</div>
 
 <div class="banner">
     <div class="overlay">
@@ -127,6 +122,25 @@ header .logo ul li a{
 
 
 <div class="clg">
+<p class="wlc-content">In publishing and graphic design, Lorem
+ ipsum is a placeholder text commonly used 
+ to demonstrate the visual form of a document
+  without relying on meaningful content
+   (also called greeking). Replacing the 
+   actual content with placeholder text
+ allows designers to design the form 
+ of the content before the content itself</p>
+ <p class="wlc-content">
+ without relying on meaningful content
+   (also called greeking). Replacing the 
+   actual content with placeholder text
+ allows designers to design the form 
+ of the content before the content itself
+  has been produced.
+  actual content with placeholder text
+ allows designers to design the form 
+ of the content before the content itself</p>
+
 <table>
 <th>Serial No.</th>
 <th>NIT Name</th>
@@ -159,9 +173,21 @@ while($row=mysqli_fetch_array($result))
  <?php
 }
 ?>
-
 </table>
+
+<img src="images/adx.jpg" class="ad">
+
+<div class="linkx">
+<p class="links">Useful Links</p>
+<div class="line"></div>
+<p><a href="#" class="x">IITs Ranking</a></p>
+<p><a href="college.php" class="x">Colleges</a></p>
+<p><a href="exam.php" class="x">Exams</a></p>
+<p><a href="cutoff.php" class="x">Cutoff</a></p>
 </div>
+</div>
+
+
 
  <!--============== Footer Section ==================-->
  <footer>

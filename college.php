@@ -81,7 +81,7 @@ header .logo ul li a{
 <li style="width:115px;"><a href="#">Neet</a></li>
 <li style="width:115px;"><a href="#">Camt</a></li>
 <li style="width:115px;"><a href="#">Gre</a></li>
-</ul>
+</ul> 
 </li>
 <li>
 <button class="homex" onclick="search()" style="text-transform: uppercase;letter-spacing: 0.8px; font-weight: bold;">Search <i class="fas fa-search"></i></button>
@@ -109,7 +109,6 @@ header .logo ul li a{
   </div>
 
 </header>
-
 <div class="banner">
     <div class="overlay">
 </div>

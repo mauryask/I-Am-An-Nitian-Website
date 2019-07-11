@@ -33,8 +33,12 @@ crossorigin="anonymous">
 <link rel="stylesheet" href="css/owl.carousel.min.css" />
 <link rel="stylesheet" href="css/owl.theme.default.min.css" />
 <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
+<link href="css/notification.css" type="text/css" rel="stylesheet">
 <link href="css/footer.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+<style>
+
+</style>
 </head>
 
 <body onload="loadme()">
@@ -126,6 +130,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 </header>
 
+
 <!--================ Main Banner ====================-->
 <div class="banner"> 
 <div class="textx">
@@ -145,6 +150,13 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div class="down">
 </div>
 </div>
+
+</div>
+
+<!--====================  Notification Bell   ========================-->
+<div class="nt_img">
+<img src="images/notificationx.svg" class="notify">
+<span class="not_num">25<span>
 </div>
 <!--================ Explore Section ====================-->
 <div class="explore" >
@@ -188,9 +200,9 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
           <p>College Fests</p>
          </div>
        
-         <div class="appx" onclick="location.href='question.php'">
-            <img src="images/conversation.svg">
-            <p>Ask Questions</p>
+         <div class="appx" onclick="location.href='placement.php'">
+            <img src="images/reunion.svg">
+            <p>Placements Data</p>
            </div>
       <div class="appx" onclick="location.href='donate.php'">
         <img src="images/books.svg">

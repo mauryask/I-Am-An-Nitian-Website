@@ -110,7 +110,9 @@ header .logo ul li a{
 
 </header>
 
-<div class="banner">
+
+
+<div class="banner" >
     <div class="overlay">
 </div>
 <div class="center">

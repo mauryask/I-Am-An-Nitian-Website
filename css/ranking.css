@@ -60,7 +60,25 @@ body{
 
 .banner .center p{
     text-align:center;
-   
+}
+
+
+
+body  .clg{
+    margin-top:2.5rem;
+   width:80%;
+   padding:1rem 0 1rem 0;
+   left:40%;
+   transform:translate(-40%);
+   position:relative;
+   }
+
+.clg .wlc-content{
+    margin-bottom:1.5rem;
+    line-height:2rem;
+    letter-spacing: 0.7px;
+    color:rgba(80,80,80,1);
+    text-align: justify;
 }
 
 .banner .center .sub-center{
@@ -68,14 +86,8 @@ body{
 }
 
 th,td{
-    padding:7px 2px 7px 2px;
+    padding:15px 2px 15px 2px;
     text-align:center;
-}
-
-body  .clg{
- margin:5rem 0 0 4rem;
-width:70%;
-padding:1rem 0 1rem 0;
 }
 
  .clg table{
@@ -85,27 +97,15 @@ padding:1rem 0 1rem 0;
 }
 
 tr{
-    border:1px solid rgba(180,180,180,1);
+    border-bottom:1px solid rgba(200,200,200,1);
 }
- .clg table,th,td{
+
+.clg table,th,td{
     text-transform: capitalize;
     background: rgba(250,250,250,1);
     border-collapse: collapse;
-    color:rgba(80,80,80,1);
+    color:rgba(90,90,90,1);
 }
-
- .ads{
-   margin-top:31rem;
-    height:100vh;
-   width:23%;
-   float:right;
-}
-
-.ads img{
-  width:100%;
-  height:350px;
-  margin-bottom:10px;
- }
 
 footer{
     margin-top:0;
@@ -114,8 +114,41 @@ footer{
     position:-webkit-sticky;
 }
 
+.linkx{
+    padding-left:1.7rem;
+    margin-top:3rem;
+}
+.linkx .links{
+    margin:2rem 0 0.2rem 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
 
 
+.linkx .line{
+    background:red;
+    width:90px;
+    height:3px;
+    margin-bottom:5px;
+}
 
+.linkx a{
+    text-decoration:none;
+    line-height:2rem;
+    color:rgba(80,80,80,1);
+    font-size:17px;
+    letter-spacing: 0.5px;
+}
 
+.linkx a:hover{
+    transition:0.2s;
+color:blue;
+text-decoration:underline;
+}
 
+.ad{
+    margin-top:2rem;
+    width:50rem;
+    height:210px;
+    position:relative;
+}

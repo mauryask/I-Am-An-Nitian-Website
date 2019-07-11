@@ -28,6 +28,9 @@ crossorigin="anonymous">
     header .logo ul li a{
         color:rgba(256,256,256,1);
     }
+    footer{
+      margin-top:10rem;
+    }
         </style>
     </head>
     <body onload="loadme()">
