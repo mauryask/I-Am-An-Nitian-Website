@@ -1,21 +1,16 @@
-
 <?php
 include_once('connection.php');
 $id = $_GET['id'];
 $sample_rate=1;
-
 $query="select * from tbl_images where  id='".$id."'  ";
 $result = mysqli_query($conn, $query);
 if(mysqli_num_rows($result)>0)
 {
-
     $sql = " UPDATE tbl_images SET views = views + {$sample_rate} WHERE id = ".$id." ";
     mysqli_query($conn,$sql); //counting page views
      $result = mysqli_query($conn, $query);
      $row=mysqli_fetch_array($result);
-
 }
-
 ?>
 
 <html>
@@ -170,14 +165,11 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                      {
                       $id = $row["id"];
                       $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
-
                       $text = implode(' ',array_slice(explode(' ', $row['text']),0,15)); //getting fires 19 words from text
-
                     echo   '<div class="flash">
                       <div class="nimg"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>';
                   echo    '<div class="ncontent">'."<p>".'<span class="heading">'.$head.'</span>'." ".$text.'..<a href="news.php?id='.$id.'">'." Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>'.'</div>';
                  echo '</div>'; 
-
                      }
                 }
                else 
@@ -248,26 +240,25 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 <script>
 
-$(document).ready(function()
-    {
-        $(".far").on("click", function(e)
-            {
-                e.preventDefault();
-                var id = $(this).data("id");
-              //  console.log (id); // i am getting value in this id 
-                $.ajax({
-                type : "post",
-                url : "like.php",
-                data :  {id: id},
-                cache : false,
-                success : function(response)
-                { 
-                  alert(response);
-                   // $('#msg').html(html);
-                }
-                });
+ $(document).ready(function(){
+
+
+
+
+   //like increment start
+      $('.far').click(function(){
+      var id= $(this).attr('id');
+      var counter =1;
+      $.ajax({
+      url:'like_increment.php',
+      type:'post',
+      data:{id:id, counter:counter}
+
+        });
+
+    });
+     //like increment finish
+
   });
-});
 
 </script>
-

@@ -33,8 +33,8 @@ crossorigin="anonymous">
 <link rel="stylesheet" href="css/owl.carousel.min.css" />
 <link rel="stylesheet" href="css/owl.theme.default.min.css" />
 <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
-<link href="css/notification.css" type="text/css" rel="stylesheet">
 <link href="css/footer.css" type="text/css" rel="stylesheet">
+<link href="css/notification.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 <style>
 
@@ -155,13 +155,12 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 <!--====================  Notification Bell   ========================-->
 <div class="nt_img">
-<img src="images/notificationx.svg" class="notify">
+<img src="images/notificationx.svg" class="notify" onclick="show()" >
 <span class="not_num" id="count"><span>
 </div>
 
-
-<div class="notify-popup"></div>
-
+<!--============== Notification Popup ==================-->
+<div id="notify-popup"></div>
 
 <!--================ Explore Section ====================-->
 <div class="explore" >
@@ -392,6 +391,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 </div>
 </div>
+
 <!--============== Feedback Popup ==================-->
 <div class="popup">
     <div class="popup-content">

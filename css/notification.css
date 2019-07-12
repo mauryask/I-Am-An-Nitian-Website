@@ -31,3 +31,27 @@
   padding-top:1px;
   font-weight: bold;
 }
+
+/*================ Notification popup  ================*/
+#notify-popup{
+    background:transparent;
+    width:19rem;
+    position:fixed;
+    bottom:70px;
+    z-index:20;
+    display:none;
+    padding:1rem;
+  }
+
+  .notx{
+    color:rgba(40,40,40,1);
+    border:1px solid rgba(120,120,120,1);
+    padding:10px;
+    margin-bottom:8px;
+    font-size:15px;
+    text-align:justify;
+    border-radius:14px;
+    box-shadow: rgba(0, 0, 0, 0.8) 0 0px 10px, rgba(0, 0, 0, 0.65) 0 0 10px 1px, inset rgba(255, 255, 255, 0.15) 0 1px 0, inset rgba(0, 0, 0, 0.25) 0 -1px 0;
+    background:rgba(240,240,240,1);
+    cursor: pointer;
+  }
