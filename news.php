@@ -1,5 +1,5 @@
 <?php
-include_once('connection.php');
+include_once('db/connection.php');
 $id = $_GET['id'];
 $sample_rate=1;
 $query="select * from tbl_images where  id='".$id."'  ";
@@ -13,7 +13,7 @@ if(mysqli_num_rows($result)>0)
 }
 ?>
 
-<html>
+<html id="<?php echo $row['id']; ?>">
 <head>
 <title>I Am An Nitian | News</title>
 
@@ -240,22 +240,41 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 <script>
 
+
+function loadLikes()
+{
+  setInterval(function(){
+  var idx = $('html').attr('id');
+$.ajax({
+      url:'db/like_counter.php',
+      type:'post',
+      data:{id:idx},
+      success:function(data)
+      {
+        $('#x').html(data);
+      }
+
+        });
+},500);
+}
+
+loadLikes();
+
+
+
+
  $(document).ready(function(){
-
-
-
 
    //like increment start
       $('.far').click(function(){
       var id= $(this).attr('id');
       var counter =1;
       $.ajax({
-      url:'like_increment.php',
+      url:'db/like_increment.php',
       type:'post',
       data:{id:id, counter:counter}
 
         });
-
     });
      //like increment finish
 

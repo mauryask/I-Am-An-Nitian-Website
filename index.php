@@ -9,7 +9,7 @@
 -->
 
 <?php
-include_once('connection.php');
+include_once('db/connection.php');
 session_start(); //starting session start
 ?>
 
@@ -25,6 +25,7 @@ session_start(); //starting session start
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
 crossorigin="anonymous">
 <link rel="icon" href="images/imnitian.png">
+<link href="css/animate.css" rel="stylesheet"  type="text/css">
 <link href="css/ask.css" rel="stylesheet"  type="text/css">
 <link href="css/explore.css" rel="stylesheet" type="text/css">
 <link href="css/index.css" rel="stylesheet"  type="text/css">
@@ -167,58 +168,62 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   <p class="main-expo">Explore</p>
   <div class="expo-line"></div>
   <div class="expo" style="margin-top:3rem;" >
-   <div class="appx" onclick="location.href='college.php'">
+   <div class="appx" onclick="sweet_alert()">
      <img src="images/school.svg">
      <p>Colleges</p>
     </div>
     
-   <div class="appx" onclick="location.href='explore/exam.php'">
+   <div class="appx" onclick="sweet_alert()">
       <img src="images/exam.svg">
       <p>Exams</p>
      </div>
      
-   <div class="appx" onclick="location.href='ranking.php'">
-      <img src="images/infographic.svg">
-      <p>College Ranking</p>
-     </div>
-     
-   <div class="appx" onclick="location.href='cutoff.php'">
+     <div class="appx">
+          <img src="images/stage.svg" onclick="sweet_alert()">
+          <p>College Fests</p>
+         </div>
+
+       
+   <div class="appx" onclick="sweet_alert()">
       <img src="images/research.svg">
       <p>Cutoff</p>
      </div>
    
-     <div class="appx" onclick="location.href='review.php'">
+     <div class="appx" onclick="sweet_alert()">
         <img src="images/review.svg">
         <p>College Reviews</p>
        </div>
   </div>
   <div class="expo">
-      <div class="appx" onclick="location.href='story.php'">
-          <img src="images/growth.svg">
-          <p>Success Stories</p>
-         </div>
-    
          
-       <div class="appx">
-          <img src="images/stage.svg" onclick="location.href='fests.php'">
-          <p>College Fests</p>
-         </div>
-       
-         <div class="appx" onclick="location.href='placement.php'">
-            <img src="images/reunion.svg">
-            <p>Placements Data</p>
-           </div>
-      <div class="appx" onclick="location.href='donate.php'">
+         
+  <div class="appx" onclick="sweet_alert()">
         <img src="images/books.svg">
         <p>Donate Books</p>
        </div>
    
        
-      <div class="appx" onclick="location.href='project.php'">
+      <div class="appx" onclick="sweet_alert()">
          <img src="images/project.svg">
          <p>Sell Project</p>
         </div>
-   
+
+         <div class="appx" onclick="location.href='ranking.php'">
+      <img src="images/infographic.svg">
+      <p>College Ranking</p>
+     </div>
+       
+         <div class="appx" onclick="location.href='placement.php'">
+            <img src="images/reunion.svg">
+            <p>Placements Data</p>
+           </div>
+
+           <div class="appx" onclick="location.href='story.php'">
+          <img src="images/growth.svg">
+          <p>Success Stories</p>
+         </div>
+
+         
      </div>
 </div>
 <!--================ Ask Section ====================-->
@@ -319,6 +324,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div id="mySidenavx" class="sidenavx">
   <a  id="update" style=" padding:16px 28px 0 25px;" onclick="fun3()"><span>UPDATES</span></a>
   </div>
+<div id="includedContent"></div>
+
 <!--============== Signup Popup ==================-->
 <div class="signup" id="sign">
 <div class="sign-card">
@@ -561,4 +568,15 @@ $('input[type=radio]').change(function()
     }
 });
 */
+
+function sweet_alert()
+{
+  Swal.fire({
+  title: 'Will be \nupdated soon !',
+  animation: false,
+  customClass: {
+    popup: 'animated tada'
+  }
+}); 
+}
   </script>
