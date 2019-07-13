@@ -228,7 +228,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
  <!--===================== Update Section ===================--> 
  
 <div class="upg">
-
 <div class="upx">
 <div class="headingc"><p>Updates</p></div>
 <div id="csp" onmouseover="stopIt()"  onmouseout="startIt()">
@@ -279,7 +278,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 
 </div>
-<!--==================  Stop $ start sliding updates  =================-->
+<!--==================  Stop & start sliding updates  =================-->
 <script>
   var interval;
 function startTicker()
@@ -377,14 +376,10 @@ function startIt()
     Here you can check out the news & events related to each and every NIT.</p>
     </div>
     </div>
-<!--============== Side Buttons ==================-->
+<!--============== Side Feedback Button ==================-->
 <div id="mySidenav" class="sidenav">
 <a  id="feedback" style=" padding:15px 28px 0 25px;" onclick="fun1()"><span>FEEDBACK</span></a>
 </div>
-<div id="mySidenavx" class="sidenavx">
-  <a  id="update" style=" padding:16px 28px 0 25px;" onclick="fun3()"><span>UPDATES</span></a>
-  </div>
-<div id="includedContent"></div>
 
 <!--============== Signup Popup ==================-->
 <div class="signup" id="sign">
@@ -470,53 +465,7 @@ function startIt()
     <input type="submit" value="Send" class="btn-send" onclick="funalert()">
   </div>
    </div>
-   <div class="popupx">
-    <div class="popupx-content">
-    <img src="images\cut.png" alt="close" width="21px" height="21px" onclick="fun4()" class="close">
-    <p class="uph" style="margin-bottom:3px;">Updates</p>
-    <div class="up-line"></div>
-    <div class="upd">
-    <div class="updx">
-       <p>
-      Lorem Ipsum is simply dummy text of the 
-      printing and typesetting industry. Lorem
-       Ipsum has been. <span class="blinker">New</span>
-    </p>
-  </div>
-  
-  <div class="updx">
-      <p>
-          Lorem Ipsum is simply dummy text of the 
-          printing and typesetting industry. Lorem
-           Ipsum has been. <span class="blinker">New</span>
-        </p>
- </div>
- <div class="updx">
-    <p>
-        Lorem Ipsum is simply dummy text of the 
-        printing and typesetting industry. Lorem
-         Ipsum has been. <span class="blinker">New</span>
-      </p>
-</div>
-<div class="updx">
-    <p>
-        Lorem Ipsum is simply dummy text of the 
-        printing and typesetting industry. Lorem
-         Ipsum has been.
-      </p>
-</div>
-<div class="updx">
-    <p>
-        Lorem Ipsum is simply dummy text of the 
-        printing and typesetting industry. Lorem
-         Ipsum has been.
-      </p>
-</div>
-    </div>
-    
-  </div>
-   </div>
-   
+
   <!--============== Nits Logo =====================-->
    <div class="nit-logos">
     <div class="owl-carousel owl-theme">
