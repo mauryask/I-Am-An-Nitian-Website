@@ -38,6 +38,11 @@ crossorigin="anonymous">
 <link href="css/footer.css" type="text/css" rel="stylesheet">
 <link href="css/notification.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+
+
+<style>
+
+</style>
 </head>
 
 <body onload="loadme()">
@@ -165,29 +170,30 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div class="explore" >
   <p class="main-expo">Explore</p>
   <div class="expo-line"></div>
-  <div class="expo" style="margin-top:3rem;" >
-   <div class="appx" onclick="sweet_alert()">
+  <div class="expo" style="margin-top:3rem;">
+
+   <div class="appx" onclick="sweet_alert()" id="respo">
      <img src="images/school.svg">
      <p>Colleges</p>
     </div>
     
-   <div class="appx" onclick="sweet_alert()">
+   <div class="appx" onclick="sweet_alert()" id="respo">
       <img src="images/exam.svg">
       <p>Exams</p>
      </div>
      
-     <div class="appx">
-          <img src="images/stage.svg" onclick="sweet_alert()">
+     <div class="appx" onclick="sweet_alert()" id="respo">
+          <img src="images/stage.svg" >
           <p>College Fests</p>
          </div>
 
        
-   <div class="appx" onclick="sweet_alert()">
+   <div class="appx" onclick="sweet_alert()" id="respo">
       <img src="images/research.svg">
       <p>Cutoff</p>
      </div>
    
-     <div class="appx" onclick="sweet_alert()">
+     <div class="appx" onclick="sweet_alert()" id="respo">
         <img src="images/review.svg">
         <p>College Reviews</p>
        </div>
@@ -201,7 +207,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
        </div>
    
        
-      <div class="appx" onclick="sweet_alert()">
+      <div class="appx" onclick="sweet_alert()" id="respo">
          <img src="images/project.svg">
          <p>Sell Project</p>
         </div>
@@ -349,9 +355,10 @@ function startIt()
 <!--================ News Section ====================-->
 <div style="width:100%;height:1%;background:transparent;margin-top:4%;"></div>
 <div class="explore" style="margin-top:0;">
-  <p class="main-expo">News & Articles</p>
-  <div class="expo-line" style="width:18rem;position:relative;margin-bottom:3rem;"></div>
-  <?php 
+  <p class="main-expo" >News <span id="ns-art">& Articles</span></p>
+  <div id="expo-line"  class="expo-line" style="width:18rem;position:relative;margin-bottom:3rem;"></div>
+  <div class="about-ln" style="width:15%;margin:0  0 1.5rem  0;"></div>
+ <?php 
             $query = "select * from tbl_images order by id desc limit 8";
              $result = mysqli_query ($conn, $query);
                 if (mysqli_num_rows($result)>0) 
@@ -399,19 +406,22 @@ function startIt()
 <!--================ About Section ====================-->
     <a id="about"></a>
     <div style="width:100%;height:5%;margin-top:2%;"></div>
+    <p class="about-head">About Us</p>
+    <div class="about-ln" ></div>
     <div class="about">
-     <div class="about-img">
+     <div class="about-img" id="about-img">
          <img src="images\us3.png" height="300px" width="100%" style="border-radius: 5px  0  0 5px;">
      </div>
+
     <div class="about-text"> 
     <p style="text-align:justify;" >
     NITs (National Institute Of Technologies) are 
     the most prestigious Engineering Institutions 
     of India after IITs. There are 31 NITs across the various states of India. 
-    I AM AN NITIAN was a facebook page created in
+   <span id="ab"> I AM AN NITIAN was a facebook page created in
     July 2016 with an aim to connect all Nitians. Today It has 30K+ followers on fb & 3K+ followers on Instagram. Now it is not 
     limited to only a facebook page.
-    But it has become the biggest student community.
+    But it has become the biggest student community.</span>
     Here you can check out the news & events related to each and every NIT.</p>
     </div>
     </div>
@@ -543,6 +553,8 @@ function startIt()
  <!--============== Footer Section ==================-->
   <footer>
     <div class="datay">
+    
+
       <div><p class="y">Colleges</p>
         <div class="linex"></div>
       <p><a href="#">IIT</a></p>
@@ -559,6 +571,8 @@ function startIt()
             <p><a href="#">Neet</a></p>  
             <p><a href="#">Gre</a></p>  
           </div>
+
+
       <div><p class="y">Cutoff</p>
         <div class="linex"></div>
         <p><a href="#">IITs </a></p>

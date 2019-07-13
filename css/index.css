@@ -115,8 +115,7 @@
 /*================  Banner Social Icons  =================*/ 
 
 	.banner .textx .social{
-		margin-top:2%;
-		
+		margin-top:2%;	
 	}
 	.banner .textx .social a{
 		text-decoration: none;
@@ -206,7 +205,6 @@
 		transform: translate(-50%);
 		position: relative;
 		height: 300px;
-	/*	background:linear-gradient(45deg, rgba(245,245,245,1),rgba(256,256,256,1),rgba(245,245,245,1));*/
 	}
 	.about .about-img{
 		margin-right:4%;
@@ -234,49 +232,154 @@
 		word-spacing:0.5px;
 	}
 	
-	
-	
-	@media (max-width:991px)
+	.about-ln{
+		width:27%;
+		height:4px;
+		background:red;
+		left:50%;
+		transform:translate(-50%);
+		position:relative;
+		display:none;
+		margin-bottom:0.7rem;
+	}
+
+	.about-head
 	{
-		
-		header{
-		padding:0 20px;
-		}
-		
-	/*For dynamic Texts*/
-	.dynamic-text
-		{
-			
-			font-size:25px;
-			text-align:center;
-			
-		}
-		
-		.text
-		{
-			text-align:center;
-			 font-size:25px;
-		}	
-		.textx .msg{
-			font-size:32px;
-		}
-		.join{
-		color:rgba(255,255,255,0.8);
-		background:transparent;
-		padding:6px 45px;
-		border:2px solid rgba(255,255,255,0.8);
-		border-radius:20px;
-		font-size:15px;
-		letter-spacing:1.4px;
-		
+		text-align: center;
+		font-weight: bold;
+		text-transform: uppercase;
+		color:rgba(120,120,120,1);
+		display:none;
+		font-size:26px;
 	}
 	
-	}
 
 /*================  Fooetr Section  =================*/ 
 
 footer{
 	margin-top:3%;
+}
+
+
+/*================ Mobile Version Responsive  =================*/ 
+
+@media (max-width:721px)
+{
+	
+	header{
+		display: none;
+	padding:0 20px;
+	}
+	
+/*================ Dynamic Text =================*/
+.dynamic-text
+	{	
+       font-size:32px;
+		text-align:center;	
+	}
+	
+/*================ Text before Dynamic Text =================*/	
+	.text
+	{
+		text-align:center;
+		 font-size:35px;
+	}	
+/*================ Text belowe Dynamic Text =================*/	
+	.textx .msg{
+		font-size:31px;
+	}
+/*================ Join Now button =================*/
+.textx .join{
+	padding:6px 43px;
+	}
+/*================ Social media icon =================*/	
+	.banner .textx .social{
+ margin-top:5%;
+	}
+	/*================ Explore Section Tabs =================*/
+
+	.explore
+		{
+			padding:0;
+		}
+
+	  .explore .expo{
+		  width:100%;
+		  margin:0;
+	   flex-direction:column;
+	  }
+
+
+	  .explore #respo{
+		display: none;
+	  }
+
+	  .explore .expo  div
+	  {
+	  width:10rem;
+	  left:40%;
+	  transform: translate(-40%);
+	  position: relative;
+	  }
+
+	  .explore .expo .xnnn
+	  {
+	   width:80%;
+	   margin:0;
+	   margin-bottom:20px;
+		left:50%;
+		transform:translate(-50%);
+		position: relative;
+	  }
+
+	 /*================ About Section =================*/
+	 #about-img{
+		 display:none;
+	 }
+.about{
+	flex-direction:column;
+}
+.about-ln
+{
+	display:block;
+}
+
+.about-head
+	{
+		display:block;
+	}
+
+	#ns-art{
+		display: none;
+	}
+
+	#expo-line
+	{
+		display: none;
+	}
+/*=========== Hiding some part of about section  ==============*/
+	#ab{
+		display: none;
+	}
+	.nit-logos{
+		margin-top:0.5rem;
+		margin-bottom: 2rem;
+	}
+
+	.main-expo
+	{
+		font-size:26px;
+	}
+	.expo-line{
+		width:26%;
+		height:4px;
+		margin-top:0;
+	}
+
+#back-to-top{
+	display:none;
+}
+
 }
 
 

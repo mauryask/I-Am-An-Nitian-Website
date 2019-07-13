@@ -167,10 +167,6 @@ header nav ul li button:hover{
 /*Media queries*/
 @media (max-width:991px)
 {
-	.nit-logos{
-		margin-top:9%;
-	}
-
 	header{
 	padding:0 20px;
 	}
