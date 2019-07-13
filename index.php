@@ -233,51 +233,90 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div id="csp" onmouseover="stopIt()"  onmouseout="startIt()">
 <div class="contentx">
   NITs (National Institute Of Technologies) are 
-    the mo
+    the mo <span class="blinker">New</span>
 </div>
 
 <div class="contentx">
   NITs (National Institute Of Technologies) are 
-    the mo
+    the mo 
 </div>
 <div class="contentx">
   NITs (National Institute Of Technologies) are 
-    the mo
+    the mo 
+</div>
+<div class="contentx">
+  NITs (National Institute Of Technologies) are 
+    the mo 
+</div>
+
+<div class="contentx">
+  NITs (National Institute Of Technologies) are 
+    the mo 
+</div>
+<div class="contentx">
+  NITs (National Institute Of Technologies) are 
+    the mo 
+</div>
+<div class="contentx">
+  NITs (National Institute Of Technologies) are 
+    the mo 
+</div>
+<div class="contentx">
+  NITs (National Institute Of Technologies) are 
+    the mo 
 </div>
 <div class="contentx">
   NITs (National Institute Of Technologies) are 
     the mo
 </div>
 
-<div class="contentx">
-  NITs (National Institute Of Technologies) are 
-    the mo
-</div>
-<div class="contentx">
-  NITs (National Institute Of Technologies) are 
-    the mo
-</div>
-<div class="contentx">
-  NITs (National Institute Of Technologies) are 
-    the mo
-</div>
-<div class="contentx">
-  NITs (National Institute Of Technologies) are 
-    the mo
-</div>
-<div class="contentx">
-  NITs (National Institute Of Technologies) are 
-    the mo
-</div>
-
 </div>
 </div>
 
+<!--==================  Sliding images  =================-->
 
 <div class="mySlide">
-</div>
+
+<div class="slidex">
+ <img class="slide" src="images/darkback.jpg">
+ <div id="caption">
+   <img src="images/techvaganza.png">
+   <p style="margin-bottom:5px;">Techvaganza 2020</p>
+    <p style="margin-left:27px;"> NIT Srinagar</p>
+  </div>
+ </div>
+
+ <div class="slidex">
+ <div id="captionx"><p>Cultural Night</p></div>
+ <img class="slide" src="images/cultural.jpg">
+
+ </div>
+
+<div class="slidex">
+<div id="captionx"><p>Musical Night</p></div>
+ <img class="slide" src="images/musical.jpg">
+ </div>
+
+ <div class="slidex">
+<div id="captionx"><p>Dance Night</p></div>
+ <img class="slide" src="images/dance.jpg">
+ </div>
+
+ <div class="slidex">
+<div id="captionx"><p>Robotics</p></div>
+ <img class="slide" src="images/robotics.jpeg">
+ </div>
+
+ <div class="slidex">
+<div id="captionx"><p>Coding</p></div>
+ <img class="slide" src="images/coding.jpg">
+ </div>
 
 </div>
+</div>
+
+
+
 <!--==================  Stop & start sliding updates  =================-->
 <script>
   var interval;
@@ -589,3 +628,46 @@ function sweet_alert()
 }); 
 }
   </script>
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  
+    var i;
+    var x = document.getElementsByClassName("slidex");
+    
+    for (i = 0; i < x.length ; i++) 
+    {
+       x[i].style.display = "none"; 
+      showCaption();
+      
+    }
+    myIndex++;
+   
+    if (myIndex > x.length) {
+       myIndex = 1;
+        }  
+        else
+        {
+          hideCaption();
+        }
+      
+    x[myIndex-1].style.display = "block"; 
+    setTimeout(carousel,3000);
+      }
+      
+
+function showCaption()
+{
+  TweenMax.to('#caption',0.5,{scaleX: 1});
+}
+
+function hideCaption()
+{
+  TweenMax.to('#caption',0.5,{scaleX: 0});
+}
+
+</script>
