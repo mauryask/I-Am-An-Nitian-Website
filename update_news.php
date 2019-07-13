@@ -41,7 +41,7 @@ if(isset($_POST['update']))
 <meta name="author" content="Shubham Maurya">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-<link href="css/update.css" type="text/css" rel="stylesheet">
+<link href="css/update_news.css" type="text/css" rel="stylesheet">
 <link href="css/left-menu.css" type="text/css" rel="stylesheet">
 <style>
 
@@ -115,7 +115,7 @@ $(document).ready(function(){
   $("#add").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0});   
     setTimeout(function() {
-        window.location.href="insert.php";
+        window.location.href="insert_news.php";
     },500); 
   })
 
@@ -125,7 +125,7 @@ $(document).ready(function(){
   $("#edit").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0});
     setTimeout(function() {
-        window.location.href="edit.php";
+        window.location.href="edit_news.php";
     },500); 
   })
 

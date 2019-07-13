@@ -3,7 +3,6 @@
 -->
 
 <?php
-
 session_start(); //preventing direct access of this page
 if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION['user_type']!=1)
 {
@@ -45,44 +44,66 @@ if(isset($_POST['submit']))
 <meta name="author" content="Shubham Maurya">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+<link href="css/edit_news.css" type="text/css" rel="stylesheet">
 <link href="css/left-menu.css" type="text/css" rel="stylesheet">
-<link href="css/insert.css" type="text/css" rel="stylesheet">
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<style>
+body{
+    overflow-y: scroll;
+    height:100%;
+}
+</style>
 </head>
-
 <body>
-
 <!--=================  Menu Button   ===================-->
 <button id="show"><i class="fas fa-bars"></i></button>
-<div class="main" id="main">
-<p class="mainh" id="mainh">Add News</p>
+<!--================= Edit News   ===================-->
+<div class="mainx"  id="mainx">
+    <p class="mainh">Edit News</p>
+ <div class="edit-news">
+<table>
+<tr>
+ <th>Id</th>
+<th>Image</th>
+<th>Heading</th>
+<th>News</th>
+<th>Edit</th>
+<th>Delete</th>
+</tr>
 
-<!--=================  Adding News  ===================-->
-<div class="add-news" id="add-news">
-<form method="post" enctype="multipart/form-data" autocomplete="off">
+<?php
+$query = "select * from tbl_images order by id desc";
+$result=mysqli_query($conn, $query);
+while($row=mysqli_fetch_array($result))
+{
+  ?>
+  <tr>
+    <td style="font-weight:bold;"><?php echo $row['id']  ?></td>
+    <td><?php echo '<img class="imgx" alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/>' ?></td>
+    <td class="thead"><?php  echo $row['heading']  ?></td>
+    <td><?php echo $row['text'] ?></td>
+    <td> <a href="update_news.php?update=<?php echo  $row['id']; ?>">Edit</a> </td>
 
-<input type="file" name="image" id="image"> 
+    <td> <button name="delete" onclick="location.href='delete_news.php?del=<?php echo $row['id']; ?>'">Delete</button>
+  </tr>
+  <?php 
+}
+?>
 
-<input type="heading" name="heading" id="heading" placeholder="Heading">
-
-<textarea placeholder="Enter News Here..." name="news" id="news" rows="12" ></textarea>
-
-<input type="submit" name="submit" id="submit" value="Insert" > 
-
-</form>
+</table>
 </div>
 </div>
 
 <!--=================  Left Side MAnu Bar   ===================-->
 <div class="left-menu" class="popup" id="demo">
     <p>Admin Panel</p>
-    <button id="add" type="button" style="display:none;">add news</button>
-    <button id="edit" type="button">edit news</button>
+    <button id="add" type="button" >add news</button>
     <button id="delete" type="button">view news</button>
     <button id="statics" type="button">statics</button>
     <button id="home" type="button">Home</button>
 </div>
+
 
 </body>
 
@@ -90,8 +111,6 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 
 
 <script>
- 
-
 $(document).ready(function(){
     $("#home").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0}); 
@@ -100,47 +119,18 @@ $(document).ready(function(){
     },500);  
   })
 
-
-/*================  Editing News ===================*/   
-
-  $("#edit").click(function(){
-    TweenMax.to('#demo',0.5,{scaleX: 0});
+/*================  Add News ===================*/ 
+  $("#add").click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0});   
     setTimeout(function() {
-        window.location.href="edit.php";
+        window.location.href="insert_news.php";
     },500); 
   })
+
 
 $("#demo").on('click',function(){
     TweenMax.to('#demo',0.5,{scaleX: 0}); 
 })
-
-    /*================  Form Validation ===================*/   
-    $('#submit').click(function(){
-        var image_name = $('#image').val();
-        var head = $('#heading').val();
-        var text = $('#news').val();
-        if(image_name== '') 
-        {
-            alert('Please choose a file');
-            return false;
-        } 
-        else if( head == '' || text == '')
-        {
-            alert('Please fill all the fields');
-            return false;
-        }
-        else
-        {
-            var extension = $('#image').val().split('.').pop().toLowerCase();
-            if(jQuery.inArray(extension, ['png', 'gif','jpg','tif','jpeg','mp4'])== -1)
-            {
-                alert("invalid image format");
-                $('#image').val('');
-                return false;
-            }
-            
-        }
-    })
 
     $('#show').on('click', function(){
         TweenMax.to('#demo',0.5,{scaleX:1});

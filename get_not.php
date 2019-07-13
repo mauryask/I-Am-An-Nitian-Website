@@ -4,9 +4,9 @@ $sql = "SELECT * FROM tbl_images";
 $result = $conn->query($sql);
 $num_row= $result->num_rows;
 
-if($num_row>0)
+if($num_row>0) 
 {  
-    echo $num_row;
+    echo '<span class="not_num">'.$num_row.'<span>';
 }
 
 ?>

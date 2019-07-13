@@ -25,6 +25,7 @@ session_start(); //starting session start
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
 crossorigin="anonymous">
 <link rel="icon" href="images/imnitian.png">
+
 <link href="css/animate.css" rel="stylesheet"  type="text/css">
 <link href="css/ask.css" rel="stylesheet"  type="text/css">
 <link href="css/explore.css" rel="stylesheet" type="text/css">
@@ -37,9 +38,6 @@ crossorigin="anonymous">
 <link href="css/footer.css" type="text/css" rel="stylesheet">
 <link href="css/notification.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
-<style>
-
-</style>
 </head>
 
 <body onload="loadme()">
@@ -102,7 +100,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 {
   if($_SESSION['user_type'] == 1)
   {
-    echo '<li><a href="edit.php" class="homex" >Admin</a></li>';
+    echo '<li><a href="edit_news.php" class="homex" >Admin</a></li>';
   }
 }
 ?>
@@ -157,7 +155,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <!--====================  Notification Bell   ========================-->
 <div class="nt_img">
 <img src="images/notificationx.svg" class="notify" onclick="show()" >
-<span class="not_num" id="count"><span>
+<span id="count"></span>
 </div>
 
 <!--============== Notification Popup ==================-->
@@ -226,28 +224,90 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
          
      </div>
 </div>
-<!--================ Ask Section ====================-->
-<div class="ask">
-  <div class="txtr">
-    <div>
-      <form name="ask" action="">
-        <input type="text" placeholder="Topic" class="inpx">
-        <textarea placeholder="Write Your Question Here..." rows="5" value=""></textarea>
-      </form>
-    </div>
- <div>
-   <button>Ask</button>
- </div>
-  </div>
-  <div class="imgx">
-      <p><span>Conversation With NItians</span><br>
-        We are here to assist you<br>
-      <span class="xspan">Ask Any question Related to your acadamics</span></p>
-    <div class="overlay"></div>
-  </div>
-  </div>
-  
+
+ <!--===================== Update Section ===================--> 
  
+<div class="upg">
+
+<div class="upx">
+<div class="headingc"><p>Updates</p></div>
+<div id="csp" onmouseover="stopIt()"  onmouseout="startIt()">
+<div class="contentx">
+  NITs (National Institute Of Technologies) are 
+    the mo
+</div>
+
+<div class="contentx">
+  NITs (National Institute Of Technologies) are 
+    the mo
+</div>
+<div class="contentx">
+  NITs (National Institute Of Technologies) are 
+    the mo
+</div>
+<div class="contentx">
+  NITs (National Institute Of Technologies) are 
+    the mo
+</div>
+
+<div class="contentx">
+  NITs (National Institute Of Technologies) are 
+    the mo
+</div>
+<div class="contentx">
+  NITs (National Institute Of Technologies) are 
+    the mo
+</div>
+<div class="contentx">
+  NITs (National Institute Of Technologies) are 
+    the mo
+</div>
+<div class="contentx">
+  NITs (National Institute Of Technologies) are 
+    the mo
+</div>
+<div class="contentx">
+  NITs (National Institute Of Technologies) are 
+    the mo
+</div>
+
+</div>
+</div>
+
+
+<div class="mySlide">
+</div>
+
+</div>
+<!--==================  Stop $ start sliding updates  =================-->
+<script>
+  var interval;
+function startTicker()
+{
+$('.upx #csp div:first').slideUp(function(){
+  $(this).appendTo($('#csp')).slideDown();
+});
+}
+
+interval = setInterval(startTicker, 3000);
+
+function stopTicker()
+{
+clearInterval(interval);
+}
+
+function stopIt()
+{
+stopTicker(interval);
+}
+
+function startIt()
+{
+  interval = setInterval(startTicker, 3000);
+}
+
+  </script>
+
 <!--================ News Section ====================-->
 <div style="width:100%;height:1%;background:transparent;margin-top:4%;"></div>
 <div class="explore" style="margin-top:0;">

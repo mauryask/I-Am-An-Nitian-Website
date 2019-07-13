@@ -5,7 +5,7 @@ $query = "delete from tbl_images where id='$id' ";
 $result=mysqli_query($conn, $query);
 if($result)
 {
-    header('location:edit.php');
+    header('location:edit_news.php');
 }
 else
 {

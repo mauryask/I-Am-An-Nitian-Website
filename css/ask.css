@@ -1,115 +1,64 @@
 
-.ask{
-    word-wrap: break-word;/*This property is for braeking the word within box (prevention of overflow)*/
-    width:100%;
-padding: 0 9.8rem 0 9.8rem;
-margin-top:2%;
+.upg{
+    overflow: hidden;
+width:76%;
+margin-top:3%;
 display: flex;
 flex-direction:row;
 align-items:center;
 justify-content:center;
-}
-.ask .txtr, .imgx{
-    flex:1  1 50%;
-    height:250px;
-}
-
-.ask .imgx{
-   /* background:linear-gradient(180deg, rgba(245,245,245,1),rgba(256,256,256,1),rgba(245,245,245,1));*/
-    overflow:hidden;
-    border-radius:0 5px 5px 0;
-}
-.ask .imgx p{
-color:rgba(80,80,80,1);
-text-align:center;
-text-transform: uppercase;
-top:50%;
 left:50%;
-transform: translate(-50%,-50%);
+transform:translate(-50%);
 position:relative;
+height:320px;
+}
+
+.upx{
+height:320px;
+margin-right:6rem;
+width:35%;
+overflow: hidden;
+}
+
+
+.headingc{
+    width:100%;
+ height:50px;
+ background:rgba(255,196,105,0.8);
+ text-align:center;
+ padding-top:10px;
+}
+
+.upx .headingc p{
+font-size:25px;
 font-weight:bold;
-font-size: 21px;
-line-height:2.1rem;
-z-index:1;
-}
-.ask .imgx p span{
-    font-size:35px;
-    font-family: Arial, Helvetica, sans-serif;
-    }
-
-.ask .txtr{
-    display:flex;
-    flex-direction: row;
-align-items:center;
-justify-content:center;
-/*background:linear-gradient(180deg, rgba(245,245,245,1),rgba(256,256,256,1),rgba(245,245,245,1));*/
-border-radius: 5px  0  0 5px;
-
-}
-
-.ask .txtr div{
- margin: 0;
- padding:0;
- 
-}
-
-.ask textarea{
-    border-radius:0 0 0 20px;
-    width:100%;
-    color:rgba(80,80,80,1);
-    outline:none;
-    padding:0.6rem 0.6rem 0.6rem 0.8rem;
-    font-size:14px;
-    letter-spacing: 0.4px;
-    border:none;
-    resize: none;
-    background:rgba(255,196,105,0.9);
-box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-.inpx{
-color:rgba(80,80,80,1);
-font-size:14px;
-letter-spacing: 0.4px;
-margin-bottom:2px; 
-width:100%;
-padding:1rem;
-border-radius:20px 0 0 0;
-outline:none;
-border:none; 
-background:rgba(255,196,105,0.9);
-box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
-
-.ask button{
-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-color:rgba(80,80,80,1);
-background:rgba(255,196,105,0.9);
-border-radius:0 20px  20px 0;
-border:none;
-outline:none;
+color:rgba(120,120,120,1);
+text-transform:uppercase;
+letter-spacing: 0.5px;
+word-spacing: 0.5px;
 cursor:pointer;
-font-size:15px;
-letter-spacing: 0.4px;
-height:150px;
-padding:18px;
-margin-left:2px;
-margin-top:-3px;
+}
+
+.upx #csp .contentx{
+    margin:9px;
+    padding:9px;
+    width:76%;
+    line-height:21px;
+    background:rgba(256,256,256,0.3);
+   color:rgba(90,90,90,1);
+   cursor:pointer;
+}
+
+
+.upx #csp{
+    position:fixed;
 }
 
 
 
 
-.ask .imgx p .xspan{
-    font-size:14px;
-    letter-spacing: 0.4px;
+.mySlide{
+    width:65%;
+    height:320px;
+    background:white;
 }
-/*.ask .imgx .overlay{
-    width:100%;
-    height:250px;
-    opacity:0.4;
-    position:relative;
-    background:black;
-   margin-top:-9rem;
-   padding:0;
-   border-radius:0 10px 10px 0;
-}*/
