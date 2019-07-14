@@ -595,6 +595,7 @@ line-height:20px;
       width:100%;
       flex-direction: column;
       padding:0;
+      background: transparent;
     }
 
     .login .log-card{
@@ -604,7 +605,7 @@ line-height:20px;
 
         .signup {
           width:100%;
-          background:black;
+          background: transparent;
         }
         .signup .sign-card{
            width:92%;

@@ -194,6 +194,15 @@
 	}
 	
 
+	#nnk{
+		display:none;
+		line-height:4px;
+	}
+	#dyno{
+		display: none;
+		line-height:10px;
+	}
+
 /*================  About Us Section  =================*/ 
 
 	.about{
@@ -274,19 +283,24 @@ footer{
 /*================ Dynamic Text =================*/
 .dynamic-text
 	{	
-       font-size:32px;
+       font-size:36px;
 		text-align:center;	
 	}
 	
+	#dyno{
+	display: block;
+	}
+
 /*================ Text before Dynamic Text =================*/	
 	.text
 	{
 		text-align:center;
-		 font-size:35px;
+		 font-size:40px;
 	}	
 /*================ Text belowe Dynamic Text =================*/	
 	.textx .msg{
-		font-size:31px;
+		font-size:34px;
+		line-height:40px;
 	}
 /*================ Join Now button =================*/
 .textx .join{
@@ -331,6 +345,13 @@ footer{
 		transform:translate(-50%);
 		position: relative;
 	  }
+	  .main-expo{
+		  margin-top:2rem;
+	  }
+
+#nnk{
+	display:block;
+    }
 
 	 /*================ About Section =================*/
 	 #about-img{
@@ -338,6 +359,7 @@ footer{
 	 }
 .about{
 	flex-direction:column;
+	margin-bottom:3rem;
 }
 .about-ln
 {
@@ -362,7 +384,6 @@ footer{
 		display: none;
 	}
 	.nit-logos{
-		margin-top:0.5rem;
 		margin-bottom: 2rem;
 	}
 
@@ -379,6 +400,7 @@ footer{
 #back-to-top{
 	display:none;
 }
+
 
 }
 

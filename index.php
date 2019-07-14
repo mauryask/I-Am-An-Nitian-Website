@@ -143,7 +143,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <!--================ Main Banner ====================-->
 <div class="banner"> 
 <div class="textx">
-<p class="dynamic-text">I AM AN <span class="text"></span><p>
+<p class="dynamic-text">I AM AN <span id="dyno"><br/></span><span class="text"></span><p>
 <p class="msg">Join The Biggest Student Community</p>
 
 <button class="join" onclick="show_signup()"> Join Now</button>
@@ -175,7 +175,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div class="explore" >
   <p class="main-expo">Explore</p>
   <div class="expo-line"></div>
-  <div class="expo" style="margin-top:3rem;">
+  <div class="expo" style="margin-top:2rem;">
 
    <div class="appx" onclick="sweet_alert()" id="respo">
      <img src="images/school.svg">
@@ -362,7 +362,7 @@ function startIt()
 <div class="explore" style="margin-top:0;">
   <p class="main-expo" >News <span id="ns-art">& Articles</span></p>
   <div id="expo-line"  class="expo-line" style="width:18rem;position:relative;margin-bottom:3rem;"></div>
-  <div class="about-ln" style="width:15%;margin:0  0 1.5rem  0;"></div>
+  <div class="about-ln" style="width:15%;margin:0  0 2.2rem  0;"></div>
  <?php 
             $query = "select * from tbl_images order by id desc limit 8";
              $result = mysqli_query ($conn, $query);
@@ -385,7 +385,7 @@ function startIt()
               <?php 
               $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
               $text = implode(' ',array_slice(explode(' ', $row['text']),0,15)); //getting fires 19 words from text
-              echo '<p>'.'<span class="heading">'.$head.'</span>'." ".$text.'..<a href="news.php?id='.$id.'">'." Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>';
+              echo '<p>'.'<span class="heading">'.$head.'</span>'." ".$text.'..<a href="news.php?id='.$id.'">'.'<span id="nnk" ><br/></span>'." Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>';
                   ?>                                               
                 </div>   
           
@@ -423,8 +423,8 @@ function startIt()
     NITs (National Institute Of Technologies) are 
     the most prestigious Engineering Institutions 
     of India after IITs. There are 31 NITs across the various states of India. 
-   <span id="ab"> I AM AN NITIAN was a facebook page created in
-    July 2016 with an aim to connect all Nitians. Today It has 30K+ followers on fb & 3K+ followers on Instagram. Now it is not 
+   I AM AN NITIAN was a facebook page created in
+    July 2016 with an aim to connect all Nitians.  <span id="ab"> Today It has 30K+ followers on fb & 3K+ followers on Instagram. Now it is not 
     limited to only a facebook page.
     But it has become the biggest student community.</span>
     Here you can check out the news & events related to each and every NIT.</p>
