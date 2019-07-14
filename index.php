@@ -74,7 +74,7 @@ crossorigin="anonymous">
 <li><a href="team.html" class="homex">Our team</a></li>
 <li><a href="more-news.php" class="homex">News</a></li>
 <li><a href="#about" class="homex">About Us</a></li>
-<li><a class="sub-menu" style="width:115px;">Exams <i class="fas fa-caret-square-down"></i></a>
+<li><a class="sub-menu" style="width:115px;" id="exam">Exams <i class="fas fa-caret-square-down"></i></a>
 <ul>
 <li style="width:115px;"><a href="#">Jee</a></li>
 <li style="width:115px;"><a href="#">Gate</a></li>
@@ -84,9 +84,9 @@ crossorigin="anonymous">
 </ul>
 </li>
 <li>
-<button onclick="search()" style="text-transform: uppercase;letter-spacing: 0.8px; font-weight: bold;">Search <i class="fas fa-search"></i></button>
+<button onclick="search()" style="text-transform: uppercase;letter-spacing: 0.8px; font-weight: bold;" id="searching">Search <i class="fas fa-search"></i></button>
 </li>
-<li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;">
+<li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;" id="user">
 <?php
   if(isset($_SESSION['name'])&& !empty($_SESSION['name']))
   {
@@ -106,7 +106,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 {
   if($_SESSION['user_type'] == 1)
   {
-    echo '<li><a href="edit_news.php" class="homex" >Admin</a></li>';
+    echo '<li><a href="edit_news.php" class="homex">Admin</a></li>';
   }
 }
 ?>
@@ -572,7 +572,7 @@ function startIt()
   <form  method="post" autocomplete="off">
   <input name="text" autocomplete="pnstech" id="email" type="text" placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
   <input  name="pass" autocomplete="pnstech" id="pass" type="password" placeholder="Password"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
-<div class="select">
+<div class="select" id="select">
   <input type="radio" name="user" id="user" value="1" checked>&nbsp <label class="lab1">User</label>
   <input type="radio" name="user" id="admin" value="2">&nbsp <label>Admin</label>
  </div>
@@ -703,22 +703,11 @@ function startIt()
 <script src="js/index.js" type="text/javascript"></script>
 <script   type="text/javascript" src="js/ajax-register.js"></script>
 <script   type="text/javascript" src="js/ajax-login.js"></script>
+<script   type="text/javascript" src="js/main.js"></script>
 <!--===================   Get total Number of notifications   ====================-->
 <script   type="text/javascript" src="js/notification.js"></script>
 
 <script>
-  /*============  Check and Uncheck the radio button ===========*/
-  /*
-$('input[type=radio]').change(function()
-{
-    if (this.checked)
-    {
-        $(this).closest('.select')
-            .find('input[type=radio]').not(this)
-            .prop('checked', false);
-    }
-});
-*/
 
 function sweet_alert()
 {
@@ -772,11 +761,31 @@ function hideCaption()
 {
   TweenMax.to('#caption',0.5,{scaleX: 0});
 }
+
+
+
+
+ /*==================== Menu toggle =========================*/
+
+ $(document).ready(function(){
+
+if (window.matchMedia('(max-width:721px)').matches)
+{
+  
+  
+
+  $('.cut_nav').click(function(){
+    TweenMax.to('.active',0.5,{scaleX: 0});
+  })
+
+  $('.menu-toggle').click(function(){
+    TweenMax.to('.active',0.5,{scaleX: 1});
+  })
+
+}
+})
+
+
+
 </script>
 
-
-
-
-<script>
-
- </script>

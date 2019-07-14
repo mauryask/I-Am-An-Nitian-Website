@@ -158,11 +158,6 @@ action=1;
 
 /*============  Auto Text Typer  ===========*/
 
-$(document).ready(function(){
-$('.menu-toggle').click(function(){
-$('nav').toggleClass('active')
-})
-})
 //dynamic text
 var typed = new Typed('.text', {
 strings: ["NITIAN","ENGINEER"],

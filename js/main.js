@@ -1,13 +1,5 @@
 
       /*==============   Navigation Bar Animation   =============*/
-
-        //menu toggle ==> i dont know mhwta this shit is
-        $(document).ready(function(){
-        $('.menu-toggle').click(function(){
-        $('nav').toggleClass('active')
-        })
-        })
-    
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
@@ -76,10 +68,10 @@ function backTop()
 window.scrollTo(0,0);
 }
 
- /*====================  Preloader  =========================*/
  
 function loadme()
 {
    var loaderx=document.getElementById('loader');
 loaderx.style.display='none';
 }
+

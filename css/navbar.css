@@ -165,20 +165,18 @@ header nav ul li button:hover{
 
 
 .cut_nav{
-height:37px;
-width:37px;
-right:12px;
-top:9px;
+height:35px;
+width:35px;
+right:25px;
+top:16px;
 position:absolute;
-background:rgba(120,120,120,0.3);
 z-index:1;
-border-radius:50%;
 display: none;
 }
 
 
 /*Media queries*/
-@media (max-width:991px)
+@media (max-width:721px)
 {
 	header{
 	padding:0 20px;
@@ -196,30 +194,29 @@ display: none;
 			display:block;
 			}
 
-	header nav{
+	header nav
+	{
 		position:absolute;
 		width:100%;
 		height:100vh;
 		background:rgba(0,0,0,1);	
-		top:80px;
 		left:-100%;
-		transition:0.7s;
-		}
+		transform-origin:left;
+		transform: scaleX(0);
+	}
 		
-		header nav.active{
+		header nav.active{ /*on removing this button is not working*/
 			left:0;
 		}
 
 		header nav ul{
-			margin-top:25px;
-			display:block;
+			margin-top:3rem;
+			display:flex;
+			flex-direction:column;
 			text-align:center;
 		}
 	
-		header nav ul li:hover{
-			border-bottom:none;
-		}
-	
+			
 		header .logo{
 		height:80px;
 		padding:15px 0 10px 0;
@@ -242,21 +239,39 @@ header nav  ul li{
 font-size:13px;
 }	
 	
-header nav  ul li ul li{
-	padding-left:10px;
-	width:5px;
-  font-size:10px;
+header nav  ul li ul{
+	width:100%;
+	left:4%;
+	margin-top:-0.5rem;
 }
+
 header nav  ul li ul li{
-	display:none;
+font-size:13px;
+width:100%;
+}
+#user{
+	width:100%;
+	left:35%;
+	position: relative;
 }
 	
-.homex:hover,.sub-menu:hover{
-background:rgba(0,0,0,0.04);	
-border-bottom:1px solid rgba(0,0,0,0.1);
-border-top:1px solid rgba(0,0,0,0.1);
-color:rgba(256,0,0,0.9);	
+header nav  ul li ul li:hover{
+border:none;
 }
+
+.homex:hover{
+border:none;
+color:red;	
+}
+
+#searching{
+	display:none;
+}
+#exam{
+	display:none;
+}
+
+
 }
 
 

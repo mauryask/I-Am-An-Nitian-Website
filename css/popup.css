@@ -602,6 +602,14 @@ line-height:20px;
       margin-left:0;
         }
 
+        .log-card div form #select{
+          display: none;
+        }
+
+        #login{
+          margin-top:20px;
+        }
+
         .signup {
           width:100%;
         }
