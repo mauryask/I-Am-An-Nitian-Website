@@ -138,7 +138,6 @@ if (prevScrollpos > currentScrollPos) {
 prevScrollpos = currentScrollPos;
 }
 
-
 /*============ Hide Show Search Box ===========*/
 
 var action=1;

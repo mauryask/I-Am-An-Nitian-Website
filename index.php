@@ -64,11 +64,10 @@ crossorigin="anonymous">
 <div class="logo">
 <ul>
 <li><a href="index.php"><img src="images\imnitian.png"></a></li>
-<li><a href="index.php" style="font-family: 'Dancing Script', cursive;color:white;font-weight:bold;font-size:13px;letter-spacing: 0.7px;">I AM AN NITIAN</a></li>
+<li><a href="index.php" style="font-family: 'Dancing Script', cursive;color:white;font-weight:bold;font-size:13px;letter-spacing: 0.7px;" >I AM AN NITIAN</a></li>
 </ul>
 </div>
 <nav class="active">
-  <img src="images/cutk.png" class="cut_nav">
 <ul>
 <li><a href="index.php" class="home" >Home</a></li>
 <li><a href="team.html" class="homex">Our team</a></li>
@@ -127,6 +126,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div class="menu-toggle">
 <i class="fas fa-bars"></i>
 </div>
+<img src="images/cutk.png" class="cut_nav" style="display:none;">
 
 <!--================ Search Box ====================-->
 <div class="search-popup" id="searchx" style="display:none;">
@@ -229,12 +229,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   
      </div>
 </div>
-
-
-
-
-
-
 
 
 
@@ -772,13 +766,15 @@ function hideCaption()
 if (window.matchMedia('(max-width:721px)').matches)
 {
   
-  
-
   $('.cut_nav').click(function(){
+    $(this).css('display','none');
+    $('.menu-toggle').css('display','block');
     TweenMax.to('.active',0.5,{scaleX: 0});
   })
 
   $('.menu-toggle').click(function(){
+    $(this).css('display','none');
+    $('.cut_nav').css('display','block');
     TweenMax.to('.active',0.5,{scaleX: 1});
   })
 

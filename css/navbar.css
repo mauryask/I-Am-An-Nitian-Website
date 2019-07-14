@@ -165,10 +165,10 @@ header nav ul li button:hover{
 
 
 .cut_nav{
-height:35px;
-width:35px;
+height:38px;
+width:38px;
 right:25px;
-top:16px;
+top:18px;
 position:absolute;
 z-index:1;
 display: none;
@@ -190,14 +190,11 @@ display: none;
 		}
 	
 
-		.cut_nav{
-			display:block;
-			}
-
 	header nav
 	{
-		position:absolute;
-		width:100%;
+		overflow: hidden;
+		position:fixed;
+		width:60%;
 		height:100vh;
 		background:rgba(0,0,0,1);	
 		left:-100%;
@@ -251,7 +248,7 @@ width:100%;
 }
 #user{
 	width:100%;
-	left:35%;
+	left:24%;
 	position: relative;
 }
 	
