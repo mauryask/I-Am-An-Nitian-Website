@@ -21,15 +21,15 @@ overflow: hidden;
 }
 
 
-.headingc{
-    width:100%;
+.headingc,.respo_head{
+  width:100%;
  height:50px;
  background:rgba(255,196,105,0.8);
  text-align:center;
  padding-top:10px;
 }
 
-.upx .headingc p{
+.upx .headingc p,  .respo_head p{
 font-size:25px;
 font-weight:bold;
 color:rgba(120,120,120,1);
@@ -48,7 +48,6 @@ cursor:pointer;
    color:rgba(90,90,90,1);
    cursor:pointer;
 }
-
 
 .upx #csp{
     position:fixed;
@@ -156,6 +155,46 @@ position:relative;
     }
     }
 
+ /*============ Responsive Updates =============*/
+.respo_not{
+  margin-bottom:2.5rem;
+  margin-top:2rem;
+  height:340px;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  width:90%;
+  left:50%;
+  transform: translate(-50%);
+  position: relative;
+  display: none;
+  overflow: hidden;
+}
+
+#respo_csp
+{
+overflow: hidden;
+position: fixed;
+}
+
+.respo_head{
+  padding-top:15px;
+  padding-bottom:15px;
+  margin-bottom: 2px;
+}
+
+#respo_csp .respo_cont{
+  width:100%;
+  line-height:21px;
+  background:rgba(256,256,256,0.2);
+ color:rgba(90,90,90,1);
+ cursor:pointer;
+ margin-top:9px;
+ padding:9px 2px 9px 17px;
+}
+
+
 
     /*============ Responsive Sreen =============*/
 
@@ -165,10 +204,10 @@ position:relative;
       width:100%;
       flex-direction:column;
        }
+       
       .upx{
         display:none;
       }
-
 
        .mySlide{
         width:90%;
@@ -199,4 +238,17 @@ position:relative;
        margin-top:6px;
       }
 
-    }
+.respo_not{
+  display:block;
+  overflow: hidden;
+}
+
+#respo_csp{
+  overflow: hidden;
+}
+.respo_head{
+  margin-bottom: 3px;
+  box-shadow:0 0 3PX 1PX rgba(120,120,120,0.5);
+}
+
+  }

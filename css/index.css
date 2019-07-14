@@ -200,7 +200,7 @@
 	}
 	#dyno{
 		display: none;
-		line-height:10px;
+		line-height:3px;
 	}
 
 /*================  About Us Section  =================*/ 
@@ -274,17 +274,14 @@ footer{
 
 @media (max-width:721px)
 {
-	
-	header{
-		display: none;
-	padding:0 20px;
-	}
-	
 /*================ Dynamic Text =================*/
-.dynamic-text
-	{	
-       font-size:36px;
-		text-align:center;	
+
+
+	.dynamic-text
+	{
+		font-size:36px;
+		text-align:center;
+		padding-bottom:3px;
 	}
 	
 	#dyno{
@@ -297,7 +294,7 @@ footer{
 		text-align:center;
 		 font-size:40px;
 	}	
-/*================ Text belowe Dynamic Text =================*/	
+/*================ Text below Dynamic Text =================*/	
 	.textx .msg{
 		font-size:34px;
 		line-height:40px;
@@ -305,6 +302,7 @@ footer{
 /*================ Join Now button =================*/
 .textx .join{
 	padding:6px 43px;
+	margin-top:0;
 	}
 /*================ Social media icon =================*/	
 	.banner .textx .social{
@@ -397,11 +395,9 @@ footer{
 		margin-top:0;
 	}
 
-#back-to-top{
-	display:none;
-}
-
-
+	.nt_img{
+		display:none;
+	  }
 }
 
 

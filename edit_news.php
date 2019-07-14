@@ -3,11 +3,6 @@
 -->
 
 <?php
-session_start(); //preventing direct access of this page
-if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION['user_type']!=1)
-{
-  exit('access denied page 404 not found');
-}
 
 include_once('connection.php');
 if(isset($_POST['submit']))

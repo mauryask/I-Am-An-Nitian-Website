@@ -12,7 +12,7 @@
 .datay div{
    flex-basis: 12rem;
  margin:1.5rem;
- height:200px;
+ height:auto;
  color:white;
 }
 
@@ -28,7 +28,7 @@ color:rgba(256,256,256,0.7);
 	
 
 .datay div p{
-line-height:2rem;
+line-height:1.9rem;
 padding-left:10px;
 font-size:14.2px;
 letter-spacing: 0.7px;
@@ -139,6 +139,11 @@ footer{
   
 
   
+  #respo_contact{
+    display:none;
+    line-height:24px;
+  }
+
 /*================  Smooth Scrolling Property  =================*/ 
 
 html{
@@ -151,8 +156,47 @@ html{
 @media (max-width:721px)
 {
 .datay {
- display: none;
+ flex-direction:column;
 }
+.datay div{
+text-align:center;
+margin-bottom: 0;
+padding-bottom:0;
+height:100px;
+ }
+ .datay div p{
+padding:0;
+line-height:1.8rem;
+   }
+
+ .datay div .linex{
+  left:60%;
+  transform: translate(-60%);
+  position:relative;
+  margin:0;
+   }
+
+   .datay div #lx{
+    width:65px;
+   
+     }
+
+   .datay div #ly{
+    width:42px;
+    margin-left:-3px;
+     }
+
+     .datay div #lz{
+      width:43px;
+      margin-left:-3px;
+       }
+
+       
+     .datay div #la{
+      width:38px;
+      margin-left:-7px;
+       }
+
 #developer{
   display:none;
 }
@@ -171,7 +215,6 @@ html{
 
 #respo_contact{
   display: block;
-  line-height:24px;
 }
 
 }

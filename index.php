@@ -41,19 +41,14 @@ crossorigin="anonymous">
 
 
 <style>
-@media (max-width:721px)
-{
-  #and_copy{
-  display: block;
-}
-}
+
 </style>
 </head>
 
 <body onload="loadme()">
 
  <!--================ Back to top Button ====================-->
-  <button id="back-to-top"><i class="fas fa-angle-double-up"></i></button>
+  <button id="back-to-top" ><i class="fas fa-angle-double-up"></i></button>
 
   <!--================== Preloader ==========================-->
 <div id="loader">
@@ -73,6 +68,7 @@ crossorigin="anonymous">
 </ul>
 </div>
 <nav class="active">
+  <img src="images/cutk.png" class="cut_nav">
 <ul>
 <li><a href="index.php" class="home" >Home</a></li>
 <li><a href="team.html" class="homex">Our team</a></li>
@@ -165,7 +161,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <!--====================  Notification Bell   ========================-->
 <div class="nt_img">
 <img src="images/notificationx.svg" class="notify" onclick="show()" >
-<span id="count"></span>
+<span id="count"></span> 
 </div>
 
 <!--============== Notification Popup ==================-->
@@ -210,7 +206,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         <img src="images/books.svg">
         <p>Donate Books</p>
        </div>
-   
        
       <div class="appx" onclick="sweet_alert()" id="respo">
          <img src="images/project.svg">
@@ -231,10 +226,89 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
           <img src="images/growth.svg">
           <p>Success Stories</p>
          </div>
-
-         
+  
      </div>
 </div>
+
+
+
+
+
+
+
+
+
+<!--==================  Mobile version of updates  =================-->
+
+<div class="respo_not" >
+<div class="respo_head"><p>Updates</p></div>
+<div id="respo_csp" onmouseover="stop_It()"  onmouseout="start_It()">
+<div class="respo_cont" style="margin-top:9px;">
+  NITs (National Institute Of Technologies) are 
+    the mo <span class="blinker">New</span>
+</div>
+
+<div class="respo_cont">
+  NITs (National Institute Of Technologies) are 
+    the mo 
+</div>
+<div class="respo_cont">
+  NITs (National Institute Of Technologies) are 
+    the mo 
+</div>
+<div class="respo_cont">
+  NITs (National Institute Of Technologies) are 
+    the mo 
+</div>
+
+
+<div class="respo_cont">
+  NITs (National Institute Of Technologies) are 
+    the mo 
+</div>
+
+<div class="respo_cont">
+  NITs (National Institute Of Technologies) are 
+    the mo 
+</div>
+
+<div class="respo_cont">
+  NITs (National Institute Of Technologies) are 
+    the mo 
+</div>
+</div>
+</div>
+
+
+
+<script>
+  var inter_val;
+function start_Ticker()
+{
+$(' #respo_csp div:first').slideUp(function(){
+  $(this).appendTo($('#respo_csp')).slideDown();
+});
+}
+
+interval = setInterval(start_Ticker, 3000);
+
+function stop_Ticker()
+{
+clearInterval(inter_val);
+}
+
+function stop_It()
+{
+stop_Ticker(inter_val);
+}
+
+function start_It()
+{
+  inter_val = setInterval(start_Ticker, 3000);
+}
+
+  </script>
+
 
  <!--===================== Update Section ===================--> 
  
@@ -561,7 +635,7 @@ function startIt()
     <div class="datay">
               
       <div><p class="y">Colleges</p>
-        <div class="linex"></div>
+        <div class="linex" id="lx"></div>
       <p><a href="#">IIT</a></p>
       <p><a href="#">NIT</a></p>
       <p><a href="#">IIIT</a></p>
@@ -569,7 +643,7 @@ function startIt()
       </div>
       <div>
           <p class="y">Exams</p>
-          <div class="linex"></div>
+          <div class="linex" id="ly"></div>
             <p><a href="#">Jee Advance</a></p>
             <p><a href="#">Jee Mains</a></p>
             <p><a href="#">Gate</a></p>
@@ -579,14 +653,14 @@ function startIt()
 
 
       <div><p class="y">Cutoff</p>
-        <div class="linex"></div>
+        <div class="linex" id="lz"></div>
         <p><a href="#">IITs </a></p>
         <p><a href="#">NITs</a></p>
         <p><a href="#">IIITs</a></p>
         <p><a href="#">AIIMS</a></p></div>
 
       <div><p class="y">Links</p>
-        <div class="linex"></div>
+        <div class="linex" id="la"></div>
         <p><a href="#">Disclaimer</a></p>
         <p><a href="#">College Reviews</a></p>
         <p><a href="#">College Ranking</a></p>
@@ -599,7 +673,7 @@ function startIt()
   <div class="datad">
   <p class="x">Feel Free To Contact Us</p>
   <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-9055667606 &nbsp | &nbsp  +91-9055667606</p>
- <span id="respo_contact" style="display:none;">
+ <span id="respo_contact">
  <P>iamannitian@gmail.com</p> 
  <P>+91-9055667606</p> 
  <P>+91-9055667606</p> 
@@ -685,7 +759,7 @@ function carousel() {
         }
       
     x[myIndex-1].style.display = "block"; 
-    setTimeout(carousel,1000);
+    setTimeout(carousel,2000);
       }
       
 
@@ -698,5 +772,11 @@ function hideCaption()
 {
   TweenMax.to('#caption',0.5,{scaleX: 0});
 }
-
 </script>
+
+
+
+
+<script>
+
+ </script>
