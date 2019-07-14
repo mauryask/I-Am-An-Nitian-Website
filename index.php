@@ -41,7 +41,12 @@ crossorigin="anonymous">
 
 
 <style>
-
+@media (max-width:721px)
+{
+  #and_copy{
+  display: block;
+}
+}
 </style>
 </head>
 
@@ -436,7 +441,7 @@ function startIt()
  <div class="sign-img">
   <div class="links">
     <p class="p1">Quick Links</p>
-    <div class="msgx"><p id="msgx"></p></div>
+    <div class="msgx" ><p id="msgx" ></p></div>
     <ul>
      <a href="#"> <li>Colleges</li></a>
      <a href="#"> <li>Exams</li></a>
@@ -451,6 +456,7 @@ function startIt()
  <div class="sign-form">
    <img class="cancel" onclick="cancel()" src="images/cut.png">
     <p class="mainh">Register Here</p>
+    <div class="msgx"  id="msgk"><p id="msgy"></p></div>
    <div>
      <form method="post" autocomplete="off">
    <input  type="text"  name="name"  id="name" placeholder="Name"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
@@ -553,8 +559,7 @@ function startIt()
  <!--============== Footer Section ==================-->
   <footer>
     <div class="datay">
-    
-
+              
       <div><p class="y">Colleges</p>
         <div class="linex"></div>
       <p><a href="#">IIT</a></p>
@@ -579,6 +584,7 @@ function startIt()
         <p><a href="#">NITs</a></p>
         <p><a href="#">IIITs</a></p>
         <p><a href="#">AIIMS</a></p></div>
+
       <div><p class="y">Links</p>
         <div class="linex"></div>
         <p><a href="#">Disclaimer</a></p>
@@ -586,15 +592,24 @@ function startIt()
         <p><a href="#">College Ranking</a></p>
         <p><a href="#">About Us</a></p>
         <p><a href="#">News</a></p></div>
+        
     </div>
+
+
   <div class="datad">
   <p class="x">Feel Free To Contact Us</p>
-  <p>iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-9055667606 &nbsp | &nbsp  +91-9055667606</p>
-  </div>
+  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-9055667606 &nbsp | &nbsp  +91-9055667606</p>
+ <span id="respo_contact" style="display:none;">
+ <P>iamannitian@gmail.com</p> 
+ <P>+91-9055667606</p> 
+ <P>+91-9055667606</p> 
+   </span>
+</div>
 <!--============== Bottom Container =====================-->
  <div class="container">
 <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
-2019 &nbsp| &nbsp I AM AN NITIAN &nbsp | &nbsp DESIGNED AND DEVELOPED BY SHUBHAM MAURYA &nbsp|&nbsp NIT SRINAGAR</p>
+2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbsp DESIGNED AND DEVELOPED BY SHUBHAM MAURYA &nbsp|&nbsp NIT SRINAGAR</span></p>
+<p id="and_copy" class="copyright">Developed by Shubham Maurya</p>
 </div>
 </footer>
 </div>
@@ -670,7 +685,7 @@ function carousel() {
         }
       
     x[myIndex-1].style.display = "block"; 
-    setTimeout(carousel,3000);
+    setTimeout(carousel,1000);
       }
       
 

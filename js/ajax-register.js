@@ -10,7 +10,7 @@ $(document).ready(function(){
         var state = $('#state').val().trim();
         var user_pass = $('#user_pass').val().trim();
         var cnf_pass = $('#cnf_pass').val().trim();
-            
+        var x = window.matchMedia("(max-width: 721px)");
               $.ajax({
                  url:'register.php',
                  type: 'post',
@@ -37,12 +37,15 @@ $(document).ready(function(){
                      }
                      else
                      {
-                        $('#msgx')/*.fadeIn()*/.html(response);
-
-                        //use this if you want to auto disappear the message
-                        /*  setTimeout(function(){
-                        $('#message').fadeOut(5000);
-                        })*/
+                       
+                       if (window.matchMedia('(max-width:721px)').matches)
+                       {
+                       $('#msgy').html(response);
+                       }
+                       else
+                       {
+                        $('#msgx').html(response);
+                       }
                      }
                   }
                 })

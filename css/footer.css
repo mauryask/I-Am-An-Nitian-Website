@@ -84,12 +84,18 @@ padding-top:1.6rem;
 padding-bottom:1.6rem;
 }
 
-.container p{
+.container .copyright{
   font-size:12.3px;
    letter-spacing:0.8px;
   font-weight:bold;
   color:rgba(256,256,256,0.7);
   text-align:center;
+  text-transform: uppercase;
+}
+
+#and_copy{
+line-height:24px;
+ display: none;
 }
 
 /*================  Fooeter Section  =================*/ 
@@ -140,12 +146,32 @@ html{
 	overflow-x: hidden;
 }
 
-
 /*================  Mobile version responsive  =================*/ 
 
 @media (max-width:721px)
 {
-.datay{
-  flex-direction: column;
+.datay {
+ display: none;
 }
+#developer{
+  display:none;
+}
+
+#and_copy{
+  display: block;
+}
+
+.datad .x{
+  font-size:19px;
+}
+
+#cont{
+  display: none;
+}
+
+#respo_contact{
+  display: block;
+  line-height:24px;
+}
+
 }

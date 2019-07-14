@@ -37,18 +37,12 @@ body{
  }
  
  #feedback{
- top:150%;
+  top:150%;
    background-color: #4CAF50;
    height:120px;
    cursor: pointer;
  }
 
- #update{
-  top:170%;
-    background-color: #4CAF50;
-    height:112px;
-    cursor: pointer;
-  }
  
  #feedback span, #update span{
    transform: rotate(90deg);
@@ -229,6 +223,7 @@ line-height:20px;
                  width:60%;
                 height:auto;
                 display:flex;
+                flex-direction: row;
                 border-radius:0.4%;
               }
               
@@ -240,7 +235,7 @@ line-height:20px;
                 display:flex;
               }
              
-              .sign-card .sign-img  .links .msgx{
+               .msgx{
                 width:100%;
                 color:red;
                 height:25px;
@@ -249,6 +244,13 @@ line-height:20px;
                 letter-spacing: 0.1px;
               }
 
+              #msgy{
+                color:red;
+              }
+
+              #msgk{
+                display:none;
+              }
               .sign-card .sign-img .links{
                flex:1 1 100%;
                border-right:1px solid rgba(200,200,200,1);
@@ -541,14 +543,7 @@ line-height:20px;
                letter-spacing:0.8px;
              }
 
-             @media (max-height:7680px) /* for search to be responsive*/
-             {
-              .search-popup button
-              {
-                padding:1.5px 7.7px 0.8% 3px;
-              }
-             }
-           
+            
              .search-popup i{
                color:rgba(110,110,110,1);
                font-size:16px;
@@ -573,3 +568,74 @@ line-height:20px;
                color:rgba(110,110,110,1);
  }
 
+
+ /*===================   Mobile Responsive    ====================*/
+
+ @media (max-height:7680px) /* for search to be responsive*/
+ {
+  .search-popup button
+  {
+    padding:1.5px 7.7px 0.8% 3px;
+  }
+ }
+
+
+ @media (max-width:721px)
+ {
+  .popup .popup-content{
+    width:340px;
+    }
+
+    .popup .popup-content p{
+      font-size:20px;
+    }
+
+
+    .login{
+      width:100%;
+      flex-direction: column;
+      padding:0;
+    }
+
+    .login .log-card{
+      width:92%;
+      margin-left:0;
+        }
+
+        .signup {
+          width:100%;
+          background:black;
+        }
+        .signup .sign-card{
+           width:92%;
+          display:flex;
+          flex-direction:column;
+          overflow-x:scroll;
+        }
+               .sign-card .sign-img{
+          display:none;
+        }
+
+        .sign-form .msg{
+          display: block;
+        }
+        .sign-card .sign-form  .mainh{
+          font-size:24px;
+          margin-bottom:0;
+        }
+
+        .msgx{
+          height:20px;
+          font-size:14px;
+          padding:0;
+          margin:0;
+        }
+
+        #msgk{
+          display:block;
+        }
+        .sign-card .sign-form div form
+        {
+          padding-top:0rem;
+        }
+ }
