@@ -571,7 +571,7 @@ line-height:20px;
 
  /*===================   Mobile Responsive    ====================*/
 
- @media (max-height:7680px) /* for search to be responsive*/
+ @media (max-height:768px) /* for search to be responsive*/
  {
   .search-popup button
   {
@@ -580,7 +580,7 @@ line-height:20px;
  }
 
 
- @media (max-width:721px)
+ @media (max-width:991px)
  {
   .popup .popup-content{
     width:340px;

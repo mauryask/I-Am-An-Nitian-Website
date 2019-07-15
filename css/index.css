@@ -272,14 +272,14 @@ footer{
 
 /*================ Mobile Version Responsive  =================*/ 
 
-@media (max-width:721px)
+@media (max-width:991px)
 {
-/*================ Dynamic Text =================*/
 
+/*================ Dynamic Text =================*/
 
 	.dynamic-text
 	{
-		font-size:36px;
+		font-size:32px;
 		text-align:center;
 		padding-bottom:3px;
 	}
@@ -292,7 +292,7 @@ footer{
 	.text
 	{
 		text-align:center;
-		 font-size:40px;
+		 font-size:36px;
 	}	
 /*================ Text below Dynamic Text =================*/	
 	.textx .msg{
@@ -343,6 +343,24 @@ footer{
 		transform:translate(-50%);
 		position: relative;
 	  }
+	  .explore .expo .xnnn .zoom{
+		height:155px;
+		}
+
+	  .explore .expo .xnnn img{
+	  height:155px;
+	  }
+
+	  .explore .expo .xnnn img:hover{
+
+		width:110%;
+		height:165px;
+	}
+
+	  .explore .expo  .xnnn p{
+		line-height:1.8rem;
+	}
+
 	  .main-expo{
 		  margin-top:2rem;
 	  }
@@ -358,6 +376,9 @@ footer{
 .about{
 	flex-direction:column;
 	margin-bottom:3rem;
+}
+.about .about-text p{
+	line-height:30px;
 }
 .about-ln
 {

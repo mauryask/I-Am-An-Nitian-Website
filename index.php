@@ -41,7 +41,13 @@ crossorigin="anonymous">
 
 
 <style>
+@media (max-width:991px)
+{
+  header nav{
+    z-index:-1;
 
+  }
+}
 </style>
 </head>
 
@@ -71,8 +77,8 @@ crossorigin="anonymous">
 <ul>
 <li><a href="index.php" class="home" >Home</a></li>
 <li><a href="team.html" class="homex">Our team</a></li>
-<li><a href="more-news.php" class="homex">News</a></li>
-<li><a href="#about" class="homex">About Us</a></li>
+<li><a href="more-news.php" class="homex" >News</a></li>
+<li><a href="#about" class="homex" id="about_nav">About Us</a></li>
 <li><a class="sub-menu" style="width:115px;" id="exam">Exams <i class="fas fa-caret-square-down"></i></a>
 <ul>
 <li style="width:115px;"><a href="#">Jee</a></li>
@@ -115,7 +121,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 ?>
 <li><a style="cursor:pointer;"  href="logout.php" >Logout</a></li>
 <?php }else{ ?>
-<li><a style="cursor:pointer;"  onclick="show_log()">Login</a></li>
+<li><a style="cursor:pointer;"  onclick="show_log()" id="login_nav">Login</a></li>
 <?php } ?>
 
 </ul>
@@ -233,7 +239,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
 <!--==================  Mobile version of updates  =================-->
-
 <div class="respo_not" >
 <div class="respo_head"><p>Updates</p></div>
 <div id="respo_csp" onmouseover="stop_It()"  onmouseout="start_It()">
@@ -305,7 +310,6 @@ function start_It()
 
 
  <!--===================== Update Section ===================--> 
- 
 <div class="upg">
 <div class="upx">
 <div class="headingc"><p>Updates</p></div>
@@ -746,15 +750,15 @@ function carousel() {
       }
       
 
-function showCaption()
-{
-  TweenMax.to('#caption',0.5,{scaleX: 1});
-}
+  function showCaption()
+  {
+    TweenMax.to('#caption',0.5,{scaleX: 1});
+  }
 
-function hideCaption()
-{
-  TweenMax.to('#caption',0.5,{scaleX: 0});
-}
+  function hideCaption()
+  {
+    TweenMax.to('#caption',0.5,{scaleX: 0});
+  }
 
 
 
@@ -778,10 +782,25 @@ if (window.matchMedia('(max-width:721px)').matches)
     TweenMax.to('.active',0.5,{scaleX: 1});
   })
 
-}
+
+$('#login_nav').click(function()
+{
+  TweenMax.to('.active',0.1,{scaleX: 0});  
+  $('.cut_nav').css('display','none');
+  $('.menu-toggle').css('display','block');
 })
 
 
+$('#about_nav').click(function()
+{
+  TweenMax.to('.active',0.1,{scaleX: 0});  
+  $('.cut_nav').css('display','none');
+  $('.menu-toggle').css('display','block');
+})
+
+
+}
+})
 
 </script>
 

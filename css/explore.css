@@ -42,7 +42,6 @@ position: absolute;
 }
 
 
-
 .explore .expo  div:hover
 {
  transition:0.3s;
@@ -59,9 +58,7 @@ position: absolute;
  margin-top:1rem;
    }
 
-   
-
-
+  
 .explore .expo div p{
  text-align:center;
     color:gray;
