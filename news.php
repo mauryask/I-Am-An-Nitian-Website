@@ -1,5 +1,6 @@
 <?php
 include_once('db/connection.php');
+session_start();
 $id = $_GET['id'];
 $sample_rate=1;
 $query="select * from tbl_images where  id='".$id."'  ";
@@ -21,15 +22,22 @@ if(mysqli_num_rows($result)>0)
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
 <meta name="author" content="Shubham Maurya"> 
-<link href="css/news.css" type="text/css" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
 crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
-<link href="css/navbar.css" type="text/css" rel="stylesheet">
 <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
 <link href="css/footer.css" type="text/css" rel="stylesheet">
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<link href="css/navbar.css" type="text/css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+<link href="css/news.css" type="text/css" rel="stylesheet">
+<style>
+@media (max-width:991px)
+{
+   .menu-toggle{
+		margin-top:30px;
+    }
+}
+  </style>
 </head>
 
 <body onload="loadme()">
@@ -38,13 +46,13 @@ crossorigin="anonymous">
         <div id="loader">
           </div>
 
-        <div class="wrapper">
-            <div class="progress-container">
-               <div class="progress-bar" id="myBar"></div>
-             </div>
- 
+   <div class="wrapper">
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+
 <header id="f" style="background:black;">
-<div class="logo">
+<div class="logo" >
 <ul>
 <li><a href="index.php"><img src="images\imnitian.png"></a></li>
 <li><a href="index.php" style="font-family: 'Dancing Script', cursive;color:white;font-weight:bold;font-size:13px;letter-spacing: 0.7px;" >I AM AN NITIAN</a></li>
@@ -55,7 +63,7 @@ crossorigin="anonymous">
 <li><a href="index.php" class="home" >Home</a></li>
 <li><a href="team.html" class="homex">Our team</a></li>
 <li><a href="more-news.php" class="homex" >News</a></li>
-<li><a href="#about" class="homex">About Us</a></li>
+<li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
 <li><a class="sub-menu" style="width:115px;" id="exam">Exams <i class="fas fa-caret-square-down"></i></a>
 <ul>
 <li style="width:115px;"><a href="#">Jee</a></li>
@@ -116,8 +124,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
     <div><input type="text"  placeholder="Search"><button><i class="fas fa-search"></i></button></div>
   </div>
 
-</header>
-                
+</header>          
 
 <div class="news-body">
         <div class="news-img">
@@ -157,7 +164,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
     </div>
         </div>
 <div class="ad-body">
-
+<p class="latest">Latest News<p>
 <?php 
             $query = "select * from tbl_images where id!='$id'  order by id asc limit 7 ";
              $result = mysqli_query ($conn, $query);
@@ -184,6 +191,39 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                      <div class="nad">
                    <img src="images/ad-demo.jpg" class="nad-img" >
                       </div>  
+    </div>
+
+<!--================ Responsive Design for mobile  ===============-->
+
+<div class="side-body">
+<p class="latest">Latest News<p>
+  <div class="latest-line"></div>
+<?php 
+            $query = "select * from tbl_images where id!='$id'  order by id asc limit 7 ";
+             $result = mysqli_query ($conn, $query);
+                if (mysqli_num_rows($result)>0) 
+                {
+                    while ($row = mysqli_fetch_assoc($result))
+                     {
+                      $id = $row["id"];
+                      $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
+                      $text = implode(' ',array_slice(explode(' ', $row['text']),0,11)); //getting fires 19 words from text
+                    echo   '<div class="flash">
+                      <div class="nimg"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>';
+                  echo    '<div class="ncontent">'."<p>".'<span class="heading">'.$head.'</span>'." ".$text.'..<a href="news.php?id='.$id.'">'."<span id='morex'><br/></span>"." Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>'.'</div>';
+                 echo '</div>'; 
+                     }
+                }
+               else 
+               {
+                 echo 'No result found';
+               }
+              ?>
+             
+       
+                 <!--    <div class="nad">
+                   <img src="images/ad-demo.jpg" class="nad-img" >
+                      </div>  -->
     </div>
 
     <footer>
@@ -245,6 +285,11 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 </body>
 
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<!--==================  TweenMax CDN  ==================-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<!--==================  SweetAlert2 CDN  ==================-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>
 <script src="js/main.js" type="text/javascript"></script>
 
 <script>
@@ -292,6 +337,7 @@ loadLikes();
 
 
 
+
  /*==================== Menu toggle =========================*/
 
  $(document).ready(function(){
@@ -314,15 +360,20 @@ if (window.matchMedia('(max-width:721px)').matches)
 
 $('#login_nav').click(function()
 {
-  TweenMax.to('.active',0.5,{scaleX: 0});  
+  TweenMax.to('.active',0.1,{scaleX: 0});  
+  $('.cut_nav').css('display','none');
+  $('.menu-toggle').css('display','block');
+})
+
+
+$('#about_nav').click(function()
+{
+  TweenMax.to('.active',0.1,{scaleX: 0});  
   $('.cut_nav').css('display','none');
   $('.menu-toggle').css('display','block');
 })
 
 }
 })
-
-
-
-
 </script>
+

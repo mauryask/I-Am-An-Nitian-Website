@@ -39,15 +39,8 @@ crossorigin="anonymous">
 <link href="css/notification.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 
-
 <style>
-@media (max-width:991px)
-{
-  header nav{
-    z-index:-1;
 
-  }
-}
 </style>
 </head>
 

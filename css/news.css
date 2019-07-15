@@ -1,8 +1,14 @@
 *{
-   margin:0;
-   padding:0;
-   word-wrap:break-word;
-   font-family: sans-serif;
+   outline:none;
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family:sans-serif;
+	word-wrap: break-word;
+}
+
+html,body{
+   height:100%;
 }
 
 html{
@@ -27,18 +33,17 @@ body{
    z-index:555;
  }
 
-
-.wrapper{
-   width:100%;
-   height:100%;
-   position:absolute;
+ .wrapper{
+	width:100%;
+	height:100%;
+	position:absolute;
    }
-
+   
 .news-body{
    width:60%;
    height:auto;
    background: transparent;
-   margin:6rem 1rem 0 100px;
+   margin:7rem 1rem 0 100px;
 }
 
 .news-body .news-img{
@@ -131,80 +136,198 @@ font-weight: normal;
 }
 
 
-.ad-body{
+.ad-body,.side-body{
    width:30%;
-   top:5rem;
+   top:7.5rem;
    right:0;
    position: absolute;
    display:flex;
    align-items:center;
    flex-direction: column;
    padding:0.5rem 1rem;
-
    }
 
-   .ad-body .flash{
+   .side-body{ 
+      display: none;
+      margin-top:-6rem;
+      width:100%;
+      position:relative;
+   }
+
+   .ad-body .flash, .side-body .flash{
       background:white;
       width:100%;
       display: flex;
       flex-direction:row;
-      height:100px;
+      height:115px;
       overflow: hidden;
-      margin-top:10px;
+      margin-top:17px;
    }
 
-   .ad-body .flash p  .heading
+   .ad-body .flash p  .heading,  .side-body .flash p  .heading
    {
      font-weight:bold;
      color:rgba(60,60,60,1);
    }
 
 
-   .ad-body .flash .nimg{
-      height:100px;
-      width:30%;
+   .ad-body .flash .nimg,.side-body .flash .nimg{
+      height:115px;
+      width:40%;
       overflow: hidden; 
    }
-   .ad-body .flash .nimg img{
+   .ad-body .flash .nimg img, .side-body .flash .nimg img{
       width:100%;
       height:100%;
       cursor:pointer;
       transition: all 0.4s ease;
    }
 
-   .ad-body .flash .nimg img:hover{
+   .ad-body .flash .nimg img:hover,.side-body .flash .nimg img:hover{
           width:107%;
           height:107%;
    }
-   .ad-body .flash .ncontent{
-      width:70%;
+
+   .ad-body .flash .ncontent, .side-body .flash .ncontent{
+      width:60%;
       text-align: justify;
       padding:9px;
    }
 
-   .ad-body .flash .ncontent p{
+   .ad-body .flash .ncontent p, .side-body .flash .ncontent p{
       font-size:15px;
       line-height:20px;
    }
    
-   .ad-body .flash .ncontent p a{
+   .ad-body .flash .ncontent p a, .side-body .flash .ncontent p a{
       text-decoration: none;
       font-weight:bold;
    }
 
-   .ad-body .flash .ncontent p a:hover{
+   .ad-body .flash .ncontent p a:hover,.side-body .flash .ncontent p a:hover{
       color:red;
    }
 
-   .ad-body .nad{
+   .ad-body .nad,.side-body .nad{
       width:100%;
       margin-top:10px;
    }
 
-   .ad-body .nad .nad-img{
+   .ad-body .nad .nad-img,.side-body .nad .nad-img{
       width:100%;
       cursor: pointer;
    }
 
 
+#morex{
+   display: none;
+   line-height:1px;
+}
 
+/*==for mobile==*/
+.latest{
+   font-weight: bold;
+   font-size:22px;
+   color:rgba(100,100,100,1);
+}
+
+.latest-line{
+   height:2px;
+   width:6.2rem;
+   background:red;
+   margin-top:4px;
+}
+
+/*==for pc==*/
+.ad-body .latest{
+width:100%;
+font-size:28px;
+}
+
+
+
+
+
+/*==================== Responsive design for mobile ====================*/
+@media (max-width:991px)
+{
+   .ad-body{
+      display:none;
+   }
+   .news-body{
+      margin-top:5.2rem;
+      margin-left:0;
+      width:100%;
+      padding:0.91rem;
+   }
+
+.news-body .news-img img{
+   height:200px;
+}
+
+.news-body .news-content{
+padding:0.9rem;
+}
+
+.news-body .txtar{
+   width:100%;
+   margin-left:0;
+   padding:0 0.9rem 0 0.9rem;
+}
+.news-body .txtar textarea{ 
+   width:100%;
+}
+
+.news-body .comments{
+   margin-bottom:30px;
+   display:flex;
+   flex-direction:column;
+   padding:0.9rem;
+}
+
+.news-body .comments .cmt-line{
+   width:12rem;
+}
+
+.news-body .news-content .ldc{
+   margin-top:7px;
+}
+
+.side-body{ 
+   display:block;
+   margin-top:-140px;
+}
+ .side-body .flash{
+   background:white;
+   width:100%;
+   display: flex;
+   flex-direction:row;
+   height:120px;
+   overflow: hidden;
+   margin-top:20px;
+}
+
+.side-body .flash .nimg{
+      height:120px;
+      width:40%;
+   }
+  
+  .side-body .flash .ncontent{
+      width:60%;
+   }
+   .ad-body .flash .ncontent p, .side-body .flash .ncontent p{
+      line-height:21px;
+   }
+
+   .ad-body .nad,.side-body .nad{
+      margin-top:25px;
+   }
+
+#morex{
+   display:block;
+}
+
+footer{
+   margin-top:10rem;
+}
+}
