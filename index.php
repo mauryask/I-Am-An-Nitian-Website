@@ -169,7 +169,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div class="explore" >
   <p class="main-expo">Explore</p>
   <div class="expo-line"></div>
-  <div class="expo" style="margin-top:2rem;">
+  <div class="expo exc" style="margin-top:2rem;">
 
    <div class="appx" onclick="sweet_alert()" id="respo">
      <img src="images/school.svg">
@@ -197,9 +197,9 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         <p>College Reviews</p>
        </div>
   </div>
-  <div class="expo">
-         
-         
+
+
+  <div class="expo exc">     
   <div class="appx" onclick="sweet_alert()">
         <img src="images/books.svg">
         <p>Donate Books</p>
@@ -224,8 +224,71 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
           <img src="images/growth.svg">
           <p>Success Stories</p>
          </div>
-  
      </div>
+
+  <!--=========================== Mobile version horizontal tabs ======================-->
+
+<div class="mob-expo" style="margin-top:2rem;">
+
+<div class="appx_expo" onclick="sweet_alert()"  id="appx_left">
+  <img src="images/school.svg">
+  <p>Colleges</p>
+ </div>
+ 
+<div  class="appx_expo"" onclick="sweet_alert()" >
+ <img src="images/exam.svg">
+   <p>Exams</p>
+  </div>
+  
+  <div  class="appx_expo" onclick="sweet_alert()" >
+     <img src="images/stage.svg" >
+       <p>College Fests</p>
+      </div>
+
+    
+<div  class="appx_expo" onclick="sweet_alert()" >
+   <img src="images/research.svg">
+   <p>Cutoff</p>
+  </div>
+
+  <div  class="appx_expo" onclick="sweet_alert()" id="appx_right">
+    <img src="images/review.svg">
+     <p>College Reviews</p>
+    </div>
+
+
+<!--================ Second exp-lore tabs ==============-->
+
+<div class="appx_expo" onclick="sweet_alert()"  id="appx_left">
+<img src="images/books.svg">
+        <p>Donate Books</p>
+ </div>
+ 
+<div  class="appx_expo"" onclick="sweet_alert()" >
+<img src="images/project.svg">
+         <p>Sell Project</p>
+  </div>
+  
+  <div  class="appx_expo" onclick="sweet_alert()" >
+  <img src="images/infographic.svg">
+      <p>College Ranking</p>
+      </div>
+
+    
+<div  class="appx_expo" onclick="sweet_alert()" >
+<img src="images/reunion.svg">
+            <p>Placements Data</p>
+  </div>
+
+  <div  class="appx_expo" onclick="sweet_alert()" id="appx_right">
+  <img src="images/growth.svg">
+          <p>Success Stories</p>
+    </div>
+
+
+</div>
+
+
 </div>
 
 

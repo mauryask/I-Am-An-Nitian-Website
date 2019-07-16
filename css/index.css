@@ -8,7 +8,7 @@
 * LinkedIn : https://www.linkedin.com/in/cyberthreatatnit/   
 */
 	
-	*{
+*{
 	outline:none;
 	margin:0;
 	padding:0;
@@ -133,7 +133,7 @@
 		transition:0.3s;
 	}
 	
-	/*================  Scroll Down Mouse Indecator  =================*/ 
+	/*================  Scroll Down Mouse Indicator  =================*/ 
 
 	.center{
 		top:95%;
@@ -269,6 +269,53 @@ footer{
 	margin-top:3%;
 }
 
+/*================ Mobile Version explore tabs  =================*/ 
+
+.mob-expo{
+display:none;
+height:160px;
+overflow-x:scroll;
+overflow-y: hidden;
+white-space:nowrap;
+}
+
+.mob-expo::-webkit-scrollbar{
+	display:none;
+}
+
+.mob-expo .appx_expo{
+	margin-left:3px;
+	height:155px;
+	width:145px;
+	background:white;
+	display: inline-block;
+    border-radius:12px;
+    cursor: pointer;
+	box-shadow:1px 1px 1px 1px rgba(220,220,220,1);
+}
+
+.mob-expo #appx_left{
+margin-left:5px;
+}
+
+.mob-expo #appx_right{
+	margin-right:5px;
+	}
+
+.mob-expo .appx_expo img{
+	margin-top:15px;
+width:100px;
+height:100px;
+left:50%;
+transform:translate(-50%);
+position: relative;
+}
+
+.mob-expo .appx_expo p{
+text-align:center;
+margin-top:5px;
+color:gray;
+	}
 
 /*================ Mobile Version Responsive  =================*/ 
 
@@ -322,9 +369,16 @@ footer{
 	  }
 
 
-	  .explore #respo{
-		display: none;
-	  }
+	 .explore .exc{
+		 display:none;
+	 }
+
+	 /*================ Mobile versionExplore Section Tabs =================*/
+
+.mob-expo{
+	display:block;
+}
+
 
 	  .explore .expo  div
 	  {
@@ -421,6 +475,3 @@ footer{
 	  }
 
 }
-
-
-
