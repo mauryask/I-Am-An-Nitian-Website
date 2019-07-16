@@ -14,8 +14,40 @@ if(isset($_POST['submit']))
     $likes=0;
     $comments=0;
     $dislikes=0;
-    $query="insert into tbl_images (name,heading, text,views,likes,dislikes,comments) 
-    values('$file', '$head', '$news','$views','$likes','$dislikes','$comments')";
+/*===================  Getting time and date ====================*/
+//getting IST
+date_default_timezone_set('Asia/Kolkata');
+
+//date
+$date = date('d');
+
+//month
+$months = array("jan", "feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct","Nov", "Dec");
+$month =$months[(int)date('m')-1];
+
+//year
+$year = date('Y');
+
+//time
+$hrs = (int)date('H');
+if($hrs>12)
+{
+    $hrs= $hrs-12;
+    $hrs = "0".$hrs;
+}
+else
+{
+    $hrs="0".$hrs;
+}
+
+$time =$hrs.date(':i A');
+
+$full_time = $month." ".$date.", ".$year.", ".$time.", IST";
+
+/*===================  Getting time and date ====================*/
+
+    $query="insert into tbl_images (name,heading, text,views,likes,dislikes,comments, inserted_at) 
+    values('$file', '$head', '$news','$views','$likes','$dislikes','$comments','$full_time')";
     if(mysqli_query($conn, $query))  
     {
         echo  "<script>alert('Inserted successfully')</script>";

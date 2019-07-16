@@ -1,50 +1,56 @@
-<?php 
-include_once('connection.php');
- ?>
+<!--
+* I AM AN NITIAN 
+* v1.0
+* May 17 2019
+* Developer: Shubham Maurya
+* National Institute Of Technology Srinagar J&K India 190006
+* GitHub: https://github.com/pnstech
+* LinkedIn: https://www.linkedin.com/in/cyberthreatatnit/
+-->
 
-<html lang="en">
-    <head>
-        <title>I Am An Nitian | News</title>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+<?php
+include_once('db/connection.php');
+session_start(); //starting session start
+?>
+
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return false">
+<head>
+<title>I Am An Nitian | Home</title>
+<meta name="viewport"  content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="theme-color" content="#000">
+<meta name="author" content="Shubham Maurya">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
 crossorigin="anonymous">
-        <link rel="icon" href="images/imnitian.png"> 
+<link rel="icon" href="images/imnitian.png">
+<link href="css/navbar.css" rel="stylesheet"  type="text/css">
+<link href="css/back-to-top.css" type="text/css" rel="stylesheet">
+<link href="css/footer.css" type="text/css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+<link href="css/more-news.css" rel="stylesheet"  type="text/css">
+<style>
 
-        <link href="css/navbar.css" type="text/css" rel="stylesheet">
-        <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
-        <link href="css/footer.css" type="text/css" rel="stylesheet">
-        <link href="css/more-news.css" type="text/css" rel="stylesheet">
-     <style>
-    .homex:hover,.sub-menu:hover{
-    background:rgba(0,0,0,0.8);
-    transition:0.3s;
-    }
+</style>
+</head>
 
-    header nav ul li a,.homex{
-    color:rgba(256,256,256,1);
-    }
+<body onload="loadme()">
 
-    header .logo ul li a{
-        color:rgba(256,256,256,1);
-    }
-    footer{
-      margin-top:10rem;
-    }
-        </style>
-    </head>
-    <body onload="loadme()">
+ <!--================ Back to top Button ====================-->
+  <button id="back-to-top" ><i class="fas fa-angle-double-up"></i></button>
 
-            <button id="back-to-top"><i class="fas fa-angle-double-up"></i></button>
-            <div id="loader">
-               </div>
+  <!--================== Preloader ==========================-->
+<div id="loader">
+</div>
+
+<div class="wrapper">
  <!--================ Scroll Indicator ======================-->
- <div class="progress-container">
+<div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
-  </div> 
+  </div>   
 
- 
-<header id="f">
+<header id="f" style="background:black;">
 <div class="logo">
 <ul>
 <li><a href="index.php"><img src="images\imnitian.png"></a></li>
@@ -116,24 +122,15 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div class="search-popup" id="searchx" style="display:none;">
     <div><input type="text"  placeholder="Search"><button><i class="fas fa-search"></i></button></div>
   </div>
+
 </header>
 
 
-<!--===============   Main Banner   ==================-->
- <div class="banner">
-  <div class="overlay">
-</div>
-<div class="center">
-<p>News</p>
-<p class="sub-center">Read news related to nits</p>
-</div>
-</div>
 
 
-        <div class="explore"> 
-
+<div class="explore"> 
             <?php 
-            $query = "select * from tbl_images order by id desc";
+            $query = "select * from tbl_images order by id asc";
             $result = mysqli_query ($conn, $query);
           
                 if (mysqli_num_rows($result)>0) 
@@ -146,14 +143,13 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
           
                 ?>
           
-          
               <div class="xnnn">
                 <?php echo '<div class="zoom"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>'?>
                   
                 <?php 
               $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
               $text = implode(' ',array_slice(explode(' ', $row['text']),0,14)); //getting fires 18 words from text
-              echo '<p>'.'<span class="heading">'.$head.'</span>'." ".$text.'....<a href="news.php?id='.$id.'">'."Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>';
+              echo '<p>'.'<span class="heading">'.$head.'</span>'." ".$text.'....<a href="news.php?id='.$id.'">'.'<span id="show_more"><br/></span>'."Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>';
                   ?>   
 
                 </div>  
@@ -175,12 +171,14 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
           
               </div>
 
-              <div class="nad" style="display:none;">
+ <!--============== ad Section ==================-->
+ <div class="nad">
   <img src="images/dynamo.gif"  class="nad-img">
   <img src="images/ad-demo.jpg"  class="nad-img">
               </div>
 
-              <footer>
+ <!--============== Footer Section ==================-->
+  <footer>
     <div class="datay">
               
       <div><p class="y">Colleges</p>
@@ -235,19 +233,22 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <p id="and_copy" class="copyright">Developed by Shubham Maurya</p>
 </div>
 </footer>
-
-    </body>
+</div>
+</body>
 </html>
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<!--===============  Microsoft's JQuery CDN =================-->
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
 <!--==================  TweenMax CDN  ==================-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-<!--==================  SweetAlert2 CDN  ==================-->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>
-<script src="js/main.js" type="text/javascript"></script>
+<!--==================  Local Js Files  ==================-->
+<script   type="text/javascript" src="js/main.js"></script>
+
+
+
+
+
 
 <script>
-
-
  /*==================== Menu toggle =========================*/
 
  $(document).ready(function(){
@@ -288,6 +289,4 @@ $('#about_nav').click(function()
 })
 
 </script>
-
-
 

@@ -39,9 +39,7 @@ crossorigin="anonymous">
 <link href="css/notification.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 
-<style>
-
-</style>
+<style></style>
 </head>
 
 <body onload="loadme()">
@@ -471,7 +469,7 @@ function startIt()
               }
              ?>
                   
-     <a href="more-news.php" class="more">More News  <i class="fas fa-chevron-circle-right"></i></a>
+     <a href="more-news.php" class="more">More News <i class="fas fa-chevron-circle-right"></i></a>
     </div>
 <!--================ About Section ====================-->
     <a id="about"></a>
