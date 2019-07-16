@@ -91,9 +91,8 @@ th,td{
 }
 
  .clg table{
-    left:50%;
-    transform:translate(-50%);
-    position:relative;
+     width:100%;
+
 }
 
 tr{
@@ -147,8 +146,21 @@ text-decoration:underline;
 }
 
 .ad{
-    margin-top:2rem;
+    margin-top:2rem; 
     width:50rem;
     height:210px;
     position:relative;
+}
+
+#rank_yr{
+    color:red;
+}
+
+
+/*=============================Responsive design======================*/
+@media (max-width:991px)
+{
+   
+    
+
 }

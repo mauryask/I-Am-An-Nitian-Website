@@ -125,6 +125,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   </div>
 
 </header>          
+ 
+
 
 <div class="news-body">
         <div class="news-img">
@@ -226,6 +228,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                       </div>  -->
     </div>
 
+   
     <footer>
     <div class="datay">
               
@@ -289,6 +292,9 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <!--==================  TweenMax CDN  ==================-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <!--==================  SweetAlert2 CDN  ==================-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>
+<script   type="text/javascript" src="js/ajax-register.js"></script>
+<script   type="text/javascript" src="js/ajax-login.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>
 <script src="js/main.js" type="text/javascript"></script>
 
