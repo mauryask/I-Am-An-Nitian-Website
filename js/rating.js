@@ -8,14 +8,17 @@ $(document).ready(function(){
             $.ajax({
                 url:'rating_server.php',
                 type:'post',
-                data: {id:id, action:action}
-               /* success:function(data)
+                data: {id:id, action:action},
+              success:function(data)
                 {
-                    
-                        document.getElementById(data).classList.add('fa-thumbs-up');
+                    if(data == 1)
+                    {
+                        alertPopup();
+                    }
+                        /*document.getElementById(data).classList.add('fa-thumbs-up');
                         document.getElementById(data).classList.remove('fa-thumbs-down');    
                         */                           
-          /*  }*/
+              }
                 
             });
             
@@ -25,18 +28,21 @@ $(document).ready(function(){
      //dealing with dislike button   
     
         $('.dislike-btn').click(function(){
+
             var id =  $(this).attr('id');
             var action = 'dislike';
             
             $.ajax({
                 url:'rating_server.php',
                 type:'post',
-                data: {id:id, action:action}
-                /*,
+                data: {id:id, action:action},
                 success:function(data)
                 {
-                   alert(data);
-                }*/
+                   if(data == 1)
+                   {
+                       alertPopup();
+                   }
+                }
                 
             });
     
@@ -45,4 +51,20 @@ $(document).ready(function(){
        }); // end of ready function
     
     
+/*==================   Alert if user is not logged in   =================*/
+    function alertPopup()
+    {
+        Swal.fire({
+            title: '<strong>You Are Not Logged In</strong>',
+            type: 'info',
+            html:
+              'press ok to login',
+            showCloseButton: false,
+            showCancelButton: false,
+            focusConfirm: false,
+          }).then(function()
+          {
+              show_log();
+          })
+    }
     

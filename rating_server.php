@@ -181,5 +181,9 @@ $result_x = mysqli_query($conn, $query_x);
   }
 
 }
+else
+{
+  echo 1;
+}
 
 ?>

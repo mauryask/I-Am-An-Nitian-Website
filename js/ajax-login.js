@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
 	$('#login').click(function(){
 		
 		var email = $('#email').val().trim();
@@ -17,8 +18,8 @@ $(document).ready(function(){
 			  
 			   setTimeout(function(){ 
 			   
-			   window.location = "index.php";
-			   
+			   location.reload(true); // instead of redirecting home page reload the current page
+			  			   
 				 },1800);
 	
 		   }
