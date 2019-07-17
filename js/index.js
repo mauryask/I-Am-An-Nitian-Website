@@ -17,7 +17,7 @@ $('.owl-carousel').owlCarousel({
       0:{
           items:1,
           nav:false,
-    dots:false
+         dots:false
       },
       600:{
           items:3,
@@ -26,7 +26,7 @@ $('.owl-carousel').owlCarousel({
       1000:{
           items:5,
           nav:false,
-          loop:false
+          loop:true
       }
   }
 });

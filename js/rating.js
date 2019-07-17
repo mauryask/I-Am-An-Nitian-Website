@@ -59,7 +59,7 @@ $(document).ready(function(){
             type: 'info',
             html:
               'press ok to login',
-            showCloseButton: false,
+            showCloseButton:false,
             showCancelButton: false,
             focusConfirm: false,
           }).then(function()

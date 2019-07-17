@@ -115,6 +115,7 @@ else{  //if new user then insert data into database
       {
         $name=explode(" ",$row['name']);
         $_SESSION['name']=$name[0];
+        $_SESSION['user_id']=$row['id'];
         echo 1;
       }
       else

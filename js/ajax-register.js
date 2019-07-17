@@ -31,7 +31,10 @@ $(document).ready(function(){
                          funx();
 
                          setTimeout(function(){
-		                 window.location = "index.php";
+                    // window.location = "index.php";
+                    
+                    location.reload(true);
+
 			             },2000);
 
                      }

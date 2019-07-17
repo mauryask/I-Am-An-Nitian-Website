@@ -190,7 +190,8 @@ font-weight: normal;
 
    .ad-body .flash .ncontent, .side-body .flash .ncontent{
       width:60%;
-      text-align: justify;
+      
+      
       padding:9px;
    }
 

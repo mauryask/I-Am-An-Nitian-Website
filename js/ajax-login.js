@@ -25,11 +25,7 @@ $(document).ready(function(){
 		   }
 		   else
 		   {
-			   $('#message')/*.fadeIn()*/.html(response);
-	
-			  /* setTimeout(function(){
-					$('#message').fadeOut(5000);
-			   });*/
+			   $('#message').html(response);
 		   }
 		}
 	   

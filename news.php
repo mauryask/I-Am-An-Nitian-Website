@@ -142,8 +142,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
          <?php echo $row['text']; ?>
         </p>
          <p class="ldc">
-            <i class="far fa-thumbs-up like-btn" style="cursor:pointer;"  id="<?php echo $row['id'];  ?>"></i> <span id="x" class="x"></span>
-            &nbsp <i class="far fa-thumbs-down dislike-btn" style="cursor:pointer;" id="<?php echo $row['id'];  ?>"></i> <span id="y" class="x"></span>
+            <i class="far fa-thumbs-up like-btn" style="cursor:pointer;"  id="<?php echo $row['id'];  ?>"></i> <span id="x" class="x">0</span>
+            &nbsp <i class="far fa-thumbs-down dislike-btn" style="cursor:pointer;" id="<?php echo $row['id'];  ?>"></i> <span id="y" class="x">0</span>
             &nbsp <i class="fas fa-eye" style="cursor:pointer;"></i> <span  class="x"><?php echo $row['views'];  ?></span>
             &nbsp <i class="far fa-comment" style="cursor:pointer;" name="comment"></i> <span  class="x">100</span>
             </p>
@@ -225,8 +225,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
     <div class="msgx"  id="msgk"><p id="msgy"></p></div>
    <div>
      <form method="post" autocomplete="off">
-   <input  type="text"  name="name"  id="name" placeholder="Name"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
-   <input  type="text" name="user_email" id="user_email"  placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+   <input autocomplete="off" type="text"  name="name"  id="name" placeholder="Name"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+   <input   autocomplete="off"  type="text" name="user_email" id="user_email"  placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
    <input  type="text"  name="phone" id="phone" placeholder="Mobile Number"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
    <select name="clg" id="clg"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
       <option>Select College</option>
@@ -237,7 +237,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
       <option>Malviya Natioanl Institute Of Technology Jaipur</option>
       <option>Other</option>
       </select>
-      <select name="state" id="state" autocomplete="off" onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+      <select name="state" id="state"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
           <option>Select Your State</option>
           <option>Uttar Pradesh</option>
           <option>Jammu and Kashmir</option>
@@ -246,8 +246,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
           <option>Uttrakhand</option>
           <option>Bihar</option>
           </select>
-          <input name="user_pass" id="user_pass" type="password" placeholder="Password" autocomplete="off" onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
-          <input type="password"  id="cnf_pass" name="cnf_pass" placeholder="Confirm Password" autocomplete="off" onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+          <input  autocomplete="off" name="user_pass" id="user_pass" type="password" placeholder="Password"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+          <input autocomplete="off" type="password"  id="cnf_pass" name="cnf_pass" placeholder="Confirm Password" onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
           <button name="register" id="register" type="button"   class="register">Register</button>
         </form>
          <p> <a onclick="show_log();cancel();">already a member? login</a></p>
@@ -262,8 +262,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div>
 <div class="log-msg"  ><p id="message"><p></div>
   <form  method="post" autocomplete="off">
-  <input name="text" autocomplete="pnstech" id="email" type="text" placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
-  <input  name="pass" autocomplete="pnstech" id="pass" type="password" placeholder="Password"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+  <input  id="email" type="text" autocomplete="off" placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+  <input autocomplete="off"  id="pass" type="password" placeholder="Password"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
 <div class="select" id="select">
   <input type="radio" name="user" id="user" value="1" checked>&nbsp <label class="lab1">User</label>
   <input type="radio" name="user" id="admin" value="2">&nbsp <label>Admin</label>

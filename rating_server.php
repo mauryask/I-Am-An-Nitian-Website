@@ -2,7 +2,8 @@
 include_once('connection.php');
 session_start();
 
-if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id']))
+if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id']) 
+  && isset($_SESSION['user_type']) && !empty($_SESSION['user_id']) && $_SESSION['user_type'] == 2) //preventin admin from liking the news
 {
   $action = $_POST['action'];
   $user_id = $_SESSION['user_id'];
