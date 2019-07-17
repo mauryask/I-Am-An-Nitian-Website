@@ -30,6 +30,7 @@ crossorigin="anonymous">
 <link href="css/footer.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 <link href="css/more-news.css" rel="stylesheet"  type="text/css">
+<link href="css/login_register.css" rel="stylesheet"  type="text/css">
 <style>
 
 </style>
@@ -124,6 +125,82 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   </div>
 
 </header>
+
+<!--======================  Login signup popups  ====================-->
+
+<!--============== Signup Popup ==================-->
+<div class="signup" id="sign">
+<div class="sign-card">
+ <div class="sign-img">
+  <div class="links">
+    <p class="p1">Quick Links</p>
+    <div class="msgx" ><p id="msgx" ></p></div>
+    <ul>
+     <a href="#"> <li>Colleges</li></a>
+     <a href="#"> <li>Exams</li></a>
+     <a href="#"> <li>Cutoff</li></a>
+     <a href="#"> <li>News</li></a>
+     <a href="#"> <li>Events</li></a>
+     <a href="#"> <li>Important Dates</li></a>
+      </ul>
+    <p class="p2"><a href="#">privacy policy</a></p>
+  </div>
+ </div>
+ <div class="sign-form">
+   <img class="cancel" onclick="cancel()" src="images/cut.png">
+    <p class="mainh">Register Here</p>
+    <div class="msgx"  id="msgk"><p id="msgy"></p></div>
+   <div>
+     <form method="post" autocomplete="off">
+   <input  type="text"  name="name"  id="name" placeholder="Name"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+   <input  type="text" name="user_email" id="user_email"  placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+   <input  type="text"  name="phone" id="phone" placeholder="Mobile Number"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+   <select name="clg" id="clg"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+      <option>Select College</option>
+      <option>National Institute Of technology Srinagar</option> 
+      <option>National Institute Of technology Srinagar Silchar</option>
+      <option>National Institute Of technology Srinagar Trichy</option>
+      <option>Motilal Nehru Institute Of Technology Allahabad</option>
+      <option>Malviya Natioanl Institute Of Technology Jaipur</option>
+      <option>Other</option>
+      </select>
+      <select name="state" id="state" autocomplete="off" onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+          <option>Select Your State</option>
+          <option>Uttar Pradesh</option>
+          <option>Jammu and Kashmir</option>
+          <option>Rajsthan</option>
+          <option>Tamilnadu</option>
+          <option>Uttrakhand</option>
+          <option>Bihar</option>
+          </select>
+          <input name="user_pass" id="user_pass" type="password" placeholder="Password" autocomplete="off" onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+          <input type="password"  id="cnf_pass" name="cnf_pass" placeholder="Confirm Password" autocomplete="off" onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+          <button name="register" id="register" type="button"   class="register">Register</button>
+        </form>
+         <p> <a onclick="show_log();cancel();">already a member? login</a></p>
+  </div>
+ </div>
+</div>
+</div>
+<!--=============== Login Popup =================-->
+<div class="login" id="log" >
+<div class="log-card">
+    <img class="cancel-log"  src="images/cut.png" onclick="cancel_log()">
+<div>
+<div class="log-msg"  ><p id="message"><p></div>
+  <form  method="post" autocomplete="off">
+  <input name="text" autocomplete="pnstech" id="email" type="text" placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+  <input  name="pass" autocomplete="pnstech" id="pass" type="password" placeholder="Password"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+<div class="select" id="select">
+  <input type="radio" name="user" id="user" value="1" checked>&nbsp <label class="lab1">User</label>
+  <input type="radio" name="user" id="admin" value="2">&nbsp <label>Admin</label>
+ </div>
+  <button type="button"  name="login" id="login">Login</button>
+</form>
+  <p class="signx"><a onclick="show_signup();cancel_log();">new member? register</a></p>
+</div>
+</div>
+</div>
 
 
 
@@ -233,20 +310,19 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <p id="and_copy" class="copyright">Developed by Shubham Maurya</p>
 </div>
 </footer>
-</div>
+</div> 
 </body>
 </html>
 <!--===============  Microsoft's JQuery CDN =================-->
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
 <!--==================  TweenMax CDN  ==================-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<!--==================  SweetAlert2 CDN  ==================-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>
 <!--==================  Local Js Files  ==================-->
+<script   type="text/javascript" src="js/ajax-register.js"></script>
+<script   type="text/javascript" src="js/ajax-login.js"></script>
 <script   type="text/javascript" src="js/main.js"></script>
-
-
-
-
-
 
 <script>
  /*==================== Menu toggle =========================*/

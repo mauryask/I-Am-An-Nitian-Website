@@ -103,26 +103,7 @@ window.scrollTo(0,0);
 }
 
 
-/*============  Login Signup Popups ===========*/
-
-function cancel()
-{
-  TweenMax.to('.signup',0.5,{scaleY: 0});
-}
-function show_log()
- {
-  TweenMax.to('.login',0.5,{scaleY: 1});
- }
-function cancel_log()
-{
-  TweenMax.to('.login',0.5,{scaleY: 0});
-}
-
-function show_signup()
-{
-
-  TweenLite.to('.signup',0.5, { scaleY: 1});
-}
+/*Login signup popups methods removed from here*/
 
 
 /*============ Navbar Animation ===========*/
@@ -200,3 +181,22 @@ function carousel() {
   setTimeout(carousel, 3000); 
 }
 
+/*============  Login Signup Popups ===========*/
+function cancel()
+{
+  TweenMax.to('.signup',0.5,{scaleY: 0});
+}
+function show_log()
+ {
+  TweenMax.to('.login',0.5,{scaleY: 1});
+ }
+function cancel_log()
+{
+  TweenMax.to('.login',0.5,{scaleY: 0});
+}
+
+function show_signup()
+{
+
+  TweenLite.to('.signup',0.5, { scaleY: 1});
+}

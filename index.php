@@ -153,24 +153,19 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div class="down">
 </div>
 </div>
-
 </div>
-
 <!--====================  Notification Bell   ========================-->
 <div class="nt_img">
 <img src="images/notificationx.svg" class="notify" onclick="show()" >
 <span id="count"></span> 
 </div>
-
 <!--============== Notification Popup ==================-->
 <div id="notify-popup"></div>
-
 <!--================ Explore Section ====================-->
 <div class="explore" >
   <p class="main-expo">Explore</p>
   <div class="expo-line"></div>
   <div class="expo exc" style="margin-top:2rem;">
-
    <div class="appx" onclick="sweet_alert()" id="respo">
      <img src="images/school.svg">
      <p>Colleges</p>
@@ -185,7 +180,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
           <img src="images/stage.svg" >
           <p>College Fests</p>
          </div>
-
        
    <div class="appx" onclick="sweet_alert()" id="respo">
       <img src="images/research.svg">
@@ -197,8 +191,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         <p>College Reviews</p>
        </div>
   </div>
-
-
   <div class="expo exc">     
   <div class="appx" onclick="sweet_alert()">
         <img src="images/books.svg">
@@ -209,7 +201,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
          <img src="images/project.svg">
          <p>Sell Project</p>
         </div>
-
          <div class="appx" onclick="location.href='ranking.php'">
       <img src="images/infographic.svg">
       <p>College Ranking</p>
@@ -219,17 +210,13 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
             <img src="images/reunion.svg">
             <p>Placements Data</p>
            </div>
-
            <div class="appx" onclick="location.href='story.php'">
           <img src="images/growth.svg">
           <p>Success Stories</p>
          </div>
      </div>
-
   <!--=========================== Mobile version horizontal tabs ======================-->
-
 <div class="mob-expo" style="margin-top:2rem;">
-
 <div class="appx_expo" onclick="sweet_alert()"  id="appx_left">
   <img src="images/school.svg">
   <p>Colleges</p>
@@ -273,26 +260,17 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   <img src="images/infographic.svg">
       <p>College Ranking</p>
       </div>
-
     
 <div  class="appx_expo" onclick="sweet_alert()" >
 <img src="images/reunion.svg">
             <p>Placements Data</p>
   </div>
-
   <div  class="appx_expo" onclick="sweet_alert()" id="appx_right">
   <img src="images/growth.svg">
           <p>Success Stories</p>
     </div>
-
-
 </div>
-
-
 </div>
-
-
-
 <!--==================  Mobile version of updates  =================-->
 <div class="respo_not" >
 <div class="respo_head"><p>Updates</p></div>
@@ -301,7 +279,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   NITs (National Institute Of Technologies) are 
     the mo <span class="blinker">New</span>
 </div>
-
 <div class="respo_cont">
   NITs (National Institute Of Technologies) are 
     the mo 
@@ -314,27 +291,20 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   NITs (National Institute Of Technologies) are 
     the mo 
 </div>
-
-
 <div class="respo_cont">
   NITs (National Institute Of Technologies) are 
     the mo 
 </div>
-
 <div class="respo_cont">
   NITs (National Institute Of Technologies) are 
     the mo 
 </div>
-
 <div class="respo_cont">
   NITs (National Institute Of Technologies) are 
     the mo 
 </div>
 </div>
 </div>
-
-
-
 <script>
   var inter_val;
 function start_Ticker()
@@ -343,27 +313,20 @@ $(' #respo_csp div:first').slideUp(function(){
   $(this).appendTo($('#respo_csp')).slideDown();
 });
 }
-
 interval = setInterval(start_Ticker, 3000);
-
 function stop_Ticker()
 {
 clearInterval(inter_val);
 }
-
 function stop_It()
 {
 stop_Ticker(inter_val);
 }
-
 function start_It()
 {
   inter_val = setInterval(start_Ticker, 3000);
 }
-
   </script>
-
-
  <!--===================== Update Section ===================--> 
 <div class="upg">
 <div class="upx">
@@ -373,7 +336,6 @@ function start_It()
   NITs (National Institute Of Technologies) are 
     the mo <span class="blinker">New</span>
 </div>
-
 <div class="contentx">
   NITs (National Institute Of Technologies) are 
     the mo 
@@ -386,7 +348,6 @@ function start_It()
   NITs (National Institute Of Technologies) are 
     the mo 
 </div>
-
 <div class="contentx">
   NITs (National Institute Of Technologies) are 
     the mo 
@@ -407,14 +368,10 @@ function start_It()
   NITs (National Institute Of Technologies) are 
     the mo
 </div>
-
 </div>
 </div>
-
 <!--==================  Sliding images  =================-->
-
 <div class="mySlide">
-
 <div class="slidex">
  <img class="slide" src="images/darkback.jpg">
  <div id="caption">
@@ -423,38 +380,28 @@ function start_It()
     <p style="margin-left:27px;"> NIT Srinagar</p>
   </div>
  </div>
-
  <div class="slidex">
  <div id="captionx"><p>Cultural Night</p></div>
  <img class="slide" src="images/cultural.jpg">
-
  </div>
-
 <div class="slidex">
 <div id="captionx"><p>Musical Night</p></div>
  <img class="slide" src="images/musical.jpg">
  </div>
-
  <div class="slidex">
 <div id="captionx"><p>Dance Night</p></div>
  <img class="slide" src="images/dance.jpg">
  </div>
-
  <div class="slidex">
 <div id="captionx"><p>Robotics</p></div>
  <img class="slide" src="images/robotics.jpeg">
  </div>
-
  <div class="slidex">
 <div id="captionx"><p>Coding</p></div>
  <img class="slide" src="images/coding.jpg">
  </div>
-
 </div>
 </div>
-
-
-
 <!--==================  Stop & start sliding updates  =================-->
 <script>
   var interval;
@@ -464,26 +411,20 @@ $('.upx #csp div:first').slideUp(function(){
   $(this).appendTo($('#csp')).slideDown();
 });
 }
-
 interval = setInterval(startTicker, 3000);
-
 function stopTicker()
 {
 clearInterval(interval);
 }
-
 function stopIt()
 {
 stopTicker(interval);
 }
-
 function startIt()
 {
   interval = setInterval(startTicker, 3000);
 }
-
   </script>
-
 <!--================ News Section ====================-->
 <div style="width:100%;height:1%;background:transparent;margin-top:4%;"></div>
 <div class="explore" style="margin-top:0;">
@@ -544,7 +485,6 @@ function startIt()
      <div class="about-img" id="about-img">
          <img src="images\us3.png" height="300px" width="100%" style="border-radius: 5px  0  0 5px;">
      </div>
-
     <div class="about-text"> 
     <p style="text-align:justify;" >
     NITs (National Institute Of Technologies) are 
@@ -561,7 +501,6 @@ function startIt()
 <div id="mySidenav" class="sidenav">
 <a  id="feedback" style=" padding:15px 28px 0 25px;" onclick="fun1()"><span>FEEDBACK</span></a>
 </div>
-
 <!--============== Signup Popup ==================-->
 <div class="signup" id="sign">
 <div class="sign-card">
@@ -635,7 +574,6 @@ function startIt()
 </div>
 </div>
 </div>
-
 <!--============== Feedback Popup ==================-->
 <div class="popup">
     <div class="popup-content">
@@ -647,7 +585,6 @@ function startIt()
     <input type="submit" value="Send" class="btn-send" onclick="funalert()">
   </div>
    </div>
-
   <!--============== Nits Logo =====================-->
    <div class="nit-logos">
     <div class="owl-carousel owl-theme">
@@ -703,15 +640,12 @@ function startIt()
             <p><a href="#">Neet</a></p>  
             <p><a href="#">Gre</a></p>  
           </div>
-
-
       <div><p class="y">Cutoff</p>
         <div class="linex" id="lz"></div>
         <p><a href="#">IITs </a></p>
         <p><a href="#">NITs</a></p>
         <p><a href="#">IIITs</a></p>
         <p><a href="#">AIIMS</a></p></div>
-
       <div><p class="y">Links</p>
         <div class="linex" id="la"></div>
         <p><a href="#">Disclaimer</a></p>
@@ -721,8 +655,6 @@ function startIt()
         <p><a href="#">News</a></p></div>
         
     </div>
-
-
   <div class="datad">
   <p class="x">Feel Free To Contact Us</p>
   <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-9055667606 &nbsp | &nbsp  +91-9055667606</p>
@@ -759,9 +691,7 @@ function startIt()
 <script   type="text/javascript" src="js/main.js"></script>
 <!--===================   Get total Number of notifications   ====================-->
 <script   type="text/javascript" src="js/notification.js"></script>
-
 <script>
-
 function sweet_alert()
 {
   Swal.fire({
@@ -773,12 +703,9 @@ function sweet_alert()
 }); 
 }
   </script>
-
-
 <script>
 var myIndex = 0;
 carousel();
-
 function carousel() {
   
     var i;
@@ -804,24 +731,16 @@ function carousel() {
     setTimeout(carousel,2000);
       }
       
-
   function showCaption()
   {
     TweenMax.to('#caption',0.5,{scaleX: 1});
   }
-
   function hideCaption()
   {
     TweenMax.to('#caption',0.5,{scaleX: 0});
   }
-
-
-
-
  /*==================== Menu toggle =========================*/
-
  $(document).ready(function(){
-
 if (window.matchMedia('(max-width:721px)').matches)
 {
   
@@ -830,32 +749,23 @@ if (window.matchMedia('(max-width:721px)').matches)
     $('.menu-toggle').css('display','block');
     TweenMax.to('.active',0.5,{scaleX: 0});
   })
-
   $('.menu-toggle').click(function(){
     $(this).css('display','none');
     $('.cut_nav').css('display','block');
     TweenMax.to('.active',0.5,{scaleX: 1});
   })
-
-
 $('#login_nav').click(function()
 {
   TweenMax.to('.active',0.1,{scaleX: 0});  
   $('.cut_nav').css('display','none');
   $('.menu-toggle').css('display','block');
 })
-
-
 $('#about_nav').click(function()
 {
   TweenMax.to('.active',0.1,{scaleX: 0});  
   $('.cut_nav').css('display','none');
   $('.menu-toggle').css('display','block');
 })
-
-
 }
 })
-
 </script>
-

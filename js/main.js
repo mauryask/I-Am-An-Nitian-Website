@@ -75,3 +75,65 @@ function loadme()
 loaderx.style.display='none';
 }
 
+
+/*============  Login Signup Popups ===========*/
+function cancel()
+{
+  TweenMax.to('.signup',0.5,{scaleY: 0});
+}
+function show_log()
+ {
+  TweenMax.to('.login',0.5,{scaleY: 1});
+ }
+function cancel_log()
+{
+  TweenMax.to('.login',0.5,{scaleY: 0});
+}
+
+function show_signup()
+{
+
+  TweenLite.to('.signup',0.5, { scaleY: 1});
+}
+
+ /*==================== Menu toggle =========================*/
+
+ var myIndex = 0;
+ carousel();
+ 
+ function carousel() {
+   
+     var i;
+     var x = document.getElementsByClassName("slidex");
+     
+     for (i = 0; i < x.length ; i++) 
+     {
+        x[i].style.display = "none"; 
+       showCaption();
+       
+     }
+     myIndex++;
+    
+     if (myIndex > x.length) {
+        myIndex = 1;
+         }  
+         else
+         {
+           hideCaption();
+         }
+       
+     x[myIndex-1].style.display = "block"; 
+     setTimeout(carousel,2000);
+       }
+       
+ 
+   function showCaption()
+   {
+     TweenMax.to('#caption',0.5,{scaleX: 1});
+   }
+ 
+   function hideCaption()
+   {
+     TweenMax.to('#caption',0.5,{scaleX: 0});
+   }
+ 

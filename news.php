@@ -1,5 +1,5 @@
 <?php
-include_once('db/connection.php');
+include_once('connection.php');
 session_start();
 $id = $_GET['id'];
 $sample_rate=1;
@@ -30,6 +30,7 @@ crossorigin="anonymous">
 <link href="css/navbar.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 <link href="css/news.css" type="text/css" rel="stylesheet">
+<link href="css/login_register.css" type="text/css" rel="stylesheet">
 <style>
 @media (max-width:991px)
 {
@@ -141,8 +142,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
          <?php echo $row['text']; ?>
         </p>
          <p class="ldc">
-            <i class="far fa-thumbs-up" style="cursor:pointer;" name="likes" id="<?php echo $row['id'];  ?>"></i> <span id="x" class="x"></span>
-            &nbsp <i class="far fa-thumbs-down" style="cursor:pointer;" name="dislikes"></i> <span  class="x">12</span>
+            <i class="far fa-thumbs-up like-btn" style="cursor:pointer;"  id="<?php echo $row['id'];  ?>"></i> <span id="x" class="x"></span>
+            &nbsp <i class="far fa-thumbs-down dislike-btn" style="cursor:pointer;" id="<?php echo $row['id'];  ?>"></i> <span id="y" class="x"></span>
             &nbsp <i class="fas fa-eye" style="cursor:pointer;"></i> <span  class="x"><?php echo $row['views'];  ?></span>
             &nbsp <i class="far fa-comment" style="cursor:pointer;" name="comment"></i> <span  class="x">100</span>
             </p>
@@ -176,10 +177,10 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                      {
                       $id = $row["id"];
                       $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
-                      $text = implode(' ',array_slice(explode(' ', $row['text']),0,15)); //getting fires 19 words from text
+                      $text = implode(' ',array_slice(explode(' ', $row['text']),0,14)); //getting fires 19 words from text
                     echo   '<div class="flash">
                       <div class="nimg"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>';
-                  echo    '<div class="ncontent">'."<p>".'<span class="heading">'.$head.'</span>'." ".$text.'..<a href="news.php?id='.$id.'">'." Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>'.'</div>';
+                  echo    '<div class="ncontent">'."<p>".'<span class="heading">'.$head.'</span>'." ".$text.'..<a href="news.php?id='.$id.'">'.'<span><br/></span>'." Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>'.'</div>';
                  echo '</div>'; 
                      }
                 }
@@ -195,8 +196,89 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                       </div>  
     </div>
 
-<!--================ Responsive Design for mobile  ===============-->
+<!--=========================  Login signup popups  =========================-->
 
+
+
+
+<!--============== Signup Popup ==================-->
+<div class="signup" id="sign">
+<div class="sign-card">
+ <div class="sign-img">
+  <div class="links">
+    <p class="p1">Quick Links</p>
+    <div class="msgx" ><p id="msgx" ></p></div>
+    <ul>
+     <a href="#"> <li>Colleges</li></a>
+     <a href="#"> <li>Exams</li></a>
+     <a href="#"> <li>Cutoff</li></a>
+     <a href="#"> <li>News</li></a>
+     <a href="#"> <li>Events</li></a>
+     <a href="#"> <li>Important Dates</li></a>
+      </ul>
+    <p class="p2"><a href="#">privacy policy</a></p>
+  </div>
+ </div>
+ <div class="sign-form">
+   <img class="cancel" onclick="cancel()" src="images/cut.png">
+    <p class="mainh">Register Here</p>
+    <div class="msgx"  id="msgk"><p id="msgy"></p></div>
+   <div>
+     <form method="post" autocomplete="off">
+   <input  type="text"  name="name"  id="name" placeholder="Name"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+   <input  type="text" name="user_email" id="user_email"  placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+   <input  type="text"  name="phone" id="phone" placeholder="Mobile Number"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+   <select name="clg" id="clg"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+      <option>Select College</option>
+      <option>National Institute Of technology Srinagar</option> 
+      <option>National Institute Of technology Srinagar Silchar</option>
+      <option>National Institute Of technology Srinagar Trichy</option>
+      <option>Motilal Nehru Institute Of Technology Allahabad</option>
+      <option>Malviya Natioanl Institute Of Technology Jaipur</option>
+      <option>Other</option>
+      </select>
+      <select name="state" id="state" autocomplete="off" onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+          <option>Select Your State</option>
+          <option>Uttar Pradesh</option>
+          <option>Jammu and Kashmir</option>
+          <option>Rajsthan</option>
+          <option>Tamilnadu</option>
+          <option>Uttrakhand</option>
+          <option>Bihar</option>
+          </select>
+          <input name="user_pass" id="user_pass" type="password" placeholder="Password" autocomplete="off" onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+          <input type="password"  id="cnf_pass" name="cnf_pass" placeholder="Confirm Password" autocomplete="off" onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+          <button name="register" id="register" type="button"   class="register">Register</button>
+        </form>
+         <p> <a onclick="show_log();cancel();">already a member? login</a></p>
+  </div>
+ </div>
+</div>
+</div>
+<!--=============== Login Popup =================-->
+<div class="login" id="log" >
+<div class="log-card">
+    <img class="cancel-log"  src="images/cut.png" onclick="cancel_log()">
+<div>
+<div class="log-msg"  ><p id="message"><p></div>
+  <form  method="post" autocomplete="off">
+  <input name="text" autocomplete="pnstech" id="email" type="text" placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+  <input  name="pass" autocomplete="pnstech" id="pass" type="password" placeholder="Password"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+<div class="select" id="select">
+  <input type="radio" name="user" id="user" value="1" checked>&nbsp <label class="lab1">User</label>
+  <input type="radio" name="user" id="admin" value="2">&nbsp <label>Admin</label>
+ </div>
+  <button type="button"  name="login" id="login">Login</button>
+</form>
+  <p class="signx"><a onclick="show_signup();cancel_log();">new member? register</a></p>
+</div>
+</div>
+</div>
+
+
+
+
+<!--================ Responsive Design for mobile  ===============-->
 <div class="side-body">
 <p class="latest">Latest News<p>
   <div class="latest-line"></div>
@@ -209,7 +291,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                      {
                       $id = $row["id"];
                       $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
-                      $text = implode(' ',array_slice(explode(' ', $row['text']),0,11)); //getting fires 19 words from text
+                      $text = implode(' ',array_slice(explode(' ', $row['text']),0,14)); //getting fires 19 words from text
                     echo   '<div class="flash">
                       <div class="nimg"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>';
                   echo    '<div class="ncontent">'."<p>".'<span class="heading">'.$head.'</span>'." ".$text.'..<a href="news.php?id='.$id.'">'."<span id='morex'><br/></span>"." Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>'.'</div>';
@@ -295,53 +377,37 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>
 <script   type="text/javascript" src="js/ajax-register.js"></script>
 <script   type="text/javascript" src="js/ajax-login.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>
 <script src="js/main.js" type="text/javascript"></script>
+<script src="js/rating.js" type="text/javascript"></script>
+
 
 <script>
 
-
-function loadLikes()
+ /*==================== Functions to get Likes and dislikes =========================*/
+function getLikes()
 {
+  var id = $('html').attr('id'); 
   setInterval(function(){
-  var idx = $('html').attr('id');
-$.ajax({
-      url:'db/like_counter.php',
-      type:'post',
-      data:{id:idx},
-      success:function(data)
-      {
-        $('#x').html(data);
-      }
 
-        });
-},500);
+   $('#x').load('get_likes.php', {id : id});
+
+  },1000);
+
 }
 
-loadLikes();
+function getDislikes()
+{
+  var id = $('html').attr('id'); 
+  setInterval(function(){
 
+   $('#y').load('get_dislikes.php', {id : id});
 
+  },1000);
 
+}
 
- $(document).ready(function(){
-
-   //like increment start
-      $('.far').click(function(){
-      var id= $(this).attr('id');
-      var counter =1;
-      $.ajax({
-      url:'db/like_increment.php',
-      type:'post',
-      data:{id:id, counter:counter}
-
-        });
-    });
-     //like increment finish
-
-  });
-
-
-
+getDislikes();
+getLikes();
 
 
  /*==================== Menu toggle =========================*/
@@ -380,6 +446,7 @@ $('#about_nav').click(function()
 })
 
 }
+
 })
 </script>
 

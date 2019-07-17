@@ -138,7 +138,7 @@ body{
   position: relative;
 }
 
-/*----------------------------------*/
+/*--------------  login popup is removes from here  --------------------*/
 
              /*Search popup*/
              .search-popup
@@ -226,5 +226,10 @@ body{
    height:120px;
    cursor: pointer;
  }
+
+
+ .popup{
+  top:239rem;
+}
 
  }
