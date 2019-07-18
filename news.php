@@ -146,20 +146,20 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
             <i class="far fa-thumbs-up like-btn" style="cursor:pointer;"  id="<?php echo $row['id'];  ?>"></i> <span id="x" class="x">0</span>
             &nbsp <i class="far fa-thumbs-down dislike-btn" style="cursor:pointer;" id="<?php echo $row['id'];  ?>"></i> <span id="y" class="x">0</span>
             &nbsp <i class="fas fa-eye" style="cursor:pointer;"></i> <span  class="x"><?php echo $row['views'];  ?></span>
-            &nbsp <i class="far fa-comment" style="cursor:pointer;" name="comment"></i> <span id="ncmt" class="x">0</span>
+            &nbsp <i class="far fa-comment" style="cursor:pointer;" id="cmt_color"></i> <span id="ncmt" class="x">0</span>
             </p>
         <p class="cmnt">Comments</p>
     </div>
 
+    <div class="comments"> </div>
+
+    <div class="txtar">
     <form method="post" enctype="multipart/form-data" id="comment_form">
-    <div class="txtar"><textarea rows="6" placeholder="Write Your Comments Here..." id="comment_content"></textarea><br>
+      <textarea rows="6" placeholder="Write Your Comments Here..." id="comment_content"></textarea><br>
     <button class="btnx" id="comment_btn" type="button">Comment</button>
     </form>
     </div>
-
-    <div class="comments">
  
-    </div>
         </div>
 <div class="ad-body">
 <p class="latest">Latest News<p>
@@ -540,18 +540,28 @@ else
 
 //getting total commnet
 
-function load_number_of_comments()
+function loadNcmt()
 {
+var id =  $('html').attr('id');
+
 
 setInterval(function(){
 
-$('#ncmt').load('comment_number.php');
+$.post('comment_number.php', {post_id : id}, function(data, status)
+{
+  $('#ncmt').text(data);
+  $('#cmt_color').addClass('fas');
+  if(data == 0)
+  {
+    $('#cmt_color').removeClass('fas');
+  }
+});
 
 },1000);
 
 }
 
-load_number_of_comments();
+loadNcmt();
 
 </script>
 
