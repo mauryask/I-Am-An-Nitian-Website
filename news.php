@@ -146,7 +146,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
             <i class="far fa-thumbs-up like-btn" style="cursor:pointer;"  id="<?php echo $row['id'];  ?>"></i> <span id="x" class="x">0</span>
             &nbsp <i class="far fa-thumbs-down dislike-btn" style="cursor:pointer;" id="<?php echo $row['id'];  ?>"></i> <span id="y" class="x">0</span>
             &nbsp <i class="fas fa-eye" style="cursor:pointer;"></i> <span  class="x"><?php echo $row['views'];  ?></span>
-            &nbsp <i class="far fa-comment" style="cursor:pointer;" name="comment"></i> <span  class="x">100</span>
+            &nbsp <i class="far fa-comment" style="cursor:pointer;" name="comment"></i> <span id="ncmt" class="x">0</span>
             </p>
         <p class="cmnt">Comments</p>
     </div>
@@ -520,30 +520,38 @@ function show()
   }
 }
 
-$('.replyx').click(function(){
-  show();
-});
-
-
-/*loding coments on the page*/
-
-
-function loadComment()
+//hiding and showing the reply textarea
+var action = 1;
+function show(id)
 {
-  var id = $('html').attr('id');
 
- setInterval(function(){
-  $.post('get_comment.php', {post_id : id}, function(data, status){
-   $('.comments').html(data);
-  })
-
-
-},1000);
-   
+if(action == 1)
+{
+  document.getElementById(id).style.display = 'block';
+  action = 0;
+}
+else
+{
+  document.getElementById(id).style.display = 'none';
+  action = 1;
+}
 
 }
 
-loadComment();
+//getting total commnet
+
+function load_number_of_comments()
+{
+
+setInterval(function(){
+
+$('#ncmt').load('comment_number.php');
+
+},1000);
+
+}
+
+load_number_of_comments();
 
 </script>
 
