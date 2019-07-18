@@ -1,12 +1,8 @@
 <?php
 include_once('connection.php');
-
 $post_id = $_POST['post_id'];
-
-$query = "select * from comment where post_id = '".$post_id."' order by id desc";
-
+$query = "select * from comment where post_id = '".$post_id."' order by id asc";
 $result = mysqli_query($conn, $query);
-
 if($result)
 {
     while($row = mysqli_fetch_assoc($result))
@@ -29,5 +25,4 @@ else
 {
     echo 'Failed';
 }
-
 ?>

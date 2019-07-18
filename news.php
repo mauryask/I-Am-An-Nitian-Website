@@ -38,7 +38,6 @@ crossorigin="anonymous">
 		margin-top:30px;
     }
 }
-
   </style>
 </head>
 
@@ -379,38 +378,25 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <script src="js/comment.js" type="text/javascript"></script>
 
 <script>
-
  /*==================== Functions to get Likes and dislikes =========================*/
 function getLikes()
 {
   var id = $('html').attr('id'); 
   setInterval(function(){
-
    $('#x').load('get_likes.php', {id : id});
-
   },1000);
-
 }
-
 function getDislikes()
 {
   var id = $('html').attr('id'); 
   setInterval(function(){
-
    $('#y').load('get_dislikes.php', {id : id});
-
   },1000);
-
 }
-
 getDislikes();
 getLikes();
-
-
  /*==================== Menu toggle =========================*/
-
  $(document).ready(function(){
-
 if (window.matchMedia('(max-width:721px)').matches)
 {
   
@@ -419,43 +405,31 @@ if (window.matchMedia('(max-width:721px)').matches)
     $('.menu-toggle').css('display','block');
     TweenMax.to('.active',0.5,{scaleX: 0});
   })
-
   $('.menu-toggle').click(function(){
     $(this).css('display','none');
     $('.cut_nav').css('display','block');
     TweenMax.to('.active',0.5,{scaleX: 1});
   })
-
-
 $('#login_nav').click(function()
 {
   TweenMax.to('.active',0.1,{scaleX: 0});  
   $('.cut_nav').css('display','none');
   $('.menu-toggle').css('display','block');
 })
-
-
 $('#about_nav').click(function()
 {
   TweenMax.to('.active',0.1,{scaleX: 0});  
   $('.cut_nav').css('display','none');
   $('.menu-toggle').css('display','block');
 })
-
 }
 })
-
 // changing the colour of rating buttons
-
-
 //getting color of like btn
-
 function get_like_btn_color()
 {
   var post_id = $('html').attr('id');
-
  setInterval(function(){
-
   $.post('posetive_rating_state.php', {post_id: post_id}, function(data, status){   
  if(data == 1)
  {
@@ -464,25 +438,17 @@ function get_like_btn_color()
  }
  else if(data == 0)
  {
-
   $('.like-btn').removeClass('fas');
   $('.like-btn').addClass('far');
  }
-
 });
-
  },1000);
-
 }
-
 //getting color of dislike btn
-
 function get_dislike_btn_color()
 {
   var post_id = $('html').attr('id');
-
   setInterval(function(){
-
     $.post('negative_rating_state.php', {post_id: post_id}, function(data, status){   
  if(data == 1)
  {
@@ -494,16 +460,11 @@ function get_dislike_btn_color()
   $('.dislike-btn').removeClass('fas');
   $('.dislike-btn').addClass('far');
  }
-
 });
-
  },1000);
 }
-
  get_dislike_btn_color();
  get_like_btn_color();
-
-
 /*==================== Reply button show and hide =========================*/
 var action = 1;
 function show()
@@ -519,12 +480,10 @@ function show()
     action = 1;
   }
 }
-
 //hiding and showing the reply textarea
 var action = 1;
 function show(id)
 {
-
 if(action == 1)
 {
   document.getElementById(id).style.display = 'block';
@@ -535,18 +494,12 @@ else
   document.getElementById(id).style.display = 'none';
   action = 1;
 }
-
 }
-
 //getting total commnet
-
 function loadNcmt()
 {
 var id =  $('html').attr('id');
-
-
 setInterval(function(){
-
 $.post('comment_number.php', {post_id : id}, function(data, status)
 {
   $('#ncmt').text(data);
@@ -556,12 +509,7 @@ $.post('comment_number.php', {post_id : id}, function(data, status)
     $('#cmt_color').removeClass('fas');
   }
 });
-
 },1000);
-
 }
-
 loadNcmt();
-
 </script>
-
