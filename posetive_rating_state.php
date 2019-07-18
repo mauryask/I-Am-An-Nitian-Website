@@ -1,4 +1,6 @@
+
 <?php
+/*<<<<<<<<<<======= this files change the color of like button =========>>>>>>>>>>>*/
 include_once('connection.php');
 session_start();
 $user_id= $_SESSION['user_id'];
@@ -11,4 +13,4 @@ if($row = mysqli_fetch_assoc($result))
    echo $row['like_st'];
 } 
 
-?>
+?> 

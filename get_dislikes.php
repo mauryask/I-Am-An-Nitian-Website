@@ -1,4 +1,6 @@
+
 <?php
+/*<<<<<<<<<<======= this files gives total number of dislikes =========>>>>>>>>>>>*/
 include_once('connection.php');
 
 $post_id = $_POST['id'];

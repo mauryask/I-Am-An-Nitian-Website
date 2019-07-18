@@ -38,6 +38,7 @@ crossorigin="anonymous">
 		margin-top:30px;
     }
 }
+
   </style>
 </head>
 
@@ -149,21 +150,15 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
             </p>
         <p class="cmnt">Comments</p>
     </div>
-    <div class="txtar"><textarea rows="6" placeholder="Write Your Comments Here..."></textarea><br>
-    <button class="btnx">Comment</button>
+
+    <form method="post" enctype="multipart/form-data" id="comment_form">
+    <div class="txtar"><textarea rows="6" placeholder="Write Your Comments Here..." id="comment_content"></textarea><br>
+    <button class="btnx" id="comment_btn" type="button">Comment</button>
+    </form>
     </div>
+
     <div class="comments">
-        <div>
-                <p style="font-size:15px;font-weight: bold;">Shubham</p>
-            <p style="font-size:14px;">Very Nice Article</p>
-            <p class="reply" style="cursor:pointer;color:blue;font-size:14px;">Reply <i class="fas fa-reply"></i></p>
-        </div>
-        <div class="cmt-line"></div>
-        <div>
-                <p style="font-size:14px;font-weight: bold;">Abhay</p>
-                <p style="font-size:14px;">Good</p>
-                <p class="reply" style="cursor:pointer;color:blue;font-size:15px;">Reply <i class="fas fa-reply"></i></p>
-        </div>
+ 
     </div>
         </div>
 <div class="ad-body">
@@ -381,7 +376,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <script   type="text/javascript" src="js/ajax-login.js"></script>
 <script src="js/main.js" type="text/javascript"></script>
 <script src="js/rating.js" type="text/javascript"></script>
-
+<script src="js/comment.js" type="text/javascript"></script>
 
 <script>
 
@@ -507,6 +502,48 @@ function get_dislike_btn_color()
 
  get_dislike_btn_color();
  get_like_btn_color();
+
+
+/*==================== Reply button show and hide =========================*/
+var action = 1;
+function show()
+{
+  if(action == 1)
+  {
+    document.getElementByClassName('.popup').style="block";
+    action = 0;
+  }
+  else
+  {
+    document.getElementByClassName('.popup').style="none";
+    action = 1;
+  }
+}
+
+$('.replyx').click(function(){
+  show();
+});
+
+
+/*loding coments on the page*/
+
+
+function loadComment()
+{
+  var id = $('html').attr('id');
+
+ setInterval(function(){
+  $.post('get_comment.php', {post_id : id}, function(data, status){
+   $('.comments').html(data);
+  })
+
+
+},1000);
+   
+
+}
+
+loadComment();
 
 </script>
 

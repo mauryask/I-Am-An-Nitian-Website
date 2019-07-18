@@ -1,4 +1,7 @@
+
 <?php
+
+/*<<<<<<<<<<======= this files change the color of dislike button =========>>>>>>>>>>>*/
 include_once('connection.php');
 session_start();
 $user_id= $_SESSION['user_id'];

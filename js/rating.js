@@ -1,3 +1,6 @@
+
+/*<<<<<<<<<<======= This file consists of incresing like and dislike functionalites =========>>>>>>>>>>>*/
+
 $(document).ready(function(){
 
     //dealing with like button

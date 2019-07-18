@@ -1,4 +1,6 @@
+
 <?php
+/*<<<<<<<<<<======= this files gives total number of likes =========>>>>>>>>>>>*/
 include_once('connection.php');
 
 $post_id = $_POST['id'];
