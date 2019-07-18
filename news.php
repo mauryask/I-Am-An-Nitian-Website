@@ -450,5 +450,63 @@ $('#about_nav').click(function()
 }
 })
 
+// changing the colour of rating buttons
+
+
+//getting color of like btn
+
+function get_like_btn_color()
+{
+  var post_id = $('html').attr('id');
+
+ setInterval(function(){
+
+  $.post('posetive_rating_state.php', {post_id: post_id}, function(data, status){   
+ if(data == 1)
+ {
+  $('.like-btn').addClass('fas');
+  $('.dislike-btn').removeClass('fas');
+ }
+ else if(data == 0)
+ {
+
+  $('.like-btn').removeClass('fas');
+  $('.like-btn').addClass('far');
+ }
+
+});
+
+ },1000);
+
+}
+
+//getting color of dislike btn
+
+function get_dislike_btn_color()
+{
+  var post_id = $('html').attr('id');
+
+  setInterval(function(){
+
+    $.post('negative_rating_state.php', {post_id: post_id}, function(data, status){   
+ if(data == 1)
+ {
+  $('.dislike-btn').addClass('fas');
+  $('.like-btn').removeClass('fas');
+ }
+ else if(data == 0)
+ {
+  $('.dislike-btn').removeClass('fas');
+  $('.dislike-btn').addClass('far');
+ }
+
+});
+
+ },1000);
+}
+
+ get_dislike_btn_color();
+ get_like_btn_color();
+
 </script>
 
