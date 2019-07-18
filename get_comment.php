@@ -9,7 +9,7 @@ if($result)
     {
        echo '<div>
                 <p style="font-size:15px;font-weight: bold;">'.$row['user_name'].'</p>
-                <p style="font-size:14px;">'.$row['comment'].'</p>
+                <p style="font-size:15px;letter-spacing:0.5px;line-height:24px;">'.$row['comment'].'</p>
                 <button class="replyx"  onclick="show('.$row['id'].')">Reply <i class="fas fa-reply"></i></button>
                 <div class="replex" id="'.$row['id'].'">
                   <form method="post" enctype="multipart/form-data" id="reply_form"> 
