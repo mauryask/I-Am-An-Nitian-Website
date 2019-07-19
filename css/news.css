@@ -282,6 +282,11 @@ font-size:28px;
    letter-spacing: 0.4px;
 }
 
+.comments div .replex #reply_form{
+   display:flex;
+   flex-direction:column;
+}
+
 .comments div .replex{
    display:none;
 }

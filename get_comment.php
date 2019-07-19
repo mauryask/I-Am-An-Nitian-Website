@@ -14,9 +14,9 @@ if($result)
                 <div class="replex" id="'.$row['id'].'">
                   <form method="post" enctype="multipart/form-data" id="reply_form"> 
                   <textarea type="text" placeholder="Write Your Reply Here.." id="reply" rows="3"></textarea>
-                   </form>
-                <button class="reply"> Send Reply  <i class="fas fa-reply"></i></button>
-                </div>
+                 <button  type="button" class="reply"  onclick="clicked('.$row['id'].')"> Send Reply  <i class="fas fa-reply"></i></button>
+                 </form>
+                 </div>
               </div>
             <div class="cmt-line"></div>';
     }

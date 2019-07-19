@@ -28,10 +28,10 @@ $(document).ready(function(){
                   {
                      if(response == 1)
                      {
-                         funx();
+                        funx();
 
-                         setTimeout(function(){
-                    // window.location = "index.php";
+                        setTimeout(function(){
+                     window.location = "index.php";
                     
                     location.reload(true);
 
@@ -62,8 +62,9 @@ function funx()
         Swal.fire({
 			  position: 'center',
 			  type: 'success',
-			  title: 'Registration Successful',
+			  title: 'Signup Successful',
 			  showConfirmButton: false,
-			  timer: 1800
+			  timer:1800
           }) 
+         $(".swal2-modal").css({width: '20rem'});
 }

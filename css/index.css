@@ -205,14 +205,13 @@
 /*================  About Us Section  =================*/ 
 
 	.about{
+		margin: 0 auto;
 		border-radius:5px;
 		display:flex;
 		 flex-direction:row;
 		  width:77%;
-		left:50%;
-		transform: translate(-50%);
-		position: relative;
 		height: 300px;
+		margin-bottom:6%;
 	}
 	.about .about-img{
 		margin-right:4%;

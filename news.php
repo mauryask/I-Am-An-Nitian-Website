@@ -376,6 +376,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <script src="js/main.js" type="text/javascript"></script>
 <script src="js/rating.js" type="text/javascript"></script>
 <script src="js/comment.js" type="text/javascript"></script>
+<script src="js/reply.js" type="text/javascript"></script>
 
 <script>
  /*==================== Functions to get Likes and dislikes =========================*/
@@ -512,4 +513,5 @@ $.post('comment_number.php', {post_id : id}, function(data, status)
 },1000);
 }
 loadNcmt();
+
 </script>

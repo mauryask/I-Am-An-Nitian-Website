@@ -91,10 +91,10 @@ color:rgba(256,0,0,0.9);
 
 header nav  ul li:hover ul{
 	display:block;
+	transition:0.5s;
 }
 /* for submenu */
 /*=====================================================================================*/
-
 header nav  ul li ul li{
 	display:block;
 	width:150px;
@@ -114,7 +114,6 @@ color:rgba(256,0,0,0.9);
 
 header nav  ul li ul li:hover{
 	border-bottom:1px solid rgba(256,0,0,0.9);
-	font-weight: bold;
 }
 
 header nav  ul li ul li a:hover

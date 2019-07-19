@@ -14,7 +14,7 @@ $(document).ready(function(){
 		{
 		   if(response == 1)
 		   {	
-			   fun();	
+			 fun();	
 			  
 			   setTimeout(function(){ 
 			   
@@ -35,7 +35,7 @@ $(document).ready(function(){
 	 
 	 });
 	 
-	 
+
 	 function fun()
 	 {
 		Swal.fire({
@@ -43,6 +43,7 @@ $(document).ready(function(){
 				  type: 'success',
 				  title: 'Login Successful',
 				  showConfirmButton: false,
-				  timer: 1600
+				  timer:1600
 			}); 
+			$(".swal2-modal").css({width: '20rem'});
 	 }

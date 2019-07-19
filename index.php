@@ -18,6 +18,8 @@ session_start(); //starting session start
 <head>
 <title>I Am An Nitian | Home</title>
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+<!--  Disabling double tap to zoom in mobile version -->
+<meta name="viewport" content= "width=device-width, user-scalable=no">
 <meta charset="utf-8">
 <meta name="theme-color" content="#000">
 <meta name="author" content="Shubham Maurya">
@@ -39,6 +41,7 @@ crossorigin="anonymous">
 <link href="css/notification.css" type="text/css" rel="stylesheet">
 <link href="css/login_register.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style></style>
 </head>
@@ -137,10 +140,10 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <!--================ Main Banner ====================-->
 <div class="banner"> 
 <div class="textx">
-<p class="dynamic-text">I AM AN <span id="dyno"><br/></span><span class="text"></span><p>
-<p class="msg">Join The Biggest Student Community</p>
+<p class="dynamic-text" data-aos='fade-up' data-aos-duration="800">I AM AN <span id="dyno"><br/></span><span class="text"></span><p>
+<p class="msg" data-aos='fade-up' data-aos-duration="800" data-aos-delay="500">Join The Biggest Student Community</p>
 
-<button class="join" onclick="show_signup()"> Join Now</button>
+<button class="join" onclick="show_signup()" data-aos='fade-up' data-aos-duration="800" data-aos-delay="600"> Join Now</button>
 
 <div class="social">
     <a  target="_blank" href="https://www.facebook.com/iamannitian" alt="facebook"><img  class="svg" src="images/facebook.svg"  ></a>
@@ -163,54 +166,54 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div id="notify-popup"></div>
 <!--================ Explore Section ====================-->
 <div class="explore" >
-  <p class="main-expo">Explore</p>
-  <div class="expo-line"></div>
+  <p class="main-expo" data-aos="fade-up" data-aos-duration="900">Explore</p>
+  <div class="expo-line" data-aos="fade-up" data-aos-duration="900"></div>
   <div class="expo exc" style="margin-top:2rem;">
-   <div class="appx" onclick="sweet_alert()" id="respo">
+   <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-left" data-aos-duration="800" data-aos-delay="300">
      <img src="images/school.svg">
      <p>Colleges</p>
     </div>
     
-   <div class="appx" onclick="sweet_alert()" id="respo">
+   <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-left" data-aos-duration="800" data-aos-delay="450">
       <img src="images/exam.svg">
       <p>Exams</p>
      </div>
      
-     <div class="appx" onclick="sweet_alert()" id="respo">
+     <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-left" data-aos-duration="800" data-aos-delay="600">
           <img src="images/stage.svg" >
           <p>College Fests</p>
          </div>
        
-   <div class="appx" onclick="sweet_alert()" id="respo">
+   <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-left" data-aos-duration="800" data-aos-delay="750">
       <img src="images/research.svg">
       <p>Cutoff</p>
      </div>
    
-     <div class="appx" onclick="sweet_alert()" id="respo">
+     <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-left" data-aos-duration="800" data-aos-delay="900">
         <img src="images/review.svg">
         <p>College Reviews</p>
        </div>
   </div>
   <div class="expo exc">     
-  <div class="appx" onclick="sweet_alert()">
+  <div class="appx" onclick="sweet_alert()" data-aos="flip-right" data-aos-duration="800" data-aos-delay="1000">
         <img src="images/books.svg">
         <p>Donate Books</p>
        </div>
        
-      <div class="appx" onclick="sweet_alert()" id="respo">
+      <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-right" data-aos-duration="800" data-aos-delay="850">
          <img src="images/project.svg">
          <p>Sell Project</p>
         </div>
-         <div class="appx" onclick="location.href='ranking.php'">
+         <div class="appx" onclick="location.href='ranking.php'" data-aos="flip-right" data-aos-duration="800" data-aos-delay="700">
       <img src="images/infographic.svg">
       <p>College Ranking</p>
      </div>
        
-         <div class="appx" onclick="location.href='placement.php'">
+         <div class="appx" onclick="location.href='placement.php'" data-aos="flip-right" data-aos-duration="800" data-aos-delay="550">
             <img src="images/reunion.svg">
             <p>Placements Data</p>
            </div>
-           <div class="appx" onclick="location.href='story.php'">
+           <div class="appx" onclick="location.href='story.php'" data-aos="flip-right" data-aos-duration="800" data-aos-delay="400">
           <img src="images/growth.svg">
           <p>Success Stories</p>
          </div>
@@ -428,9 +431,10 @@ function startIt()
 <!--================ News Section ====================-->
 <div style="width:100%;height:1%;background:transparent;margin-top:4%;"></div>
 <div class="explore" style="margin-top:0;">
-  <p class="main-expo" >News <span id="ns-art">& Articles</span></p>
-  <div id="expo-line"  class="expo-line" style="width:18rem;position:relative;margin-bottom:3rem;"></div>
-  <div class="about-ln" style="width:15%;margin:0  0 2.2rem  0;"></div>
+  <p class="main-expo"  data-aos="fade-up" data-aos-duration="800">News <span id="ns-art">& Articles</span></p>
+  <div id="expo-line"  class="expo-line" style="width:18rem;position:relative;margin-bottom:3rem;"
+  data-aos="fade-up" data-aos-duration="800" ></div>
+  <div class="about-ln" style="width:15%;margin:0  0 2.2rem  0;" data-aos="fade-up" data-aos-duration="800"></div>
  <?php 
             $query = "select * from tbl_images order by id desc limit 8";
              $result = mysqli_query ($conn, $query);
@@ -478,14 +482,14 @@ function startIt()
     </div>
 <!--================ About Section ====================-->
     <a id="about"></a>
-    <div style="width:100%;height:5%;margin-top:2%;"></div>
+    <div style="width:100%;height:5%;margin-top:4%;" ></div>
     <p class="about-head">About Us</p>
     <div class="about-ln" ></div>
     <div class="about">
-     <div class="about-img" id="about-img">
-         <img src="images\us3.png" height="300px" width="100%" style="border-radius: 5px  0  0 5px;">
+     <div class="about-img" id="about-img" data-aos="fade-right" data-aos-offset="200"  data-aos-easing="ease-in-sine" data-aos-duration="600">
+         <img src="images\us3.png" height="300px" width="100%">
      </div>
-    <div class="about-text"> 
+    <div class="about-text" data-aos="fade-left" data-aos-offset="200"  data-aos-easing="ease-in-sine" data-aos-duration="600"> 
     <p style="text-align:justify;" >
     NITs (National Institute Of Technologies) are 
     the most prestigious Engineering Institutions 
@@ -685,6 +689,8 @@ function startIt()
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <!--==================  SweetAlert2 CDN  ==================-->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>
+<!--==================  aos.js  CDN  ==================-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <!--==================  Local Js Files  ==================-->
 <script src="js/index.js" type="text/javascript"></script>
 <script   type="text/javascript" src="js/ajax-register.js"></script>
@@ -692,6 +698,13 @@ function startIt()
 <script   type="text/javascript" src="js/main.js"></script>
 <!--===================   Get total Number of notifications   ====================-->
 <script   type="text/javascript" src="js/notification.js"></script>
+
+
+<script>
+  AOS.init({ disable: 'mobile' }); //disabling the animations in mobile version
+</script>
+
+
 <script>
 function sweet_alert()
 {
