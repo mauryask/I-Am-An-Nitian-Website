@@ -466,22 +466,12 @@ function get_dislike_btn_color()
 }
  get_dislike_btn_color();
  get_like_btn_color();
-/*==================== Reply button show and hide =========================*/
-var action = 1;
-function show()
-{
-  if(action == 1)
-  {
-    document.getElementByClassName('.popup').style="block";
-    action = 0;
-  }
-  else
-  {
-    document.getElementByClassName('.popup').style="none";
-    action = 1;
-  }
-}
-//hiding and showing the reply textarea
+
+
+
+/*==================== Reply button show and hide textarea start=========================*/
+//Work hard on This feature (reply stystem)
+/*
 var action = 1;
 function show(id)
 {
@@ -495,7 +485,9 @@ else
   document.getElementById(id).style.display = 'none';
   action = 1;
 }
-}
+}*/
+/*==================== Reply button show and hide textarea end=========================*/
+
 //getting total commnet
 function loadNcmt()
 {
