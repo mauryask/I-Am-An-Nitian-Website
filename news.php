@@ -142,10 +142,11 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         <div class="news-content">
         <p style="font-weight:bold;font-size:13px;background:rgba(256,0,0,0.5); width:12.5rem;color:black;
         text-align:center;border-radius:20px;height:30px;margin:1rem 0 1rem 0;"><?php  echo $row['inserted_at'] ?></p>
-            <p>
-         <span><?php  echo $row['heading'];  ?></span><br>
+           <div class="horizon"></div>
+           <p><span style=" color:rgba(256,0,0,0.6);"><?php  echo $row['heading'];  ?></span><br>
          <?php echo $row['text']; ?>
         </p>
+        <div class="horizon horizonx"></div>
          <p class="ldc">
             <i class="far fa-thumbs-up like-btn" style="cursor:pointer;"  id="<?php echo $row['id'];  ?>"></i> <span id="x" class="x">0</span>
             &nbsp <i class="far fa-thumbs-down dislike-btn" style="cursor:pointer;" id="<?php echo $row['id'];  ?>"></i> <span id="y" class="x">0</span>

@@ -46,6 +46,19 @@ body{
    margin:7rem 1rem 0 70px;
 }
 
+.news-body .horizon{
+   background:rgba(256,0,0,0.5);
+   width:28rem;
+   height:3px;
+   margin-bottom:1.2rem;
+}
+
+.news-body .horizonx{
+margin-top:2rem;
+   width:15rem;
+margin-bottom:0.1px;
+}
+
 .news-body .news-img{
    width:100%;
    overflow: hidden;
@@ -72,23 +85,29 @@ font-weight: normal;
 .news-body .news-content p span{
   font-size:38px;
   font-family:serif;
-  line-height:52px;
+  line-height:70px;
  
    }
 
 .news-body .news-content .ldc{
    font-size:18px;
-   margin-top:15px;
+}
+
+.news-body .news-content .ldc .like-btn, .dislike-btn,.fa-eye, .fa-comment{
+   color:rgba(256,0,0,0.6);
 }
 
 .news-body .news-content .ldc .x{
    font-size:14px;
    font-family: sans-serif;
+   color:rgba(256,0,0,0.6);
 }
 
 .news-body .news-content .cmnt{
-   font-size:22px;
+   font-size:35px;
    margin-top:10px;
+   font-family: serif;
+   color:rgba(256,0,0,0.6);
 }
 .news-body .txtar{
    margin-left:5px;
@@ -130,9 +149,9 @@ font-weight: normal;
    letter-spacing: 0.5px;
 }
 .news-body .comments .cmt-line{
-   width:20rem;
+   width:14rem;
    height:1px;
-   background:rgba(200,200,200,1);
+  background:rgba(134, 96, 206,0.4);;
    margin-top:10px;
 }
 
@@ -146,7 +165,6 @@ font-weight: normal;
    align-items:center;
    flex-direction: column;
    padding:0.5rem 1rem;
-   border:1px solid rgba(256,0,0,0.5);
    margin-right:13px;
    }
 
@@ -170,7 +188,6 @@ font-weight: normal;
    .ad-body .flash p  .heading,  .side-body .flash p  .heading
    {
      font-weight:bold;
-     color:rgba(60,60,60,1);
    }
 
 
@@ -229,8 +246,9 @@ font-weight: normal;
 /*==for mobile==*/
 .latest{
    font-weight: bold;
-   font-size:22px;
-   color:rgba(100,100,100,1);
+   font-size:40px;
+   color:rgba(256,0,0,0.6);
+   font-family: serif;
 }
 
 .latest-line{
@@ -249,6 +267,7 @@ font-size:28px;
 .user_icon
 {
    font-size:25px;
+   color:#8860d0;
 }
 
 /*==================== Responsive design for mobile ====================*/
