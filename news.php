@@ -140,7 +140,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         ?>        
         </div>
         <div class="news-content">
-        <p style="font-weight:bold;font-size:13px;background:rgba(256,0,0,0.5); width:12.5rem;color:black;
+        <p style="font-weight:bold;font-size:12px;background:rgba(256,0,0,0.5); width:12.5rem;color:black;
         text-align:center;border-radius:20px;height:30px;margin:1rem 0 1rem 0;"><?php  echo $row['inserted_at'] ?></p>
            <div class="horizon"></div>
            <p><span style=" color:rgba(256,0,0,0.6);"><?php  echo $row['heading'];  ?></span><br>
