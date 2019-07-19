@@ -108,6 +108,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <li><a style="cursor:pointer;"  href="logout.php" >Logout</a></li>
 <?php }else{ ?>
 <li><a style="cursor:pointer;"  onclick="show_log()" id="login_nav">Login</a></li>
+<li><a style="cursor:pointer;"  onclick="show_signup()" id="login_nav">Register</a></li>
 <?php } ?>
 
 </ul>
@@ -379,7 +380,9 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <script src="js/reply.js" type="text/javascript"></script>
 
 <script>
+
  /*==================== Functions to get Likes and dislikes =========================*/
+
 function getLikes()
 {
   var id = $('html').attr('id'); 
@@ -396,7 +399,9 @@ function getDislikes()
 }
 getDislikes();
 getLikes();
+
  /*==================== Menu toggle =========================*/
+
  $(document).ready(function(){
 if (window.matchMedia('(max-width:721px)').matches)
 {
@@ -425,8 +430,11 @@ $('#about_nav').click(function()
 })
 }
 })
+
 // changing the colour of rating buttons
+
 //getting color of like btn
+
 function get_like_btn_color()
 {
   var post_id = $('html').attr('id');
@@ -445,7 +453,9 @@ function get_like_btn_color()
 });
  },1000);
 }
+
 //getting color of dislike btn
+
 function get_dislike_btn_color()
 {
   var post_id = $('html').attr('id');
@@ -468,27 +478,8 @@ function get_dislike_btn_color()
  get_like_btn_color();
 
 
-
-/*==================== Reply button show and hide textarea start=========================*/
-//Work hard on This feature (reply stystem)
-/*
-var action = 1;
-function show(id)
-{
-if(action == 1)
-{
-  document.getElementById(id).style.display = 'block';
-  action = 0;
-}
-else
-{
-  document.getElementById(id).style.display = 'none';
-  action = 1;
-}
-}*/
-/*==================== Reply button show and hide textarea end=========================*/
-
 //getting total commnet
+
 function loadNcmt()
 {
 var id =  $('html').attr('id');

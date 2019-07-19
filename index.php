@@ -117,6 +117,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <li><a style="cursor:pointer;"  href="logout.php" >Logout</a></li>
 <?php }else{ ?>
 <li><a style="cursor:pointer;"  onclick="show_log()" id="login_nav">Login</a></li>
+<li><a style="cursor:pointer;"  onclick="show_signup()" id="login_nav">Register</a></li>
 <?php } ?>
 
 </ul>
@@ -174,7 +175,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
      <p>Colleges</p>
     </div>
     
-   <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-left" data-aos-duration="800" data-aos-delay="450">
+ <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-left" data-aos-duration="800" data-aos-delay="450">
       <img src="images/exam.svg">
       <p>Exams</p>
      </div>
@@ -219,6 +220,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
          </div>
      </div>
   <!--=========================== Mobile version horizontal tabs ======================-->
+
 <div class="mob-expo" style="margin-top:2rem;">
 <div class="appx_expo" onclick="sweet_alert()"  id="appx_left">
   <img src="images/school.svg">
@@ -275,6 +277,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 </div>
 <!--==================  Mobile version of updates  =================-->
+
 <div class="respo_not" >
 <div class="respo_head"><p>Updates</p></div>
 <div id="respo_csp" onmouseover="stop_It()"  onmouseout="start_It()">
@@ -331,6 +334,7 @@ function start_It()
 }
   </script>
  <!--===================== Update Section ===================--> 
+ 
 <div class="upg">
 <div class="upx">
 <div class="headingc"><p>Updates</p></div>

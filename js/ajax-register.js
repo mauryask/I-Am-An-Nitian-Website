@@ -10,7 +10,6 @@ $(document).ready(function(){
         var state = $('#state').val().trim();
         var user_pass = $('#user_pass').val().trim();
         var cnf_pass = $('#cnf_pass').val().trim();
-        var x = window.matchMedia("(max-width: 721px)");
               $.ajax({
                  url:'register.php',
                  type: 'post',
@@ -40,6 +39,7 @@ $(document).ready(function(){
                      }
                      else
                      {
+                       // for mobile version error meassages
                        
                        if (window.matchMedia('(max-width:991px)').matches)
                        {
