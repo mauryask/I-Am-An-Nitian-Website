@@ -15,29 +15,36 @@ if(comment_content != '')
         url:'comment_server.php',
         type:'post',
         data:{post_id : post_id, comment: comment_content},
-        success: function(data)
+        success: function(response)
         {
             /*on success full insertion of comments get the same coment without refreshing the page*/
-            setTimeout(function(){
-                $.post('get_comment.php', {post_id : post_id}, function(data, status){
-                    $('.comments').html(data);
-                   });
+
+            if(response == 2)
+            {
+                alertPopup(); // if user is not logged in 
+            }
+            else if(response == 1)
+            {
+                    adminPop();  // if admin try to like or comment
+            }
+            else
+            {
+                setTimeout(function(){
+                    $.post('get_comment.php', {post_id : post_id}, function(data, status){  
     
-            },1000);
-           
-            //alert(data);
-       
+                            $('.comments').html(data);            
+    
+                       });
+        
+                },1000);
+            }
+
+                  
             $("form").trigger("reset"); //to clear the form fieled after submission
         }
     
     });
 }
-else
-{
-    alert('please fil all the fields');
-}
-
-
 });
 
 
@@ -49,3 +56,5 @@ else
   })
  
 });
+
+

@@ -4,6 +4,12 @@
 
 <?php
 
+session_start(); //preventing direct access of this page
+if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION['user_type']!=1)
+{
+  exit('access denied page 404 not found');
+}
+
 include_once('connection.php');
 if(isset($_POST['submit']))
 {
@@ -44,10 +50,7 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <style>
-body{
-    overflow-y: scroll;
-    height:100%;
-}
+
 </style>
 </head>
 <body>
@@ -94,7 +97,7 @@ while($row=mysqli_fetch_array($result))
 <div class="left-menu" class="popup" id="demo">
     <p>Admin Panel</p>
     <button id="add" type="button" >add news</button>
-    <button id="delete" type="button">view news</button>
+    <button id="see_cmt" type="button">view comments</button>
     <button id="statics" type="button">statics</button>
     <button id="home" type="button">Home</button>
 </div>

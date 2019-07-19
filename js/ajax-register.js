@@ -31,9 +31,9 @@ $(document).ready(function(){
                         funx();
 
                         setTimeout(function(){
-                     window.location = "index.php";
+                      window.location = "index.php";
                     
-                    location.reload(true);
+                      location.reload(true);
 
 			             },2000);
 
@@ -41,7 +41,7 @@ $(document).ready(function(){
                      else
                      {
                        
-                       if (window.matchMedia('(max-width:721px)').matches)
+                       if (window.matchMedia('(max-width:991px)').matches)
                        {
                        $('#msgy').html(response);
                        }
@@ -53,7 +53,7 @@ $(document).ready(function(){
                   }
                 })
              
-})
+}) 
 
 })
 

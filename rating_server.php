@@ -3,7 +3,7 @@ include_once('connection.php');
 session_start();
 
 if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id']) 
-  && isset($_SESSION['user_type']) && !empty($_SESSION['user_id']) && $_SESSION['user_type'] == 2) //preventin admin from liking the news
+  && isset($_SESSION['user_type']) && $_SESSION['user_type'] == 2) //prevent in admin from liking the news
 {
   $action = $_POST['action'];
   $user_id = $_SESSION['user_id'];
@@ -182,9 +182,14 @@ $result_x = mysqli_query($conn, $query_x);
   }
 
 }
+else if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id']) 
+  && isset($_SESSION['user_type']) && $_SESSION['user_type'] == 1) //prevent in admin from liking the news
+{
+ echo 1;
+}
 else
 {
-  echo 1;
+  echo 2; // if user is not logged in
 }
 
 ?>

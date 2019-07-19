@@ -2,7 +2,8 @@
 include_once('connection.php');
 session_start();
 
-if(isset($_SESSION['user_id']) && !empty(($_SESSION['user_id'])))
+if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])
+ && isset($_SESSION['user_type']) && $_SESSION['user_type'] == 2)
 {
       $user_id = $_SESSION['user_id'];
       $post_id = $_POST['post_id'];
@@ -17,8 +18,13 @@ if($result)
 }    
 
 }
+else if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id']) 
+&& isset($_SESSION['user_type']) && $_SESSION['user_type'] == 1) //prevent in admin from liking the new
+{
+ echo 1;
+}
 else
 {
-    echo 2; //if user is not logged in
+    echo 2; //if user is not logged in or admin
 }
 ?>

@@ -14,11 +14,15 @@ $(document).ready(function(){
                 data: {id:id, action:action},
               success:function(data)
                 {
-                    if(data == 1)
-                    {
-                        alertPopup();
-                    }
-                        /*document.getElementById(data).classList.add('fa-thumbs-up');
+                    if(data == 2)
+                   {
+                       alertPopup(); // if user is not logged in 
+                   }
+                   else if(data == 1)
+                   {
+                           adminPop();  // if admin try to like or comment
+                   }
+                      /*document.getElementById(data).classList.add('fa-thumbs-up');
                         document.getElementById(data).classList.remove('fa-thumbs-down');    
                         */                           
               }
@@ -41,9 +45,13 @@ $(document).ready(function(){
                 data: {id:id, action:action},
                 success:function(data)
                 {
-                   if(data == 1)
+                   if(data == 2)
                    {
-                       alertPopup();
+                       alertPopup(); // if user is not logged in 
+                   }
+                   else if(data == 1)
+                   {
+                           adminPop();  // if admin try to like or comment
                    }
                 }
                 
@@ -51,7 +59,7 @@ $(document).ready(function(){
     
         });
       
-       }); // end of ready function
+       }); //end of ready function
     
     
 /*==================   Alert if user is not logged in   =================*/
@@ -71,3 +79,17 @@ $(document).ready(function(){
           })
     }
     
+    // if admin will try to like or comment
+
+    function adminPop()
+    {
+        Swal.fire({
+            title: 'Hello Admin',
+            type: 'info',
+            html:
+              'you need to login as user to like or comment',
+            showCloseButton:false,
+            showCancelButton: false,
+            focusConfirm: false,
+          });
+    }

@@ -243,6 +243,11 @@ width:100%;
 font-size:28px;
 }
 
+.user_icon
+{
+   font-size:25px;
+}
+
 /*==================== Responsive design for mobile ====================*/
 @media (max-width:991px)
 {

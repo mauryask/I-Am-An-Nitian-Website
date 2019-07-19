@@ -1,5 +1,6 @@
 
 body{
+    background: rgba(255, 250, 205,0.4);
     overflow: hidden;
     height:100vh;
     background-repeat: no-repeat;
@@ -10,6 +11,7 @@ body{
     top:50%;
     transform:translate(-50%,-50%);
     position:absolute;
+    background:rgba(255,196,105,0.9);
 }
 .add-news form{
     display: flex;
@@ -52,7 +54,7 @@ body{
     width:52rem;
     opacity:0.7;
     font-size:15px;
-    color:rgba(230,230,230,1);
+    color:rgba(80,80,80,1);
 }
 
  #submit{

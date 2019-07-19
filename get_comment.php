@@ -9,7 +9,7 @@ if($result)
     while($row = mysqli_fetch_assoc($result))
     {
        echo '<div>
-                 <p style="font-size:15px;font-weight: bold;">'.$row['user_name'].'</p>
+                 <p style="font-size:14px;font-weight: bold;"><i class="far fa-user-circle user_icon"></i> '.$row['user_name'].'</p>
                  <p style="font-size:15px;letter-spacing:0.5px;line-height:24px;">'.$row['comment'].'</p>
               </div>
             <div class="cmt-line"></div>';
