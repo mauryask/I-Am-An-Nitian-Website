@@ -93,6 +93,7 @@ crossorigin="anonymous">
 <!-- Hide and Show login and php buttons -->
 
 <?php
+
 if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 {
   if($_SESSION['user_type'] == 1)
@@ -100,10 +101,12 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
     echo '<li><a href="edit_news.php" class="homex">Admin</a></li>';
   }
 }
+
 ?>
 
 <?php if( isset($_SESSION['name']) && !empty($_SESSION['name']))
 {
+
 ?>
 <li><a style="cursor:pointer;"  href="logout.php" >Logout</a></li>
 <?php }else{ ?>
@@ -137,7 +140,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         ?>        
         </div>
         <div class="news-content">
-        <p style="font-weight:bold;font-size:13px;"><?php  echo $row['inserted_at'] ?></p>
+        <p style="font-weight:bold;font-size:13px;background:rgba(256,0,0,0.5); width:12.5rem;color:black;
+        text-align:center;border-radius:20px;height:30px;margin:1rem 0 1rem 0;"><?php  echo $row['inserted_at'] ?></p>
             <p>
          <span><?php  echo $row['heading'];  ?></span><br>
          <?php echo $row['text']; ?>
@@ -175,8 +179,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                       $text = implode(' ',array_slice(explode(' ', $row['text']),0,14)); //getting fires 19 words from text
                     echo   '<div class="flash">
                       <div class="nimg"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>';
-                  echo    '<div class="ncontent">'."<p>".'<span class="heading">'.$head.'</span>'." ".$text.'..<a href="news.php?id='.$id.'">'.'<span><br/></span>'." Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>'.'</div>';
-                 echo '</div>'; 
+                    echo    '<div class="ncontent">'."<p>".'<span class="heading">'.$head.'</span>'." ".$text.'..<a href="news.php?id='.$id.'">'.'<span><br/></span>'." Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>'.'</div>';
+                    echo '</div>'; 
                      }
                 }
                else 
