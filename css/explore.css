@@ -11,7 +11,7 @@
     display:flex;
     flex-direction:row;
     justify-content:space-evenly;
-    margin:0 9rem 0 9rem;
+    margin:0 8rem 0 8rem;
 }
 
 .main-expo{
@@ -19,20 +19,20 @@
     font-weight: bold;
     font-size:36px;
     text-transform: uppercase;
-    color:rgba(120,120,120,1);
+    color:rgba(256,0,0,0.5);
     margin-top:2%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .expo-line{
   margin:0 auto;
 margin-top:5px;
-background:red;
-width:8rem; 
+background:rgba(256,0,0,0.5); 
+width:7rem; 
 height:5px;
 }
 
 .explore .expo  div{
-
-    flex:1 1rem;
+  width:10rem;
     height:auto;
     border-radius:12px;
     margin:1.3rem;
@@ -47,6 +47,9 @@ height:5px;
   box-shadow:1px 1px 1px 1px rgba(75, 71, 71, 0.4);
 }
 
+#ns-art{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 
 .explore .expo div img{
  width:100px;
@@ -65,11 +68,19 @@ height:5px;
 }
 
 
-.explore .expo  .xnnn{
-    margin:1rem;
+.explore .expo  .xnnn {
+  width:14.6rem;
+}
+
+.explore .expo  .xnnn a{
+  text-decoration:none;
     height:auto;
     border-radius:0;
 box-shadow:none;
+}
+
+.explore .expo  .xnnn a .heading{
+font-weight: bold;
 }
 
 .explore .expo  .xnnn p{
@@ -80,19 +91,16 @@ box-shadow:none;
     font-size: 15px;
 }
 
-.explore .expo  .xnnn p a
+.explore .expo  .xnnn a p
 {
  cursor: pointer;
-text-decoration: none;
 padding:5px;
 border-radius:2px;
-font-weight: bold;
 font-size:15px;
   }
 
 
-  .explore .expo  .xnnn p .heading{
-    font-weight:bold;
+  .explore .expo  .xnnn a p .heading{
     color:rgba(60,60,60,1);
   }
 
@@ -113,7 +121,7 @@ font-size:15px;
 .explore .expo .xnnn img,video{
     outline: none;
    width:100%;
-  height:125px;
+  height:100%;
     margin-top:0;
     cursor:pointer;
          transition: all 0.4s ease;
@@ -121,68 +129,21 @@ font-size:15px;
 
       .explore .expo .xnnn img:hover{
           outline: none;
-          width:110%;
-          height:130px;
+          width:112%;
+          height:112%;
       }
 
       .explore .expo .xnnn video{
-         height:130px;
+         height:100%;
       }
  .explore .expo .xnnn video:hover{
    height:135px;
    width:101%;
 }
 
-.more{
-    text-decoration:none;
-    left:12.2%;
-    transform: translate(-12.2%);
-    position: relative;
-    margin-top:0;
-    font-weight:bold;
-    font-size:18px;
-    cursor: pointer;
-}
-.more:hover{
-    color:rgba(256,0,0,0.8);
-    
-}
 .appx{
   background: white;
 }
 
 
-/*scroll Indicator*/
-      .progress-container {
-        width: 100%;
-        height: 6px;
-        background:rgba(80,80,80,0.1);
-        z-index: 1;
-        position: fixed;
-      }
-      
-      .progress-bar {
-        height: 6px;
-        background:  #4caf50;
-        width: 0%;
-      }
-
-/*================= Custom Scroll Bar =================*/
-
-/* width */
-::-webkit-scrollbar {
-    width: 13px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(168, 166, 166); 
-  }
-  
-/*================ Responsive Screen =================*/
 

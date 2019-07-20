@@ -221,15 +221,15 @@ body{
 /*==============  feed back button popup making it fixed  =============*/
 
 #feedback{
-  top:180rem;
+  top:77rem;
    background-color: #4CAF50;
-   height:120px;
+   height:115px;
    cursor: pointer;
  }
 
 
  .popup{
-  top:165rem;
+  top:61rem;
 }
 
  }

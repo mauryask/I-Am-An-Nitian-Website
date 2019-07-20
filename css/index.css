@@ -85,7 +85,7 @@
 	 .textx .msg{
 		text-transform:uppercase;
 		color:rgba(256,256,256,0.9);
-		font-size:41px;
+		font-size:40px;
 		font-weight:bold;
 		padding-bottom:30px;
 	}
@@ -210,7 +210,7 @@
 		display:flex;
 		 flex-direction:row;
 		  width:77%;
-		height: 300px;
+		height: 280px;
 		margin-bottom:6%;
 	}
 	.about .about-img{
@@ -219,17 +219,17 @@
 		align-items: center;
 		justify-content: center;
 		display: flex;
-		height: 300px;
+		height:100%;
 	}
 	.about .about-text{
 		font-weight: normal;
 		height: 300px;
 		flex: 45%;
 		align-self:center;
-		padding:0.8rem 1rem 0 0;
+		padding:0.7rem 1rem 0 0;
 		color:rgba(70,70,70,1);
 		text-align:justify;
-		font-size: 15px;
+		font-size: 14px;
 		}
 	
 	.about div  p
@@ -242,12 +242,11 @@
 	.about-ln{
 		width:27%;
 		height:4px;
-		background:red;
+		background:rgba(256,0,0,0.5);
 		left:50%;
 		transform:translate(-50%);
 		position:relative;
 		display:none;
-		margin-bottom:0.7rem;
 	}
 
 	.about-head
@@ -320,6 +319,7 @@ color:gray;
 @media (max-width:991px)
 {
 
+
 /*================ Dynamic Text =================*/
 
 	.dynamic-text
@@ -358,12 +358,13 @@ color:gray;
 	.explore
 		{
 			padding:0;
+
 		}
 
 	  .explore .expo{
 		  width:100%;
 		  margin:0;
-	   flex-direction:column;
+	     flex-direction:column;
 	  }
 
 
@@ -377,45 +378,26 @@ color:gray;
 	display:block;
 }
 
-
-	  .explore .expo  div
-	  {
-	  width:10rem;
-	  left:40%;
-	  transform: translate(-40%);
-	  position: relative;
-	  }
-
-	  .explore .expo .xnnn
-	  {
-	   width:80%;
-	   margin:0;
-	   margin-bottom:20px;
-		left:50%;
-		transform:translate(-50%);
-		position: relative;
-	  }
-	  .explore .expo .xnnn .zoom{
-		height:155px;
+	
+	  .explore .expo .xnnn a .zoom{
+		height:148px;
 		}
 
 	  .explore .expo .xnnn img{
-	  height:155px;
+	  height:100%;
 	  }
 
-	  .explore .expo .xnnn img:hover{
+	  .explore .expo .xnnn a img:hover{
 
-		width:110%;
-		height:165px;
+		width:112%;
+		height:112%;
 	}
 
-	  .explore .expo  .xnnn p{
+	  .explore .expo  .xnnn  a p{
 		line-height:1.8rem;
+		color:rgba(80,80,80,1);
 	}
 
-	  .main-expo{
-		  margin-top:2rem;
-	  }
 
 #nnk{
 	display:block;
@@ -426,6 +408,7 @@ color:gray;
 		 display:none;
 	 }
 .about{
+	margin-left:3rem;
 	flex-direction:column;
 	margin-bottom:3rem;
 }
@@ -440,6 +423,8 @@ color:gray;
 .about-head
 	{
 		display:block;
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		color:rgba(256,0,0,0.5);
 	}
 
 	#ns-art{
@@ -448,6 +433,7 @@ color:gray;
 
 	#expo-line
 	{
+		width:3rem;
 		display: none;
 	}
 /*=========== Hiding some part of about section  ==============*/
@@ -458,18 +444,28 @@ color:gray;
 		margin-bottom: 2rem;
 	}
 
-	.main-expo
-	{
-		font-size:26px;
+	.main-expo{
+		margin-top:3rem;
+		font-size: 26px;
 	}
+
 	.expo-line{
-		width:26%;
-		height:4px;
+		width:5rem;
 		margin-top:0;
-	}
+		height:4px;
+	   }
 
 	.nt_img{
 		display:none;
 	  }
+
+
+.explore .expo .xnnn{
+	 width:80%;
+	 margin-left:0.4rem;
+		left:40%;
+	    transform: translate(-40%);
+	    position: relative;
+}
 
 }

@@ -240,7 +240,7 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
    .ad-body .nad .nad-img,.side-body .nad .nad-img{
       width:100%;
-      height:28rem;
+      height:22rem;
       cursor: pointer;
    }
 
@@ -278,6 +278,10 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    color:#8860d0;
 }
 
+footer{
+   margin-top:8rem;
+}
+
 /*==================== Responsive design for mobile ====================*/
 @media (max-width:991px)
 {
@@ -304,7 +308,7 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 .news-body .news-content{
    margin: 0 auto;
-   padding:0 1.5rem 0 1.5rem;
+   padding:0 2.1rem 0 2.1rem;
 }
 
 .news-body .news-content p span{
@@ -313,7 +317,7 @@ font-size:29px;
 
    .news-body .news-img{
       width:100%;
-      padding:0 0.7rem 0 0.7rem;
+      padding:0 0.8rem 0 0.8rem;
    }
 
 .news-body .news-img img{
@@ -332,7 +336,7 @@ font-size:29px;
    margin-bottom:3px;
 }
 
-.news-body .comments{
+.news-body .comments{  
    margin-bottom:30px;
    display:flex;
    flex-direction:column;
