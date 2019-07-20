@@ -456,7 +456,7 @@ function startIt()
 
 <!--================ News Section ====================-->
 <div style="width:100%;height:1%;background:transparent;margin-top:4%;"></div>
-<div class="explore" style="margin-top:0;">
+<div class="explore exp" style="margin-top:0;">
   <p class="main-expo"  data-aos="fade-up" data-aos-duration="800">News <span id="ns-art">& Articles</span></p>
  
   <div id="expo-line"  class="expo-line" style="width:15rem;position:relative;margin-bottom:3rem;"
@@ -506,7 +506,8 @@ function startIt()
               <?php   
               }
              ?>
-                  
+               <div class="more_btn"> <button type="button" onclick="location.href='more-news.php'">
+               More News &nbsp;<i class="fas fa-chevron-circle-right"></i></button></div>
     </div>
 
 <!--============== Side Feedback Button ==================-->

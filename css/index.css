@@ -316,6 +316,31 @@ margin-top:5px;
 color:gray;
 	}
 
+
+ .more_btn{
+			width:78%;
+			margin:0 auto;
+			margin-top:26px;
+	}
+
+	.more_btn button{
+		width:11rem;
+		padding:0.6rem 0 0.6rem 0;
+		border-radius:20px;
+		outline:none;
+		border:none;
+		background: #4CAF50;
+		color:white;
+		cursor:pointer;
+		font-size:16px;
+		left:50%;
+		transform:translate(-50%);
+        position:relative;
+	}
+	  
+	  
+
+
 /*================ Mobile Version Responsive  =================*/ 
 
 @media (max-width:991px)
