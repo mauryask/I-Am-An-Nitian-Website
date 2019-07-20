@@ -72,26 +72,30 @@ margin-bottom:0.1px;
    border:1px solid rgba(256,0,0,0.1);
 }
 
+
 .news-body .news-content{
 height:auto;
 padding:0.5rem;
-text-align:justify;
 line-height:34px;
 font-size:15px;
 word-spacing:0.5px;
 letter-spacing:0.5px;
 font-weight: normal;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .news-body .news-content p span{
-  font-size:38px;
-  font-family:serif;
-  line-height:70px;
- 
+  font-size:35px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight:bold;
+  color:rgba(256,0,0,0.6);
+  line-height: 42px;
+
    }
 
 .news-body .news-content .ldc{
    font-size:18px;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .news-body .news-content .ldc .like-btn, .dislike-btn,.fa-eye, .fa-comment{
@@ -105,11 +109,14 @@ font-weight: normal;
 }
 
 .news-body .news-content .cmnt{
-   font-size:35px;
+   font-size:30px;
    margin-top:10px;
    font-family: serif;
    color:rgba(256,0,0,0.6);
    margin-bottom:10px;
+   letter-spacing: 0;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-weight: bold;
 }
 .news-body .txtar{
    margin-left:5px;
@@ -123,6 +130,7 @@ font-weight: normal;
    padding:10px;
    font-size:15px;
    letter-spacing: 0.4px;
+   color:rgba(80,80,80,1);
 }
 .news-body .txtar .btnx{
    margin-top:10px;
@@ -141,6 +149,8 @@ font-weight: normal;
    margin-bottom:30px;
    display:flex;
    flex-direction:column;
+   font-size: 14px;
+ 
 }
 
 .news-body .comments div{
@@ -148,12 +158,11 @@ font-weight: normal;
 }
 .news-body .comments div p{
    margin-top:8px;
-   letter-spacing: 0.5px;
 }
 .news-body .comments .cmt-line{
    width:14rem;
    height:1px;
-  background:rgba(134, 96, 206,0.4);;
+   background:rgba(134, 96, 206,0.4);;
    margin-top:10px;
 }
 
@@ -168,6 +177,7 @@ font-weight: normal;
    flex-direction: column;
    padding:0.5rem 1rem;
    margin-right:13px;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    }
 
    .side-body{ 
@@ -177,65 +187,60 @@ font-weight: normal;
       position:relative;
    }
 
-   .ad-body .flash, .side-body .flash{
+   .ad-body .flash a, .side-body .flash a{
       background:white;
       width:100%;
       display: flex;
       flex-direction:row;
-      height:110px;
+      height:100px;
       overflow: hidden;
       margin-top:17px;
+      text-decoration:none;
+      color:rgba(80,80,80,1);
    }
 
-   .ad-body .flash p  .heading,  .side-body .flash p  .heading
-   {
-     font-weight:bold;
-   }
-
-
-   .ad-body .flash .nimg,.side-body .flash .nimg{
-      height:115px;
+   .ad-body .flash a .nimg,.side-body .flash a .nimg{
+      height:100%;
       width:40%;
       overflow: hidden; 
    }
-   .ad-body .flash .nimg img, .side-body .flash .nimg img{
+   .ad-body .flash a .nimg img, .side-body .flash a .nimg img{
       width:100%;
       height:100%;
-      cursor:pointer;
-      transition: all 0.4s ease;
+      transition: all 0.5s ease;
    }
 
-   .ad-body .flash .nimg img:hover,.side-body .flash .nimg img:hover{
-          width:107%;
-          height:107%;
+   .ad-body .flash a .nimg img:hover,.side-body .flash a .nimg img:hover{
+          width:110%;
+          height:110%;
    }
 
-   .ad-body .flash .ncontent, .side-body .flash .ncontent{
+   .ad-body .flash a .ncontent, .side-body .flash a .ncontent{
       width:60%;
-      padding:10px;
+      padding:9px 0 10px 14px;
    }
 
-   .ad-body .flash .ncontent p, .side-body .flash .ncontent p{
-      font-size:15px;
+   .ad-body .flash a .ncontent p, .side-body .flash a .ncontent p{
+      font-size:14px;
       line-height:21px;
+      letter-spacing: 0.1px;
    }
-   
-   .ad-body .flash .ncontent p a, .side-body .flash .ncontent p a{
-      text-decoration: none;
-      font-weight:bold;
+ 
+   .ad-body .flash a .ncontent p .heading
+   {
+  font-weight:bold;
+  font-size: 15px;
    }
 
-   .ad-body .flash .ncontent p a:hover,.side-body .flash .ncontent p a:hover{
-      color:red;
-   }
 
    .ad-body .nad,.side-body .nad{
       width:100%;
-      margin-top:10px;
+      margin-top:50px;
    }
 
    .ad-body .nad .nad-img,.side-body .nad .nad-img{
       width:100%;
+      height:28rem;
       cursor: pointer;
    }
 
@@ -248,9 +253,9 @@ font-weight: normal;
 /*==for mobile==*/
 .latest{
    font-weight: bold;
-   font-size:40px;
+   font-size:25px;
    color:rgba(256,0,0,0.6);
-   font-family: serif;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .latest-line{
@@ -263,7 +268,8 @@ font-weight: normal;
 /*==for pc==*/
 .ad-body .latest{
 width:100%;
-font-size:28px;
+font-size:32px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .user_icon
@@ -275,38 +281,62 @@ font-size:28px;
 /*==================== Responsive design for mobile ====================*/
 @media (max-width:991px)
 {
+ .news-body .news-content  .horizon{
+      width:100%;
+      padding:0 1.5rem 0 1.5rem;
+      height:2px;
+   }
+   .news-body .news-content  .horizonx{
+   width:12rem;
+   height:2px;
+   }
+ 
    .ad-body{
       display:none;
    }
+
    .news-body{
-      margin-top:5.2rem;
-      margin-left:0;
+      margin-top:6rem;
       width:100%;
-      padding:0.91rem;
+      margin-left:0;
+
+   }
+
+.news-body .news-content{
+   margin: 0 auto;
+   padding:0 1.5rem 0 1.5rem;
+}
+
+.news-body .news-content p span{
+font-size:29px;
+}
+
+   .news-body .news-img{
+      width:100%;
+      padding:0 0.7rem 0 0.7rem;
    }
 
 .news-body .news-img img{
-   height:200px;
+   height:190px;
+   width:100%;
 }
 
-.news-body .news-content{
-padding:0.9rem;
-}
 
 .news-body .txtar{
    width:100%;
    margin-left:0;
-   padding:0 0.9rem 0 0.9rem;
+   padding:0 1.5rem 0 1.5rem;
 }
 .news-body .txtar textarea{ 
    width:100%;
+   margin-bottom:3px;
 }
 
 .news-body .comments{
    margin-bottom:30px;
    display:flex;
    flex-direction:column;
-   padding:0.9rem;
+   padding:0 1.5rem 0 1.5rem;
 }
 
 .news-body .comments .cmt-line{
@@ -317,27 +347,39 @@ padding:0.9rem;
    margin-top:7px;
 }
 
+.news-body .news-content .cmnt{
+font-size:28px;
+letter-spacing:0;
+}
+
 .side-body{ 
    display:block;
-   margin-top:-140px;
+   padding: 0 1rem 0 1rem;
 }
- .side-body .flash{
+
+ .side-body .flash a{
    background:white;
    width:100%;
    display: flex;
    flex-direction:row;
-   height:120px;
+   height:110px;
    overflow: hidden;
    margin-top:20px;
 }
 
-.side-body .flash .nimg{
-      height:120px;
+.side-body .flash a .nimg{
+      height:110px;
       width:40%;
    }
+
+   .side-body .flash a .nimg img{
+      height:100%;
+     width:100%;
+   }
   
-  .side-body .flash .ncontent{
+  .side-body .flash a .ncontent{
       width:60%;
+      padding:10px 6px 4px 14px;
    }
    .ad-body .flash .ncontent p, .side-body .flash .ncontent p{
       line-height:21px;
@@ -346,6 +388,7 @@ padding:0.9rem;
    .ad-body .nad,.side-body .nad{
       margin-top:25px;
    }
+
 
 #morex{
    display:block;

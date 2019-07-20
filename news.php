@@ -140,10 +140,12 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         ?>        
         </div>
         <div class="news-content">
-        <p style="font-weight:bold;font-size:12px;background:rgba(256,0,0,0.5); width:12.5rem;color:black;
-        text-align:center;border-radius:20px;height:30px;margin:1rem 0 1rem 0;"><?php  echo $row['inserted_at'] ?></p>
+        <p style="font-weight:bold;font-size:12px;background:rgba(256,0,0,0.5); width:12.5rem;color:rgba(80,80,80,1);
+        text-align:center;border-radius:20px;height:31px;margin:1rem 0 1rem 0;"><?php  echo $row['inserted_at'] ?></p>
            <div class="horizon"></div>
-           <p><span style=" color:rgba(256,0,0,0.6);"><?php  echo $row['heading'];  ?></span><br>
+           <p>
+             <span><?php  echo $row['heading'];  ?></span><br></p>
+           <p style="text-align:justify; margin-top:1rem;">
          <?php echo $row['text']; ?>
         </p>
         <div class="horizon horizonx"></div>
@@ -176,12 +178,14 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                     while ($row = mysqli_fetch_assoc($result))
                      {
                       $id = $row["id"];
-                      $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
-                      $text = implode(' ',array_slice(explode(' ', $row['text']),0,14)); //getting fires 19 words from text
-                    echo   '<div class="flash">
+                      $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting first 5 words from heading
+                      $text = implode(' ',array_slice(explode(' ', $row['text']),0,16)); //getting first 19 words from text
+                     echo   '<div class="flash">
+                     <a href="news.php?id='.$id.'">
                       <div class="nimg"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>';
-                    echo    '<div class="ncontent">'."<p>".'<span class="heading">'.$head.'</span>'." ".$text.'..<a href="news.php?id='.$id.'">'.'<span><br/></span>'." Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>'.'</div>';
-                    echo '</div>'; 
+                     echo    '<div class="ncontent">'."<p>".'<span class="heading">'.$head.'</span>'." ".$text.'..</p></div></a>';
+                     echo '</div>';
+                    
                      }
                 }
                else 
@@ -192,7 +196,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
              
        
                      <div class="nad">
-                   <img src="images/ad-demo.jpg" class="nad-img" >
+                   <img src="images/ad-book.gif" class="nad-img" >
                       </div>  
     </div>
 
@@ -291,11 +295,12 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                      {
                       $id = $row["id"];
                       $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
-                      $text = implode(' ',array_slice(explode(' ', $row['text']),0,14)); //getting fires 19 words from text
-                    echo   '<div class="flash">
-                      <div class="nimg"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>';
-                  echo    '<div class="ncontent">'."<p>".'<span class="heading">'.$head.'</span>'." ".$text.'..<a href="news.php?id='.$id.'">'."<span id='morex'><br/></span>"." Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>'.'</div>';
-                 echo '</div>'; 
+                      $text = implode(' ',array_slice(explode(' ', $row['text']),0,12)); //getting fires 19 words from text
+                      echo   '<div class="flash">
+                      <a href="news.php?id='.$id.'">
+                       <div class="nimg"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>';
+                      echo    '<div class="ncontent">'."<p>".'<span class="heading">'.$head.'</span>'." ".$text.'..</p></div></a>';
+                      echo '</div>'; 
                      }
                 }
                else 
