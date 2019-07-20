@@ -71,7 +71,7 @@
   height:4px;
   width:16rem;
   background:rgba(256,0,0,0.5);
-  margin-bottom:3rem;
+  margin-bottom:4rem;
 }
 
   .explore .expo  .xnnn a{
@@ -192,7 +192,7 @@
  }
 
 .explore .expo .xnnn a .zoom{
-  height:155px;
+  height:150px;
  }
 .explore .expo .xnnn img,video{
 height:100%;
@@ -223,13 +223,14 @@ footer{
 
 
 .main-expo{
-  margin-top:-1rem;
+  margin-top:-3rem;
   font-size:32px;
 }
 
 .line_more{
 width:7rem;
 margin-top:5px;
+margin-bottom:2.5REM;
 }
 
 #ns-art{

@@ -206,8 +206,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 <div style="width:100%;height:1%;background:transparent;margin-top:4%;"></div>
 
-<div class="explore" style="margin-top:8rem;">
-<p class="main-expo"  data-aos="fade-up" data-aos-duration="800">News <span id="ns-art"><br></span>&<span id="ns-art"><br></span>Articles</p>
+<div class="explore" style="margin-top:10rem;">
+<p class="main-expo">News <span id="ns-art"><br></span>&<span id="ns-art"><br></span>Articles</p>
 <div class="line_more"></div>
  <?php 
             $query = "select * from tbl_images order by id asc";
@@ -232,7 +232,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
               <?php 
               $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
               $text = implode(' ',array_slice(explode(' ', $row['text']),0,15)); //getting fires 19 words from text
-              echo '<p>'.'<span class="heading">'.$head.'</span>'." ".$text.'..</p>';
+              echo '<p style="margin-top:2px;">'.'<span class="heading">'.$head.'</span>'." ".$text.'..</p>';
                   ?>   
                   </a>                                            
                 </div>   
