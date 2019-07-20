@@ -220,7 +220,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
          </div>
      </div>
   <!--=========================== Mobile version horizontal tabs ======================-->
-
 <div class="mob-expo" style="margin-top:3rem;">
 <div class="appx_expo" onclick="sweet_alert()"  id="appx_left">
   <img src="images/school.svg">
@@ -277,7 +276,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 </div>
 <!--==================  Mobile version of updates  =================-->
-
 <div class="respo_not" >
 <div class="respo_head"><p>Updates</p></div>
 <div id="respo_csp" onmouseover="stop_It()"  onmouseout="start_It()">
@@ -432,16 +430,37 @@ function startIt()
   interval = setInterval(startTicker, 3000);
 }
   </script>
+
+<!--================ About Section ====================-->
+<a id="about"></a>
+    <div style="width:100%;height:5%;margin-top:4%;" ></div>
+    <p class="about-head">About Us</p>
+    <div class="about-ln"></div>
+    <div class="about">
+     <div class="about-img" id="about-img" data-aos="fade-right" data-aos-offset="200"  data-aos-easing="ease-in-sine" data-aos-duration="600">
+         <img src="images\us3.png" height="300px" width="100%">
+     </div>
+    <div class="about-text" data-aos="fade-left" data-aos-offset="200"  data-aos-easing="ease-in-sine" data-aos-duration="600"> 
+    <p style="text-align:justify;" >
+    NITs (National Institute Of Technologies) are 
+    the most prestigious Engineering Institutions 
+    of India after IITs. There are 31 NITs across the various states of India. 
+   I AM AN NITIAN was a facebook page created in
+    July 2016 with an aim to connect all Nitians.  <span id="ab"> Today It has 30K+ followers on fb & 3K+ followers on Instagram. Now it is not 
+    limited to only a facebook page.
+    But it has become the biggest student community.</span>
+    Here you can check out the news & events related to each and every NIT.</p>
+    </div>
+    </div>
+
+
 <!--================ News Section ====================-->
 <div style="width:100%;height:1%;background:transparent;margin-top:4%;"></div>
-
 <div class="explore" style="margin-top:0;">
-
   <p class="main-expo"  data-aos="fade-up" data-aos-duration="800">News <span id="ns-art">& Articles</span></p>
  
   <div id="expo-line"  class="expo-line" style="width:15rem;position:relative;margin-bottom:3rem;"
   data-aos="fade-up" data-aos-duration="800" ></div>
-
   <div class="about-ln" style="width:15%;margin:0  0 1rem  0;" data-aos="fade-up" data-aos-duration="800"></div>
  <?php 
             $query = "select * from tbl_images order by id desc limit 8";
@@ -461,7 +480,7 @@ function startIt()
                 ?>        
           
               <div class="xnnn" style="box-shadow:none;">
-            <?php  echo '<a href="news.php?id='.$id.'">'; ?>
+              <?php  echo '<a href="news.php?id='.$id.'">'; ?>
                 <?php echo '<div class="zoom"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>'?>
               <?php 
               $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
@@ -489,27 +508,7 @@ function startIt()
              ?>
                   
     </div>
-<!--================ About Section ====================-->
-    <a id="about"></a>
-    <div style="width:100%;height:5%;margin-top:4%;" ></div>
-    <p class="about-head">About Us</p>
-    <div class="about-ln" style="margin-bottom:1.2rem;"></div>
-    <div class="about">
-     <div class="about-img" id="about-img" data-aos="fade-right" data-aos-offset="200"  data-aos-easing="ease-in-sine" data-aos-duration="600">
-         <img src="images\us3.png" height="300px" width="100%">
-     </div>
-    <div class="about-text" data-aos="fade-left" data-aos-offset="200"  data-aos-easing="ease-in-sine" data-aos-duration="600"> 
-    <p style="text-align:justify;" >
-    NITs (National Institute Of Technologies) are 
-    the most prestigious Engineering Institutions 
-    of India after IITs. There are 31 NITs across the various states of India. 
-   I AM AN NITIAN was a facebook page created in
-    July 2016 with an aim to connect all Nitians.  <span id="ab"> Today It has 30K+ followers on fb & 3K+ followers on Instagram. Now it is not 
-    limited to only a facebook page.
-    But it has become the biggest student community.</span>
-    Here you can check out the news & events related to each and every NIT.</p>
-    </div>
-    </div>
+
 <!--============== Side Feedback Button ==================-->
 <div id="mySidenav" class="sidenav">
 <a  id="feedback" style=" padding:15px 28px 0 25px;" onclick="fun1()"><span>FEEDBACK</span></a>
@@ -587,7 +586,6 @@ function startIt()
 </div>
 </div>
 </div>
-
 <!--============== Feedback Popup ==================-->
 <div class="popup">
     <div class="popup-content">
@@ -652,7 +650,6 @@ function startIt()
             <p><a href="#">Jee Mains</a></p>
             <p><a href="#">Gate</a></p>
             <p><a href="#">Neet</a></p>  
-            <p><a href="#">Gre</a></p>  
           </div>
       <div><p class="y">Cutoff</p>
         <div class="linex" id="lz"></div>
@@ -662,7 +659,6 @@ function startIt()
         <p><a href="#">AIIMS</a></p></div>
       <div><p class="y">Links</p>
         <div class="linex" id="la"></div>
-        <p><a href="#">Disclaimer</a></p>
         <p><a href="#">College Reviews</a></p>
         <p><a href="#">College Ranking</a></p>
         <p><a href="#">About Us</a></p>
@@ -707,13 +703,9 @@ function startIt()
 <script   type="text/javascript" src="js/main.js"></script>
 <!--===================   Get total Number of notifications   ====================-->
 <script   type="text/javascript" src="js/notification.js"></script>
-
-
 <script>
   AOS.init({ disable: 'mobile' }); //disabling the animations in mobile version
 </script>
-
-
 <script>
 function sweet_alert()
 {

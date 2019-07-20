@@ -333,7 +333,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
             <p><a href="#">Jee Mains</a></p>
             <p><a href="#">Gate</a></p>
             <p><a href="#">Neet</a></p>  
-            <p><a href="#">Gre</a></p>  
           </div>
 
 
@@ -346,7 +345,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
       <div><p class="y">Links</p>
         <div class="linex" id="la"></div>
-        <p><a href="#">Disclaimer</a></p>
         <p><a href="#">College Reviews</a></p>
         <p><a href="#">College Ranking</a></p>
         <p><a href="#">About Us</a></p>

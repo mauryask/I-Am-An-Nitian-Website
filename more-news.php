@@ -29,8 +29,8 @@ crossorigin="anonymous">
 <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
 <link href="css/footer.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
-<link href="css/more-news.css" rel="stylesheet"  type="text/css">
 <link href="css/login_register.css" rel="stylesheet"  type="text/css">
+<link href="css/more-news.css" rel="stylesheet"  type="text/css">
 <style>
 
 </style>
@@ -204,56 +204,63 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 
 
-
-
-<div class="explore"> 
-            <?php 
+<div style="width:100%;height:1%;background:transparent;margin-top:4%;"></div>
+<div class="explore" style="margin-top:8rem;">
+ <?php 
             $query = "select * from tbl_images order by id asc";
-            $result = mysqli_query ($conn, $query);
-          
+             $result = mysqli_query ($conn, $query);
                 if (mysqli_num_rows($result)>0) 
                 {
                     $i=0;
                     while ($row = mysqli_fetch_assoc($result))
                      {
-                      $id = $row["id"];
-                  if ($i++ % 4 == 0) echo "<div class='expo'>";
+                       $id = $row["id"];
+                      if ($i++ % 3 == 0) 
+                      {
+                      
+                        echo "<div class='expo'>";
+                      }
           
-                ?>
+                ?>        
           
-              <div class="xnnn">
+              <div class="xnnn" style="box-shadow:none;">
+              <?php  echo '<a href="news.php?id='.$id.'">'; ?>
                 <?php echo '<div class="zoom"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>'?>
-                  
-                <?php 
+              <?php 
               $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
-              $text = implode(' ',array_slice(explode(' ', $row['text']),0,14)); //getting fires 18 words from text
-              echo '<p>'.'<span class="heading">'.$head.'</span>'." ".$text.'....<a href="news.php?id='.$id.'">'.'<span id="show_more"><br/></span>'."Read More".'<i class="fas fa-chevron-circle-right"></i>'.'</a>'.'</p>';
+              $text = implode(' ',array_slice(explode(' ', $row['text']),0,15)); //getting fires 19 words from text
+              echo '<p>'.'<span class="heading">'.$head.'</span>'." ".$text.'..</p>';
                   ?>   
-
-                </div>  
-          
+                  </a>                                            
+                </div>   
           
           <?php
-                      if ($i % 4 == 0) echo "</div>";
+                      if ($i % 3 == 0) echo "</div>";
               ?>
           
            <?php
                   }
+                  $_SESSION['x']=$ids;
                   if ($i % 4 != 0) echo "</div>";
-              } else {
+                 }
+               else 
+               {
               ?>
               <div>No results found.</div>
               <?php   
               }
              ?>
+                  
+    </div>
           
-              </div>
+         
 
  <!--============== ad Section ==================-->
  <div class="nad">
-  <img src="images/dynamo.gif"  class="nad-img">
-  <img src="images/ad-demo.jpg"  class="nad-img">
-              </div>
+  <img src="images/ad-book.gif"  class="nad-img">
+  </div>
+
+  </div>
 
  <!--============== Footer Section ==================-->
   <footer>
@@ -273,7 +280,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
             <p><a href="#">Jee Mains</a></p>
             <p><a href="#">Gate</a></p>
             <p><a href="#">Neet</a></p>  
-            <p><a href="#">Gre</a></p>  
           </div>
 
 
@@ -286,7 +292,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
       <div><p class="y">Links</p>
         <div class="linex" id="la"></div>
-        <p><a href="#">Disclaimer</a></p>
         <p><a href="#">College Reviews</a></p>
         <p><a href="#">College Ranking</a></p>
         <p><a href="#">About Us</a></p>

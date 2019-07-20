@@ -25,10 +25,10 @@ body{
 #loader{
    width:100%;
    height:100vh;
-   background:#DfDfDf url('loader.gif');
+   background:#DfDfDf url('loaderx.gif');
    background-repeat: no-repeat;
    background-position: center;
-   background-size:18rem;
+   background-size:4rem;
    position: fixed;
    z-index:555;
  }
