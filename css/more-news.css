@@ -52,6 +52,28 @@
     margin-bottom:2.5rem;
   }
 
+  .main-expo{
+    text-align: center;
+    font-weight: bold;
+    font-size:36px;
+    text-transform: uppercase;
+    color:rgba(256,0,0,0.5);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+#ns-art{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  display:none;
+}
+.line_more{
+  margin:0 auto;
+  height:4px;
+  width:16rem;
+  background:rgba(256,0,0,0.5);
+  margin-bottom:3rem;
+}
+
   .explore .expo  .xnnn a{
     text-decoration:none;
       height:auto;
@@ -154,7 +176,6 @@
   .explore{
  width:100%;
  padding:1.2rem;
- margin-top:5rem;
 } 
 
 .explore .expo{
@@ -162,7 +183,6 @@
     flex-direction:column;
     justify-content:space-evenly;
     margin:0;
-    margin-top:-2rem;
 }
 
 .explore .expo .xnnn{
@@ -200,5 +220,22 @@ height:100%;
 footer{
   margin-top:2rem;
 }
+
+
+.main-expo{
+  margin-top:-1rem;
+  font-size:32px;
+}
+
+.line_more{
+width:7rem;
+margin-top:5px;
+}
+
+#ns-art{
+  display:block;
+  margin-top:-2.6rem;
+}
+
 
 }

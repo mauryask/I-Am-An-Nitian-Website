@@ -435,7 +435,7 @@ function startIt()
 <a id="about"></a>
     <div style="width:100%;height:5%;margin-top:4%;" ></div>
     <p class="about-head">About Us</p>
-    <div class="about-ln"></div>
+    <div class="about-ln"></div> 
     <div class="about">
      <div class="about-img" id="about-img" data-aos="fade-right" data-aos-offset="200"  data-aos-easing="ease-in-sine" data-aos-duration="600">
          <img src="images\us3.png" height="300px" width="100%">

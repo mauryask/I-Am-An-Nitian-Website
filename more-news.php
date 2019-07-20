@@ -205,7 +205,10 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
 <div style="width:100%;height:1%;background:transparent;margin-top:4%;"></div>
+
 <div class="explore" style="margin-top:8rem;">
+<p class="main-expo"  data-aos="fade-up" data-aos-duration="800">News <span id="ns-art"><br></span>&<span id="ns-art"><br></span>Articles</p>
+<div class="line_more"></div>
  <?php 
             $query = "select * from tbl_images order by id asc";
              $result = mysqli_query ($conn, $query);
