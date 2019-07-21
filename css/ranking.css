@@ -4,7 +4,7 @@
     font-family: sans-serif;
     outline:none;
     box-sizing: border-box;
-}
+}   
 
 .progress-container{
     top:0;
@@ -20,10 +20,10 @@ body{
 #loader{
     width:100%;
     height:100vh;
-    background:#DfDfDf url('loader.gif');
+    background:rgb(252,252,252)  url('loaderx.gif');
     background-repeat: no-repeat;
     background-position: center;
-    background-size:18rem;
+    background-size:4rem;
     position: fixed;
     z-index:555;
 }
@@ -31,20 +31,14 @@ body{
 
 .banner{
     width:100%;
-    height:400px;
-    background:
-    url(cglx.jpg)
-    100% 100% no-repeat;
-    background-size:cover;
-    background-attachment:fixed;
+    height:500px;
+   background:#0b0c10;
+   -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
+   clip-path: polygon(0 0, 100% 0, 100% 60%, 0% 100%);
+   background-attachment: fixed;
+   background-position: fixed;
 }
 
-.banner .overlay{
-    width:100%;
-    height:100%;
-    opacity:0.4;
-    background:black;
-}
 
 .banner .center{
     top: 30%;
@@ -60,6 +54,7 @@ body{
 
 .banner .center p{
     text-align:center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 
@@ -154,6 +149,7 @@ text-decoration:underline;
 
 #rank_yr{
     color:red;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 

@@ -134,8 +134,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
 <div class="banner">
-    <div class="overlay">
-</div>
 <div class="center">
 <p>NITs Ranking <span id="rank_yr">2019</span></p>
 <p class="sub-center">rankings are based on nirf survey</p>

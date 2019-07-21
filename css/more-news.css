@@ -15,6 +15,48 @@
     background: rgba(250,250,250,1);
 }
 
+
+
+.banner{
+  width:100%;
+  height:500px;
+ background:#116466 url(backbgx.jpg);
+ background-size:cover;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
+}
+
+
+.banner .overlay{
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+}
+
+.banner .center{
+  top: 33%;
+  left:50%;
+  transform: translate(-50%,-30%);
+  position:absolute;
+  width:100%;
+  color:rgba(210,210,210,1);
+  font-weight:bold;
+  font-size:52px;
+  text-transform: uppercase;
+}
+
+.banner .center p{
+  text-align:center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.banner .center p span{
+color :rgba(256,0,0,0.9);
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 #loader{
   top:0;
   width:100%;
@@ -31,7 +73,7 @@
   
   .explore{
       width:75%;
-      margin:6.7rem 0 2rem 0;
+  z-index:2;
   }
   
   .explore .expo{
@@ -51,15 +93,6 @@
     width:14.6rem;
     margin-bottom:2.5rem;
   }
-
-  .main-expo{
-    text-align: center;
-    font-weight: bold;
-    font-size:36px;
-    text-transform: uppercase;
-    color:rgba(256,0,0,0.5);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
 
 
 #ns-art{
@@ -154,7 +187,7 @@
 
   .nad{
       width:23%;
-      top:10rem;
+      top:38rem;
       right:0;
       position: absolute;
       height:auto;

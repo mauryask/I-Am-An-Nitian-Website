@@ -140,9 +140,11 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 <!--================ Main Banner ====================-->
 <div class="banner"> 
+  <div class="overlay"></div>
+
 <div class="textx">
-<p class="dynamic-text" data-aos='fade-up' data-aos-duration="800">I AM AN <span id="dyno"><br/></span><span class="text"></span><p>
-<p class="msg" data-aos='fade-up' data-aos-duration="800" data-aos-delay="500">Join The Biggest Student Community</p>
+<p class="dynamic-text" data-aos='fade-up' data-aos-duration="900">I AM AN <span id="dyno"><br/></span><span class="text"></span><p>
+<p class="msg" data-aos='fade-up' data-aos-duration="900" data-aos-delay="500">Join The Biggest Student Community</p>
 
 <button class="join" onclick="show_signup()" data-aos='fade-up' data-aos-duration="800" data-aos-delay="600"> Join Now</button>
 
@@ -159,7 +161,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 </div>
 <!--====================  Notification Bell   ========================-->
-<div class="nt_img">
+<div class="nt_img" style="display:none;">
 <img src="images/notificationx.svg" class="notify" onclick="show()" >
 <span id="count"></span> 
 </div>

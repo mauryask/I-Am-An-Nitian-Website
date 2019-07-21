@@ -61,9 +61,9 @@ crossorigin="anonymous">
 </div>
 <nav class="active">
 <ul>
-<li><a href="index.php" class="home" >Home</a></li>
+<li><a href="index.php" class="homex" >Home</a></li>
 <li><a href="team.html" class="homex">Our team</a></li>
-<li><a href="more-news.php" class="homex" >News</a></li>
+<li><a href="more-news.php" class="home" >News</a></li>
 <li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
 <li><a class="sub-menu" style="width:115px;" id="exam">Exams <i class="fas fa-caret-square-down"></i></a>
 <ul>

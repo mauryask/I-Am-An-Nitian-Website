@@ -31,6 +31,7 @@ crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 <link href="css/login_register.css" rel="stylesheet"  type="text/css">
 <link href="css/more-news.css" rel="stylesheet"  type="text/css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <style>
 
 </style>
@@ -51,7 +52,7 @@ crossorigin="anonymous">
     <div class="progress-bar" id="myBar"></div>
   </div>   
 
-<header id="f" style="background:black;">
+<header id="f" >
 <div class="logo">
 <ul>
 <li><a href="index.php"><img src="images\imnitian.png"></a></li>
@@ -60,9 +61,9 @@ crossorigin="anonymous">
 </div>
 <nav class="active">
 <ul>
-<li><a href="index.php" class="home" >Home</a></li>
+<li><a href="index.php" class="homex" >Home</a></li>
 <li><a href="team.html" class="homex">Our team</a></li>
-<li><a href="more-news.php" class="homex" >News</a></li>
+<li><a href="more-news.php" class="home" >News</a></li>
 <li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
 <li><a class="sub-menu" style="width:115px;" id="exam">Exams <i class="fas fa-caret-square-down"></i></a>
 <ul>
@@ -127,7 +128,17 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 </header>
 
-<!--======================  Login signup popups  ====================-->
+
+<body>
+
+
+<div class="banner">
+<div class="overlay"></div>
+<div class="center">
+<p data-aos='fade-up' data-aos-duration='900'>News and <span>articles</span></p>
+</div>
+</div>
+
 
 <!--============== Signup Popup ==================-->
 <div class="signup" id="sign">
@@ -206,9 +217,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 <div style="width:100%;height:1%;background:transparent;margin-top:4%;"></div>
 
-<div class="explore" style="margin-top:10rem;">
-<p class="main-expo" >News <span id="ns-art"><br></span>&<span id="ns-art"><br></span>Articles</p>
-<div class="line_more" ></div>
+<div class="explore" style="margin-top:-4rem;">
  <?php 
             $query = "select * from tbl_images order by id asc";
              $result = mysqli_query ($conn, $query);
@@ -218,7 +227,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                     while ($row = mysqli_fetch_assoc($result))
                      {
                        $id = $row["id"];
-                      if ($i++ % 3 == 0) 
+                      if ($i++ % 3 == 0)    
                       {
                       
                         echo "<div class='expo' >";
@@ -259,7 +268,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
          
 
  <!--============== ad Section ==================-->
- <div class="nad" >
+ <div class="nad">
   <img src="images/ad-book.gif"  class="nad-img">
   </div>
 
@@ -321,17 +330,27 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </footer>
 </div> 
 </body>
+
 </html>
+
+
+
 <!--===============  Microsoft's JQuery CDN =================-->
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
 <!--==================  TweenMax CDN  ==================-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <!--==================  SweetAlert2 CDN  ==================-->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>
+<!--==================  aos.js  CDN  ==================-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <!--==================  Local Js Files  ==================-->
 <script   type="text/javascript" src="js/ajax-register.js"></script>
 <script   type="text/javascript" src="js/ajax-login.js"></script>
 <script   type="text/javascript" src="js/main.js"></script>
+
+<script>
+  AOS.init({ disable: 'mobile' }); //disabling the animations in mobile version
+</script>
 
 <script>
  /*==================== Menu toggle =========================*/
