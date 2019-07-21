@@ -117,7 +117,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <li><a style="cursor:pointer;"  href="logout.php" >Logout</a></li>
 <?php }else{ ?>
 <li><a style="cursor:pointer;"  onclick="show_log()" id="login_nav">Login</a></li>
-<li><a style="cursor:pointer;"  onclick="show_signup()" id="login_nav">Register</a></li>
+<li><a style="cursor:pointer;"  onclick="show_signup()" id="register_nav">Register</a></li>
 <?php } ?>
 
 </ul>
@@ -150,7 +150,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
     <a  target="_blank" href="https://www.facebook.com/iamannitian" alt="facebook"><img  class="svg" src="images/facebook.svg"  ></a>
     <a href="https://www.instagram.com/i_am_an_nitian/" target="_blank"  alt="instagram"><img  class="svg" src="images/instagram.svg" ></a>
     <a href="#"><img  class="svg" src="images/twitter.svg" alt="twitter"></a>
-    <a href="#"><img  class="svg" src="images/linkedin.svg"linkedin"></a>
+    <a href="#"><img  class="svg" src="images/linkedin.svg" alt="linkedin"></a>
 </div>
 </div>
 <div class="center">
@@ -763,6 +763,7 @@ function carousel() {
   }
  /*==================== Menu toggle =========================*/
  $(document).ready(function(){
+
 if (window.matchMedia('(max-width:721px)').matches)
 {
   
@@ -770,11 +771,49 @@ if (window.matchMedia('(max-width:721px)').matches)
     $(this).css('display','none');
     $('.menu-toggle').css('display','block');
     TweenMax.to('.active',0.5,{scaleX: 0});
+    $('nav').css('z-index', '1');
+    $('.logo').css('marginLeft', '0px');
+    $('.logo').css('marginTop', '0px');
+
+
+    setTimeout(function(){
+      if($(window).scrollTop()!= 0)
+    {
+      $('header').css('background', 'black');
+    }
+    },200)
+
   })
+
+  $(window).scroll(function(){
+  $('header').css('background', 'black');
+  if($(window).scrollTop() == 0)
+    {
+      $('header').css('background', 'transparent');
+    }
+})
+  
+
+
   $('.menu-toggle').click(function(){
     $(this).css('display','none');
     $('.cut_nav').css('display','block');
-    TweenMax.to('.active',0.5,{scaleX: 1});
+
+    $('nav').css('z-index', '580');
+
+    $('header').css('background', 'transparent');
+    $('.cut_nav').css('background','black');
+    TweenMax.to('.active',0.4,{scaleX: 1});
+
+    setTimeout(function(){
+      $('.logo').css('marginLeft', '51px');
+      $('.logo').css('marginTop', '21px');
+    },200);
+
+    setTimeout(function(){
+      $('nav').css('z-index', '-1');
+    },350);
+   
   })
 $('#login_nav').click(function()
 {
@@ -789,7 +828,9 @@ $('#about_nav').click(function()
   $('.cut_nav').css('display','none');
   $('.menu-toggle').css('display','block');
 })
-}
+
+}// finish of if statement
+
 })
 
 //feedback form submission 
