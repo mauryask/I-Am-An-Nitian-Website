@@ -259,7 +259,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
          
 
  <!--============== ad Section ==================-->
- <div class="nad">
+ <div class="nad" >
   <img src="images/ad-book.gif"  class="nad-img">
   </div>
 
