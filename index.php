@@ -593,30 +593,15 @@ function startIt()
     <div class="popup-content">
     <img src="images\cut.png" alt="close" width="21px" height="21px" onclick="fun2()" class="close">
     <p>Give Us Your Feedback</p>
-    <form method="post" autocomplete="off">
+    <div class="feed_msg"> <p id="feed_msg"></p></div>
+    <form method="post" autocomplete="off" enctype="multipart/fomr-data" id="feedback_form">
     <input type="text" placeholder="Your Name" id="user_name_pop">
-    <input type="email" placeholder="Your Email" id="user_email_pop">
+    <input type="text" placeholder="Your Email" id="user_email_pop">
     <textarea rows="4" class="textarr textaxx" placeholder="Write Your Message Here...." id="user_feedback_pop"></textarea>
-    <input type="button" value="Send" class="btn-send"  id="user_btn_pop">
+    <button type="button" value="Send" class="btn-send"  id="user_btn_pop" >Send</button>
     </form>
   </div>
    </div>
-
-<script>
-$(document).ready(function(){
-
-$('#user_btn_pop').click(function(){
-
-var user_name = $('#user_name_pop').val().trim();
-var user_email = $('#user_email_pop').val().trim();
-var user_feed_back = $('#user_feedback_pop').val().trim();
-
-alert(user_name);
-
-});
-
-});
-</script>
 
 
   <!--============== Nits Logo =====================-->
@@ -797,6 +782,7 @@ $('#login_nav').click(function()
   $('.cut_nav').css('display','none');
   $('.menu-toggle').css('display','block');
 })
+
 $('#about_nav').click(function()
 {
   TweenMax.to('.active',0.1,{scaleX: 0});  
@@ -808,5 +794,72 @@ $('#about_nav').click(function()
 
 //feedback form submission 
 
+  $('#user_btn_pop').click(function()
+{
+  var user_name = $('#user_name_pop').val().trim();
+  var user_email = $('#user_email_pop').val().trim();
+  var user_feedback = $('#user_feedback_pop').val().trim();
+ 
+
+if(user_name != '' && user_email != '' && user_feedback != '')
+{
+
+$.ajax({
+
+url:'feedback.php',
+type:'post',
+data: {user_name : user_name, user_email : user_email, user_feedback : user_feedback},
+success: function(data)
+{
+if(data == 1)
+{
+  $("#feedback_form").trigger("reset");
+  funfeed();
+  $('.feed_msg').css('display', 'none');
+  $('.popup-content p').css('marginBottom', '20px')
+}
+else if(data == -1)
+{
+  $('#feed_msg').text('Use only letters in name fieled');
+}
+else if(data == -2)
+{
+  $('#feed_msg').text('Please use a valid email address');
+}
+else
+{
+  $('#feed_msg').text('Unable to send feedback\n Try again');
+}
+
+}
+
+});
+
+}
+else
+{
+  $('#feed_msg').text('Please fill all the fields');
+}
+
+function funfeed()
+{
+
+setTimeout(function(){
+fun2();
+},2000);  //hide feedback box after 2 seconds
+
+
+Swal.fire({
+				  position: 'center',
+				  type: 'success',
+				  title: 'Thank you for your feedback',
+				  showConfirmButton: false,
+				  timer:1600
+			}); 
+      $(".swal2-modal").css({width: '24rem'});
+      $(".swal2-modal").css('background-color', 'rgba(253,253,253,1)');
+}
+
+});
 
 </script>

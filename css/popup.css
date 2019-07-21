@@ -73,7 +73,7 @@ body{
  
          .popup .popup-content{
              height:auto;
-             width:430px;
+             width:355px;
              box-shadow:0 0 4px 2px rgba(0,0,0,0.7);
                background:rgba(252,252,252,1);
              border-radius:5px 0 0 5px;
@@ -86,14 +86,15 @@ body{
            font-weight:bold;
            text-align: center;
          text-transform: uppercase;
-         margin:5% 0 5% 0;
+          margin:7% 0 0 0;
          }
  
  
       .popup .popup-content   input,.textarr{
-        resize: none;
-               margin:20px auto;
+           resize: none;
+              margin:0 auto;
              display:block;
+             margin-bottom:0.6rem;
              width:85%;
              padding: 8px;
            text-align: center;
@@ -101,13 +102,29 @@ body{
            outline: none;
            border: 1px solid rgba(200,200,200,1);
            background: transparent;
-           font-size:15px;
+           font-size:14px;
            color:rgba(130,130,130,1);
-           letter-spacing:0.6px;
          }
  
-       
+         .popup .popup-content #feedback_form{
+           margin-top:0.5rem;
+         }
+
  
+         .popup .popup-content .feed_msg{
+           margin: 0 auto;
+           width:85%;
+           height:17px;
+           margin-top:-1.3rem;
+         }
+
+         .popup .popup-content .feed_msg #feed_msg{
+           font-weight:normal;
+           font-size:13px;
+           color:red;
+           text-transform: lowercase;
+         }
+
          .popup .popup-content .close{
              top:5px;
              left:5px;
@@ -118,13 +135,15 @@ body{
          }
  
          .popup .popup-content .btn-send{
-             padding:10px;
-             background:#4CAF50;
+               width:85%;
+               border-radius:4px;
+               padding:10px;
+               background:#4CAF50;
                cursor:pointer;
                color:white;
                border:none;
                outline:none;
-               margin-top:10% 0 5% 0;
+               margin:0 0 1.8rem 0;
          }
  
 
@@ -138,7 +157,7 @@ body{
   position: relative;
 }
 
-/*--------------  login popup is removes from here  --------------------*/
+
 
              /*Search popup*/
              .search-popup
@@ -227,9 +246,17 @@ body{
    cursor: pointer;
  }
 
-
  .popup{
   top:63rem;
+}
+
+.popup .popup-content p{
+margin-bottom:20px;
+}
+
+.popup .popup-content{
+
+width:315px;
 }
 
  }

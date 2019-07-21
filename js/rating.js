@@ -87,9 +87,9 @@ $(document).ready(function(){
             title: 'Hello Admin',
             type: 'info',
             html:
-              'you need to login as user to like or comment',
-            showCloseButton:false,
-            showCancelButton: false,
-            focusConfirm: false,
+                'you need to login as user to like or comment',
+                showCloseButton:false,
+                showCancelButton: false,
+                focusConfirm: false,
           });
     }

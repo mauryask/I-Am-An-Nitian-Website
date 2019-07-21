@@ -46,4 +46,5 @@ $(document).ready(function(){
 				  timer:1600
 			}); 
 			$(".swal2-modal").css({width: '20rem'});
+			$(".swal2-modal").css('background-color', 'rgba(253,253,253,1)');
 	 }

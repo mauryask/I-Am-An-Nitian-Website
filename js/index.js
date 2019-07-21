@@ -6,7 +6,7 @@
 
 
 /*============  Logo Slider ===========*/  
-$('.owl-carousel').owlCarousel({
+$('.owl-carousel').owlCarousel({ 
   loop:true,
   margin:10,
  autoplay:true,
@@ -43,18 +43,6 @@ function  fun1()
     function fun2(){
       TweenMax.to('.popup',0.5,{scaleX: 0});
     }
-
-/*============  Display Upadte Box ===========*/
-function  fun3()
-{
-  TweenMax.to('.popupx',0.5,{scaleX: 1});
-}
-
-
-/*============  Hide Update Box ===========*/ 
-function fun4(){
-  TweenMax.to('.popupx',0.5,{scaleX: 0});
-}
 
 
 /*============  Screen Preloader ===========*/
@@ -200,3 +188,8 @@ function show_signup()
 
   TweenLite.to('.signup',0.5, { scaleY: 1});
 }
+
+
+
+
+
