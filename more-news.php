@@ -55,7 +55,7 @@ crossorigin="anonymous">
 <div class="logo">
 <ul>
 <li><a href="index.php"><img src="images\imnitian.png"></a></li>
-<li><a href="index.php" style="font-family: 'Dancing Script', cursive;color:white;font-weight:bold;font-size:13px;letter-spacing: 0.7px;" >I AM AN NITIAN</a></li>
+<li class="logo_txt"><a href="index.php" style="font-family: 'Dancing Script', cursive;color:white;font-weight:bold;font-size:13px;letter-spacing: 0.7px;" >I AM AN NITIAN</a></li>
 </ul>
 </div>
 <nav class="active">
@@ -107,7 +107,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <li><a style="cursor:pointer;"  href="logout.php" >Logout</a></li>
 <?php }else{ ?>
 <li><a style="cursor:pointer;"  onclick="show_log()" id="login_nav">Login</a></li>
-<li><a style="cursor:pointer;"  onclick="show_signup()" id="login_nav">Register</a></li>
+<li><a style="cursor:pointer;"  onclick="show_signup()" id="register_nav">Register</a></li>
 <?php } ?>
 
 </ul>
@@ -337,39 +337,87 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
  /*==================== Menu toggle =========================*/
  $(document).ready(function(){
 
-if (window.matchMedia('(max-width:721px)').matches)
+  if (window.matchMedia('(max-width:721px)').matches)
 {
   
   $('.cut_nav').click(function(){
     $(this).css('display','none');
     $('.menu-toggle').css('display','block');
     TweenMax.to('.active',0.5,{scaleX: 0});
+    $('nav').css('z-index', '1');
+    $('.logo').css('marginLeft', '0px');
+    $('.logo').css('marginTop', '0px');
+  
+    setTimeout(function(){
+    
+      $('header').css('background', 'black');
+    
+    },200)
+
   })
+
+  $(window).scroll(function(){
+  $('header').css('background', 'black');
+})
+  
+
 
   $('.menu-toggle').click(function(){
     $(this).css('display','none');
     $('.cut_nav').css('display','block');
-    TweenMax.to('.active',0.5,{scaleX: 1});
+
+    $('nav').css('z-index', '4');
+
+    $('header').css('background', 'transparent');
+    $('.cut_nav').css('background','black');
+    TweenMax.to('.active',0.4,{scaleX: 1});
+
+    setTimeout(function(){
+      $('.logo').css('marginLeft', '62px');
+      $('.logo').css('marginTop', '18px');
+      $('.logo_txt').css('marginTop', '10px');
+    },200);
+
+    setTimeout(function(){
+      $('nav').css('z-index', '-1');
+    },350);
+   
   })
 
+ 
 
 $('#login_nav').click(function()
 {
+  $('.logo').css('marginLeft', '0px');
+  $('.logo').css('marginTop', '0px');
   TweenMax.to('.active',0.1,{scaleX: 0});  
   $('.cut_nav').css('display','none');
   $('.menu-toggle').css('display','block');
+  $('header').css('background', 'black');
+  $('.logo_txt').css('marginTop', '0px');
 })
 
+$('#register_nav').click(function(){
+  $('.logo').css('marginLeft', '0px');
+  $('.logo').css('marginTop', '0px');
+  TweenMax.to('.active',0.1,{scaleX: 0});  
+  $('.cut_nav').css('display','none');
+  $('.menu-toggle').css('display','block');
+  $('header').css('background', 'black');
+  $('.logo_txt').css('marginTop', '0px');
+})
 
 $('#about_nav').click(function()
 {
+  $('.logo').css('marginLeft', '0px');
+  $('.logo').css('marginTop', '0px');
   TweenMax.to('.active',0.1,{scaleX: 0});  
   $('.cut_nav').css('display','none');
   $('.menu-toggle').css('display','block');
 })
 
-
 }
+  
 })
 
 </script>

@@ -65,7 +65,7 @@ crossorigin="anonymous">
 <div class="logo">
 <ul>
 <li><a href="index.php"><img src="images\imnitian.png"></a></li>
-<li><a href="index.php" style="font-family: 'Dancing Script', cursive;color:white;font-weight:bold;font-size:13px;letter-spacing: 0.7px;" >I AM AN NITIAN</a></li>
+<li class="logo_txt"> <a href="index.php" style="font-family: 'Dancing Script', cursive;color:white;font-weight:bold;font-size:13px;letter-spacing: 0.7px;" >I AM AN NITIAN</a></li>
 </ul>
 </div>
 <nav class="active">
@@ -774,6 +774,7 @@ if (window.matchMedia('(max-width:721px)').matches)
     $('nav').css('z-index', '1');
     $('.logo').css('marginLeft', '0px');
     $('.logo').css('marginTop', '0px');
+    $('.logo_txt').css('marginTop', '0px');
 
 
     setTimeout(function(){
@@ -799,15 +800,16 @@ if (window.matchMedia('(max-width:721px)').matches)
     $(this).css('display','none');
     $('.cut_nav').css('display','block');
 
-    $('nav').css('z-index', '580');
+    $('nav').css('z-index', '4');
 
     $('header').css('background', 'transparent');
     $('.cut_nav').css('background','black');
     TweenMax.to('.active',0.4,{scaleX: 1});
 
     setTimeout(function(){
-      $('.logo').css('marginLeft', '51px');
-      $('.logo').css('marginTop', '21px');
+      $('.logo').css('marginLeft', '62px');
+      $('.logo').css('marginTop', '18px');
+      $('.logo_txt').css('marginTop', '10px');
     },200);
 
     setTimeout(function(){
@@ -817,23 +819,38 @@ if (window.matchMedia('(max-width:721px)').matches)
   })
 $('#login_nav').click(function()
 {
+  $('.logo').css('marginLeft', '0px');
+  $('.logo').css('marginTop', '0px');
   TweenMax.to('.active',0.1,{scaleX: 0});  
   $('.cut_nav').css('display','none');
   $('.menu-toggle').css('display','block');
+  $('.logo_txt').css('marginTop', '0px');
+})
+
+$('#register_nav').click(function(){
+  $('.logo').css('marginLeft', '0px');
+  $('.logo').css('marginTop', '0px');
+  TweenMax.to('.active',0.1,{scaleX: 0});  
+  $('.cut_nav').css('display','none');
+  $('.menu-toggle').css('display','block');
+  $('.logo_txt').css('marginTop', '0px');
 })
 
 $('#about_nav').click(function()
 {
+  $('.logo').css('marginLeft', '0px');
+  $('.logo').css('marginTop', '0px');
   TweenMax.to('.active',0.1,{scaleX: 0});  
   $('.cut_nav').css('display','none');
   $('.menu-toggle').css('display','block');
+  $('.logo_txt').css('marginTop', '0px');
 })
 
-}// finish of if statement
+}
 
 })
 
-//feedback form submission 
+/*========================  Feedback Form Submission  =====================*/
 
   $('#user_btn_pop').click(function()
 {

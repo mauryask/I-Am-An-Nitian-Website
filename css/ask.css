@@ -107,7 +107,7 @@ overflow:hidden;
 
 .mySlide .slidex  #captionx{
   background:rgba(0,0,0,1);
-  z-index:4;
+  z-index:2;
   font-size:20px;
   width:100%;
   bottom:0;
