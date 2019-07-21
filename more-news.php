@@ -347,7 +347,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
     $('nav').css('z-index', '1');
     $('.logo').css('marginLeft', '0px');
     $('.logo').css('marginTop', '0px');
-  
+    $('.logo_txt').css('marginTop', '0px');
     setTimeout(function(){
     
       $('header').css('background', 'black');
