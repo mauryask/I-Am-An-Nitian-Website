@@ -333,7 +333,7 @@ function start_It()
   </script>
  <!--===================== Update Section ===================--> 
  
-<div class="upg">
+<div class="upg" data-aos="fade-up" data-aos-duration="800">
 <div class="upx">
 <div class="headingc"><p>Updates</p></div>
 <div id="csp" onmouseover="stopIt()"  onmouseout="startIt()">
@@ -474,7 +474,7 @@ function startIt()
                       if ($i++ % 4 == 0) 
                       {
                       
-                        echo "<div class='expo'>";
+                        echo "<div class='expo' data-aos='fade-up' data-aos-duration='800'>";
                       }
           
                 ?>        
@@ -506,7 +506,7 @@ function startIt()
               <?php   
               }
              ?>
-               <div class="more_btn"> <button type="button" onclick="location.href='more-news.php'">
+               <div class="more_btn" data-aos="fade-up" data-aos-duration="800"> <button type="button" onclick="location.href='more-news.php'">
                More News &nbsp;<i class="fas fa-chevron-circle-right"></i></button></div>
     </div>
 
@@ -589,17 +589,38 @@ function startIt()
 </div>
 <!--============== Feedback Popup ==================-->
 <div class="popup">
+
     <div class="popup-content">
     <img src="images\cut.png" alt="close" width="21px" height="21px" onclick="fun2()" class="close">
     <p>Give Us Your Feedback</p>
-    <input type="text" placeholder="Your Name" id="username">
-    <input type="email" placeholder="Your Email">
-    <textarea rows="4" class="textarr textaxx" placeholder="Write Your Message Here...."></textarea>
-    <input type="submit" value="Send" class="btn-send" onclick="funalert()">
+    <form method="post" autocomplete="off">
+    <input type="text" placeholder="Your Name" id="user_name_pop">
+    <input type="email" placeholder="Your Email" id="user_email_pop">
+    <textarea rows="4" class="textarr textaxx" placeholder="Write Your Message Here...." id="user_feedback_pop"></textarea>
+    <input type="button" value="Send" class="btn-send"  id="user_btn_pop">
+    </form>
   </div>
    </div>
+
+<script>
+$(document).ready(function(){
+
+$('#user_btn_pop').click(function(){
+
+var user_name = $('#user_name_pop').val().trim();
+var user_email = $('#user_email_pop').val().trim();
+var user_feed_back = $('#user_feedback_pop').val().trim();
+
+alert(user_name);
+
+});
+
+});
+</script>
+
+
   <!--============== Nits Logo =====================-->
-   <div class="nit-logos">
+   <div class="nit-logos" data-aos="fade-up" data-aos-duration="800">
     <div class="owl-carousel owl-theme">
     <div class="item"><img src="images\nit-logo\nit trichy.png"><p>nit trichy</p></div>
     <div class="item"><img src="images\nit-logo\nit rourkela.png"><p>nit rourkela</p></div>
@@ -784,4 +805,8 @@ $('#about_nav').click(function()
 })
 }
 })
+
+//feedback form submission 
+
+
 </script>

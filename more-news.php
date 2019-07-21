@@ -29,6 +29,7 @@ crossorigin="anonymous">
 <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
 <link href="css/footer.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link href="css/login_register.css" rel="stylesheet"  type="text/css">
 <link href="css/more-news.css" rel="stylesheet"  type="text/css">
 <style>
@@ -63,7 +64,7 @@ crossorigin="anonymous">
 <li><a href="index.php" class="home" >Home</a></li>
 <li><a href="team.html" class="homex">Our team</a></li>
 <li><a href="more-news.php" class="homex" >News</a></li>
-<li><a href="#about" class="homex" id="about_nav">About Us</a></li>
+<li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
 <li><a class="sub-menu" style="width:115px;" id="exam">Exams <i class="fas fa-caret-square-down"></i></a>
 <ul>
 <li style="width:115px;"><a href="#">Jee</a></li>
@@ -207,8 +208,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div style="width:100%;height:1%;background:transparent;margin-top:4%;"></div>
 
 <div class="explore" style="margin-top:10rem;">
-<p class="main-expo">News <span id="ns-art"><br></span>&<span id="ns-art"><br></span>Articles</p>
-<div class="line_more"></div>
+<p class="main-expo" data-aos='fade-up' data-aos-duration='800'>News <span id="ns-art"><br></span>&<span id="ns-art"><br></span>Articles</p>
+<div class="line_more" data-aos='fade-up' data-aos-duration='800' data-aos-delay="200"></div>
  <?php 
             $query = "select * from tbl_images order by id asc";
              $result = mysqli_query ($conn, $query);
@@ -221,7 +222,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                       if ($i++ % 3 == 0) 
                       {
                       
-                        echo "<div class='expo'>";
+                        echo "<div class='expo' >";
                       }
           
                 ?>        
@@ -332,10 +333,15 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <script   type="text/javascript" src="js/ajax-register.js"></script>
 <script   type="text/javascript" src="js/ajax-login.js"></script>
 <script   type="text/javascript" src="js/main.js"></script>
+<!--==================  aos.js  CDN  ==================-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+  AOS.init({ disable: 'mobile' }); //disabling the animations in mobile version
+</script>
 
 <script>
  /*==================== Menu toggle =========================*/
-
  $(document).ready(function(){
 
 if (window.matchMedia('(max-width:721px)').matches)

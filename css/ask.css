@@ -1,5 +1,6 @@
 
 .upg{
+  margin:0 auto;
 overflow: hidden;
 width:76%;
 margin-top:7%;
@@ -7,9 +8,6 @@ display: flex;
 flex-direction:row;
 align-items:center;
 justify-content:center;
-left:50%;
-transform:translate(-50%);
-position:relative;
 height:320px;
 }
 
