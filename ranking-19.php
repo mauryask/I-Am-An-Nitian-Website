@@ -134,6 +134,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
 <div class="banner">
+  <div class="overlay"></div>
 <div class="center">
 <p>NITs Ranking <span id="rank_yr">2019</span></p>
 <p class="sub-center">rankings are based on nirf survey</p>
@@ -166,23 +167,21 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <th>NIT Name</th>
 <th>Overall Ranking <span id="change_rk"> 2019</span></th>
 <th>NIT Ranking <span  id="change_rs">2019</span></th>
-<tbody id="rank_a">
+<tbody id="rank_19">
 
 </tbody>
 
 
 </table>
 
-<img src="images/adx.jpg" class="ad">
+
 
 <div class="linkx">
 <p class="links">Useful Links</p>
 <div class="line"></div>
-<p><a href="#" class="x" id="click_p">NITs Ranking 2019</a></p>
-<p><a href="#" class="x" id="click_a">NITs Ranking 2018</a></p>
-<p><a href="#" class="x" id="click_b">NITs Ranking 2017</a></p>
-<p><a href="#" class="x" id="click_c">NITs Ranking 2016</a></p>
-<p><a href="#" class="x" id="click_d">NITs Ranking 2015</a></p>
+<p><a href="ranking-18.php" class="x" id="click_18">NITs Ranking 2018</a></p>
+<p><a href="ranking-17.php" class="x" id="click_17">NITs Ranking 2017</a></p>
+<p><a href="ranking-16.php" class="x" id="click_16">NITs Ranking 2016</a></p>
 </div>
 </div>
 
@@ -255,108 +254,11 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <script   type="text/javascript" src="js/main.js"></script>
 
 <script>
+
 var id;
 $(document).ready(function(){
-//rank 2019 on loading the page
-   id=1;
-    $('#rank_a').load("get_ranking.php", {id:id});
-     
-//rank 2019 on clicking button
-
-$('#click_p').click(function(){
-  window.scroll(0,0);
-  id=1;
-    $('#rank_a').load("get_ranking.php", {id:id},function(){
-      $('#rank_yr').text("2019");
-      $('#change_rk').text('2019');
-      $('#change_rs').text('2019');
-    });
-    
-      //hide this button
-      $(this).hide();
-          //show remaining buttons
-   $('#click_a').show();
-   $('#click_b').show();
-   $('#click_c').show();
-   $('#click_d').show();
-});
-
-  //rank 2018
-  $('#click_a').click(function(){
-  window.scroll(0,0); 
-    id=2;
-    $('#rank_a').load("get_ranking.php", {id:id},function(data, status)
-    {
-      $('#rank_yr').text("2018");
-      $('#change_rk').text('2018');
-      $('#change_rs').text('2018');
-    });
-     //hide this button
-     $(this).hide();
-         //show remaining buttons
-   $('#click_p').show();
-   $('#click_b').show();
-   $('#click_c').show();
-   $('#click_d').show();
-  });
-
-//rank 2017
-$('#click_b').click(function(){
-    window.scroll(0,0); 
-    id=3;
-    $('#rank_a').load("get_ranking.php", {id:id},function(data, status)
-    {
-      $('#rank_yr').text("2017");
-       $('#change_rk').text('2017');
-      $('#change_rs').text('2017');
-    });
-     //hide this button
-     $(this).hide();
-     //show remaining buttons
-   $('#click_a').show();
-   $('#click_p').show();
-   $('#click_c').show();
-   $('#click_d').show();
-  });
-
-  //rank 2016
-  $('#click_c').click(function(){
-    window.scroll(0,0); 
-    id=4;
-    $('#rank_a').load("get_ranking.php", {id:id},function(data, status)
-    {
-      $('#rank_yr').text("2016");
-       $('#change_rk').text('2016');
-      $('#change_rs').text('2016');
-    });
-     //hide this button
-     $(this).hide();
-         //show remaining buttons
-   $('#click_a').show();
-   $('#click_b').show();
-   $('#click_p').show();
-   $('#click_d').show();
-  });
-
-//rank 2015
-$('#click_d').click(function(){
-    window.scroll(0,0); 
-    id=5;
-    $('#rank_a').load("get_ranking.php", {id:id},function(data, status)
-    {
-      $('#rank_yr').text("2015");
-       $('#change_rk').text('2015');
-      $('#change_rs').text('2015');
-    });
-     //hide this button
-     $(this).hide();
-         //show remaining buttons
-   $('#click_a').show();
-   $('#click_b').show();
-   $('#click_c').show();
-   $('#click_p').show();
-  });
-
+ id= 1;
+  $('#rank_19').load('get_ranking.php', {id : id});
 });
 
 

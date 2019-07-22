@@ -51,14 +51,20 @@
 	width:100%;
 	height:98%;
 	background:linear-gradient(rgba(256,256,256,0.05),rgba(256,256,256,0.05)), 
-	url(peopleyc.jpg) 100% 100% no-repeat;
+	url(peoplexp.jpg) 100% 100% no-repeat;
 	background-size:cover;
 	-webkit-clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 89%);
 	clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 89%);
 	background-attachment:fixed;
 	
 	}
-	
+/*	
+.banner .overlay{
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,0.7);
+}*/
+
 	.banner .textx{
 		top:50%;
 		left:50%;
@@ -69,39 +75,33 @@
 	
 	}
 
-	.banner .overlay{
-		width:100%;
-		height: 100%;
-		background:rgba(0,0,0,0.2);
-	}
 	
 	.dynamic-text
 	{
 		font-weight:bold;
-		font-size:45px;
+		font-size:40px;
 		color:rgba(256,256,256,1);
 		letter-spacing:1.5px;
 		padding-bottom:20px;
-		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	}
 	.text{
 		color:rgba(256,0,0,0.9);
 		font-weight:bold;
-		font-size:50px;
+		font-size:46px;
 		text-align:center;
 		letter-spacing:2px;
-		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		
 	}
 	
 	
 	 .textx .msg{
 		text-transform:uppercase;
 		color:rgba(256,256,256,1);
-		font-size:45px;
+		font-size:41px;
 		font-weight:bold;
 		padding-bottom:30px;
 		letter-spacing:2px;
-		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		
 	}
 	
 /*================  Join Now Button  =================*/ 
@@ -118,7 +118,6 @@
 		letter-spacing:1.6px;
 		box-sizing:border-box;
 		cursor:pointer;
-		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	}
 	
 	.join:hover{

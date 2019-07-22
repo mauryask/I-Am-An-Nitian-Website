@@ -4,6 +4,7 @@ $count=0;
 $query="select * from ranking";
 $result=mysqli_query($conn, $query);
 $id=$_POST['id'];
+
 while($row=mysqli_fetch_array($result))
 {
     $count++;

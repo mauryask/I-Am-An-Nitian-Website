@@ -42,7 +42,7 @@ crossorigin="anonymous">
 <link href="css/login_register.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap" rel="stylesheet">
 <style></style>
 </head>
 
@@ -207,7 +207,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
          <img src="images/project.svg">
          <p>Sell Project</p>
         </div>
-         <div class="appx" onclick="location.href='ranking.php'" data-aos="flip-right" data-aos-duration="800" data-aos-delay="700">
+         <div class="appx" onclick="location.href='ranking-19.php'" data-aos="flip-right" data-aos-duration="800" data-aos-delay="700">
       <img src="images/infographic.svg">
       <p>College Ranking</p>
      </div>
