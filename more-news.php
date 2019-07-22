@@ -52,7 +52,7 @@ crossorigin="anonymous">
     <div class="progress-bar" id="myBar"></div>
   </div>   
 
-<header id="f" >
+<header id="f" style="background:black;">
 <div class="logo">
 <ul>
 <li><a href="index.php"><img src="images\imnitian.png"></a></li>
@@ -132,14 +132,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <body>
 
 
-<div class="banner">
-<div class="overlay"></div>
-<div class="center">
-<p data-aos='fade-up' data-aos-duration='900'>News and <span>articles</span></p>
-</div>
-</div>
-
-
 <!--============== Signup Popup ==================-->
 <div class="signup" id="sign">
 <div class="sign-card">
@@ -215,9 +207,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 
 
-<div style="width:100%;height:1%;background:transparent;margin-top:4%;"></div>
-
-<div class="explore" style="margin-top:-4rem;">
+<div class="explore" style="margin-top:8.5rem;">
  <?php 
             $query = "select * from tbl_images order by id asc";
              $result = mysqli_query ($conn, $query);

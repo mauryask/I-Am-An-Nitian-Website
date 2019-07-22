@@ -1,0 +1,254 @@
+/*
+* I AM AN NITIAN
+* v1.0
+* Start Date : May 17 2019
+* Developer : Shubham Maurya
+* National Institute Of Technology Srinagar J&K India 190006
+* GitHub : https://github.com/pnstech
+* LinkedIn : https://www.linkedin.com/in/cyberthreatatnit/   
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Flamenco&display=swap');
+	
+*{
+	outline:none;
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family:sans-serif;
+	word-wrap: break-word;
+	}
+
+	html,body{
+		height:100%;
+	}
+
+
+	body{
+	background: rgba(250,250,250,1);	
+	}			
+
+.wrap_me{
+    position: relative;
+}
+
+/*================  Page Preloader  =================*/ 
+
+	#loader{
+		width:100%;
+		height:100vh;
+		background:rgb(252,252,252) 
+		url('loaderx.gif');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size:4rem;
+		position: fixed;
+		z-index:555;
+	} 
+	
+	.wrapper{
+	width:100%;
+	height:100%;
+	position:absolute;
+	}
+	
+ .story{
+    margin-top:10rem;
+    font-weight:bold;
+    font-size:60px;
+    text-transform: uppercase;
+    text-align:center;
+}
+
+.story p{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   color:rgba(256,0,0,0.6);
+}
+
+.story .str_line{
+    margin: 0 auto;
+    width:19rem;
+    height:5px;
+    background:rgba(256,0,0,0.6);
+}
+
+
+/*===============================For left side image ============================*/
+
+ .story_fst{
+     margin: 0 auto;
+     margin-top:5rem;
+    width:90%;
+    height:auto;
+   overflow:hidden;
+}
+
+.story_fst .str_txt{
+    width:800px;
+    height:auto;
+    background:#282828;
+   float:right;
+   margin-top:7rem;
+   margin-right:5rem;
+   border-top-right-radius:100px; 
+   border-bottom-left-radius:100px; 
+}
+
+.story_fst .str_txt .intv{
+margin:0 auto;
+margin-top:1rem;
+width:80%;
+line-height: 25px;
+text-align: justify;
+letter-spacing: 0.2px;
+font-size:15px;
+}
+
+
+.story_fst .str_txt .detail{
+    margin:0 auto;
+    width:20rem;
+    margin-top:1.5rem;
+    padding:1px 0 4px 0;
+    background:orange;
+    -webkit-clip-path: polygon(100% 0, 87% 51%, 100% 100%, 0 100%, 14% 54%, 0 0);
+    clip-path: polygon(100% 0, 87% 51%, 100% 100%, 0 100%, 14% 54%, 0 0);
+   }
+
+.story_fst .str_txt .name ,.exam{
+    text-align:center;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-weight: bold;
+ font-size:30px;
+ color:rgba(60,60,60,1);
+}
+
+.exam{
+    font-size:17px;
+    margin-top:1px;
+}
+
+
+.story_fst .str_img{
+    width:300px;
+    height:300px;
+   z-index:2;
+   left:10%;
+   position: relative;
+   float:left;
+
+}
+
+.story_fst .str_img img{
+    width:100%;
+    height:100%;
+    border:18px solid;
+    border-radius:50%;
+}
+
+
+
+/*===============================For Right side image ============================*/
+
+
+.story_fst .str_imgk{
+    width:300px;
+    height:300px;
+   right:10%;
+   position: relative;
+  float:right;
+  z-index:2;
+}
+
+
+.story_fst .str_txtk .detailk{
+    margin:0 auto;
+    width:20rem;
+    margin-top:1.5rem;
+    padding:1px 0 4px 0;
+    background:orange;
+    -webkit-clip-path: polygon(100% 0, 87% 51%, 100% 100%, 0 100%, 14% 54%, 0 0);
+    clip-path: polygon(100% 0, 87% 51%, 100% 100%, 0 100%, 14% 54%, 0 0);
+   }
+
+
+   .story_fst .str_txtk .intv{
+    margin:0 auto;
+    margin-top:1rem;
+    width:80%;
+    line-height: 25px;
+    text-align: justify;
+    letter-spacing: 0.2px;
+    font-size:15px;
+    }
+
+.story_fst .str_txtk .namek ,.examk{
+text-align:center;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-weight: bold;
+ font-size:30px;
+ color:rgba(60,60,60,1);
+}
+
+.examk{
+    font-size:17px;
+}
+
+
+.story_fst .str_imgk img{
+    width:100%;
+    height:100%;
+    border:18px solid;
+    border-radius:50%;
+}
+
+.story_fst .str_txtk{
+    width:800px;
+    height:auto;
+   background:rgba(255,196,105,0.4);
+   float:left;
+   margin-top:7rem;
+   margin-left:5rem;
+   border-bottom-right-radius:100px; 
+   border-top-left-radius:100px; 
+   z-index:1;
+   padding-bottom:20px;
+}
+
+
+
+.story_fst .about_str{
+    margin:0 auto;
+    margin:1rem 2rem 0 6rem;
+    width:75%;
+text-align:justify;
+}
+
+.story_fst .about_str p{
+    font-family: 'Flamenco', cursive;
+    font-size:16px;
+    line-height: 25px;
+    letter-spacing: 0.4px;
+}
+
+.story_fst .str_txt{
+padding-bottom:20px;
+}
+
+
+
+/*================  Fooetr Section  =================*/ 
+
+footer{
+	margin-top:18rem;
+}
+
+/*================ Mobile Version explore tabs  =================*/ 
+
+
+/*================ Mobile Version Responsive  =================*/ 
+
+@media (max-width:991px)
+{
+
+}

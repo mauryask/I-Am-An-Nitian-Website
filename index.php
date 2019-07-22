@@ -42,7 +42,6 @@ crossorigin="anonymous">
 <link href="css/login_register.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap" rel="stylesheet">
 <style></style>
 </head>
 
@@ -713,6 +712,20 @@ function startIt()
 <script   type="text/javascript" src="js/main.js"></script>
 <!--===================   Get total Number of notifications   ====================-->
 <script   type="text/javascript" src="js/notification.js"></script>
+<script type="text/javascript" src="js/jssor.slider.min.js"></script>
+
+
+<script>
+        jQuery(document).ready(function ($) {
+            var options = {
+                $AutoPlay: 1,                                   //[Optional] Auto play or not, to enable slideshow, this option must be set to greater than 0. Default value is 0. 0: no auto play, 1: continuously, 2: stop at last slide, 4: stop on click, 8: stop on user navigation (by arrow/bullet/thumbnail/drag/arrow key navigation)
+                $DragOrientation: 1                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $Cols is greater than 1, or parking position is not 0)
+            };
+
+            var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+        });
+    </script>
+
 <script>
   AOS.init({ disable: 'mobile' }); //disabling the animations in mobile version
 </script>
