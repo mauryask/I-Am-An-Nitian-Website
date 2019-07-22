@@ -17,16 +17,16 @@
 .main-expo{
     text-align: center;
     font-weight: bold;
-    font-size:40px;
+    font-size:46px;
     text-transform: uppercase;
-    color:rgba(256,0,0,0.5);
+    color:rgba(256,0,0,0.8);
     margin-top:2%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .expo-line{
   margin:0 auto;
 margin-top:5px;
-background:rgba(256,0,0,0.5); 
+background:rgba(256,0,0,0.8); 
 width:7rem; 
 height:5px;
 }
@@ -43,7 +43,7 @@ height:5px;
 
 .explore .expo  div:hover
 {
- transition:0.3s;
+ transition:0.3s; 
   box-shadow:1px 1px 1px 1px rgba(75, 71, 71, 0.4);
 }
 

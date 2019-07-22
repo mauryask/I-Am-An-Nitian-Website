@@ -75,8 +75,9 @@
 		font-weight:bold;
 		font-size:40px;
 		color:rgba(256,256,256,1);
-		letter-spacing:1.5px;
+		letter-spacing:1px;
 		padding-bottom:20px;
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	}
 	.text{
 		color:rgba(256,0,0,0.9);
@@ -84,7 +85,7 @@
 		font-size:46px;
 		text-align:center;
 		letter-spacing:2px;
-		
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	}
 	
 	
@@ -95,7 +96,7 @@
 		font-weight:bold;
 		padding-bottom:30px;
 		letter-spacing:2px;
-		
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	}
 	
 /*================  Join Now Button  =================*/ 
@@ -112,6 +113,7 @@
 		letter-spacing:1.6px;
 		box-sizing:border-box;
 		cursor:pointer;
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	}
 	
 	.join:hover{

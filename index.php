@@ -171,6 +171,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div class="explore" >
   <p class="main-expo" data-aos="fade-up" data-aos-duration="900">Explore</p>
   <div class="expo-line" data-aos="fade-up" data-aos-duration="900"></div>
+
   <div class="expo exc" style="margin-top:2rem;">
    <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-left" data-aos-duration="800" data-aos-delay="300">
      <img src="images/school.svg">
@@ -597,9 +598,9 @@ function startIt()
     <p>Give Us Your Feedback</p>
     <div class="feed_msg"> <p id="feed_msg"></p></div>
     <form method="post" autocomplete="off" enctype="multipart/fomr-data" id="feedback_form">
-    <input type="text" placeholder="Your Name" id="user_name_pop">
-    <input type="text" placeholder="Your Email" id="user_email_pop">
-    <textarea rows="4" class="textarr textaxx" placeholder="Write Your Message Here...." id="user_feedback_pop"></textarea>
+    <input type="text" placeholder="Your name" id="user_name_pop">
+    <input type="text" placeholder="Your email" id="user_email_pop">
+    <textarea rows="4" class="textarr textaxx" placeholder="Write your message here...." id="user_feedback_pop"></textarea>
     <button type="button" value="Send" class="btn-send"  id="user_btn_pop" >Send</button>
     </form>
   </div>
