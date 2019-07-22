@@ -31,10 +31,7 @@ crossorigin="anonymous">
 <link href="css/footer.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 <style>
-.banner{
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 69%);
-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 69%);
-}
+
 </style>
 </head>
 
@@ -53,7 +50,7 @@ clip-path: polygon(0 0, 100% 0, 100% 100%, 0 69%);
     <div class="progress-bar" id="myBar"></div>
   </div>   
 
-<header id="f">
+<header id="f" style="background:black;">
 <div class="logo">
 <ul>
 <li><a href="index.php"><img src="images\imnitian.png"></a></li>
@@ -136,13 +133,14 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
 
-<div class="banner">
-  <div class="overlay"></div>
+
+  
 <div class="center">
 <p>NITs Ranking <span id="rank_yr">2016</span></p>
 <p class="sub-center">rankings are based on nirf survey</p>
+<div class="line_rnk"> </div>
 </div>
-</div>
+
 
 <div class="clg">
 <p class="wlc-content">In publishing and graphic design, Lorem
@@ -164,6 +162,11 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
  allows designers to design the form 
  of the content before the content itself</p>
 
+ <div class="search_clg">
+ <p>Search</p>
+<input type="search" id="search" placeholder="eg. srinagar">
+</div>
+
 <table>
 <th>Serial No.</th>
 <th>NIT Name</th>
@@ -178,7 +181,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
 <div class="linkx">
-<p class="links">Useful Links</p>
+<p class="links">Links</p>
 <div class="line"></div>
 <p><a href="ranking-19.php" class="x" >NITs Ranking 2019</a></p>
 <p><a href="ranking-18.php" class="x" >NITs Ranking 2018</a></p>
@@ -265,6 +268,19 @@ $(document).ready(function(){
 
 
 });
+
+
+/*==================== Search ranking =========================*/
+$(function()
+{ //instead of $(document).ready(function(){}) you ncan use this short hand property
+    $('#search').on('keyup',function(){
+
+  var value = $(this).val().trim().toLowerCase();
+         $('#rank_16 tr').filter(function(){
+             $(this).toggle($(this).text().toLowerCase().indexOf(value)>-1)
+         })
+    })
+})
 
 
  /*==================== Menu toggle =========================*/

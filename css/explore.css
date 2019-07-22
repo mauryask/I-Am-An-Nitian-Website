@@ -32,7 +32,7 @@ height:5px;
 }
 
 .explore .expo  div{
-    width:10rem;
+    width:9rem;
     height:auto;
     border-radius:12px;
     margin:1.3rem;
@@ -52,8 +52,8 @@ height:5px;
 }
 
 .explore .expo div img{
- width:100px;
- height:100px;
+ width:82px;
+ height:82px;
  left:50%;
  transform: translate(-50%);
  position: relative;
@@ -62,6 +62,7 @@ height:5px;
 
   
 .explore .expo div p{
+  font-size:15px;
  text-align:center;
     color:gray;
     padding: 0.5rem 0 0.5rem 0;
