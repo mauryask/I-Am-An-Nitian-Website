@@ -86,7 +86,6 @@ th,td{
      width:95%;
 }
 
-
 tr{
     border-bottom:1px solid rgba(200,200,200,1);
 }
@@ -101,6 +100,7 @@ tbody td{
     border-collapse: collapse;
     color:rgba(90,90,90,1);
 }
+
 
 
 .clg .search_clg {
@@ -124,6 +124,7 @@ tbody td{
     letter-spacing: 0.2px;
     background:rgba(250,250,250,1);
 }
+
 
 
 footer{
@@ -171,11 +172,95 @@ text-decoration:underline;
     position:relative;
 }
 
+.center .break{
+    display:none;
+}
+
+.center .sub-center .brk{
+    display:none;
+}
+
 
 /*=============================Responsive design======================*/
 @media (max-width:991px)
 {
-   
+    body{
+        overflow-x: hidden;
+    }
+.center{
+    margin-top:7rem;
+}
+
+    .center .break{
+        display:block;
+        margin-top:-2.8rem;
+    }
+
+    .center .sub-center{
+        margin-bottom: 0;
+    }
+
+    .center .sub-center .brk{
+        display:block;
+        margin-top:-1.6rem;
+    }
+
+  .center p, #rank_yr{
+font-size:32px;
+  } 
     
+  .center .sub-center{
+      font-size:24px;
+  }
+
+.center .line_rnk{
+    width:8rem;
+}
+
+
+.clg{
+  padding:0 1.rem 0 1rem;
+}
+
+.clg .wlc-content{
+    font-size:15px;
+    line-height:27px;
+}
+
+.clg .search_clg {
+    margin:2.1rem 0 1.2rem 0;
+   }
+
+.clg .search_clg #search{
+  margin: 0 auto;
+width:17rem;
+}
+
+table{
+    margin-top:0;
+    line-height:21px;
+    letter-spacing: 0.1px;
+    font-size:14px;
+}
+
+table tbody td{
+    padding:12px 2px 12px 2px;
+}
+
+.linkx{
+    padding:0;
+  margin: 0 auto;
+  width:100%;
+  text-align:center;
+  margin-top:5rem;
+}
+
+.linkx .links{
+    text-align:center;
+}
+
+ .line{
+  margin: 0 auto;  
+}
 
 }

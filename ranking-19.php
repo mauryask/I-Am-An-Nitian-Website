@@ -123,19 +123,14 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
     <div><input type="text"  placeholder="Search"><button><i class="fas fa-search"></i></button></div>
   </div>
 
-<style>
-  @media (max-width:991px){
-
-  }
-  </style>
 
 </header>
 
 
 
 <div class="center">
-<p>NITs Ranking <span id="rank_yr">2019</span></p>
-<p class="sub-center">rankings are based on nirf survey</p>
+<p>NITs Ranking <span id="rank_yr" ><span class="break"><br></span>2019</span></p>
+<p class="sub-center">rankings are based <span class="brk"><br></span>on nirf survey</p>
 <div class="line_rnk"> </div>
 </div>
 

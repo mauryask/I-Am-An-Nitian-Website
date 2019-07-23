@@ -445,7 +445,7 @@ color:gray;
 .about{
 	margin-left:3rem;
 	flex-direction:column;
-	margin-bottom:3rem;
+	margin-bottom:0;
 	margin-top:1rem;
 }
 .about .about-text p{
@@ -454,13 +454,14 @@ color:gray;
 .about-ln
 {
 	display:block; 
+	background:rgba(37, 116, 169, 1);
 }
 
 .about-head
 	{
 		display:block;
 		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-		color:rgba(256,0,0,0.5);
+		color:rgba(37, 116, 169, 1);
 		margin-top:2rem;
 	}
 

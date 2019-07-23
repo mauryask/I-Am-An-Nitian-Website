@@ -75,7 +75,7 @@ body{
              height:auto;
              width:355px;
              box-shadow:0 0 4px 2px rgba(0,0,0,0.7);
-               background:rgba(0,0,0,0.7);
+             background:rgba(250,250,250,1);
              border-radius:5px 0 0 5px;
              position:relative;
          }
@@ -100,10 +100,10 @@ body{
            text-align: center;
            border-radius:4px;
            outline: none;
-           border: 1px solid rgba(200,200,200,1);
+           border: 1px solid rgba(170,170,170,1);
            background: transparent;
            font-size:14px;
-           color:rgba(130,130,130,1);
+           color:rgba(110,110,110,1);
          }
  
          .popup .popup-content #feedback_form{

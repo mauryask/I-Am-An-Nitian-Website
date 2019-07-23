@@ -185,7 +185,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
      <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-left" data-aos-duration="800" data-aos-delay="600">
           <img src="images/stage.svg" >
           <p>College Fests</p>
-         </div>
+         </div>  
        
    <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-left" data-aos-duration="800" data-aos-delay="750">
       <img src="images/research.svg">
@@ -262,7 +262,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
          <p>Sell Project</p>
   </div>
   
-  <div  class="appx_expo" onclick="sweet_alert()" >
+  <div  class="appx_expo" onclick="location.href='ranking-19.php'" >
   <img src="images/infographic.svg">
       <p>College Ranking</p>
       </div>
@@ -278,7 +278,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 </div>
 <!--==================  Mobile version of updates  =================-->
-<div class="respo_not" >
+<div class="respo_not">
 <div class="respo_head"><p>Updates</p></div>
 <div id="respo_csp" onmouseover="stop_It()"  onmouseout="start_It()">
 <div class="respo_cont" style="margin-top:9px;">
