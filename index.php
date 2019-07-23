@@ -341,11 +341,7 @@ function start_It()
 <div id="csp" onmouseover="stopIt()"  onmouseout="startIt()">
 <div class="contentx">
   NITs (National Institute Of Technologies) are 
-    the mo <span class="blinker">New</span>
-</div>
-<div class="contentx">
-Lorem Ipsum is simply dummy text of the printing and 
-typesetting industry
+    the mo <span class="blinker" style="display:none;">New</span>
 </div>
 <div class="contentx">
 Lorem Ipsum is simply dummy text of the
@@ -355,10 +351,7 @@ Lorem Ipsum is simply dummy text of the
 Lorem Ipsum is simply dummy text of the
  printing and typesetting industry 
 </div>
-<div class="contentx">
-  NITs (National Institute Of Technologies) are 
-    the mo 
-</div>
+
 <div class="contentx">
 Lorem Ipsum is simply dummy text of the
  printing and typesetting industry
@@ -369,12 +362,9 @@ Lorem Ipsum is simply dummy text of the
 </div>
 <div class="contentx">
   NITs (National Institute Of Technologies) are 
-    the mo 
+    the most..
 </div>
-<div class="contentx">
-Lorem Ipsum is simply dummy text of
- the printing and typesetting industryo
-</div>
+
 </div>
 </div>
 <!--==================  Sliding images  =================-->

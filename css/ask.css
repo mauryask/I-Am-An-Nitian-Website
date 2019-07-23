@@ -16,6 +16,7 @@ height:320px;
 margin-right:6rem;
 width:35%;
 overflow: hidden;
+border:1px solid rgba(210,210,210,1);
 }
 
 
@@ -25,6 +26,7 @@ overflow: hidden;
  background:rgba(255,196,105,0.6);
  text-align:center;
  padding-top:10px;
+ box-shadow:0 0 2px 2px rgba(210,210,210,1);
 }
 .upx .headingc
 {
@@ -34,7 +36,7 @@ overflow: hidden;
 .upx .headingc p,  .respo_head p{
 font-size:25px;
 font-weight:bold;
-color:rgba(120,120,120,1);
+color:rgba(70,70,70,1);
 text-transform:uppercase;
 letter-spacing: 0.5px;
 word-spacing: 0.5px;
@@ -43,25 +45,24 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .upx #csp .contentx{
-    margin:2px 9px 9px 9px;
-    padding:9px 4px 8px 15px;
+    margin:2px 9px 9px 7px;
+    padding:5px 4px 2px 8px;
     width:63%;
-    line-height:21px;
+    line-height:24px;
     color:rgba(90,90,90,1);
     cursor:pointer;
-    font-size:14px;
-    border-radius:2px;
+    font-size:15px;
 }
 
 .upx #csp{
-    position:fixed;
+    position:fixed;  
     overflow: hidden;
 }
 
 .mySlide{
     width:65%;
     height:320px;
-    border:1px solid rgba(256,0,0,0.1);
+    border:1px solid rgba(120,120,120,0.4);
 }
 
 .slidex{
