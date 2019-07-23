@@ -344,9 +344,11 @@ color:gray;
         position:relative;
 	}
 	  
+	.nit-logos{
+		margin-bottom:6rem;
+	}
+
 	  
-
-
 /*================ Mobile Version Responsive  =================*/ 
 
 @media (max-width:991px)
@@ -479,7 +481,7 @@ color:gray;
 		display: none;
 	}
 	.nit-logos{
-		margin-bottom: 2rem;
+		margin-bottom:5rem;
 	}
 
 	.main-expo{
