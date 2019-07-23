@@ -53,12 +53,12 @@ body{
 body  .clg{
     margin: 0 auto;
     margin-top:2.5rem;
-   width:80%;
+   width:70%;
    }   
 
 .clg .wlc-content{
     margin-bottom:1.5rem;
-    line-height:2rem;
+    line-height:1.8rem;
     letter-spacing: 0.7px;
     color:rgba(80,80,80,1);
     text-align: justify;
@@ -127,16 +127,12 @@ tbody td{
 
 
 
-footer{
-    margin-top:0;
-    width:100%;
-    bottom:0;
-    position:-webkit-sticky;
-}
+
 
 .linkx{
     padding-left:1.7rem;
-    margin-top:7rem;
+    margin-top:5rem;
+    margin-bottom:4rem;
 }
 .linkx .links{
     margin:2rem 0 0.2rem 0;
@@ -187,6 +183,9 @@ text-decoration:underline;
     body{
         overflow-x: hidden;
     }
+
+
+
 .center{
     margin-top:7rem;
 }
@@ -218,13 +217,13 @@ font-size:32px;
 }
 
 
-.clg{
-  padding:0 1.rem 0 1rem;
+body .clg{
+  width:80%;
 }
 
 .clg .wlc-content{
     font-size:15px;
-    line-height:27px;
+    line-height:1.8rem;
 }
 
 .clg .search_clg {
@@ -253,6 +252,7 @@ table tbody td{
   width:100%;
   text-align:center;
   margin-top:5rem;
+  margin-bottom:5rem;
 }
 
 .linkx .links{
@@ -262,5 +262,8 @@ table tbody td{
  .line{
   margin: 0 auto;  
 }
+
+
+
 
 }
