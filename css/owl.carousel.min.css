@@ -74,18 +74,18 @@ padding:7px;
 .owl-carousel .owl-item img
 {display:block;
 /*by x*/
-left:50%;
-transform:translate(-50%);
-position:relative;
+margin:0 auto;
 outline: none;
 background: rgba(256,256,256,1);
 box-shadow: 1px 1px 1px 1px rgba(210,210,210,1);
 	border-radius:50%;
-	padding:0.8em;
+	padding:0.7em;
 cursor:pointer;
 width:130px;
 height:130px;
 }
+
+
 /*by x*/
 .owl-carousel .owl-item img:hover{
 	  border:1px solid rgba(190,190,190,1);

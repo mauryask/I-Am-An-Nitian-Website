@@ -139,7 +139,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 
 
-
 <div class="clg">
 <p class="wlc-content">In publishing and graphic design, Lorem
  ipsum is a placeholder text commonly used 

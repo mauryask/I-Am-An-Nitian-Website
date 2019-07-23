@@ -197,16 +197,21 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         <p>College Reviews</p>
        </div>
   </div>
-  <div class="expo exc">     
+  <div class="expo exc"> 
+    
+  
+  <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-right" data-aos-duration="800" data-aos-delay="850">
+         <img src="images/qa.svg">
+         <p>Ask Questions</p>
+        </div>
+
+
   <div class="appx" onclick="sweet_alert()" data-aos="flip-right" data-aos-duration="800" data-aos-delay="1000">
         <img src="images/books.svg">
         <p>Donate Books</p>
        </div>
        
-      <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-right" data-aos-duration="800" data-aos-delay="850">
-         <img src="images/project.svg">
-         <p>Sell Project</p>
-        </div>
+    
          <div class="appx" onclick="location.href='ranking-19.php'" data-aos="flip-right" data-aos-duration="800" data-aos-delay="700">
       <img src="images/infographic.svg">
       <p>College Ranking</p>
@@ -228,7 +233,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   <p>Colleges</p>
  </div>
  
-<div  class="appx_expo"" onclick="sweet_alert()" >
+<div  class="appx_expo" onclick="sweet_alert()" >
  <img src="images/exam.svg">
    <p>Exams</p>
   </div>
@@ -252,16 +257,16 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 <!--================ Second explore tabs ==============-->
 
+<div  class="appx_expo" onclick="sweet_alert()" >
+<img src="images/qa.svg">
+         <p>Ask Questions</p>
+  </div>
+
 <div class="appx_expo" onclick="sweet_alert()"  id="appx_left">
 <img src="images/books.svg">
         <p>Donate Books</p>
  </div>
- 
-<div  class="appx_expo"" onclick="sweet_alert()" >
-<img src="images/project.svg">
-         <p>Sell Project</p>
-  </div>
-  
+   
   <div  class="appx_expo" onclick="location.href='ranking-19.php'" >
   <img src="images/infographic.svg">
       <p>College Ranking</p>
@@ -606,7 +611,7 @@ function startIt()
     <div class="item"><img src="images\nit-logo\nit durgapur.png"><p>nit Durgapur</p></div>
     <div class="item"><img src="images\nit-logo\nit silchar.png"><p>nit silchar</p></div>
     <div class="item"><img src="images\nit-logo\nit jaipur.png"><p>mnit Jaipur</p></div>
-    <div class="item"><img src="images\nit-logo\nit warangal.png"><p>nit Warangal</p></div>
+    <div class="item"  ><img src="images\nit-logo\nit warangal.png"><p>nit Warangal</p></div>
     <div class="item"><img src="images\nit-logo\nit calicut.png"><p>nit Calicut</p></div>
     <div class="item"><img src="images\nit-logo\nit nagpur.png"><p>vnit Nagpur</p></div>
     <div class="item"><img src="images\nit-logo\nit surat.png"><p>svnit Surat</p></div>

@@ -29,7 +29,6 @@ body{
 }
 
 
-
 .center{
     width:100%;
     font-weight:bold;
@@ -50,8 +49,10 @@ body{
 }
 
 
+
+
 body  .clg{
-    margin: 0 auto;
+    margin: 0 auto;   
     margin-top:2.5rem;
    width:70%;
    }   
