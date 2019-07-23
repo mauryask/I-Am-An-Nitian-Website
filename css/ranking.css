@@ -18,14 +18,15 @@ body{
 
 
 #loader{
+    top:0;
     width:100%;
-    height:100vh;
-    background:rgb(252,252,252)  url('loaderx.gif');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:4rem;
-    position: fixed;
-    z-index:555;
+   height:100vh;
+   background:#DfDfDf url('loaderx.gif');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size:4rem;
+   position: fixed;
+   z-index:555;
 }
 
 

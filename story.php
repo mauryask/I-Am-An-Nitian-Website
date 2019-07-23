@@ -14,9 +14,9 @@ session_start(); //starting session start
 ?>
 
 <!DOCTYPE html>
-<html lang="en" oncontextmenu="return false">
+<html lang="en" oncontextmenu="return false">    
 <head>
-<title>I Am An Nitian | Home</title>
+<title>I Am An Nitian | Success Story</title>
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <!--  Disabling double tap to zoom in mobile version -->
 <meta name="viewport" content= "width=device-width, user-scalable=no">
