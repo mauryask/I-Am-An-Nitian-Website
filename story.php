@@ -54,7 +54,7 @@ crossorigin="anonymous">
     <div class="progress-bar" id="myBar"></div>
   </div>   
 
-  <header id="f" style="background:black;">
+  <header id="f" style="background:rgba(0,0,0,01);">
 <div class="logo">
 <ul>
 <li><a href="index.php"><img src="images\imnitian.png"></a></li>
@@ -134,7 +134,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
 <div class="story">
-    <p data-aos="fade-up" data-aos-duration="800">Sucess Stories</p>
+    <p data-aos="fade-up" data-aos-duration="800">SuCcess Stories</p>
     <div class="str_line" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100"></div>
 </div>
 

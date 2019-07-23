@@ -62,14 +62,14 @@
 
 .story p{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   color:rgba(256,0,0,0.6);
+   color:rgba(37, 116, 169, 1);
 }
 
 .story .str_line{
     margin: 0 auto;
-    width:19rem;
+    width:20rem;
     height:5px;
-    background:rgba(256,0,0,0.6);
+    background:rgba(37, 116, 169, 1);
 }
 
 

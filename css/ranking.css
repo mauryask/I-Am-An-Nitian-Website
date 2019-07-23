@@ -36,7 +36,7 @@ body{
     font-size:50px;
     text-transform: uppercase;
     margin-top:9rem;
-    color:rgba(256,0,0,0.8);
+    color:rgba(37, 116, 169, 1);
 }
 
  .center p{
@@ -77,7 +77,7 @@ body  .clg{
     margin-top:5px;
     height:5px;
     width:25rem;
-     background:rgba(256,0,0,0.7);
+     background:rgba(37, 116, 169, 1);
 }
 
 th,td{

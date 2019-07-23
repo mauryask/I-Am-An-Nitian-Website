@@ -19,14 +19,14 @@
     font-weight: bold;
     font-size:46px;
     text-transform: uppercase;
-    color:rgba(256,0,0,0.8);
+    color:rgba(37, 116, 169, 1);
     margin-top:2%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .expo-line{
   margin:0 auto;
 margin-top:5px;
-background:rgba(256,0,0,0.8); 
+background:rgba(37, 116, 169, 1);; 
 width:7rem; 
 height:5px;
 }
