@@ -17,18 +17,6 @@
 
 
 
-.banner{
-  width:100%;
-  height:500px;
- background:#116466 url(backbgx.jpg);
- background-size:cover;
- background-repeat: no-repeat;
- background-attachment: fixed;
- -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
- clip-path: polygon(0 0, 100% 0, 100% 100%, 0 70%);
-}
-
-
 
 #loader{
   top:0;
@@ -45,7 +33,8 @@
 
   
   .explore{
-      width:75%;
+    margin: 0 auto;
+      width:80%;
   }
   
   .explore .expo{

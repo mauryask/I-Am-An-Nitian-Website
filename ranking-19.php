@@ -133,8 +133,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
 
-
-  <div class="overlay"></div>
 <div class="center">
 <p>NITs Ranking <span id="rank_yr">2019</span></p>
 <p class="sub-center">rankings are based on nirf survey</p>
@@ -183,7 +181,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
 <div class="linkx">
-<p class="links">Links</p>
+<p class="links"> Explore More</p>
 <div class="line"></div>
 <p><a href="ranking-18.php" class="x" id="click_18">NITs Ranking 2018</a></p>
 <p><a href="ranking-17.php" class="x" id="click_17">NITs Ranking 2017</a></p>

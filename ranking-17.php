@@ -181,7 +181,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
 <div class="linkx">
-<p class="links">Links</p>
+<p class="links"> Explore More</p>
 <div class="line"></div>
 <p><a href="ranking-19.php" class="x" >NITs Ranking 2019</a></p>
 <p><a href="ranking-18.php" class="x" >NITs Ranking 2018</a></p>
