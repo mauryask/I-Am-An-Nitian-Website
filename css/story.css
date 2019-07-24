@@ -8,7 +8,7 @@
 * LinkedIn : https://www.linkedin.com/in/cyberthreatatnit/   
 */
 
-@import url('https://fonts.googleapis.com/css?family=Flamenco&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 	
 *{
 	outline:none;
@@ -51,204 +51,132 @@
 	height:100%;
 	position:absolute;
 	}
-	
- .story{
-    margin-top:10rem;
-    font-weight:bold;
-    font-size:60px;
-    text-transform: uppercase;
-    text-align:center;
-}
 
-.story p{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   color:rgba(37, 116, 169, 1);
-}
-
-.story .str_line{
+.main{
     margin: 0 auto;
-    width:20rem;
-    height:5px;
-    background:rgba(37, 116, 169, 1);
+    width:65%;
+    height:100vh;
+    margin-top:8rem;
 }
 
-
-/*===============================For left side image ============================*/
-
- .story_fst{
-     margin: 0 auto;
-     margin-top:5rem;
-    width:90%;
-    height:auto;
-   overflow:hidden;
-}
-
-.story_fst .str_txt{
-    width:800px;
-    height:auto;
-    background:#282828;
-   float:right;
-   margin-top:7rem;
-   margin-right:5rem;
-   border-top-right-radius:100px; 
-   border-bottom-left-radius:100px; 
-}
-
-.story_fst .str_txt .intv{
-margin:0 auto;
-margin-top:1rem;
-width:80%;
-line-height: 25px;
-text-align: justify;
-letter-spacing: 0.2px;
-font-size:15px;
-}
-
-
-.story_fst .str_txt .detail{
-    margin:0 auto;
-    width:20rem;
-    margin-top:1.5rem;
-    padding:1px 0 4px 0;
-    background:orange;
-    -webkit-clip-path: polygon(100% 0, 87% 51%, 100% 100%, 0 100%, 14% 54%, 0 0);
-    clip-path: polygon(100% 0, 87% 51%, 100% 100%, 0 100%, 14% 54%, 0 0);
-   }
-
-.story_fst .str_txt .name ,.exam{
-    text-align:center;
- font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
- font-weight: bold;
- font-size:30px;
- color:rgba(60,60,60,1);
-}
-
-.exam{
-    font-size:17px;
-    margin-top:1px;
-}
-
-
-.story_fst .str_img{
-    width:300px;
-    height:300px;
-   z-index:2;
-   left:10%;
-   position: relative;
-   float:left;
-
-}
-
-.story_fst .str_img img{
+.child_x{
+    overflow: hidden;
     width:100%;
-    height:100%;
-    border:18px solid;
-    border-radius:50%;
+    height:auto;
+box-shadow:0 0 2px 2px rgab(90,90,90,1);
+padding:25px;
+text-align: justify;
+margin-bottom:3rem;
+background:#222233;
 }
 
 
+.hero .himg {
+border-radius:2px;
+float:right;
+cursor:pointer;
+box-shadow: 0 0 8px 2px rgba(210,210,210,1);
+}
 
-/*===============================For Right side image ============================*/
-
-
-.story_fst .str_imgk{
-    width:300px;
-    height:300px;
-   right:10%;
-   position: relative;
-  float:right;
-  z-index:2;
+.hero p{
+    line-height:30px;
+    letter-spacing: 0.3px;
+    font-size:17px;
+    color:#AACCFF;
+    font-family: 'Playfair Display', serif;
 }
 
 
-.story_fst .str_txtk .detailk{
-    margin:0 auto;
-    width:20rem;
-    margin-top:1.5rem;
-    padding:1px 0 4px 0;
-    background:orange;
-    -webkit-clip-path: polygon(100% 0, 87% 51%, 100% 100%, 0 100%, 14% 54%, 0 0);
-    clip-path: polygon(100% 0, 87% 51%, 100% 100%, 0 100%, 14% 54%, 0 0);
-   }
+.child_x:nth-child(odd) .hero .himg{
+    float:left;
+   margin:0 27px 3px 0;
+    }
+    
 
+    .child_x:nth-child(even) .hero .himg{
+        float:right;
+       margin:0 0 0 20px;
+        }
+        
 
-   .story_fst .str_txtk .intv{
-    margin:0 auto;
-    margin-top:1rem;
-    width:80%;
-    line-height: 25px;
-    text-align: justify;
-    letter-spacing: 0.2px;
-    font-size:15px;
+.hero .himg div{
+    width:220px;
+    padding:5px;
+    border:1px solid rgba(210,210,210,1);
+    background:rgba(240,240,240,1);
+}
+
+.hero .himg div p
+{   
+    line-height:18px;
+    letter-spacing:0;
+    color:rgba(40,40,40,1);
+}
+
+.hero .himg div:nth-child(1)
+{   
+
+    background:rgba(255,196,105,1);
+}
+
+.hero  div:nth-child(1) img{
+    width:100%;
+    height:80%;
+    border-radius:2px;
     }
 
-.story_fst .str_txtk .namek ,.examk{
-text-align:center;
- font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
- font-weight: bold;
- font-size:30px;
- color:rgba(60,60,60,1);
-}
-
-.examk{
-    font-size:17px;
-}
-
-
-.story_fst .str_imgk img{
-    width:100%;
-    height:100%;
-    border:18px solid;
-    border-radius:50%;
-}
-
-.story_fst .str_txtk{
-    width:800px;
-    height:auto;
-   background:rgba(255,196,105,0.4);
-   float:left;
-   margin-top:7rem;
-   margin-left:5rem;
-   border-bottom-right-radius:100px; 
-   border-top-left-radius:100px; 
-   z-index:1;
-   padding-bottom:20px;
-}
-
-
-
-.story_fst .about_str{
-    margin:0 auto;
-    margin:1rem 2rem 0 6rem;
-    width:75%;
-text-align:justify;
-}
-
-.story_fst .about_str p{
-    font-family: 'Flamenco', cursive;
-    font-size:16px;
-    line-height: 25px;
-    letter-spacing: 0.4px;
-}
-
-.story_fst .str_txt{
-padding-bottom:20px;
-}
-
-
-
-/*================  Fooetr Section  =================*/ 
-
-footer{
-	margin-top:18rem;
-}
-
-/*================ Mobile Version explore tabs  =================*/ 
-
-
-/*================ Mobile Version Responsive  =================*/ 
-
-@media (max-width:991px)
+    
+.hero .himg div:nth-child(2)
 {
-
+    text-align:center;
+  font-weight:bold;
+  line-height:20px;
+  background:rgba(255,196,105,1);
+  margin-top:0;
 }
+
+
+.hero button
+{
+    padding:0.4rem;
+    width:10rem;
+    cursor:pointer;
+    box-shadow: 0 0 7px 2px rgba(210,210,210,1);
+    margin: 20px 0 12px 0;
+    left:50%;
+    transform: translate(-50%);
+    position: relative;
+}
+
+#showmex, #showmey, #showmez, #showmek{
+    display:none;
+}
+
+.hero .himg div:nth-child(2) p:nth-child(1)
+{
+   font-size:16px;
+}
+
+.hero .himg div:nth-child(2) p:nth-child(2)
+{
+   font-size:14px;
+}
+
+
+.hero .himg div:nth-child(2) p:nth-child(3)
+{
+   font-size:13px;
+}
+
+
+.hero .himg div:nth-child(2) p:nth-child(4)
+{
+   font-size:12px;
+}
+
+
+
+
+
+
+
