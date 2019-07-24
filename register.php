@@ -10,7 +10,7 @@ if(isset($_POST['name']))
 /*==========  Checking whether fields are empty  ===========*/
   if(empty($_POST['name']) || empty($_POST['user_email']) || empty($_POST['phone']) || empty($_POST['clg']) || empty($_POST['state']) || empty($_POST['user_pass']))
   {
-     echo 'please fill all the fields';
+     echo 'please fill out the credentials';
      exit;
   }
 else

@@ -142,10 +142,10 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   <div class="overlay"></div>
 
 <div class="textx">
-<p class="dynamic-text" data-aos='fade-up' data-aos-duration="900">I AM AN <span id="dyno"><br/></span><span class="text"></span><p>
-<p class="msg" data-aos='fade-up' data-aos-duration="900" data-aos-delay="500">Join The Biggest Student Community</p>
+<p class="dynamic-text" data-aos='fade-up' data-aos-duration="600">I AM AN <span id="dyno"><br/></span><span class="text"></span><p>
+<p class="msg" data-aos='fade-up' data-aos-duration="600" data-aos-delay="500">Join The Biggest Student Community</p>
 
-<button class="join" onclick="show_signup()" data-aos='fade-up' data-aos-duration="800" data-aos-delay="600"> Join Now</button>
+<button class="join" onclick="show_signup()" data-aos='fade-up' data-aos-duration="600" data-aos-delay="600"> Join Now</button>
 
 <div class="social">
     <a  target="_blank" href="https://www.facebook.com/iamannitian" alt="facebook"><img  class="svg" src="images/facebook.svg"  ></a>
@@ -168,8 +168,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div id="notify-popup"></div>
 <!--================ Explore Section ====================-->
 <div class="explore" >
-  <p class="main-expo" data-aos="fade-up" data-aos-duration="900">Explore</p>
-  <div class="expo-line" data-aos="fade-up" data-aos-duration="900"></div>
+  <p class="main-expo" data-aos="fade-up" data-aos-duration="600">Explore</p>
+  <div class="expo-line" data-aos="fade-up" data-aos-duration="600"></div>
 
   <div class="expo exc" style="margin-top:2rem;">
    <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-left" data-aos-duration="800" data-aos-delay="300">
@@ -340,7 +340,7 @@ function start_It()
   </script>
  <!--===================== Update Section ===================--> 
  
-<div class="upg" data-aos="fade-up" data-aos-duration="800">
+<div class="upg" data-aos="fade-up" data-aos-duration="600">
 <div class="upx">
 <div class="headingc"><p>Updates</p></div>
 <div id="csp" onmouseover="stopIt()"  onmouseout="startIt()">
@@ -457,8 +457,8 @@ function startIt()
   <p class="main-expo"  data-aos="fade-up" data-aos-duration="800">News <span id="ns-art">& Articles</span></p>
  
   <div id="expo-line"  class="expo-line" style="width:15rem;position:relative;margin-bottom:3rem;"
-  data-aos="fade-up" data-aos-duration="800" ></div>
-  <div class="about-ln" style="width:15%;margin:0  0 1rem  0;" data-aos="fade-up" data-aos-duration="800"></div>
+  data-aos="fade-up" data-aos-duration="600" ></div>
+  <div class="about-ln" style="width:15%;margin:0  0 1rem  0;" data-aos="fade-up" data-aos-duration="600"></div>
  <?php 
             $query = "select * from tbl_images order by id desc limit 8";
              $result = mysqli_query ($conn, $query);
@@ -602,7 +602,7 @@ function startIt()
 
 
   <!--============== Nits Logo =====================-->
-   <div class="nit-logos" data-aos="fade-up" data-aos-duration="800">
+   <div class="nit-logos" data-aos="fade-up" data-aos-duration="600">
     <div class="owl-carousel owl-theme">
     <div class="item"><img src="images\nit-logo\nit trichy.png"><p>nit trichy</p></div>
     <div class="item"><img src="images\nit-logo\nit rourkela.png"><p>nit rourkela</p></div>
@@ -893,7 +893,7 @@ else
 }
 else
 {
-  $('#feed_msg').text('Please fill all the fields');
+  $('#feed_msg').text('please fill out the credentials');
 }
 
 function funfeed()

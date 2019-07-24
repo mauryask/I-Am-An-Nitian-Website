@@ -8,7 +8,7 @@ if(isset($_POST['email']))
 {
 if(empty($_POST['email']) || empty($_POST['pass']))
 {
-  echo 'please fill all the fields';
+  echo 'please fill out the credentials';
   exit;
 }
  else
