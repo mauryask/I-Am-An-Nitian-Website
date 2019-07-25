@@ -81,8 +81,19 @@ else
     }
 
     /*=================  password tripple layer encryption  ==================*/ 
+
+   $pass =  test_input($_POST['user_pass']);
+
+   if(strlen($pass) <6) // checking the length of p[assword
+   {
+       echo 'password must be of atleast 6 characters';
+       exit;
+   }
+   else
+   {
     $pass = crypt(sha1(md5(test_input($_POST['user_pass']))),'imn'); 
     $cnf_pass = crypt(sha1(md5(test_input($_POST['cnf_pass']))),'imn'); 
+   }
 
 
     /*=================  Checking if both passwords are same  ==================*/

@@ -26,7 +26,7 @@ if(empty($_POST['email']) || empty($_POST['pass']))
   $query="select * from admin where email='".$email."' and pswd='".$pass."'  ";
   }
   
-  $result=mysqli_query($conn,$query);
+  $result=mysqli_query($conn,$query);  
   
   if($row = mysqli_fetch_array($result))
   {
