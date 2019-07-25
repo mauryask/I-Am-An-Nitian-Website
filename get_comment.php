@@ -10,7 +10,7 @@ if($result)
     {
        echo '<div>
                  <p style="font-size:14px;font-weight: bold;color:#8860d0;letter-spacing:0;"><i class="fas fa-user-circle user_icon"></i> &nbsp;'.$row['user_name'].'</p>
-                 <p style="font-size:15px;letter-spacing:0.5px;line-height:24px;">'.$row['comment'].'</p>
+                 <p class="cmt_got" style="font-size:15px;letter-spacing:0.5px;line-height:24px;">'.$row['comment'].'</p>
               </div>
             <div class="cmt-line"></div>';
     }

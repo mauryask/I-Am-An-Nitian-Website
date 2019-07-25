@@ -118,6 +118,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </li>
 </ul>
 </nav>
+
 <!--================ Mobile Version Menu ====================-->
 <div class="menu-toggle">
 <i class="fas fa-bars"></i>
@@ -145,7 +146,10 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
            <div class="horizon"></div>
            <p>
              <span><?php  echo $row['heading'];  ?></span><br></p>
-           <p style="text-align:justify; margin-top:1rem;">
+           <p style="text-align:justify; margin-top:1rem;
+            font-family: 'Playfair Display', serif; font-size:17px;
+            letter-spacing:0.3px; 
+            color:#050505;">
          <?php echo $row['text']; ?>
         </p>
         <div class="horizon horizonx"></div>

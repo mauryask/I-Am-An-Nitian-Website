@@ -7,7 +7,9 @@
 * GitHub : https://github.com/pnstech
 * LinkedIn : https://www.linkedin.com/in/cyberthreatatnit/   
 */
-	
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
 *{
 	outline:none;
 	margin:0;
@@ -23,7 +25,7 @@
 
 
 	body{
-	background: rgba(250,250,250,1);	
+	background: #fafafa;	
 	}			
 
 /*================  Page Preloader  =================*/ 
@@ -118,7 +120,6 @@
 	
 	.join:hover{
 		background:rgba(253, 38, 0, 0.986);
-		color:rgba(255,255,255,0.8);
 		transition: 0.1s;
 	}
 	
@@ -179,7 +180,7 @@
 		width:5px;
 		height:14px;
 		border-radius:50%;
-		background:rgba(255,255,255,0.8);
+		background:rgba(255, 255, 255, 0.8);
 		left:50%;
 		top:5px;
 		transform:translate(-50%,0);
@@ -202,7 +203,6 @@
 		}
 	}
 	
-
 	#nnk{
 		display:none;
 		line-height:4px;
@@ -231,20 +231,21 @@
 
 	.about .about-text{
 		font-weight: normal;
-		height: 300px;
+		height: auto;
 		flex: 45%;
 		align-self:center;
 		padding:0.7rem 1rem 0 0;
-		color:rgba(70,70,70,1);
+		color:#050505;
 		text-align:justify;
-		font-size: 14px;
+		font-size: 16px;
 		}
 	
-	.about div  p
+	.about div p
 	{ 
 		letter-spacing:0.7px;
-		line-height:31px;
+		line-height:30px;
 		word-spacing:0.5px;
+		font-family: 'Playfair Display', serif;
 	}
 	
 	.about-ln{
@@ -330,18 +331,19 @@ color:gray;
 	}
 
 	.more_btn button{
-		width:11rem;
+		width:14rem;
 		padding:0.6rem 0 0.6rem 0;
-		border-radius:20px;
 		outline:none;
 		border:none;
-		background: #4CAF50;
+		background:#4CAF50;
 		color:white;
 		cursor:pointer;
-		font-size:16px;
+		font-size:17px;
 		left:50%;
 		transform:translate(-50%);
-        position:relative;
+		position:relative;
+		letter-spacing: 0.4px;
+		text-transform: uppercase;
 	}
 	  
 	.nit-logos{

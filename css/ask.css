@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 
 .upg{
   margin:0 auto;
@@ -45,14 +46,15 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .upx #csp .contentx{
-    margin:2px 9px 9px 7px;
+    margin:2px 9px 10px 7px;
     padding:5px 4px 2px 8px;
-    width:63%;
+    width:58%;
     line-height:24px;
-    color:rgba(90,90,90,1);
+    color:#050505;
     cursor:pointer;
     font-size:15px;
-}
+    font-family: 'Playfair Display', serif;
+  }
 
 .upx #csp{
     position:fixed;  

@@ -75,7 +75,7 @@ body  .clg{
     margin-top:5px;
     height:5px;
     width:25rem;
-     background:rgba(37, 116, 169, 1);
+    background:rgba(37, 116, 169, 1);
 }
 
 th,td{
@@ -143,9 +143,9 @@ tbody td{
 
 
 .linkx .line{
-    background:red;
+    background:Rgba(100,100,100,1);
     width:5rem;
-    height:3px;
+    height:2px;
     margin-bottom:5px;
 }
 

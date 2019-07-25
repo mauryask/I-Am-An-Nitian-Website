@@ -168,8 +168,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div id="notify-popup"></div>
 <!--================ Explore Section ====================-->
 <div class="explore" >
-  <p class="main-expo" data-aos="fade-up" data-aos-duration="600">Explore</p>
-  <div class="expo-line" data-aos="fade-up" data-aos-duration="600"></div>
+  <p class="main-expo" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>Explore</p>
+  <div class="expo-line" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'></div>
 
   <div class="expo exc" style="margin-top:2rem;">
    <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-left" data-aos-duration="800" data-aos-delay="300">
@@ -201,7 +201,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
     
   
   <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-right" data-aos-duration="800" data-aos-delay="850">
-         <img src="images/qa.svg">
+         <img src="images/question.svg">
          <p>Ask Questions</p>
         </div>
 
@@ -258,7 +258,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <!--================ Second explore tabs ==============-->
 
 <div  class="appx_expo" onclick="sweet_alert()" >
-<img src="images/qa.svg">
+<img src="images/question.svg">
          <p>Ask Questions</p>
   </div>
 
@@ -340,7 +340,7 @@ function start_It()
   </script>
  <!--===================== Update Section ===================--> 
  
-<div class="upg" data-aos="fade-up" data-aos-duration="600">
+<div class="upg" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>
 <div class="upx">
 <div class="headingc"><p>Updates</p></div>
 <div id="csp" onmouseover="stopIt()"  onmouseout="startIt()">
@@ -434,16 +434,16 @@ function startIt()
     <p class="about-head">About Us</p>
     <div class="about-ln"></div> 
     <div class="about">
-     <div class="about-img" id="about-img" data-aos="fade-right" data-aos-offset="200"  data-aos-easing="ease-in-sine" data-aos-duration="600">
+     <div class="about-img" id="about-img" data-aos="fade-right" data-aos-once='true' data-aos-offset="200"  data-aos-easing="ease-in-sine" data-aos-duration="600">
          <img src="images\us3.png" height="300px" width="100%">
      </div>
-    <div class="about-text" data-aos="fade-left" data-aos-offset="200"  data-aos-easing="ease-in-sine" data-aos-duration="600"> 
+    <div class="about-text" data-aos="fade-left" data-aos-offset="200" data-aos-once='true'  data-aos-easing="ease-in-sine" data-aos-duration="600"> 
     <p style="text-align:justify;" >
     NITs (National Institute Of Technologies) are 
     the most prestigious Engineering Institutions 
     of India after IITs. There are 31 NITs across the various states of India. 
    I AM AN NITIAN was a facebook page created in
-    July 2016 with an aim to connect all Nitians.  <span id="ab"> Today It has 30K+ followers on fb & 3K+ followers on Instagram. Now it is not 
+    July 2016 with an aim to connect all Nitians.  <span id="ab" style="font-family: 'Playfair Display', serif;"> Today It has 30K+ followers on fb & 3K+ followers on Instagram. Now it is not 
     limited to only a facebook page.
     But it has become the biggest student community.</span>
     Here you can check out the news & events related to each and every NIT.</p>
@@ -454,10 +454,10 @@ function startIt()
 <!--================ News Section ====================-->
 <div style="width:100%;height:1%;background:transparent;margin-top:4%;"></div>
 <div class="explore exp" style="margin-top:0;">
-  <p class="main-expo"  data-aos="fade-up" data-aos-duration="800">News <span id="ns-art">& Articles</span></p>
+  <p class="main-expo"  data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>News <span id="ns-art">& Articles</span></p>
  
   <div id="expo-line"  class="expo-line" style="width:15rem;position:relative;margin-bottom:3rem;"
-  data-aos="fade-up" data-aos-duration="600" ></div>
+  data-aos="fade-up" data-aos-duration="600" data-aos-once='true'></div>
   <div class="about-ln" style="width:15%;margin:0  0 1rem  0;" data-aos="fade-up" data-aos-duration="600"></div>
  <?php 
             $query = "select * from tbl_images order by id desc limit 8";
@@ -471,7 +471,7 @@ function startIt()
                       if ($i++ % 4 == 0) 
                       {
                       
-                        echo "<div class='expo' data-aos='fade-up' data-aos-duration='800'>";
+                        echo "<div class='expo' data-aos='fade-up' data-aos-duration='800' data-aos-once='true'>";
                       }
           
                 ?>        
@@ -482,7 +482,7 @@ function startIt()
               <?php 
               $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
               $text = implode(' ',array_slice(explode(' ', $row['text']),0,15)); //getting fires 19 words from text
-              echo '<p style="margin-top:2px;>'.'<span class="heading">'.$head.'</span>'." ".$text.'..</p>';
+              echo '<p style="margin-top:2px;>'.'<span class="heading" >'.$head.'</span>'." ".$text.'..</p>';
                   ?>   
                   </a>                                            
                 </div>   
@@ -503,7 +503,7 @@ function startIt()
               <?php   
               }
              ?>
-               <div class="more_btn" data-aos="fade-up" data-aos-duration="800"> <button type="button" onclick="location.href='more-news.php'">
+               <div class="more_btn" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'> <button type="button" onclick="location.href='more-news.php'">
                More News &nbsp;<i class="fas fa-chevron-circle-right"></i></button></div>
     </div>
 
@@ -602,7 +602,7 @@ function startIt()
 
 
   <!--============== Nits Logo =====================-->
-   <div class="nit-logos" data-aos="fade-up" data-aos-duration="600">
+   <div class="nit-logos" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>
     <div class="owl-carousel owl-theme">
     <div class="item"><img src="images\nit-logo\nit trichy.png"><p>nit trichy</p></div>
     <div class="item"><img src="images\nit-logo\nit rourkela.png"><p>nit rourkela</p></div>

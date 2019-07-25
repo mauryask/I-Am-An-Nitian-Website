@@ -402,12 +402,12 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 <div class="hero"> 
     <div class="himg">
-    <div><img src="images/ubaid.png" /></div>
-    <div><p>Shubham Maurya</p>
+    <div><img src="images/ubaid.png" /></div><div><p>Shubham Maurya</p>
     <p>AIR-1 GATE 2019</p>
     <p>NIT Raipur, Mechanical</p>
     <p>(2014-2018)</p></div>
     </div>
+    
     <p>
         In publishing and graphic design, Lorem ipsum is a 
         placeholder text commonly used to demonstrate the 

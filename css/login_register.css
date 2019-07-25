@@ -16,14 +16,12 @@
              }
   
              .signup .sign-card{
-              
-                 box-shadow:5px 5px 5px 5px rgba(0,0,0,0.9);
+                 box-shadow:0 0 5px 5px rgba(0,0,0,1);
                  background:rgba(220,220,220,1);
                   width:60%;
                  height:auto;
                  display:flex;
                  flex-direction: row;
-                 border-radius:0.4%;
                }
                
                .sign-card div{
@@ -151,11 +149,10 @@
                       padding:10px;
                       background:#4CAF50;
                       border:none;
-                      border-radius:4px;
                       font-size:17px;
                       color:white;
                       cursor: pointer;
-                    
+                    letter-spacing: 0.3px;
                     }
   
                     .sign-card .sign-form div p{
@@ -198,13 +195,12 @@
               }
   
               .login .log-card{
-                box-shadow:5px 5px 5px 5px rgba(0,0,0,0.9);
+                box-shadow:0 0 5px 5px rgba(0,0,0,1);
                 background:rgba(220,220,220,1);
                 width:33%;
                 height:auto;
                 display:flex;
                 flex-direction:column;
-                border-radius:1.3%;
                 position: relative;
               }
               .login .log-card div
@@ -269,10 +265,10 @@
                 padding:10px;
                 background:#4CAF50;
                 border:none;
-                border-radius:4px;
                 font-size:17px;
                 color:white;
                 cursor: pointer;
+                letter-spacing: 0.3px;
               }
   
               .login .log-card .cancel-log
