@@ -28,7 +28,6 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 crossorigin="anonymous">
 <link rel="icon" href="images/imnitian.png">
 
-<link href="css/animate.css" rel="stylesheet"  type="text/css">
 <link href="css/ask.css" rel="stylesheet"  type="text/css">
 <link href="css/explore.css" rel="stylesheet" type="text/css">
 <link href="css/index.css" rel="stylesheet"  type="text/css">
@@ -74,14 +73,14 @@ crossorigin="anonymous">
 <li><a href="more-news.php" class="homex" >News</a></li>
 <li><a href="#updf" class="homex">Updates</a></li>
 <li><a href="#about" class="homex" id="about_nav">About Us</a></li>
-<li><a class="sub-menu" style="width:115px;" id="exam">Exams <i class="fas fa-caret-square-down"></i></a>
+<!--<li><a class="sub-menu" style="width:115px;" id="exam">Exams <i class="fas fa-caret-square-down"></i></a>
 <ul>
 <li style="width:115px;"><a href="#">Jee</a></li>
 <li style="width:115px;"><a href="#">Gate</a></li>
 <li style="width:115px;"><a href="#">IES</a></li>
 <li style="width:115px;"><a href="#">UPSC</a></li>
 </ul>
-</li>
+</li>-->
 <!--
 <li>
 <button onclick="search()" style="text-transform: uppercase;letter-spacing: 0.8px; font-weight: bold;" id="searching">Search <i class="fas fa-search"></i></button>
@@ -173,6 +172,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   <div class="expo-line" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'></div>
 
   <div class="expo exc" style="margin-top:2rem;">
+  <!--
    <div class="appx" onclick="sweet_alert()" id="respo" data-aos-once="true"  data-aos="flip-left" data-aos-duration="800" data-aos-delay="300">
      <img src="images/school.svg">
      <p>Colleges</p>
@@ -199,21 +199,10 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
        </div>
   </div>
   <div class="expo exc"> 
-    
+    -->
   
-  <div class="appx" onclick="sweet_alert()" id="respo" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="850">
-         <img src="images/question.svg">
-         <p>Ask Questions</p>
-        </div>
 
-
-  <div class="appx" onclick="sweet_alert()" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="1000">
-        <img src="images/books.svg">
-        <p>Donate Books</p>
-       </div>
-       
-    
-         <div class="appx" onclick="location.href='ranking-19.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="700">
+    <div class="appx" onclick="location.href='ranking-19.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="700">
       <img src="images/infographic.svg">
       <p>Ranking</p>
      </div>
@@ -226,9 +215,23 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
           <img src="images/growth.svg">
           <p>Success Stories</p>
          </div>
+
+  <div class="appx" onclick="location.href='uPDxgdf.php'" id="respo" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="850">
+         <img src="images/question.svg">
+         <p>Ask Questions</p>
+        </div>
+
+
+  <div class="appx" onclick="location.href='uPDxgdf.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="1000">
+        <img src="images/books.svg">
+        <p>Donate Books</p>
+       </div>
+       
+    
      </div>
   <!--=========================== Mobile version horizontal tabs ======================-->
 <div class="mob-expo" style="margin-top:3rem;">
+<!--
 <div class="appx_expo" onclick="sweet_alert()"  id="appx_left">
   <img src="images/school.svg">
   <p>Colleges</p>
@@ -255,32 +258,33 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
      <p>College Reviews</p>
     </div>
 
-
+-->
 <!--================ Second explore tabs ==============-->
 
-<div  class="appx_expo" onclick="sweet_alert()" >
-<img src="images/question.svg">
-         <p>Ask Questions</p>
-  </div>
-
-<div class="appx_expo" onclick="sweet_alert()"  id="appx_left">
-<img src="images/books.svg">
-        <p>Donate Books</p>
- </div>
-   
-  <div  class="appx_expo" onclick="location.href='ranking-19.php'" >
+<div  class="appx_expo" onclick="location.href='ranking-19.php'" >
   <img src="images/infographic.svg">
-      <p>College Ranking</p>
+      <p>Ranking</p>
       </div>
     
 <div  class="appx_expo" onclick="sweet_alert()" >
 <img src="images/reunion.svg">
-            <p>Placements Data</p>
+            <p>Placements </p>
   </div>
   <div  class="appx_expo" onclick="sweet_alert()" id="appx_right">
   <img src="images/growth.svg">
           <p>Success Stories</p>
     </div>
+
+<div  class="appx_expo" onclick="location.href='uPDxgdf.php'" >
+<img src="images/question.svg">
+         <p>Ask Questions</p>
+  </div>
+
+<div class="appx_expo" onclick="location.href='uPDxgdf.php'"  id="appx_left">
+<img src="images/books.svg">
+        <p>Donate Books</p>
+ </div>
+   
 </div>
 </div>
 <!--==================  Mobile version of updates  =================-->
@@ -713,16 +717,7 @@ function startIt()
   AOS.init({ disable: 'mobile' }); //disabling the animations in mobile version
 </script>
 <script>
-function sweet_alert()
-{
-  Swal.fire({
-  title: 'Will be \nupdated soon !',
-  animation: false,
-  customClass: {
-    popup: 'animated tada'
-  }
-}); 
-}
+
   </script>
 <script>
 var myIndex = 0;

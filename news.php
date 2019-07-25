@@ -13,7 +13,7 @@ if(mysqli_num_rows($result)>0)
      $row=mysqli_fetch_array($result);
 }
 ?>
-
+<!DOCTYPE html>
 <html id="<?php echo $row['id']; ?>">
 <head>
 <title>I Am An Nitian | News</title>
@@ -66,7 +66,7 @@ crossorigin="anonymous">
 <li><a href="more-news.php" class="home" >News</a></li>
 <li><a href="index.php#updf" class="homex" >Updates</a></li>
 <li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
-<li><a class="sub-menu" style="width:115px;" id="exam">Exams <i class="fas fa-caret-square-down"></i></a>
+<!--<li><a class="sub-menu" style="width:115px;" id="exam">Exams <i class="fas fa-caret-square-down"></i></a>
 <ul>
 <li style="width:115px;"><a href="#">Jee</a></li>
 <li style="width:115px;"><a href="#">Gate</a></li>
@@ -74,7 +74,7 @@ crossorigin="anonymous">
 <li style="width:115px;"><a href="#">UPSC</a></li>
 
 </ul>
-</li>
+</li>-->
 <!--<li>
 <button onclick="search()" style="text-transform: uppercase;letter-spacing: 0.8px; font-weight: bold;" id="searching">Search <i class="fas fa-search"></i></button>
 </li>-->
