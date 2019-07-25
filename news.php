@@ -32,7 +32,7 @@ crossorigin="anonymous">
 <link href="css/news.css" type="text/css" rel="stylesheet">
 <link href="css/login_register.css" type="text/css" rel="stylesheet">
 <style>
-@media (max-width:991px)
+@media (max-width:991px)   
 {
    .menu-toggle{
 		margin-top:30px;

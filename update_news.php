@@ -47,8 +47,11 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 
 </style>
 </head>
-<body>
+<body onload="loadme()">
 
+  <!--================== Preloader ==========================-->
+<div id="loader">
+</div>
 <div class="main">
 
 <!--=================  Menu Button   ===================-->
@@ -96,7 +99,7 @@ if(mysqli_num_rows($result)>0)
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-
+<script src="js/main.js"></script>
 
 
 

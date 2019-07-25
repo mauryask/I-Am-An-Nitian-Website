@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
+
 *{
     margin:0;
     padding:0;
@@ -59,11 +62,12 @@ body  .clg{
    }   
 
 .clg .wlc-content{
-    margin-bottom:1.5rem;
     line-height:1.8rem;
     letter-spacing: 0.7px;
-    color:rgba(80,80,80,1);
+    color:#050505;
+    font-family: 'Playfair Display', serif;
     text-align: justify;
+    font-size:16px;
 }
 
  .center .sub-center{
@@ -94,6 +98,8 @@ tr{
 
 tbody td{
     font-size:15px;
+    color:#050505;
+    font-family: 'Playfair Display', serif;
 }
 
 .clg table,th,td{
@@ -139,6 +145,7 @@ tbody td{
 .linkx .links{
     margin:2rem 0 0.2rem 0;
     font-weight: bold;
+    
 }
 
 
@@ -152,9 +159,10 @@ tbody td{
 .linkx a{
     text-decoration:none;
     line-height:2rem;
-    color:rgba(80,80,80,1);
     font-size:15px;
     letter-spacing: 0.2px;
+    color:#050505;
+    font-family: 'Playfair Display', serif;
 }
 
 .linkx a:hover{

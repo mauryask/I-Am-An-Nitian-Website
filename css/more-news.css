@@ -79,10 +79,10 @@
 
   .explore .expo  .xnnn  p{
       padding:5px 5px 2px 5px;
-      color:#050505;
       text-align:justify;
       line-height:1.4rem;
       font-size: 15px;
+      color:#050505;
       font-family: 'Playfair Display', serif;
       letter-spacing: 0.1px;
   }

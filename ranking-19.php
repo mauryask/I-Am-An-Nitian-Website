@@ -140,27 +140,25 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
 <div class="clg">
-<p class="wlc-content">In publishing and graphic design, Lorem
- ipsum is a placeholder text commonly used 
- to demonstrate the visual form of a document
-  without relying on meaningful content
-   (also called greeking). Replacing the 
-   actual content with placeholder text
- allows designers to design the form 
- of the content before the content itself</p>
- <p class="wlc-content">
- without relying on meaningful content
-   (also called greeking). Replacing the 
-   actual content with placeholder text
- allows designers to design the form 
- of the content before the content itself
-  has been produced.
-  actual content with placeholder text
- allows designers to design the form 
- of the content before the content itself</p>
+<p class="wlc-content">
+  The National Institutional Ranking 
+  Framework (NIRF) was approved by the MHRD and launched by 
+  Honourable Minister of Human Resource Development 
+  on 29th September 2015.
+</p>
+<p class="wlc-content">
+    This framework outlines a methodology to rank institutions
+    across the country. The methodology draws from the 
+    overall recommendations broad understanding arrived at by 
+    a Core Committee set up by MHRD, to identify the broad 
+    parameters for ranking various universities and
+      institutions. The parameters broadly cover “Teaching,
+      Learning and Resources,” “Research and Professional 
+      Practices,” “Graduation Outcomes,”
+        “Outreach and Inclusivity,” and “Perception”.</p>
 
  <div class="search_clg">
- <p>Search</p>
+ <p>Search : </p>
 <input type="search" id="search" placeholder="eg. srinagar">
 </div>
 

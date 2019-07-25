@@ -141,27 +141,10 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
 <div class="clg">
-<p class="wlc-content">In publishing and graphic design, Lorem
- ipsum is a placeholder text commonly used 
- to demonstrate the visual form of a document
-  without relying on meaningful content
-   (also called greeking). Replacing the 
-   actual content with placeholder text
- allows designers to design the form 
- of the content before the content itself</p>
- <p class="wlc-content">
- without relying on meaningful content
-   (also called greeking). Replacing the 
-   actual content with placeholder text
- allows designers to design the form 
- of the content before the content itself
-  has been produced.
-  actual content with placeholder text
- allows designers to design the form 
- of the content before the content itself</p>
+
 
  <div class="search_clg">
- <p>Search</p>
+ <p>Search : </p>
 <input type="search" id="search" placeholder="eg. srinagar">
 </div>
 

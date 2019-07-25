@@ -81,19 +81,22 @@ $full_time = $month." ".$date.", ".$year.", ".$time.", IST";
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <link href="css/left-menu.css" type="text/css" rel="stylesheet">
 <link href="css/insert_news.css" type="text/css" rel="stylesheet">
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 </head>
 
-<body>
+<body onload="loadme()">
 
+
+  <!--================== Preloader ==========================-->
+<div id="loader">
+</div>
 <!--=================  Menu Button   ===================-->
 <button id="show"><i class="fas fa-bars"></i></button>
 <div class="main" id="main">
-<p class="mainh" id="mainh">Add News</p>
+<p class="mainh" id="mainh" style="font-family:">Add News</p>
 
 <!--=================  Adding News  ===================-->
 <div class="add-news" id="add-news">
+
 <form method="post" enctype="multipart/form-data" autocomplete="off">
 
 <input type="file" name="image" id="image"> 
@@ -122,6 +125,10 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 
 </html>
 
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script src="js/main.js"></script>
 
 <script>
  

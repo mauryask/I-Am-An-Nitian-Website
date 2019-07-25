@@ -47,13 +47,21 @@ if(isset($_POST['submit']))
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <link href="css/edit_news.css" type="text/css" rel="stylesheet">
 <link href="css/left-menu.css" type="text/css" rel="stylesheet">
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<link href="css/back-to-top.css" type="text/css" rel="stylesheet">
 <style>
 
 </style>
 </head>
-<body>
+
+<body onload="loadme()">
+
+ <!--================ Back to top Button ====================-->
+  <button id="back-to-top" ><i class="fas fa-angle-double-up"></i></button>
+
+  <!--================== Preloader ==========================-->
+<div id="loader">
+</div>
+
 <!--=================  Menu Button   ===================-->
 <button id="show"><i class="fas fa-bars"></i></button>
 <!--================= Edit News   ===================-->
@@ -107,6 +115,9 @@ while($row=mysqli_fetch_array($result))
 
 </html>
 
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<script src="js/main.js"></script>
 
 <script>
 $(document).ready(function(){
@@ -116,6 +127,7 @@ $(document).ready(function(){
         window.location.href="index.php";
     },500);  
   })
+
 
 /*================  Add News ===================*/ 
   $("#add").click(function(){
