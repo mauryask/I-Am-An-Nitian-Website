@@ -70,21 +70,22 @@ crossorigin="anonymous">
 <nav class="active">
 <ul>
 <li><a href="index.php" class="home" >Home</a></li>
-<li><a href="team.html" class="homex">Our team</a></li>
+<!--<li><a href="team.html" class="homex">Our team</a></li>-->
 <li><a href="more-news.php" class="homex" >News</a></li>
+<li><a href="#updf" class="homex">Updates</a></li>
 <li><a href="#about" class="homex" id="about_nav">About Us</a></li>
 <li><a class="sub-menu" style="width:115px;" id="exam">Exams <i class="fas fa-caret-square-down"></i></a>
 <ul>
 <li style="width:115px;"><a href="#">Jee</a></li>
 <li style="width:115px;"><a href="#">Gate</a></li>
-<li style="width:115px;"><a href="#">Neet</a></li>
-<li style="width:115px;"><a href="#">Camt</a></li>
-<li style="width:115px;"><a href="#">Gre</a></li>
+<li style="width:115px;"><a href="#">IES</a></li>
+<li style="width:115px;"><a href="#">UPSC</a></li>
 </ul>
 </li>
+<!--
 <li>
 <button onclick="search()" style="text-transform: uppercase;letter-spacing: 0.8px; font-weight: bold;" id="searching">Search <i class="fas fa-search"></i></button>
-</li>
+</li>-->
 <li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;" id="user">
 <?php
   if(isset($_SESSION['name'])&& !empty($_SESSION['name']))
@@ -172,27 +173,27 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   <div class="expo-line" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'></div>
 
   <div class="expo exc" style="margin-top:2rem;">
-   <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-left" data-aos-duration="800" data-aos-delay="300">
+   <div class="appx" onclick="sweet_alert()" id="respo" data-aos-once="true"  data-aos="flip-left" data-aos-duration="800" data-aos-delay="300">
      <img src="images/school.svg">
      <p>Colleges</p>
     </div>
     
- <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-left" data-aos-duration="800" data-aos-delay="450">
+ <div class="appx" onclick="sweet_alert()" id="respo" data-aos-once="true" data-aos="flip-left" data-aos-duration="800" data-aos-delay="450">
       <img src="images/exam.svg">
       <p>Exams</p>
      </div>
      
-     <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-left" data-aos-duration="800" data-aos-delay="600">
+     <div class="appx" onclick="sweet_alert()" id="respo" data-aos-once="true" data-aos="flip-left" data-aos-duration="800" data-aos-delay="600">
           <img src="images/stage.svg" >
           <p>College Fests</p>
          </div>  
        
-   <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-left" data-aos-duration="800" data-aos-delay="750">
+   <div class="appx" onclick="sweet_alert()" id="respo" data-aos-once="true" data-aos="flip-left" data-aos-duration="800" data-aos-delay="750">
       <img src="images/research.svg">
       <p>Cutoff</p>
      </div>
    
-     <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-left" data-aos-duration="800" data-aos-delay="900">
+     <div class="appx" onclick="sweet_alert()" id="respo" data-aos-once="true" data-aos="flip-left" data-aos-duration="800" data-aos-delay="900">
         <img src="images/review.svg">
         <p>College Reviews</p>
        </div>
@@ -200,28 +201,28 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   <div class="expo exc"> 
     
   
-  <div class="appx" onclick="sweet_alert()" id="respo" data-aos="flip-right" data-aos-duration="800" data-aos-delay="850">
+  <div class="appx" onclick="sweet_alert()" id="respo" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="850">
          <img src="images/question.svg">
          <p>Ask Questions</p>
         </div>
 
 
-  <div class="appx" onclick="sweet_alert()" data-aos="flip-right" data-aos-duration="800" data-aos-delay="1000">
+  <div class="appx" onclick="sweet_alert()" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="1000">
         <img src="images/books.svg">
         <p>Donate Books</p>
        </div>
        
     
-         <div class="appx" onclick="location.href='ranking-19.php'" data-aos="flip-right" data-aos-duration="800" data-aos-delay="700">
+         <div class="appx" onclick="location.href='ranking-19.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="700">
       <img src="images/infographic.svg">
-      <p>College Ranking</p>
+      <p>Ranking</p>
      </div>
        
-         <div class="appx" onclick="location.href='placement.php'" data-aos="flip-right" data-aos-duration="800" data-aos-delay="550">
+         <div class="appx" onclick="location.href='placement.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="550">
             <img src="images/reunion.svg">
-            <p>Placements Data</p>
+            <p>Placements </p>
            </div>
-           <div class="appx" onclick="location.href='story.php'" data-aos="flip-right" data-aos-duration="800" data-aos-delay="400">
+           <div class="appx" onclick="location.href='story.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="400">
           <img src="images/growth.svg">
           <p>Success Stories</p>
          </div>
@@ -339,7 +340,8 @@ function start_It()
 }
   </script>
  <!--===================== Update Section ===================--> 
- 
+ <a id="updf"></a>
+    <div style="width:100%;height:5%;margin-top:4%;" ></div>
 <div class="upg" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>
 <div class="upx">
 <div class="headingc"><p>Updates</p></div>
@@ -638,14 +640,14 @@ function startIt()
     </div>
  <!--============== Footer Section ==================-->
   <footer>
-    <div class="datay">
+   <!-- <div class="datay">
               
       <div><p class="y">Colleges</p>
         <div class="linex" id="lx"></div>
       <p><a href="#">IIT</a></p>
       <p><a href="#">NIT</a></p>
       <p><a href="#">IIIT</a></p>
-      <p><a href="#">AIIMS</a></p>
+      
       </div>
       <div>
           <p class="y">Exams</p>
@@ -660,7 +662,7 @@ function startIt()
         <p><a href="#">IITs </a></p>
         <p><a href="#">NITs</a></p>
         <p><a href="#">IIITs</a></p>
-        <p><a href="#">AIIMS</a></p></div>
+        </div>
       <div><p class="y">Links</p>
         <div class="linex" id="la"></div>
         <p><a href="#">College Reviews</a></p>
@@ -668,7 +670,7 @@ function startIt()
         <p><a href="#">About Us</a></p>
         <p><a href="#">News</a></p></div>
         
-    </div>
+    </div> -->
   <div class="datad">
   <p class="x">Feel Free To Contact Us</p>
   <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-9055667606 &nbsp | &nbsp  +91-9055667606</p>

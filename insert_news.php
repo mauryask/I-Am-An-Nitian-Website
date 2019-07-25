@@ -52,7 +52,7 @@ $time =$hrs.date(':i A');
 
 $full_time = $month." ".$date.", ".$year.", ".$time.", IST";
 
-/*===================  Getting time and date ====================*/
+/*===================  Getting time and date end ====================*/
 
     $query="insert into tbl_images (name,heading, text,views,likes,dislikes,comments, inserted_at) 
     values('$file', '$head', '$news','$views','$likes','$dislikes','$comments','$full_time')";

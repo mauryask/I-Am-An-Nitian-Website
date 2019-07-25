@@ -64,21 +64,21 @@ crossorigin="anonymous">
 <nav class="active">
 <ul>
 <li><a href="index.php" class="homex" >Home</a></li>
-<li><a href="team.html" class="homex">Our team</a></li>
 <li><a href="more-news.php" class="homex" >News</a></li>
+<li><a href="index.php#updf" class="homex" >Updates</a></li>
 <li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
 <li><a class="sub-menu" style="width:115px;" id="exam">Exams <i class="fas fa-caret-square-down"></i></a>
 <ul>
 <li style="width:115px;"><a href="#">Jee</a></li>
 <li style="width:115px;"><a href="#">Gate</a></li>
-<li style="width:115px;"><a href="#">Neet</a></li>
-<li style="width:115px;"><a href="#">Camt</a></li>
-<li style="width:115px;"><a href="#">Gre</a></li>
+<li style="width:115px;"><a href="#">IES</a></li>
+<li style="width:115px;"><a href="#">UPSC</a></li>
+
 </ul>
-</li>
+</li><!--
 <li>
 <button onclick="search()" style="text-transform: uppercase;letter-spacing: 0.8px; font-weight: bold;" id="searching">Search <i class="fas fa-search"></i></button>
-</li>
+</li>-->
 <li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;" id="user">
 <?php
   if(isset($_SESSION['name'])&& !empty($_SESSION['name']))

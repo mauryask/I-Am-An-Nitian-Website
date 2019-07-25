@@ -62,7 +62,7 @@ body  .clg{
    }   
 
 .clg .wlc-content{
-    line-height:1.8rem;
+    line-height:2.4rem;
     letter-spacing: 0.7px;
     color:#050505;
     font-family: 'Playfair Display', serif;
@@ -119,7 +119,8 @@ tbody td{
     font-size:18px;
     font-weight:bold;
     margin:1rem 0 1rem 0;
-    color:rgba(80,80,80,1);
+    color:rgba(37, 116, 169, 1);
+    font-family: 'Playfair Display', serif;
 }
 
 .clg .search_clg #search{
@@ -131,9 +132,8 @@ tbody td{
     outline:none;
     letter-spacing: 0.2px;
     background:rgba(250,250,250,1);
+    font-family: 'Playfair Display', serif;
 }
-
-
 
 
 
@@ -145,12 +145,15 @@ tbody td{
 .linkx .links{
     margin:2rem 0 0.2rem 0;
     font-weight: bold;
-    
+    color:rgba(37, 116, 169, 1);
+    font-family: 'Playfair Display', serif;
+    font-size:16px;
+    letter-spacing: 0.4px;
 }
 
 
 .linkx .line{
-    background:Rgba(100,100,100,1);
+    background:rgba(37, 116, 169, 1);
     width:5rem;
     height:2px;
     margin-bottom:5px;

@@ -331,18 +331,18 @@ color:gray;
 	}
 
 	.more_btn button{
-		width:14rem;
+		width:12rem;
 		padding:0.6rem 0 0.6rem 0;
 		outline:none;
 		border:none;
 		background:#4CAF50;
 		color:white;
 		cursor:pointer;
-		font-size:17px;
+		font-size:16px;
 		left:50%;
 		transform:translate(-50%);
 		position:relative;
-		letter-spacing: 0.4px;
+		letter-spacing: 0.1px;
 		text-transform: uppercase;
 	}
 	  

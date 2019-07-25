@@ -36,10 +36,9 @@ if(comment_content != '')
     
                        });
         
-                },1000);
+                },1000);    
             }
-
-                  
+                 
             $("form").trigger("reset"); //to clear the form fieled after submission
         }
     
