@@ -54,11 +54,13 @@
                }
   
                .sign-card .sign-img div ul {
-                 margin:14% 3% 0 3%;
                padding:2%;
                border-radius: 5px;
                background: rgba(200,200,200,1);
                box-shadow: 0 5px 5px 0 rgba(230,230,230,1);
+               top:9rem;
+               position:relative;
+               margin: 0 2rem 0 2rem; 
                }
                .sign-card .sign-img .links ul li{
                list-style-type:none;
@@ -85,21 +87,19 @@
                }
   
                .sign-card .sign-img div .p1{
-               font-size:18px;
-               font-weight: bold;
-               color:white;
-               background: #1090f8;             
-               -webkit-clip-path: polygon(76% 0, 0 0, 0 44%, 79% 45%, 54% 23%);
-               clip-path: polygon(76% 0, 0 0, 0 44%, 79% 45%, 54% 23%);
-               padding:4.5% 0 22% 8%;
-               
-              }
+                text-align:center;
+                top:8rem;
+                position:relative;
+                font-size:25px;
+                font-weight:bold;
+                color:rgba(80,80,80,1);
+               }
+
               .sign-card .sign-img div .p2{
                 text-decoration: none;
-                top:18%;
-               left:58%;
-                transform: translate(-18%,-58%);
+                text-align:center;
                 position: relative;
+                top:16rem;
               }
               .sign-card .sign-img div .p2 a{
                 text-decoration: none;
@@ -243,7 +243,6 @@
                 font-size:14px;
                 letter-spacing:0.8px;
                 cursor: pointer;
-                
               }
               .login .log-card div .signx a:hover{
                 color:rgba(256,0,0,0.7);

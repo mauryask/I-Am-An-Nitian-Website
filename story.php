@@ -9,34 +9,32 @@
 -->
 
 <?php
-include_once('connection.php');
+include_once('db/connection.php');
 session_start(); //starting session start
 ?>
 
 <!DOCTYPE html>
-<html lang="en" oncontextmenu="return false">    
+<html lang="en" oncontextmenu="return false">
 <head>
-<title>I Am An Nitian | Success Story</title>
+<title>I Am An Nitian | Home</title>
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
-<!--  Disabling double tap to zoom in mobile version -->
-<meta name="viewport" content= "width=device-width, user-scalable=no">
 <meta charset="utf-8">
 <meta name="theme-color" content="#000">
 <meta name="author" content="Shubham Maurya">
+<link rel="icon" href="images/imnitian.png">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
 crossorigin="anonymous">
-<link rel="icon" href="images/imnitian.png">
 <link href="css/navbar.css" rel="stylesheet"  type="text/css">
-<link href="css/popup.css" type="text/css" rel="stylesheet">
 <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
 <link href="css/footer.css" type="text/css" rel="stylesheet">
-<link href="css/login_register.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link href="css/story.css" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<style></style>
+<link href="css/login_register.css" rel="stylesheet"  type="text/css">
+<link href="css/story.css" rel="stylesheet"  type="text/css">
+
+<style>
+
+</style>
 </head>
 
 <body onload="loadme()">
@@ -48,13 +46,15 @@ crossorigin="anonymous">
 <div id="loader">
 </div>
 
-<div class="wrapper">
  <!--================ Scroll Indicator ======================-->
-<div class="progress-container">
+ <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
   </div>   
+  
+<div class="wrapper">
 
-  <header id="f" style="background:rgba(0,0,0,01);">
+
+<header id="f" style="background:black;">
 <div class="logo">
 <ul>
 <li><a href="index.php"><img src="images\imnitian.png"></a></li>
@@ -67,19 +67,7 @@ crossorigin="anonymous">
 <li><a href="more-news.php" class="homex" >News</a></li>
 <li><a href="index.php#updf" class="homex" >Updates</a></li>
 <li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
-<!--<li><a class="sub-menu" style="width:115px;" id="exam">Exams <i class="fas fa-caret-square-down"></i></a>
-<ul>
-<li style="width:115px;"><a href="#">Jee</a></li>
-<li style="width:115px;"><a href="#">Gate</a></li>
-<li style="width:115px;"><a href="#">IES</a></li>
-<li style="width:115px;"><a href="#">UPSC</a></li>
 
-</ul>
-</li>
---><!--
-<li>
-<button onclick="search()" style="text-transform: uppercase;letter-spacing: 0.8px; font-weight: bold;" id="searching">Search <i class="fas fa-search"></i></button>
-</li>-->
 <li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;" id="user">
 <?php
   if(isset($_SESSION['name'])&& !empty($_SESSION['name']))
@@ -130,16 +118,12 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   </div>
 
 </header>
-<div clas="wrapper">
+
+
+
 <div class="main">
 
-
-
-
-
-
-
-<div class="child_x">
+<div class="child_x" style="margin-bottom:25px;">
 
 <div class="hero"> 
 
@@ -224,8 +208,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 
 
-
-<div class="child_x">
+<div class="child_x" style="margin-bottom:25px;">
 
 <div class="hero"> 
     <div class="himg">
@@ -311,7 +294,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
 
-<div class="child_x">
+<div class="child_x" style="margin-bottom:25px;">
 
 <div class="hero"> 
 
@@ -397,8 +380,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 </div>
 
-
-
 <div class="child_x">
 
 <div class="hero"> 
@@ -475,21 +456,41 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </p>
 </div>
 
-</div>
-
-
-
-
-
-
 
 
 
 
 </div>
+
+
 </div>
+
+</div> <!--  Wrapper-->
+
+ <!--============== Footer Section ==================-->
+  <footer>
+  <div class="datad">
+  <p class="x">Feel Free To Contact Us</p>
+  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-9055667606 &nbsp | &nbsp  +91-9055667606</p>
+ <span id="respo_contact">
+ <P>iamannitian@gmail.com</p> 
+ <P>+91-9055667606</p> 
+ <P>+91-9055667606</p> 
+   </span>
+</div>
+<!--============== Bottom Container =====================-->
+ <div class="container">
+ <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
+2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbspAll Rights Reserved</span></p>
+<p id="and_copy" class="copyright">All rights reserved</p>
+</div>
+</footer>
 </body>
+
 </html>
+
+
+
 <!--===============  Microsoft's JQuery CDN =================-->
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
 <!--==================  TweenMax CDN  ==================-->
@@ -502,33 +503,116 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <script   type="text/javascript" src="js/ajax-login.js"></script>
 <script   type="text/javascript" src="js/main.js"></script>
 
+
+
+<script>
+ /*==================== Menu toggle =========================*/
+ $(document).ready(function(){
+
+  if (window.matchMedia('(max-width:721px)').matches)
+{
+  
+  $('.cut_nav').click(function(){
+    $(this).css('display','none');
+    $('.menu-toggle').css('display','block');
+    TweenMax.to('.active',0.5,{scaleX: 0});
+    $('nav').css('z-index', '1');
+    $('.logo').css('marginLeft', '0px');
+    $('.logo').css('marginTop', '0px');
+    $('.logo_txt').css('marginTop', '0px');
+    setTimeout(function(){
+    
+      $('header').css('background', 'black');
+    
+    },200)
+
+  })
+
+  $(window).scroll(function(){
+  $('header').css('background', 'black');
+})
+  
+
+
+  $('.menu-toggle').click(function(){
+    $(this).css('display','none');
+    $('.cut_nav').css('display','block');
+
+    $('nav').css('z-index', '4');
+
+    $('header').css('background', 'transparent');
+    $('.cut_nav').css('background','black');
+    TweenMax.to('.active',0.4,{scaleX: 1});
+
+    setTimeout(function(){
+      $('.logo').css('marginLeft', '62px');
+      $('.logo').css('marginTop', '18px');
+      $('.logo_txt').css('marginTop', '10px');
+    },200);
+
+    setTimeout(function(){
+      $('nav').css('z-index', '-1');
+    },350);
+   
+  })
+
+ 
+
+$('#login_nav').click(function()
+{
+  $('.logo').css('marginLeft', '0px');
+  $('.logo').css('marginTop', '0px');
+  TweenMax.to('.active',0.1,{scaleX: 0});  
+  $('.cut_nav').css('display','none');
+  $('.menu-toggle').css('display','block');
+  $('header').css('background', 'black');
+  $('.logo_txt').css('marginTop', '0px');
+})
+
+$('#register_nav').click(function(){
+  $('.logo').css('marginLeft', '0px');
+  $('.logo').css('marginTop', '0px');
+  TweenMax.to('.active',0.1,{scaleX: 0});  
+  $('.cut_nav').css('display','none');
+  $('.menu-toggle').css('display','block');
+  $('header').css('background', 'black');
+  $('.logo_txt').css('marginTop', '0px');
+})
+
+$('#about_nav').click(function()
+{
+  $('.logo').css('marginLeft', '0px');
+  $('.logo').css('marginTop', '0px');
+  TweenMax.to('.active',0.1,{scaleX: 0});  
+  $('.cut_nav').css('display','none');
+  $('.menu-toggle').css('display','block');
+})
+
+}
+  
+})
+
+</script>
+
+
 <script>
 function spyx()
 {
 $('#btnx').hide();
 $('#showmex').show();
-
 }
-
 function spyy()
 {
-
 $('#btny').hide();
 $('#showmey').show();
-
 }
-
 function spyz()
 {
-
 $('#btnz').hide();
 $('#showmez').show();
-
 }
-
 function spyk()
 {
-
 $('#btnk').hide();
 $('#showmek').show();
 }

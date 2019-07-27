@@ -46,11 +46,13 @@ crossorigin="anonymous">
 <div id="loader">
 </div>
 
-<div class="wrapper">
  <!--================ Scroll Indicator ======================-->
-<div class="progress-container">
+ <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
-  </div>   
+  </div> 
+
+<div class="wrapper" >
+  
 
 <header id="f" style="background:black;">
 <div class="logo">
@@ -65,18 +67,7 @@ crossorigin="anonymous">
 <li><a href="more-news.php" class="home" >News</a></li>
 <li><a href="index.php#updf" class="homex" >Updates</a></li>
 <li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
-<!--<li><a class="sub-menu" style="width:115px;" id="exam">Exams <i class="fas fa-caret-square-down"></i></a>
-<ul>
-<li style="width:115px;"><a href="#">Jee</a></li>
-<li style="width:115px;"><a href="#">Gate</a></li>
-<li style="width:115px;"><a href="#">Neet</a></li>
-<li style="width:115px;"><a href="#">Camt</a></li>
-<li style="width:115px;"><a href="#">Gre</a></li>
-</ul>
-</li>--><!--
-<li>
-<button onclick="search()" style="text-transform: uppercase;letter-spacing: 0.8px; font-weight: bold;" id="searching">Search <i class="fas fa-search"></i></button>
-</li>-->
+
 <li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;" id="user">
 <?php
   if(isset($_SESSION['name'])&& !empty($_SESSION['name']))
@@ -129,7 +120,89 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </header>
 
 
-<body>
+
+
+<div class="flash">
+
+<?php  
+$sql = "select * from tbl_images order by id desc limit 5";
+
+$result = mysqli_query($conn, $sql);
+
+$i= 0;
+
+$arr_head = array();
+$arr_id = array();
+$arr_img = array();
+
+while($row  = mysqli_fetch_assoc($result))
+{
+  $arr_head[$i] = $row['heading'];
+  $arr_img[$i] = $row['name'];
+  $arr_id[$i]= $row['id'];
+  $i++;
+}
+?>
+
+<div class="flash_slide" id = "<?php echo $arr_id[0] ?>"  onclick= "id1(this.id)">
+  
+<?php echo '<img   src="data:image/jpg;base64,'.base64_encode($arr_img[0]).'" >' ?>;
+
+<div class="over"></div>
+<div class="cnt"><?php echo $arr_head[0]; ?></div>
+</div>
+
+
+<div class="four_news">
+
+<div class="four_news_in">
+  <div id=  "<?php echo $arr_id[1] ?>"  onclick= "id1(this.id)">
+  <?php echo '<img   src="data:image/jpg;base64,'.base64_encode($arr_img[1]).'" >' ?>;
+    <div class="overlay"></div>
+    <div class="content"><?php echo $arr_head[1]; ?></div>
+
+  </div>
+
+  <div id=  "<?php echo $arr_id[2] ?>"  onclick= "id1(this.id)">
+  <?php echo '<img   src="data:image/jpg;base64,'.base64_encode($arr_img[2]).'" >' ?>;
+    <div class="overlay"></div>
+    <div class="content"><?php echo $arr_head[2]; ?></div>
+  </div>
+  
+</div>
+
+<div class="four_news_in">
+
+<div id=  "<?php echo $arr_id[3] ?>"  onclick= "id1(this.id)">
+<?php echo '<img   src="data:image/jpg;base64,'.base64_encode($arr_img[3]).'" >' ?>;
+    <div class="overlay"></div>
+    <div class="content"><?php echo $arr_head[3]; ?></div>
+  </div>
+
+<div id=  "<?php echo $arr_id[4] ?>"  onclick= "id1(this.id)">
+<?php echo '<img   src="data:image/jpg;base64,'.base64_encode($arr_img[4]).'" >' ?>;
+  <div class="overlay"></div>
+  <div class="content"><?php echo $arr_head[4]; ?></div>
+</div>
+
+  
+</div>
+
+</div>
+</div>
+
+
+
+<script>
+function id1(got_id)
+{
+  var url = "news.php?id="+got_id;
+  window.location= url;
+}
+
+
+</script>
+
 
 
 <!--============== Signup Popup ==================-->
@@ -140,13 +213,19 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
     <p class="p1">Quick Links</p>
     <div class="msgx" ><p id="msgx" ></p></div>
     <ul>
-     <a href="#"> <li>Colleges</li></a>
-     <a href="#"> <li>Exams</li></a>
-     <a href="#"> <li>Cutoff</li></a>
-     <a href="#"> <li>News</li></a>
-     <a href="#"> <li>Events</li></a>
-     <a href="#"> <li>Important Dates</li></a>
+     <a href="ranking-19.php"> <li>Ranking</li></a>
+     <a href="placement.php"> <li>Placements</li></a>
+     <a href="story.php"> <li>Success Stories</li></a>
+     <a href="more-news.php"> <li>News</li></a>
+     <a onclick="updf();"> <li>Updates</li></a>
       </ul>
+<script>
+function updf()
+{
+  TweenMax.to('.signup',0.5,{scaleY: 0});
+  window.location = "index.php#updf";
+}
+ </script>
     <p class="p2"><a href="#">privacy policy</a></p>
   </div>
  </div>
@@ -207,7 +286,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 
 
-<div class="explore" style="margin-top:8.5rem;">
+<div class="explore" style="margin-top:3rem;">
  <?php 
             $query = "select * from tbl_images order by id asc";
              $result = mysqli_query ($conn, $query);
@@ -277,12 +356,13 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 <!--============== Bottom Container =====================-->
  <div class="container">
-<p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
-2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbsp DESIGNED AND DEVELOPED BY SHUBHAM MAURYA &nbsp|&nbsp NIT SRINAGAR</span></p>
-<p id="and_copy" class="copyright">Developed by Shubham Maurya</p>
+ <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
+2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbspAll Rights Reserved</span></p>
+<p id="and_copy" class="copyright">All rights reserved</p>
 </div>
 </footer>
-</div> 
+
+
 </body>
 
 </html>

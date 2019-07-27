@@ -42,6 +42,8 @@ body{
 	position:absolute;
    }
    
+
+
 .news-body{
    width:55%;
    height:auto;
@@ -57,7 +59,7 @@ body{
 }
 
 .news-body .horizonx{
-margin-top:2rem;
+margin-top:0.8rem;
    width:15rem;
 margin-bottom:0.1px;
 }

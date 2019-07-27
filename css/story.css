@@ -25,12 +25,13 @@
 
 
 	body{
-	background: rgba(250,250,250,1);	
+        background: rgb(240,240,240,1);	
 	}			
 
-.wrap_me{
-    position: relative;
-}
+    .progress-container{
+        top:0;
+        position:fixed;
+    }
 
 /*================  Page Preloader  =================*/ 
 
@@ -46,28 +47,27 @@
 		z-index:555;
 	} 
 	
-	.wrapper{
-	width:100%;
-	height:100%;
-	position:absolute;
-	}
+.wrapper{
+    background:white;
+    width:75%;
+    margin:0 auto;
+    margin-top:7rem;
+    padding:25px;
+}
 
 .main{
     margin: 0 auto;
-    width:65%;
-    height:100vh;
-    margin-top:8rem;
+    width:100%;
 }
 
 .child_x{
     overflow: hidden;
     width:100%;
     height:auto;
-box-shadow:0 0 2px 2px rgab(90,90,90,1);
-padding:25px;
-text-align: justify;
-margin-bottom:3rem;
-background:#222233;
+    box-shadow:0 0 2px 2px rgab(90,90,90,1);
+    padding:25px;
+    text-align: justify;
+    background:#222233;
 }
 
 
@@ -115,7 +115,6 @@ box-shadow: 0 0 8px 2px rgba(210,210,210,1);
 
 .hero .himg div:nth-child(1)
 {   
-
     background:rgba(255,196,105,1);
 }
 

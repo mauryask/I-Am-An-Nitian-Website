@@ -69,22 +69,11 @@ crossorigin="anonymous">
 <nav class="active">
 <ul>
 <li><a href="index.php" class="home" >Home</a></li>
-<!--<li><a href="team.html" class="homex">Our team</a></li>-->
+
 <li><a href="more-news.php" class="homex" >News</a></li>
 <li><a href="#updf" class="homex">Updates</a></li>
 <li><a href="#about" class="homex" id="about_nav">About Us</a></li>
-<!--<li><a class="sub-menu" style="width:115px;" id="exam">Exams <i class="fas fa-caret-square-down"></i></a>
-<ul>
-<li style="width:115px;"><a href="#">Jee</a></li>
-<li style="width:115px;"><a href="#">Gate</a></li>
-<li style="width:115px;"><a href="#">IES</a></li>
-<li style="width:115px;"><a href="#">UPSC</a></li>
-</ul>
-</li>-->
-<!--
-<li>
-<button onclick="search()" style="text-transform: uppercase;letter-spacing: 0.8px; font-weight: bold;" id="searching">Search <i class="fas fa-search"></i></button>
-</li>-->
+
 <li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;" id="user">
 <?php
   if(isset($_SESSION['name'])&& !empty($_SESSION['name']))
@@ -172,35 +161,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   <div class="expo-line" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'></div>
 
   <div class="expo exc" style="margin-top:2rem;">
-  <!--
-   <div class="appx" onclick="sweet_alert()" id="respo" data-aos-once="true"  data-aos="flip-left" data-aos-duration="800" data-aos-delay="300">
-     <img src="images/school.svg">
-     <p>Colleges</p>
-    </div>
-    
- <div class="appx" onclick="sweet_alert()" id="respo" data-aos-once="true" data-aos="flip-left" data-aos-duration="800" data-aos-delay="450">
-      <img src="images/exam.svg">
-      <p>Exams</p>
-     </div>
-     
-     <div class="appx" onclick="sweet_alert()" id="respo" data-aos-once="true" data-aos="flip-left" data-aos-duration="800" data-aos-delay="600">
-          <img src="images/stage.svg" >
-          <p>College Fests</p>
-         </div>  
-       
-   <div class="appx" onclick="sweet_alert()" id="respo" data-aos-once="true" data-aos="flip-left" data-aos-duration="800" data-aos-delay="750">
-      <img src="images/research.svg">
-      <p>Cutoff</p>
-     </div>
-   
-     <div class="appx" onclick="sweet_alert()" id="respo" data-aos-once="true" data-aos="flip-left" data-aos-duration="800" data-aos-delay="900">
-        <img src="images/review.svg">
-        <p>College Reviews</p>
-       </div>
-  </div>
-  <div class="expo exc"> 
-    -->
-  
 
     <div class="appx" onclick="location.href='ranking-19.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="700">
       <img src="images/infographic.svg">
@@ -224,42 +184,13 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
   <div class="appx" onclick="location.href='uPDxgdf.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="1000">
         <img src="images/books.svg">
-        <p>Donate Books</p>
+        <p>Ebooks</p>
        </div>
        
     
      </div>
   <!--=========================== Mobile version horizontal tabs ======================-->
 <div class="mob-expo" style="margin-top:3rem;">
-<!--
-<div class="appx_expo" onclick="sweet_alert()"  id="appx_left">
-  <img src="images/school.svg">
-  <p>Colleges</p>
- </div>
- 
-<div  class="appx_expo" onclick="sweet_alert()" >
- <img src="images/exam.svg">
-   <p>Exams</p>
-  </div>
-  
-  <div  class="appx_expo" onclick="sweet_alert()" >
-     <img src="images/stage.svg" >
-       <p>College Fests</p>
-      </div>
-
-    
-<div  class="appx_expo" onclick="sweet_alert()" >
-   <img src="images/research.svg">
-   <p>Cutoff</p>
-  </div>
-
-  <div  class="appx_expo" onclick="sweet_alert()" id="appx_right">
-    <img src="images/review.svg">
-     <p>College Reviews</p>
-    </div>
-
--->
-<!--================ Second explore tabs ==============-->
 
 <div  class="appx_expo" onclick="location.href='ranking-19.php'" >
   <img src="images/infographic.svg">
@@ -282,7 +213,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 <div class="appx_expo" onclick="location.href='uPDxgdf.php'"  id="appx_left">
 <img src="images/books.svg">
-        <p>Donate Books</p>
+        <p>Ebooks</p>
  </div>
    
 </div>
@@ -525,13 +456,20 @@ function startIt()
     <p class="p1">Quick Links</p>
     <div class="msgx" ><p id="msgx" ></p></div>
     <ul>
-     <a href="#"> <li>Colleges</li></a>
-     <a href="#"> <li>Exams</li></a>
-     <a href="#"> <li>Cutoff</li></a>
-     <a href="#"> <li>News</li></a>
-     <a href="#"> <li>Events</li></a>
-     <a href="#"> <li>Important Dates</li></a>
+     <a href="ranking-19.php"> <li>Ranking</li></a>
+     <a href="placement.php"> <li>Placements</li></a>
+     <a href="story.php"> <li>Success Stories</li></a>
+     <a href="more-news.php"> <li>News</li></a>
+     <a onclick="updf();"> <li>Updates</li></a>
       </ul>
+<script>
+function updf()
+{
+  TweenMax.to('.signup',0.5,{scaleY: 0});
+  window.location = "index.php#updf";
+}
+ </script>
+
     <p class="p2"><a href="#">privacy policy</a></p>
   </div>
  </div>
@@ -644,37 +582,7 @@ function startIt()
     </div>
  <!--============== Footer Section ==================-->
   <footer>
-   <!-- <div class="datay">
-              
-      <div><p class="y">Colleges</p>
-        <div class="linex" id="lx"></div>
-      <p><a href="#">IIT</a></p>
-      <p><a href="#">NIT</a></p>
-      <p><a href="#">IIIT</a></p>
-      
-      </div>
-      <div>
-          <p class="y">Exams</p>
-          <div class="linex" id="ly"></div>
-            <p><a href="#">Jee Advance</a></p>
-            <p><a href="#">Jee Mains</a></p>
-            <p><a href="#">Gate</a></p>
-            <p><a href="#">Neet</a></p>  
-          </div>
-      <div><p class="y">Cutoff</p>
-        <div class="linex" id="lz"></div>
-        <p><a href="#">IITs </a></p>
-        <p><a href="#">NITs</a></p>
-        <p><a href="#">IIITs</a></p>
-        </div>
-      <div><p class="y">Links</p>
-        <div class="linex" id="la"></div>
-        <p><a href="#">College Reviews</a></p>
-        <p><a href="#">College Ranking</a></p>
-        <p><a href="#">About Us</a></p>
-        <p><a href="#">News</a></p></div>
-        
-    </div> -->
+
   <div class="datad">
   <p class="x">Feel Free To Contact Us</p>
   <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-9055667606 &nbsp | &nbsp  +91-9055667606</p>
@@ -687,8 +595,8 @@ function startIt()
 <!--============== Bottom Container =====================-->
  <div class="container">
 <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
-2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbsp DESIGNED AND DEVELOPED BY SHUBHAM MAURYA &nbsp|&nbsp NIT SRINAGAR</span></p>
-<p id="and_copy" class="copyright">Developed by Shubham Maurya</p>
+2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbspAll Rights Reserved</span></p>
+<p id="and_copy" class="copyright">All rights reserved</p>
 </div>
 </footer>
 </div>

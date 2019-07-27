@@ -66,18 +66,7 @@ crossorigin="anonymous">
 <li><a href="more-news.php" class="home" >News</a></li>
 <li><a href="index.php#updf" class="homex" >Updates</a></li>
 <li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
-<!--<li><a class="sub-menu" style="width:115px;" id="exam">Exams <i class="fas fa-caret-square-down"></i></a>
-<ul>
-<li style="width:115px;"><a href="#">Jee</a></li>
-<li style="width:115px;"><a href="#">Gate</a></li>
-<li style="width:115px;"><a href="#">IES</a></li>
-<li style="width:115px;"><a href="#">UPSC</a></li>
 
-</ul>
-</li>-->
-<!--<li>
-<button onclick="search()" style="text-transform: uppercase;letter-spacing: 0.8px; font-weight: bold;" id="searching">Search <i class="fas fa-search"></i></button>
-</li>-->
 <li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;" id="user">
 <?php
   if(isset($_SESSION['name'])&& !empty($_SESSION['name']))
@@ -153,13 +142,28 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
             color:#050505;">
          <?php echo $row['text']; ?>
         </p>
+
+        <iframe src="https://www.facebook.com/plugins/share_button.php?href=<?php
+        $url = "https://www.facebook.com/iamannitian";
+        echo $url;
+        ?>
+        &layout=button_count&size=large&appId=473134703234415&width=110&height=28" 
+          width="110"
+          height="28" 
+          style="border:none;overflow:hidden;margin-top:22px;"
+           scrolling="no" 
+           frameborder="0" 
+           allowTransparency="true" 
+           allow="encrypted-media">
+          </iframe>
+
         <div class="horizon horizonx"></div>
          <p class="ldc">
             <i class="far fa-thumbs-up like-btn" style="cursor:pointer;"  id="<?php echo $row['id'];  ?>"></i> <span id="x" class="x">0</span>
             &nbsp <i class="far fa-thumbs-down dislike-btn" style="cursor:pointer;" id="<?php echo $row['id'];  ?>"></i> <span id="y" class="x">0</span>
             &nbsp <i class="fas fa-eye" style="cursor:pointer;"></i> <span  class="x"><?php echo $row['views'];  ?></span>
             &nbsp <i class="far fa-comment" style="cursor:pointer;" id="cmt_color"></i> <span id="ncmt" class="x">0</span>
-            </p>
+          </p> 
         <p class="cmnt">Comments</p>
     </div>
 
@@ -205,6 +209,13 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                       </div>  
     </div>
 
+    <?php 
+    $url  =  "https:/www.".$_SERVER['REQUEST_URI'];
+    $url = "https://www.facebook.com";
+    ?>
+  
+
+    
 <!--=========================  Login signup popups  =========================-->
 
 <!--============== Signup Popup ==================-->
@@ -215,13 +226,19 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
     <p class="p1">Quick Links</p>
     <div class="msgx" ><p id="msgx" ></p></div>
     <ul>
-     <a href="#"> <li>Colleges</li></a>
-     <a href="#"> <li>Exams</li></a>
-     <a href="#"> <li>Cutoff</li></a>
-     <a href="#"> <li>News</li></a>
-     <a href="#"> <li>Events</li></a>
-     <a href="#"> <li>Important Dates</li></a>
+     <a href="ranking-19.php"> <li>Ranking</li></a>
+     <a href="placement.php"> <li>Placements</li></a>
+     <a href="story.php"> <li>Success Stories</li></a>
+     <a href="more-news.php"> <li>News</li></a>
+     <a onclick="updf();"> <li>Updates</li></a>
       </ul>
+<script>
+function updf()
+{
+  TweenMax.to('.signup',0.5,{scaleY: 0});
+  window.location = "index.php#updf";
+}
+ </script>
     <p class="p2"><a href="#">privacy policy</a></p>
   </div>
  </div>
@@ -330,9 +347,9 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 <!--============== Bottom Container =====================-->
  <div class="container">
-<p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
-2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbsp DESIGNED AND DEVELOPED BY SHUBHAM MAURYA &nbsp|&nbsp NIT SRINAGAR</span></p>
-<p id="and_copy" class="copyright">Developed by Shubham Maurya</p>
+ <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
+2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbspAll Rights Reserved</span></p>
+<p id="and_copy" class="copyright">All rights reserved</p>
 </div>
 </footer>
 </div>

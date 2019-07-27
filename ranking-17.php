@@ -45,11 +45,13 @@ crossorigin="anonymous">
 <div id="loader">
 </div>
 
-<div class="wrapper">
  <!--================ Scroll Indicator ======================-->
-<div class="progress-container">
+ <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
-  </div>   
+  </div>  
+
+<div class="wrapper">
+ 
 
   <header id="f" style="background:black;">
 <div class="logo" >
@@ -64,19 +66,7 @@ crossorigin="anonymous">
 <li><a href="more-news.php" class="homex" >News</a></li>
 <li><a href="index.php#updf" class="homex" >Updates</a></li>
 <li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
-<!--<li><a class="sub-menu" style="width:115px;" id="exam">Exams <i class="fas fa-caret-square-down"></i></a>
-<ul>
-<li style="width:115px;"><a href="#">Jee</a></li>
-<li style="width:115px;"><a href="#">Gate</a></li>
-<li style="width:115px;"><a href="#">IES</a></li>
-<li style="width:115px;"><a href="#">UPSC</a></li>
 
-</ul>
-</li>
---><!--
-<li>
-<button onclick="search()" style="text-transform: uppercase;letter-spacing: 0.8px; font-weight: bold;" id="searching">Search <i class="fas fa-search"></i></button>
-</li>-->
 <li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;" id="user">
 <?php
   if(isset($_SESSION['name'])&& !empty($_SESSION['name']))
@@ -173,7 +163,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
 
-
 <!--============== Signup Popup ==================-->
 <div class="signup" id="sign">
 <div class="sign-card">
@@ -182,13 +171,19 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
     <p class="p1">Quick Links</p>
     <div class="msgx" ><p id="msgx" ></p></div>
     <ul>
-     <a href="#"> <li>Colleges</li></a>
-     <a href="#"> <li>Exams</li></a>
-     <a href="#"> <li>Cutoff</li></a>
-     <a href="#"> <li>News</li></a>
-     <a href="#"> <li>Events</li></a>
-     <a href="#"> <li>Important Dates</li></a>
+     <a href="ranking-19.php"> <li>Ranking</li></a>
+     <a href="placement.php"> <li>Placements</li></a>
+     <a href="story.php"> <li>Success Stories</li></a>
+     <a href="more-news.php"> <li>News</li></a>
+     <a onclick="updf();"> <li>Updates</li></a>
       </ul>
+<script>
+function updf()
+{
+  TweenMax.to('.signup',0.5,{scaleY: 0});
+  window.location = "index.php#updf";
+}
+ </script>
     <p class="p2"><a href="#">privacy policy</a></p>
   </div>
  </div>
@@ -250,7 +245,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
 
-
+</div>
 
  <!--============== Footer Section ==================-->
   <footer>
@@ -266,12 +261,12 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 <!--============== Bottom Container =====================-->
  <div class="container">
-<p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
-2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbsp DESIGNED AND DEVELOPED BY SHUBHAM MAURYA &nbsp|&nbsp NIT SRINAGAR</span></p>
-<p id="and_copy" class="copyright">Developed by Shubham Maurya</p>
+ <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
+2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbspAll Rights Reserved</span></p>
+<p id="and_copy" class="copyright">All rights reserved</p>
 </div>
 </footer>
-</div>
+
 </body>
 </html>
 

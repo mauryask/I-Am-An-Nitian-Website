@@ -15,7 +15,7 @@
 }
 
 body{
-    background: rgba(250,250,250,1);
+    background: rgb(240,240,240,1);	
 }
 
 
@@ -38,8 +38,8 @@ body{
     font-weight:bold;
     font-size:50px;
     text-transform: uppercase;
-    margin-top:9rem;
     color:rgba(37, 116, 169, 1);
+    padding-top:2rem;
 }
 
  .center p{
@@ -52,13 +52,17 @@ body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-
-
+.wrapper{
+    background:white;
+    width:75%;
+    margin:0 auto;
+    margin-top:7rem;
+  }
 
 body  .clg{
     margin: 0 auto;   
     margin-top:2.5rem;
-   width:70%;
+   width:85%;
    }   
 
 .clg .wlc-content{
@@ -104,12 +108,9 @@ tbody td{
 
 .clg table,th,td{
     text-transform: capitalize;
-    background: rgba(250,250,250,1);
     border-collapse: collapse;
     color:rgba(90,90,90,1);
 }
-
-
 
 .clg .search_clg {
  margin:3rem 0 3rem 0;
@@ -124,14 +125,13 @@ tbody td{
 }
 
 .clg .search_clg #search{
-    width:20rem;
-    padding:0.6rem;
+    width:17rem;
+    padding:0.5rem;
     font-size:15px;
     border-radius:7px;
     border:1px solid rgba(180,180,180,1);
     outline:none;
     letter-spacing: 0.2px;
-    background:rgba(250,250,250,1);
     font-family: 'Playfair Display', serif;
 }
 
@@ -139,11 +139,10 @@ tbody td{
 
 .linkx{
     padding-left:1.7rem;
-    margin-top:5rem;
-    margin-bottom:4rem;
+    margin-top:3rem;
+    padding-bottom:1.5rem;
 }
 .linkx .links{
-    margin:2rem 0 0.2rem 0;
     font-weight: bold;
     color:rgba(37, 116, 169, 1);
     font-family: 'Playfair Display', serif;
