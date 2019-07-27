@@ -1,0 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+  outline:none;
+  box-sizing: border-box;
+  }
+
+  .progress-container{
+    top:0;
+    position:fixed;
+}
+
+  body{
+    background: rgb(240,240,240,1);
+}
+
+
+
+
+#loader{
+  top:0;
+  width:100%;
+  height:100vh;
+  background:rgb(252,252,252) 
+  url('loaderx.gif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:4rem;
+  position: fixed;
+  z-index:555;
+} 
+
+.wrapper{
+  background:white;
+  width:75%;
+  margin:0 auto;
+}
+
+
+footer{
+    margin-top:40rem;
+}

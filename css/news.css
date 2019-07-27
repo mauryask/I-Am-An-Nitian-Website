@@ -198,7 +198,7 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    }
 
    .ad-body .flash a, .side-body .flash a{
-      background:white;
+
       width:100%;
       display: flex;
       flex-direction:row;

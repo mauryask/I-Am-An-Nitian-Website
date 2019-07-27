@@ -205,6 +205,67 @@ function id1(got_id)
 
 
 
+
+<div class="explore" style="margin-top:3rem;">
+ <?php 
+            $query = "select * from tbl_images order by id asc";
+             $result = mysqli_query ($conn, $query);
+                if (mysqli_num_rows($result)>0) 
+                {
+                    $i=0;
+                    while ($row = mysqli_fetch_assoc($result))
+                     {
+                       $id = $row["id"];
+                      if ($i++ % 3 == 0)    
+                      {
+                      
+                        echo "<div class='expo' >";
+                      }
+          
+                ?>        
+          
+              <div class="xnnn" style="box-shadow:none;">
+              <?php  echo '<a href="news.php?id='.$id.'">'; ?>
+                <?php echo '<div class="zoom"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>'?>
+              <?php 
+              $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
+              $text = implode(' ',array_slice(explode(' ', $row['text']),0,15)); //getting fires 19 words from text
+              echo '<p style="margin-top:2px;">'.'<span class="heading">'.$head.'</span>'." ".$text.'..</p>';
+                  ?>   
+                  </a>                                            
+                </div>   
+          
+          <?php
+                      if ($i % 3 == 0) echo "</div>";
+              ?>
+          
+           <?php
+                  }
+                  $_SESSION['x']=$ids;
+                  if ($i % 4 != 0) echo "</div>";
+                 }
+               else 
+               {
+              ?>
+              <div>No results found.</div>
+              <?php   
+              }
+             ?>
+                  
+    </div>
+          
+         
+
+ <!--============== ad Section ==================-->
+ <div class="nad" style="display:none;">
+  <img src="images/ad-book.gif"  class="nad-img">
+  </div>
+
+  </div>
+
+
+
+
 <!--============== Signup Popup ==================-->
 <div class="signup" id="sign">
 <div class="sign-card">
@@ -286,62 +347,7 @@ function updf()
 </div>
 
 
-<div class="explore" style="margin-top:3rem;">
- <?php 
-            $query = "select * from tbl_images order by id asc";
-             $result = mysqli_query ($conn, $query);
-                if (mysqli_num_rows($result)>0) 
-                {
-                    $i=0;
-                    while ($row = mysqli_fetch_assoc($result))
-                     {
-                       $id = $row["id"];
-                      if ($i++ % 3 == 0)    
-                      {
-                      
-                        echo "<div class='expo' >";
-                      }
-          
-                ?>        
-          
-              <div class="xnnn" style="box-shadow:none;">
-              <?php  echo '<a href="news.php?id='.$id.'">'; ?>
-                <?php echo '<div class="zoom"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>'?>
-              <?php 
-              $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
-              $text = implode(' ',array_slice(explode(' ', $row['text']),0,15)); //getting fires 19 words from text
-              echo '<p style="margin-top:2px;">'.'<span class="heading">'.$head.'</span>'." ".$text.'..</p>';
-                  ?>   
-                  </a>                                            
-                </div>   
-          
-          <?php
-                      if ($i % 3 == 0) echo "</div>";
-              ?>
-          
-           <?php
-                  }
-                  $_SESSION['x']=$ids;
-                  if ($i % 4 != 0) echo "</div>";
-                 }
-               else 
-               {
-              ?>
-              <div>No results found.</div>
-              <?php   
-              }
-             ?>
-                  
-    </div>
-          
-         
 
- <!--============== ad Section ==================-->
- <div class="nad" style="display:none;">
-  <img src="images/ad-book.gif"  class="nad-img">
-  </div>
-
-  </div>
 
  <!--============== Footer Section ==================-->
   <footer>

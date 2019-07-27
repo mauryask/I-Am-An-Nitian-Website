@@ -103,11 +103,12 @@ while($row=mysqli_fetch_array($result))
 
 <!--=================  Left Side MAnu Bar   ===================-->
 <div class="left-menu" class="popup" id="demo">
-    <p>Admin Panel</p>
+<p><?php echo "Hello! ".$_SESSION['user_name'];  ?></p>
+    <div>
     <button id="add" type="button" >add news</button>
-    <button id="see_cmt" type="button">view comments</button>
     <button id="statics" type="button">statics</button>
     <button id="home" type="button">Home</button>
+</div>
 </div>
 
 
@@ -121,6 +122,8 @@ while($row=mysqli_fetch_array($result))
 
 <script>
 $(document).ready(function(){
+
+  //home button
     $("#home").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0}); 
     setTimeout(function() {
@@ -129,11 +132,20 @@ $(document).ready(function(){
   })
 
 
-/*================  Add News ===================*/ 
+//add news button
   $("#add").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0});   
     setTimeout(function() {
         window.location.href="insert_news.php";
+    },500); 
+  })
+
+
+//static button
+$("#statics").click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0});   
+    setTimeout(function() {
+        window.location.href="statics.php";
     },500); 
   })
 

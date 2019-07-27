@@ -85,12 +85,13 @@ if(mysqli_num_rows($result)>0)
 
 <!--=================  Left Side MAnu Bar   ===================-->
 <div class="left-menu" class="popup" id="demo">
-    <p>Admin Panel</p>
-    <button id="add" type="button" onclick="func()">add news</button>
+    <p><?php echo "Hello! ".$_SESSION['user_name'];  ?></p>
+    <div>
+    <button id="add" type="button" >add news</button>
     <button id="edit" type="button">edit news</button>
-    <button id="delete" type="button">view news</button>
     <button id="statics" type="button">statics</button>
     <button id="home" type="button">Home</button>
+</div>
 </div>
 
 </body>
@@ -107,6 +108,8 @@ if(mysqli_num_rows($result)>0)
 <script>
 
 $(document).ready(function(){
+
+    //home button
     $("#home").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0}); 
     setTimeout(function() {
@@ -114,7 +117,7 @@ $(document).ready(function(){
     },500);  
   })
 
-/*================  Add News ===================*/ 
+//add news button
   $("#add").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0});   
     setTimeout(function() {
@@ -123,14 +126,22 @@ $(document).ready(function(){
   })
 
 
-/*================  Editing News ===================*/   
-
+//edit news button
   $("#edit").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0});
     setTimeout(function() {
         window.location.href="edit_news.php";
     },500); 
   })
+
+//edit news button
+$("#statics").click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0});
+    setTimeout(function() {
+        window.location.href="statics.php";
+    },500); 
+  })
+
 
 $("#demo").on('click',function(){
     TweenMax.to('#demo',0.5,{scaleX: 0}); 
@@ -192,17 +203,4 @@ $(document).ready(function(){
     });
 });
 
-</script>
-
-<script>
-function func()
-{
-    document.getElementById('mainh').style.display='block';
-    document.getElementById('add-news').style.display='block';
-}
-function fund()
-{
-    document.getElementById('mainh').style.display='none';
-    document.getElementById('add-news').style.display='none';
-}
 </script>

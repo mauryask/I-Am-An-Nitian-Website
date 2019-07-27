@@ -29,7 +29,11 @@ $hrs = (int)date('H');
 if($hrs>12)
 {
     $hrs= $hrs-12;
-    $hrs = "0".$hrs;
+    if($hrs<10)
+    {
+        $hrs = "0".$hrs;
+    }
+    
 }
 else
 {

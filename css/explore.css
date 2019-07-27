@@ -20,8 +20,8 @@
 .main-expo{
     text-align: center;
     font-weight: bold;
-    font-size:46px;
-    text-transform: uppercase;
+    font-size:42px;
+    text-transform:uppercase;
     color:rgba(37, 116, 169, 1);
     margin-top:2%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -31,7 +31,7 @@
 margin-top:5px;
 background:rgba(37, 116, 169, 1);
 width:7rem; 
-height:5px;
+height:4px;
 }
 
 .explore .expo  div{
@@ -39,6 +39,7 @@ height:5px;
     height:auto;
     border-radius:12px;
     margin:1.3rem;
+    margin-top:3rem;
     cursor: pointer;
     box-shadow:1px 1px 1px 1px rgba(200,200,200,1);
 }

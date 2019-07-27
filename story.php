@@ -31,7 +31,7 @@ crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 <link href="css/login_register.css" rel="stylesheet"  type="text/css">
 <link href="css/story.css" rel="stylesheet"  type="text/css">
-
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <style>
 
 </style>
@@ -54,7 +54,7 @@ crossorigin="anonymous">
 <div class="wrapper">
 
 
-<header id="f" style="background:black;">
+<header id="f">
 <div class="logo">
 <ul>
 <li><a href="index.php"><img src="images\imnitian.png"></a></li>
@@ -121,11 +121,22 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
 
+
+<div class="banner">
+  <img  src="images/chess.png" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>
+<div class="str" data-aos="fade-up" data-aos-duration="600" data-aos-once='true' data-aos-delay="600">Success Stories</div>
+</div>
+
+
+
+
 <div class="main">
+
+<div class="number" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'><p>1</p></div>
 
 <div class="child_x" style="margin-bottom:25px;">
 
-<div class="hero"> 
+<div class="hero" data-aos="fade-up" data-aos-duration="600" data-aos-once='true' data-aos-delay="400"> 
 
     <div class="himg">
     <div><img src="images/varun.png" /></div>
@@ -207,10 +218,10 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 </div>
 
-
+<div class="number" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'><p>2</p></div>
 <div class="child_x" style="margin-bottom:25px;">
 
-<div class="hero"> 
+<div class="hero" data-aos="fade-up" data-aos-duration="600" data-aos-once='true' data-aos-delay="400"> 
     <div class="himg">
     <div><img src="images/kafeel.png" /></div>
     <div><p>Shubham Maurya</p>
@@ -292,11 +303,11 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
 
-
+<div class="number" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'><p>3</p></div>
 
 <div class="child_x" style="margin-bottom:25px;">
 
-<div class="hero"> 
+<div class="hero" data-aos="fade-up" data-aos-duration="600" data-aos-once='true' data-aos-delay="400"> 
 
     <div class="himg">
     <div><img src="images/gaurangi.jpg" /></div>
@@ -380,9 +391,11 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 </div>
 
+<div class="number" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'><p>4</p></div>
+
 <div class="child_x">
 
-<div class="hero"> 
+<div class="hero" data-aos="fade-up" data-aos-duration="600" data-aos-once='true' data-aos-delay="400"> 
     <div class="himg">
     <div><img src="images/ubaid.png" /></div><div><p>Shubham Maurya</p>
     <p>AIR-1 GATE 2019</p>
@@ -497,12 +510,16 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <!--==================  SweetAlert2 CDN  ==================-->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>
-
+<!--==================  aos.js  CDN  ==================-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <!--==================  Local Js Files  ==================-->
 <script   type="text/javascript" src="js/ajax-register.js"></script>
 <script   type="text/javascript" src="js/ajax-login.js"></script>
 <script   type="text/javascript" src="js/main.js"></script>
 
+<script>
+  AOS.init({ disable: 'mobile' }); //disabling the animations in mobile version
+</script>
 
 
 <script>

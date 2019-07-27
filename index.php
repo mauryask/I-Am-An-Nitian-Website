@@ -183,8 +183,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
   <div class="appx" onclick="location.href='uPDxgdf.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="1000">
-        <img src="images/books.svg">
-        <p>Ebooks</p>
+        <img src="images/team.svg">
+        <p>CA Portal</p>
        </div>
        
     
