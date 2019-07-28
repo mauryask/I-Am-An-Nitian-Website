@@ -6,7 +6,9 @@
 session_start(); //preventing direct access of this page
 if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION['user_type']!=1)
 {
-  exit('access denied page 404 not found');
+  exit('<div style="top:50%;left:50%;font-size:30px; color:rgba(80,80,80,1);
+  font-weight:bold;text-transform:uppercase;text-align:center;
+  transform:translate(-50%,-50%);position:absolute;">Access denied <br/>page 404<br/> not found<div>');
 }
 
 include_once('connection.php');

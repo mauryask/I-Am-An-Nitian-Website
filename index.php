@@ -624,7 +624,7 @@ function updf()
 <script>
   AOS.init({ disable: 'mobile' }); //disabling the animations in mobile version
 </script>
-<script>
+<script>              
 
   </script>
 <script>
