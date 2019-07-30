@@ -7,7 +7,7 @@
 * GitHub : https://github.com/pnstech
 * LinkedIn : https://www.linkedin.com/in/cyberthreatatnit/   
 */
-
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 	
 *{
@@ -113,9 +113,9 @@ left:50%;
     width:100%;
     height:auto;
     box-shadow:0 0 2px 2px rgab(90,90,90,1);
-    padding:25px;
     text-align: justify;
-    background:#222233;
+    margin-top:2rem;
+    margin-bottom:3rem;
 }
 
 
@@ -124,7 +124,10 @@ border-radius:2px;
 float:right;
 cursor:pointer;
 box-shadow: 0 0 8px 2px rgba(210,210,210,1);
+overflow: hidden;
 }
+
+
 
 .hero p{
     line-height:30px;
@@ -138,6 +141,8 @@ box-shadow: 0 0 8px 2px rgba(210,210,210,1);
 .child_x:nth-child(odd) .hero .himg{
     float:left;
    margin:0 27px 3px 0;
+   height:350px;
+   background:rgba(255,196,105,1);
     }
     
 
@@ -150,8 +155,6 @@ box-shadow: 0 0 8px 2px rgba(210,210,210,1);
 .hero .himg div{
     width:220px;
     padding:5px;
-    border:1px solid rgba(210,210,210,1);
-    background:rgba(240,240,240,1);
 }
 
 .hero .himg div p
@@ -162,68 +165,112 @@ box-shadow: 0 0 8px 2px rgba(210,210,210,1);
 }
 
 .hero .himg div:nth-child(1)
-{   
+{   height:250px;
     background:rgba(255,196,105,1);
 }
 
 .hero  div:nth-child(1) img{
     width:100%;
-    height:80%;
+    height:100%;
     border-radius:2px;
     }
 
     
 .hero .himg div:nth-child(2)
 {
-    text-align:center;
+text-align:center;
   font-weight:bold;
-  line-height:20px;
   background:rgba(255,196,105,1);
   margin-top:0;
+  font-family: 'Lato', sans-serif;
 }
 
 
 .hero button
 {
-    padding:0.4rem;
-    width:10rem;
+    padding:0.5rem;
+    width:11rem;
     cursor:pointer;
     box-shadow: 0 0 7px 2px rgba(210,210,210,1);
     margin: 20px 0 12px 0;
     left:50%;
     transform: translate(-50%);
     position: relative;
+    font-size:15px;
 }
 
 #showmex, #showmey, #showmez, #showmek{
     display:none;
 }
 
+.hero .himg div:nth-child(2) p
+{
+    font-family: 'Lato', sans-serif;
+    line-height:20px;
+    font-weight: bold;
+    word-spacing:2px;
+    letter-spacing: 0.4px;
+}
+
 .hero .himg div:nth-child(2) p:nth-child(1)
 {
    font-size:16px;
+   
 }
 
 .hero .himg div:nth-child(2) p:nth-child(2)
 {
    font-size:14px;
+
 }
 
 
 .hero .himg div:nth-child(2) p:nth-child(3)
 {
    font-size:13px;
+
 }
 
 
 .hero .himg div:nth-child(2) p:nth-child(4)
 {
    font-size:12px;
+
 }
 
 
+.next{
+    font-size:19px;
+    font-family: 'Playfair Display', serif;
+    color:#aaccff;
+    letter-spacing: 0.5px;
+    text-align:left;
+    line-height:32px;
+}
 
 
+.next a{
+text-decoration: none;
+color:blue;
+}
+
+.next a:hover{
+    text-decoration:underline;
+    color:red;
+    }
+
+.next_btn{
+    border:2px solid white;
+}
 
 
+    .next_btn a{
+        text-decoration: none;
+   color:white;
+        }
 
+        .next_btn a:hover{
+            text-decoration: none;
+            color:white;
+            }
+    

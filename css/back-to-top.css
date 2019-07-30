@@ -66,3 +66,7 @@
 	 transform:scale3d(0.3,0.3,0.3);
  }
 }
+
+html{
+	scroll-behavior: smooth;
+}

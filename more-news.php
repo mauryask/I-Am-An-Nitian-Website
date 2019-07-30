@@ -229,7 +229,7 @@ function id1(got_id)
                 <?php echo '<div class="zoom"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>'?>
               <?php 
               $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
-              $text = implode(' ',array_slice(explode(' ', $row['text']),0,15)); //getting fires 19 words from text
+              $text = implode(' ',array_slice(explode(' ', $row['text']),0,10)); //getting fires 19 words from text
               echo '<p style="margin-top:2px;">'.'<span class="heading">'.$head.'</span>'." ".$text.'..</p>';
                   ?>   
                   </a>                                            

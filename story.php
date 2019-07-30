@@ -16,7 +16,7 @@ session_start(); //starting session start
 <!DOCTYPE html>
 <html lang="en" oncontextmenu="return false">
 <head>
-<title>I Am An Nitian | Home</title>
+<title>I Am An Nitian | Success Story</title>
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
 <meta name="theme-color" content="#000">
@@ -134,349 +134,284 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 <div class="number" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'><p>1</p></div>
 
-<div class="child_x" style="margin-bottom:25px;">
-
-<div class="hero" data-aos="fade-up" data-aos-duration="600" data-aos-once='true' data-aos-delay="400"> 
-
-    <div class="himg">
-    <div><img src="images/varun.png" /></div>
-    <div><p>Shubham Maurya</p>
-    <p>AIR-1 GATE 2019</p>
-    <p>NIT Raipur, Mechanical</p>
-    <p>(2014-2018)</p></div>
-    </div>
-
-    <p>
-        In publishing and graphic design, Lorem ipsum is a 
-        placeholder text commonly used to demonstrate the 
-        visual form of a document without relying on meaningful c
-        ontent (also called greeking). Replacing the actual conte
-        nt with placeholder text allows designers to design the
-        form of the content before the content itself has been produced.
-    The lorem ipsum text is typically a scrambled section of De
-    finibus bonorum et malorum, a 1st-century BC Latin text by 
-    Cicero, with words altered, added, and removed to make it
-      nonsensical, improper Latin.
-    A variation of the ordinary lorem ipsum text has
-    been used in typesetting since the 1960s or earlier, 
-    when it was popularized by advertisements for Letraset 
-    transfer sheets. It was introduced to the information age 
-    in the mid-1980s by Aldus Corporation, which employed it in 
-    graphics and word-processing templates for its desktop 
-    publishing program PageMaker. Many popular word processors
-      use this format as a placeholder. Some examples 
-      are Pages or Microsoft Word.
-
-      </p>
-<button type="button" id="btnx" onclick="spyx()">Read More</button>
-
-<p id="showmex">
-        In publishing and graphic design, Lorem ipsum is a 
-        placeholder text commonly used to demonstrate the 
-        visual form of a document without relying on meaningful c
-        ontent (also called greeking). Replacing the actual conte
-        nt with placeholder text allows designers to design the
-        form of the content before the content itself has been produced.
-    The lorem ipsum text is typically a scrambled section of De
-    finibus bonorum et malorum, a 1st-century BC Latin text by 
-    Cicero, with words altered, added, and removed to make it
-      nonsensical, improper Latin.
-    A variation of the ordinary lorem ipsum text has
-
-    been used in typesetting since the 1960s or earlier, 
-    when it was popularized by advertisements for Letraset 
-    transfer sheets. It was introduced to the information age 
-    
-    in the mid-1980s by Aldus Corporation, which employed it in 
-    graphics and word-processing templates for its desktop 
-    publishing program PageMaker. Many popular word processors
-      use this format as a placeholder. Some examples 
-      are Pages or Microsoft Word.
-
-        In publishing and graphic design, Lorem ipsum is a 
-        placeholder text commonly used to demonstrate the 
-        visual form of a document without relying on meaningful c
-        ontent (also called greeking). Replacing the actual conte
-        nt with placeholder text allows designers to design the
-        form of the content before the content itself has been produced.
-    The lorem ipsum text is typically a scrambled section of De
-    finibus bonorum et malorum, a 1st-century BC Latin text by 
-    Cicero, with words altered, added, and removed to make it
-      nonsensical, improper Latin.
-    A variation of the ordinary lorem ipsum text has
-    been used in typesetting since the 1960s or earlier, 
-    when it was popularized by advertisements for Letraset 
-    transfer sheets. It was introduced to the information age 
-    in the mid-1980s by Aldus Corporation, which employed it in 
-    graphics and word-processing templates for its desktop 
-    publishing program PageMaker. Many popular word processors
-      use this format as a placeholder. Some examples 
-      are Pages or Microsoft Word.
-</p>
-
-</div>
-
-</div>
-
-<div class="number" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'><p>2</p></div>
-<div class="child_x" style="margin-bottom:25px;">
-
-<div class="hero" data-aos="fade-up" data-aos-duration="600" data-aos-once='true' data-aos-delay="400"> 
-    <div class="himg">
-    <div><img src="images/kafeel.png" /></div>
-    <div><p>Shubham Maurya</p>
-    <p>AIR-1 GATE 2019</p>
-    <p>NIT Raipur, Mechanical</p>
-    <p>(2014-2018)</p></div>
-    </div>
-    <p>
-        In publishing and graphic design, Lorem ipsum is a 
-        placeholder text commonly used to demonstrate the 
-        visual form of a document without relying on meaningful c
-        ontent (also called greeking). Replacing the actual conte
-        nt with placeholder text allows designers to design the
-        form of the content before the content itself has been produced.
-    The lorem ipsum text is typically a scrambled section of De
-    finibus bonorum et malorum, a 1st-century BC Latin text by 
-    Cicero, with words altered, added, and removed to make it
-      nonsensical, improper Latin.
-    A variation of the ordinary lorem ipsum text has
-    been used in typesetting since the 1960s or earlier, 
-    when it was popularized by advertisements for Letraset 
-    transfer sheets. It was introduced to the information age 
-    in the mid-1980s by Aldus Corporation, which employed it in 
-    graphics and word-processing templates for its desktop 
-    publishing program PageMaker. Many popular word processors
-      use this format as a placeholder. Some examples 
-      are Pages or Microsoft Word.
-      </p>
-<button type="button" id="btny" onclick="spyy()">Read More</button>
-
-<p id="showmey">
-
-        In publishing and graphic design, Lorem ipsum is a 
-        placeholder text commonly used to demonstrate the 
-        visual form of a document without relying on meaningful c
-        ontent (also called greeking). Replacing the actual conte
-        nt with placeholder text allows designers to design the
-        form of the content before the content itself has been produced.
-    The lorem ipsum text is typically a scrambled section of De
-    finibus bonorum et malorum, a 1st-century BC Latin text by 
-    Cicero, with words altered, added, and removed to make it
-      nonsensical, improper Latin.
-    A variation of the ordinary lorem ipsum text has
-    been used in typesetting since the 1960s or earlier, 
-    when it was popularized by advertisements for Letraset 
-    transfer sheets. It was introduced to the information age 
-    in the mid-1980s by Aldus Corporation, which employed it in 
-    graphics and word-processing templates for its desktop 
-    publishing program PageMaker. Many popular word processors
-      use this format as a placeholder. Some examples 
-      are Pages or Microsoft Word.
-
-        In publishing and graphic design, Lorem ipsum is a 
-        placeholder text commonly used to demonstrate the 
-        visual form of a document without relying on meaningful c
-        ontent (also called greeking). Replacing the actual conte
-        nt with placeholder text allows designers to design the
-        form of the content before the content itself has been produced.
-    The lorem ipsum text is typically a scrambled section of De
-    finibus bonorum et malorum, a 1st-century BC Latin text by 
-    Cicero, with words altered, added, and removed to make it
-      nonsensical, improper Latin.
-    A variation of the ordinary lorem ipsum text has
-    been used in typesetting since the 1960s or earlier, 
-    when it was popularized by advertisements for Letraset 
-    transfer sheets. It was introduced to the information age 
-    in the mid-1980s by Aldus Corporation, which employed it in 
-    graphics and word-processing templates for its desktop 
-    publishing program PageMaker. Many popular word processors
-      use this format as a placeholder. Some examples 
-      are Pages or Microsoft Word.
-</p>
-</div>
-
-</div>
 
 
 
 
 
 
-<div class="number" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'><p>3</p></div>
 
-<div class="child_x" style="margin-bottom:25px;">
-
-<div class="hero" data-aos="fade-up" data-aos-duration="600" data-aos-once='true' data-aos-delay="400"> 
-
-    <div class="himg">
-    <div><img src="images/gaurangi.jpg" /></div>
-    <div><p>Shubham Maurya</p>
-    <p>AIR-1 GATE 2019</p>
-    <p>NIT Raipur, Mechanical</p>
-    <p>(2014-2018)</p></div>
-    </div>
-
-    <p>
-        In publishing and graphic design, Lorem ipsum is a 
-        placeholder text commonly used to demonstrate the 
-        visual form of a document without relying on meaningful c
-        ontent (also called greeking). Replacing the actual conte
-        nt with placeholder text allows designers to design the
-        form of the content before the content itself has been produced.
-    The lorem ipsum text is typically a scrambled section of De
-    finibus bonorum et malorum, a 1st-century BC Latin text by 
-    Cicero, with words altered, added, and removed to make it
-      nonsensical, improper Latin.
-    A variation of the ordinary lorem ipsum text has
-    been used in typesetting since the 1960s or earlier, 
-    when it was popularized by advertisements for Letraset 
-    transfer sheets.
-     It was introduced to the information age 
-    in the mid-1980s by Aldus Corporation, which employed it in 
-    graphics and word-processing templates for its desktop 
-    publishing program PageMaker.
-     Many popular word processors
-      use this format as a placeholder. Some examples 
-      are Pages or Microsoft Word.
-      </p>
-    <button type="button" id="btnz" onclick="spyz()">Read More</button>
-
-<p id="showmez">
-        In publishing and graphic design, Lorem ipsum is a 
-        placeholder text commonly used to demonstrate the 
-        visual form of a document without relying on meaningful c
-        ontent (also called greeking). Replacing the actual conte
-        nt with placeholder text allows designers to design the
-        form of the content before the content itself has been produced.
-    The lorem ipsum text is typically a scrambled section of De
-    finibus bonorum et malorum, a 1st-century BC Latin text by 
-    Cicero, with words altered, added, and removed to make it
-      nonsensical, improper Latin.
-    A variation of the ordinary lorem ipsum text has
-
-    been used in typesetting since the 1960s or earlier, 
-    when it was popularized by advertisements for Letraset 
-    transfer sheets. It was introduced to the information age 
-    
-    in the mid-1980s by Aldus Corporation, which employed it in 
-    graphics and word-processing templates for its desktop 
-    publishing program PageMaker. Many popular word processors
-      use this format as a placeholder. Some examples 
-      are Pages or Microsoft Word.
-
-        In publishing and graphic design, Lorem ipsum is a 
-        placeholder text commonly used to demonstrate the 
-        visual form of a document without relying on meaningful c
-        ontent (also called greeking). Replacing the actual conte
-        nt with placeholder text allows designers to design the
-        form of the content
-         before the content itself has been produced.
-    The lorem ipsum text is typically a scrambled section of De
-    finibus bonorum et malorum, a 1st-century BC Latin text by 
-    Cicero, with words altered, added, and removed to make it
-      nonsensical, improper Latin.
-    A variation of the ordinary lorem ipsum text has
-    been used in typesetting since the 1960s or earlier, 
-    when it was popularized by advertisements for Letraset 
-    transfer sheets. It was introduced to the information age 
-    in the mid-1980s by Aldus Corporation, which employed it in 
-    graphics and word-processing templates for its desktop 
-    publishing program PageMaker. Many popular word processors
-      use this format as a placeholder. Some examples 
-      are Pages or Microsoft Word.
-</p>
-
-</div>
-
-</div>
-
-<div class="number" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'><p>4</p></div>
 
 <div class="child_x">
 
 <div class="hero" data-aos="fade-up" data-aos-duration="600" data-aos-once='true' data-aos-delay="400"> 
     <div class="himg">
-    <div><img src="images/ubaid.png" /></div><div><p>Shubham Maurya</p>
+    <div><img src="images/toppers/rajat_soni.jpg" /></div>
+    <div><p>Rajat Soni</p>
     <p>AIR-1 GATE 2019</p>
-    <p>NIT Raipur, Mechanical</p>
-    <p>(2014-2018)</p></div>
+    <p>NIT Warangal, ECE</p>
+    </div>
     </div>
     
     <p>
-        In publishing and graphic design, Lorem ipsum is a 
-        placeholder text commonly used to demonstrate the 
-        visual form of a document without relying on meaningful c
-        ontent (also called greeking). Replacing the actual conte
-        nt with placeholder text allows designers to design the
-        form of the content before the content itself has been produced.
-    The lorem ipsum text is typically a scrambled section of De
-    finibus bonorum et malorum, a 1st-century BC Latin text by 
-    Cicero, with words altered, added, and removed to make it
-      nonsensical, improper Latin.
-    A variation of the ordinary lorem ipsum text has
-    been used in typesetting since the 1960s or earlier, 
-    when it was popularized by advertisements for Letraset 
-    transfer sheets. It was introduced to the information age 
-    in the mid-1980s by Aldus Corporation, which employed it in 
-    graphics and word-processing templates for its desktop 
-    publishing program PageMaker. Many popular word processors
-      use this format as a placeholder. Some examples 
-      are Pages or Microsoft Word.
 
-        In publishing and graphic design, Lorem ipsum is a 
-        placeholder text commonly used to demonstrate the 
-        visual form of a document without relying on meaningful c
-        ontent (also called greeking). Replacing the actual conte
-        </p>
+ Hi! I am Rajat Soni. I belong to district Jabalpur 
+(M.P.). After getting a decent rank of 2474 in JEE (Main)-2014 
+along with class 12, I decided to join National Institute of 
+Technology, Warangal. I did my B.Tech. in Electronics and 
+Communication Engineering (Batch of 2018). 
+<br>
+<span style="color:red">
+1) What was your routine study schedule in 
+NITW? How much was your CGPA?</span><br>
+ My routine schedule was like most of the students.
+ Bunking classes gave more thrill than anything else. 
+ Everyone knows how famous ECE Department of NITW is. 
+ Last minute completion of folders and projects was a 
+ normal story. Academics seemed to be a long lost friend as 
+ we approached the third year. As a result, my CGPA dipped 
+ down to 8.54 by the time I graduated.
+ <br>
+ <span style="color:red">
+2) Where you involved in any Club/Society/Organizing 
+Team of College? If yes, did they provide you any edge 
+in preparation or overall?</span>
+<br>
+ I was a part of Electronics Amateur and HAM 
+(EA & HAM) Club right from my second year. It was
+ essentially due to my interest in practical applications of electronics. 
+
+ </p>
 <button type="button" id="btnk" onclick="spyk()">Read More</button>
 <p id="showmek">
-        nt with placeholder text allows designers to design the
-        form of the content before the content itself has been produced.
-    The lorem ipsum text is typically a scrambled section of De
-    finibus bonorum et malorum, a 1st-century BC Latin text by 
-    Cicero, with words altered, added, and removed to make it
-      nonsensical, improper Latin.
-    A variation of the ordinary lorem ipsum text has
-    been used in typesetting since the 1960s or earlier, 
-    when it was popularized by advertisements for Letraset 
-    transfer sheets. It was introduced to the information age 
-    in the mid-1980s by Aldus Corporation, which employed it in 
-    graphics and word-processing templates for its desktop 
-    publishing program PageMaker. Many popular word processors
-      use this format as a placeholder. Some examples 
-      are Pages or Microsoft Word.
 
-        In publishing and graphic design, Lorem ipsum is a 
-        placeholder text commonly used to demonstrate the 
-        visual form of a document without relying on meaningful c
-        ontent (also called greeking). Replacing the actual conte
-        nt with placeholder text allows designers to design the
-        form of the content before the content itself has been produced.
-    The lorem ipsum text is typically a scrambled section of De
-    finibus bonorum et malorum, a 1st-century BC Latin text by 
-    Cicero, with words altered, added, and removed to make it
-      nonsensical, improper Latin.
-    A variation of the ordinary lorem ipsum text has
-    been used in typesetting since the 1960s or earlier, 
-    when it was popularized by advertisements for Letraset 
-    transfer sheets. It was introduced to the information age 
-    in the mid-1980s by Aldus Corporation, which employed it in 
-    graphics and word-processing templates for its desktop 
-    publishing program PageMaker. Many popular word processors
-      use this format as a placeholder. Some examples 
-      are Pages or Microsoft Word.
+ I got the opportunity to serve the club as a General Secretary in the year 2017-18. 
+ <br>
+ <span style="color:red">
+3) What was your aim at, and expectations from NITW?</span>
+<br>
+ I never knew what I was expecting.
+ Being a top level NIT, the reputations were 
+ very good. It was hard to leave home and 
+ live in hostels, eat in mess, attend 5:30
+ AM EAA and what not. But now I miss it the most.
+ <br>
+ <span style="color:red">
+4) When did you first thought of starting
+ preparations for GATE Examinations?
+ </span>
+ <br>
+ I had it in my mind since the third year.
+ But due to lack of time and motivation, I couldn’t dare to
+  take a step forward for that. I gave GATE 2018 with incomplete
+   preparation. The result was not very satisfactory.
+    I also had many opportunities to meet people who
+     had cleared the prestigious examinations of 
+     GATE and ESE. That motivated me each time.
+     <br>
+ <span style="color:red">
+5) What was your initial preparation plan?
+</span>
+<br>
+ I knew it would take extraordinary
+ efforts since I had to start from scratch. 
+ I did not continue my preparation after GATE 
+ 2018. So I decided to take the help from
+  various institutes. However I relied mostly 
+  on self-study as it is the most important 
+  aspect of preparation for any competitive examination.
+
+  <br>
+ <span style="color:red">
+6) Did you apply for campus placements? Were you placed in any company?
+</span><br>
+ I did an Internship in Samsung 
+Semiconductors India R&D (SSIR) Bangalore
+in summers of 2016-17. Fortunately I got a pre placement offer as well.
+ So I didn’t need to sit for campus placements.
+7) How much time did you devote on daily basis for Gate preparations?
+ANSWER: Apart from classes I used to devote around 5-6 hours daily for
+ revision and solving previous years’ papers. 
+ <br>
+ <span style="color:red">
+8) Did you take any coaching for GATE Examinations?
+ (include Test series).</span>
+<br>
+ Yes. As I said earlier, coaching do help to give a 
+proper direction towards the preparation. I joined regular 
+Classroom Course in Made Easy. Along with that, 
+I joined the test series of Ace Academy and Gate Academy.
+
+<br>
+ <span style="color:red">
+9) What we're the study materials/books which you relied upon?</span>
+<br>
+ Mostly the classroom notes are self-sufficient.
+ If any doubt’s remained, YouTube was the best source 
+ to get my doubts cleared instantly on any topic.
+ <br>
+ <span style="color:red">
+10) Anytime during preparation, did the thought 
+of backing out hit your mind, like you felt that
+ you won't be able to achieve the set goal?
+ </span><br>
+A couple of times actually. Frustration 
+and demotivation naturally tend to come during preparation.
+ Nothing beats a low test scores and a heavy topic for the day. 
+I used to talk to my parents whenever I felt low.
+ They motivated me to continue my preparation. 
+ <br>
+ <span style="color:red">
+11) How many marks/rank were you getting in 
+Test series?(In case you took any)</span><br>
+ I started attempting the test series from the month of 
+January. Initially my scores used to be within 60-65. 
+Later they increased till 70-75 and at the end they even touched 80.
+<br>
+ <span style="color:red">
+12) What was your final preparation plan?
+</span><br>
+ Last one month is very crucial in GATE exam preparation.
+I used to revise my short notes on regular basis. 
+I used to attempt 2 tests per day. As my actual 
+GATE exam was in forenoon session, I tried my best 
+to give one test daily in that same time slot.
+<br>
+ <span style="color:red">
+13) How many marks did you expect before paper?</span><br>
+ Frankly, I never thought about my marks 
+before the exam. It is actually better not to have any presumptions 
+about the paper. It can jeopardize your performance and your results.
+
+<br>
+ <span style="color:red">
+14) Were you having any intuitions of bagging AIR 1?</span><br>
+
+ Well, I used the rank predictors before IIT
+ Madras released its official answer key. They 
+ were showing my rank somewhere in between 10-15. 
+ After that I didn’t bothered much about the result and left it to the fate.
+ <br>
+ <span style="color:red">
+15) What was your first response when you came to know about topping the GATE 2019?</span><br>
+ It was 15th of March when IITM was
+ expected to follow the trend by declaring the result one day prior to
+  official date. I was having my lunch just then I 
+  randomly tried to open the GATE website to check the status.
+  I logged in. The results were out. I scrolled down. 
+  I saw the digits ‘10’ in the box. I knew that would 
+  be the range of AIR I was expecting. To my surprise, 
+  when I slid the page to the right, the number turned 
+  out to be ‘1000’. Yes that was my GATE score. A perfect
+   ‘1000’. Above that was written AIR 1. I couldn’t believe
+    my eyes for a moment. I allowed that moment to sink
+     in and called my parents to share that precious moment.
+     <br>
+ <span style="color:red">
+16) What are your further goals in life?</span><br>
+ I have kept all the fronts open. I don’t 
+want to be too hard on myself. I would keep exploring 
+the different opportunities I can have with this GATE score.
+<br>
+ <span style="color:red">
+17) Would you like to say anything to GATE Aspirants?</span><br>
+ Yes. I would suggest sticking to standard source for 
+preparation. Avoid unnecessary books and material.
+ Concentrate on previous year papers. Do them multiple 
+ times. Note down your mistakes. Keep revising even
+  in your free time. Time is a beautiful gift we have. 
+  Never under estimate your potential. Sky is not 
+  the limit, your vision is. It does not matter from 
+  which college you did your graduation or how good
+  were you in your 10+2. What all matters is how 
+  willing are you to give up everything you have
+   right now just to fulfil the dream you had once seen. 
+“To cross the ocean, you must have the courage to leave the sight of the shore.”
+<br>
+Thanks a lot!      
 </p>
 </div>
+</div>
 
 
 
+<div class="number" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'><p>2</p></div>
 
+<div class="child_x" style="margin-bottom:25px;">
+
+<div class="hero" data-aos="fade-up" data-aos-duration="600" data-aos-once='true' data-aos-delay="400"> 
+
+    <div class="himg">
+    <div><img src="images/toppers/ankit_singh.jpg" /></div>
+    <div><p>Ankit Kumar</p>
+    <p>AIR-7 GATE 2019</p>
+    <p>NIT Durgapur, ECE</p>
+    </div>
+    </div>
+
+    <p>
+    Hello everyone , my name is Ankit Kumar and I got AIR 7 
+    in Gate 2019 (ECE).  
+I am from 'Maner' , a village in Patna district of Bihar. 
+I started my gate preparation in the month of October
+2017, that was my 5th semester. I started by a good 
+knowledge of the exam and it's preparation strategy. So
+I watched almost all Youtube videos and read lot of 
+answers on quora. Like most of the students ,I started 
+with network and studied network for 2 months then in 
+December I started control and I was studying control 
+till February.<br>I realised one thing that students 
+around me were devoting a lot of time in their preparation 
+and I couldn't give that much because I was very busy with 
+my college life . Apart from regular classes and labs I was 
+involved with NSS and dramatics club so I choose a different 
+strategy , I thought that out of 1 lac students what makes
+ me different or topper. So I made plan for whole year,
+  for whole month, for whole week and for next day. 
+  I planned on completing the syllabus till September 
+  and then go for test series I then completed EDC, 
+  signal and system and other subjects .
+  But in summer 
+  holidays, I did swachh Bharat summer internship and a
+  training in ntpc so I lost two months, but it was my
+  luck that I got placed in August in a company named 
+  'Campgemini'.
+  </p>
+    <button type="button" id="btnz" onclick="spyz()">Read More</button>
+
+<p id="showmez">
+  After this I could have left preparation 
+    for gate. But it was my luck that I feel jealous a lot 
+    and students around me used to prepare for gate and I 
+    was not. So I started my preparation again and completed 
+    subjects like communication, EMT and other but again in
+     the month of November. I started taking interest in college 
+     politics and thus wasted 1 month but it was the month of December 
+     that brought a lot of change in me. I started giving full length
+      tests and made a separate notebook for it, I started writing
+       important points derived from it, I made audio notes for me
+        and December brought biggest change in my preparation. Again 
+        in January I continued the same habit of test and preparation and
+        in February when meta and mechanical guys said that their gate paper 
+        was easy , I gained a lot of confidence, just revised my short 
+        notes and gave it a clear shot. I didn't study in the last week.
+   <br>
+   Thank You
+</p>
+
+</div>
 
 </div>
 
 
 </div>
+
+<p class="next next_btn" style="float:right;padding:0 0.4rem 0 0.4rem;"> 
+ <a href="story2.php">Next Story <i class="fas fa-chevron-circle-right"></i></a></p>
+<p class="next" style="margin-top:7rem;"> list of NITIANs who did splendid performence in "Gate 2019" <a href="gate_topper_list.php">Click Here</a></p>
+<p class="next"> list of NITIANs who cleared "Engineering Service Exam 2019" <a href="ese_topper_list.php">Click Here</a></p>
+</div>
+
 
 </div> <!--  Wrapper-->
 

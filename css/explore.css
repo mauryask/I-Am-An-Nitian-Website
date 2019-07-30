@@ -73,7 +73,9 @@ height:4px;
 
 
 .explore .expo  .xnnn {
-  width:14.6rem;
+  width:13.7rem;
+  border-radius:0;
+  text-align:justify;
 }
 
 .explore .expo  .xnnn a{
@@ -85,12 +87,13 @@ box-shadow:none;
 
 .explore .expo  .xnnn a .heading{
 font-weight: bold;
+font-family: 'Playfair Display', serif;
 }
 
 .explore .expo  .xnnn p{
+  text-align:unset;
     padding:5px 5px 2px 5px;
     color:#050505;
-    text-align:justify;
     line-height:1.4rem;
     font-size: 16px;
     font-family: 'Playfair Display', serif;
@@ -135,8 +138,8 @@ font-size:15px;
 
       .explore .expo .xnnn img:hover{
           outline: none;
-          width:112%;
-          height:112%;
+          width:115%;
+          height:115%;
       }
 
       .explore .expo .xnnn video{

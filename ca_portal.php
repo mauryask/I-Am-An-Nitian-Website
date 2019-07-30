@@ -30,7 +30,9 @@ crossorigin="anonymous">
 <link href="css/footer.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 <link href="css/login_register.css" rel="stylesheet"  type="text/css">
-<link href="css/ca_portal.css" rel="stylesheet"  type="text/css">
+<link href="css/more-news.css" rel="stylesheet"  type="text/css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="css/ca_portal.css" rel="stylesheet">
 <style>
 
 </style>
@@ -45,112 +47,205 @@ crossorigin="anonymous">
 <div id="loader">
 </div>
 
- <!--================ Scroll Indicator ======================-->
- <div class="progress-container">
-    <div class="progress-bar" id="myBar"></div>
-  </div> 
-
-<div class="wrapper" >
-
-
-<header id="f" style="background:black;">
-<div class="logo">
-<ul>
-<li><a href="index.php"><img src="images\imnitian.png"></a></li>
-<li class="logo_txt"><a href="index.php" style="font-family: 'Dancing Script', cursive;color:white;font-weight:bold;font-size:13px;letter-spacing: 0.7px;" >I AM AN NITIAN</a></li>
-</ul>
+<div class="title">
+  <span class="t1">Dashboard</span>
+<span class="t2">Facebook Posts</span>
+<span class="t3">Tasks</span>
+<span class="t4">Guidelines</span>
+<span class="t5">Contacts</span>
 </div>
-<nav class="active">
-<ul>
-<li><a href="index.php" class="homex" >Home</a></li>
-<li><a href="more-news.php" class="home" >News</a></li>
-<li><a href="index.php#updf" class="homex" >Updates</a></li>
-<li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
 
-<li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;" id="user">
-<?php
-  if(isset($_SESSION['name'])&& !empty($_SESSION['name']))
-  {
-    echo $_SESSION['name'];
-  }
-  else
-  {
-    echo 'User';
-  }
-?>
-&nbsp <i class="fas fa-user-graduate"></i></a>
-<ul style="margin-left:-1rem;">
-<!-- Hide and Show login and php buttons -->
-
-<?php
-if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
-{
-  if($_SESSION['user_type'] == 1)
-  {
-    echo '<li><a href="edit_news.php" class="homex">Admin</a></li>';
-  }
-}
-?>
-
-<?php if( isset($_SESSION['name']) && !empty($_SESSION['name']))
-{
-?>
-<li><a style="cursor:pointer;"  href="logout.php" >Logout</a></li>
-<?php }else{ ?>
-<li><a style="cursor:pointer;"  onclick="show_log()" id="login_nav">Login</a></li>
-<li><a style="cursor:pointer;"  onclick="show_signup()" id="register_nav">Register</a></li>
-<?php } ?>
-
-</ul>
-</li>
-</ul>
-</nav>
-<!--================ Mobile Version Menu ====================-->
-<div class="menu-toggle">
-<i class="fas fa-bars"></i>
+<div class="logo" onclick="location.href='index.php'">
+  <img src="images/imnitian.png">
+  <p>I Am An Nitian</p>
 </div>
-<img src="images/cutk.png" class="cut_nav" style="display:none;">
 
-<!--================ Search Box ====================-->
-<div class="search-popup" id="searchx" style="display:none;">
-    <div><input type="text"  placeholder="Search"><button><i class="fas fa-search"></i></button></div>
-  </div>
-
-</header>
-
-
-
-
-
-
-
-
-
-
-
-
-
- </div>
-
- <!--============== Footer Section ==================-->
-  <footer>
-  <div class="datad">
-  <p class="x">Feel Free To Contact Us</p>
-  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-9055667606 &nbsp | &nbsp  +91-9055667606</p>
- <span id="respo_contact">
- <P>iamannitian@gmail.com</p> 
- <P>+91-9055667606</p> 
- <P>+91-9055667606</p> 
-   </span>
+<div class="user">
+  <img src="images/man.svg">
+  <p>Hi Abhinav</p>
 </div>
-<!--============== Bottom Container =====================-->
- <div class="container">
- <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
-2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbspAll Rights Reserved</span></p>
-<p id="and_copy" class="copyright">All rights reserved</p>
+
+
+
+<div class="wrapper">  
+
+
+
+
+<div class="menu">
+
+<div><p>CA Portal</p></div>
+
+<div class="mn_btn">
+<button id="dash">Dashboard</button>
+<button id="post">Posts</button>
+<button id="task">Tasks</button>
+<button id="guide">Guidelines</button>
+<button id="contact">Contacts</button>
+<button id="logout">Logout</button>
 </div>
+</div>
+
+
+
+
+
+<div class="icons" >
+
+<div class="card">
+<div><p>1</p></div>
+<p>Total Points</p>
+</div>
+
+<div class="card">
+  <div><p>20</p></div>
+  <p>Tasks Completed</p>
+</div>
+
+<div class="card">
+<div><p>25</p></div>
+<p>Posts shared</p>
+</div> 
+
+
+<!-- Second Slide -->
+
+
+<div class="cardx card">
+<div><img src="images/coding.jpg"></div>
+<span>
+  The lorem ipsum text is 
+  typically a scrambled
+   section of De finibus 
+   bonorum et malorum
+</span>
+<p >
+  <iframe 
+   src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=large&appId=473134703234415&width=73&height=28"
+    width="73" 
+    height="28" 
+    style="border:none;overflow:hidden" 
+    scrolling="no" 
+    frameborder="0" 
+    allowTransparency="true"
+    allow="encrypted-media">
+  </iframe>
+</p>
+</div>
+
+<div class="cardx card">
+  <div><img src="images/musical.jpg"></div>
+<span>
+  The lorem ipsum text is 
+  typically a scrambled
+   section of De finibus 
+   bonorum et malorum
+  </span>
+  <p>
+  <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=large&appId=473134703234415&width=73&height=28"
+    width="73" 
+    height="28" 
+    style="border:none;overflow:hidden" 
+    scrolling="no" 
+    frameborder="0" 
+    allowTransparency="true"
+    allow="encrypted-media">
+  </iframe>
+  </p>
+</div>
+
+<div class="cardx card">
+<div><img src="images/graduation.jpg"></div>
+<span>
+The lorem ipsum text is 
+  typically a scrambled
+   section of De finibus 
+   bonorum et malorum
+  </span>
+<p>
+<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&layout=button&size=large&appId=473134703234415&width=73&height=28"
+    width="73" 
+    height="28" 
+    style="border:none;overflow:hidden" 
+    scrolling="no" 
+    frameborder="0" 
+    allowTransparency="true"
+    allow="encrypted-media">
+  </iframe>
+</p>
+</div> 
+
+<div class="msgx">share these posts on your facebook news feed before they disappear
+  <br>and earn points
+</div>
+
+<!-- Third Slide -->
+
+<div class="tasks">
+  Will be updated soon..
+</div>
+
+
+
+<!-- fourth Slide -->
+
+
+<div class="cardy cardx">
+<div style="background:green;
+border-top-right-radius:40px;
+border-top-left-radius:5px;
+border-bottom-right-radius:5px;
+border-bottom-left-radius:40px;
+border:2px solid #282828;
+height:235px;">
+<img src="images/varun.png" style="">
+</div>
+<p>Lokesh Yadav</p>
+<p>9055667606</p>
+</div>
+
+<div class="cardy cardx">
+<div style="background:green;
+border-top-right-radius:40px;
+border-top-left-radius:5px;
+border-bottom-right-radius:5px;
+border-bottom-left-radius:40px;
+border:2px solid #282828;
+height:235px;">
+<img src="images/ashish.jpg" style="">
+</div>
+<p>Tarun Mishra</p>
+<p>9055667606</p>
+</div>
+
+<div class="cardy cardx">
+<div style="background:green;
+border-top-right-radius:40px;
+border-top-left-radius:5px;
+border-bottom-right-radius:5px;
+border-bottom-left-radius:40px;
+border:2px solid #282828;
+height:235px;">
+<img src="images/ubaid.png" style="">
+</div>
+<p>Abhay Mishra</p>
+<p>9055667606</p>
+</div>
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+<footer>
+  <p>Copyright <i class="far fa-copyright"></i> 2019 | I am an nitian</p>
 </footer>
-
 
 </body>
 
@@ -164,6 +259,9 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <!--==================  SweetAlert2 CDN  ==================-->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>
+<!--==================  aos.js  CDN  ==================-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!--==================  Local Js Files  ==================-->
 <script   type="text/javascript" src="js/main.js"></script>
 
 <script>
@@ -171,91 +269,125 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </script>
 
 <script>
- /*==================== Menu toggle =========================*/
- $(document).ready(function(){
 
-  if (window.matchMedia('(max-width:721px)').matches)
+$(document).ready(function()
 {
-  
-  $('.cut_nav').click(function(){
-    $(this).css('display','none');
-    $('.menu-toggle').css('display','block');
-    TweenMax.to('.active',0.5,{scaleX: 0});
-    $('nav').css('z-index', '1');
-    $('.logo').css('marginLeft', '0px');
-    $('.logo').css('marginTop', '0px');
-    $('.logo_txt').css('marginTop', '0px');
-    setTimeout(function(){
-    
-      $('header').css('background', 'black');
-    
-    },200)
 
-  })
+$('#dash').click(function(){
+  $(this).css({'background': '#282828', 'color':'white'});
+  $('.t2').fadeOut(1000).css('display', 'none');
+  $('.t3').fadeOut(1000).css('display', 'none');
+  $('.t4').fadeOut(1000).css('display', 'none');
+  $('.t5').fadeOut(1000).css('display', 'none');
 
-  $(window).scroll(function(){
-  $('header').css('background', 'black');
-})
-  
+  $('.t1').fadeIn(1000);
+  $('.card').css('display', 'flex'); 
+  $('.cardx').css('display', 'none');
+  $('.tasks').css('display', 'none');
+  $('.cardy').css('display', 'none');
+  $('.msgx').css('display', 'none');
+
+//button control
+  $('#contact').css({'background':'none', 'color':'#050505'});
+  $('#post').css({'background':'none', 'color':'#050505'});
+  $('#task').css({'background':'none', 'color':'#050505'});
+  $('#guide').css({'background':'none', 'color':'#050505'});
+
+});
 
 
-  $('.menu-toggle').click(function(){
-    $(this).css('display','none');
-    $('.cut_nav').css('display','block');
-
-    $('nav').css('z-index', '4');
-
-    $('header').css('background', 'transparent');
-    $('.cut_nav').css('background','black');
-    TweenMax.to('.active',0.4,{scaleX: 1});
-
-    setTimeout(function(){
-      $('.logo').css('marginLeft', '62px');
-      $('.logo').css('marginTop', '18px');
-      $('.logo_txt').css('marginTop', '10px');
-    },200);
-
-    setTimeout(function(){
-      $('nav').css('z-index', '-1');
-    },350);
+$('#post').click(function(){
+  $(this).css({'background': '#282828', 'color':'white'});
+  $('.t1').fadeOut(1000).css('display', 'none');
+  $('.t3').fadeOut(1000).css('display', 'none');
+  $('.t4').fadeOut(1000).css('display', 'none');
+  $('.t5').fadeOut(1000).css('display', 'none');
    
-  })
-
- 
-
-$('#login_nav').click(function()
-{
-  $('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');
-  TweenMax.to('.active',0.1,{scaleX: 0});  
-  $('.cut_nav').css('display','none');
-  $('.menu-toggle').css('display','block');
-  $('header').css('background', 'black');
-  $('.logo_txt').css('marginTop', '0px');
-})
-
-$('#register_nav').click(function(){
-  $('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');
-  TweenMax.to('.active',0.1,{scaleX: 0});  
-  $('.cut_nav').css('display','none');
-  $('.menu-toggle').css('display','block');
-  $('header').css('background', 'black');
-  $('.logo_txt').css('marginTop', '0px');
-})
-
-$('#about_nav').click(function()
-{
-  $('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');
-  TweenMax.to('.active',0.1,{scaleX: 0});  
-  $('.cut_nav').css('display','none');
-  $('.menu-toggle').css('display','block');
-})
-
-}
+  $('.t2').fadeIn(1000).css('display', 'block');
   
+  $('.card').css('display', 'none');
+  $('.tasks').css('display', 'none');
+  $('.cardx').css('display', 'flex');
+  $('.cardy').css('display', 'none');
+  $('.msgx').css('display', 'block');
+
+
+//button control
+  $('#dash').css({'background':'none', 'color':'#050505'});
+  $('#contact').css({'background':'none', 'color':'#050505'});
+  $('#task').css({'background':'none', 'color':'#050505'});
+  $('#guide').css({'background':'none', 'color':'#050505'});
+
+})
+
+
+$('#task').click(function(){
+  $(this).css({'background': '#282828', 'color':'white'});
+  $('.t1').fadeOut(1000).css('display', 'none');
+  $('.t2').fadeOut(1000).css('display', 'none');
+  $('.t4').fadeOut(1000).css('display', 'none');
+  $('.t5').fadeOut(1000).css('display', 'none');
+
+  $('.t3').fadeIn(1000).css('display', 'block');
+  $('.card').fadeOut(1000).css('display', 'none');
+  $('.card').fadeOut(1000).css('display', 'none');
+  $('.cardy').css('display', 'none');
+  $('.tasks').fadeIn(1000).css('display', 'flex');
+  $('.msgx').css('display', 'none');
+
+
+//button control
+  $('#dash').css({'background':'none', 'color':'#050505'});
+  $('#post').css({'background':'none', 'color':'#050505'});
+  $('#contact').css({'background':'none', 'color':'#050505'});
+  $('#guide').css({'background':'none', 'color':'#050505'});
+
+})
+
+
+$('#guide').click(function(){
+  $(this).css({'background': '#282828', 'color':'white'});
+  $('.t1').fadeOut(1000).css('display', 'none');
+  $('.t2').fadeOut(1000).css('display', 'none');
+  $('.t3').fadeOut(1000).css('display', 'none');
+  $('.t5').fadeOut(1000).css('display', 'none');
+
+  $('.t4').fadeIn(1000).css('display', 'block');
+  $('.card').fadeOut(1000).css('display', 'none');
+  $('.cardx').fadeOut(1000).css('display', 'none');
+  $('.msgx').css('display', 'none');
+
+  $('#dash').css({'background':'none', 'color':'#050505'});
+  $('#post').css({'background':'none', 'color':'#050505'});
+  $('#task').css({'background':'none', 'color':'#050505'});
+  $('#contact').css({'background':'none', 'color':'#050505'});
+
+})
+
+
+$('#contact').click(function(){
+  $(this).css({'background': '#282828', 'color':'white'});
+  $('.t1').fadeOut(1000).css('display', 'none');
+  $('.t2').fadeOut(1000).css('display', 'none');
+  $('.t3').fadeOut(1000).css('display', 'none');
+  $('.t4').fadeOut(1000).css('display', 'none');
+
+  $('.t5').fadeIn(1000).css('display', 'block');
+  $('.card').css('display', 'none');
+  $('.cardx').css('display', 'none');
+  $('.tasks').css('display', 'none');
+  $('.cardy').css('display', 'block');
+  $('.msgx').css('display', 'none');
+
+  $('#dash').css({'background':'none', 'color':'#050505'});
+  $('#post').css({'background':'none', 'color':'#050505'});
+  $('#task').css({'background':'none', 'color':'#050505'});
+  $('#guide').css({'background':'none', 'color':'#050505'});
+
+})
+
+
+
 })
 
 </script>
-
