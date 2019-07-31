@@ -46,6 +46,11 @@ body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.cortesy{
+  margin-top:1rem;
+    line-height:2.4rem;
+}
+
 #rank_yr{
     font-size:45px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -204,18 +209,29 @@ font-family: serif;
     }
 
 
+    .wrapper{
+        width:100%;
+        margin-top:0;
+    }
+
 
 .center{
-    margin-top:7rem;
+    margin:0 auto;
+    margin-top:4rem;
+    width:80%;
+    margin-bottom:1rem;
+    font-size:48px;
 }
+.center .courtesy{
+    margin-top:12px;
+    font-size:16px;
+    letter-spacing:0.4px;
+}
+
 
     .center .break{
         display:block;
         margin-top:-2.8rem;
-    }
-
-    .center .sub-center{
-        margin-bottom: 0;
     }
 
     .center .sub-center .brk{
@@ -227,9 +243,6 @@ font-family: serif;
 font-size:32px;
   } 
     
-  .center .sub-center{
-      font-size:24px;
-  }
 
 .center .line_rnk{
     width:8rem;
@@ -243,10 +256,12 @@ body .clg{
 .clg .wlc-content{
     font-size:15px;
     line-height:1.8rem;
+    text-align: justify;
+
 }
 
 .clg .search_clg {
-    margin:2.1rem 0 1.2rem 0;
+    margin:2rem 0 1.2rem 0;
    }
 
 .clg .search_clg #search{
@@ -259,6 +274,7 @@ table{
     line-height:21px;
     letter-spacing: 0.1px;
     font-size:14px;
+    width:100%;
 }
 
 table tbody td{
@@ -281,8 +297,5 @@ table tbody td{
  .line{
   margin: 0 auto;  
 }
-
-
-
 
 }

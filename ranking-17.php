@@ -29,7 +29,17 @@ crossorigin="anonymous">
 <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 <style>
+@media (max-width:991px)
+{
+  .center{
+    margin-top:-15px;
+  }
 
+  .linkx{
+    margin-top:3rem;
+margin-bottom:0;
+  }
+}
 </style>
 </head>
 

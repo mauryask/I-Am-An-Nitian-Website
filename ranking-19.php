@@ -125,8 +125,9 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 <div class="center">
 <p>NITs Ranking <span id="rank_yr" ><span class="break"><br></span>2019</span></p>
-<p class="courtesy" style="margin-top:1rem;line-height:2.4rem;"><span style="font-family:'Playfair Display', serif;
-font-weight:bold;">Courtesy : </span>National Institute Rankgin Frmework (Ministry Of Human Resource Development)</p>
+<p class="courtesy" ><span style="font-family:'Playfair Display', serif;
+font-weight:bold;">Courtesy:</span> National institute rankgin frmework 
+(ministry of human resource development)</p>
 </div>
 
 
@@ -166,7 +167,6 @@ font-weight:bold;">Courtesy : </span>National Institute Rankgin Frmework (Minist
 </table>
 
 
-
 <div class="linkx">
 <p class="links"> Explore More</p>
 <div class="line"></div>
@@ -179,8 +179,6 @@ font-weight:bold;">Courtesy : </span>National Institute Rankgin Frmework (Minist
 
 
 </div>
-
-
 
 
 
@@ -368,7 +366,7 @@ $('.menu-toggle').click(function(){
   TweenMax.to('.active',0.4,{scaleX: 1});
 
   setTimeout(function(){
-    $('.logo').css('marginLeft', '62px');
+    $('.logo').css('marginLeft', '59px');
     $('.logo').css('marginTop', '18px');
     $('.logo_txt').css('marginTop', '10px');
   },200);

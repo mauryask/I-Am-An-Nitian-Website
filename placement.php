@@ -64,7 +64,7 @@ crossorigin="anonymous">
 <li><a href="index.php" class="homex" >Home</a></li>
 <!--<li><a href="team.html" class="homex">Our team</a></li>-->
 <li><a href="more-news.php" class="home" >News</a></li>
-<li><a href="index.php#updf" class="homex" >Updates</a></li>
+<li onclick="updf()"><a href="index.php#updf" class="homex" >Updates</a></li>
 <li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
 
 <li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;" id="user">
@@ -122,11 +122,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 </header>          
  
-
-
-
-
-
 
 
 
@@ -255,7 +250,7 @@ function updf()
 
  $(document).ready(function(){
 
-  if (window.matchMedia('(max-width:721px)').matches)
+  if (window.matchMedia('(max-width:921px)').matches)
 {
   
   $('.cut_nav').click(function(){

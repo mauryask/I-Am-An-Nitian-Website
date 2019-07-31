@@ -277,6 +277,28 @@ margin-right:10px;
 
 @media (max-width:991px)
 {
+
+.wrapper{
+width:100%;
+background:transparent;
+padding:0;
+}
+
+.wrapper .flash{
+  flex-direction: column;
+  margin-top:6rem;
+  padding:0 10px 0 10px;
+}
+
+.flash .flash_slide{
+  padding:0;
+  width:100%;
+padding:0 10px 0 10px;
+}
+.flash .four_news{
+  width:100%;
+}
+
   .explore{
  width:100%;
  padding:1.2rem;
@@ -291,7 +313,7 @@ margin-right:10px;
 
 .explore .expo .xnnn{
   margin:0 auto;
-  width:90%;
+  width:95%;
   margin-bottom:3rem;
  }
 

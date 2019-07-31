@@ -71,7 +71,8 @@ crossorigin="anonymous">
 <li><a href="index.php" class="home" >Home</a></li>
 
 <li><a href="more-news.php" class="homex" >News</a></li>
-<li><a href="#updf" class="homex">Updates</a></li>
+<li ><a href="#updf" class="homex" id="update_nav">Updates</a></li>
+
 <li><a href="#about" class="homex" id="about_nav">About Us</a></li>
 
 <li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;" id="user">
@@ -219,6 +220,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 </div>
 <!--==================  Mobile version of updates  =================-->
+<a id="updf"></a>
+    <div class="mob_break"></div>
 <div class="respo_not">
 <div class="respo_head"><p>Updates</p></div>
 <div id="respo_csp" onmouseover="stop_It()"  onmouseout="start_It()">
@@ -395,7 +398,7 @@ function startIt()
  
   <div id="expo-line"  class="expo-line" style="width:15rem;position:relative;margin-bottom:3rem;"
   data-aos="fade-up" data-aos-duration="600" data-aos-once='true'></div>
-  <div class="about-ln" style="width:15%;margin:0  0 1rem  0;" data-aos="fade-up" data-aos-duration="600"></div>
+  <div class="about-ln" style="width:15%;"  data-aos="fade-up" data-aos-duration="600"></div>
  <?php 
             $query = "select * from tbl_images order by id desc limit 8";
              $result = mysqli_query ($conn, $query);
@@ -709,7 +712,7 @@ if (window.matchMedia('(max-width:721px)').matches)
     TweenMax.to('.active',0.4,{scaleX: 1});
 
     setTimeout(function(){
-      $('.logo').css('marginLeft', '62px');
+      $('.logo').css('marginLeft', '59px');
       $('.logo').css('marginTop', '18px');
       $('.logo_txt').css('marginTop', '10px');
     },200);
@@ -747,6 +750,17 @@ $('#about_nav').click(function()
   $('.menu-toggle').css('display','block');
   $('.logo_txt').css('marginTop', '0px');
 })
+
+$('#update_nav').click(function()
+{
+  $('.logo').css('marginLeft', '0px');
+  $('.logo').css('marginTop', '0px');
+  TweenMax.to('.active',0.1,{scaleX: 0});  
+  $('.cut_nav').css('display','none');
+  $('.menu-toggle').css('display','block');
+  $('.logo_txt').css('marginTop', '0px');
+})
+
 
 }
 

@@ -131,7 +131,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         ?>        
         </div>
         <div class="news-content">
-        <p style="font-weight:bold;font-size:12px;background:rgba(256,0,0,0.5); width:12.5rem;color:rgba(80,80,80,1);
+        <p style="font-weight:bold;font-size:12px;background:rgba(256,0,0,0.5); width:12.5rem;color:rgba(40,40,40,1);
         text-align:center;border-radius:20px;height:31px;margin:1rem 0 1rem 0;"><?php  echo $row['inserted_at'] ?></p>
            <div class="horizon"></div>
            <p>
@@ -285,8 +285,15 @@ function updf()
 <div>
 <div class="log-msg"  ><p id="message"><p></div>
   <form  method="post" autocomplete="off">
-  <input  id="email" type="text" autocomplete="off" placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
-  <input autocomplete="off"  id="pass" type="password" placeholder="Password"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+
+  <input  id="email" type="text" autocomplete="off" placeholder="Email" 
+   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'"
+   onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+
+  <input autocomplete="off"  id="pass" type="password" placeholder="Password" 
+    onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" 
+    onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+
 <div class="select" id="select">
   <input type="radio" name="user" id="user" value="1" checked>&nbsp <label class="lab1">User</label>
   <input type="radio" name="user" id="admin" value="2">&nbsp <label>Admin</label>
@@ -432,7 +439,7 @@ getLikes();
     TweenMax.to('.active',0.4,{scaleX: 1});
 
     setTimeout(function(){
-      $('.logo').css('marginLeft', '62px');
+      $('.logo').css('marginLeft', '59px');
       $('.logo').css('marginTop', '18px');
       $('.logo_txt').css('marginTop', '10px');
     },200);

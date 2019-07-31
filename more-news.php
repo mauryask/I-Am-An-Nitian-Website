@@ -432,7 +432,7 @@ function updf()
     TweenMax.to('.active',0.4,{scaleX: 1});
 
     setTimeout(function(){
-      $('.logo').css('marginLeft', '62px');
+      $('.logo').css('marginLeft', '59px');
       $('.logo').css('marginTop', '18px');
       $('.logo_txt').css('marginTop', '10px');
     },200);

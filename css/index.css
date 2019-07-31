@@ -451,7 +451,7 @@ color:gray;
 .about{
 	margin-left:3rem;
 	flex-direction:column;
-	margin-bottom:0;
+	margin-bottom:4rem;
 	margin-top:1rem;
 }
 .about .about-text p{
@@ -505,11 +505,14 @@ color:gray;
 
 
 .explore .expo .xnnn{
-	 width:80%;
-	 margin-left:0.4rem;
+	   width:80%;
+	   margin-left:0.4rem;
 		left:40%;
 	    transform: translate(-40%);
 	    position: relative;
 }
+
+
+
 
 }
