@@ -36,33 +36,36 @@ body{
 .center{
     width:100%;
     font-weight:bold;
-    font-size:50px;
-    text-transform: uppercase;
+    font-size:45px;
+    text-transform:capitalize;
     color:rgba(37, 116, 169, 1);
     padding-top:2rem;
 }
 
  .center p{
-    text-align:center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #rank_yr{
-    font-size:50px;
+    font-size:45px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .wrapper{
-    background:white;
-    width:75%;
+    width:70%;
     margin:0 auto;
     margin-top:7rem;
   }
 
+  .center .courtesy{
+      font-weight:normal;
+      font-size:20px;
+      text-transform: capitalize;
+  }
+
+
 body  .clg{
     margin: 0 auto;   
-    margin-top:2.5rem;
-   width:85%;
    }   
 
 .clg .wlc-content{
@@ -70,21 +73,9 @@ body  .clg{
     letter-spacing: 0.7px;
     color:#050505;
     font-family: 'Playfair Display', serif;
-    text-align: justify;
     font-size:16px;
 }
 
- .center .sub-center{
-   font-size:31px;
-}
-
-.line_rnk{
-    margin:0 auto;
-    margin-top:5px;
-    height:5px;
-    width:25rem;
-    background:rgba(37, 116, 169, 1);
-}
 
 th,td{
     padding:15px 2px 15px 2px;
@@ -93,7 +84,7 @@ th,td{
 
  .clg table{
      margin: 0 auto;
-     width:95%;
+     width:100%;
 }
 
 tr{
@@ -110,6 +101,12 @@ tbody td{
     text-transform: capitalize;
     border-collapse: collapse;
     color:rgba(90,90,90,1);
+}
+
+
+tr:nth-child(even)
+{
+background:rgba(247,247,247,1);
 }
 
 .clg .search_clg {
@@ -129,10 +126,12 @@ tbody td{
     padding:0.5rem;
     font-size:15px;
     border-radius:7px;
-    border:1px solid rgba(180,180,180,1);
+    border:1px solid rgba(150,150,150,1);
     outline:none;
     letter-spacing: 0.2px;
     font-family: 'Playfair Display', serif;
+    background:transparent;
+    background:rgba(250,250,250,1);
 }
 
 
@@ -186,6 +185,14 @@ text-decoration:underline;
 
 .center .sub-center .brk{
     display:none;
+}
+
+
+.footer{
+text-align: center;
+padding:2.5rem;
+font-size:15px;
+font-family: serif;
 }
 
 

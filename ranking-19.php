@@ -125,8 +125,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 <div class="center">
 <p>NITs Ranking <span id="rank_yr" ><span class="break"><br></span>2019</span></p>
-<p class="sub-center">rankings are based <span class="brk"><br></span>on nirf survey</p>
-<div class="line_rnk"> </div>
+<p class="courtesy" style="margin-top:1rem;line-height:2.4rem;"><span style="font-family:'Playfair Display', serif;
+font-weight:bold;">Courtesy : </span>National Institute Rankgin Frmework (Ministry Of Human Resource Development)</p>
 </div>
 
 
@@ -156,8 +156,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <table>
 <th>Serial No.</th>
 <th>NIT Name</th>
-<th>Overall Ranking <span id="change_rk"> 2019</span></th>
-<th>NIT Ranking <span  id="change_rs">2019</span></th>
+<th>Overall Rank</th>
+<th>NIT Rank </th>
 <tbody id="rank_19">
 
 </tbody>
@@ -173,8 +173,13 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <p><a href="ranking-18.php" class="x" id="click_18">NITs Ranking 2018</a></p>
 <p><a href="ranking-17.php" class="x" id="click_17">NITs Ranking 2017</a></p>
 <p><a href="ranking-16.php" class="x" id="click_16">NITs Ranking 2016</a></p>
+<p><a href="rank-placement-wise.php" class="x" >NITs Ranking Based On Placement</a></p>
 </div>
 </div>
+
+
+</div>
+
 
 
 
@@ -262,7 +267,8 @@ function updf()
 
 
 
-</div>
+
+
 
  <!--============== Footer Section ==================-->
   <footer>

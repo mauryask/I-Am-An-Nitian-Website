@@ -99,13 +99,14 @@ background:rgba(247,247,247,1);
 
 .intro{
     margin:0 auto;
-    font-family:'Playfair Display', serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight:bold;
     letter-spacing:0.5px;
     width:70%;
-    font-size:35px;
+    font-size:45px;
     color:rgba(37, 116, 169, 1);
     text-align:unset;
+    text-transform:capitalize;
 }
 
 
@@ -127,7 +128,7 @@ background:rgba(247,247,247,1);
  <button id="back-to-top" ><i class="fas fa-angle-double-up"></i></button>
   
 <div class="wrapper">
-<p class="intro">List of nitians who did splendid performence <br>in Gate 2019<p>
+<p class="intro">List of nitians who did <br>splendid  performence in <br>Gate 2019<p>
 <div class="search_clg">
  <p>Search : </p>
 
