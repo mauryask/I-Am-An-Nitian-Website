@@ -115,6 +115,28 @@ background:rgba(247,247,247,1);
     padding:2rem;
 }
 
+
+.next{
+    font-size:19px;
+    font-family: 'Playfair Display', serif;
+    color:#282828;
+    text-align:center;
+}
+
+#hide{
+    line-height:0;
+}
+
+.next a{
+text-decoration: none;
+color:blue;
+}
+
+.next a:hover{
+    text-decoration:underline;
+    color:red;
+    }
+
 </style>
 
 </head>
@@ -131,7 +153,7 @@ background:rgba(247,247,247,1);
 
   
 <div class="wrapper">
-<p class="intro">List of nitians who cleared <br> Engineering Services <br>Exam 2019<p>
+<p class="intro">List of nitians who cracked<br> Engineering Services <br>Exam 2019<p>
 <div class="search_clg">
  <p>Search : </p>
 
@@ -576,6 +598,8 @@ background:rgba(247,247,247,1);
 </tbody>
 
 </table>
+
+<p class="next" id="lnk" style="margin-top:5rem;"> List of nitians who did splendid performence in Gate 2019 <span id="hide"><br></span><a href="gate_topper_list.php">Click Here</a></p>
 
 <p class="footer">Copyright <i class="far fa-copyright"></i> 2019 | I Am An Nitian</p>
 </div>

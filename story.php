@@ -54,19 +54,22 @@ crossorigin="anonymous">
 <div class="wrapper">
 
 
+
 <header id="f" style="background:black;">
 <div class="logo">
 <ul>
 <li><a href="index.php"><img src="images\imnitian.png"></a></li>
-<li class="logo_txt"><a href="index.php" style="font-family: 'Dancing Script', cursive;color:white;font-weight:bold;font-size:13px;letter-spacing: 0.7px;" >I AM AN NITIAN</a></li>
+<li class="logo_txt"> <a href="index.php" style="font-family: 'Dancing Script', cursive;color:white;font-weight:bold;font-size:13px;letter-spacing: 0.7px;" >I AM AN NITIAN</a></li>
 </ul>
 </div>
 <nav class="active">
 <ul>
-<li><a href="index.php" class="homex" >Home</a></li>
+<li><a href="index.php" class="home" >Home</a></li>
+
 <li><a href="more-news.php" class="homex" >News</a></li>
-<li><a href="index.php#updf" class="homex" >Updates</a></li>
-<li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
+<li ><a href="#updf" class="homex" id="update_nav">Updates</a></li>
+
+<li><a href="#about" class="homex" id="about_nav">About Us</a></li>
 
 <li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;" id="user">
 <?php
@@ -108,7 +111,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </nav>
 <!--================ Mobile Version Menu ====================-->
 <div class="menu-toggle">
-<i class="fas fa-bars"></i>
+<i class="fas fa-bars "></i>
 </div>
 <img src="images/cutk.png" class="cut_nav" style="display:none;">
 
@@ -118,6 +121,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   </div>
 
 </header>
+
 
 
 
@@ -398,12 +402,116 @@ strategy , I thought that out of 1 lac students what makes
 
 <p class="next next_btn" style="float:right;padding:0 0.4rem 0 0.4rem;"> 
  <a href="story2.php">Next Story <i class="fas fa-chevron-circle-right"></i></a></p>
-<p class="next" id="lnk" style="margin-top:7rem;"> list of NITIANs who did splendid performence in "Gate 2019" <span id="hide"><br></span><a href="gate_topper_list.php">Click Here</a></p>
-<p class="next" id="lnk"> list of NITIANs who cleared "Engineering Service Exam 2019" <a href="ese_topper_list.php"><span id="hide"><br></span>Click Here</a></p>
+
+ <p class="next next_btn_mob" style="width:35%;margin:0 auto;padding:0.1rem;"> 
+ <a href="story2.php" style="color:black;">Next Story <i class="fas fa-chevron-circle-right"></i></a></p>
+
+<p class="next" id="lnk" style="margin-top:4rem;"> List of nitians who did splendid performence in Gate 2019<span id="hide"><br></span><a href="gate_topper_list.php">Click Here</a></p>
+<p class="next" id="lnk"> List of nitians who cracked Engineering Services Exam 2019<a href="ese_topper_list.php"><span id="hide"><br></span>Click Here</a></p>
 </div>
 
 
 </div> <!--  Wrapper-->
+
+
+
+
+
+
+<!--============== Signup Popup ==================-->
+<div class="signup" id="sign">
+<div class="sign-card">
+ <div class="sign-img">
+  <div class="links">
+    <p class="p1">Quick Links</p>
+    <div class="msgx" ><p id="msgx" ></p></div>
+    <ul>
+     <a href="ranking-19.php"> <li>Ranking</li></a>
+     <a href="placement.php"> <li>Placements</li></a>
+     <a href="story.php"> <li>Success Stories</li></a>
+     <a href="more-news.php"> <li>News</li></a>
+     <a onclick="updf();"> <li>Updates</li></a>
+      </ul>
+<script>
+function updf()
+{
+  TweenMax.to('.signup',0.5,{scaleY: 0});
+  window.location = "index.php#updf";
+}
+ </script>
+    <p class="p2"><a href="#">privacy policy</a></p>
+  </div>
+ </div>
+ <div class="sign-form">
+   <img class="cancel" onclick="cancel()" src="images/cut.png">
+    <p class="mainh">Register Here</p>
+    <div class="msgx"  id="msgk"><p id="msgy"></p></div>
+   <div>
+     <form method="post" autocomplete="off">
+   <input autocomplete="off" type="text"  name="name"  id="name" placeholder="Name"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+   <input   autocomplete="off"  type="text" name="user_email" id="user_email"  placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+   <input  type="text"  name="phone" id="phone" placeholder="Mobile Number"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+   <select name="clg" id="clg"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+      <option>Select College</option>
+      <option>National Institute Of technology Srinagar</option> 
+      <option>National Institute Of technology Srinagar Silchar</option>
+      <option>National Institute Of technology Srinagar Trichy</option>
+      <option>Motilal Nehru Institute Of Technology Allahabad</option>
+      <option>Malviya Natioanl Institute Of Technology Jaipur</option>
+      <option>Other</option>
+      </select>
+      <select name="state" id="state"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+          <option>Select Your State</option>
+          <option>Uttar Pradesh</option>
+          <option>Jammu and Kashmir</option>
+          <option>Rajsthan</option>
+          <option>Tamilnadu</option>
+          <option>Uttrakhand</option>
+          <option>Bihar</option>
+          </select>
+          <input  autocomplete="off" name="user_pass" id="user_pass" type="password" placeholder="Password"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+          <input autocomplete="off" type="password"  id="cnf_pass" name="cnf_pass" placeholder="Confirm Password" onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+          <button name="register" id="register" type="button"   class="register">Register</button>
+        </form>
+         <p> <a onclick="show_log();cancel();">already a member? login</a></p>
+  </div>
+ </div>
+</div>
+</div>
+<!--=============== Login Popup =================-->
+<div class="login" id="log" >
+<div class="log-card">
+    <img class="cancel-log"  src="images/cut.png" onclick="cancel_log()">
+<div>
+<div class="log-msg"  ><p id="message"><p></div>
+  <form  method="post" autocomplete="off">
+
+  <input  id="email" type="text" autocomplete="off" placeholder="Email" 
+   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'"
+   onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+
+  <input autocomplete="off"  id="pass" type="password" placeholder="Password" 
+    onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" 
+    onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+
+<div class="select" id="select">
+  <input type="radio" name="user" id="user" value="1" checked>&nbsp <label class="lab1">User</label>
+  <input type="radio" name="user" id="admin" value="2">&nbsp <label>Admin</label>
+ </div>
+  <button type="button"  name="login" id="login">Login</button>
+</form>
+  <p class="signx"><a onclick="show_signup();cancel_log();">new member? register</a></p>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
 
  <!--============== Footer Section ==================-->
   <footer>
@@ -449,91 +557,88 @@ strategy , I thought that out of 1 lac students what makes
 
 <script>
  /*==================== Menu toggle =========================*/
+ 
  $(document).ready(function(){
 
-  if (window.matchMedia('(max-width:721px)').matches)
+if (window.matchMedia('(max-width:721px)').matches)
 {
-  
-  $('.cut_nav').click(function(){
-    $(this).css('display','none');
-    $('.menu-toggle').css('display','block');
-    TweenMax.to('.active',0.5,{scaleX: 0});
-    $('nav').css('z-index', '1');
-    $('.logo').css('marginLeft', '0px');
-    $('.logo').css('marginTop', '0px');
-    $('.logo_txt').css('marginTop', '0px');
-    setTimeout(function(){
-    
-      $('header').css('background', 'black');
-    
-    },200)
 
-  })
-
-  $(window).scroll(function(){
-  $('header').css('background', 'black');
-})
-  
-
-
-  $('.menu-toggle').click(function(){
-    $(this).css('display','none');
-    $('.cut_nav').css('display','block');
-
-    $('nav').css('z-index', '4');
-
-    $('header').css('background', 'transparent');
-    $('.cut_nav').css('background','black');
-    TweenMax.to('.active',0.4,{scaleX: 1});
-
-    setTimeout(function(){
-      $('.logo').css('marginLeft', '59px');
-      $('.logo').css('marginTop', '18px');
-      $('.logo_txt').css('marginTop', '10px');
-    },200);
-
-    setTimeout(function(){
-      $('nav').css('z-index', '-1');
-    },350);
-   
-  })
-
- 
-
-$('#login_nav').click(function()
-{
+$('.cut_nav').click(function(){
+  $(this).css('display','none');
+  $('.menu-toggle').css('display','block');
+  TweenMax.to('.active',0.5,{scaleX: 0});
+  $('nav').css('z-index', '1');
   $('.logo').css('marginLeft', '0px');
   $('.logo').css('marginTop', '0px');
-  TweenMax.to('.active',0.1,{scaleX: 0});  
-  $('.cut_nav').css('display','none');
-  $('.menu-toggle').css('display','block');
-  $('header').css('background', 'black');
   $('.logo_txt').css('marginTop', '0px');
+
+  setTimeout(function(){
+  
+    $('header').css('background', 'black');
+  
+  },200)
+
+})
+
+$(window).scroll(function(){
+$('header').css('background', 'black');
+})
+
+
+
+$('.menu-toggle').click(function(){
+  $(this).css('display','none');
+  $('.cut_nav').css('display','block');
+
+  $('nav').css('z-index', '4');
+
+  $('header').css('background', 'transparent');
+  $('.cut_nav').css('background','black');
+  TweenMax.to('.active',0.4,{scaleX: 1});
+
+  setTimeout(function(){
+    $('.logo').css('marginLeft', '59px');
+    $('.logo').css('marginTop', '18px');
+    $('.logo_txt').css('marginTop', '10px');
+  },200);
+
+  setTimeout(function(){
+    $('nav').css('z-index', '-1');
+  },350);
+ 
+})
+$('#login_nav').click(function()
+{
+$('.logo').css('marginLeft', '0px');
+$('.logo').css('marginTop', '0px');
+TweenMax.to('.active',0.1,{scaleX: 0});  
+$('.cut_nav').css('display','none');
+$('.menu-toggle').css('display','block');
+$('header').css('background', 'black');
+$('.logo_txt').css('marginTop', '0px');
 })
 
 $('#register_nav').click(function(){
-  $('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');
-  TweenMax.to('.active',0.1,{scaleX: 0});  
-  $('.cut_nav').css('display','none');
-  $('.menu-toggle').css('display','block');
-  $('header').css('background', 'black');
-  $('.logo_txt').css('marginTop', '0px');
+$('.logo').css('marginLeft', '0px');
+$('.logo').css('marginTop', '0px');
+TweenMax.to('.active',0.1,{scaleX: 0});  
+$('.cut_nav').css('display','none');
+$('.menu-toggle').css('display','block');
+$('header').css('background', 'black');
+$('.logo_txt').css('marginTop', '0px');
 })
 
 $('#about_nav').click(function()
 {
-  $('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');
-  TweenMax.to('.active',0.1,{scaleX: 0});  
-  $('.cut_nav').css('display','none');
-  $('.menu-toggle').css('display','block');
+$('.logo').css('marginLeft', '0px');
+$('.logo').css('marginTop', '0px');
+TweenMax.to('.active',0.1,{scaleX: 0});  
+$('.cut_nav').css('display','none');
+$('.menu-toggle').css('display','block');
 })
 
 }
-  
 })
-
 </script>
 
 

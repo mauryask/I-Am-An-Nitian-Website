@@ -114,6 +114,28 @@ background:rgba(247,247,247,1);
     text-align:center;
     padding:2rem;
 }
+
+.next{
+    font-size:19px;
+    font-family: 'Playfair Display', serif;
+    color:#282828;
+    text-align:center;
+}
+
+#hide{
+    line-height:0;
+}
+
+.next a{
+text-decoration: none;
+color:blue;
+}
+
+.next a:hover{
+    text-decoration:underline;
+    color:red;
+    }
+
 </style>
 
 </head>
@@ -972,6 +994,7 @@ background:rgba(247,247,247,1);
 </tbody>
 
 </table>
+<p class="next" id="lnk" style="margin-top:5rem;"> List of nitians who cracked Engineering Services Exam 2019 <a href="ese_topper_list.php"><span id="hide"><br></span>Click Here</a></p>
 
 <p class="footer">Copyright <i class="far fa-copyright"></i> 2019 | I Am An Nitian</p>
 </div>
