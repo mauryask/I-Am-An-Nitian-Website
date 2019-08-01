@@ -217,7 +217,7 @@ font-family: serif;
 
 .center{
     margin:0 auto;
-    margin-top:4rem;
+    margin-top:4.6rem;
     width:80%;
     margin-bottom:1rem;
     font-size:48px;
@@ -234,10 +234,6 @@ font-family: serif;
         margin-top:-2.8rem;
     }
 
-    .center .sub-center .brk{
-        display:block;
-        margin-top:-1.6rem;
-    }
 
   .center p, #rank_yr{
 font-size:32px;

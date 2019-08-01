@@ -163,6 +163,13 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
   <div class="expo exc" style="margin-top:2rem;">
 
+
+  <div class="appx" onclick="location.href='story.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="400">
+          <img src="images/growth.svg">
+          <p>Success Stories</p>
+         </div>
+
+
     <div class="appx" onclick="location.href='ranking-19.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="700">
       <img src="images/infographic.svg">
       <p>Ranking</p>
@@ -172,50 +179,54 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
             <img src="images/reunion.svg">
             <p>Placements </p>
            </div>
-           <div class="appx" onclick="location.href='story.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="400">
-          <img src="images/growth.svg">
-          <p>Success Stories</p>
-         </div>
 
-  <div class="appx" onclick="location.href='uPDxgdf.php'" id="respo" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="850">
-         <img src="images/question.svg">
-         <p>Ask Questions</p>
-        </div>
 
 
   <div class="appx" onclick="location.href='uPDxgdf.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="1000">
         <img src="images/team.svg">
         <p>CA Portal</p>
        </div>
-       
+      
+
+       <div class="appx" onclick="location.href='uPDxgdf.php'" id="respo" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="850">
+         <img src="images/question.svg">
+         <p>Ask Questions</p>
+        </div>
+
     
      </div>
   <!--=========================== Mobile version horizontal tabs ======================-->
 <div class="mob-expo" style="margin-top:3rem;">
+
+
+<div  class="appx_expo" onclick="location.href='story.php'" id="appx_right">
+  <img src="images/growth.svg">
+          <p>Success Stories</p>
+    </div>
+
 
 <div  class="appx_expo" onclick="location.href='ranking-19.php'" >
   <img src="images/infographic.svg">
       <p>Ranking</p>
       </div>
     
-<div  class="appx_expo" onclick="sweet_alert()" >
+<div  class="appx_expo" onclick="location.href='placement.php'" >
 <img src="images/reunion.svg">
             <p>Placements </p>
   </div>
-  <div  class="appx_expo" onclick="sweet_alert()" id="appx_right">
-  <img src="images/growth.svg">
-          <p>Success Stories</p>
-    </div>
+
+
+  <div class="appx_expo" onclick="location.href='uPDxgdf.php'" >
+        <img src="images/team.svg">
+        <p>CA Portal</p>
+       </div>
+
 
 <div  class="appx_expo" onclick="location.href='uPDxgdf.php'" >
 <img src="images/question.svg">
          <p>Ask Questions</p>
   </div>
 
-<div class="appx_expo" onclick="location.href='uPDxgdf.php'"  id="appx_left">
-<img src="images/books.svg">
-        <p>Ebooks</p>
- </div>
    
 </div>
 </div>

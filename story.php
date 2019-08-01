@@ -54,7 +54,7 @@ crossorigin="anonymous">
 <div class="wrapper">
 
 
-<header id="f">
+<header id="f" style="background:black;">
 <div class="logo">
 <ul>
 <li><a href="index.php"><img src="images\imnitian.png"></a></li>
@@ -127,19 +127,9 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div class="str" data-aos="fade-up" data-aos-duration="600" data-aos-once='true' data-aos-delay="600">Success Stories</div>
 </div>
 
-
-
-
 <div class="main">
 
 <div class="number" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'><p>1</p></div>
-
-
-
-
-
-
-
 
 
 <div class="child_x">
@@ -153,7 +143,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
     </div>
     </div>
     
-    <p>
+    <p id="queryx">
 
  Hi! I am Rajat Soni. I belong to district Jabalpur 
 (M.P.). After getting a decent rank of 2474 in JEE (Main)-2014 
@@ -161,7 +151,7 @@ along with class 12, I decided to join National Institute of
 Technology, Warangal. I did my B.Tech. in Electronics and 
 Communication Engineering (Batch of 2018). 
 <br>
-<span style="color:red">
+<span id="query">
 1) What was your routine study schedule in 
 NITW? How much was your CGPA?</span><br>
  My routine schedule was like most of the students.
@@ -172,7 +162,7 @@ NITW? How much was your CGPA?</span><br>
  we approached the third year. As a result, my CGPA dipped 
  down to 8.54 by the time I graduated.
  <br>
- <span style="color:red">
+ <span  id="query">
 2) Where you involved in any Club/Society/Organizing 
 Team of College? If yes, did they provide you any edge 
 in preparation or overall?</span>
@@ -182,12 +172,13 @@ in preparation or overall?</span>
  essentially due to my interest in practical applications of electronics. 
 
  </p>
-<button type="button" id="btnk" onclick="spyk()">Read More</button>
+<button type="button" id="btnk" onclick="spyk()">Read More <i class="fas fa-chevron-circle-right"></i></button>
+
 <p id="showmek">
 
  I got the opportunity to serve the club as a General Secretary in the year 2017-18. 
  <br>
- <span style="color:red">
+ <span id="query">
 3) What was your aim at, and expectations from NITW?</span>
 <br>
  I never knew what I was expecting.
@@ -196,7 +187,7 @@ in preparation or overall?</span>
  live in hostels, eat in mess, attend 5:30
  AM EAA and what not. But now I miss it the most.
  <br>
- <span style="color:red">
+ <span  id="query">
 4) When did you first thought of starting
  preparations for GATE Examinations?
  </span>
@@ -209,7 +200,7 @@ in preparation or overall?</span>
      had cleared the prestigious examinations of 
      GATE and ESE. That motivated me each time.
      <br>
- <span style="color:red">
+ <span  id="query">
 5) What was your initial preparation plan?
 </span>
 <br>
@@ -222,7 +213,7 @@ in preparation or overall?</span>
   aspect of preparation for any competitive examination.
 
   <br>
- <span style="color:red">
+ <span  id="query">
 6) Did you apply for campus placements? Were you placed in any company?
 </span><br>
  I did an Internship in Samsung 
@@ -233,7 +224,7 @@ in summers of 2016-17. Fortunately I got a pre placement offer as well.
 ANSWER: Apart from classes I used to devote around 5-6 hours daily for
  revision and solving previous years’ papers. 
  <br>
- <span style="color:red">
+ <span  id="query">
 8) Did you take any coaching for GATE Examinations?
  (include Test series).</span>
 <br>
@@ -243,14 +234,14 @@ Classroom Course in Made Easy. Along with that,
 I joined the test series of Ace Academy and Gate Academy.
 
 <br>
- <span style="color:red">
+ <span  id="query">
 9) What we're the study materials/books which you relied upon?</span>
 <br>
  Mostly the classroom notes are self-sufficient.
  If any doubt’s remained, YouTube was the best source 
  to get my doubts cleared instantly on any topic.
  <br>
- <span style="color:red">
+ <span id="query">
 10) Anytime during preparation, did the thought 
 of backing out hit your mind, like you felt that
  you won't be able to achieve the set goal?
@@ -261,14 +252,14 @@ and demotivation naturally tend to come during preparation.
 I used to talk to my parents whenever I felt low.
  They motivated me to continue my preparation. 
  <br>
- <span style="color:red">
+ <span  id="query">
 11) How many marks/rank were you getting in 
 Test series?(In case you took any)</span><br>
  I started attempting the test series from the month of 
 January. Initially my scores used to be within 60-65. 
 Later they increased till 70-75 and at the end they even touched 80.
 <br>
- <span style="color:red">
+ <span  id="query">
 12) What was your final preparation plan?
 </span><br>
  Last one month is very crucial in GATE exam preparation.
@@ -277,14 +268,14 @@ I used to attempt 2 tests per day. As my actual
 GATE exam was in forenoon session, I tried my best 
 to give one test daily in that same time slot.
 <br>
- <span style="color:red">
+ <span  id="query">
 13) How many marks did you expect before paper?</span><br>
  Frankly, I never thought about my marks 
 before the exam. It is actually better not to have any presumptions 
 about the paper. It can jeopardize your performance and your results.
 
 <br>
- <span style="color:red">
+ <span  id="query">
 14) Were you having any intuitions of bagging AIR 1?</span><br>
 
  Well, I used the rank predictors before IIT
@@ -292,7 +283,7 @@ about the paper. It can jeopardize your performance and your results.
  were showing my rank somewhere in between 10-15. 
  After that I didn’t bothered much about the result and left it to the fate.
  <br>
- <span style="color:red">
+ <span id="query">
 15) What was your first response when you came to know about topping the GATE 2019?</span><br>
  It was 15th of March when IITM was
  expected to follow the trend by declaring the result one day prior to
@@ -307,13 +298,13 @@ about the paper. It can jeopardize your performance and your results.
     my eyes for a moment. I allowed that moment to sink
      in and called my parents to share that precious moment.
      <br>
- <span style="color:red">
+ <span  id="query">
 16) What are your further goals in life?</span><br>
  I have kept all the fronts open. I don’t 
 want to be too hard on myself. I would keep exploring 
 the different opportunities I can have with this GATE score.
 <br>
- <span style="color:red">
+ <span  id="query">
 17) Would you like to say anything to GATE Aspirants?</span><br>
  Yes. I would suggest sticking to standard source for 
 preparation. Avoid unnecessary books and material.
@@ -332,7 +323,6 @@ Thanks a lot!
 </p>
 </div>
 </div>
-
 
 
 <div class="number" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'><p>2</p></div>
@@ -375,9 +365,9 @@ strategy , I thought that out of 1 lac students what makes
   holidays, I did swachh Bharat summer internship and a
   training in ntpc so I lost two months, but it was my
   luck that I got placed in August in a company named 
-  'Campgemini'.
+  'Capgemini'.
   </p>
-    <button type="button" id="btnz" onclick="spyz()">Read More</button>
+    <button type="button" id="btnz" onclick="spyz()">Read More <i class="fas fa-chevron-circle-right"></i></button>
 
 <p id="showmez">
   After this I could have left preparation 
@@ -408,8 +398,8 @@ strategy , I thought that out of 1 lac students what makes
 
 <p class="next next_btn" style="float:right;padding:0 0.4rem 0 0.4rem;"> 
  <a href="story2.php">Next Story <i class="fas fa-chevron-circle-right"></i></a></p>
-<p class="next" style="margin-top:7rem;"> list of NITIANs who did splendid performence in "Gate 2019" <a href="gate_topper_list.php">Click Here</a></p>
-<p class="next"> list of NITIANs who cleared "Engineering Service Exam 2019" <a href="ese_topper_list.php">Click Here</a></p>
+<p class="next" id="lnk" style="margin-top:7rem;"> list of NITIANs who did splendid performence in "Gate 2019" <span id="hide"><br></span><a href="gate_topper_list.php">Click Here</a></p>
+<p class="next" id="lnk"> list of NITIANs who cleared "Engineering Service Exam 2019" <a href="ese_topper_list.php"><span id="hide"><br></span>Click Here</a></p>
 </div>
 
 
@@ -497,7 +487,7 @@ strategy , I thought that out of 1 lac students what makes
     TweenMax.to('.active',0.4,{scaleX: 1});
 
     setTimeout(function(){
-      $('.logo').css('marginLeft', '62px');
+      $('.logo').css('marginLeft', '59px');
       $('.logo').css('marginTop', '18px');
       $('.logo_txt').css('marginTop', '10px');
     },200);

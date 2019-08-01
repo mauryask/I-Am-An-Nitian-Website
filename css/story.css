@@ -25,8 +25,8 @@
 
 
 	body{
-        background: rgb(240,240,240,1);	
-        background:#222233;
+        background: rgb(250,250,250,1);	
+       /* background:#222233;*/
 	}			
 
     .progress-container{
@@ -37,6 +37,7 @@
 /*================  Page Preloader  =================*/ 
 
 	#loader{
+        top:0;
 		width:100%;
 		height:100vh;
 		background:rgb(252,252,252) 
@@ -68,6 +69,7 @@
 
 .wrapper  .banner .str{
 color:white;
+color:#050505;
 position:sticky;
 bottom:0;
 left:0;
@@ -134,6 +136,7 @@ overflow: hidden;
     letter-spacing: 0.3px;
     font-size:17px;
     color:#AACCFF;
+    color:#050505;
     font-family: 'Playfair Display', serif;
 }
 
@@ -148,7 +151,7 @@ overflow: hidden;
 
     .child_x:nth-child(even) .hero .himg{
         float:right;
-       margin:0 0 0 20px;
+        margin:0 0 0 20px;
         }
         
 
@@ -185,18 +188,25 @@ text-align:center;
   font-family: 'Lato', sans-serif;
 }
 
+.hero #queryx #query, .hero #showmek #query {
+    font-family: 'Playfair Display', serif;
+    color:red;
+    }
+
 
 .hero button
 {
-    padding:0.5rem;
+    padding:0.6rem;
     width:11rem;
     cursor:pointer;
-    box-shadow: 0 0 7px 2px rgba(210,210,210,1);
     margin: 20px 0 12px 0;
     left:50%;
     transform: translate(-50%);
     position: relative;
     font-size:15px;
+    background: #4CAF50;
+    border:none;
+    color:white;
 }
 
 #showmex, #showmey, #showmez, #showmek{
@@ -220,7 +230,7 @@ text-align:center;
 
 .hero .himg div:nth-child(2) p:nth-child(2)
 {
-   font-size:14px;
+   font-size:14px;    
 
 }
 
@@ -236,6 +246,11 @@ text-align:center;
 {
    font-size:12px;
 
+}
+
+
+#hide{
+    display: none;
 }
 
 
@@ -274,3 +289,91 @@ color:blue;
             color:white;
             }
     
+            @media (max-width:921px)
+            {
+                .wrapper{
+                    width:95%;
+                    padding:0;
+                }
+
+
+                            
+            .wrapper  .banner{
+                width:100%;
+                height:299px;
+                overflow: hidden;
+                margin-top:2rem;
+            }
+
+            .wrapper  .banner .str{
+            font-size:43px;
+            }
+
+                .hero{
+                    margin:0 auto;
+                    width:85%;
+                }
+
+                .hero .himg {
+                 width:100%;
+                 border:none;
+                 box-shadow:none;
+                 padding-bottom:1rem;
+                    }
+
+                    .hero .himg div{
+                        margin:0 auto;
+                      width:90%;
+                    }
+
+                   
+                    .hero button
+                    {
+                        padding:0.6rem;
+                        width:11rem;
+                        color:white;
+                    }
+
+                    .main{
+                        margin: 0 auto;
+                        width:100%;
+                        margin-top:3rem;
+                    }
+
+                    .main .number{
+                        font-size:55px;
+                        width:90px;
+                        height:90px;
+                    }
+
+                    .next{
+                        font-size:15px;
+                    }
+
+                    .next_btn{
+                        float:unset;
+                        right:33%;
+                        position: relative;
+                    }
+
+                    #lnk{
+                        margin:0 auto;
+                        width:80%;
+                        text-align:center;
+                    }
+
+                    #hide{
+                        display:block;
+                        line-height:0;
+                        font-weight: bold;
+                        font-size:18px;
+                    }
+
+                    .hero #queryx #query , .hero #showmek #query {
+                        font-family: 'Playfair Display', serif;
+                        color:rgb(243, 14, 14);
+                        line-height:2px;
+                        font-weight: bold;
+                        }
+
+            }

@@ -35,13 +35,13 @@ $('.owl-carousel').owlCarousel({
 /*============  Display Feedback Box ===========*/
 function  fun1()
     {
-      TweenMax.to('.popup',0.5,{scaleX: 1});
+      TweenMax.to('.popup',0.3,{scaleX: 1});
     }
 
 
 /*============  Feedback Box Hide ===========*/   
     function fun2(){
-      TweenMax.to('.popup',0.5,{scaleX: 0});
+      TweenMax.to('.popup',0.3,{scaleX: 0});
     }
 
 

@@ -54,7 +54,7 @@ crossorigin="anonymous">
 <div class="wrapper">
 
 
-<header id="f">
+<header id="f" style="background:black;">
 <div class="logo">
 <ul>
 <li><a href="index.php"><img src="images\imnitian.png"></a></li>
@@ -156,13 +156,13 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
     gate and revise previous subjects. 
     
     </p>
-<button type="button" id="btny" onclick="spyy()">Read More</button>
+<button type="button" id="btny" onclick="spyy()">Read More <i class="fas fa-chevron-circle-right"></i></button>
 
 <p id="showmey">
     
     This process is not so straightforward, 
     I remember that while preparing fluid mechanics from SK SOM I end up completing,
-      90% of civil fluid mechanics syllabus😁. But since I have time I get hold of it.
+      90% of civil fluid mechanics syllabus. But since I have time I get hold of it.
     now came most important part. I have fixed a deadline that whatever happens on 1 
     june 2018 I will start my first test. at that I was doing my training at HAL bangalore. 
     I have purchased ACE test series and give first topic wise test and I got
@@ -181,7 +181,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         series and I joined exergic in end september. Questions are really good and 
         conceptual although some printing mistakes but you will not find such 
         quality anywhere. <br>Now in october I started doing full length test 
-        starting made easy 😁 seeing the questions I was blanked.I just start the 
+        starting made easy seeing the questions I was blanked.I just start the 
         test and finish it and solve its questions but its questions are good. I 
         continued this procedure of giving notes, updating short notes. In all this
         process I dont see my original notes and For gaining some concepts I directly 
@@ -243,7 +243,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
             changing and days remain the same. 
             
             </p>
-<button type="button" id="btnx" onclick="spyx()">Read More</button>
+<button type="button" id="btnx" onclick="spyx()">Read More <i class="fas fa-chevron-circle-right"></i></button>
 
 <p id="showmex">
             
