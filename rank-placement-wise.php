@@ -73,8 +73,8 @@ margin-bottom:0;
 
 <table>
 <th>Serial No.</th>
-<th>NIT Name</th>
-<th>Avgerage Package</th>
+<th>NIT </th>
+<th>Avg. Package</th>
 <th>Rank</th>
 <tbody id="placement_wise">
 

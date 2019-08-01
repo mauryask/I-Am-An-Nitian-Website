@@ -67,9 +67,9 @@ crossorigin="anonymous">
 <li><a href="index.php" class="home" >Home</a></li>
 
 <li><a href="more-news.php" class="homex" >News</a></li>
-<li ><a href="#updf" class="homex" id="update_nav">Updates</a></li>
+<li ><a href="index.php#updf" class="homex" >Updates</a></li>
 
-<li><a href="#about" class="homex" id="about_nav">About Us</a></li>
+<li><a href="index.php#about" class="homex" >About Us</a></li>
 
 <li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;" id="user">
 <?php
