@@ -3,7 +3,7 @@
 -->
 
 <?php
-
+include_once('connection.php');
 session_start(); //preventing direct access of this page
 if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION['user_type']!=1)
 {
@@ -12,7 +12,6 @@ if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION[
   transform:translate(-50%,-50%);position:absolute;">Access denied <br/>page 404<br/> not found<div>');
 }
 
-include_once('connection.php');
 if(isset($_POST['submit']))
 {
     $file= addslashes(file_get_contents($_FILES["image"]["tmp_name"]));

@@ -1,5 +1,5 @@
 <?php
-include_once('db/connection.php');
+include_once('connection.php');
 $count=0;
 $query="select * from ranking";
 $result=mysqli_query($conn, $query);

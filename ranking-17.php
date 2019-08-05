@@ -9,7 +9,7 @@
 -->
 
 <?php
-include_once('db/connection.php');
+include_once('connection.php');
 session_start(); //starting session start
 ?>
 

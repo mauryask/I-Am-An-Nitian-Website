@@ -9,7 +9,7 @@
 -->
 
 <?php
-include_once('db/connection.php');
+include_once('connection.php');
 session_start(); //starting session start
 ?>
 
@@ -95,7 +95,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 {
   if($_SESSION['user_type'] == 1)
   {
-    echo '<li><a href="edit_news.php" class="homex">Admin</a></li>';
+    echo '<li><a href="edit_news.php">Admin</a></li>';
   }
 }
 ?>
@@ -105,8 +105,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 ?>
 <li><a style="cursor:pointer;"  href="logout.php" >Logout</a></li>
 <?php }else{ ?>
-<li><a style="cursor:pointer;"  onclick="show_log()" id="login_nav">Login</a></li>
-<li><a style="cursor:pointer;"  onclick="show_signup()" id="register_nav">Register</a></li>
+<li><a style="cursor:pointer;"  onclick="show_log()" id="login_nav" >Login</a></li>
+<li><a style="cursor:pointer;"  onclick="show_signup()" id="register_nav" >Register</a></li>
 <?php } ?>
 
 </ul>
