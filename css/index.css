@@ -372,6 +372,12 @@ color:gray;
 	display: block;
 	}
 
+.textx{
+	padding-left:15px;
+	padding-right:15px;
+}
+
+
 /*================ Text before Dynamic Text =================*/	
 	.text
 	{
@@ -520,6 +526,42 @@ padding:0;
 }
 
 
+}
 
 
+/*speciallly for galaxy core prime*/
+
+@media (min-width:480px) and (min-height:800px) 
+{
+
+.textx{
+	padding:0;
+	padding-left:22px;
+	padding-right:22px;
+}
+	
+	.dynamic-text
+	{
+		font-size:39px;
+	}
+	.text{
+		font-size:45px;
+	}	
+	
+	 .textx .msg{
+		font-size:37px;
+	}
+
+.banner .join{
+	padding:5px 60px;
+}
+.banner .textx .social a img{
+	
+	width:35px;
+	height:35px;
+}
+	
+	.center{
+		display:none;
+	}
 }

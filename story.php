@@ -32,7 +32,7 @@ crossorigin="anonymous">
 <link href="css/login_register.css" rel="stylesheet"  type="text/css">
 <link href="css/story.css" rel="stylesheet"  type="text/css">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<style>
+<style>    
 
 </style>
 </head>

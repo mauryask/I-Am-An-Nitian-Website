@@ -1,5 +1,10 @@
 
       /*==============   Navigation Bar Animation   =============*/
+
+      var check= window.matchMedia('(max-width:721px)').matches
+
+      if (check == false)
+      {
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
@@ -13,27 +18,32 @@
         }
         prevScrollpos = currentScrollPos;
         }
+      }
+       
         
-        //sticky navigation bar
-        $(window).on('scroll',function(){
+       //sticky navigation bar
+       if( check == false)
+{
+  $(window).on('scroll',function(){
 
-          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-          var scrolled = (winScroll / height) * 100;
-          document.getElementById("myBar").style.width = scrolled + "%";
-        
-        if($(window).scrollTop())
-        {
-        $('header').addClass('black');
-        }
-        else 
-        {
-        $('header').removeClass('black');
-        }
-        
-        });
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+  
+  if($(window).scrollTop())
+  {
+  $('header').addClass('black');
+  }
+  else 
+  {
+  $('header').removeClass('black');
+  }
+  
+  });
+}
 
-
+       
         /*==============  Back To Top Button   =============*/
 
         const backToTop = document.querySelector('#back-to-top');

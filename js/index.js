@@ -99,16 +99,24 @@ window.scrollTo(0,0);
 
 
 /*============ Navbar Animation ===========*/
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-document.getElementById('searchx').style.display='none';
-var currentScrollPos = window.pageYOffset;
-if (prevScrollpos > currentScrollPos) {
-  document.getElementById("f").style.top = "0";
-} else {
-  document.getElementById("f").style.top = "-100px";
-}
-prevScrollpos = currentScrollPos;
+
+var check= window.matchMedia('(max-width:721px)').matches
+
+if (check == false)
+{
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("f").style.top = "0";
+  }
+
+   else 
+  {
+    document.getElementById("f").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+  }
 }
 
 /*============ Hide Show Search Box ===========*/
@@ -139,6 +147,9 @@ loop: true
 });
 
 /*============  Sticky Nav Bar ===========*/
+
+if( check == false)
+{
 $(window).on('scroll',function(){
 
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -157,7 +168,7 @@ $('header').removeClass('black');
 
 })
 
-
+}
 /*============  Auto Slide Images ===========*/
 var myIndex = 0;
 carousel();
