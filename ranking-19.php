@@ -57,7 +57,7 @@ crossorigin="anonymous">
 <div class="logo" >
 <ul>
 <li><a href="index.php"><img src="images\imnitian.png"></a></li>
-<li class="logo_txt"><a href="index.php" style="font-family: 'Dancing Script', cursive;color:white;font-weight:bold;font-size:13px;letter-spacing: 0.7px;" >I AM AN NITIAN</a></li>
+<li class="logo_txt"><a href="index.php" style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
 </ul>
 </div>
 <nav class="active">
