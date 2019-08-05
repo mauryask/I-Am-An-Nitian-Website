@@ -32,12 +32,7 @@ crossorigin="anonymous">
 <link href="css/news.css" type="text/css" rel="stylesheet">
 <link href="css/login_register.css" type="text/css" rel="stylesheet">
 <style>
-@media (max-width:991px)   
-{
-   .menu-toggle{
-		margin-top:30px;
-    }
-}
+
   </style>
 </head>
 
@@ -56,7 +51,7 @@ crossorigin="anonymous">
 <div class="logo" >
 <ul>
 <li><a href="index.php"><img src="images\imnitian.png"></a></li>
-<li class="logo_txt"><a href="index.php" style="font-family: 'Dancing Script', cursive;color:white;font-weight:bold;font-size:13px;letter-spacing: 0.7px;" >I AM AN NITIAN</a></li>
+<li class="logo_txt"><a href="index.php" style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
 </ul>
 </div>
 <nav class="active">
@@ -199,7 +194,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                 }
                else 
                {
-                 echo 'No result found';
+                 echo '<p style="text-align:center;">No result found</p>';
                }
               ?>
              

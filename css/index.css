@@ -221,7 +221,7 @@
 		flex-direction:row;
 		width:77%;
 		height: 280px;
-		margin-bottom:6%;
+		margin-bottom:7rem;
 		margin-top:2rem;
 	}
 	.about .about-img{
@@ -290,7 +290,7 @@ white-space:nowrap;
 }
 
 .mob-expo .appx_expo{
-	margin-left:3px;
+	margin-left:5px;
 	height:155px;
 	width:145px;
 	background:white;
@@ -300,13 +300,14 @@ white-space:nowrap;
 	box-shadow:1px 1px 1px 1px rgba(220,220,220,1);
 }
 
-.mob-expo #appx_left{
-margin-left:5px;
-}
 
 .mob-expo #appx_right{
-	margin-right:5px;
+	margin-left:11px;
 	}
+
+	.mob-expo #appx_left{
+		margin-right:11px;
+		}
 
 .mob-expo .appx_expo img{
 	margin-top:15px;
@@ -403,7 +404,6 @@ color:gray;
 	.explore
 		{
 			padding:0;
-
 		}
 
 	  .explore .expo{
@@ -459,6 +459,7 @@ color:gray;
 	flex-direction:column;
 	margin-bottom:3rem;
 	margin-top:1rem;
+	width:82%;
 }
 
 

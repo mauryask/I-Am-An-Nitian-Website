@@ -222,7 +222,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
        </div>
 
 
-<div  class="appx_expo" onclick="location.href='uPDxgdf.php'" >
+<div  class="appx_expo" onclick="location.href='uPDxgdf.php'" id="appx_left">
 <img src="images/question.svg">
          <p>Ask Questions</p>
   </div>
@@ -403,7 +403,6 @@ function startIt()
 
 
 <!--================ News Section ====================-->
-<div style="width:100%;height:1%;background:transparent;margin-top:4%;"></div>
 <div class="explore exp" style="margin-top:0;">
   <p class="main-expo"  data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>News <span id="ns-art">& Articles</span></p>
  
@@ -450,7 +449,7 @@ function startIt()
                else 
                {
               ?>
-              <div>No results found.</div>
+              <div style="text-align:center;margin:0 auto;">No results found</div>
               <?php   
               }
              ?>
@@ -680,7 +679,7 @@ function carousel() {
  /*==================== Menu toggle =========================*/
  $(document).ready(function(){
 
-if (window.matchMedia('(max-width:721px)').matches)
+if (window.matchMedia('(max-width:921px)').matches)
 {
   
   $('.cut_nav').click(function(){
@@ -692,26 +691,9 @@ if (window.matchMedia('(max-width:721px)').matches)
     $('.logo').css('marginTop', '0px');
     $('.logo_txt').css('marginTop', '0px');
 
-
-    setTimeout(function(){
-      if($(window).scrollTop()!= 0)
-    {
-      $('header').css('background', 'black');
-    }
-    },200)
-
   })
 
-  $(window).scroll(function(){
-  $('header').css('background', 'black');
-  if($(window).scrollTop() == 0)
-    {
-      $('header').css('background', 'transparent');
-    }
-})
-  
-
-
+   
   $('.menu-toggle').click(function(){
     $(this).css('display','none');
     $('.cut_nav').css('display','block');

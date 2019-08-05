@@ -13,6 +13,8 @@
             align-items: center;
             transform-origin: bottom;
             transform:scaleY(0);
+            padding-top:50px;
+            padding-bottom:50px;
              }
   
              .signup .sign-card{
@@ -24,6 +26,8 @@
                  flex-direction: row;
                }
                
+              
+
                .sign-card div{
                  flex:1 1 50%;
                }
