@@ -1,43 +1,39 @@
-<?php
-include_once('connection.php');
-session_start();
-$id = $_GET['id'];
-$sample_rate=1;
-$query="select * from tbl_images where  id='".$id."'  ";
-$result = mysqli_query($conn, $query);
-if(mysqli_num_rows($result)>0)
-{
-    $sql = " UPDATE tbl_images SET views = views + {$sample_rate} WHERE id = ".$id." ";
-    mysqli_query($conn,$sql); //counting page views
-     $result = mysqli_query($conn, $query);
-     $row=mysqli_fetch_array($result);
-}
-?>
 <!DOCTYPE html>
 <html id="<?php echo $row['id']; ?>">
 <head>
-<title>I Am An Nitian | Placement</title>
+<title>I Am An Nitian | Placements</title>
 
 <link rel="icon" href="images\imnitian.png">
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
+<!--  Disabling double tap to zoom in mobile version -->
+<meta name="viewport" content= "width=device-width, user-scalable=no">
 <meta charset="utf-8">
+<meta name="theme-color" content="#000">
 <meta name="author" content="Shubham Maurya"> 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+<!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
-crossorigin="anonymous">
+crossorigin="anonymous">-->
 <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
 <link href="css/footer.css" type="text/css" rel="stylesheet">
 <link href="css/navbar.css" type="text/css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+<!--link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">-->
 <link href="css/login_register.css" type="text/css" rel="stylesheet">
-<link href="css/placement.css" type="text/css" rel="stylesheet">
+<link href="css/ranking.css" type="text/css" rel="stylesheet">
 <style>
-@media (max-width:991px)   
+@media (max-width:921px)
 {
-   .menu-toggle{
-		margin-top:30px;
-    }
+
+.wrapper{
+  padding:7px;
 }
+
+.center{
+margin-top:3rem;
+}
+
+}
+
+
   </style>
 </head>
 
@@ -47,7 +43,6 @@ crossorigin="anonymous">
         <div id="loader">
           </div>
 
-   <div class="wrapper">
     <div class="progress-container">
         <div class="progress-bar" id="myBar"></div>
     </div>
@@ -56,7 +51,7 @@ crossorigin="anonymous">
 <div class="logo" >
 <ul>
 <li><a href="index.php"><img src="images\imnitian.png"></a></li>
-<li class="logo_txt"><a href="index.php" style="font-family: 'Dancing Script', cursive;color:white;font-weight:bold;font-size:13px;letter-spacing: 0.7px;" >I AM AN NITIAN</a></li>
+<li class="logo_txt"><a href="index.php" style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
 </ul>
 </div>
 <nav class="active">
@@ -64,7 +59,7 @@ crossorigin="anonymous">
 <li><a href="index.php" class="homex" >Home</a></li>
 <!--<li><a href="team.html" class="homex">Our team</a></li>-->
 <li><a href="more-news.php" class="home" >News</a></li>
-<li onclick="updf()"><a href="index.php#updf" class="homex" >Updates</a></li>
+<li><a href="index.php#updf" class="homex" >Updates</a></li>
 <li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
 
 <li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;" id="user">
@@ -124,6 +119,392 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
  
 
 
+<div class="wrapper">
+ 
+<div class="center">
+<p>B.Tech. Placements <span id="rank_yr" ><br>Of Various NITs</p>
+<div class="line_rnk" style="width:21rem;"> </div>
+</div>
+
+
+
+<div class="clg" >
+ <div class="search_clg">
+ <p>Search : </p>
+<input type="search" id="search" placeholder="eg. srinagar">
+</div>
+
+<table>
+<th>NIT </th>
+<th>2015-16</th>
+<th>2016-17</th>
+<th>2017-18</th>
+<th class="hid">Avg.</th>
+<tbody id="placement_wise">
+
+<tr>
+<td>NIT Trichy</td>  
+<td>6,50,000</td>
+<td>6,53,000
+</td>
+<td>7,50,000
+</td>  
+<td class="hid">6,84,333</td>
+</tr>
+
+<tr>
+
+<td>NIT Rourkela</td>
+<td>5,00,000
+</td>
+<td>5,50,000
+</td>
+<td>5,98,000
+</td>
+<td class="hid">5,49,333</td>
+
+</tr>
+
+<tr>
+<td>NIT Suratkal</td>
+<td>7,00,000
+</td>
+<td>7,00,000
+</td>
+<td>7,10,000
+</td>
+<td class="hid">7,13,333</td>
+</tr>
+
+<tr>
+<td>NIT Warangal</td>
+<td>7,63,875
+</td>
+<td>7,08,625
+</td>
+<td>8,37,000
+</td>
+<td class="hid">7,69,833</td>
+</tr>
+
+<tr>
+<td>NIT Calicut</td>
+<td>6,35,000
+</td>
+<td>6,00,000
+</td>
+<td>7,20,000
+</td>
+<td class="hid">6,51,667</td>
+</tr>
+
+<tr>
+<td>VNIT Nagpur</td>
+<td>5,25,000
+</td>
+<td>5,21,000
+</td>
+<td>6,00,000
+</td>
+<td class="hid">5,48,667</td>
+</tr>
+
+<tr>
+<td>NIT Kuruksetra</td>
+<td>6,20,000
+</td>
+<td>6,00,000
+</td>
+<td>6,50,000
+</td>
+<td class="hid">6,23,333</td>
+</tr>
+
+<tr>
+<td>MNNIT Allahabad</td>
+<td>6,68,000
+</td>
+<td>7,00,000
+</td>
+<td>7,95,000
+</td>
+<td class="hid">7,21,000</td>
+</tr>
+
+<tr>
+<td>NIT Durgapur</td>
+<td>5,00,000
+</td>
+<td>4,80,000
+</td>
+<td>5,10,000
+</td>
+<td class="hid">4,96,667</td>
+</tr>
+
+<tr>
+<td>NIT Silchar</td>
+<td>5,10,000
+</td>
+<td>5,05,000
+</td>
+<td>6,09,000
+</td>
+<td class="hid"> 4,90,000</td>
+</tr>
+
+<tr>
+<td>MNIT Jaipur</td>
+<td>5,77,000
+</td>
+<td>5,75,000
+</td>
+<td>6,25,000
+</td>
+<td class="hid">5,92,333</td>
+</tr>
+
+<tr>
+<td>SVNIT Surat</td>
+<td>5,72,000
+</td>
+<td>5,75,000
+</td>
+<td>6,67,000
+</td>
+<td class="hid">6,04,667</td>
+</tr>
+
+<tr>
+<td>NIT Hamirpur</td>
+<td>5,40,000
+</td>
+<td>5,11,000
+</td>
+<td>5,50,000
+</td>
+<td class="hid">5,33,667</td>
+</tr>
+
+<tr>
+<td>MANIT Bhopal</td>
+<td>5,00,000
+</td>
+<td>6,00,000
+</td>
+<td>6,00,000
+</td>
+<td class="hid">5,66,667</td>
+</tr>
+
+<tr>
+<td>NIT Meghalaya</td>
+<td>3,30,000
+</td>
+<td>4,00,000
+</td>
+<td>5,00,000
+</td>
+<td class="hid">4,10,000</td>
+</tr>
+
+<tr>
+<td>NIT Agartala</td>
+<td>4,96,000
+</td>
+<td>4,00,000
+</td>
+<td>5,11,000
+</td>
+<td class="hid">4,69,000</td>
+</tr>
+
+<tr>
+<td>NIT Raipur</td>
+<td>5,00,000
+</td>
+<td>6,00,000
+</td>
+<td>6,00,000
+</td>
+<td class="hid">5,66,667</td>
+</tr>
+
+<tr>
+<td>NIT Goa</td>
+<td>5,40,000
+</td>
+<td>5,50,000
+</td>
+<td>6,00,000
+</td>
+<td class="hid">5,63,333</td>
+</tr>
+
+<tr>
+<td>NIT Jalandhar</td>
+<td>5,05,000
+</td>
+<td>5,50,000
+</td>
+<td>6,60,000
+</td>
+<td class="hid">5,71,667</td>
+</tr>
+
+<tr>
+<td>NIT Jamshedpur</td>
+<td>5,20,000
+</td>
+<td>6,00,000
+</td>
+<td>6,25,000
+</td>
+<td class="hid">5,73,333</td>
+</tr>
+
+<tr>
+<td>NIT Patna</td>
+<td>4,50,000
+</td>
+<td>6,00,000
+</td>
+<td>6,00,000
+</td>
+<td class="hid">5,50,000</td>
+</tr>
+
+<tr>
+<td>NIT Manipur</td>
+<td>3,65,000
+</td>
+<td>5,00,000
+</td>
+<td>5,50,000
+</td>
+<td class="hid">4,71,667</td>
+</tr>
+
+<tr>
+<td>NIT Puducherry</td>
+<td>4,50,000
+</td>
+<td>5,00,000
+</td>
+<td>5,40,000
+</td>
+<td class="hid">4,96,667</td>
+</tr>
+
+<tr>
+<td>NIT Nagaland</td>
+<td>3,60,000
+</td>
+<td>4,00,000
+</td>
+<td>4,00,000
+</td>
+<td class="hid">3,86,667</td>
+</tr>
+
+<tr>
+<td>NIT Srinagar</td>
+<td>4,90,000
+</td>
+<td>5,98,000
+</td>
+<td>5,84,000
+</td>
+<td class="hid">5,57,333</td>
+</tr>
+
+<tr>
+<td>NIT Delhi</td>
+<td>5,00,000
+</td>
+<td>5,01,000
+</td>
+<td>5,25,000
+</td>
+<td class="hid">5,08,667</td>
+</tr>
+
+<tr>
+<td>NIT Andhra Pradesh</td>
+<td>---
+</td>
+<td>---</td>
+<td>---</td>
+<td class="hid">---</td>
+</tr>
+
+<tr>
+<td>NIT Arunachal Pradesh</td>
+<td>4,75,000
+</td>
+<td>4,38,000
+</td>
+<td>6,58,000
+</td>
+<td class="hid">5,23,667</td>
+
+</tr>
+
+<tr>
+<td>NIT Uttrakhand</td>
+<td>3,99,000
+</td>
+<td>5,11,000
+</td>
+<td>5,11,000
+</td>
+<td class="hid">4,73,667</td>
+</tr>
+
+<tr>
+<td>NIT Sikkim</td>
+<td>4,50,000
+</td>
+<td>5,00,000
+</td>
+<td>6,00,000
+</td>
+<td class="hid">5,16,667</td>
+</tr>
+
+<tr>
+<td>NIT Mizoram</td>
+<td>3,30,000
+</td>
+<td>3,20,000
+</td>
+<td>5,00,000
+</td>
+<td class="hid">3,83,333</td>
+
+</tr>
+</tbody>
+</table>
+
+
+
+<div class="linkx">
+<p class="links"> Explore More</p>
+<div class="line"></div>
+<p><a href="placement2.php" class="x" >M.Tech. Placements</a></p>
+<p><a href="ranking-19.php" class="x" >NITs Ranking</a></p>
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
 
 
 <!--============== Signup Popup ==================-->
@@ -161,9 +542,9 @@ function updf()
    <input  type="text"  name="phone" id="phone" placeholder="Mobile Number"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
    <select name="clg" id="clg"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
       <option>Select College</option>
-      <option>National Institute Of technology Srinagar</option> 
-      <option>National Institute Of technology Srinagar Silchar</option>
-      <option>National Institute Of technology Srinagar Trichy</option>
+      <option>NIT Srinagar</option> 
+      <option>NIT Srinagar Silchar</option>
+      <option>NIT Srinagar Trichy</option>
       <option>Motilal Nehru Institute Of Technology Allahabad</option>
       <option>Malviya Natioanl Institute Of Technology Jaipur</option>
       <option>Other</option>
@@ -193,8 +574,15 @@ function updf()
 <div>
 <div class="log-msg"  ><p id="message"><p></div>
   <form  method="post" autocomplete="off">
-  <input  id="email" type="text" autocomplete="off" placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
-  <input autocomplete="off"  id="pass" type="password" placeholder="Password"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+
+  <input  id="email" type="text" autocomplete="off" placeholder="Email" 
+   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'"
+   onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+
+  <input autocomplete="off"  id="pass" type="password" placeholder="Password" 
+    onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" 
+    onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+
 <div class="select" id="select">
   <input type="radio" name="user" id="user" value="1" checked>&nbsp <label class="lab1">User</label>
   <input type="radio" name="user" id="admin" value="2">&nbsp <label>Admin</label>
@@ -204,11 +592,7 @@ function updf()
   <p class="signx"><a onclick="show_signup();cancel_log();">new member? register</a></p>
 </div>
 </div>
-</div>
 
-
-
-   
 
    
     <footer>
@@ -228,29 +612,32 @@ function updf()
 <p id="and_copy" class="copyright">All rights reserved</p>
 </div>
 </footer>
-</div>
+
 
 </body>
 
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
+<script src="jquery.min.js"> </script>
+
+<!--
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>-->
 <!--==================  TweenMax CDN  ==================-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>-->
 <!--==================  SweetAlert2 CDN  ==================-->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>-->
 <!--==================  SweetAlert CDN  ==================-->
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!--<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>-->
 <script   type="text/javascript" src="js/ajax-register.js"></script>
 <script   type="text/javascript" src="js/ajax-login.js"></script>
 <script src="js/main.js" type="text/javascript"></script>
 
 <script>
 
-
  /*==================== Menu toggle =========================*/
 
  $(document).ready(function(){
 
-  if (window.matchMedia('(max-width:921px)').matches)
+  if (window.matchMedia('(max-width:721px)').matches)
 {
   
   $('.cut_nav').click(function(){
@@ -287,7 +674,7 @@ function updf()
     TweenMax.to('.active',0.4,{scaleX: 1});
 
     setTimeout(function(){
-      $('.logo').css('marginLeft', '62px');
+      $('.logo').css('marginLeft', '59px');
       $('.logo').css('marginTop', '18px');
       $('.logo_txt').css('marginTop', '10px');
     },200);
@@ -328,6 +715,21 @@ $('#about_nav').click(function()
 })
 
 }
+})
+</script>
+
+<script>
+
+ /*==================== Search ranking =========================*/
+ $(function()
+{ //instead of $(document).ready(function(){}) you ncan use this short hand property
+    $('#search').on('keyup',function(){
+
+  var value = $(this).val().trim().toLowerCase();
+         $('#placement_wise tr').filter(function(){
+             $(this).toggle($(this).text().toLowerCase().indexOf(value)>-1)
+         })
+    })
 })
 
 </script>

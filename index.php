@@ -616,6 +616,7 @@ function updf()
 </body>
 </html>
 <!--===============  Microsoft's JQuery CDN =================-->
+<script src="jquery.min.js" type="text/javascript"></script>
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
 <!--===================  TypedJs CDN  =======================-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js" type="text/javascript"></script>
@@ -686,10 +687,10 @@ if (window.matchMedia('(max-width:921px)').matches)
     $(this).css('display','none');
     $('.menu-toggle').css('display','block');
     TweenMax.to('.active',0.5,{scaleX: 0});
-    $('nav').css('z-index', '1');
+   /* $('nav').css('z-index', '1');
     $('.logo').css('marginLeft', '0px');
     $('.logo').css('marginTop', '0px');
-    $('.logo_txt').css('marginTop', '0px');
+    $('.logo_txt').css('marginTop', '0px');*/
 
   })
 
@@ -698,7 +699,7 @@ if (window.matchMedia('(max-width:921px)').matches)
     $(this).css('display','none');
     $('.cut_nav').css('display','block');
 
-    $('nav').css('z-index', '4');
+    /*$('nav').css('z-index', '4');
 
     $('header').css('background', 'transparent');
     $('.cut_nav').css('background','black');
@@ -713,45 +714,45 @@ if (window.matchMedia('(max-width:921px)').matches)
     setTimeout(function(){
       $('nav').css('z-index', '-1');
     },350);
-   
+   */
   })
 $('#login_nav').click(function()
 {
-  $('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');
+ /* $('.logo').css('marginLeft', '0px');
+  $('.logo').css('marginTop', '0px');*/
   TweenMax.to('.active',0.1,{scaleX: 0});  
   $('.cut_nav').css('display','none');
   $('.menu-toggle').css('display','block');
-  $('.logo_txt').css('marginTop', '0px');
+  //$('.logo_txt').css('marginTop', '0px');
 })
 
 $('#register_nav').click(function(){
-  $('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');
+  /*$('.logo').css('marginLeft', '0px');
+  $('.logo').css('marginTop', '0px');*/
   TweenMax.to('.active',0.1,{scaleX: 0});  
   $('.cut_nav').css('display','none');
   $('.menu-toggle').css('display','block');
-  $('.logo_txt').css('marginTop', '0px');
+ // $('.logo_txt').css('marginTop', '0px');
 })
 
 $('#about_nav').click(function()
 {
-  $('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');
+ /* $('.logo').css('marginLeft', '0px');
+  $('.logo').css('marginTop', '0px');*/
   TweenMax.to('.active',0.1,{scaleX: 0});  
   $('.cut_nav').css('display','none');
   $('.menu-toggle').css('display','block');
-  $('.logo_txt').css('marginTop', '0px');
+  //$('.logo_txt').css('marginTop', '0px');
 })
 
 $('#update_nav').click(function()
 {
-  $('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');
+  /*$('.logo').css('marginLeft', '0px');
+  $('.logo').css('marginTop', '0px');*/
   TweenMax.to('.active',0.1,{scaleX: 0});  
   $('.cut_nav').css('display','none');
   $('.menu-toggle').css('display','block');
-  $('.logo_txt').css('marginTop', '0px');
+  //$('.logo_txt').css('marginTop', '0px');
 })
 
 

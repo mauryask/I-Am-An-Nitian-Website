@@ -31,9 +31,6 @@ crossorigin="anonymous">
 <style>
 @media (max-width:991px)
 {
-  .center{
-    margin-top:-15px;
-  }
 
   .linkx{
     margin-top:3rem;

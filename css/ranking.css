@@ -19,7 +19,6 @@ body{
 }
 
 
-
 #loader{
     top:0;
     width:100%;
@@ -62,18 +61,20 @@ body{
     margin-top:7rem;
   }
 
-  .center .courtesy{
+  .center .courtesy
+  {
       font-weight:normal;
       font-size:20px;
       text-transform: capitalize;
   }
 
-
-body  .clg{
+body  .clg
+  {
     margin: 0 auto;   
    }   
 
-.clg .wlc-content{
+.clg .wlc-content
+{
     line-height:2.4rem;
     letter-spacing: 0.7px;
     color:#050505;
@@ -81,15 +82,11 @@ body  .clg{
     font-size:16px;
 }
 
-
-th,td{
-    padding:15px 2px 15px 2px;
-    text-align:center;
-}
-
- .clg table{
+ .clg table
+ {
      margin: 0 auto;
      width:100%;
+     background: orange;
 }
 
 tr{
@@ -100,12 +97,21 @@ tbody td{
     font-size:15px;
     color:#050505;
     font-family: 'Playfair Display', serif;
+    padding:15px 2px 15px 2px;
+    margin:0;
+    border:0;
 }
+
+th{
+    padding:15px 2px 15px 2px;
+}
+
 
 .clg table,th,td{
     text-transform: capitalize;
     border-collapse: collapse;
     color:rgba(90,90,90,1);
+    text-align:center;
 }
 
 
@@ -138,8 +144,6 @@ background:rgba(247,247,247,1);
     background:transparent;
     background:rgba(250,250,250,1);
 }
-
-
 
 .linkx{
     padding-left:1.7rem;
@@ -212,14 +216,14 @@ font-family: serif;
     .wrapper{
         width:100%;
         margin-top:0;
+        padding:10px;
     }
 
 
 .center{
-    margin:0 auto;
-    margin-top:4.6rem;
-    width:80%;
-    margin-bottom:1rem;
+    margin-top:1rem;
+    width:100%;
+    margin-bottom:0.5rem;
     font-size:48px;
 }
 .center .courtesy{
@@ -227,7 +231,6 @@ font-family: serif;
     font-size:16px;
     letter-spacing:0.4px;
 }
-
 
     .center .break{
         display:block;
@@ -246,34 +249,33 @@ font-size:32px;
 
 
 body .clg{
-  width:80%;
+  width:100%;
 }
 
 .clg .wlc-content{
     font-size:15px;
     line-height:1.8rem;
-    text-align: justify;
-
+    text-align: justify; 
 }
 
 .clg .search_clg {
-    margin:2rem 0 1.2rem 0;
+    margin:0rem 0 1.2rem 0;
    }
 
 .clg .search_clg #search{
   margin: 0 auto;
-width:17rem;
+width:14rem;
 }
 
+
 table{
-    margin-top:0;
     line-height:21px;
     letter-spacing: 0.1px;
     font-size:14px;
     width:100%;
 }
 
-table tbody td{
+table tbody td, table th{
     padding:12px 2px 12px 2px;
 }
 
@@ -292,6 +294,10 @@ table tbody td{
 
  .line{
   margin: 0 auto;  
+}
+
+.hid{
+    display:none;
 }
 
 }
