@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html id="<?php echo $row['id']; ?>">
 <head>
-<title>I Am An Nitian | Placements</title>
+<title>B.Tech. Placements | I Am An Nitian</title>
 
 <link rel="icon" href="images\imnitian.png">
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
-<!--  Disabling double tap to zoom in mobile version -->
 <meta name="viewport" content= "width=device-width, user-scalable=no">
 <meta charset="utf-8">
 <meta name="theme-color" content="#000">
 <meta name="author" content="Shubham Maurya"> 
-<!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
-crossorigin="anonymous">-->
+crossorigin="anonymous">
 <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
 <link href="css/footer.css" type="text/css" rel="stylesheet">
 <link href="css/navbar.css" type="text/css" rel="stylesheet">
-<!--link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">-->
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 <link href="css/login_register.css" type="text/css" rel="stylesheet">
 <link href="css/ranking.css" type="text/css" rel="stylesheet">
 <style>
@@ -32,7 +31,6 @@ margin-top:3rem;
 }
 
 }
-
 
   </style>
 </head>
@@ -57,7 +55,6 @@ margin-top:3rem;
 <nav class="active">
 <ul>
 <li><a href="index.php" class="homex" >Home</a></li>
-<!--<li><a href="team.html" class="homex">Our team</a></li>-->
 <li><a href="more-news.php" class="home" >News</a></li>
 <li><a href="index.php#updf" class="homex" >Updates</a></li>
 <li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
@@ -75,8 +72,6 @@ margin-top:3rem;
 ?>
 &nbsp <i class="fas fa-user-graduate"></i></a>
 <ul style="margin-left:-1rem;">
-<!-- Hide and Show login and php buttons -->
-
 <?php
 
 if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
@@ -492,6 +487,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <p class="links"> Explore More</p>
 <div class="line"></div>
 <p><a href="placement2.php" class="x" >M.Tech. Placements</a></p>
+<p><a href="gate_topper_list.php" class="x" >Nitians who cracked GATE 2019</a></p>
+<p><a href="ese_topper_list.php" class="x" >Nitians who cracked ESE 2019</a></p>
 <p><a href="ranking-19.php" class="x" >NITs Ranking</a></p>
 </div>
 </div>
@@ -593,7 +590,7 @@ function updf()
 </div>
 </div>
 
-
+</div>
    
     <footer>
    <div class="datad">
@@ -617,16 +614,15 @@ function updf()
 </body>
 
 
-<script src="jquery.min.js"> </script>
 
-<!--
-<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>-->
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 <!--==================  TweenMax CDN  ==================-->
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
 <!--==================  SweetAlert2 CDN  ==================-->
-<!--<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>
 <!--==================  SweetAlert CDN  ==================-->
-<!--<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>-->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script   type="text/javascript" src="js/ajax-register.js"></script>
 <script   type="text/javascript" src="js/ajax-login.js"></script>
 <script src="js/main.js" type="text/javascript"></script>

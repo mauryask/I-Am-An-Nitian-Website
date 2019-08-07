@@ -14,7 +14,6 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 crossorigin="anonymous">
 
 <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
-<link href="css/footer.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 <link href="css/ranking.css" type="text/css" rel="stylesheet">
 <style>
@@ -22,6 +21,11 @@ crossorigin="anonymous">
     .center{
 margin-top:0;
 }
+
+.linkx{
+    margin-top:3rem;
+   margin-bottom:0;
+  }
 }
   </style>
 </head>
@@ -339,6 +343,8 @@ margin-top:0;
 <p class="links"> Explore More</p>
 <div class="line"></div>
 <p><a href="placement.php" class="x" >B.Tech. Placements</a></p>
+<p><a href="gate_topper_list.php" class="x" >Nitians who cracked GATE 2019</a></p>
+<p><a href="ese_topper_list.php" class="x" >Nitians who cracked ESE 2019</a></p>
 <p><a href="ranking-19.php" class="x" >NITs Ranking</a></p>
 </div>
 </div>
@@ -346,27 +352,7 @@ margin-top:0;
 
 </div>
 
-
-
-   
-    <footer>
-   <div class="datad">
-  <p class="x">Feel Free To Contact Us</p>
-  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-9055667606 &nbsp | &nbsp  +91-9055667606</p>
- <span id="respo_contact">
- <P>iamannitian@gmail.com</p> 
- <P>+91-9055667606</p> 
- <P>+91-9055667606</p> 
-   </span>
-</div>
-<!--============== Bottom Container =====================-->
- <div class="container">
- <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
-2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbspAll Rights Reserved</span></p>
-<p id="and_copy" class="copyright">All rights reserved</p>
-</div>
-</footer>
-
+<footer class="footer">Copyright <i class="far fa-copyright"></i> 2019 | I Am An Nitian</footer>
 
 </body>
 
