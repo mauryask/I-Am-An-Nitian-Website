@@ -297,7 +297,6 @@ margin-bottom:0;
 <p class="links"> Explore More</p>
 <div class="line"></div>
 <p><a href="ranking-19.php" class="x" >NITs Ranking 2019</a></p>
-<p><a href="ranking-18.php" class="x" >NITs Ranking 2018</a></p>
 <p><a href="gate_topper_list.php" class="x" >Nitians who cracked GATE 2019</a></p>
 <p><a href="ese_topper_list.php" class="x" >Nitians who cracked ESE 2019</a></p>
 <p><a href="placement.php" class="x" >B.Tech. Placements</a></p>

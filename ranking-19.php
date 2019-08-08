@@ -138,7 +138,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </header>          
  
 
-
 <div class="center">
 <p>NITs Ranking 2019</p>
 <p class="courtesy" ><span style="font-family:'Playfair Display', serif;
@@ -172,227 +171,240 @@ font-weight:bold;">Courtesy:</span> National institute rankgin framework
 
 <table>
   <tr>
-<th>Serial</th>
 <th>NIT Name</th>
-<th>Overall Rank</th>
-<th>NIT Rank </th>
+<th>Overall Rank 2019</th>
+<th>NIT Rank 2019</th>
+<th>NIT Rank 2018</th>
 </tr>
 <tbody id="rank_19">
 <tr>
-<td>1</td>
 <td>NIT Trichy</td>    
-<td>6,84,333</td>
-<td>4</td>
-</tr>
-
-<tr>
-<td>2</td>
-<td>NIT Rourkela</td>
-<td>5,49,333</td>
-<td>16</td>
-</tr>
-
-<tr>
-<td>3</td>
-<td>NIT Suratkal</td>
-<td>7,13,333</td>
-<td>3</td>
-</tr>
-
-<tr>
-<td>4</td>
-<td>NIT Warangal</td>
-<td>7,69,833</td>
+<td>10
+</td>
+<td>1</td>
 <td>1</td>
 </tr>
 
 <tr>
-<td>5</td>
-<td>NIT Calicut</td>
-<td>6,51,667</td>
-<td>5</td>
-</tr>
-
-<tr>
-<td>6</td>
-<td>VNIT Nagpur</td>
-<td>5,48,667</td>
-<td>17</td>
-</tr>
-
-<tr>
-<td>7</td>
-<td>NIT Kuruksetra</td>
-<td>6,23,333</td>
-<td>6</td>
-</tr>
-
-<tr>
-<td>8</td>
-<td>MNNIT Allahabad</td>
-<td>7,21,000</td>
+<td>NIT Rourkela</td>
+<td>16</td>
+<td>2</td>
 <td>2</td>
 </tr>
 
 <tr>
+<td>NIT Suratkal</td>
+<td>21</td>
+<td>3</td>
+<td>3</td>
+</tr>
+
+<tr>
+<td>NIT Warangal</td>
+<td>26</td>
+<td>4</td>
+<td>4</td>
+</tr>
+
+<tr>
+<td>NIT Calicut</td>
+<td>28</td>
+<td>5</td>
 <td>9</td>
-<td>NIT Durgapur</td>
-<td>4,96,667</td>
-<td>22</td>
 </tr>
 
 <tr>
-<td>10</td>
-<td>NIT Silchar</td>
-<td>4,90,000</td>
-<td>24</td>
+<td>VNIT Nagpur</td>
+<td>31</td>
+<td>6</td>
+<td>5</td>
 </tr>
 
 <tr>
-<td>11</td>
-<td>MNIT Jaipur</td>
-<td>5,92,333</td>
+<td>NIT Kuruksetra</td>
+<td>41</td>
+<td>7</td>
+<td>6</td>
+</tr>
+
+<tr>
+
+<td>MNNIT Allahabad</td>
+<td>42</td>
+<td>8</td>
 <td>8</td>
 </tr>
 
 <tr>
-<td>12</td>
-<td>SNIT Surat</td>
-<td>6,04,667</td>
+<td>NIT Durgapur</td>
+<td>46</td>
+<td>9</td>
 <td>7</td>
 </tr>
 
 <tr>
-<td>13</td>
-<td>NIT Hamirpur</td>
-<td>5,33,667</td>
-<td>18</td>
-</tr>
-
-<tr>
-<td>14</td>
-<td>MANIT Bhopal</td>
-<td>5,66,667</td>
-<td>11</td>
-</tr>
-
-<tr>
-<td>15</td>
-<td>NIT Meghalaya</td>
-<td>4,10,000</td>
-<td>28</td>
-</tr>
-
-<tr>
-<td>16</td>
-<td>NIT Agartala</td>
-<td>4,69,000</td>
-<td>27</td>
-</tr>
-
-<tr>
-<td>17</td>
-<td>NIT Raipur</td>
-<td>5,66,667</td>
+<td>NIT Silchar</td>
+<td>51</td>
+<td>10</td>
 <td>12</td>
 </tr>
 
 <tr>
-<td>18</td>
-<td>NIT Goa</td>
-<td>5,63,333</td>
-<td>13</td>
-</tr>
-
-<tr>
-<td>19</td>
-<td>NIT Jalandhar</td>
-<td>5,71,667</td>
+<td>MNIT Jaipur</td>
+<td>53</td>
+<td>11</td>
 <td>10</td>
 </tr>
 
 <tr>
-<td>20</td>
-<td>NIT Jamshedpur</td>
-<td>5,73,333</td>
-<td>9</td>
+<td>SNIT Surat</td>
+<td>58</td>
+<td>12</td>
+<td>13</td>
 </tr>
 
 <tr>
-<td>21</td>
-<td>NIT Patna</td>
-<td>5,50,000</td>
-<td>15</td>
-</tr>
-
-<tr>
-<td>22</td>
-<td>NIT Manipur</td>
-<td>4,71,667</td>
-<td>26</td>
-</tr>
-
-<tr>
-<td>23</td>
-<td>NIT Puducherry</td>
-<td>4,96,667</td>
-<td>23</td>
-</tr>
-
-<tr>
-<td>24</td>
-<td>NIT Nagaland</td>
-<td>3,86,667</td>
-<td>29</td>
-</tr>
-
-<tr>
-<td>25</td>
-<td>NIT Srinagar</td>
-<td>5,57,333</td>
+<td>NIT Hamirpur</td>
+<td>60</td>
+<td>13</td>
 <td>14</td>
 </tr>
 
 <tr>
-<td>26</td>
-<td>NIT Delhi</td>
-<td>5,08,667</td>
-<td>21</td>
+<td>MANIT Bhopal</td>
+<td>62</td>
+<td>14</td>
+<td>11</td>
 </tr>
 
 <tr>
-<td>27</td>
+<td>NIT Meghalaya</td>
+<td>67</td>
+<td>15</td>
+<td>18</td>
+</tr>
+
+<tr>
+<td>NIT Agartala</td>
+<td>70</td>
+<td>16</td>
+<td>17</td>
+</tr>
+
+<tr>
+<td>NIT Raipur</td>
+<td>74</td>
+<td>17</td>
+<td>16</td>
+</tr>
+
+<tr>
+<td>NIT Goa</td>
+<td>87</td>
+<td>18</td>
+<td>19</td>
+</tr>
+
+<tr>
+<td>NIT Jalandhar</td>
+<td>113</td>
+<td>19</td>
+<td>15</td>
+</tr>
+
+<tr>
+<td>NIT Jamshedpur</td>
+<td>130</td>
+<td>20</td>
+<td>20</td>
+</tr>
+
+<tr>
+<td>NIT Patna</td>
+<td>134</td>
+<td>21</td>
+<td>23</td>
+</tr>
+
+<tr>
+<td>NIT Manipur</td>
+<td>148</td>
+<td>22</td>
+<td>21</td>
+</tr>
+
+
+
+
+<tr>
+
+<td>NIT Puducherry</td>
+<td>---</td>
+<td>23</td>
+<td>22</td>
+</tr>
+
+
+<tr>
+<td>NIT Nagaland</td>
+<td>---</td>
+<td>24</td>
+<td>24</td>
+</tr>
+
+
+<tr>
+<td>NIT Srinagar</td>
+<td>---</td>
+<td>25</td>
+<td>25</td>
+</tr>
+
+
+
+<tr>
+
+<td>NIT Delhi</td>
+<td>---</td>
+<td>26</td>
+<td>26</td>
+</tr>
+
+<tr>
+
 <td>NIT Andhra Pradesh</td>
 <td>---</td>
-<td>---</td>
+<td>27</td>
+<td>27</td>
 </tr>
 
 <tr>
-<td>28</td>
+
 <td>NIT Arunachal Pradesh</td>
-<td>5,23,667</td>
-<td>19</td>
+<td>---</td>
+<td>28</td>
+<td>28</td>
 </tr>
 
 <tr>
-<td>29</td>
 <td>NIT Uttrakhand</td>
-<td>4,73,667</td>
-<td>25</td>
+<td>---</td>
+<td>29</td>
+<td>29</td>
 </tr>
 
 <tr>
-<td>30</td>
 <td>NIT Sikkim</td>
-<td>5,16,667</td>
-<td>20</td>
+<td>---</td>
+<td>30</td>
+<td>30</td>
 </tr>
 
 <tr>
-<td>31</td>
 <td>NIT Mizoram</td>
-<td>3,83,333</td>
-<td>30</td>
+<td>---</td>
+<td>31</td>
+<td>31</td>
 </tr>
 </tbody>
 </table>
@@ -402,7 +414,6 @@ font-weight:bold;">Courtesy:</span> National institute rankgin framework
 <div class="linkx">
 <p class="links"> Explore More</p>
 <div class="line"></div>
-<p><a href="ranking-18.php" class="x">NITs Ranking 2018</a></p>
 <p><a href="rank-placement-wise.php" class="x" > Ranking Based On Placements</a></p>
 <p><a href="gate_topper_list.php" class="x" >Nitians who cracked GATE 2019</a></p>
 <p><a href="ese_topper_list.php" class="x" >Nitians who cracked ESE 2019</a></p>
@@ -410,8 +421,6 @@ font-weight:bold;">Courtesy:</span> National institute rankgin framework
 <p><a href="placement2.php" class="x" >M.Tech. Placements</a></p>
 </div>
 </div>
-
-
 </div>
 
 
