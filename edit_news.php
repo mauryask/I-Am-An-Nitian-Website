@@ -7,9 +7,24 @@
 session_start(); //preventing direct access of this page
 if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION['user_type']!=1)
 {
-  exit('<div style="top:50%;left:50%;font-size:30px; color:rgba(80,80,80,1);
-  font-weight:bold;text-transform:uppercase;text-align:center;
-  transform:translate(-50%,-50%);position:absolute;">Access denied <br/>page 404<br/> not found<div>');
+  exit("<div style='
+  top:50%; 
+  left:50%; 
+  transform:translate(-50%,-50%);
+  position:absolute;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  '>
+  <img src='images/access.png' width='200px' height='200px'>
+  <p style='
+
+  font-size:35px;
+text-align:center;
+font-weight:bold;
+  '
+  >Access Denied Page 404 Not Found<p>
+  </div>");
 }
 
 
@@ -109,6 +124,7 @@ while($row=mysqli_fetch_array($result))
 <p><?php echo "Hello! ".$_SESSION['user_name'];  ?></p>
     <div>
     <button id="add" type="button" >add news</button>
+    <button id="feedback" type="button" >Feedback</button>
     <button id="statics" type="button">statics</button>
     <button id="home" type="button">Home</button>
 </div>
@@ -152,6 +168,14 @@ $("#statics").click(function(){
     },500); 
   })
 
+
+//feedback button
+$("#feedback").click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0});   
+    setTimeout(function() {
+        window.location.href="admin_feedback.php";
+    },500); 
+  })
 
 $("#demo").on('click',function(){
     TweenMax.to('#demo',0.5,{scaleX: 0}); 

@@ -45,11 +45,6 @@ body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.cortesy{
-  margin-top:1rem;
-    line-height:2.4rem;
-}
-
 #rank_yr{
     font-size:45px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -58,7 +53,6 @@ body{
 .wrapper{
     width:70%;
     margin:0 auto;
-    margin-top:7rem;
   }
 
   .center .courtesy
@@ -181,21 +175,6 @@ color:blue;
 text-decoration:underline;
 }
 
-.ad{
-    margin-top:2rem; 
-    width:50rem;
-    height:210px;
-    position:relative;
-}
-
-.center .break{
-    display:none;
-}
-
-.center .sub-center .brk{
-    display:none;
-}
-
 
 .footer{
 text-align: center;
@@ -221,7 +200,6 @@ font-family: serif;
 
 
 .center{
-    margin-top:1rem;
     width:100%;
     margin-bottom:0.5rem;
     font-size:48px;
@@ -232,17 +210,7 @@ font-family: serif;
     letter-spacing:0.4px;
 }
 
-    .center .break{
-        display:block;
-        margin-top:-2.8rem;
-    }
-
-
-  .center p, #rank_yr{
-font-size:32px;
-  } 
-    
-
+  
 .center .line_rnk{
     width:8rem;
 }

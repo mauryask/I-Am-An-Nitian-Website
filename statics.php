@@ -3,9 +3,24 @@
 session_start(); //preventing direct access of this page
 if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION['user_type']!=1)
 {
-  exit('<div style="top:50%;left:50%;font-size:30px; color:rgba(80,80,80,1);
-  font-weight:bold;text-transform:uppercase;text-align:center;
-  transform:translate(-50%,-50%);position:absolute;">Access denied <br/>page 404<br/> not found<div>');
+  exit("<div style='
+  top:50%; 
+  left:50%; 
+  transform:translate(-50%,-50%);
+  position:absolute;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  '>
+  <img src='images/access.png' width='200px' height='200px'>
+  <p style='
+
+  font-size:35px;
+text-align:center;
+font-weight:bold;
+  '
+  >Access Denied Page 404 Not Found<p>
+  </div>");
 }
 
 

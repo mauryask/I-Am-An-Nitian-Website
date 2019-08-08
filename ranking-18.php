@@ -16,20 +16,19 @@
 <meta charset="utf-8">
 <meta name="theme-color" content="#000">
 <meta name="author" content="Shubham Maurya">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
-crossorigin="anonymous">
 <link rel="icon" href="images/imnitian.png">
+
 <link href="css/ranking.css" rel="stylesheet"  type="text/css">
 <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
+crossorigin="anonymous">
 <style>
+
 @media (max-width:921px)
 {
-  .center{
-    margin-top:0;
-  }
-
+ 
   .linkx{
     margin-top:3rem;
 margin-bottom:0;
@@ -299,7 +298,11 @@ margin-bottom:0;
 <p class="links"> Explore More</p>
 <div class="line"></div>
 <p><a href="ranking-19.php" class="x">NITs Ranking 2019</a></p>
-<p><a href="rank-placement-wise.php" class="x" >Placement Based Ranking</a></p>
+<p><a href="rank-placement-wise.php" class="x" > Ranking Based On Placements</a></p>
+<p><a href="gate_topper_list.php" class="x" >Nitians who cracked GATE 2019</a></p>
+<p><a href="ese_topper_list.php" class="x" >Nitians who cracked ESE 2019</a></p>
+<p><a href="placement.php" class="x" >B.Tech. Placements</a></p>
+<p><a href="placement2.php" class="x" >M.Tech. Placements</a></p>
 </div>
 </div>
 

@@ -1,23 +1,25 @@
 <!DOCTYPE html>
-<html id="<?php echo $row['id']; ?>">
+<html   lang="en" oncontextmenu="return false">
 <head>
 <title>B.Tech. Placements | I Am An Nitian</title>
 
 <link rel="icon" href="images\imnitian.png">
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
-<meta name="viewport" content= "width=device-width, user-scalable=no">
 <meta charset="utf-8">
 <meta name="theme-color" content="#000">
 <meta name="author" content="Shubham Maurya"> 
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
-crossorigin="anonymous">
+
 <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
 <link href="css/footer.css" type="text/css" rel="stylesheet">
 <link href="css/navbar.css" type="text/css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 <link href="css/login_register.css" type="text/css" rel="stylesheet">
 <link href="css/ranking.css" type="text/css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
+crossorigin="anonymous">
+
 <style>
 @media (max-width:921px)
 {
@@ -30,6 +32,14 @@ crossorigin="anonymous">
 margin-top:3rem;
 }
 
+body{
+  overflow-x:scroll;
+}
+
+}
+
+.wrapper{
+  margin-top:6rem;
 }
 
   </style>

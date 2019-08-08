@@ -25,16 +25,12 @@ font-weight:bold;
 
 include('connection.php');
 $id = $_GET['del'];
-$query_x = "delete from tbl_images where id='$id' ";
-$query_y = "delete from rating_info where post_id='$id' "; // delete data related to this news rating info table
-$query_z = "delete from comment where post_id = '$id' "; // also deleteing allt he coments on this post
+$query_x = "delete from feedback where id='$id' ";
 
 $result=mysqli_query($conn, $query_x);
 if($result)
 {
-    mysqli_query($conn, $query_y);
-    mysqli_query($conn, $query_z);
-    header('location:edit_news.php'); //refresh the current page instead of redirecting to same page again
+    header('location:admin_feedback.php'); //refresh the current page instead of redirecting to same page again
 }
 else
 {

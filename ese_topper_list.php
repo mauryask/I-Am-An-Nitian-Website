@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" oncontextmenu="return false">
 <head>
 <title>I Am An Nitian | ESE 2019 Toppers</title>
 <link rel="icon" href="images\imnitian.png">
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
-<meta name="viewport" content= "width=device-width, user-scalable=no">
 <meta charset="utf-8">
 <meta name="theme-color" content="#000">
 <meta name="author" content="Shubham Maurya"> 
@@ -18,10 +17,6 @@ crossorigin="anonymous">
 <link href="css/ranking.css" type="text/css" rel="stylesheet">
 <style>
 @media (max-width:921px) { 
-    .center{
-margin-top:0;
-}
-
 .linkx{
     margin-top:3rem;
    margin-bottom:0;
