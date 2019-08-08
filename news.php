@@ -18,6 +18,15 @@ if(mysqli_num_rows($result)>0)
 <head>
 <title>I Am An Nitian | News</title>
 
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="ET Digital Design" />
+<meta property="og:description"   content="Currently doing a grand opening special, making several
+ free websites to get my name out there. Visit the site if you are interested!" />
+<meta property="og:image"         content="http://www.etdigitaldesign.com/images/etlogobig.png" />
+
+
+
+
 <link rel="icon" href="images\imnitian.png">
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
@@ -139,7 +148,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         </p>
 
         <iframe src="https://www.facebook.com/plugins/share_button.php?href=<?php
-        $url = "https://www.facebook.com/iamannitian";
+        $url = "http://www.".$_SERVER['REQUEST_URI'];
         echo $url;
         ?>
         &layout=button_count&size=large&appId=473134703234415&width=110&height=28" 
@@ -182,8 +191,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                     while ($row = mysqli_fetch_assoc($result))
                      {
                       $id = $row["id"];
-                      $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting first 5 words from heading
-                      $text = implode(' ',array_slice(explode(' ', $row['text']),0,16)); //getting first 19 words from text
+                      $head = implode(' ',array_slice(explode(' ', $row['heading']),0,6)); //getting first 5 words from heading
+                      $text = implode(' ',array_slice(explode(' ', $row['text']),0,10)); //getting first 19 words from text
                      echo   '<div class="flash">
                      <a href="news.php?id='.$id.'">
                       <div class="nimg"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>';
@@ -204,11 +213,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                       </div>  
     </div>
 
-    <?php 
-    $url  =  "https:/www.".$_SERVER['REQUEST_URI'];
-    $url = "https://www.facebook.com";
-    ?>
-  
+     
 
 <!--============== Signup Popup ==================-->
 <div class="signup" id="sign">

@@ -1,16 +1,6 @@
-<!--
-* I AM AN NITIAN 
-* v1.0
-* May 17 2019
-* Developer: Shubham Maurya
-* National Institute Of Technology Srinagar J&K India 190006
-* GitHub: https://github.com/pnstech
-* LinkedIn: https://www.linkedin.com/in/cyberthreatatnit/
--->
-
 <?php
 include_once('connection.php');
-session_start(); //starting session start
+session_start(); 
 ?>
 
 <!DOCTYPE html>
@@ -404,7 +394,7 @@ strategy , I thought that out of 1 lac students what makes
  <a href="story2.php">Next Story <i class="fas fa-chevron-circle-right"></i></a></p>
 
  <p class="next next_btn_mob" style="width:35%;margin:0 auto;padding:0.1rem;"> 
- <a href="story2.php" style="color:black;">Next Story <i class="fas fa-chevron-circle-right"></i></a></p>
+ <a href="story2.php">Next Story <i class="fas fa-chevron-circle-right"></i></a></p>
 
 <p class="next" id="lnk" style="margin-top:4rem;"> List of nitians who did splendid performence in Gate 2019<span id="hide"><br></span><a href="gate_topper_list.php">Click Here</a></p>
 <p class="next" id="lnk"> List of nitians who cracked Engineering Services Exam 2019<a href="ese_topper_list.php"><span id="hide"><br></span>Click Here</a></p>

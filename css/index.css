@@ -458,7 +458,7 @@ color:gray;
 .about{
 	flex-direction:column;
 	margin-bottom:3rem;
-	margin-top:1rem;
+	margin-top:2rem;
 	width:82%;
 }
 
@@ -537,8 +537,8 @@ padding:0;
 
 .textx{
 	padding:0;
-	padding-left:22px;
-	padding-right:22px;
+	padding-left:15px;
+	padding-right:15px;
 }
 	
 	.dynamic-text

@@ -1,16 +1,7 @@
-<!--
-* I AM AN NITIAN 
-* v1.0
-* May 17 2019
-* Developer: Shubham Maurya
-* National Institute Of Technology Srinagar J&K India 190006
-* GitHub: https://github.com/pnstech
-* LinkedIn: https://www.linkedin.com/in/cyberthreatatnit/
--->
 
 <?php
 include_once('connection.php');
-session_start(); //starting session start
+session_start(); 
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +9,6 @@ session_start(); //starting session start
 <head>
 <title>I Am An Nitian | Home</title>
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
-<!--  Disabling double tap to zoom in mobile version -->
 <meta name="viewport" content= "width=device-width, user-scalable=no">
 <meta charset="utf-8">
 <meta name="theme-color" content="#000">
@@ -37,7 +27,6 @@ crossorigin="anonymous">
 <link rel="stylesheet" href="css/owl.theme.default.min.css" />
 <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
 <link href="css/footer.css" type="text/css" rel="stylesheet">
-<link href="css/notification.css" type="text/css" rel="stylesheet">
 <link href="css/login_register.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -45,16 +34,10 @@ crossorigin="anonymous">
 </head>
 
 <body onload="loadme()">
-
- <!--================ Back to top Button ====================-->
   <button id="back-to-top" ><i class="fas fa-angle-double-up"></i></button>
-
-  <!--================== Preloader ==========================-->
 <div id="loader">    
 </div>
-
 <div class="wrapper">
- <!--================ Scroll Indicator ======================-->
 <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
   </div>   
@@ -89,7 +72,6 @@ style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
 ?>
 &nbsp <i class="fas fa-user-graduate"></i></a>
 <ul style="margin-left:-1rem;">
-<!-- Hide and Show login and php buttons -->
 
 <?php
 if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
@@ -114,21 +96,12 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </li>
 </ul>
 </nav>
-<!--================ Mobile Version Menu ====================-->
 <div class="menu-toggle">
 <i class="fas fa-bars"></i>
 </div>
 <img src="images/cutk.png" class="cut_nav" style="display:none;">
-
-<!--================ Search Box ====================-->
-<div class="search-popup" id="searchx" style="display:none;">
-    <div><input type="text"  placeholder="Search"><button><i class="fas fa-search"></i></button></div>
-  </div>
-
 </header>
 
-
-<!--================ Main Banner ====================-->
 <div class="banner"> 
   <div class="overlay"></div>
 
@@ -150,53 +123,38 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div> 
 </div>
 </div>
-<!--====================  Notification Bell   ========================-->
-<div class="nt_img" style="display:none;">
-<img src="images/notificationx.svg" class="notify" onclick="show()" >
-<span id="count"></span> 
-</div>
-<!--============== Notification Popup ==================-->
-<div id="notify-popup"></div>
+
 <!--================ Explore Section ====================-->
 <div class="explore" >
   <p class="main-expo" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>Explore</p>
   <div class="expo-line" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'></div>
 
   <div class="expo exc" style="margin-top:2rem;">
-
-
   <div class="appx" onclick="location.href='story.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="400">
           <img src="images/growth.svg">
           <p>Success Stories</p>
          </div>
-
-
     <div class="appx" onclick="location.href='ranking-19.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="700">
       <img src="images/infographic.svg">
       <p>Ranking</p>
      </div>
-       
+      
          <div class="appx" onclick="location.href='placement.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="550">
             <img src="images/reunion.svg">
             <p>Placements </p>
            </div>
 
-
-
   <div class="appx" onclick="location.href='uPDxgdf.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="1000">
         <img src="images/team.svg">
         <p>CA Portal</p>
        </div>
-      
-
        <div class="appx" onclick="location.href='uPDxgdf.php'" id="respo" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="850">
          <img src="images/question.svg">
          <p>Ask Questions</p>
         </div>
-
     
      </div>
-  <!--=========================== Mobile version horizontal tabs ======================-->
+  <!-- Mobile version horizontal tabs -->
 <div class="mob-expo" style="margin-top:3rem;">
 
 <div  class="appx_expo" onclick="location.href='story.php'" id="appx_right">
@@ -230,7 +188,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
    
 </div>
 </div>
-<!--==================  Mobile version of updates  =================-->
+<!-- Mobile version of updates -->
 <a id="updf"></a>
     <div class="mob_break"></div>
 <div class="respo_not">
@@ -288,7 +246,7 @@ function start_It()
   inter_val = setInterval(start_Ticker, 3000);
 }
   </script>
- <!--===================== Update Section ===================--> 
+ <!--Update Section--> 
  <a id="updf"></a>
     <div style="width:100%;height:5%;margin-top:4%;" ></div>
 <div class="upg" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>
@@ -323,7 +281,7 @@ Lorem Ipsum is simply dummy text of the
 
 </div>
 </div>
-<!--==================  Sliding images  =================-->
+<!--=Sliding images =-->
 <div class="mySlide">
 <div class="slidex">
  <img class="slide" src="images/darkback.jpg">
@@ -355,7 +313,7 @@ Lorem Ipsum is simply dummy text of the
  </div>
 </div>
 </div>
-<!--==================  Stop & start sliding updates  =================-->
+<!--Stop & start sliding updates-->
 <script>
   var interval;
 function startTicker()
@@ -379,7 +337,6 @@ function startIt()
 }
   </script>
 
-<!--================ About Section ====================-->
 <a id="about"></a>
     <div style="width:100%;height:5%;margin-top:4%;" ></div>
     <p class="about-head">About Us</p>
@@ -402,7 +359,7 @@ function startIt()
     </div>
 
 
-<!--================ News Section ====================-->
+<!-- News Section -->
 <div class="explore exp" style="margin-top:0;">
   <p class="main-expo"  data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>News <span id="ns-art">& Articles</span></p>
  
@@ -430,8 +387,8 @@ function startIt()
               <?php  echo '<a href="news.php?id='.$id.'">'; ?>
                 <?php echo '<div class="zoom"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>'?>
               <?php 
-              $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
-              $text = implode(' ',array_slice(explode(' ', $row['text']),0,10)); //getting fires 19 words from text
+              $head = implode(' ',array_slice(explode(' ', $row['heading']),0,6)); 
+              $text = implode(' ',array_slice(explode(' ', $row['text']),0,7)); 
               echo '<p style="margin-top:2px;">'.'<span class="heading">'.$head.'</span>'." ".$text.'..</p>';
                   ?>   
                   </a>                                            
@@ -457,11 +414,11 @@ function startIt()
                More News &nbsp;<i class="fas fa-chevron-circle-right"></i></button></div>
     </div>
 
-<!--============== Side Feedback Button ==================-->
+<!-- Side Feedback Button -->
 <div id="mySidenav" class="sidenav">
 <a  id="feedback" style=" padding:15px 28px 0 25px;" onclick="fun1()"><span>FEEDBACK</span></a>
 </div>
-<!--============== Signup Popup ==================-->
+<!-- Signup Popup -->
 <div class="signup" id="sign">
 <div class="sign-card">
  <div class="sign-img">
@@ -522,7 +479,7 @@ function updf()
  </div>
 </div>
 </div>
-<!--=============== Login Popup =================-->
+<!-- Login Popup -->
 <div class="login" id="log" >
 <div class="log-card">
     <img class="cancel-log"  src="images/cut.png" onclick="cancel_log()">
@@ -541,7 +498,7 @@ function updf()
 </div>
 </div>
 </div>
-<!--============== Feedback Popup ==================-->
+<!-- Feedback Popup -->
 <div class="popup">
 
     <div class="popup-content">
@@ -558,7 +515,7 @@ function updf()
    </div>
 
 
-  <!--============== Nits Logo =====================-->
+  <!-- Nits Logo -->
    <div class="nit-logos" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>
     <div class="owl-carousel owl-theme">
     <div class="item"><img src="images\nit-logo\nit trichy.png"><p>nit trichy</p></div>
@@ -593,7 +550,7 @@ function updf()
     <div class="item"><img src="images\nit-logo\nit mizoram.png"><p>nit Mizoram</p></div>
     </div>
     </div>
- <!--============== Footer Section ==================-->
+
   <footer>
 
   <div class="datad">
@@ -605,8 +562,6 @@ function updf()
  <P>+91-9055667606</p> 
    </span>
 </div>
-<!--============== Bottom Container =====================-->
- <div class="container">
 <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
 2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbspAll Rights Reserved</span></p>
 <p id="and_copy" class="copyright">All rights reserved</p>
@@ -615,28 +570,19 @@ function updf()
 </div>
 </body>
 </html>
-<!--===============  Microsoft's JQuery CDN =================-->
-<script src="jquery.min.js" type="text/javascript"></script>
+
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
-<!--===================  TypedJs CDN  =======================-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js" type="text/javascript"></script>
-<!--================  Owl Carousel Libraray  ==============-->
 <script src="js/owl.carousel.min.js" type="text/javascript"></script>
-<!--==================  TweenMax CDN  ==================-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-<!--==================  SweetAlert2 CDN  ==================-->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>
-<!--==================  aos.js  CDN  ==================-->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<!--==================  Local Js Files  ==================-->
 <script src="js/index.js" type="text/javascript"></script>
 <script   type="text/javascript" src="js/ajax-register.js"></script>
 <script   type="text/javascript" src="js/ajax-login.js"></script>
 <script   type="text/javascript" src="js/main.js"></script>
-<!--===================   Get total Number of notifications   ====================-->
-<script   type="text/javascript" src="js/notification.js"></script>
 <script>
-  AOS.init({ disable: 'mobile' }); //disabling the animations in mobile version
+  AOS.init({ disable: 'mobile' }); 
 </script>
 <script>              
 
@@ -677,7 +623,7 @@ function carousel() {
   {
     TweenMax.to('#caption',0.5,{scaleX: 0});
   }
- /*==================== Menu toggle =========================*/
+ /* menu toggle */
  $(document).ready(function(){
 
 if (window.matchMedia('(max-width:921px)').matches)
@@ -760,7 +706,7 @@ $('#update_nav').click(function()
 
 })
 
-/*========================  Feedback Form Submission  =====================*/
+/* Feedback Form Submission */
 
   $('#user_btn_pop').click(function()
 {

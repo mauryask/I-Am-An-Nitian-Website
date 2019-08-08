@@ -315,15 +315,14 @@ footer{
    }
 
    .news-body{
-      margin-top:6rem;
+      margin-top:5rem;
       width:100%;
       margin-left:0;
-
    }
 
 .news-body .news-content{
    margin: 0 auto;
-   padding:0 1.9rem 0 1.9rem;
+   padding:0 1rem 0 1rem;
 }
 
 .news-body .news-content p span{
@@ -332,11 +331,11 @@ font-size:29px;
 
    .news-body .news-img{
       width:100%;
-      padding:0 0.8rem 0 0.8rem;
+      padding:0 0.5rem 0 0.5rem;
    }
 
 .news-body .news-img img{
-   height:190px;
+   height:200px;
    width:100%;
 }
 
