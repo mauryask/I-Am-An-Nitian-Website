@@ -2,6 +2,7 @@
 <html id="<?php echo $row['id']; ?>">
 <head>
 <title>I Am An Nitian | Will Be Updated Soon</title>
+<meta name="theme-color" content="#000">
 <link rel="icon" href="images\imnitian.png">
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
@@ -10,7 +11,7 @@
 body{
     margin:0;
     padding:0;
-    background:rgba(252,252,252,1);
+    background:rgba(248,248,248,1);
 }
 
 body div{
@@ -24,7 +25,7 @@ position:absolute;
 </head>
 <body>
 <div>
-<img src="images/soon.png" width="200px" height="200px">
+<img src="images/soon.png" width="160px" height="160px">
 </div>
 </body>
 </html>

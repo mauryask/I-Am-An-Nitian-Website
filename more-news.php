@@ -6,7 +6,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en" oncontextmenu="return false">
 <head>
-<title>I Am An Nitian | Home</title>
+<title>I Am An Nitian | News</title>
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
 <meta name="theme-color" content="#000">
@@ -48,12 +48,12 @@ style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
 <p id="mnu">MENU</p>
 
 <ul>
-<li><a href="index.php" class="home" >Home</a></li>
+<li><a href="index.php" class="homex" >Home</a></li>
 
-<li><a href="more-news.php" class="homex" >News</a></li>
-<li ><a href="#updf" class="homex" id="update_nav">Updates</a></li>
+<li><a href="more-news.php" class="home" >News</a></li>
+<li ><a href="index.php#updf" class="homex" id="update_nav">Updates</a></li>
 
-<li><a href="#about" class="homex" id="about_nav">About Us</a></li>
+<li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
 
 <li><a class="homex" id="user">
 <?php
@@ -158,7 +158,7 @@ function id1(got_id)
   window.location= url;
 }
 </script>
-<div class="explore" style="margin-top:3rem;">
+<div class="explore">
  <?php 
             $query = "select * from tbl_images order by id asc";
              $result = mysqli_query ($conn, $query);
@@ -298,7 +298,7 @@ function updf()
 <option> Gujrat </option>
 <option> Haryana </option>
 <option> Himachal Pradesh </option>
-<option> Jammu & Kashmir </option>
+<option> Jammu and Kashmir </option>
 <option> Jharkhand </option>
 <option>  Karnatka </option>
 <option> Kerla </option>

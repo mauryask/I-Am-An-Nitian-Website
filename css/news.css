@@ -36,7 +36,7 @@ body{
 }
 
 .news-body .horizon{
-   background:rgba(256,0,0,0.5);
+   background:#4CAF50;
    width:28rem;
    height:3px;
    margin-bottom:1.2rem;
@@ -88,13 +88,13 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .news-body .news-content .ldc .like-btn, .dislike-btn,.fa-eye, .fa-comment{
-   color:rgba(256,0,0,0.6);
+   color:gray;
 }
 
 .news-body .news-content .ldc .x{
    font-size:14px;
    font-family: sans-serif;
-   color:rgba(256,0,0,0.6);
+   color:gray;
 }
 
 .news-body .news-content .cmnt{

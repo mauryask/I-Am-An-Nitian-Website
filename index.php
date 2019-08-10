@@ -505,7 +505,7 @@ function updf()
 <option> Gujrat </option>
 <option> Haryana </option>
 <option> Himachal Pradesh </option>
-<option> Jammu & Kashmir </option>
+<option> Jammu and Kashmir </option>
 <option> Jharkhand </option>
 <option>  Karnatka </option>
 <option> Kerla </option>
@@ -604,9 +604,10 @@ function updf()
     <div class="item"><img src="images\nit-logo\nit nagaland.png"><p>nit Nagaland</p></div>
     <div class="item"><img src="images\nit-logo\nit pudu.png"><p>nit Puducherry</p></div>
     <div class="item"><img src="images\nit-logo\nit andhra.png"><p>nit Andhra Pradesh</p></div>
-    <div class="item"><img src="images\nit-logo\nit sikkim.png"><p>nit Sikkim</p></div>
-    <div class="item"><img src="images\nit-logo\nit uttrakhand.png"><p>nit Uttarakhand</p></div>
+    <div class="item"><img src="images\nit-logo\nit sikkim.svg"><p>nit Sikkim</p></div>
+    <div class="item"><img src="images\nit-logo\nit uttrakhand.png"><p>nit Uttrakhand</p></div>
     <div class="item"><img src="images\nit-logo\nit mizoram.png"><p>nit Mizoram</p></div>
+	<div class="item"><img src="images\nit-logo\nit arunachal.png"><p>nit Arunachal Pradesh</p></div>
     </div>
     </div>
 

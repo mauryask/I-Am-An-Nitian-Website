@@ -42,7 +42,6 @@
   flex-direction:row;
   width:100%;
   height:370px;
-  /*background:red;*/
   margin:0 auto;
   margin-top:7rem;
 }
@@ -71,7 +70,6 @@ height:100%;
 }
   
 .four_news .four_news_in{
-
   width:100%;
   height:50%;
 }
@@ -87,13 +85,10 @@ height:100%;
 }
 
 .four_news_in div{
- /*background:green;*/
  width:50%;
  height:100%;
  overflow:hidden;
 }
-
-
 
 .four_news_in div:nth-child(1) .overlay,
 .four_news_in div:nth-child(2) .overlay,
@@ -109,7 +104,6 @@ right:0;
 position:sticky;
 cursor:pointer;
  }
-
 
  .four_news_in .content,
   .flash_slide .content,
@@ -142,13 +136,13 @@ margin-right:10px;
  .four_news_in div img{
  width:100%;
  height:100%;
-
    }
 
 
   .wrapper .explore{
     margin: 0 auto;
      width:95%;
+     margin-top:3rem
   }
   
   .explore .expo{
@@ -164,7 +158,7 @@ margin-right:10px;
   }
   
   .explore .expo  .xnnn {
-    width:13.8rem;
+    width:14rem;
     margin-bottom:2.5rem;
   }
 
@@ -197,8 +191,6 @@ margin-right:10px;
       font-family: 'Playfair Display', serif;
       letter-spacing: 0.1px;
   }
-    
-
   
     .explore .expo  .xnnn p .heading
     {
@@ -220,6 +212,7 @@ margin-right:10px;
       border-radius: 0;
       box-shadow: none;
      }
+
   .explore .expo .xnnn img,video{
       outline: none;
      width:100%;
@@ -269,9 +262,6 @@ margin-right:10px;
     margin-bottom:10px;
 }
 
-
-/*==================   Responsive mobile version   =====================*/
-
 @media (max-width:991px)
 {
 
@@ -279,21 +269,11 @@ margin-right:10px;
 width:100%;
 background:transparent;
 padding:0;
+margin-top:4.2rem;
 }
 
 .wrapper .flash{
-  flex-direction: column;
-  margin-top:6rem;
-  padding:0 10px 0 10px;
-}
-
-.flash .flash_slide{
-  padding:0;
-  width:100%;
-padding:0 10px 0 10px;
-}
-.flash .four_news{
-  width:100%;
+display: none;
 }
 
   .explore{
@@ -310,12 +290,12 @@ padding:0 10px 0 10px;
 
 .explore .expo .xnnn{
   margin:0 auto;
-  width:95%;
+  width:100%;
   margin-bottom:3rem;
  }
 
 .explore .expo .xnnn a .zoom{
-  height:150px;
+  height:160px;
  }
 .explore .expo .xnnn img,video{
 height:100%;

@@ -21,6 +21,7 @@ if(mysqli_num_rows($result)>0)
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
 <meta name="author" content="Shubham Maurya"> 
+<meta name="theme-color" content="#000">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
 crossorigin="anonymous">
@@ -57,12 +58,12 @@ style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
 <p id="mnu">MENU</p>
 
 <ul>
-<li><a href="index.php" class="home" >Home</a></li>
+<li><a href="index.php" class="homex" >Home</a></li>
 
-<li><a href="more-news.php" class="homex" >News</a></li>
-<li ><a href="#updf" class="homex" id="update_nav">Updates</a></li>
+<li><a href="more-news.php" class="home" >News</a></li>
+<li ><a href="index.php#updf" class="homex" id="update_nav">Updates</a></li>
 
-<li><a href="#about" class="homex" id="about_nav">About Us</a></li>
+<li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
 
 <li><a class="homex" id="user">
 <?php
@@ -117,8 +118,9 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         ?>        
         </div>
         <div class="news-content">
-        <p style="font-weight:bold;font-size:12px;background:rgba(256,0,0,0.5); width:12.5rem;color:rgba(40,40,40,1);
-        text-align:center;border-radius:20px;height:31px;margin:1rem 0 1rem 0;"><?php  echo $row['inserted_at'] ?></p>
+        <p style="font-weight:bold;font-size:12px;background:#4acf50;
+         width:12.5rem;color:rgba(250,250,250,1);
+        text-align:center;border-radius:20px;height:30px;margin:1rem 0 1rem 0;"><?php  echo $row['inserted_at'] ?></p>
            <div class="horizon"></div>
            <p>
              <span><?php  echo $row['heading'];  ?></span><br></p>
@@ -129,21 +131,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
          <?php echo $row['text']; ?>
         </p>
 
-        <iframe src="https://www.facebook.com/plugins/share_button.php?href=<?php
-        $url = "http://www.".$_SERVER['REQUEST_URI'];
-        echo $url;
-        ?>
-        &layout=button_count&size=large&appId=473134703234415&width=110&height=28" 
-          width="110"
-          height="28" 
-          style="border:none;overflow:hidden;margin-top:22px;"
-           scrolling="no" 
-           frameborder="0" 
-           allowTransparency="true" 
-           allow="encrypted-media">
-          </iframe>
-
-        <div class="horizon horizonx"></div>
+            <div class="horizon horizonx"></div>
          <p class="ldc">
             <i class="far fa-thumbs-up like-btn" style="cursor:pointer;"  id="<?php echo $row['id'];  ?>"></i> <span id="x" class="x">0</span>
             &nbsp <i class="far fa-thumbs-down dislike-btn" style="cursor:pointer;" id="<?php echo $row['id'];  ?>"></i> <span id="y" class="x">0</span>
@@ -278,7 +266,7 @@ function updf()
 <option> Gujrat </option>
 <option> Haryana </option>
 <option> Himachal Pradesh </option>
-<option> Jammu & Kashmir </option>
+<option> Jammu and Kashmir </option>
 <option> Jharkhand </option>
 <option>  Karnatka </option>
 <option> Kerla </option>

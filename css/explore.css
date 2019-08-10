@@ -63,9 +63,10 @@ height:4px;
 }
 
 .explore .expo  .xnnn {
-  width:20rem;
+  width:14.5rem;
   border-radius:0;
   text-align:justify;
+  justify-self: self-start;
 }
 
 .explore .expo  .xnnn a{

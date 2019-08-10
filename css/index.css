@@ -356,6 +356,7 @@ color:gray;
 
 	.explore
 		{
+			width:100%;
 			padding:0;
 		}
 
@@ -374,6 +375,10 @@ color:gray;
 .mob-expo{
 	display:block;
 }
+
+.explore .expo .xnnn{
+	width:20rem;
+	}
 
 	  .explore .expo .xnnn a .zoom{
 		height:160px;

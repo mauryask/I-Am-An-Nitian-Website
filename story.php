@@ -47,12 +47,12 @@ style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
 <p id="mnu">MENU</p>
 
 <ul>
-<li><a href="index.php" class="home" >Home</a></li>
+<li><a href="index.php" class="homex" >Home</a></li>
 
 <li><a href="more-news.php" class="homex" >News</a></li>
-<li ><a href="#updf" class="homex" id="update_nav">Updates</a></li>
+<li ><a href="index.php#updf" class="homex" id="update_nav">Updates</a></li>
 
-<li><a href="#about" class="homex" id="about_nav">About Us</a></li>
+<li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
 
 <li><a class="homex" id="user">
 <?php
