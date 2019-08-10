@@ -1,10 +1,10 @@
 
 <?php
 include_once('connection.php');
-session_start(); //preventing direct access of this page
+session_start(); 
 if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION['user_type']!=1)
 {
- /* exit("<div style='
+  exit("<div style='
   top:50%; 
   left:50%; 
   transform:translate(-50%,-50%);
@@ -21,7 +21,7 @@ text-align:center;
 font-weight:bold;
   '
   >Access Denied Page 404 Not Found<p>
-  </div>");*/
+  </div>");
 }
 
 ?>
@@ -49,15 +49,10 @@ table, td, th{
 
 <body onload="loadme()">
 
-
-  <!--================== Preloader ==========================-->
 <div id="loader">
 </div>
-<!--=================  Menu Button   ===================-->
 <button id="show"><i class="fas fa-bars"></i></button>
 
-
-<!--=================  Left Side MAnu Bar   ===================-->
 <div class="left-menu" class="popup" id="demo">
 <p><?php echo "Hello! ".$_SESSION['user_name'];  ?></p>
     <div>
@@ -118,7 +113,6 @@ while($row=mysqli_fetch_array($result))
 
 <script>
  
-
 $(document).ready(function(){
 
     //home button
@@ -137,7 +131,6 @@ $(document).ready(function(){
         window.location.href="edit_news.php";
     },500); 
   })
-
 
 
  //add news button
@@ -162,34 +155,6 @@ $(document).ready(function(){
 $("#demo").on('click',function(){
     TweenMax.to('#demo',0.5,{scaleX: 0}); 
 })
-
-    /*================  Form Validation ===================*/   
-    $('#submit').click(function(){
-        var image_name = $('#image').val();
-        var head = $('#heading').val();
-        var text = $('#news').val();
-        if(image_name== '') 
-        {
-            alert('Please choose a file');
-            return false;
-        } 
-        else if( head == '' || text == '')
-        {
-            alert('Please fill all the fields');
-            return false;
-        }
-        else
-        {
-            var extension = $('#image').val().split('.').pop().toLowerCase();
-            if(jQuery.inArray(extension, ['png', 'gif','jpg','tif','jpeg','mp4'])== -1)
-            {
-                alert("invalid image format");
-                $('#image').val('');
-                return false;
-            }
-            
-        }
-    })
 
     $('#show').on('click', function(){
         TweenMax.to('#demo',0.5,{scaleX:1});

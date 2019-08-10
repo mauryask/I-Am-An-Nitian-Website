@@ -1,10 +1,5 @@
-<!--
-@ This file consists of code for adding news and links to edit news
--->
-
 <?php
-
-session_start(); //preventing direct access of this page
+session_start(); 
 if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION['user_type']!=1)
 {
   exit("<div style='
@@ -59,7 +54,6 @@ if(isset($_POST['submit']))
 <link rel="icon" href="images/imnitian.png">
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
-<meta name="theme-color" content="#000">
 <meta name="author" content="Shubham Maurya">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -72,17 +66,10 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 </head>
 
 <body onload="loadme()">
-
- <!--================ Back to top Button ====================-->
   <button id="back-to-top" ><i class="fas fa-angle-double-up"></i></button>
-
-  <!--================== Preloader ==========================-->
 <div id="loader">
 </div>
-
-<!--=================  Menu Button   ===================-->
 <button id="show"><i class="fas fa-bars"></i></button>
-<!--================= Edit News   ===================-->
 <div class="mainx"  id="mainx">
     <p class="mainh">Edit News</p>
  <div class="edit-news">
@@ -119,7 +106,6 @@ while($row=mysqli_fetch_array($result))
 </div>
 </div>
 
-<!--=================  Left Side MAnu Bar   ===================-->
 <div class="left-menu" class="popup" id="demo">
 <p><?php echo "Hello! ".$_SESSION['user_name'];  ?></p>
     <div>
