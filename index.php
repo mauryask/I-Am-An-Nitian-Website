@@ -59,7 +59,7 @@ style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
 
 <li><a href="#about" class="homex" id="about_nav">About Us</a></li>
 
-<li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;" id="user">
+<li><a class="homex" id="user">
 <?php
   if(isset($_SESSION['name'])&& !empty($_SESSION['name']))
   {
@@ -78,7 +78,10 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 {
   if($_SESSION['user_type'] == 1)
   {
-    echo '<li><a href="edit_news.php">Admin</a></li>';
+    ?>
+    <li><a href="edit_news.php">Admin</a></li>
+
+    <?php
   }
 }
 ?>
@@ -489,7 +492,7 @@ function updf()
   <input  id="email" type="text" autocomplete="off" placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
   <input autocomplete="off"  id="pass" type="password" placeholder="Password"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
 <div class="select" id="select">
-  <input type="radio" name="user" id="user" value="1" checked>&nbsp <label class="lab1">User</label>
+  <input type="radio" name="user" id="usert" value="1" checked>&nbsp <label class="lab1">User</label>
   <input type="radio" name="user" id="admin" value="2">&nbsp <label>Admin</label>
  </div>
   <button type="button"  name="login" id="login">Login</button>
@@ -498,6 +501,7 @@ function updf()
 </div>
 </div>
 </div>
+
 <!-- Feedback Popup -->
 <div class="popup">
 
@@ -623,91 +627,54 @@ function carousel() {
   {
     TweenMax.to('#caption',0.5,{scaleX: 0});
   }
- /* menu toggle */
+ /*==================== Menu toggle =========================*/
+
  $(document).ready(function(){
 
-if (window.matchMedia('(max-width:921px)').matches)
+if (window.matchMedia('(max-width:721px)').matches)
 {
+
+$('.cut_nav').click(function(){
+  $(this).css('display','none');
+  $('.menu-toggle').css('display','block');
+  TweenMax.to('.active',0.5,{scaleX: 0});
   
-  $('.cut_nav').click(function(){
-    $(this).css('display','none');
-    $('.menu-toggle').css('display','block');
-    TweenMax.to('.active',0.5,{scaleX: 0});
-   /* $('nav').css('z-index', '1');
-    $('.logo').css('marginLeft', '0px');
-    $('.logo').css('marginTop', '0px');
-    $('.logo_txt').css('marginTop', '0px');*/
+})
 
-  })
 
-   
-  $('.menu-toggle').click(function(){
-    $(this).css('display','none');
-    $('.cut_nav').css('display','block');
+$('.menu-toggle').click(function(){
+  $(this).css('display','none');
+  $('.cut_nav').css('display','block');
 
-    /*$('nav').css('z-index', '4');
+  $('.cut_nav').css('background','black');
+  TweenMax.to('.active',0.4,{scaleX: 1});
 
-    $('header').css('background', 'transparent');
-    $('.cut_nav').css('background','black');
-    TweenMax.to('.active',0.4,{scaleX: 1});
+})
 
-    setTimeout(function(){
-      $('.logo').css('marginLeft', '59px');
-      $('.logo').css('marginTop', '18px');
-      $('.logo_txt').css('marginTop', '10px');
-    },200);
-
-    setTimeout(function(){
-      $('nav').css('z-index', '-1');
-    },350);
-   */
-  })
 $('#login_nav').click(function()
 {
- /* $('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');*/
-  TweenMax.to('.active',0.1,{scaleX: 0});  
-  $('.cut_nav').css('display','none');
-  $('.menu-toggle').css('display','block');
-  //$('.logo_txt').css('marginTop', '0px');
+TweenMax.to('.active',0.1,{scaleX: 0});  
+$('.cut_nav').css('display','none');
+$('.menu-toggle').css('display','block');
 })
 
 $('#register_nav').click(function(){
-  /*$('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');*/
-  TweenMax.to('.active',0.1,{scaleX: 0});  
-  $('.cut_nav').css('display','none');
-  $('.menu-toggle').css('display','block');
- // $('.logo_txt').css('marginTop', '0px');
+TweenMax.to('.active',0.1,{scaleX: 0});  
+$('.cut_nav').css('display','none');
+$('.menu-toggle').css('display','block');
 })
 
 $('#about_nav').click(function()
 {
- /* $('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');*/
-  TweenMax.to('.active',0.1,{scaleX: 0});  
-  $('.cut_nav').css('display','none');
-  $('.menu-toggle').css('display','block');
-  //$('.logo_txt').css('marginTop', '0px');
+TweenMax.to('.active',0.1,{scaleX: 0});  
+$('.cut_nav').css('display','none');
+$('.menu-toggle').css('display','block');
 })
-
-$('#update_nav').click(function()
-{
-  /*$('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');*/
-  TweenMax.to('.active',0.1,{scaleX: 0});  
-  $('.cut_nav').css('display','none');
-  $('.menu-toggle').css('display','block');
-  //$('.logo_txt').css('marginTop', '0px');
-})
-
 
 }
-
 })
 
 /* Feedback Form Submission */
-
   $('#user_btn_pop').click(function()
 {
   var user_name = $('#user_name_pop').val().trim();

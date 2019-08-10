@@ -213,9 +213,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                       </div>  
     </div>
 
-     
-
-<!--============== Signup Popup ==================-->
+    <!--============== Signup Popup ==================-->
 <div class="signup" id="sign">
 <div class="sign-card">
  <div class="sign-img">
