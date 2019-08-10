@@ -1,6 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
-
-
 *{
     margin:0;
     padding:0;
@@ -9,7 +7,7 @@
     box-sizing: border-box;
 }   
 
-.progress-container{
+.progress-container{    
     top:0;
     position:fixed;
 }
@@ -30,7 +28,6 @@ body{
    position: fixed;
    z-index:555;
 }
-
 
 .center{
     width:100%;
@@ -183,8 +180,6 @@ font-size:15px;
 font-family: serif;
 }
 
-
-/*=============================Responsive design======================*/
 @media (max-width:991px)
 {
     body{
@@ -202,8 +197,10 @@ font-family: serif;
 .center{
     width:100%;
     margin-bottom:0.5rem;
-    font-size:48px;
+    font-size:39px;
+    padding-top:1rem;
 }
+
 .center .courtesy{
     margin-top:12px;
     font-size:16px;

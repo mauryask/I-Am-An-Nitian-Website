@@ -1,4 +1,3 @@
-
 <?php
 include_once('connection.php');
 session_start(); 
@@ -17,7 +16,6 @@ session_start();
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
 crossorigin="anonymous">
 <link rel="icon" href="images/imnitian.png">
-
 <link href="css/ask.css" rel="stylesheet"  type="text/css">
 <link href="css/explore.css" rel="stylesheet" type="text/css">
 <link href="css/index.css" rel="stylesheet"  type="text/css">
@@ -29,8 +27,8 @@ crossorigin="anonymous">
 <link href="css/footer.css" type="text/css" rel="stylesheet">
 <link href="css/login_register.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+<style>@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');</style>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<style></style>
 </head>
 
 <body onload="loadme()">
@@ -51,6 +49,9 @@ style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
 </ul>
 </div>
 <nav class="active">
+
+<p id="mnu">MENU</p>
+
 <ul>
 <li><a href="index.php" class="home" >Home</a></li>
 
@@ -127,7 +128,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 </div>
 
-<!--================ Explore Section ====================-->
+<!--= Explore Section =-->
 <div class="explore" >
   <p class="main-expo" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>Explore</p>
   <div class="expo-line" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'></div>
@@ -153,11 +154,11 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
        </div>
        <div class="appx" onclick="location.href='uPDxgdf.php'" id="respo" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="850">
          <img src="images/question.svg">
-         <p>Ask Questions</p>
+         <p>Ask Question</p>
         </div>
     
      </div>
-  <!-- Mobile version horizontal tabs -->
+  <!--= Mobile version horizontal tabs =-->
 <div class="mob-expo" style="margin-top:3rem;">
 
 <div  class="appx_expo" onclick="location.href='story.php'" id="appx_right">
@@ -185,13 +186,13 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 <div  class="appx_expo" onclick="location.href='uPDxgdf.php'" id="appx_left">
 <img src="images/question.svg">
-         <p>Ask Questions</p>
+         <p>Ask Question</p>
   </div>
 
    
 </div>
 </div>
-<!-- Mobile version of updates -->
+<!--= Mobile version of updates =-->
 <a id="updf"></a>
     <div class="mob_break"></div>
 <div class="respo_not">
@@ -249,7 +250,7 @@ function start_It()
   inter_val = setInterval(start_Ticker, 3000);
 }
   </script>
- <!--Update Section--> 
+ <!--= Update Section =--> 
  <a id="updf"></a>
     <div style="width:100%;height:5%;margin-top:4%;" ></div>
 <div class="upg" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>
@@ -284,7 +285,7 @@ Lorem Ipsum is simply dummy text of the
 
 </div>
 </div>
-<!--=Sliding images =-->
+<!--= Sliding images =-->
 <div class="mySlide">
 <div class="slidex">
  <img class="slide" src="images/darkback.jpg">
@@ -316,7 +317,7 @@ Lorem Ipsum is simply dummy text of the
  </div>
 </div>
 </div>
-<!--Stop & start sliding updates-->
+<!--= Stop & start sliding updates =-->
 <script>
   var interval;
 function startTicker()
@@ -362,13 +363,12 @@ function startIt()
     </div>
 
 
-<!-- News Section -->
+<!--= News Section =-->
 <div class="explore exp" style="margin-top:0;">
   <p class="main-expo"  data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>News <span id="ns-art">& Articles</span></p>
- 
   <div id="expo-line"  class="expo-line" style="width:15rem;position:relative;margin-bottom:3rem;"
   data-aos="fade-up" data-aos-duration="600" data-aos-once='true'></div>
-  <div class="about-ln" style="width:15%;"  data-aos="fade-up" data-aos-duration="600"></div>
+  <div class="about-ln" style="width:12%;"  data-aos="fade-up" data-aos-duration="600"></div>
  <?php 
             $query = "select * from tbl_images order by id desc limit 8";
              $result = mysqli_query ($conn, $query);
@@ -400,7 +400,6 @@ function startIt()
           <?php
                       if ($i % 4 == 0) echo "</div>";
               ?>
-          
            <?php
                   }
                   $_SESSION['x']=$ids;
@@ -416,12 +415,12 @@ function startIt()
                <div class="more_btn" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'> <button type="button" onclick="location.href='more-news.php'">
                More News &nbsp;<i class="fas fa-chevron-circle-right"></i></button></div>
     </div>
-
-<!-- Side Feedback Button -->
+<!--= Side Feedback Button =-->
 <div id="mySidenav" class="sidenav">
 <a  id="feedback" style=" padding:15px 28px 0 25px;" onclick="fun1()"><span>FEEDBACK</span></a>
 </div>
-<!-- Signup Popup -->
+
+<!--= Signup Popup =-->
 <div class="signup" id="sign">
 <div class="sign-card">
  <div class="sign-img">
@@ -457,22 +456,78 @@ function updf()
    <input  type="text"  name="phone" id="phone" placeholder="Mobile Number"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
    <select name="clg" id="clg"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
       <option>Select College</option>
-      <option>National Institute Of technology Srinagar</option> 
-      <option>National Institute Of technology Srinagar Silchar</option>
-      <option>National Institute Of technology Srinagar Trichy</option>
-      <option>Motilal Nehru Institute Of Technology Allahabad</option>
-      <option>Malviya Natioanl Institute Of Technology Jaipur</option>
-      <option>Other</option>
+      <option> NIT Srinagar </option>
+<option> NIT Uttrakhand </option>
+<option> NIT Manipur  </option>
+<option> NIT Mizoram  </option>
+<option> NIT Nagaland </option>
+<option> NIT Agartala </option>
+<option> NIT Meghalaya </option>
+<option> NIT Arunachal Pradesh </option>
+<option> NIT Sikkim </option>
+<option> NIT Silchar </option>
+<option> NIT Hamirpur </option>
+<option> NIT Jamshedpur </option>
+<option> NIT Jalandhar </option>
+<option> NIT Durgapur </option>
+<option> MNIT Jaipur </option>
+<option> NIT Kurukshtera </option>
+<option> NIT Andhra Pradesh </option>
+<option> NIT Patna </option>
+<option> MANIT Bhopal </option>
+<option> NIT Goa </option>
+<option> NIT Puducherry </option>
+<option> NIT Delhi </option>
+<option> NIT Raipur </option>
+<option> NIT Calicut </option>
+<option> NIT Raurkela </option>
+<option> VNIT Nagpur </option>
+<option> NIT Trichy </option>
+<option> NIT Warangal </option>
+<option> MNNIT Prayagraj (Allahabad) </option>
+<option> SVNIT Surat </option>
+<option> NIT Suratkal </option>
+<option> Other </option>
       </select>
       <select name="state" id="state"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
           <option>Select Your State</option>
-          <option>Uttar Pradesh</option>
-          <option>Jammu and Kashmir</option>
-          <option>Rajsthan</option>
-          <option>Tamilnadu</option>
-          <option>Uttrakhand</option>
-          <option>Bihar</option>
-          </select>
+          <option> Uttar Pradesh </option>
+<option> Bihar </option>
+<option> Rajsthan  </option>
+<option> Madhya Pradesh  </option>
+<option> Maharastra </option>
+<option> Andhra Pradesh </option>
+<option> Arunachal Pradesh </option>
+<option> Aasam</option>
+<option> Chhattisgarh </option>
+<option> Odisha </option>
+<option> Goa </option>
+<option> Gujrat </option>
+<option> Haryana </option>
+<option> Himachal Pradesh </option>
+<option> Jammu & Kashmir </option>
+<option> Jharkhand </option>
+<option>  Karnatka </option>
+<option> Kerla </option>
+<option> Manipur </option>
+<option> Mizoram </option>
+<option> Tripura </option>
+<option> Nagaland </option>
+<option> Punjab </option>
+<option> Sikkim </option>
+<option> Tamilnadu </option>
+<option> Uttrakhand </option>
+<option> West Bengal </option>
+<option> Telangana </option>
+<option> Andaman and Nicobar Islands </option>
+<option> Chandigarh </option>
+<option> Dadar and Nagar Haveli </option>
+<option> Daman and Diu </option>
+<option> Delhi </option>
+<option> Lakshadweep </option>
+<option> Puducherry </option>
+<option> Laddakh </option>
+ </select>
           <input  autocomplete="off" name="user_pass" id="user_pass" type="password" placeholder="Password"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
           <input autocomplete="off" type="password"  id="cnf_pass" name="cnf_pass" placeholder="Confirm Password" onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
           <button name="register" id="register" type="button"   class="register">Register</button>
@@ -482,7 +537,7 @@ function updf()
  </div>
 </div>
 </div>
-<!-- Login Popup -->
+<!--= Login Popup =-->
 <div class="login" id="log" >
 <div class="log-card">
     <img class="cancel-log"  src="images/cut.png" onclick="cancel_log()">
@@ -502,7 +557,7 @@ function updf()
 </div>
 </div>
 
-<!-- Feedback Popup -->
+<!--= Feedback Popup =-->
 <div class="popup">
 
     <div class="popup-content">
@@ -519,7 +574,7 @@ function updf()
    </div>
 
 
-  <!-- Nits Logo -->
+  <!--= Nits Logo =-->
    <div class="nit-logos" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>
     <div class="owl-carousel owl-theme">
     <div class="item"><img src="images\nit-logo\nit trichy.png"><p>nit trichy</p></div>
@@ -566,6 +621,7 @@ function updf()
  <P>+91-9055667606</p> 
    </span>
 </div>
+<div class="container">
 <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
 2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbspAll Rights Reserved</span></p>
 <p id="and_copy" class="copyright">All rights reserved</p>
@@ -627,8 +683,8 @@ function carousel() {
   {
     TweenMax.to('#caption',0.5,{scaleX: 0});
   }
- /*==================== Menu toggle =========================*/
 
+ /*= Menu toggle =*/
  $(document).ready(function(){
 
 if (window.matchMedia('(max-width:721px)').matches)
@@ -638,33 +694,17 @@ $('.cut_nav').click(function(){
   $(this).css('display','none');
   $('.menu-toggle').css('display','block');
   TweenMax.to('.active',0.5,{scaleX: 0});
-  
 })
 
 
 $('.menu-toggle').click(function(){
   $(this).css('display','none');
   $('.cut_nav').css('display','block');
-
   $('.cut_nav').css('background','black');
   TweenMax.to('.active',0.4,{scaleX: 1});
-
 })
 
-$('#login_nav').click(function()
-{
-TweenMax.to('.active',0.1,{scaleX: 0});  
-$('.cut_nav').css('display','none');
-$('.menu-toggle').css('display','block');
-})
-
-$('#register_nav').click(function(){
-TweenMax.to('.active',0.1,{scaleX: 0});  
-$('.cut_nav').css('display','none');
-$('.menu-toggle').css('display','block');
-})
-
-$('#about_nav').click(function()
+$('#login_nav,#register_nav,#about_nav,#update_nav').click(function()
 {
 TweenMax.to('.active',0.1,{scaleX: 0});  
 $('.cut_nav').css('display','none');
@@ -681,7 +721,6 @@ $('.menu-toggle').css('display','block');
   var user_email = $('#user_email_pop').val().trim();
   var user_feedback = $('#user_feedback_pop').val().trim();
  
-
 if(user_name != '' && user_email != '' && user_feedback != '')
 {
 

@@ -1,6 +1,4 @@
-   
-/*================  Fooetr Section Common to all  =================*/ 
-    	
+      	
 .datay{
 	background:rgba(0,0,0,0.9);
 	width:100%; 
@@ -98,45 +96,19 @@ line-height:24px;
  display: none;
 }
 
-/*================  Fooeter Section  =================*/ 
-
 footer{
 	margin-top:3%;
 }
 
- 
-
- /*================= Custom Scroll Bar =================*/
-/* width */
-::-webkit-scrollbar {
-    width: 13px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(168, 166, 166); 
-  }
-  
-
-  
   #respo_contact{
     display:none;
     line-height:24px;
   }
 
-/*================  Smooth Scrolling Property  =================*/ 
-
 html{
 	scroll-behavior: smooth;
 	overflow-x: hidden;
 }
-
-/*================  Mobile version responsive  =================*/ 
 
 @media (max-width:721px)
 {

@@ -1,19 +1,7 @@
-/*
-* I AM AN NITIAN
-* v1.0
-* Start Date : May 17 2019
-* Developer : Shubham Maurya
-* National Institute Of Technology Srinagar J&K India 190006
-* GitHub : https://github.com/pnstech
-* LinkedIn : https://www.linkedin.com/in/cyberthreatatnit/
-*/
-
 body{
   overflow-x:hidden;
   outline:none;
  }
- 
- /*------------------------*/
  
   #mySidenav{
  float:right;
@@ -31,7 +19,6 @@ body{
    letter-spacing:0.2px;
  }
  
- 
   #mySidenav a:hover{
    right:-10px;
  }
@@ -43,7 +30,6 @@ body{
    cursor: pointer;
  }
 
- 
  #feedback span{
    transform: rotate(90deg);
    transform-origin: left 0;
@@ -51,9 +37,6 @@ body{
    font-weight:bold;
    font-size:17px;
  }
- 
- 
- /* feedback popup*/
  
  .popup{
              background:transparent;
@@ -107,8 +90,6 @@ body{
          .popup .popup-content #feedback_form{
            margin-top:0.5rem;
          }
-
- 
          .popup .popup-content .feed_msg{
            margin: 0 auto;
            width:85%;
@@ -145,87 +126,6 @@ body{
                letter-spacing: 0.3px;
          }
  
-
-.up-line{
-  width:80px;
-  height:3px;
-  background:red;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
-  position: relative;
-}
-
-
-
-             /*Search popup*/
-             .search-popup
-             {
-               box-shadow:0 0 10px 0 rgba(0,0,0,0.9);
-               z-index:111;
-               width:26%;
-               right:19%;
-               top:11.2%;
-               position: fixed;
-               clip-path: polygon(93% 0, 90% 35%, 100% 47%, 100% 100%, 0 100%, 0 38%, 77% 38%);
-               padding:3.5% 7.7px 0.8% 7px;
-               background:rgba(120,120,120,1);
-               
-             }
-           
-             .search-popup div{
-               height:2.22rem;
-               overflow:hidden; 
-             }
-             .search-popup button{
-               width:10%;
-               padding:2px 7.7px 0.8% 3px;
-               height:2.22rem;
-               border:none;
-               border-left:1px solid rgba(160,160,160,1);
-               background:rgba(230,230,230,0.9);
-               border-radius:0 5px 5px 0;
-               cursor:pointer;
-               letter-spacing:0.8px;
-             }
-
-            
-             .search-popup i{
-               color:rgba(110,110,110,1);
-               font-size:16px;
-             }
-             .search-popup button:hover{
-               background:rgba(280,280,280,1);
-               transition: 0.2s;
-             }
- 
-             .search-popup input
-             {
-               border-radius:5px 0 0 5px;
-               background:rgba(230,230,230,0.9);
-               text-align:center;
-               font-size:15.5px;
-               padding:2.7%;
-               width:90%;
-               height:2.22rem;
-               outline:none;
-               border:none;
-               position: relative;
-               color:rgba(110,110,110,1);
- }
-
-
- /*===================   Mobile Responsive    ====================*/
-
- @media (max-height:768px) /* for search to be responsive*/
- {
-  .search-popup button
-  {
-    padding:1.5px 7.7px 0.8% 3px;
-  }
- }
-
-
  @media (max-width:991px)
  {
   .popup .popup-content{
@@ -235,8 +135,6 @@ body{
     .popup .popup-content p{
       font-size:20px;
     }
-
-/*==============  feed back button popup making it fixed  =============*/
 
 #feedback{
   top:83rem;

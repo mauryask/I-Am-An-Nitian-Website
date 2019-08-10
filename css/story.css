@@ -11,24 +11,16 @@
 	word-wrap: break-word;
 	}
 
-	html,body{
-		height:100%;
-	}
-
-
 	body{
         background: rgb(250,250,250,1);	
-       /* background:#222233;*/
 	}			
 
-    .progress-container{
+    .progress-container{    
         top:0;
         position:fixed;
     } 
 
-/*================  Page Preloader  =================*/ 
-
-	#loader{
+   #loader{
         top:0;
 		width:100%;
 		height:100vh;
@@ -122,8 +114,6 @@ box-shadow: 0 0 8px 2px rgba(210,210,210,1);
 overflow: hidden;
 }
 
-
-
 .hero p{
     line-height:30px;
     letter-spacing: 0.3px;
@@ -133,7 +123,6 @@ overflow: hidden;
     font-family: 'Playfair Display', serif;
 }
 
-
 .child_x:nth-child(odd) .hero .himg{
     float:left;
    margin:0 27px 3px 0;
@@ -141,7 +130,6 @@ overflow: hidden;
    background:rgba(255,196,105,1);
     }
     
-
     .child_x:nth-child(even) .hero .himg{
         float:right;
         margin:0 0 0 20px;
@@ -371,6 +359,4 @@ display: none;
                         line-height:2px;
                         font-weight: bold;
                         }
-            
-
             }

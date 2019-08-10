@@ -1,16 +1,6 @@
-<!--
-* I AM AN NITIAN 
-* v1.0
-* May 17 2019
-* Developer: Shubham Maurya
-* National Institute Of Technology Srinagar J&K India 190006
-* GitHub: https://github.com/pnstech
-* LinkedIn: https://www.linkedin.com/in/cyberthreatatnit/
--->
-
 <?php
 include_once('connection.php');
-session_start(); //starting session start
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -44,37 +34,35 @@ crossorigin="anonymous">
 </head>
 
 <body onload="loadme()">
-
- <!--================ Back to top Button ====================-->
   <button id="back-to-top" ><i class="fas fa-angle-double-up"></i></button>
-
-  <!--================== Preloader ==========================-->
 <div id="loader">
 </div>
-
- <!--================ Scroll Indicator ======================-->
  <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
   </div>   
   
 <div class="wrapper">
-
-
 <header id="f" style="background:black;">
 <div class="logo">
 <ul>
 <li><a href="index.php"><img src="images\imnitian.png"></a></li>
-<li class="logo_txt"><a href="index.php" style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
+<li class="logo_txt"> <a href="index.php" 
+style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
 </ul>
 </div>
 <nav class="active">
-<ul>
-<li><a href="index.php" class="homex" >Home</a></li>
-<li><a href="more-news.php" class="homex" >News</a></li>
-<li><a href="index.php#updf" class="homex" >Updates</a></li>
-<li><a href="index.php#about" class="homex" >About Us</a></li>
 
-<li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;" id="user">
+<p id="mnu">MENU</p>
+
+<ul>
+<li><a href="index.php" class="home" >Home</a></li>
+
+<li><a href="more-news.php" class="homex" >News</a></li>
+<li ><a href="#updf" class="homex" id="update_nav">Updates</a></li>
+
+<li><a href="#about" class="homex" id="about_nav">About Us</a></li>
+
+<li><a class="homex" id="user">
 <?php
   if(isset($_SESSION['name'])&& !empty($_SESSION['name']))
   {
@@ -87,14 +75,16 @@ crossorigin="anonymous">
 ?>
 &nbsp <i class="fas fa-user-graduate"></i></a>
 <ul style="margin-left:-1rem;">
-<!-- Hide and Show login and php buttons -->
 
 <?php
 if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 {
   if($_SESSION['user_type'] == 1)
   {
-    echo '<li><a href="edit_news.php" class="homex">Admin</a></li>';
+    ?>
+    <li><a href="edit_news.php">Admin</a></li>
+
+    <?php
   }
 }
 ?>
@@ -104,27 +94,19 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 ?>
 <li><a style="cursor:pointer;"  href="logout.php" >Logout</a></li>
 <?php }else{ ?>
-<li><a style="cursor:pointer;"  onclick="show_log()" id="login_nav">Login</a></li>
-<li><a style="cursor:pointer;"  onclick="show_signup()" id="register_nav">Register</a></li>
+<li><a style="cursor:pointer;"  onclick="show_log()" id="login_nav" >Login</a></li>
+<li><a style="cursor:pointer;"  onclick="show_signup()" id="register_nav" >Register</a></li>
 <?php } ?>
 
 </ul>
 </li>
 </ul>
 </nav>
-<!--================ Mobile Version Menu ====================-->
 <div class="menu-toggle">
 <i class="fas fa-bars"></i>
 </div>
 <img src="images/cutk.png" class="cut_nav" style="display:none;">
-
-<!--================ Search Box ====================-->
-<div class="search-popup" id="searchx" style="display:none;">
-    <div><input type="text"  placeholder="Search"><button><i class="fas fa-search"></i></button></div>
-  </div>
-
 </header>
-
 
 <div class="main">
 
@@ -206,9 +188,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 
 </div>
-
-
-
 
 <div class="number" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'><p>4</p></div>
 
@@ -356,12 +335,9 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <p class="next" id="lnk" style="margin-top:2rem;"> List of nitians who did splendid performence in "Gate 2019" <span id="hide"><br></span><a href="gate_topper_list.php">Click Here</a></p>
 <p class="next" id="lnk"> List of nitians who cracked "Engineering Services Exam 2019" <a href="ese_topper_list.php"><span id="hide"><br></span>Click Here</a></p>
 </div>
+</div>
 
-</div> <!--  Wrapper-->
-
-
-
-<!--============== Signup Popup ==================-->
+<!--= Signup Popup =-->
 <div class="signup" id="sign">
 <div class="sign-card">
  <div class="sign-img">
@@ -382,6 +358,7 @@ function updf()
   window.location = "index.php#updf";
 }
  </script>
+
     <p class="p2"><a href="#">privacy policy</a></p>
   </div>
  </div>
@@ -396,22 +373,78 @@ function updf()
    <input  type="text"  name="phone" id="phone" placeholder="Mobile Number"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
    <select name="clg" id="clg"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
       <option>Select College</option>
-      <option>National Institute Of technology Srinagar</option> 
-      <option>National Institute Of technology Srinagar Silchar</option>
-      <option>National Institute Of technology Srinagar Trichy</option>
-      <option>Motilal Nehru Institute Of Technology Allahabad</option>
-      <option>Malviya Natioanl Institute Of Technology Jaipur</option>
-      <option>Other</option>
+      <option> NIT Srinagar </option>
+<option> NIT Uttrakhand </option>
+<option> NIT Manipur  </option>
+<option> NIT Mizoram  </option>
+<option> NIT Nagaland </option>
+<option> NIT Agartala </option>
+<option> NIT Meghalaya </option>
+<option> NIT Arunachal Pradesh </option>
+<option> NIT Sikkim </option>
+<option> NIT Silchar </option>
+<option> NIT Hamirpur </option>
+<option> NIT Jamshedpur </option>
+<option> NIT Jalandhar </option>
+<option> NIT Durgapur </option>
+<option> MNIT Jaipur </option>
+<option> NIT Kurukshtera </option>
+<option> NIT Andhra Pradesh </option>
+<option> NIT Patna </option>
+<option> MANIT Bhopal </option>
+<option> NIT Goa </option>
+<option> NIT Puducherry </option>
+<option> NIT Delhi </option>
+<option> NIT Raipur </option>
+<option> NIT Calicut </option>
+<option> NIT Raurkela </option>
+<option> VNIT Nagpur </option>
+<option> NIT Trichy </option>
+<option> NIT Warangal </option>
+<option> MNNIT Prayagraj (Allahabad) </option>
+<option> SVNIT Surat </option>
+<option> NIT Suratkal </option>
+<option> Other </option>
       </select>
       <select name="state" id="state"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
           <option>Select Your State</option>
-          <option>Uttar Pradesh</option>
-          <option>Jammu and Kashmir</option>
-          <option>Rajsthan</option>
-          <option>Tamilnadu</option>
-          <option>Uttrakhand</option>
-          <option>Bihar</option>
-          </select>
+          <option> Uttar Pradesh </option>
+<option> Bihar </option>
+<option> Rajsthan  </option>
+<option> Madhya Pradesh  </option>
+<option> Maharastra </option>
+<option> Andhra Pradesh </option>
+<option> Arunachal Pradesh </option>
+<option> Aasam</option>
+<option> Chhattisgarh </option>
+<option> Odisha </option>
+<option> Goa </option>
+<option> Gujrat </option>
+<option> Haryana </option>
+<option> Himachal Pradesh </option>
+<option> Jammu & Kashmir </option>
+<option> Jharkhand </option>
+<option>  Karnatka </option>
+<option> Kerla </option>
+<option> Manipur </option>
+<option> Mizoram </option>
+<option> Tripura </option>
+<option> Nagaland </option>
+<option> Punjab </option>
+<option> Sikkim </option>
+<option> Tamilnadu </option>
+<option> Uttrakhand </option>
+<option> West Bengal </option>
+<option> Telangana </option>
+<option> Andaman and Nicobar Islands </option>
+<option> Chandigarh </option>
+<option> Dadar and Nagar Haveli </option>
+<option> Daman and Diu </option>
+<option> Delhi </option>
+<option> Lakshadweep </option>
+<option> Puducherry </option>
+<option> Laddakh </option>
+ </select>
           <input  autocomplete="off" name="user_pass" id="user_pass" type="password" placeholder="Password"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
           <input autocomplete="off" type="password"  id="cnf_pass" name="cnf_pass" placeholder="Confirm Password" onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
           <button name="register" id="register" type="button"   class="register">Register</button>
@@ -421,24 +454,17 @@ function updf()
  </div>
 </div>
 </div>
-<!--=============== Login Popup =================-->
+<!--= Login Popup =-->
 <div class="login" id="log" >
 <div class="log-card">
     <img class="cancel-log"  src="images/cut.png" onclick="cancel_log()">
 <div>
 <div class="log-msg"  ><p id="message"><p></div>
   <form  method="post" autocomplete="off">
-
-  <input  id="email" type="text" autocomplete="off" placeholder="Email" 
-   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'"
-   onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
-
-  <input autocomplete="off"  id="pass" type="password" placeholder="Password" 
-    onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" 
-    onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
-
+  <input  id="email" type="text" autocomplete="off" placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+  <input autocomplete="off"  id="pass" type="password" placeholder="Password"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
 <div class="select" id="select">
-  <input type="radio" name="user" id="user" value="1" checked>&nbsp <label class="lab1">User</label>
+  <input type="radio" name="user" id="usert" value="1" checked>&nbsp <label class="lab1">User</label>
   <input type="radio" name="user" id="admin" value="2">&nbsp <label>Admin</label>
  </div>
   <button type="button"  name="login" id="login">Login</button>
@@ -448,9 +474,6 @@ function updf()
 </div>
 </div>
 
-
-
- <!--============== Footer Section ==================-->
   <footer>
   <div class="datad">
   <p class="x">Feel Free To Contact Us</p>
@@ -462,7 +485,6 @@ function updf()
  <P>+91-9055667606</p> 
    </span>
 </div>
-<!--============== Bottom Container =====================-->
  <div class="container">
  <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
 2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbspAll Rights Reserved</span></p>
@@ -473,111 +495,50 @@ function updf()
 
 </html>
 
-
-
-<!--===============  Microsoft's JQuery CDN =================-->
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
-<!--==================  TweenMax CDN  ==================-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-<!--==================  SweetAlert2 CDN  ==================-->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>
-<!--==================  aos.js  CDN  ==================-->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<!--==================  Local Js Files  ==================-->
 <script   type="text/javascript" src="js/ajax-register.js"></script>
 <script   type="text/javascript" src="js/ajax-login.js"></script>
 <script   type="text/javascript" src="js/main.js"></script>
 
 <script>
-  AOS.init({ disable: 'mobile' }); //disabling the animations in mobile version
+  AOS.init({ disable: 'mobile' }); 
 </script>
 
 
 <script>
- /*==================== Menu toggle =========================*/
+ 
+ /*= Menu toggle =*/
  $(document).ready(function(){
 
-  if (window.matchMedia('(max-width:721px)').matches)
+if (window.matchMedia('(max-width:721px)').matches)
 {
-  
-  $('.cut_nav').click(function(){
-    $(this).css('display','none');
-    $('.menu-toggle').css('display','block');
-    TweenMax.to('.active',0.5,{scaleX: 0});
-    $('nav').css('z-index', '1');
-    $('.logo').css('marginLeft', '0px');
-    $('.logo').css('marginTop', '0px');
-    $('.logo_txt').css('marginTop', '0px');
-    setTimeout(function(){
-    
-      $('header').css('background', 'black');
-    
-    },200)
-
-  })
-
-  $(window).scroll(function(){
-  $('header').css('background', 'black');
-})
-  
-
-
-  $('.menu-toggle').click(function(){
-    $(this).css('display','none');
-    $('.cut_nav').css('display','block');
-
-    $('nav').css('z-index', '4');
-
-    $('header').css('background', 'transparent');
-    $('.cut_nav').css('background','black');
-    TweenMax.to('.active',0.4,{scaleX: 1});
-
-    setTimeout(function(){
-      $('.logo').css('marginLeft', '62px');
-      $('.logo').css('marginTop', '18px');
-      $('.logo_txt').css('marginTop', '10px');
-    },200);
-
-    setTimeout(function(){
-      $('nav').css('z-index', '-1');
-    },350);
-   
-  })
-
- 
-
-$('#login_nav').click(function()
-{
-  $('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');
-  TweenMax.to('.active',0.1,{scaleX: 0});  
-  $('.cut_nav').css('display','none');
+$('.cut_nav').click(function(){
+  $('header').css('background','black');
+  $(this).css('display','none');
   $('.menu-toggle').css('display','block');
-  $('header').css('background', 'black');
-  $('.logo_txt').css('marginTop', '0px');
+  TweenMax.to('.active',0.5,{scaleX: 0});
 })
 
-$('#register_nav').click(function(){
-  $('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');
-  TweenMax.to('.active',0.1,{scaleX: 0});  
-  $('.cut_nav').css('display','none');
-  $('.menu-toggle').css('display','block');
-  $('header').css('background', 'black');
-  $('.logo_txt').css('marginTop', '0px');
+$('.menu-toggle').click(function(){
+  $('header').css('background','transparent');
+  $(this).css('display','none');
+  $('.cut_nav').css('display','block');
+  $('.cut_nav').css('background','black');
+  TweenMax.to('.active',0.4,{scaleX: 1});
 })
 
-$('#about_nav').click(function()
+$('#login_nav,#register_nav,#about_nav,#update_nav').click(function()
 {
-  $('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');
-  TweenMax.to('.active',0.1,{scaleX: 0});  
-  $('.cut_nav').css('display','none');
-  $('.menu-toggle').css('display','block');
+  $('header').css('background','black');
+TweenMax.to('.active',0.1,{scaleX: 0});  
+$('.cut_nav').css('display','none');
+$('.menu-toggle').css('display','block');
 })
 
 }
-  
 })
 
 </script>

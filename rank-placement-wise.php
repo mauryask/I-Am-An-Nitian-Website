@@ -1,13 +1,3 @@
-<!--
-* I AM AN NITIAN 
-* v1.0
-* May 17 2019
-* Developer: Shubham Maurya
-* NIT Srinagar J&K India 190006
-* GitHub: https://github.com/pnstech
-* LinkedIn: https://www.linkedin.com/in/cyberthreatatnit/
--->
-
 <!DOCTYPE html>
 <html lang="en" oncontextmenu="return false">
 <head>
@@ -33,26 +23,20 @@ crossorigin="anonymous">
     margin-top:3rem;
 margin-bottom:0;
   }
+
 }
 </style>
 </head>
 
 <body onload="loadme()">
-
- <!--================ Back to top Button ====================-->
   <button id="back-to-top" ><i class="fas fa-angle-double-up"></i></button>
-
-  <!--================== Preloader ==========================-->
 <div id="loader">
 </div>
-
- <!--================ Scroll Indicator ======================-->
  <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
   </div>  
 
-<div class="wrapper" style="margin-top:1.5rem;">
- 
+<div class="wrapper" >
 <div class="center">
 <p>NITs Ranking Based <br>On Placement</p>
 <div class="line_rnk" style="width:21rem;"> </div>
@@ -315,9 +299,8 @@ margin-bottom:0;
 
 <script>
 
- /*==================== Search ranking =========================*/
  $(function()
-{ //instead of $(document).ready(function(){}) you ncan use this short hand property
+{
     $('#search').on('keyup',function(){
 
   var value = $(this).val().trim().toLowerCase();

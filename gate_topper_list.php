@@ -44,7 +44,7 @@ crossorigin="anonymous">
 <div class="wrapper">
  
 <div class="center">
-<p>List of nitians who <span id="rank_yr" ><br> cracked GATE-2019</p>
+<p>List of nitians who<br> cracked GATE-2019</p>
 <div class="line_rnk" style="width:21rem;"> </div>
 </div>
 
@@ -160,9 +160,7 @@ crossorigin="anonymous">
 <td>4</td>
 </tr>
 
-
 <tr>
-
 <td>Siddhartha Wadha</td>
 <td>NIT Kurukshetra</td>
 <td>ME</td>
@@ -177,7 +175,6 @@ crossorigin="anonymous">
 </tr>
 
 <tr>
-
 <td>Charmin Patel</td>
 <td>SVNIT Surat</td>
 <td>ME</td>
@@ -186,7 +183,6 @@ crossorigin="anonymous">
 
 
 <tr>
-
 <td>Sayantan Bhattacharya</td>
 <td>NIT Agartala</td>
 <td>EE</td>
@@ -863,10 +859,7 @@ crossorigin="anonymous">
 <td>ME</td>
 <td>294</td>
 </tr>
-
-
 </tbody>
-
 </table>
 
 
@@ -891,7 +884,7 @@ crossorigin="anonymous">
 <script src="js/main.js" type="text/javascript"></script>
 
 <script>
- /*==================== Search ranking =========================*/
+
  $(function()
 { 
     $('#search').on('keyup',function(){

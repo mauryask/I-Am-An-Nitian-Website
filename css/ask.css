@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
-
 .upg{
   margin:0 auto;
 overflow: hidden;
@@ -162,7 +160,6 @@ position:relative;
     }
     }
 
- /*============ Mobile version of updates =============*/
 .respo_not{
   height:340px;
   display:flex;
@@ -202,8 +199,6 @@ position: fixed;
  font-family: 'Playfair Display', serif;
  text-align:center;
 }
-
-
 
     /*============ Responsive Sreen =============*/
 

@@ -16,13 +16,15 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 crossorigin="anonymous">
 
 <style>
-@media (max-width:921px) { 
-
+@media (max-width:921px) 
+{ 
 .linkx{
     margin-top:3rem;
    margin-bottom:0;
   }
+
 }
+
   </style>
 </head>
 
@@ -39,7 +41,7 @@ crossorigin="anonymous">
 <div class="wrapper">
  
 <div class="center">
-<p>M.Tech. Placements <span id="rank_yr" ><br>Of Various NITs</p>
+<p>M.Tech. Placements<br>Of Various NITs</p>
 <div class="line_rnk" style="width:21rem;"> </div>
 </div>
 

@@ -7,7 +7,6 @@
 <meta charset="utf-8">
 <meta name="theme-color" content="#000">
 <meta name="author" content="Shubham Maurya"> 
-
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
 crossorigin="anonymous">
@@ -16,7 +15,7 @@ crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 <link href="css/ranking.css" type="text/css" rel="stylesheet">
 <style>
-@media (max-width:921px) { 
+@media (max-width:921px) {
 .linkx{
     margin-top:3rem;
    margin-bottom:0;
@@ -43,7 +42,7 @@ crossorigin="anonymous">
 <div class="wrapper">
  
 <div class="center">
-<p>List of nitians who <span id="rank_yr" ><br> cracked ESE-2019</p>
+<p>List of nitians who<br> cracked ESE-2019</p>
 <div class="line_rnk" style="width:21rem;"> </div>
 </div>
 
@@ -70,15 +69,12 @@ crossorigin="anonymous">
 <td>1</td>
 </tr>
 
-
 <tr>
-
 <td>Chirag Singla</td>
 <td>NIT Jalandhar</td>
 <td>Mechanical</td>
 <td>2</td>
 </tr>
-
 
 <tr>
 <td>Kumud Jindal</td>
@@ -87,7 +83,6 @@ crossorigin="anonymous">
 <td>6</td>
 </tr>
 
-
 <tr>
 <td>Kartikey Dutta</td>
 <td>NIT Durgapur</td>
@@ -95,15 +90,12 @@ crossorigin="anonymous">
 <td>7</td>
 </tr>
 
-
-
 <tr>
 <td>Vijay Nandan Pandey</td>
 <td>NIT Hamirpur</td>
 <td>Civil</td>
 <td>8</td>
 </tr>
-
 
 <tr>
 <td>Souvik Debroy</td>
@@ -308,7 +300,6 @@ crossorigin="anonymous">
 <td>60</td>
 </tr>
 
-
 <tr>
 <td>Kishore Kalita</td>
 <td>NIT Silchar</td>
@@ -439,12 +430,8 @@ crossorigin="anonymous">
 <td>Civil</td>
 <td>159</td>
 </tr>
-
-
 </tbody>
-
 </table>
-
 
 <div class="linkx">
 <p class="links"> Explore More</p>
@@ -467,7 +454,6 @@ crossorigin="anonymous">
 <script src="js/main.js" type="text/javascript"></script>
 
 <script>
- /*==================== Search ranking =========================*/
  $(function()
 { 
     $('#search').on('keyup',function(){
