@@ -103,51 +103,24 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 <div class="flash">
 <?php  
-$sql = "select * from tbl_images order by id desc limit 5";
+$sql = "select * from tbl_images order by id desc limit 1";
 $result = mysqli_query($conn, $sql);
 $i= 0;
-$arr_head = array();
-$arr_id = array();
-$arr_img = array();
-while($row  = mysqli_fetch_assoc($result))
+$arr_head = '';
+$arr_id = '';
+$arr_img = '';
+if($row  = mysqli_fetch_assoc($result))
 {
-  $arr_head[$i] = $row['heading'];
-  $arr_img[$i] = $row['name'];
-  $arr_id[$i]= $row['id'];
-  $i++;
+  $arr_head = $row['heading'];
+  $arr_img = $row['name'];
+  $arr_id= $row['id'];
 }
 ?>
 
-<div class="flash_slide" id = "<?php echo $arr_id[0] ?>"  onclick= "id1(this.id)">
-<?php echo '<img   src="data:image/jpg;base64,'.base64_encode($arr_img[0]).'" >' ?>;
+<div class="flash_slide" id = "<?php echo $arr_id ?>"  onclick= "id1(this.id)">
+<?php echo '<img   src="data:image/jpg;base64,'.base64_encode($arr_img).'" >' ?>;
 <div class="over"></div>
-<div class="cnt"><?php echo $arr_head[0]; ?></div>
-</div>
-<div class="four_news">
-<div class="four_news_in">
-  <div id=  "<?php echo $arr_id[1] ?>"  onclick= "id1(this.id)">
-  <?php echo '<img   src="data:image/jpg;base64,'.base64_encode($arr_img[1]).'" >' ?>;
-    <div class="overlay"></div>
-    <div class="content"><?php echo $arr_head[1]; ?></div>
-  </div>
-  <div id=  "<?php echo $arr_id[2] ?>"  onclick= "id1(this.id)">
-  <?php echo '<img   src="data:image/jpg;base64,'.base64_encode($arr_img[2]).'" >' ?>;
-    <div class="overlay"></div>
-    <div class="content"><?php echo $arr_head[2]; ?></div>
-  </div>
-</div>
-
-<div class="four_news_in">
-<div id=  "<?php echo $arr_id[3] ?>"  onclick= "id1(this.id)">
-<?php echo '<img   src="data:image/jpg;base64,'.base64_encode($arr_img[3]).'" >' ?>;
-    <div class="overlay"></div>
-    <div class="content"><?php echo $arr_head[3]; ?></div>
-  </div>
-<div id=  "<?php echo $arr_id[4] ?>"  onclick= "id1(this.id)">
-<?php echo '<img   src="data:image/jpg;base64,'.base64_encode($arr_img[4]).'" >' ?>;
-  <div class="overlay"></div>
-  <div class="content"><?php echo $arr_head[4]; ?></div>
-</div>
+<div class="cnt"><?php echo $arr_head; ?></div>
 </div>
 </div>
 </div>
@@ -170,7 +143,6 @@ function id1(got_id)
                        $id = $row["id"];  
                       if ($i++ % 3 == 0)    
                       {
-                      
                         echo "<div class='expo' >";
                       }
           
@@ -180,8 +152,8 @@ function id1(got_id)
               <?php  echo '<a href="news.php?id='.$id.'">'; ?>
                 <?php echo '<div class="zoom"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>'?>
               <?php 
-              $head = implode(' ',array_slice(explode(' ', $row['heading']),0,6)); 
-              $text = implode(' ',array_slice(explode(' ', $row['text']),0,7));
+              $head = implode(' ',array_slice(explode(' ', $row['heading']),0,7)); 
+              $text = implode(' ',array_slice(explode(' ', $row['text']),0,5));
               echo '<p style="margin-top:2px;">'.'<span class="heading">'.$head.'</span>'." ".$text.'..</p>';
                   ?>   
                   </a>                                            
@@ -235,7 +207,7 @@ function updf()
 }
  </script>
 
-    <p class="p2"><a href="#">privacy policy</a></p>
+    <p class="p2"><a href="uPDxgdf.php">privacy policy</a></p>
   </div>
  </div>
  <div class="sign-form">
@@ -353,10 +325,10 @@ function updf()
   <footer>
   <div class="datad">
   <p class="x">Feel Free To Contact Us</p>
-  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-9055667606 &nbsp | &nbsp  +91-9055667606</p>
+  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-6202590504 &nbsp | &nbsp  +91-9055667606</p>
  <span id="respo_contact">
  <P>iamannitian@gmail.com</p> 
- <P>+91-9055667606</p> 
+ <P>+91-6202590504</p> 
  <P>+91-9055667606</p> 
    </span>
 </div>

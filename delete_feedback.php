@@ -1,6 +1,6 @@
 <?php
 
-session_start(); //preventing direct access of this page
+session_start(); 
 if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION['user_type']!=1)
 {
   exit("<div style='
@@ -30,7 +30,7 @@ $query_x = "delete from feedback where id='$id' ";
 $result=mysqli_query($conn, $query_x);
 if($result)
 {
-    header('location:admin_feedback.php'); //refresh the current page instead of redirecting to same page again
+    header('location:admin_feedback.php'); 
 }
 else
 {

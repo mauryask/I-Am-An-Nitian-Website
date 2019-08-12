@@ -198,34 +198,23 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div class="respo_not">
 <div class="respo_head"><p>Updates</p></div>
 <div id="respo_csp" onmouseover="stop_It()"  onmouseout="start_It()">
-<div class="respo_cont" style="margin-top:9px;">
-  NITs (National Institute Of Technologies) are 
-    the mo <span class="blinker">New</span>
+<div class="respo_cont" onclick="location.href='gate_topper_list.php'" style="margin-top:9px;">
+ List of nitians who cracked GATE - 2019 <span class="blinker" style="display:none;">New</span>
 </div>
-<div class="respo_cont">
-  NITs (National Institute Of Technologies) are 
-    the mo 
+<div class="respo_cont" onclick="location.href='ese_topper_list.php'">
+List of nitians who cracked ESE- 2019
 </div>
-<div class="respo_cont">
-  NITs (National Institute Of Technologies) are 
-    the mo 
+<div class="respo_cont" onclick="location.href='placement.php'">
+Check out the B.Tech. placements of various NITs
 </div>
-<div class="respo_cont">
-  NITs (National Institute Of Technologies) are 
-    the mo 
+
+<div class="respo_cont" onclick="location.href='placement2.php'">
+Check out the M.Tech. placements of various NITs
 </div>
-<div class="respo_cont">
-  NITs (National Institute Of Technologies) are 
-    the mo 
+<div class="respo_cont" onclick="location.href='rank-placement-wise.php'">
+ Check out the ranking of NITs based on placements 
 </div>
-<div class="respo_cont">
-  NITs (National Institute Of Technologies) are 
-    the mo 
-</div>
-<div class="respo_cont">
-  NITs (National Institute Of Technologies) are 
-    the mo 
-</div>
+
 </div>
 </div>
 <script>
@@ -257,30 +246,22 @@ function start_It()
 <div class="upx">
 <div class="headingc"><p>Updates</p></div>
 <div id="csp" onmouseover="stopIt()"  onmouseout="startIt()">
-<div class="contentx">
-  NITs (National Institute Of Technologies) are 
-    the mo <span class="blinker" style="display:none;">New</span>
+<div class="contentx" onclick="location.href='gate_topper_list.php'">
+ Click here to see the list of nitians who did splendid performence in
+  GATE - 2019 <span class="blinker" style="display:none;">New</span>
 </div>
-<div class="contentx">
-Lorem Ipsum is simply dummy text of the
- printing and typesetting industry
+<div class="contentx" onclick="location.href='ese_topper_list.php'">
+List of nitians who cracked ESE- 2019
 </div>
-<div class="contentx">
-Lorem Ipsum is simply dummy text of the
- printing and typesetting industry 
+<div class="contentx" onclick="location.href='placement.php'">
+Check out the B.Tech. placements of various NITs
 </div>
 
-<div class="contentx">
-Lorem Ipsum is simply dummy text of the
- printing and typesetting industry
+<div class="contentx" onclick="location.href='placement2.php'">
+Check out the M.Tech. placements of various NITs
 </div>
-<div class="contentx">
-  NITs (National Institute Of Technologies) are 
-    the mo 
-</div>
-<div class="contentx">
-  NITs (National Institute Of Technologies) are 
-    the most..
+<div class="contentx" onclick="location.href='rank-placement-wise.php'">
+ Check out the ranking of NITs based on placements 
 </div>
 
 </div>
@@ -288,33 +269,52 @@ Lorem Ipsum is simply dummy text of the
 <!--= Sliding images =-->
 <div class="mySlide">
 <div class="slidex">
- <img class="slide" src="images/darkback.jpg">
+ <img class="slide" src="images/Jamshedpur.jpg">
  <div id="caption">
-   <img src="images/techvaganza.png">
-   <p style="margin-bottom:5px;">Techvaganza 2020</p>
-    <p style="margin-left:27px;"> NIT Srinagar</p>
+   <img src="images/imnitian.png">
+   <p style="">I AM AN NITIAN</p>
+    <p style="margin-left:40px;">Presents</p>
   </div>
  </div>
+
  <div class="slidex">
- <div id="captionx"><p>Cultural Night</p></div>
- <img class="slide" src="images/cultural.jpg">
+<div id="captionx"><p>NIT Jamshedpur</p></div>
+ <img class="slide" src="images/Jamshedpur.jpg">
  </div>
-<div class="slidex">
-<div id="captionx"><p>Musical Night</p></div>
- <img class="slide" src="images/musical.jpg">
+
+ <div class="slidex">
+ <div id="captionx"><p>NIT Agartala</p></div>
+ <img class="slide" src="images/Agartala.jpg">
+ </div>
+
+ <div class="slidex">
+<div id="captionx"><p>NIT Meghalaya</p></div>
+ <img class="slide" src="images/Meghalaya.jpg">
  </div>
  <div class="slidex">
-<div id="captionx"><p>Dance Night</p></div>
- <img class="slide" src="images/dancex.jpg">
+<div id="captionx"><p>NIT Suratkal</p></div>
+ <img class="slide" src="images/Surathkal.jpg">
  </div>
  <div class="slidex">
-<div id="captionx"><p>Robotics</p></div>
- <img class="slide" src="images/robotics.jpeg">
+<div id="captionx"><p>NIT Nagpur</p></div>
+ <img class="slide" src="images/Nagpur.jpg">
  </div>
+
  <div class="slidex">
-<div id="captionx"><p>Coding</p></div>
- <img class="slide" src="images/coding.jpg">
+ <div id="captionx"><p>MANIT Bhopal</p></div>
+ <img class="slide" src="images/Bhopal.jpg">
  </div>
+
+ <div class="slidex">
+ <div id="captionx"><p>NIT Calicut</p></div>
+ <img class="slide" src="images/Calicut.jpg">
+ </div>
+
+ <div class="slidex">
+ <div id="captionx"><p>NIT Raipur</p></div>
+ <img class="slide" src="images/Raipur.jpg">
+ </div>
+
 </div>
 </div>
 <!--= Stop & start sliding updates =-->
@@ -390,8 +390,8 @@ function startIt()
               <?php  echo '<a href="news.php?id='.$id.'">'; ?>
                 <?php echo '<div class="zoom"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>'?>
               <?php 
-              $head = implode(' ',array_slice(explode(' ', $row['heading']),0,6)); 
-              $text = implode(' ',array_slice(explode(' ', $row['text']),0,7)); 
+              $head = implode(' ',array_slice(explode(' ', $row['heading']),0,7)); 
+              $text = implode(' ',array_slice(explode(' ', $row['text']),0,5)); 
               echo '<p style="margin-top:2px;">'.'<span class="heading">'.$head.'</span>'." ".$text.'..</p>';
                   ?>   
                   </a>                                            
@@ -442,7 +442,7 @@ function updf()
 }
  </script>
 
-    <p class="p2"><a href="#">privacy policy</a></p>
+    <p class="p2"><a href="uPDxgdf.php">privacy policy</a></p>
   </div>
  </div>
  <div class="sign-form">
@@ -615,10 +615,10 @@ function updf()
 
   <div class="datad">
   <p class="x">Feel Free To Contact Us</p>
-  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-9055667606 &nbsp | &nbsp  +91-9055667606</p>
+  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-6202590504 &nbsp | &nbsp  +91-9055667606</p>
  <span id="respo_contact">
  <P>iamannitian@gmail.com</p> 
- <P>+91-9055667606</p> 
+ <P>+91-6202590504</p> 
  <P>+91-9055667606</p> 
    </span>
 </div>

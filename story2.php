@@ -24,12 +24,6 @@ crossorigin="anonymous">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <style>
 
-@media (max-width:921px)
-{
-  .wrapper{
-    margin-top:7rem;
-  }
-}
 </style>
 </head>
 
@@ -359,7 +353,7 @@ function updf()
 }
  </script>
 
-    <p class="p2"><a href="#">privacy policy</a></p>
+    <p class="p2"><a href="uPDxgdf.php">privacy policy</a></p>
   </div>
  </div>
  <div class="sign-form">
@@ -477,11 +471,11 @@ function updf()
   <footer>
   <div class="datad">
   <p class="x">Feel Free To Contact Us</p>
-  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-9055667606 &nbsp | &nbsp  +91-9055667606</p>
+  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-6202590504 &nbsp | &nbsp  +91-9055667606</p>
  
   <span id="respo_contact">
  <P>iamannitian@gmail.com</p> 
- <P>+91-9055667606</p> 
+ <P>+91-6202590504</p> 
  <P>+91-9055667606</p> 
    </span>
 </div>

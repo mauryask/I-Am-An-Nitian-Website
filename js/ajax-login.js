@@ -18,7 +18,7 @@ $(document).ready(function(){
 			  
 			   setTimeout(function(){ 
 			   
-			   location.reload(true); // instead of redirecting home page reload the current page
+			   location.reload(true); 
 			  			   
 				 },1800);
 	

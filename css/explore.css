@@ -63,7 +63,7 @@ height:4px;
 }
 
 .explore .expo  .xnnn {
-  width:14.5rem;
+  width:14rem;
   border-radius:0;
   text-align:justify;
   justify-self: self-start;
@@ -115,7 +115,7 @@ font-size:15px;
     padding: 0;
     overflow: hidden;
     border-radius: 0;
-    box-shadow: none;
+    box-shadow: none;   
    }
 .explore .expo .xnnn img,video{
     outline: none;

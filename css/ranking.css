@@ -195,10 +195,11 @@ font-family: serif;
 
 
 .center{
+    margin-top:1.6rem;
     width:100%;
     margin-bottom:0.5rem;
     font-size:39px;
-    padding-top:1rem;
+    padding:0 10px 0 10px;
 }
 
 .center .courtesy{
@@ -221,6 +222,7 @@ body .clg{
     font-size:15px;
     line-height:1.8rem;
     text-align: justify; 
+    padding:12px;
 }
 
 .clg .search_clg {

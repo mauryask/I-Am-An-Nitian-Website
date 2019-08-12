@@ -793,7 +793,6 @@ crossorigin="anonymous">
 <td>189</td>
 </tr>
 
-
 <tr>
 <td>Arshad Khan</td>
 <td>NIT Warangal</td>

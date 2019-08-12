@@ -15,9 +15,6 @@
     background: rgb(240,240,240,1);
 }
 
-
-
-
 #loader{
   top:0;
   width:100%;
@@ -41,21 +38,18 @@
   display: flex;
   flex-direction:row;
   width:100%;
-  height:370px;
+  height:400px;
   margin:0 auto;
   margin-top:7rem;
-}
-
-.flash  .four_news, .flash .flash_slide{
-width:50%;
-height:100%;
+  background:red;
 }
 
 .flash .flash_slide{
-  padding:10px 0 10px 10px;
-  overflow: hidden;
+width:100%;
+height:100%;
+padding:10px;
+overflow: hidden;
 }
-
 
 .flash_slide img{
   width:100%;
@@ -63,35 +57,6 @@ height:100%;
 }
 
 
-.four_news{
-  display: flex;
-  flex-direction:column;
-  padding:10px;
-}
-  
-.four_news .four_news_in{
-  width:100%;
-  height:50%;
-}
-
-.four_news_in:nth-child(1)
-{
-  margin-bottom:10px;
-}
-
-.four_news_in{
-  display: flex;
-  flex-direction:row;
-}
-
-.four_news_in div{
- width:50%;
- height:100%;
- overflow:hidden;
-}
-
-.four_news_in div:nth-child(1) .overlay,
-.four_news_in div:nth-child(2) .overlay,
 .flash_slide .over{
 width:100%;
 height:100%;
@@ -105,8 +70,6 @@ position:sticky;
 cursor:pointer;
  }
 
- .four_news_in .content,
-  .flash_slide .content,
   .flash_slide .cnt{
    width:100%;
    height:auto;
@@ -122,21 +85,12 @@ cursor:pointer;
    line-height: 21px;
    cursor: pointer;
 font-weight: bold;
+
 }
 
  .flash_slide .cnt{
 padding:15px;
  }
-
-
-.four_news_in div:nth-child(1){
-margin-right:10px;
- }
-
- .four_news_in div img{
- width:100%;
- height:100%;
-   }
 
 
   .wrapper .explore{
@@ -161,7 +115,6 @@ margin-right:10px;
     width:14rem;
     margin-bottom:2.5rem;
   }
-
 
 #ns-art{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -246,7 +199,7 @@ margin-right:10px;
 
   /*================= Ad Side Bar =================*/
 
-  .nad{
+  .nad{  
       width:23%;
       top:8.5rem;
       right:0;
@@ -295,7 +248,7 @@ display: none;
  }
 
 .explore .expo .xnnn a .zoom{
-  height:160px;
+  height:170px;
  }
 .explore .expo .xnnn img,video{
 height:100%;

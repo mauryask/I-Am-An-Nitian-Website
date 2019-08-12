@@ -1,9 +1,5 @@
-<!--
-@ This file consists of code for updating and editing news
--->
 <?php
-
-session_start(); //preventing direct access of this page
+session_start(); 
 if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION['user_type']!=1)
 {
     exit("<div style='
@@ -32,7 +28,7 @@ if(isset($_POST['update']))
 {
     $id=$_GET['update'];
     $file= addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
-    $head = addslashes($_POST['heading']); //here add slashes is used to allow insertion of single quoptes commas
+    $head = addslashes($_POST['heading']); 
     $news = addslashes($_POST['news']);
     $query="update tbl_images set name='$file', heading='$head', text='$news' where id='".$id."'";
     if(mysqli_query($conn, $query))  
@@ -64,16 +60,11 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 </style>
 </head>
 <body onload="loadme()">
-
-  <!--================== Preloader ==========================-->
 <div id="loader">
 </div>
 <div class="main">
-
-<!--=================  Menu Button   ===================-->
 <button id="show"><i class="fas fa-bars"></i></button>
 <p class="mainh" id="mainh" >Update News</p>
-<!--=================  Editing News  ===================-->
 <div class="add-news" id="add-news">
 <form method="post" enctype="multipart/form-data" autocomplete="off">
 
@@ -99,7 +90,6 @@ if(mysqli_num_rows($result)>0)
 </div>
 </div>
 
-<!--=================  Left Side MAnu Bar   ===================-->
 <div class="left-menu" class="popup" id="demo">
     <p><?php echo "Hello! ".$_SESSION['user_name'];  ?></p>
     <div>

@@ -61,7 +61,6 @@ margin-bottom:0.1px;
    border:1px solid rgba(256,0,0,0.1);
 }
 
-
 .news-body .news-content{
 height:auto;
 padding:0.5rem;
@@ -85,6 +84,7 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 .news-body .news-content .ldc{
    font-size:18px;
    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-style:italic;
 }
 
 .news-body .news-content .ldc .like-btn, .dislike-btn,.fa-eye, .fa-comment{
@@ -303,7 +303,7 @@ footer{
 
 .news-body .news-content{
    margin: 0 auto;
-   padding:0 1rem 0 1rem;
+   padding:0 1.5rem 0 1.5rem;
 }
 
 .news-body .news-content p span{

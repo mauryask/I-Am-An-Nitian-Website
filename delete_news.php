@@ -1,6 +1,5 @@
 <?php
-
-session_start(); //preventing direct access of this page
+session_start(); 
 if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION['user_type']!=1)
 {
   exit("<div style='
@@ -34,7 +33,7 @@ if($result)
 {
     mysqli_query($conn, $query_y);
     mysqli_query($conn, $query_z);
-    header('location:edit_news.php'); //refresh the current page instead of redirecting to same page again
+    header('location:edit_news.php'); 
 }
 else
 {

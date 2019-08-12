@@ -9,9 +9,11 @@ if(mysqli_num_rows($result)>0)
 {
     $sql = " UPDATE tbl_images SET views = views + {$sample_rate} WHERE id = ".$id." ";
     mysqli_query($conn,$sql); //counting page views
-     $result = mysqli_query($conn, $query);
-     $row=mysqli_fetch_array($result);
+    mysqli_query($conn, $query);
 }
+
+$row=mysqli_fetch_array($result);
+
 ?>
 <!DOCTYPE html>
 <html id="<?php echo $row['id']; ?>" lang="en">
@@ -133,10 +135,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
             <div class="horizon horizonx"></div>
          <p class="ldc">
-            <i class="far fa-thumbs-up like-btn" style="cursor:pointer;"  id="<?php echo $row['id'];  ?>"></i> <span id="x" class="x">0</span>
-            &nbsp <i class="far fa-thumbs-down dislike-btn" style="cursor:pointer;" id="<?php echo $row['id'];  ?>"></i> <span id="y" class="x">0</span>
-            &nbsp <i class="fas fa-eye" style="cursor:pointer;"></i> <span  class="x"><?php echo $row['views'];  ?></span>
-            &nbsp <i class="far fa-comment" style="cursor:pointer;" id="cmt_color"></i> <span id="ncmt" class="x">0</span>
+           <span  class="x">views : <?php echo $row['views'];  ?></span>
           </p> 
         <p class="cmnt">Comments</p>
     </div>
@@ -155,10 +154,10 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <p class="latest">Latest News<p>
 <?php 
             $query = "select * from tbl_images where id!='$id'  order by id asc limit 7 ";
-             $result = mysqli_query ($conn, $query);
-                if (mysqli_num_rows($result)>0) 
+             $rslty = mysqli_query ($conn, $query);
+                if (mysqli_num_rows($rslty)>0) 
                 {
-                    while ($row = mysqli_fetch_assoc($result))
+                    while ($row = mysqli_fetch_assoc($rslty))
                      {
                       $id = $row["id"];
                       $head = implode(' ',array_slice(explode(' ', $row['heading']),0,6)); 
@@ -176,7 +175,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                  echo '<p style="text-align:center;">No result found</p>';
                }
               ?>      
-                     <div class="nad">
+                     <div class="nad" style="display:none">
                    <img src="images/ad-book.gif" class="nad-img" >
                       </div>  
     </div>
@@ -203,7 +202,7 @@ function updf()
 }
  </script>
 
-    <p class="p2"><a href="#">privacy policy</a></p>
+    <p class="p2"><a href="uPDxgdf.php">privacy policy</a></p>
   </div>
  </div>
  <div class="sign-form">
@@ -324,10 +323,10 @@ function updf()
   <div class="latest-line"></div>
 <?php 
             $query = "select * from tbl_images where id!='$id'  order by id asc limit 7 ";
-             $result = mysqli_query ($conn, $query);
-                if (mysqli_num_rows($result)>0) 
+             $rsltz = mysqli_query ($conn, $query);
+                if (mysqli_num_rows($rsltz)>0) 
                 {
-                    while ($row = mysqli_fetch_assoc($result))
+                    while ($row = mysqli_fetch_assoc($rsltz))
                      {
                       $id = $row["id"];
                       $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
@@ -349,10 +348,10 @@ function updf()
     <footer>
    <div class="datad">
   <p class="x">Feel Free To Contact Us</p>
-  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-9055667606 &nbsp | &nbsp  +91-9055667606</p>
+  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-6202590504 &nbsp | &nbsp  +91-9055667606</p>
  <span id="respo_contact">
  <P>iamannitian@gmail.com</p> 
- <P>+91-9055667606</p> 
+ <P>+91-6202590504</p> 
  <P>+91-9055667606</p> 
    </span>
 </div>
@@ -377,25 +376,6 @@ function updf()
 <script src="js/reply.js" type="text/javascript"></script>
 
 <script>
-
- /*= Functions to get Likes and dislikes =*/
-function getLikes()
-{
-  var id = $('html').attr('id'); 
-  setInterval(function(){
-   $('#x').load('get_likes.php', {id : id});
-  },1000);
-}
-function getDislikes()
-{
-  var id = $('html').attr('id'); 
-  setInterval(function(){
-   $('#y').load('get_dislikes.php', {id : id});
-  },1000);
-}
-getDislikes();
-getLikes();
-
 
  /*= Menu toggle =*/
  $(document).ready(function(){
@@ -428,66 +408,4 @@ $('.menu-toggle').css('display','block');
 
 }
 })
-
-//getting color of like btn
-function get_like_btn_color()
-{
-  var post_id = $('html').attr('id');
- setInterval(function(){
-  $.post('posetive_rating_state.php', {post_id: post_id}, function(data, status){   
- if(data == 1)
- {
-  $('.like-btn').addClass('fas');
-  $('.dislike-btn').removeClass('fas');
- }
- else if(data == 0)
- {
-  $('.like-btn').removeClass('fas');
-  $('.like-btn').addClass('far');
- }
-});
- },1000);
-}
-
-//getting color of dislike btn
-function get_dislike_btn_color()
-{
-  var post_id = $('html').attr('id');
-  setInterval(function(){
-    $.post('negative_rating_state.php', {post_id: post_id}, function(data, status){   
- if(data == 1)
- {
-  $('.dislike-btn').addClass('fas');
-  $('.like-btn').removeClass('fas');
- }
- else if(data == 0)
- {
-  $('.dislike-btn').removeClass('fas');
-  $('.dislike-btn').addClass('far');
- }
-});
- },1000);
-}
- get_dislike_btn_color();
- get_like_btn_color();
-
-
-//getting total commnet
-function loadNcmt()
-{
-var id =  $('html').attr('id');
-setInterval(function(){
-$.post('comment_number.php', {post_id : id}, function(data, status)
-{
-  $('#ncmt').text(data);
-  $('#cmt_color').addClass('fas');
-  if(data == 0)
-  {
-    $('#cmt_color').removeClass('fas');
-  }
-});
-},1000);
-}
-loadNcmt();
-
 </script>
