@@ -10,20 +10,21 @@ if(mysqli_num_rows($result)>0)
 {
     $sql = " UPDATE tbl_images SET views = views + {$sample_rate} WHERE id = ".$id." ";
     mysqli_query($conn,$sql); //counting page views
-     $result = mysqli_query($conn, $query);
-     $row=mysqli_fetch_array($result);
 
 }
+
+$row=mysqli_fetch_array($result);
+
 ?>
 <!DOCTYPE html>
-<html id="<?php echo $row['id']; ?>">
+<html id="<?php echo $row['id']; ?>" lang="en">
 <head>
 <title>I Am An Nitian | News</title>
-
 <link rel="icon" href="images\imnitian.png">
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
 <meta name="author" content="Shubham Maurya"> 
+<meta name="theme-color" content="#000">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
 crossorigin="anonymous">
@@ -33,14 +34,7 @@ crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 <link href="css/news.css" type="text/css" rel="stylesheet">
 <link href="css/login_register.css" type="text/css" rel="stylesheet">
-<style>
-@media (max-width:991px)   
-{
-   .menu-toggle{
-		margin-top:30px;
-    }
-}
-  </style>
+<style>@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap'); </style>
 </head>
 
 <body onload="loadme()">
@@ -55,32 +49,26 @@ crossorigin="anonymous">
     </div>
 
 <header id="f" style="background:black;">
-<div class="logo" >
+<div class="logo">
 <ul>
 <li><a href="index.php"><img src="images\imnitian.png"></a></li>
-<li class="logo_txt"><a href="index.php" style="font-family: 'Dancing Script', cursive;color:white;font-weight:bold;font-size:13px;letter-spacing: 0.7px;" >I AM AN NITIAN</a></li>
+<li class="logo_txt"> <a href="index.php" 
+style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
 </ul>
 </div>
 <nav class="active">
+
+<p id="mnu">MENU</p>
+
 <ul>
 <li><a href="index.php" class="homex" >Home</a></li>
-<!--<li><a href="team.html" class="homex">Our team</a></li>-->
-<li><a href="more-news.php" class="home" >News</a></li>
-<li><a href="index.php#updf" class="homex" >Updates</a></li>
-<li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
-<!--<li><a class="sub-menu" style="width:115px;" id="exam">Exams <i class="fas fa-caret-square-down"></i></a>
-<ul>
-<li style="width:115px;"><a href="#">Jee</a></li>
-<li style="width:115px;"><a href="#">Gate</a></li>
-<li style="width:115px;"><a href="#">IES</a></li>
-<li style="width:115px;"><a href="#">UPSC</a></li>
 
-</ul>
-</li>-->
-<!--<li>
-<button onclick="search()" style="text-transform: uppercase;letter-spacing: 0.8px; font-weight: bold;" id="searching">Search <i class="fas fa-search"></i></button>
-</li>-->
-<li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;" id="user">
+<li><a href="more-news.php" class="home" >News</a></li>
+<li ><a href="index.php#updf" class="homex" id="update_nav">Updates</a></li>
+
+<li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
+
+<li><a class="homex" id="user">
 <?php
   if(isset($_SESSION['name'])&& !empty($_SESSION['name']))
   {
@@ -93,49 +81,38 @@ crossorigin="anonymous">
 ?>
 &nbsp <i class="fas fa-user-graduate"></i></a>
 <ul style="margin-left:-1rem;">
-<!-- Hide and Show login and php buttons -->
 
 <?php
-
 if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 {
   if($_SESSION['user_type'] == 1)
   {
-    echo '<li><a href="edit_news.php" class="homex">Admin</a></li>';
+    ?>
+    <li><a href="edit_news.php">Admin</a></li>
+
+    <?php
   }
 }
-
 ?>
 
 <?php if( isset($_SESSION['name']) && !empty($_SESSION['name']))
 {
-
 ?>
 <li><a style="cursor:pointer;"  href="logout.php" >Logout</a></li>
 <?php }else{ ?>
-<li><a style="cursor:pointer;"  onclick="show_log()" id="login_nav">Login</a></li>
-<li><a style="cursor:pointer;"  onclick="show_signup()" id="register_nav">Register</a></li>
+<li><a style="cursor:pointer;"  onclick="show_log()" id="login_nav" >Login</a></li>
+<li><a style="cursor:pointer;"  onclick="show_signup()" id="register_nav" >Register</a></li>
 <?php } ?>
 
 </ul>
 </li>
 </ul>
 </nav>
-
-<!--================ Mobile Version Menu ====================-->
 <div class="menu-toggle">
 <i class="fas fa-bars"></i>
 </div>
 <img src="images/cutk.png" class="cut_nav" style="display:none;">
-
-<!--================ Search Box ====================-->
-<div class="search-popup" id="searchx" style="display:none;">
-    <div><input type="text"  placeholder="Search"><button><i class="fas fa-search"></i></button></div>
-  </div>
-
-</header>          
- 
-
+</header>
 
 <div class="news-body">
         <div class="news-img">
@@ -144,8 +121,9 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         ?>        
         </div>
         <div class="news-content">
-        <p style="font-weight:bold;font-size:12px;background:rgba(256,0,0,0.5); width:12.5rem;color:rgba(80,80,80,1);
-        text-align:center;border-radius:20px;height:31px;margin:1rem 0 1rem 0;"><?php  echo $row['inserted_at'] ?></p>
+        <p style="font-weight:bold;font-size:12px;background:#4acf50;
+         width:12.5rem;color:rgba(250,250,250,1);
+        text-align:center;border-radius:20px;height:30px;margin:1rem 0 1rem 0;"><?php  echo $row['inserted_at'] ?></p>
            <div class="horizon"></div>
            <p>
              <span><?php  echo $row['heading'];  ?></span><br></p>
@@ -155,13 +133,11 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
             color:#050505;">
          <?php echo $row['text']; ?>
         </p>
-        <div class="horizon horizonx"></div>
+
+            <div class="horizon horizonx"></div>
          <p class="ldc">
-            <i class="far fa-thumbs-up like-btn" style="cursor:pointer;"  id="<?php echo $row['id'];  ?>"></i> <span id="x" class="x">0</span>
-            &nbsp <i class="far fa-thumbs-down dislike-btn" style="cursor:pointer;" id="<?php echo $row['id'];  ?>"></i> <span id="y" class="x">0</span>
-            &nbsp <i class="fas fa-eye" style="cursor:pointer;"></i> <span  class="x"><?php echo $row['views'];  ?></span>
-            &nbsp <i class="far fa-comment" style="cursor:pointer;" id="cmt_color"></i> <span id="ncmt" class="x">0</span>
-            </p>
+           <span  class="x">views : <?php echo $row['views'];  ?></span>
+          </p> 
         <p class="cmnt">Comments</p>
     </div>
 
@@ -179,14 +155,14 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <p class="latest">Latest News<p>
 <?php 
             $query = "select * from tbl_images where id!='$id'  order by id asc limit 7 ";
-             $result = mysqli_query ($conn, $query);
-                if (mysqli_num_rows($result)>0) 
+             $rslty = mysqli_query ($conn, $query);
+                if (mysqli_num_rows($rslty)>0) 
                 {
-                    while ($row = mysqli_fetch_assoc($result))
+                    while ($row = mysqli_fetch_assoc($rslty))
                      {
                       $id = $row["id"];
-                      $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting first 5 words from heading
-                      $text = implode(' ',array_slice(explode(' ', $row['text']),0,16)); //getting first 19 words from text
+                      $head = implode(' ',array_slice(explode(' ', $row['heading']),0,6)); 
+                      $text = implode(' ',array_slice(explode(' ', $row['text']),0,10)); 
                      echo   '<div class="flash">
                      <a href="news.php?id='.$id.'">
                       <div class="nimg"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>';
@@ -197,19 +173,15 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                 }
                else 
                {
-                 echo 'No result found';
+                 echo '<p style="text-align:center;">No result found</p>';
                }
-              ?>
-             
-       
-                     <div class="nad">
+              ?>      
+                     <div class="nad" style="display:none">
                    <img src="images/ad-book.gif" class="nad-img" >
                       </div>  
     </div>
 
-<!--=========================  Login signup popups  =========================-->
-
-<!--============== Signup Popup ==================-->
+<!--= Signup Popup =-->
 <div class="signup" id="sign">
 <div class="sign-card">
  <div class="sign-img">
@@ -217,14 +189,21 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
     <p class="p1">Quick Links</p>
     <div class="msgx" ><p id="msgx" ></p></div>
     <ul>
-     <a href="#"> <li>Colleges</li></a>
-     <a href="#"> <li>Exams</li></a>
-     <a href="#"> <li>Cutoff</li></a>
-     <a href="#"> <li>News</li></a>
-     <a href="#"> <li>Events</li></a>
-     <a href="#"> <li>Important Dates</li></a>
+     <a href="ranking-19.php"> <li>Ranking</li></a>
+     <a href="placement.php"> <li>Placements</li></a>
+     <a href="story.php"> <li>Success Stories</li></a>
+     <a href="more-news.php"> <li>News</li></a>
+     <a onclick="updf();"> <li>Updates</li></a>
       </ul>
-    <p class="p2"><a href="#">privacy policy</a></p>
+<script>
+function updf()
+{
+  TweenMax.to('.signup',0.5,{scaleY: 0});
+  window.location = "index.php#updf";
+}
+ </script>
+
+    <p class="p2"><a href="uPDxgdf.php">privacy policy</a></p>
   </div>
  </div>
  <div class="sign-form">
@@ -238,22 +217,78 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
    <input  type="text"  name="phone" id="phone" placeholder="Mobile Number"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
    <select name="clg" id="clg"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
       <option>Select College</option>
-      <option>National Institute Of technology Srinagar</option> 
-      <option>National Institute Of technology Srinagar Silchar</option>
-      <option>National Institute Of technology Srinagar Trichy</option>
-      <option>Motilal Nehru Institute Of Technology Allahabad</option>
-      <option>Malviya Natioanl Institute Of Technology Jaipur</option>
-      <option>Other</option>
+      <option> NIT Srinagar </option>
+<option> NIT Uttrakhand </option>
+<option> NIT Manipur  </option>
+<option> NIT Mizoram  </option>
+<option> NIT Nagaland </option>
+<option> NIT Agartala </option>
+<option> NIT Meghalaya </option>
+<option> NIT Arunachal Pradesh </option>
+<option> NIT Sikkim </option>
+<option> NIT Silchar </option>
+<option> NIT Hamirpur </option>
+<option> NIT Jamshedpur </option>
+<option> NIT Jalandhar </option>
+<option> NIT Durgapur </option>
+<option> MNIT Jaipur </option>
+<option> NIT Kurukshtera </option>
+<option> NIT Andhra Pradesh </option>
+<option> NIT Patna </option>
+<option> MANIT Bhopal </option>
+<option> NIT Goa </option>
+<option> NIT Puducherry </option>
+<option> NIT Delhi </option>
+<option> NIT Raipur </option>
+<option> NIT Calicut </option>
+<option> NIT Raurkela </option>
+<option> VNIT Nagpur </option>
+<option> NIT Trichy </option>
+<option> NIT Warangal </option>
+<option> MNNIT Prayagraj (Allahabad) </option>
+<option> SVNIT Surat </option>
+<option> NIT Suratkal </option>
+<option> Other </option>
       </select>
       <select name="state" id="state"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
           <option>Select Your State</option>
-          <option>Uttar Pradesh</option>
-          <option>Jammu and Kashmir</option>
-          <option>Rajsthan</option>
-          <option>Tamilnadu</option>
-          <option>Uttrakhand</option>
-          <option>Bihar</option>
-          </select>
+          <option> Uttar Pradesh </option>
+<option> Bihar </option>
+<option> Rajsthan  </option>
+<option> Madhya Pradesh  </option>
+<option> Maharastra </option>
+<option> Andhra Pradesh </option>
+<option> Arunachal Pradesh </option>
+<option> Aasam</option>
+<option> Chhattisgarh </option>
+<option> Odisha </option>
+<option> Goa </option>
+<option> Gujrat </option>
+<option> Haryana </option>
+<option> Himachal Pradesh </option>
+<option> Jammu and Kashmir </option>
+<option> Jharkhand </option>
+<option>  Karnatka </option>
+<option> Kerla </option>
+<option> Manipur </option>
+<option> Mizoram </option>
+<option> Tripura </option>
+<option> Nagaland </option>
+<option> Punjab </option>
+<option> Sikkim </option>
+<option> Tamilnadu </option>
+<option> Uttrakhand </option>
+<option> West Bengal </option>
+<option> Telangana </option>
+<option> Andaman and Nicobar Islands </option>
+<option> Chandigarh </option>
+<option> Dadar and Nagar Haveli </option>
+<option> Daman and Diu </option>
+<option> Delhi </option>
+<option> Lakshadweep </option>
+<option> Puducherry </option>
+<option> Laddakh </option>
+ </select>
           <input  autocomplete="off" name="user_pass" id="user_pass" type="password" placeholder="Password"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
           <input autocomplete="off" type="password"  id="cnf_pass" name="cnf_pass" placeholder="Confirm Password" onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
           <button name="register" id="register" type="button"   class="register">Register</button>
@@ -263,7 +298,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
  </div>
 </div>
 </div>
-<!--=============== Login Popup =================-->
+<!--= Login Popup =-->
 <div class="login" id="log" >
 <div class="log-card">
     <img class="cancel-log"  src="images/cut.png" onclick="cancel_log()">
@@ -273,7 +308,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   <input  id="email" type="text" autocomplete="off" placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
   <input autocomplete="off"  id="pass" type="password" placeholder="Password"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
 <div class="select" id="select">
-  <input type="radio" name="user" id="user" value="1" checked>&nbsp <label class="lab1">User</label>
+  <input type="radio" name="user" id="usert" value="1" checked>&nbsp <label class="lab1">User</label>
   <input type="radio" name="user" id="admin" value="2">&nbsp <label>Admin</label>
  </div>
   <button type="button"  name="login" id="login">Login</button>
@@ -283,19 +318,16 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 </div>
 
-
-
-
-<!--================ Responsive Design for mobile  ===============-->
+<!--= Responsive Design for mobile =-->
 <div class="side-body">
 <p class="latest">Latest News<p>
   <div class="latest-line"></div>
 <?php 
             $query = "select * from tbl_images where id!='$id'  order by id asc limit 7 ";
-             $result = mysqli_query ($conn, $query);
-                if (mysqli_num_rows($result)>0) 
+             $rsltz = mysqli_query ($conn, $query);
+                if (mysqli_num_rows($rsltz)>0) 
                 {
-                    while ($row = mysqli_fetch_assoc($result))
+                    while ($row = mysqli_fetch_assoc($rsltz))
                      {
                       $id = $row["id"];
                       $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
@@ -312,41 +344,30 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                  echo 'No result found';
                }
               ?>
-             
-       
-                 <!--    <div class="nad">
-                   <img src="images/ad-demo.jpg" class="nad-img" >
-                      </div>  -->
+            
     </div>
-
-   
     <footer>
    <div class="datad">
   <p class="x">Feel Free To Contact Us</p>
-  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-9055667606 &nbsp | &nbsp  +91-9055667606</p>
+  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-6202590504 &nbsp | &nbsp  +91-9055667606</p>
  <span id="respo_contact">
  <P>iamannitian@gmail.com</p> 
- <P>+91-9055667606</p> 
+ <P>+91-6202590504</p> 
  <P>+91-9055667606</p> 
    </span>
 </div>
-<!--============== Bottom Container =====================-->
  <div class="container">
-<p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
-2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbsp DESIGNED AND DEVELOPED BY SHUBHAM MAURYA &nbsp|&nbsp NIT SRINAGAR</span></p>
-<p id="and_copy" class="copyright">Developed by Shubham Maurya</p>
+ <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
+2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbspAll Rights Reserved</span></p>
+<p id="and_copy" class="copyright">All rights reserved</p>
 </div>
 </footer>
 </div>
-
 </body>
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-<!--==================  TweenMax CDN  ==================-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-<!--==================  SweetAlert2 CDN  ==================-->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>
-<!--==================  SweetAlert CDN  ==================-->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script   type="text/javascript" src="js/ajax-register.js"></script>
 <script   type="text/javascript" src="js/ajax-login.js"></script>
@@ -357,173 +378,34 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 <script>
 
- /*==================== Functions to get Likes and dislikes =========================*/
-
-function getLikes()
-{
-  var id = $('html').attr('id'); 
-  setInterval(function(){
-   $('#x').load('get_likes.php', {id : id});
-  },1000);
-}
-function getDislikes()
-{
-  var id = $('html').attr('id'); 
-  setInterval(function(){
-   $('#y').load('get_dislikes.php', {id : id});
-  },1000);
-}
-getDislikes();
-getLikes();
-
- /*==================== Menu toggle =========================*/
-
+ /*= Menu toggle =*/
  $(document).ready(function(){
 
-  if (window.matchMedia('(max-width:721px)').matches)
+if (window.matchMedia('(max-width:721px)').matches)
 {
-  
-  $('.cut_nav').click(function(){
-    $(this).css('display','none');
-    $('.menu-toggle').css('display','block');
-    TweenMax.to('.active',0.5,{scaleX: 0});
-    $('nav').css('z-index', '1');
-    $('.logo').css('marginLeft', '0px');
-    $('.logo').css('marginTop', '0px');
-    $('.logo_txt').css('marginTop', '0px');
 
-    setTimeout(function(){
-    
-      $('header').css('background', 'black');
-    
-    },200)
-
-  })
-
-  $(window).scroll(function(){
-  $('header').css('background', 'black');
-})
-  
-
-
-  $('.menu-toggle').click(function(){
-    $(this).css('display','none');
-    $('.cut_nav').css('display','block');
-
-    $('nav').css('z-index', '4');
-
-    $('header').css('background', 'transparent');
-    $('.cut_nav').css('background','black');
-    TweenMax.to('.active',0.4,{scaleX: 1});
-
-    setTimeout(function(){
-      $('.logo').css('marginLeft', '62px');
-      $('.logo').css('marginTop', '18px');
-      $('.logo_txt').css('marginTop', '10px');
-    },200);
-
-    setTimeout(function(){
-      $('nav').css('z-index', '-1');
-    },350);
-   
-  })
-$('#login_nav').click(function()
-{
-  $('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');
-  TweenMax.to('.active',0.1,{scaleX: 0});  
-  $('.cut_nav').css('display','none');
+$('.cut_nav').click(function(){
+  $('header').css('background','black');
+  $(this).css('display','none');
   $('.menu-toggle').css('display','block');
-  $('header').css('background', 'black');
-  $('.logo_txt').css('marginTop', '0px');
+  TweenMax.to('.active',0.5,{scaleX: 0});
 })
 
-$('#register_nav').click(function(){
-  $('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');
-  TweenMax.to('.active',0.1,{scaleX: 0});  
-  $('.cut_nav').css('display','none');
-  $('.menu-toggle').css('display','block');
-  $('header').css('background', 'black');
-  $('.logo_txt').css('marginTop', '0px');
+$('.menu-toggle').click(function(){
+  $('header').css('background','transparent');
+  $(this).css('display','none');
+  $('.cut_nav').css('display','block');
+  $('.cut_nav').css('background','black');
+  TweenMax.to('.active',0.4,{scaleX: 1});
 })
 
-$('#about_nav').click(function()
+$('#login_nav,#register_nav,#about_nav,#update_nav').click(function()
 {
-  $('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');
-  TweenMax.to('.active',0.1,{scaleX: 0});  
-  $('.cut_nav').css('display','none');
-  $('.menu-toggle').css('display','block');
+  $('header').css('background','black');
+TweenMax.to('.active',0.1,{scaleX: 0});  
+$('.cut_nav').css('display','none');
+$('.menu-toggle').css('display','block');
 })
 
 }
 })
-
-// changing the colour of rating buttons
-
-//getting color of like btn
-
-function get_like_btn_color()
-{
-  var post_id = $('html').attr('id');
- setInterval(function(){
-  $.post('posetive_rating_state.php', {post_id: post_id}, function(data, status){   
- if(data == 1)
- {
-  $('.like-btn').addClass('fas');
-  $('.dislike-btn').removeClass('fas');
- }
- else if(data == 0)
- {
-  $('.like-btn').removeClass('fas');
-  $('.like-btn').addClass('far');
- }
-});
- },1000);
-}
-
-//getting color of dislike btn
-
-function get_dislike_btn_color()
-{
-  var post_id = $('html').attr('id');
-  setInterval(function(){
-    $.post('negative_rating_state.php', {post_id: post_id}, function(data, status){   
- if(data == 1)
- {
-  $('.dislike-btn').addClass('fas');
-  $('.like-btn').removeClass('fas');
- }
- else if(data == 0)
- {
-  $('.dislike-btn').removeClass('fas');
-  $('.dislike-btn').addClass('far');
- }
-});
- },1000);
-}
- get_dislike_btn_color();
- get_like_btn_color();
-
-
-//getting total commnet
-
-function loadNcmt()
-{
-var id =  $('html').attr('id');
-setInterval(function(){
-$.post('comment_number.php', {post_id : id}, function(data, status)
-{
-  $('#ncmt').text(data);
-  $('#cmt_color').addClass('fas');
-  if(data == 0)
-  {
-    $('#cmt_color').removeClass('fas');
-  }
-});
-},1000);
-}
-loadNcmt();
-
-</script>

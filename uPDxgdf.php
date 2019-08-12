@@ -2,7 +2,7 @@
 <html id="<?php echo $row['id']; ?>">
 <head>
 <title>I Am An Nitian | Will Be Updated Soon</title>
-
+<meta name="theme-color" content="#000">
 <link rel="icon" href="images\imnitian.png">
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
@@ -11,26 +11,21 @@
 body{
     margin:0;
     padding:0;
-    background:rgba(250,250,250,1);
+    background:rgba(248,248,248,1);
 }
-.heading {
-  top:50%;
+
+body div{
   left:50%;
+  top:50%;
   transform:translate(-50%,-50%);
-  position:absolute;
+position:absolute;
 }
-.heading p{
-    font-size:35px;
-    text-transform: capitalize;
-    text-align:center;
-    font-weight:bold;
-    color:rgba(80,80,80,1);
-}
+
 </style>
 </head>
 <body>
-<div class="heading">
-<p>Will Be updated soon....</p>
+<div>
+<img src="images/soon.png" width="160px" height="160px">
 </div>
 </body>
 </html>

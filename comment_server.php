@@ -11,8 +11,6 @@ if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])
       $user_name = $_SESSION['user_name'];
 
 
-
-/*===================  Getting time and date ====================*/
 //getting IST
 date_default_timezone_set('Asia/Kolkata');
 
@@ -29,7 +27,11 @@ $hrs = (int)date('H');
 if($hrs>12)
 {
     $hrs= $hrs-12;
-    $hrs = "0".$hrs;
+    if($hrs<10)
+    {
+        $hrs = "0".$hrs;
+    }
+    
 }
 else
 {

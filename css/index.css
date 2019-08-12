@@ -1,14 +1,3 @@
-/*
-* I AM AN NITIAN
-* v1.0
-* Start Date : May 17 2019
-* Developer : Shubham Maurya
-* National Institute Of Technology Srinagar J&K India 190006
-* GitHub : https://github.com/pnstech
-* LinkedIn : https://www.linkedin.com/in/cyberthreatatnit/   
-*/
-
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 
 *{
 	outline:none;
@@ -19,16 +8,9 @@
 	word-wrap: break-word;
 	}
 
-	html,body{
-		height:100%;
-	}
-
-
 	body{
-	background: #fafafa;	
+	background: rgb(250, 250, 250);	
 	}			
-
-/*================  Page Preloader  =================*/ 
 
 	#loader{
 		width:100%;
@@ -60,7 +42,6 @@
 	
 	}
 
-
 	.banner .textx{
 		top:50%;
 		left:50%;
@@ -71,11 +52,10 @@
 	
 	}
 
-	
 	.dynamic-text
 	{
 		font-weight:bold;
-		font-size:40px;
+		font-size:48px;
 		color:rgba(256,256,256,1);
 		letter-spacing:1px;
 		padding-bottom:20px;
@@ -84,25 +64,22 @@
 	.text{
 		color:rgba(256,0,0,0.9);
 		font-weight:bold;
-		font-size:46px;
+		font-size:52px;
 		text-align:center;
 		letter-spacing:2px;
 		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	}
-	
-	
+		
 	 .textx .msg{
 		text-transform:uppercase;
 		color:rgba(256,256,256,1);
-		font-size:41px;
+		font-size:45px;
 		font-weight:bold;
 		padding-bottom:30px;
 		letter-spacing:2px;
 		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	}
 	
-/*================  Join Now Button  =================*/ 
-
 	.join{
 		text-transform:uppercase;
 		color:rgba(255,255,255,1);
@@ -123,8 +100,6 @@
 		transition: 0.1s;
 	}
 	
-/*================  Banner Social Icons  =================*/ 
-
 	.banner .textx .social{
 		margin-top:2%;	
 	}
@@ -143,8 +118,7 @@
 		border: 2px solid rgba(256,256,256,1);
 		transition:0.3s;
 	}
-	
-	/*================  Scroll Down Mouse Indicator  =================*/ 
+
 	.center{
 		top:95%;
 		left:50%;
@@ -212,8 +186,6 @@
 		line-height:3px;
 	}
 
-/*================  About Us Section  =================*/ 
-
 	.about{
 		margin: 0 auto;
 		border-radius:5px;
@@ -221,7 +193,7 @@
 		flex-direction:row;
 		width:77%;
 		height: 280px;
-		margin-bottom:6%;
+		margin-bottom:7rem;
 		margin-top:2rem;
 	}
 	.about .about-img{
@@ -249,7 +221,7 @@
 	}
 	
 	.about-ln{
-		width:27%;
+		width:22%;
 		height:4px;
 		background:rgba(256,0,0,0.5);
 		left:50%;
@@ -268,14 +240,9 @@
 		font-size:26px;
 	}
 	
-
-/*================  Fooetr Section  =================*/ 
-
 footer{
 	margin-top:3%;
 }
-
-/*================ Mobile Version explore tabs  =================*/ 
 
 .mob-expo{
 display:none;
@@ -290,7 +257,7 @@ white-space:nowrap;
 }
 
 .mob-expo .appx_expo{
-	margin-left:3px;
+	margin-left:5px;
 	height:155px;
 	width:145px;
 	background:white;
@@ -300,13 +267,14 @@ white-space:nowrap;
 	box-shadow:1px 1px 1px 1px rgba(220,220,220,1);
 }
 
-.mob-expo #appx_left{
-margin-left:5px;
-}
 
 .mob-expo #appx_right{
-	margin-right:5px;
+	margin-left:11px;
 	}
+
+	.mob-expo #appx_left{
+		margin-right:11px;
+		}
 
 .mob-expo .appx_expo img{
 	margin-top:15px;
@@ -331,7 +299,7 @@ color:gray;
 	}
 
 	.more_btn button{
-		width:12rem;
+		width:11rem;
 		padding:0.6rem 0 0.6rem 0;
 		outline:none;
 		border:none;
@@ -343,22 +311,15 @@ color:gray;
 		transform:translate(-50%);
 		position:relative;
 		letter-spacing: 0.1px;
-		text-transform: uppercase;
+		text-transform:capitalize;
 	}
 	  
 	.nit-logos{
 		margin-bottom:6rem;
 	}
 
-	  
-/*================ Mobile Version Responsive  =================*/ 
-
 @media (max-width:991px)
 {
-
-
-/*================ Dynamic Text =================*/
-
 	.dynamic-text
 	{
 		font-size:32px;
@@ -370,38 +331,40 @@ color:gray;
 	display: block;
 	}
 
-/*================ Text before Dynamic Text =================*/	
+.textx{
+	padding-left:10px;
+	padding-right:10px;
+}
 	.text
 	{
 		text-align:center;
 		 font-size:36px;
 	}	
-/*================ Text below Dynamic Text =================*/	
+
 	.textx .msg{
 		font-size:34px;
 		line-height:40px;
 	}
-/*================ Join Now button =================*/
 .textx .join{
 	padding:6px 43px;
 	margin-top:0;
 	}
-/*================ Social media icon =================*/	
+
 	.banner .textx .social{
  margin-top:5%;
 	}
-	/*================ Explore Section Tabs =================*/
 
 	.explore
 		{
+			width:100%;
 			padding:0;
-
 		}
 
 	  .explore .expo{
 		  width:100%;
 		  margin:0;
-	     flex-direction:column;
+		 flex-direction:column;
+		 padding:0;
 	  }
 
 
@@ -409,19 +372,22 @@ color:gray;
 		 display:none;
 	 }
 
-	 /*================ Mobile versionExplore Section Tabs =================*/
-
 .mob-expo{
 	display:block;
 }
 
-	
+.explore .expo .xnnn{
+	width:22rem;
+	}
+
 	  .explore .expo .xnnn a .zoom{
-		height:148px;
+		height:170px;
+		width:100%;
 		}
 
 	  .explore .expo .xnnn img{
 	  height:100%;
+	  width:100%;
 	  }
 
 	  .explore .expo .xnnn a img:hover{
@@ -440,18 +406,23 @@ color:gray;
 	display:block;
     }
 
-	 /*================ About Section =================*/
-
-
 	 #about-img{
 		 display:none;
 	 }
+
 .about{
-	margin-left:3rem;
 	flex-direction:column;
-	margin-bottom:0;
-	margin-top:1rem;
+	margin-bottom:3rem;
+	margin-top:2rem;
+	width:82%;
 }
+
+
+.about .about-text{
+margin:0;
+padding:0;
+}
+
 .about .about-text p{
 	line-height:30px;
 }
@@ -478,7 +449,6 @@ color:gray;
 		width:3rem;
 		display: none;
 	}
-/*=========== Hiding some part of about section  ==============*/
 	#ab{
 		display: none;
 	}
@@ -503,11 +473,10 @@ color:gray;
 
 
 .explore .expo .xnnn{
-	 width:80%;
-	 margin-left:0.4rem;
+	   width:80%;
+	   margin-left:0.4rem;
 		left:40%;
 	    transform: translate(-40%);
 	    position: relative;
 }
-
 }

@@ -1,12 +1,25 @@
-<!--
-@ This file consists of code for updating and editing news
--->
 <?php
-
-session_start(); //preventing direct access of this page
+session_start(); 
 if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION['user_type']!=1)
 {
-  exit('access denied page 404 not found');
+    exit("<div style='
+    top:50%; 
+    left:50%; 
+    transform:translate(-50%,-50%);
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    '>
+    <img src='images/access.png' width='200px' height='200px'>
+    <p style='
+  
+    font-size:35px;
+  text-align:center;
+  font-weight:bold;
+    '
+    >Access Denied Page 404 Not Found<p>
+    </div>");
 }
 
 include_once('connection.php');
@@ -15,7 +28,7 @@ if(isset($_POST['update']))
 {
     $id=$_GET['update'];
     $file= addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
-    $head = addslashes($_POST['heading']); //here add slashes is used to allow insertion of single quoptes commas
+    $head = addslashes($_POST['heading']); 
     $news = addslashes($_POST['news']);
     $query="update tbl_images set name='$file', heading='$head', text='$news' where id='".$id."'";
     if(mysqli_query($conn, $query))  
@@ -37,7 +50,6 @@ if(isset($_POST['update']))
 <link rel="icon" href="images/imnitian.png">
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
-<meta name="theme-color" content="#000">
 <meta name="author" content="Shubham Maurya">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -48,16 +60,11 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 </style>
 </head>
 <body onload="loadme()">
-
-  <!--================== Preloader ==========================-->
 <div id="loader">
 </div>
 <div class="main">
-
-<!--=================  Menu Button   ===================-->
 <button id="show"><i class="fas fa-bars"></i></button>
 <p class="mainh" id="mainh" >Update News</p>
-<!--=================  Editing News  ===================-->
 <div class="add-news" id="add-news">
 <form method="post" enctype="multipart/form-data" autocomplete="off">
 
@@ -83,14 +90,15 @@ if(mysqli_num_rows($result)>0)
 </div>
 </div>
 
-<!--=================  Left Side MAnu Bar   ===================-->
 <div class="left-menu" class="popup" id="demo">
-    <p>Admin Panel</p>
-    <button id="add" type="button" onclick="func()">add news</button>
+    <p><?php echo "Hello! ".$_SESSION['user_name'];  ?></p>
+    <div>
+    <button id="add" type="button" >add news</button>
     <button id="edit" type="button">edit news</button>
-    <button id="delete" type="button">view news</button>
+    <button id="feedback" type="button">feedback</button>
     <button id="statics" type="button">statics</button>
     <button id="home" type="button">Home</button>
+</div>
 </div>
 
 </body>
@@ -107,6 +115,8 @@ if(mysqli_num_rows($result)>0)
 <script>
 
 $(document).ready(function(){
+
+    //home button
     $("#home").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0}); 
     setTimeout(function() {
@@ -114,7 +124,7 @@ $(document).ready(function(){
     },500);  
   })
 
-/*================  Add News ===================*/ 
+//add news button
   $("#add").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0});   
     setTimeout(function() {
@@ -123,14 +133,30 @@ $(document).ready(function(){
   })
 
 
-/*================  Editing News ===================*/   
-
+//edit news button
   $("#edit").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0});
     setTimeout(function() {
         window.location.href="edit_news.php";
     },500); 
   })
+
+  //feedback button
+  $("#feedback").click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0});
+    setTimeout(function() {
+        window.location.href="admin_feedback.php";
+    },500); 
+  })
+
+//edit news button
+$("#statics").click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0});
+    setTimeout(function() {
+        window.location.href="statics.php";
+    },500); 
+  })
+
 
 $("#demo").on('click',function(){
     TweenMax.to('#demo',0.5,{scaleX: 0}); 
@@ -192,17 +218,4 @@ $(document).ready(function(){
     });
 });
 
-</script>
-
-<script>
-function func()
-{
-    document.getElementById('mainh').style.display='block';
-    document.getElementById('add-news').style.display='block';
-}
-function fund()
-{
-    document.getElementById('mainh').style.display='none';
-    document.getElementById('add-news').style.display='none';
-}
 </script>

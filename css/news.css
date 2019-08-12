@@ -1,6 +1,3 @@
-
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
-
 *{
    outline:none;
 	margin:0;
@@ -9,21 +6,10 @@
 	font-family:sans-serif;
 	word-wrap: break-word;
 }
-
-html,body{
-   height:100%;
-}
-
-html{
-   scroll-behavior: smooth;
-   overflow-x: hidden;
-}
-
 body{
    background: rgba(250,250,250,1);
    color:rgba(80,80,80,1);
 }
-
 
 #loader{
    width:100%;
@@ -41,7 +27,7 @@ body{
 	height:100%;
 	position:absolute;
    }
-   
+
 .news-body{
    width:55%;
    height:auto;
@@ -50,14 +36,14 @@ body{
 }
 
 .news-body .horizon{
-   background:rgba(256,0,0,0.5);
+   background:#4CAF50;
    width:28rem;
    height:3px;
    margin-bottom:1.2rem;
 }
 
 .news-body .horizonx{
-margin-top:2rem;
+margin-top:0.8rem;
    width:15rem;
 margin-bottom:0.1px;
 }
@@ -75,7 +61,6 @@ margin-bottom:0.1px;
    border:1px solid rgba(256,0,0,0.1);
 }
 
-
 .news-body .news-content{
 height:auto;
 padding:0.5rem;
@@ -92,22 +77,24 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight:bold;
   color:rgba(256,0,0,0.6);
+  color:rgba(37, 116, 169, 1);
   line-height: 42px;
    }
 
 .news-body .news-content .ldc{
    font-size:18px;
    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-style:italic;
 }
 
 .news-body .news-content .ldc .like-btn, .dislike-btn,.fa-eye, .fa-comment{
-   color:rgba(256,0,0,0.6);
+   color:gray;
 }
 
 .news-body .news-content .ldc .x{
    font-size:14px;
    font-family: sans-serif;
-   color:rgba(256,0,0,0.6);
+   color:gray;
 }
 
 .news-body .news-content .cmnt{
@@ -115,6 +102,7 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    margin-top:10px;
    font-family: serif;
    color:rgba(256,0,0,0.6);
+   color:rgba(37, 116, 169, 1);
    margin-bottom:10px;
    letter-spacing: 0;
    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -168,13 +156,11 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    margin-top:8px;
 }
 .news-body .comments .cmt-line{
-   width:14rem;
+   width:13rem;
    height:1px;
    background:rgba(134, 96, 206,0.4);;
    margin-top:10px;
 }
-
-
 .ad-body,.side-body{
    width:35%;
    top:7.1rem;
@@ -196,7 +182,7 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    }
 
    .ad-body .flash a, .side-body .flash a{
-      background:white;
+
       width:100%;
       display: flex;
       flex-direction:row;
@@ -261,18 +247,19 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    line-height:1px;
 }
 
-/*==for mobile==*/
+/*==for mobile==*/    
 .latest{
    font-weight: bold;
    font-size:25px;
    color:rgba(256,0,0,0.6);
+   color:rgba(37, 116, 169, 1);
    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .latest-line{
    height:2px;
    width:6.2rem;
-   background:red;
+   background:rgba(37, 116, 169, 1);
    margin-top:4px;
 }
 
@@ -286,14 +273,12 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 .user_icon
 {
    font-size:25px;
-   color:#8860d0;
 }
 
 footer{
    margin-top:16rem;
 }
 
-/*==================== Responsive design for mobile ====================*/
 @media (max-width:991px)
 {
  .news-body .news-content  .horizon{
@@ -311,15 +296,14 @@ footer{
    }
 
    .news-body{
-      margin-top:6rem;
+      margin-top:5rem;
       width:100%;
       margin-left:0;
-
    }
 
 .news-body .news-content{
    margin: 0 auto;
-   padding:0 2.1rem 0 2.1rem;
+   padding:0 1.5rem 0 1.5rem;
 }
 
 .news-body .news-content p span{
@@ -328,11 +312,11 @@ font-size:29px;
 
    .news-body .news-img{
       width:100%;
-      padding:0 0.8rem 0 0.8rem;
+      padding:0 0.5rem 0 0.5rem;
    }
 
 .news-body .news-img img{
-   height:190px;
+   height:200px;
    width:100%;
 }
 
@@ -403,8 +387,6 @@ letter-spacing:0;
    .ad-body .nad,.side-body .nad{
       margin-top:25px;
    }
-
-
 #morex{
    display:block;
 }

@@ -48,7 +48,6 @@ if(comment_content != '')
 
 
 /*Loading comments when page loaded is loaded*/
-
   var id = $('html').attr('id');
   $.post('get_comment.php', {post_id : id}, function(data, status){
    $('.comments').html(data);

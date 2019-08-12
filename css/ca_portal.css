@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
+*{
+	outline:none;
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family:sans-serif;
+	word-wrap: break-word;     
+	}
+
+	html,body{
+		height:100%;
+	}
+
+
+	body{
+    background: #fafafa;	
+    display: flex;
+	}			
+
+/*================  Page Preloader  =================*/ 
+
+	#loader{
+		width:100%;
+		height:100vh;
+		background:rgb(252,252,252) 
+		url('loaderx.gif');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size:4rem;
+		position: fixed;
+		z-index:555;
+	} 
+	
+	.wrapper{
+    width:100%;
+    height:100vh;
+    }
+    
+
+
+    .menu{
+        width:20%;
+        height:100vh;
+        border-left:2px solid rgba(235,235,235,1);
+        background:rgba(245,245,245,1);
+        float:right;
+    }
+    
+    .menu div:nth-child(1){
+        text-align:center;
+        color:#050505;
+        font-size:32px;
+        font-weight: bold;
+        margin-top:2rem;
+        margin-bottom:1.2rem;
+    }
+    
+    .menu div p{
+        font-family: 'Playfair Display', serif;
+    }
+    
+    body .title{
+    background:transparent;
+    text-align:center;
+    z-index:1;
+    position:absolute;
+    top:0;
+    text-align: center;
+    color:#050505;
+    font-size:45px;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    width:80%;
+    margin-top:4rem;
+    }
+    
+    body .title span{
+    
+        font-family: 'Playfair Display', serif;
+    
+        }
+    
+    
+    .mn_btn{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .mn_btn button{
+      background:transparent;
+      color:#282828;
+      font-size:16px;
+      border:none;
+      margin:0.8rem;
+      font-weight:bold;
+      text-align: center;
+      cursor: pointer;
+      padding:0.7rem;
+    }
+    
+    
+    
+      .logo {
+       z-index:2;
+       position: absolute;
+       left:20px;
+       top:10px;
+       display: flex;
+       flex-direction:column;
+       cursor:pointer;
+          }
+    
+    
+    .user{
+       
+        z-index:2;
+        position: absolute;
+        right:25%;
+        top:14px;
+        display: flex;
+        flex-direction:column;
+        cursor:pointer;
+    }
+    
+      .logo img, .user img{
+    width:60px;
+    height:60px;
+    align-self: center;
+      }
+    
+      .logo p, .user p{
+        font-weight:bold;
+        color:rgba(60,60,60,1);
+        font-family: 'Dancing Script';
+        font-size:20px;
+          }
+    
+     .user p{
+           margin-top:5px;
+              }
+        
+              .user img{
+                border:1px solid rgba(120,120,120,1);
+                border-radius:50%;
+              }
+    
+
+
+
+
+.icons{
+    margin:0 auto;
+    width:80%;
+    height: 100vh;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icons .card, 
+.icons .cardx,
+.icons .cardy
+{
+    height:230px;
+    width:190px;
+    background:white;
+    border-radius:7px;
+    text-align: center;
+    display:flex;
+    flex-direction:column;
+    box-shadow: 1px 1px 5px 2px rgba(120,120,120,1);
+    padding:1.5rem;
+    cursor:pointer;
+}
+
+
+.icons .card div, 
+.icons .cardx div,
+.icons .cardy div
+{
+    height:140px;
+    width:140px;
+    border:2px solid rgba(50,50,50,1);
+    border-radius:50%;
+    color:white;
+    align-self: center;
+    margin-bottom:1.2rem;
+    background:rgba(210,210,210,1);
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    background:#aaccff;
+}
+
+.icons .card  p,
+.icons .cardx  p,
+.icons .cardy  p
+{
+color:#050505;
+font-weight:bold;
+font-size:15px;
+font-family: 'Lato', sans-serif;
+letter-spacing: 0.5px;
+}
+
+.icons .card div p,
+.icons .cardx div p
+.icons .cardy div p
+{
+color:rgba(50,50,50,1);
+font-size:40px;
+font-weight:bold;
+}
+
+
+
+/*============== Second Slide =============*/
+
+
+          .t2, .t3, .t4, .t5{
+              display:none;
+          }
+
+          .icons .cardx
+          {
+            height:280px;
+            width:230px;
+            padding:0;
+            border-radius: 0;
+            border:1px solid rgba(120,120,120,1);
+            display: none;
+          }
+
+          .icons .cardx div
+          {
+            border:none;
+            border-radius:0;
+            width:100%;
+            height:150px;
+            margin:0;
+            margin-bottom:7px;
+            overflow:hidden;
+            background:white;
+          }
+
+          .icons .cardx div img{
+            width:100%;
+            height:100%;
+            transition:all 0.3s ease;
+          }
+          .icons .cardx div img:hover{
+            width:115%;
+            height:115%;
+          }
+
+          .icons .cardx span{
+            font-size:15px;
+            line-height:21px;
+            padding: 3px 7px 7px 7px;
+            font-family: 'Playfair Display', serif;
+          }
+
+          .icons .cardx p{
+            padding:5px;
+          }
+
+         .icons .tasks{
+                margin:0 auto;
+                font-size:18px;
+                font-weight:bold;
+                font-family: 'Lato', sans-serif;
+                color:#282828;
+                font-weight:bold;
+                text-align:center;
+                display: none;
+          }
+
+          
+/*============== Thired Slide =============*/
+
+.icons .cardy{
+display: none;
+box-shadow: none;
+border:none;
+width:200px;
+height:320px;
+}
+
+.icons .cardy p
+ {
+ line-height:10px;
+ font-family: 'Playfair Display', serif;
+ }
+    
+
+    footer
+    {
+        width:80%;
+        text-align:center;
+        bottom:0;
+        position: absolute;
+        z-index:2;
+        padding:28px;
+        font-weight:bold;
+        font-size: 12px;
+        text-transform: uppercase;
+        color:rgba(50,50,50,1);
+    }
+
+    .icons .msgx{
+        position: absolute;
+        bottom:7rem;
+        color:black;
+        font-size:16px;
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 0.4px;
+        display:none;
+    }

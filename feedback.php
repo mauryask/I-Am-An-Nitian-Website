@@ -2,11 +2,9 @@
 
 include_once('connection.php');
 
- /*=================  user name validation  ====================*/
-
 if(ctype_alpha(str_replace(' ', '', $_POST['user_name'])) === false)  
     {
-        echo -1; // if name invalid
+        echo -1; 
         exit;
     }
     else
@@ -14,7 +12,6 @@ if(ctype_alpha(str_replace(' ', '', $_POST['user_name'])) === false)
         $name = $_POST['user_name'];
     }
 
- /*=================  email validation  ====================*/
   if(!filter_var($_POST['user_email'],FILTER_VALIDATE_EMAIL))
   {
       echo -2; // if email invalid

@@ -1,6 +1,4 @@
 
-/*<<<<<<<<<<======= This file consists of incresing like and dislike functionalites =========>>>>>>>>>>>*/
-
 $(document).ready(function(){
 
     //dealing with like button
@@ -11,7 +9,7 @@ $(document).ready(function(){
             $.ajax({
                 url:'rating_server.php',
                 type:'post',
-                data: {id:id, action:action},
+                data: {id:id, action:action},     
               success:function(data)
                 {
                     if(data == 2)
@@ -22,9 +20,7 @@ $(document).ready(function(){
                    {
                            adminPop();  // if admin try to like or comment
                    }
-                      /*document.getElementById(data).classList.add('fa-thumbs-up');
-                        document.getElementById(data).classList.remove('fa-thumbs-down');    
-                        */                           
+                                                 
               }
                 
             });

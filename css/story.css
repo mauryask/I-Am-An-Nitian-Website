@@ -1,13 +1,5 @@
-/*
-* I AM AN NITIAN
-* v1.0
-* Start Date : May 17 2019
-* Developer : Shubham Maurya
-* National Institute Of Technology Srinagar J&K India 190006
-* GitHub : https://github.com/pnstech
-* LinkedIn : https://www.linkedin.com/in/cyberthreatatnit/   
-*/
 
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
 	
 *{
@@ -19,22 +11,17 @@
 	word-wrap: break-word;
 	}
 
-	html,body{
-		height:100%;
-	}
-
-
 	body{
-	background: rgba(250,250,250,1);	
+        background: rgb(250,250,250,1);	
 	}			
 
-.wrap_me{
-    position: relative;
-}
+    .progress-container{    
+        top:0;
+        position:fixed;
+    } 
 
-/*================  Page Preloader  =================*/ 
-
-	#loader{
+   #loader{
+        top:0;
 		width:100%;
 		height:100vh;
 		background:rgb(252,252,252) 
@@ -46,28 +33,76 @@
 		z-index:555;
 	} 
 	
-	.wrapper{
-	width:100%;
-	height:100%;
-	position:absolute;
-	}
+.wrapper{
+    width:75%;
+    margin:0 auto;
+    padding:25px;
+}
+
+
+.wrapper  .banner{
+    width:100%;
+    height:550px;
+    overflow: hidden;
+}
+
+.wrapper  .banner img{
+    width:100%;
+    height:100%;
+}
+
+.wrapper  .banner .str{
+color:white;
+color:#050505;
+color:rgba(37, 116, 169, 1);
+position:sticky;
+bottom:0;
+left:0;
+right:0;
+top:0;
+width:100%;
+padding:0.3rem;
+text-align:center;
+font-weight: bold;
+font-size:68px;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.main .number{
+    text-align:center;
+    margin:0 auto;
+    font-size:60px;
+    font-weight: bold;
+    color: white;
+    border-radius:50%;
+    background:red;
+    width:110px;
+    height:110px;
+    border: 10px double;
+}
+
+.main .number p{
+left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    position:relative;
+}
 
 .main{
     margin: 0 auto;
-    width:65%;
-    height:100vh;
-    margin-top:8rem;
+    width:100%;
+    margin-top:7rem;
 }
 
 .child_x{
     overflow: hidden;
     width:100%;
     height:auto;
-box-shadow:0 0 2px 2px rgab(90,90,90,1);
-padding:25px;
-text-align: justify;
-margin-bottom:3rem;
-background:#222233;
+    box-shadow:0 0 2px 2px rgab(90,90,90,1);
+    text-align: justify;
+    margin-top:2rem;
+    margin-bottom:3rem;
 }
 
 
@@ -76,34 +111,33 @@ border-radius:2px;
 float:right;
 cursor:pointer;
 box-shadow: 0 0 8px 2px rgba(210,210,210,1);
+overflow: hidden;
 }
 
 .hero p{
     line-height:30px;
     letter-spacing: 0.3px;
     font-size:17px;
-    color:#AACCFF;
+    color:#050505;
     font-family: 'Playfair Display', serif;
 }
-
 
 .child_x:nth-child(odd) .hero .himg{
     float:left;
    margin:0 27px 3px 0;
+   height:350px;
+   background:rgba(255,196,105,1);
     }
     
-
     .child_x:nth-child(even) .hero .himg{
         float:right;
-       margin:0 0 0 20px;
+        margin:0 0 0 20px;
         }
         
 
 .hero .himg div{
     width:220px;
     padding:5px;
-    border:1px solid rgba(210,210,210,1);
-    background:rgba(240,240,240,1);
 }
 
 .hero .himg div p
@@ -114,69 +148,213 @@ box-shadow: 0 0 8px 2px rgba(210,210,210,1);
 }
 
 .hero .himg div:nth-child(1)
-{   
-
+{   height:250px;
     background:rgba(255,196,105,1);
 }
 
 .hero  div:nth-child(1) img{
     width:100%;
-    height:80%;
+    height:100%;
     border-radius:2px;
     }
 
     
 .hero .himg div:nth-child(2)
 {
-    text-align:center;
+text-align:center;
   font-weight:bold;
-  line-height:20px;
   background:rgba(255,196,105,1);
   margin-top:0;
+  font-family: 'Lato', sans-serif;
 }
+
+.hero #queryx #query, .hero #showmek #query {
+    font-family: 'Playfair Display', serif;
+    color:rgba(37, 116, 169, 1);
+    }
 
 
 .hero button
 {
-    padding:0.4rem;
-    width:10rem;
+    padding:0.6rem;
+    width:11rem;
     cursor:pointer;
-    box-shadow: 0 0 7px 2px rgba(210,210,210,1);
     margin: 20px 0 12px 0;
     left:50%;
     transform: translate(-50%);
     position: relative;
+    font-size:15px;
+    background: #4CAF50;
+    border:none;
+    color:white;
 }
 
 #showmex, #showmey, #showmez, #showmek{
     display:none;
 }
 
+.hero .himg div:nth-child(2) p
+{
+    font-family: 'Lato', sans-serif;
+    line-height:20px;
+    font-weight: bold;
+    word-spacing:2px;
+    letter-spacing: 0.4px;
+}
+
 .hero .himg div:nth-child(2) p:nth-child(1)
 {
    font-size:16px;
+   
 }
 
 .hero .himg div:nth-child(2) p:nth-child(2)
 {
-   font-size:14px;
+   font-size:14px;    
+
 }
 
 
 .hero .himg div:nth-child(2) p:nth-child(3)
 {
    font-size:13px;
+
 }
 
 
 .hero .himg div:nth-child(2) p:nth-child(4)
 {
    font-size:12px;
+
+}   
+
+.next{
+    font-size:19px;
+    font-family: 'Playfair Display', serif;
+    color:#282828;
+    text-align:center;
+    line-height:28px;
 }
 
+#hide{
+    line-height:0;
+}
+
+.next a{
+text-decoration: none;
+color:blue;
+}
+
+.next a:hover{
+    text-decoration:underline;
+    color:red;
+    }
+
+.next_btn, .next_btn_mob{
+    border:2px solid #4CAF50;
+    background:#4CAF50;
+}
+.next_btn_mob{
+display: none;
+}
+
+    .next_btn a, .next_btn_mob a{
+        text-decoration: none;
+        color:white;
+        }
+
+        .next_btn a:hover, .next_btn_mob a:hover{
+            text-decoration: none;
+            color:white;
+            }
+    
+            @media (max-width:921px)
+            {
+
+                footer{
+                    margin-top:3rem;
+                }
+
+                .wrapper{
+                    width:100%;
+                    padding:10px;
+                    margin-top:3rem;
+                }
+                            
+            .wrapper  .banner{
+           display:none;
+            }
 
 
+                .hero{
+                    margin:0 auto;
+                    width:90%;
+                }
+
+                .hero .himg {
+                 width:100%;
+                 border:none;
+                 box-shadow:none;
+                 padding-bottom:1rem;
+                    }
+
+                    .hero .himg div{
+                        margin:0 auto;
+                      width:85%;
+                    }
+
+                   
+                    .hero button
+                    {
+                        padding:0.6rem;
+                        width:11rem;
+                        color:white;
+                    }
+
+                    .main{
+                        margin: 0 auto;
+                        width:100%;
+                        margin-top:3rem;
+                    }
+
+                    .main .number{
+                        font-size:55px;
+                        width:90px;
+                        height:90px;
+                    }
+
+                    .next{
+                        font-size:15px;
+                    }
+
+                    .next_btn{
+                        display: none;
+                    }
 
 
+                    .next_btn_mob{
+                        border:1px solid #4CAF50;
+                        display: block;
+                        }
 
+                    #lnk{
+                        margin:0 auto;
+                        width:80%;
+                        text-align:center;
+                        font-size:16px;
+                    }
 
+                    #hide{
+                        display:block;
+                        line-height:0;
+                        font-weight: bold;
+                        font-size:18px;
+                    }
+
+                    .hero #queryx #query , .hero #showmek #query {
+                        font-family: 'Playfair Display', serif;
+                        color:rgba(37, 116, 169, 1);
+                        line-height:2px;
+                        font-weight: bold;
+                        }
+            }

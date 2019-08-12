@@ -1,14 +1,27 @@
-<!--
-@ This file consists of code for adding news and links to edit news
--->
-
 <?php
-
-session_start(); //preventing direct access of this page
+session_start(); 
 if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION['user_type']!=1)
 {
-  exit('access denied page 404 not found');
+  exit("<div style='
+  top:50%; 
+  left:50%; 
+  transform:translate(-50%,-50%);
+  position:absolute;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  '>
+  <img src='images/access.png' width='200px' height='200px'>
+  <p style='
+
+  font-size:35px;
+text-align:center;
+font-weight:bold;
+  '
+  >Access Denied Page 404 Not Found<p>
+  </div>");
 }
+
 
 include_once('connection.php');
 if(isset($_POST['submit']))
@@ -41,7 +54,6 @@ if(isset($_POST['submit']))
 <link rel="icon" href="images/imnitian.png">
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
-<meta name="theme-color" content="#000">
 <meta name="author" content="Shubham Maurya">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -54,17 +66,10 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 </head>
 
 <body onload="loadme()">
-
- <!--================ Back to top Button ====================-->
   <button id="back-to-top" ><i class="fas fa-angle-double-up"></i></button>
-
-  <!--================== Preloader ==========================-->
 <div id="loader">
 </div>
-
-<!--=================  Menu Button   ===================-->
 <button id="show"><i class="fas fa-bars"></i></button>
-<!--================= Edit News   ===================-->
 <div class="mainx"  id="mainx">
     <p class="mainh">Edit News</p>
  <div class="edit-news">
@@ -101,13 +106,14 @@ while($row=mysqli_fetch_array($result))
 </div>
 </div>
 
-<!--=================  Left Side MAnu Bar   ===================-->
 <div class="left-menu" class="popup" id="demo">
-    <p>Admin Panel</p>
+<p><?php echo "Hello! ".$_SESSION['user_name'];  ?></p>
+    <div>
     <button id="add" type="button" >add news</button>
-    <button id="see_cmt" type="button">view comments</button>
+    <button id="feedback" type="button" >Feedback</button>
     <button id="statics" type="button">statics</button>
     <button id="home" type="button">Home</button>
+</div>
 </div>
 
 
@@ -121,6 +127,8 @@ while($row=mysqli_fetch_array($result))
 
 <script>
 $(document).ready(function(){
+
+  //home button
     $("#home").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0}); 
     setTimeout(function() {
@@ -129,7 +137,7 @@ $(document).ready(function(){
   })
 
 
-/*================  Add News ===================*/ 
+//add news button
   $("#add").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0});   
     setTimeout(function() {
@@ -137,6 +145,23 @@ $(document).ready(function(){
     },500); 
   })
 
+
+//static button
+$("#statics").click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0});   
+    setTimeout(function() {
+        window.location.href="statics.php";
+    },500); 
+  })
+
+
+//feedback button
+$("#feedback").click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0});   
+    setTimeout(function() {
+        window.location.href="admin_feedback.php";
+    },500); 
+  })
 
 $("#demo").on('click',function(){
     TweenMax.to('#demo',0.5,{scaleX: 0}); 
