@@ -1,4 +1,5 @@
-<?php
+<!-- in  this file we are going to get the full news for reading  -->
+ <?php
 include_once('connection.php');
 session_start();
 $id = $_GET['id'];
@@ -9,7 +10,7 @@ if(mysqli_num_rows($result)>0)
 {
     $sql = " UPDATE tbl_images SET views = views + {$sample_rate} WHERE id = ".$id." ";
     mysqli_query($conn,$sql); //counting page views
-    mysqli_query($conn, $query);
+
 }
 
 $row=mysqli_fetch_array($result);
@@ -408,4 +409,3 @@ $('.menu-toggle').css('display','block');
 
 }
 })
-</script>
