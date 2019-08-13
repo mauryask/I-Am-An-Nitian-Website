@@ -169,7 +169,7 @@ font-weight:bold;">Courtesy:</span> National institute ranking framework
 </tr>
 
 <tr>
-<td>NIT Suratkal</td>
+<td>NIT Surathkal</td>
 <td>21</td>
 <td>3</td>
 <td>3</td>
@@ -463,7 +463,7 @@ function updf()
 <option> NIT Warangal </option>
 <option> MNNIT Prayagraj (Allahabad) </option>
 <option> SVNIT Surat </option>
-<option> NIT Suratkal </option>
+<option> NIT Surathkal </option>
 <option> Other </option>
       </select>
       <select name="state" id="state"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">

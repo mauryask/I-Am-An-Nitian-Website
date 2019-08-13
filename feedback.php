@@ -24,7 +24,42 @@ if(ctype_alpha(str_replace(' ', '', $_POST['user_name'])) === false)
 
   $feedback = $_POST['user_feedback']; // getting feedback
 
-$query = "insert into feedback (user_name, user_email, user_feedback) values('$name', '$email', '$feedback')";
+
+/*===================  Getting time and date ====================*/
+//getting IST
+date_default_timezone_set('Asia/Kolkata');
+
+//date
+$date = date('d');
+
+//month
+$months = array("jan", "feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct","Nov", "Dec");
+$month =$months[(int)date('m')-1];
+
+//year
+$year = date('Y');
+
+//time
+$hrs = (int)date('H');
+if($hrs>12)
+{
+    $hrs= $hrs-12;
+    if($hrs<10)
+    {
+        $hrs = "0".$hrs;
+    }
+    
+}
+else
+{
+    $hrs="0".$hrs;
+}
+
+$time =$hrs.date(':i A');
+
+$full_time = $month." ".$date.", ".$year.", ".$time;
+$query = "insert into feedback (user_name, user_email, user_feedback, fedback_at)
+ values('$name', '$email', '$feedback', '$full_time')";
 $result = mysqli_query($conn, $query);
 
 if($result)

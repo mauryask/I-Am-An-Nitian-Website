@@ -254,7 +254,7 @@ function start_It()
 List of nitians who cracked ESE- 2019
 </div>
 <div class="contentx" onclick="location.href='placement.php'">
-Check out the B.Tech. placements of various NITs
+Check out the B.Tech. placements of various NITs <span class="blinker" style="display:none;">New</span>
 </div>
 
 <div class="contentx" onclick="location.href='placement2.php'">
@@ -292,7 +292,7 @@ Check out the M.Tech. placements of various NITs
  <img class="slide" src="images/Meghalaya.jpg">
  </div>
  <div class="slidex">
-<div id="captionx"><p>NIT Suratkal</p></div>
+<div id="captionx"><p>NIT Surathkal</p></div>
  <img class="slide" src="images/Surathkal.jpg">
  </div>
  <div class="slidex">
@@ -366,7 +366,7 @@ function startIt()
 <!--= News Section =-->
 <div class="explore exp" style="margin-top:0;">
   <p class="main-expo"  data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>News <span id="ns-art">& Articles</span></p>
-  <div id="expo-line"  class="expo-line" style="width:15rem;position:relative;margin-bottom:3rem;"
+  <div id="expo-line"  class="expo-line" style="width:15rem;position:relative;margin-bottom:1rem;"
   data-aos="fade-up" data-aos-duration="600" data-aos-once='true'></div>
   <div class="about-ln" style="width:12%;"  data-aos="fade-up" data-aos-duration="600"></div>
  <?php 
@@ -486,7 +486,7 @@ function updf()
 <option> NIT Warangal </option>
 <option> MNNIT Prayagraj (Allahabad) </option>
 <option> SVNIT Surat </option>
-<option> NIT Suratkal </option>
+<option> NIT Surathkal </option>
 <option> Other </option>
       </select>
       <select name="state" id="state"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
@@ -588,7 +588,7 @@ function updf()
     <div class="item"><img src="images\nit-logo\nit calicut.png"><p>nit Calicut</p></div>
     <div class="item"><img src="images\nit-logo\nit nagpur.png"><p>vnit Nagpur</p></div>
     <div class="item"><img src="images\nit-logo\nit surat.png"><p>svnit Surat</p></div>
-    <div class="item"><img src="images\nit-logo\nit suratkal.png"><p>nit Surathkal</p></div>
+    <div class="item"><img src="images\nit-logo\nit Suratkal.png"><p>nit Surathkal</p></div>
     <div class="item"><img src="images\nit-logo\nit hamirpur.png"><p>nit Hamirpur</p></div>
     <div class="item"><img src="images\nit-logo\nit bhopal.png"><p>manit Bhopal</p></div>
     <div class="item"><img src="images\nit-logo\nit meghalay.png"><p>nit Meghalaya</p></div>

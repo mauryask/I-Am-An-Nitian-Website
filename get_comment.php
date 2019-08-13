@@ -6,7 +6,7 @@ $rslts = mysqli_query($conn, $query);
  
 if($rslts)
 {
-    while($row = mysqli_fetch_assoc($rslts))
+    while($row = mysqli_fetch_assoc($rslts))   
     {
        echo '<div>
                  <p style="font-size:14px;font-weight: bold;color:rgba(80,80,80,1);letter-spacing:0;"><i class="fas fa-user-circle user_icon" style="color:green;"></i> &nbsp;'.$row['user_name'].'

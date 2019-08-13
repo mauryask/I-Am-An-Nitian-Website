@@ -103,26 +103,33 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 <div class="flash">
 <?php  
-$sql = "select * from tbl_images order by id desc limit 1";
+$sql = "select * from tbl_images order by id desc limit 2";
 $result = mysqli_query($conn, $sql);
 $i= 0;
-$arr_head = '';
-$arr_id = '';
-$arr_img = '';
-if($row  = mysqli_fetch_assoc($result))
+$arr_head = array();
+$arr_id = array();
+$arr_img = array();
+while($row  = mysqli_fetch_assoc($result))
 {
-  $arr_head = $row['heading'];
-  $arr_img = $row['name'];
-  $arr_id= $row['id'];
+  $arr_head[$i] = $row['heading'];
+  $arr_img[$i] = $row['name'];
+  $arr_id[$i]= $row['id'];
+  $i++;
 }
 ?>
 
-<div class="flash_slide" id = "<?php echo $arr_id ?>"  onclick= "id1(this.id)">
-<?php echo '<img   src="data:image/jpg;base64,'.base64_encode($arr_img).'" >' ?>;
+<div class="flash_slide" id = "<?php echo $arr_id[0] ?>"  onclick= "id1(this.id)">
+<?php echo '<img   src="data:image/jpg;base64,'.base64_encode($arr_img[0]).'" >' ?>;
 <div class="over"></div>
-<div class="cnt"><?php echo $arr_head; ?></div>
+<div class="cnt"><?php echo $arr_head[0]; ?></div>
 </div>
+
+<div class="flash_slide" id = "<?php echo $arr_id[1] ?>"  onclick= "id1(this.id)">
+<?php echo '<img   src="data:image/jpg;base64,'.base64_encode($arr_img[1]).'" >' ?>;
+<div class="over"></div>
+<div class="cnt"><?php echo $arr_head[1]; ?></div>
 </div>
+
 </div>
 <script>
 function id1(got_id)
@@ -251,7 +258,7 @@ function updf()
 <option> NIT Warangal </option>
 <option> MNNIT Prayagraj (Allahabad) </option>
 <option> SVNIT Surat </option>
-<option> NIT Suratkal </option>
+<option> NIT Surathkal </option>
 <option> Other </option>
       </select>
       <select name="state" id="state"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">

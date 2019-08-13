@@ -159,7 +159,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </tr>
 
 <tr>
-<td>NIT Suratkal</td>
+<td>NIT Surathkal</td>
 <td>7,00,000
 </td>
 <td>7,00,000
@@ -557,7 +557,7 @@ function updf()
 <option> NIT Warangal </option>
 <option> MNNIT Prayagraj (Allahabad) </option>
 <option> SVNIT Surat </option>
-<option> NIT Suratkal </option>
+<option> NIT Surathkal </option>
 <option> Other </option>
       </select>
       <select name="state" id="state"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">

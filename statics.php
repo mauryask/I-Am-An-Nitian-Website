@@ -45,7 +45,6 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 
 <body onload="loadme()">
 
-  <!--================== Preloader ==========================-->
 <div id="loader">
 </div>
 <p class="mainh" id="mainh" style="font-family:">Statics</p>
@@ -87,7 +86,6 @@ else
 
 ?>
 
-
 <div class="circle">
 <div><p><?php echo  $total_admins; ?></p><p style="font-size:18px;font-family:sans-serif;">Admin</p></div>
 <div><p><?php echo  $total_users; ?></p><p style="font-size:18px;font-family:sans-serif;">User</p></div>
@@ -96,24 +94,14 @@ else
 </div>
 
 
-
-
-
-
-
-
-
-
-
-<!--=================  Menu Button   ===================-->
 <button id="show"><i class="fas fa-bars"></i></button>
 
-<!--=================  Left Side MAnu Bar   ===================-->
 <div class="left-menu"  id="demo">
 <p><?php echo "Hello! ".$_SESSION['user_name'];  ?></p>
     <div>
     <button id="add" type="button">add news</button>
     <button id="edit" type="button">edit news</button>
+    <button id="feedback" type="button">feedback</button>
     <button id="home" type="button">Home</button>
    </div>
 </div>
@@ -148,6 +136,14 @@ else
     TweenMax.to('#demo',0.5,{scaleX: 0}); 
      setTimeout(function() {
          window.location.href="insert_news.php";
+     },500); 
+   })
+
+   // feedback  button
+   $('#feedback').click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0}); 
+     setTimeout(function() {
+         window.location.href="admin_feedback.php";
      },500); 
    })
  

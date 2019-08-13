@@ -80,7 +80,7 @@ crossorigin="anonymous">
 
 <tr>
 <td>3</td>
-<td>NIT Suratkal</td>
+<td>NIT Surathkal</td>
 <td>6,78,333.3
 </td>
 <td>59.00787

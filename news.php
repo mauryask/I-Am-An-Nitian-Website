@@ -19,6 +19,14 @@ $row=mysqli_fetch_array($result);
 <html id="<?php echo $row['id']; ?>" lang="en">
 <head>
 <title>I Am An Nitian | News</title>
+
+<meta property="og:image"         content="<?php echo  '<img src="data:image/jpg;base64,'.base64_encode($row['name']).'"/>';  ?>" />
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" 
+src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0&appId=2358880627700744&autoLogAppEvents=1">
+</script>
+
 <link rel="icon" href="images\imnitian.png">
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
@@ -133,9 +141,16 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
          <?php echo $row['text']; ?>
         </p>
 
+        <a class="w-inline-block social-share-btn tw" 
+        href="https://twitter.com/intent/tweet?" 
+        target="_blank" title="Tweet" 
+        onclick="window.open('https://twitter.com/intent/tweet?text=%20Check%20up%20this%20awesome%20content' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;">Share</a>
+
             <div class="horizon horizonx"></div>
          <p class="ldc">
-           <span  class="x">views : <?php echo $row['views'];  ?></span>
+         <i class="far fa-thumbs-up like-btn" style="cursor:pointer;"  id="<?php echo $row['id'];  ?>"></i> <span id="x" class="x">0</span>
+            &nbsp <i class="fas fa-eye" style="cursor:pointer;"></i> <span  class="x"><?php echo $row['views'];  ?></span>
+            &nbsp <i class="far fa-comment" style="cursor:pointer;" id="cmt_color"></i> <span id="ncmt" class="x">0</span>
           </p> 
         <p class="cmnt">Comments</p>
     </div>
@@ -246,7 +261,7 @@ function updf()
 <option> NIT Warangal </option>
 <option> MNNIT Prayagraj (Allahabad) </option>
 <option> SVNIT Surat </option>
-<option> NIT Suratkal </option>
+<option> NIT Surathkal </option>
 <option> Other </option>
       </select>
       <select name="state" id="state"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
@@ -373,7 +388,10 @@ function updf()
 <script src="js/main.js" type="text/javascript"></script>
 <script src="js/rating.js" type="text/javascript"></script>
 <script src="js/comment.js" type="text/javascript"></script>
-<script src="js/reply.js" type="text/javascript"></script>
+
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0"></script>
 
 <script>
 
