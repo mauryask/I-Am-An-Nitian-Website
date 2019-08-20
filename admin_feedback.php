@@ -75,6 +75,7 @@ table, td, th{
 <th>Feedback</th>
 <th>Date</th>
 <th>Reply</th>
+<th>State</th>
 <th>Delete</th>
 </tr>
 
@@ -90,7 +91,17 @@ while($row=mysqli_fetch_array($result))
     <td><?php echo $row['user_name'] ?></td>
     <td class="thead"><?php  echo $row['user_feedback']  ?></td>
     <td><?php echo $row['fedback_at'] ?></td>
-    <td> <a href="#">Reply</a> </td>
+    <td> <a href="feedback_reply.php?id=<?php echo $row['id']; ?>">Reply</a> </td>
+    <td><?php 
+    if($row['state']==1)
+    {
+      echo '<img style="cursor:pointer;" src="images/checkmark.svg" width="45px" height="50px" title="replied">';
+    }
+    else
+    {
+      echo '<img  style="cursor:pointer;" src="images/rec.svg" width="45px" height="50px" title="not replied">';
+    }
+     ?></td>
     <td> <button name="delete" onclick="location.href='delete_feedback.php?del=<?php echo $row['id']; ?>'">Delete</button>
   </tr>
   <?php 

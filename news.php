@@ -1,34 +1,33 @@
-<!-- in  this file we are going to get the full news for reading  -->
- <?php
+<?php
 include_once('connection.php');
 session_start();
 $id = $_GET['id'];
 $sample_rate=1;
-$query="select * from tbl_images where  id='".$id."'  ";
+$query="select * from tbl_images where  id='".$id."' ";
 $result = mysqli_query($conn, $query);
 if(mysqli_num_rows($result)>0)
 {
     $sql = " UPDATE tbl_images SET views = views + {$sample_rate} WHERE id = ".$id." ";
     mysqli_query($conn,$sql); //counting page views
-
+    mysqli_query($conn, $query);
 }
 
 $row=mysqli_fetch_array($result);
 
 ?>
 <!DOCTYPE html>
-<html id="<?php echo $row['id']; ?>" lang="en">
+<html id="<?php echo $row['id']; ?>" lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#">
 <head>
-<title>I Am An Nitian | News</title>
+    
+ <meta property="og:url"            content="<?php  echo 'http://www.iamannitian.co.in'.$_SERVER['REQUEST_URI']; ?>" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="<?php echo $row['heading']; ?>" />
+<meta property="fb:app_id" content="2358880627700744"/>
+<meta property="og:description"   content="" />
+<meta property="og:image"         content="<?php  echo 'http://www.iamannitian.co.in/'.$row['file_path']; ?>" />
 
-<meta property="og:image"         content="<?php echo  '<img src="data:image/jpg;base64,'.base64_encode($row['name']).'"/>';  ?>" />
 
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" 
-src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0&appId=2358880627700744&autoLogAppEvents=1">
-</script>
-
-<link rel="icon" href="images\imnitian.png">
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
 <meta name="author" content="Shubham Maurya"> 
@@ -43,13 +42,19 @@ crossorigin="anonymous">
 <link href="css/news.css" type="text/css" rel="stylesheet">
 <link href="css/login_register.css" type="text/css" rel="stylesheet">
 <style>@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap'); </style>
+
+<title>I Am An Nitian | News</title>
+<link rel="icon" href="images\imnitian.png">
+
 </head>
 
 <body onload="loadme()">
-        <button id="back-to-top"><i class="fas fa-angle-double-up"></i></button>
+    
 
-        <div id="loader">
-          </div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" 
+src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0&appId=2358880627700744&autoLogAppEvents=1"></script>
+
 
    <div class="wrapper">
     <div class="progress-container">
@@ -125,7 +130,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div class="news-body">
         <div class="news-img">
      <?php
-      echo  '<img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/>';
+      echo  '<img alt="news" src="'.$row['file_path'].'"/>';
         ?>        
         </div>
         <div class="news-content">
@@ -134,7 +139,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         text-align:center;border-radius:20px;height:30px;margin:1rem 0 1rem 0;"><?php  echo $row['inserted_at'] ?></p>
            <div class="horizon"></div>
            <p>
-             <span><?php  echo $row['heading'];  ?></span><br></p>
+             <span ><?php  echo $row['heading'];  ?></span><br></p>
            <p style="text-align:justify; margin-top:1rem;
             font-family: 'Playfair Display', serif; font-size:17px;
             letter-spacing:0.3px; 
@@ -142,11 +147,13 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
          <?php echo $row['text']; ?>
         </p>
 
-        <a class="w-inline-block social-share-btn tw" 
-        href="https://twitter.com/intent/tweet?" 
-        target="_blank" title="Tweet" 
-        onclick="window.open('https://twitter.com/intent/tweet?text=%20Check%20up%20this%20awesome%20content' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;">Share</a>
 
+
+<div style="margin-top:1rem;" class="fb-share-button" data-href="<?php  echo 'http://www.iamannitian.co.in'.$_SERVER['REQUEST_URI']; ?>" data-layout="button_count" data-size="large">
+    <a target="_blank" 
+href="https://www.facebook.com/sharer/sharer.php?u=<?php  echo 'http://www.iamannitian.co.in'.$_SERVER['REQUEST_URI']; ?>&amp;src=sdkpreparse" 
+class="fb-xfbml-parse-ignore">Share</a></div>
+         
             <div class="horizon horizonx"></div>
          <p class="ldc">
          <i class="far fa-thumbs-up like-btn" style="cursor:pointer;"  id="<?php echo $row['id'];  ?>"></i> <span id="x" class="x">0</span>
@@ -180,7 +187,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
                       $text = implode(' ',array_slice(explode(' ', $row['text']),0,10)); 
                      echo   '<div class="flash">
                      <a href="news.php?id='.$id.'">
-                      <div class="nimg"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>';
+                      <div class="nimg"><img alt="news" src="'.$row['file_path'].'"/></div>';
                      echo    '<div class="ncontent">'."<p>".'<span class="heading">'.$head.'</span>'." ".$text.'..</p></div></a>';
                      echo '</div>';
                     
@@ -233,7 +240,7 @@ function updf()
    <select name="clg" id="clg"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
       <option>Select College</option>
       <option> NIT Srinagar </option>
-<option> NIT Uttrakhand </option>
+<option> NIT Uttarakhand </option>
 <option> NIT Manipur  </option>
 <option> NIT Mizoram  </option>
 <option> NIT Nagaland </option>
@@ -256,11 +263,11 @@ function updf()
 <option> NIT Delhi </option>
 <option> NIT Raipur </option>
 <option> NIT Calicut </option>
-<option> NIT Raurkela </option>
+<option> NIT Rourkela </option>
 <option> VNIT Nagpur </option>
 <option> NIT Trichy </option>
 <option> NIT Warangal </option>
-<option> MNNIT Prayagraj (Allahabad) </option>
+<option> MNNIT Allahabad</option>
 <option> SVNIT Surat </option>
 <option> NIT Surathkal </option>
 <option> Other </option>
@@ -269,22 +276,22 @@ function updf()
           <option>Select Your State</option>
           <option> Uttar Pradesh </option>
 <option> Bihar </option>
-<option> Rajsthan  </option>
+<option> Rajasthan  </option>
 <option> Madhya Pradesh  </option>
-<option> Maharastra </option>
+<option> Maharashtra </option>
 <option> Andhra Pradesh </option>
 <option> Arunachal Pradesh </option>
-<option> Aasam</option>
+<option> Assam</option>
 <option> Chhattisgarh </option>
 <option> Odisha </option>
 <option> Goa </option>
-<option> Gujrat </option>
+<option> Gujarat </option>
 <option> Haryana </option>
 <option> Himachal Pradesh </option>
 <option> Jammu and Kashmir </option>
 <option> Jharkhand </option>
-<option>  Karnatka </option>
-<option> Kerla </option>
+<option>  Karnataka </option>
+<option> Kerala </option>
 <option> Manipur </option>
 <option> Mizoram </option>
 <option> Tripura </option>
@@ -292,7 +299,7 @@ function updf()
 <option> Punjab </option>
 <option> Sikkim </option>
 <option> Tamilnadu </option>
-<option> Uttrakhand </option>
+<option> Uttarakhand </option>
 <option> West Bengal </option>
 <option> Telangana </option>
 <option> Andaman and Nicobar Islands </option>
@@ -349,7 +356,7 @@ function updf()
                       $text = implode(' ',array_slice(explode(' ', $row['text']),0,12)); //getting fires 19 words from text
                       echo   '<div class="flash">
                       <a href="news.php?id='.$id.'">
-                       <div class="nimg"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>';
+                       <div class="nimg"><img alt="news" src="'.$row['file_path'].'"/></div>';
                       echo    '<div class="ncontent">'."<p>".'<span class="heading">'.$head.'</span>'." ".$text.'..</p></div></a>';
                       echo '</div>'; 
                      }
@@ -427,3 +434,4 @@ $('.menu-toggle').css('display','block');
 
 }
 })
+</script>

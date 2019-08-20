@@ -79,7 +79,7 @@ letter-spacing: 0.7px;
 background:rgba(0,0,0,1);
 width:100%;
 padding-top:1.6rem;
-padding-bottom:1.6rem;
+padding-bottom:1.1rem;
 }
 
 .container .copyright{
@@ -89,6 +89,12 @@ padding-bottom:1.6rem;
   color:rgba(256,256,256,0.7);
   text-align:center;
   text-transform: uppercase;
+}
+
+.container #developer{
+  line-height:18px;
+  font-size:9px;
+  letter-spacing:1px;pnspns
 }
 
 #and_copy{
@@ -154,7 +160,7 @@ line-height:1.8rem;
       margin-left:-7px;
        }
 
-#developer{
+#developerx{
   display:none;
 }
 
@@ -172,6 +178,17 @@ line-height:1.8rem;
 
 #respo_contact{
   display: block;
+}
+
+.container #github
+{
+display:none;
+}
+
+.container #developer{
+  line-height:12px;
+  font-size:9px;
+  letter-spacing:1px;
 }
 
 }

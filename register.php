@@ -7,6 +7,7 @@ $_SESSION['name']='';   // creating a seesion variable
 if(isset($_POST['name']))
 { //checking whether name fieled exits or not
 
+   
 /*==========  Checking whether fields are empty  ===========*/
   if(empty($_POST['name']) || empty($_POST['user_email']) || empty($_POST['phone']) || empty($_POST['clg']) || empty($_POST['state']) || empty($_POST['user_pass']))
   {
@@ -119,11 +120,13 @@ else{  //if new user then insert data into database
    
     if ($conn->query($query) === TRUE) 
     {
+    
       $sql = "select * from user where email='".$email."' and pswd='".$pass."'  ";
       $result=mysqli_query($conn,$sql);
 
       if($row = mysqli_fetch_array($result))
       {
+        
         $name = explode(" ",$row['name']); 
         $name = $name[0]; 
 
@@ -133,6 +136,15 @@ else{  //if new user then insert data into database
         $_SESSION['name']=$name;
         $_SESSION['user_id']=$row['id']; //getting user id
         $_SESSION['user_type'] = $row['user_type'];
+
+
+/// setting up php mail
+
+include_once('php_mail.php');
+
+
+// finishing up php mail
+
         echo 1;
       }
       else
@@ -160,7 +172,7 @@ function test_input($data)
 {
     $data=trim($data);  //removing white spaces
     $data=stripslashes($data);  // removing back slashes
-    $data=htmlspecialchars($data); //converting symbols to html elements
+    $data=htmlspecialchars($data);
     return $data;
 }
 

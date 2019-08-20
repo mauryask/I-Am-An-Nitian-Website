@@ -56,10 +56,10 @@ else
 }
 
 $time =$hrs.date(':i A');
-
+$state=0;
 $full_time = $month." ".$date.", ".$year.", ".$time;
-$query = "insert into feedback (user_name, user_email, user_feedback, fedback_at)
- values('$name', '$email', '$feedback', '$full_time')";
+$query = "insert into feedback (user_name, user_email, user_feedback, fedback_at, state)
+ values('$name', '$email', '$feedback', '$full_time', '$state')";
 $result = mysqli_query($conn, $query);
 
 if($result)

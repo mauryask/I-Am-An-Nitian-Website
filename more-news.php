@@ -112,22 +112,22 @@ $arr_img = array();
 while($row  = mysqli_fetch_assoc($result))
 {
   $arr_head[$i] = $row['heading'];
-  $arr_img[$i] = $row['name'];
+  $arr_img[$i] =$row['file_path'];
   $arr_id[$i]= $row['id'];
   $i++;
 }
 ?>
 
-<div class="flash_slide" id = "<?php echo $arr_id[0] ?>"  onclick= "id1(this.id)">
-<?php echo '<img   src="data:image/jpg;base64,'.base64_encode($arr_img[0]).'" >' ?>;
-<div class="over"></div>
-<div class="cnt"><?php echo $arr_head[0]; ?></div>
-</div>
-
 <div class="flash_slide" id = "<?php echo $arr_id[1] ?>"  onclick= "id1(this.id)">
-<?php echo '<img   src="data:image/jpg;base64,'.base64_encode($arr_img[1]).'" >' ?>;
+<?php echo '<img   src="'.$arr_img[1].'" >' ?>;
 <div class="over"></div>
 <div class="cnt"><?php echo $arr_head[1]; ?></div>
+</div>
+
+<div class="flash_slide" id = "<?php echo $arr_id[0] ?>"  onclick= "id1(this.id)">
+<?php echo '<img   src="'.$arr_img[0].'" >' ?>;
+<div class="over"></div>
+<div class="cnt"><?php echo $arr_head[0]; ?></div>
 </div>
 
 </div>
@@ -140,7 +140,7 @@ function id1(got_id)
 </script>
 <div class="explore">
  <?php 
-            $query = "select * from tbl_images order by id asc";
+            $query = "select * from tbl_images order by id desc";
              $result = mysqli_query ($conn, $query);
                 if (mysqli_num_rows($result)>0) 
                 {
@@ -157,7 +157,7 @@ function id1(got_id)
           
               <div class="xnnn" style="box-shadow:none;">
               <?php  echo '<a href="news.php?id='.$id.'">'; ?>
-                <?php echo '<div class="zoom"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>'?>
+                <?php echo '<div class="zoom"><img alt="news" src="'.$row['file_path'].'"/></div>'?>
               <?php 
               $head = implode(' ',array_slice(explode(' ', $row['heading']),0,7)); 
               $text = implode(' ',array_slice(explode(' ', $row['text']),0,5));
@@ -229,7 +229,7 @@ function updf()
    <select name="clg" id="clg"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
       <option>Select College</option>
       <option> NIT Srinagar </option>
-<option> NIT Uttrakhand </option>
+<option> NIT Uttarakhand </option>
 <option> NIT Manipur  </option>
 <option> NIT Mizoram  </option>
 <option> NIT Nagaland </option>
@@ -252,11 +252,11 @@ function updf()
 <option> NIT Delhi </option>
 <option> NIT Raipur </option>
 <option> NIT Calicut </option>
-<option> NIT Raurkela </option>
+<option> NIT Rourkela </option>
 <option> VNIT Nagpur </option>
 <option> NIT Trichy </option>
 <option> NIT Warangal </option>
-<option> MNNIT Prayagraj (Allahabad) </option>
+<option> MNNIT Allahabad</option>
 <option> SVNIT Surat </option>
 <option> NIT Surathkal </option>
 <option> Other </option>
@@ -265,22 +265,22 @@ function updf()
           <option>Select Your State</option>
           <option> Uttar Pradesh </option>
 <option> Bihar </option>
-<option> Rajsthan  </option>
+<option> Rajasthan  </option>
 <option> Madhya Pradesh  </option>
-<option> Maharastra </option>
+<option> Maharashtra </option>
 <option> Andhra Pradesh </option>
 <option> Arunachal Pradesh </option>
-<option> Aasam</option>
+<option> Assam</option>
 <option> Chhattisgarh </option>
 <option> Odisha </option>
 <option> Goa </option>
-<option> Gujrat </option>
+<option> Gujarat </option>
 <option> Haryana </option>
 <option> Himachal Pradesh </option>
 <option> Jammu and Kashmir </option>
 <option> Jharkhand </option>
-<option>  Karnatka </option>
-<option> Kerla </option>
+<option>  Karnataka </option>
+<option> Kerala </option>
 <option> Manipur </option>
 <option> Mizoram </option>
 <option> Tripura </option>
@@ -288,7 +288,7 @@ function updf()
 <option> Punjab </option>
 <option> Sikkim </option>
 <option> Tamilnadu </option>
-<option> Uttrakhand </option>
+<option> Uttarakhand </option>
 <option> West Bengal </option>
 <option> Telangana </option>
 <option> Andaman and Nicobar Islands </option>
