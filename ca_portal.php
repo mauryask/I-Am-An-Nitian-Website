@@ -34,7 +34,7 @@ crossorigin="anonymous">
 </div>
 
 <div class="title">
-  <span class="t1">Dashboard</span>
+  <span class="t1">Leaderboard</span>
 <span class="t2">Facebook Posts</span>
 <span class="t3">Tasks</span>
 <span class="t4">Guidelines</span>
@@ -60,7 +60,7 @@ crossorigin="anonymous">
 <div><p>CA Portal</p></div>
 
 <div class="mn_btn">
-<button id="dash">Dashboard</button>
+<button id="dash">Leaderboard</button>
 <button id="post">Posts</button>
 <button id="task">Tasks</button>
 <button id="guide">Guidelines</button>
