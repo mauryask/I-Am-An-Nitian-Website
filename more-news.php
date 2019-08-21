@@ -103,26 +103,33 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 <div class="flash">
 <?php  
-$sql = "select * from tbl_images order by id desc limit 1";
+$sql = "select * from tbl_images order by id desc limit 2";
 $result = mysqli_query($conn, $sql);
 $i= 0;
-$arr_head = '';
-$arr_id = '';
-$arr_img = '';
-if($row  = mysqli_fetch_assoc($result))
+$arr_head = array();
+$arr_id = array();
+$arr_img = array();
+while($row  = mysqli_fetch_assoc($result))
 {
-  $arr_head = $row['heading'];
-  $arr_img = $row['name'];
-  $arr_id= $row['id'];
+  $arr_head[$i] = $row['heading'];
+  $arr_img[$i] =$row['file_path'];
+  $arr_id[$i]= $row['id'];
+  $i++;
 }
 ?>
 
-<div class="flash_slide" id = "<?php echo $arr_id ?>"  onclick= "id1(this.id)">
-<?php echo '<img   src="data:image/jpg;base64,'.base64_encode($arr_img).'" >' ?>;
+<div class="flash_slide" id = "<?php echo $arr_id[1] ?>"  onclick= "id1(this.id)">
+<?php echo '<img   src="'.$arr_img[1].'" >' ?>;
 <div class="over"></div>
-<div class="cnt"><?php echo $arr_head; ?></div>
+<div class="cnt"><?php echo $arr_head[1]; ?></div>
 </div>
+
+<div class="flash_slide" id = "<?php echo $arr_id[0] ?>"  onclick= "id1(this.id)">
+<?php echo '<img   src="'.$arr_img[0].'" >' ?>;
+<div class="over"></div>
+<div class="cnt"><?php echo $arr_head[0]; ?></div>
 </div>
+
 </div>
 <script>
 function id1(got_id)
@@ -133,7 +140,7 @@ function id1(got_id)
 </script>
 <div class="explore">
  <?php 
-            $query = "select * from tbl_images order by id asc";
+            $query = "select * from tbl_images order by id desc";
              $result = mysqli_query ($conn, $query);
                 if (mysqli_num_rows($result)>0) 
                 {
@@ -150,7 +157,7 @@ function id1(got_id)
           
               <div class="xnnn" style="box-shadow:none;">
               <?php  echo '<a href="news.php?id='.$id.'">'; ?>
-                <?php echo '<div class="zoom"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>'?>
+                <?php echo '<div class="zoom"><img alt="news" src="'.$row['file_path'].'"/></div>'?>
               <?php 
               $head = implode(' ',array_slice(explode(' ', $row['heading']),0,7)); 
               $text = implode(' ',array_slice(explode(' ', $row['text']),0,5));
@@ -222,7 +229,7 @@ function updf()
    <select name="clg" id="clg"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
       <option>Select College</option>
       <option> NIT Srinagar </option>
-<option> NIT Uttrakhand </option>
+<option> NIT Uttarakhand </option>
 <option> NIT Manipur  </option>
 <option> NIT Mizoram  </option>
 <option> NIT Nagaland </option>
@@ -245,35 +252,35 @@ function updf()
 <option> NIT Delhi </option>
 <option> NIT Raipur </option>
 <option> NIT Calicut </option>
-<option> NIT Raurkela </option>
+<option> NIT Rourkela </option>
 <option> VNIT Nagpur </option>
 <option> NIT Trichy </option>
 <option> NIT Warangal </option>
-<option> MNNIT Prayagraj (Allahabad) </option>
+<option> MNNIT Allahabad</option>
 <option> SVNIT Surat </option>
-<option> NIT Suratkal </option>
+<option> NIT Surathkal </option>
 <option> Other </option>
       </select>
       <select name="state" id="state"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
           <option>Select Your State</option>
           <option> Uttar Pradesh </option>
 <option> Bihar </option>
-<option> Rajsthan  </option>
+<option> Rajasthan  </option>
 <option> Madhya Pradesh  </option>
-<option> Maharastra </option>
+<option> Maharashtra </option>
 <option> Andhra Pradesh </option>
 <option> Arunachal Pradesh </option>
-<option> Aasam</option>
+<option> Assam</option>
 <option> Chhattisgarh </option>
 <option> Odisha </option>
 <option> Goa </option>
-<option> Gujrat </option>
+<option> Gujarat </option>
 <option> Haryana </option>
 <option> Himachal Pradesh </option>
 <option> Jammu and Kashmir </option>
 <option> Jharkhand </option>
-<option>  Karnatka </option>
-<option> Kerla </option>
+<option>  Karnataka </option>
+<option> Kerala </option>
 <option> Manipur </option>
 <option> Mizoram </option>
 <option> Tripura </option>
@@ -281,7 +288,7 @@ function updf()
 <option> Punjab </option>
 <option> Sikkim </option>
 <option> Tamilnadu </option>
-<option> Uttrakhand </option>
+<option> Uttarakhand </option>
 <option> West Bengal </option>
 <option> Telangana </option>
 <option> Andaman and Nicobar Islands </option>
@@ -336,6 +343,10 @@ function updf()
  <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
 2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbspAll Rights Reserved</span></p>
 <p id="and_copy" class="copyright">All rights reserved</p>
+
+<p class="copyright" id="developer">Developer | Shubham Maurya | NIT Srinagar
+ <span id="github">| <a href="https://github.com/pnstech" target="_blank" style="text-decoration:none;color:rgba(256,256,256,0.7);">Github</a></span></p>
+
 </div>
 </footer>
 </body>

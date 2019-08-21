@@ -22,7 +22,6 @@ font-weight:bold;
   </div>");
 }
 
-
 include_once('connection.php');
 if(isset($_POST['submit']))
 {
@@ -38,7 +37,7 @@ if(isset($_POST['submit']))
     if(mysqli_query($conn, $query))  
     {
         echo  "<script>alert('Inserted successfully')</script>";
-    }
+            }
     else
     {
         echo  "<script>alert('Insertion Failed')</script>";
@@ -61,7 +60,9 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 <link href="css/left-menu.css" type="text/css" rel="stylesheet">
 <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
 <style>
-
+td{
+  text-align:center;
+}
 </style>
 </head>
 
@@ -91,7 +92,7 @@ while($row=mysqli_fetch_array($result))
   ?>
   <tr>
     <td style="font-weight:bold;"><?php echo $row['id']  ?></td>
-    <td><?php echo '<img class="imgx" alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/>' ?></td>
+    <td><?php echo '<img class="imgx" alt="news" src="'.$row['file_path'].'"/>' ?></td>
     <td class="thead"><?php  echo $row['heading']  ?></td>
     <td><?php echo $row['text'] ?></td>
     <td> <a href="update_news.php?update=<?php echo  $row['id']; ?>">Edit</a> </td>

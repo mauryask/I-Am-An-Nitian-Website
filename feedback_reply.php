@@ -7,7 +7,7 @@ include_once('connection.php');
 session_start(); //preventing direct access of this page
 if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION['user_type']!=1)
 {
- exit("<div style='
+    exit("<div style='
     top:50%; 
     left:50%; 
     transform:translate(-50%,-50%);
@@ -29,84 +29,72 @@ if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION[
 
 if(isset($_POST['submit']))
 {
-   // $file= addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
-   // name column from table dropped (longblob type)
+    $subject = addslashes($_POST['subject']);
+    $msg = addslashes($_POST['message']);
+    $replied_by = $_SESSION['user_name'];
+    $fedback_user_id=$_GET['id'];
 
-// testing
+    // sending mail to user 
 
-$filetmp = $_FILES['image']['tmp_name'];
-$filename  = $_FILES['image']['name'];
-$filepath="pics/".$filename;
-
-
-// testing
-
-    $head = addslashes($_POST['heading']);
-    $news = addslashes($_POST['news']);
-   $views=0;
-    $likes=0;
-    $comments=0;
-        $added_by = $_SESSION['user_name'];
-/*===================  Getting time and date ====================*/
-//getting IST
-date_default_timezone_set('Asia/Kolkata');
-
-//date
-$date = date('d');
-
-//month
-$months = array("jan", "feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct","Nov", "Dec");
-$month =$months[(int)date('m')-1];
-
-//year
-$year = date('Y');
-
-//time
-$hrs = (int)date('H');
-if($hrs>12)
-{
-    $hrs= $hrs-12;
-    if($hrs<10)
+    $query = "select * from feedback where id=$fedback_user_id";
+    $result = mysqli_query($conn,$query);
+    $email='';
+    $user_name='';
+    if($row=mysqli_fetch_assoc($result))
     {
-        $hrs = "0".$hrs;
+      $email = $row['user_email'];
+      $user_name= explode(" ",$row['user_name'])[0];
     }
     
+
+$to =trim($email).',mauryask1732@gmail.com';
+$subject = $subject;
+$headers = "From: " . strip_tags($_POST['req-email']) . "\r\n";
+$headers .= "Reply-To: ". strip_tags($_POST['req-email']) . "\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+$message = '<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>';
+$message .= '<div style="display:flex;
+flex-direction:row;
+"><img src="http://www.iamannitian.co.in/images/imnitian.png" width="40px" height="40px"/>
+<span style="font-family:'.'Dancing Script'.', cursive;
+font-weight:bold;
+font-size:17px;
+color:red;
+margin-left:7px;
+margin-top:10px;
+">I Am An Nitian</span>
+</div>';
+$message .= '<p style="margin-left:12px;">Hi ! '.$user_name.'</p>';
+$message .= '<p style="margin-left:12px;">'.$msg.'.</p>';
+$message .= '<p style="margin-left:12px;">Stay tuned with us for latest updates of 
+various NITs & Engineering.</p>';
+$message .= '<div style="width:10rem;height:2px;background:#4caf50;margin-left:12px;"></div>';
+$message .= '<p style="margin-left:12px;"><i>This is a system
+ genrated mail. Please do not reply.</i></p>';
+$message .= "</body></html>";
+$result=mail($to, $subject, $message, $headers);
+if(!$result)
+{
+echo  '<script>alert("failed to send mail!")</script>';
 }
 else
 {
-    $hrs="0".$hrs;
-}
-
-$time =$hrs.date(':i A');
-
-$full_time = $month." ".$date.", ".$year.", ".$time.", IST";
-
-/*===================  Getting time and date end ====================*/
-
-
-
-if(uploadex($filetmp,$filepath))
-{
-
-   $query="insert into tbl_images (heading,text,file_path,views,likes,comments,added_by,inserted_at)  
-    values('$head', '$news','$filepath','$views','$likes','$comments','$added_by','$full_time')";
-   $result = mysqli_query($conn, $query);
-    if($result)  
+    echo  '<script>alert("sent successfully!")</script>'; 
+    $query = 'update feedback set state=1, replied_by="'.$_SESSION['user_name'].'" 
+    where id="'.$_GET['id'].'"';
+    if(mysqli_query($conn, $query))
     {
-        echo  "<script>alert('Inserted successfully')</script>";
-    }
-    else
-    {
-        echo  "<script>alert('Failed To Insert!')</script>";
-    }
+     header("location:admin_feedback.php");
+    } 
+}
 }
 
-}
-
-function uploadex($filetmp,$filepath)
-{
-    return   move_uploaded_file($filetmp,$filepath);
-}
 ?>
 
 <!DOCTYPE html>
@@ -133,20 +121,17 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 <!--=================  Menu Button   ===================-->
 <button id="show"><i class="fas fa-bars"></i></button>
 <div class="main" id="main">
-<p class="mainh" id="mainh" style="font-family:">Add News</p>
+<p class="mainh" id="mainh" style="font-family:">Reply</p>
 
-<!--=================  Adding News  ===================-->
 <div class="add-news" id="add-news">
 
-<form method="post" enctype="multipart/form-data" action="insert_news.php" autocomplete="off">
+<form method="post" enctype="multipart/form-data" autocomplete="off">
 
-<input type="file" name="image" id="image"> 
+<input type="heading" name="subject" id="heading" placeholder="Subject">
 
-<input type="heading" name="heading" id="heading" placeholder="Heading">
+<textarea placeholder="Type your message here..." name="message" id="news" rows="12" ></textarea>
 
-<textarea placeholder="Enter News Here..." name="news" id="news" rows="12" ></textarea>
-
-<input type="submit" name="submit" id="submit" value="Insert" > 
+<input type="submit" name="submit" id="submit" value="Reply"> 
 
 </form>
 </div>
@@ -204,6 +189,7 @@ $(document).ready(function(){
   })
 
 
+
  //feedback button
  $("#feedback").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0});
@@ -220,30 +206,14 @@ $("#demo").on('click',function(){
 
     /*================  Form Validation ===================*/   
     $('#submit').click(function(){
-        var image_name = $('#image').val();
         var head = $('#heading').val();
         var text = $('#news').val();
-        if(image_name== '') 
-        {
-            alert('Please choose a file');
-            return false;
-        } 
-        else if( head == '' || text == '')
+       if( head == '' || text == '')
         {
             alert('Please fill all the fields');
             return false;
         }
-        else
-        {
-            var extension = $('#image').val().split('.').pop().toLowerCase();
-            if(jQuery.inArray(extension, ['png', 'gif','jpg','tif','jpeg','mp4'])== -1)
-            {
-                alert("invalid image format");
-                $('#image').val('');
-                return false;
-            }
-            
-        }
+      
     })
 
     $('#show').on('click', function(){

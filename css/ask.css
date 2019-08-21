@@ -46,16 +46,23 @@ cursor:pointer;
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.upx #csp{
+  position:fixed;  
+  overflow: hidden;
+}
+
 .upx #csp .contentx
 {
-    margin:2px 9px 10px 7px;
-    padding:5px 4px 2px 8px;
-    width:58%;
+    margin:2px 9px 10px 4px;
+    padding:5px 4px 2px 5px;
+    width:56%;
     line-height:24px;
     color:#050505;
     cursor:pointer;
     font-size:15px;
     font-family: 'Playfair Display', serif;
+    word-wrap: break-word;
+    text-align:center;
   }
 
   .upx #csp .contentx:hover{
@@ -63,10 +70,6 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
  text-decoration: underline;
   }
 
-.upx #csp{
-    position:fixed;  
-    overflow: hidden;
-}
 
 .mySlide{
     width:65%;

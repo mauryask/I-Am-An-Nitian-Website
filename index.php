@@ -6,6 +6,13 @@ session_start();
 <!DOCTYPE html>
 <html lang="en" oncontextmenu="return false">
 <head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8978938770635113",
+    enable_page_level_ads: true
+  });
+</script>
 <title>I Am An Nitian | Home</title>
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <meta name="viewport" content= "width=device-width, user-scalable=no">
@@ -118,8 +125,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div class="social">
     <a  target="_blank" href="https://www.facebook.com/iamannitian" alt="facebook"><img  class="svg" src="images/facebook.svg"  ></a>
     <a href="https://www.instagram.com/i_am_an_nitian/" target="_blank"  alt="instagram"><img  class="svg" src="images/instagram.svg" ></a>
-    <a href="#"><img  class="svg" src="images/twitter.svg" alt="twitter"></a>
-    <a href="#"><img  class="svg" src="images/linkedin.svg" alt="linkedin"></a>
+    <a href="#" target="_blank"><img  class="svg" src="images/twitter.svg" alt="twitter"></a>
+    <a href="#" target="_blank"><img  class="svg" src="images/linkedin.svg" alt="linkedin"></a>
 </div>
 </div>
 <div class="center">
@@ -254,7 +261,7 @@ function start_It()
 List of nitians who cracked ESE- 2019
 </div>
 <div class="contentx" onclick="location.href='placement.php'">
-Check out the B.Tech. placements of various NITs
+Check out the B.Tech. placements of various NITs <span class="blinker" style="display:none;">New</span>
 </div>
 
 <div class="contentx" onclick="location.href='placement2.php'">
@@ -292,7 +299,7 @@ Check out the M.Tech. placements of various NITs
  <img class="slide" src="images/Meghalaya.jpg">
  </div>
  <div class="slidex">
-<div id="captionx"><p>NIT Suratkal</p></div>
+<div id="captionx"><p>NIT Surathkal</p></div>
  <img class="slide" src="images/Surathkal.jpg">
  </div>
  <div class="slidex">
@@ -353,12 +360,13 @@ function startIt()
     <p style="text-align:justify;" >
     NITs (National Institute Of Technologies) are 
     the most prestigious Engineering Institutions 
-    of India after IITs. There are 31 NITs across the various states of India. 
-   I AM AN NITIAN was a facebook page created in
-    July 2016 with an aim to connect all Nitians.  <span id="ab" style="font-family: 'Playfair Display', serif;"> Today It has 30K+ followers on fb & 3K+ followers on Instagram. Now it is not 
-    limited to only a facebook page.
-    But it has become the biggest student community.</span>
-    Here you can check out the news & events related to each and every NIT.</p>
+    of India after IITs. There are 31 NITs across the various parts of India. 
+   I AM AN NITIAN is a Facebook page which was created in
+    July 2016 to connect with the Nitians. Now it is not 
+    limited to only a Facebook page 
+    but has become the biggest student community and a huge source of news and updates related to Engineering.
+    Here you can get regular updates of all the NITs.
+    </p>
     </div>
     </div>
 
@@ -366,11 +374,11 @@ function startIt()
 <!--= News Section =-->
 <div class="explore exp" style="margin-top:0;">
   <p class="main-expo"  data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>News <span id="ns-art">& Articles</span></p>
-  <div id="expo-line"  class="expo-line" style="width:15rem;position:relative;margin-bottom:3rem;"
+  <div id="expo-line"  class="expo-line" style="width:15rem;position:relative;margin-bottom:1rem;"
   data-aos="fade-up" data-aos-duration="600" data-aos-once='true'></div>
   <div class="about-ln" style="width:12%;"  data-aos="fade-up" data-aos-duration="600"></div>
  <?php 
-            $query = "select * from tbl_images order by id desc limit 8";
+            $query = "select * from tbl_images order by id desc limit 4";
              $result = mysqli_query ($conn, $query);
                 if (mysqli_num_rows($result)>0) 
                 {
@@ -388,7 +396,7 @@ function startIt()
           
               <div class="xnnn" style="box-shadow:none;">
               <?php  echo '<a href="news.php?id='.$id.'">'; ?>
-                <?php echo '<div class="zoom"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>'?>
+                <?php echo '<div class="zoom"><img alt="news" src="'.$row['file_path'].'"/></div>'?>
               <?php 
               $head = implode(' ',array_slice(explode(' ', $row['heading']),0,7)); 
               $text = implode(' ',array_slice(explode(' ', $row['text']),0,5)); 
@@ -457,7 +465,7 @@ function updf()
    <select name="clg" id="clg"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
       <option>Select College</option>
       <option> NIT Srinagar </option>
-<option> NIT Uttrakhand </option>
+<option> NIT Uttarakhand </option>
 <option> NIT Manipur  </option>
 <option> NIT Mizoram  </option>
 <option> NIT Nagaland </option>
@@ -480,35 +488,35 @@ function updf()
 <option> NIT Delhi </option>
 <option> NIT Raipur </option>
 <option> NIT Calicut </option>
-<option> NIT Raurkela </option>
+<option> NIT Rourkela </option>
 <option> VNIT Nagpur </option>
 <option> NIT Trichy </option>
 <option> NIT Warangal </option>
-<option> MNNIT Prayagraj (Allahabad) </option>
+<option> MNNIT Allahabad</option>
 <option> SVNIT Surat </option>
-<option> NIT Suratkal </option>
+<option> NIT Surathkal </option>
 <option> Other </option>
       </select>
       <select name="state" id="state"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
           <option>Select Your State</option>
           <option> Uttar Pradesh </option>
 <option> Bihar </option>
-<option> Rajsthan  </option>
+<option> Rajasthan  </option>
 <option> Madhya Pradesh  </option>
-<option> Maharastra </option>
+<option> Maharashtra </option>
 <option> Andhra Pradesh </option>
 <option> Arunachal Pradesh </option>
-<option> Aasam</option>
+<option> Assam</option>
 <option> Chhattisgarh </option>
 <option> Odisha </option>
 <option> Goa </option>
-<option> Gujrat </option>
+<option> Gujarat </option>
 <option> Haryana </option>
 <option> Himachal Pradesh </option>
 <option> Jammu and Kashmir </option>
 <option> Jharkhand </option>
-<option>  Karnatka </option>
-<option> Kerla </option>
+<option>  Karnataka </option>
+<option> Kerala </option>
 <option> Manipur </option>
 <option> Mizoram </option>
 <option> Tripura </option>
@@ -516,7 +524,7 @@ function updf()
 <option> Punjab </option>
 <option> Sikkim </option>
 <option> Tamilnadu </option>
-<option> Uttrakhand </option>
+<option> Uttarakhand </option>
 <option> West Bengal </option>
 <option> Telangana </option>
 <option> Andaman and Nicobar Islands </option>
@@ -624,8 +632,12 @@ function updf()
 </div>
 <div class="container">
 <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
-2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbspAll Rights Reserved</span></p>
+2019 &nbsp| &nbsp I AM AN NITIAN <span id="developerx">&nbsp | &nbspAll Rights Reserved</span></p>
 <p id="and_copy" class="copyright">All rights reserved</p>
+
+<p class="copyright" id="developer">Developer | Shubham Maurya | NIT Srinagar
+ <span id="github">| <a href="https://github.com/pnstech" target="_blank" style="text-decoration:none;color:rgba(256,256,256,0.7);">Github</a></span></p>
+
 </div>
 </footer>
 </div>
