@@ -92,9 +92,9 @@ padding-bottom:1.1rem;
 }
 
 .container #developer{
-  line-height:18px;
+  line-height:22px;
   font-size:9px;
-  letter-spacing:1px;pnspns
+  letter-spacing:1px;
 }
 
 #and_copy{
@@ -160,9 +160,10 @@ line-height:1.8rem;
       margin-left:-7px;
        }
 
-#developerx{
+.container #developerx{
   display:none;
 }
+
 
 #and_copy{
   display: block;
