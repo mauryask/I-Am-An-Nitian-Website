@@ -60,14 +60,14 @@ style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
 <p id="mnu">MENU</p>
 
 <ul>
-<li><a href="index.php" class="home" >Home</a></li>
+<li><a href="index.php" class="home" ><i class="fas fa-home" style="font-size:21px;"></i> Home</a></li>
 
-<li><a href="more-news.php" class="homex" >News</a></li>
+<li><a href="more-news.php" class="homex" > News</a></li>
 <li ><a href="#updf" class="homex" id="update_nav">Updates</a></li>
 
 <li><a href="#about" class="homex" id="about_nav">About Us</a></li>
 
-<li><a class="homex" id="user">
+<li><a class="homex" id="user"><i class="fas fa-user-graduate" style="font-size:18px;"></i>
 <?php
   if(isset($_SESSION['name'])&& !empty($_SESSION['name']))
   {
@@ -78,7 +78,7 @@ style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
     echo 'User';
   }
 ?>
-&nbsp <i class="fas fa-user-graduate"></i></a>
+</a>
 <ul style="margin-left:-1rem;">
 
 <?php
