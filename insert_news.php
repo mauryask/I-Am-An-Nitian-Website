@@ -9,7 +9,7 @@ if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION[
 {
  exit("<div style='
     top:50%; 
-    left:50%; 
+    left:50%;
     transform:translate(-50%,-50%);
     position:absolute;
     display:flex;
@@ -34,10 +34,17 @@ if(isset($_POST['submit']))
 
 // testing
 
+// for main image
 $filetmp = $_FILES['image']['tmp_name'];
 $filename  = $_FILES['image']['name'];
 $filepath="pics/".$filename;
 
+
+// for extra image
+//image 1
+$filetmp_1 = $_FILES['image_1']['tmp_name'];
+$filename_1  = $_FILES['image_1']['name'];
+$filepath_1 ="pics/".$filename_1;
 
 // testing
 
@@ -85,11 +92,11 @@ $full_time = $month." ".$date.", ".$year.", ".$time.", IST";
 
 
 
-if(uploadex($filetmp,$filepath))
+if(uploadex($filetmp,$filepath, $filepath_1, $filetmp_1))
 {
 
-   $query="insert into tbl_images (heading,text,file_path,views,likes,comments,added_by,inserted_at)  
-    values('$head', '$news','$filepath','$views','$likes','$comments','$added_by','$full_time')";
+   $query="insert into tbl_images (heading,text,file_path,views,likes,comments,added_by,inserted_at,file_path_1)  
+    values('$head', '$news','$filepath','$views','$likes','$comments','$added_by','$full_time','$filepath_1')";
    $result = mysqli_query($conn, $query);
     if($result)  
     {
@@ -103,13 +110,21 @@ if(uploadex($filetmp,$filepath))
 
 }
 
-function uploadex($filetmp,$filepath)
+function uploadex($filetmp,$filepath, $filepath_1, $filetmp_1)
 {
-    return   move_uploaded_file($filetmp,$filepath);
+    if( move_uploaded_file($filetmp,$filepath))
+    {
+        return move_uploaded_file($filetmp_1,$filepath_1);
+    }
+          
 }
+
+
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE
+
+ html>
 <html lang="en">
 <head>
 <title>I Am An Nitian | Admin Panel</title>  
@@ -139,8 +154,10 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 <div class="add-news" id="add-news">
 
 <form method="post" enctype="multipart/form-data" action="insert_news.php" autocomplete="off">
-
+<div style="display:flex;align-items:center;">
 <input type="file" name="image" id="image"> 
+<input type="file" name="image_1" id="image">
+</div>
 
 <input type="heading" name="heading" id="heading" placeholder="Heading">
 

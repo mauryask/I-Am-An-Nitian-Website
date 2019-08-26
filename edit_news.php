@@ -77,7 +77,8 @@ td{
 <table>
 <tr>
  <th>Id</th>
-<th>Image</th>
+<th>Image-1</th>
+<th>Image-2</th>
 <th>Heading</th>
 <th>News</th>
 <th>Edit</th>
@@ -93,6 +94,7 @@ while($row=mysqli_fetch_array($result))
   <tr>
     <td style="font-weight:bold;"><?php echo $row['id']  ?></td>
     <td><?php echo '<img class="imgx" alt="news" src="'.$row['file_path'].'"/>' ?></td>
+    <td><?php echo '<img class="imgx" alt="news" src="'.$row['file_path_1'].'"/>' ?></td>
     <td class="thead"><?php  echo $row['heading']  ?></td>
     <td><?php echo $row['text'] ?></td>
     <td> <a href="update_news.php?update=<?php echo  $row['id']; ?>">Edit</a> </td>
