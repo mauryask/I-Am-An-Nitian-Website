@@ -112,11 +112,12 @@ if(uploadex($filetmp,$filepath, $filepath_1, $filetmp_1))
 
 function uploadex($filetmp,$filepath, $filepath_1, $filetmp_1)
 {
-    if( move_uploaded_file($filetmp,$filepath))
+    $x = move_uploaded_file($filetmp,$filepath);
+    if($x)
     {
-        return move_uploaded_file($filetmp_1,$filepath_1);
+        move_uploaded_file($filetmp_1,$filepath_1);
     }
-          
+    return $x;        
 }
 
 
@@ -155,8 +156,8 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 
 <form method="post" enctype="multipart/form-data" action="insert_news.php" autocomplete="off">
 <div style="display:flex;align-items:center;">
-<input type="file" name="image" id="image"> 
-<input type="file" name="image_1" id="image">
+<input type="file" name="image" id="image" title="compulsory"> 
+<input type="file" name="image_1" id="image_1" title="optional">
 </div>
 
 <input type="heading" name="heading" id="heading" placeholder="Heading">

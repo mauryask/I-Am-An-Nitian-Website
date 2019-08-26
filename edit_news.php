@@ -94,7 +94,14 @@ while($row=mysqli_fetch_array($result))
   <tr>
     <td style="font-weight:bold;"><?php echo $row['id']  ?></td>
     <td><?php echo '<img class="imgx" alt="news" src="'.$row['file_path'].'"/>' ?></td>
-    <td><?php echo '<img class="imgx" alt="news" src="'.$row['file_path_1'].'"/>' ?></td>
+
+    <td><?php 
+    if($row['file_path_1'] != trim("pics/"))
+    echo '<img class="imgx" alt="news" src="'.$row['file_path_1'].'"/>';
+    else
+    echo '<img  alt="news" src="images/query.svg" width="70px" height="70px"/>';
+    ?></td>
+    
     <td class="thead"><?php  echo $row['heading']  ?></td>
     <td><?php echo $row['text'] ?></td>
     <td> <a href="update_news.php?update=<?php echo  $row['id']; ?>">Edit</a> </td>
