@@ -139,6 +139,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         ?>        
         </div>
         <div class="news-content">
+
+
         <p style="font-weight:bold;font-size:12px;background:#4acf50;
          width:12.5rem;color:rgba(250,250,250,1);
         text-align:center;border-radius:20px;height:30px;margin:1rem 0 1rem 0;"><?php  echo $row['inserted_at'] ?></p>
@@ -149,9 +151,38 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
             font-family: 'Playfair Display', serif; font-size:17px;
             letter-spacing:0.3px; 
             color:#050505;">
-         <?php echo $row['text']; ?>
+         <?php 
+         
+         $news = array();
+         $news = explode(" ",$row['text']);
+
+         for($x = 0; $x<=50;$x++)
+         {
+           echo $news[$x]." ";
+         }
+
+         ?>
         </p>
 
+        <div class="news-img" style="margin-top:15px;margin-bottom:-14px;">
+        <?php
+        echo  '<img alt="news" src="'.$row['file_path_1'].'"/>';
+        ?>     
+        </div>
+        
+        <p style="text-align:justify; margin-top:1rem;
+            font-family: 'Playfair Display', serif; font-size:17px;
+            letter-spacing:0.3px; 
+            color:#050505;">
+         <?php 
+         
+         for($y=51;$y<str_word_count($row['text']);$y++)
+         {
+           echo $news[$y]." ";
+         }
+
+         ?>
+        </p>
 
 
 <div style="margin-top:1rem;" class="fb-share-button" data-href="<?php  echo 'http://www.iamannitian.co.in'.$_SERVER['REQUEST_URI']; ?>" data-layout="button_count" data-size="large">
