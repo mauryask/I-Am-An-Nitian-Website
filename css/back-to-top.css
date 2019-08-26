@@ -32,6 +32,10 @@
 	}
 }
 
+html{
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
 
 /*Zoom in*/
 .btnEntrance{
@@ -69,9 +73,7 @@
  }
 }
 
-html{
-	scroll-behavior: smooth;
-}
+
 
 .progress-container { 
 	width: 100%;

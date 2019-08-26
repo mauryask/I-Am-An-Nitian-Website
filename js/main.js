@@ -22,7 +22,7 @@
        
         
        //sticky navigation bar
-       if( check == false)
+if( check == false)
 {
   $(window).on('scroll',function(){
 

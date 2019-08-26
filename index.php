@@ -155,7 +155,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
             <p>Placements </p>
            </div>
 
-  <div class="appx" onclick="location.href='uPDxgdf.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="1000">
+  <div class="appx" onclick="location.href='welcomt_to_ca.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="1000">
         <img src="images/team.svg">
         <p>CA Portal</p>
        </div>
@@ -185,7 +185,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   </div>
 
 
-  <div class="appx_expo" onclick="location.href='uPDxgdf.php'" >
+  <div class="appx_expo" onclick="location.href='welcomt_to_ca.php'" >
         <img src="images/team.svg">
         <p>CA Portal</p>
        </div>
