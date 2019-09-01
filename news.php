@@ -181,7 +181,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
          ?>
          </p>
        
-         <div class="news-img" style="margin-top:13px;margin-bottom:-15px;">
+         <div id="news-img" class="news-img" style="margin-top:13px;margin-bottom:-15px;">
      <?php
       echo  '<img alt="news" src="'.$row['file_path_1'].'"/>';
         ?>        
@@ -434,12 +434,12 @@ function updf()
 </div>
  <div class="container">
  <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
-2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbspAll Rights Reserved</span></p>
+2019 &nbsp| &nbsp I AM AN NITIAN <span id="developerx">&nbsp | &nbspAll Rights Reserved</span></p>
 <p id="and_copy" class="copyright">All rights reserved</p>
-
-<p class="copyright" id="developer">Developer | Shubham Maurya | NIT Srinagar
- <span id="github">| <a href="https://github.com/pnstech" target="_blank" style="text-decoration:none;color:rgba(256,256,256,0.7);">Github</a></span></p>
-
+<p class="copyright" id="developer">Developed BY | Shubham Maurya | NIT SXR
+ <span id="github">| <a  id="hover" href="https://github.com/pnstech" target="_blank" >Github</a></span>
+ <span id="github">| <a  href="https://www.linkedin.com/in/cyberthreatatnit" target="_blank" >Linkedin</a></span>
+ </p>
 </div>
 </footer>
 </div>

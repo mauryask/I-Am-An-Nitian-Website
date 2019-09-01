@@ -90,6 +90,38 @@ font-weight:normal;
 letter-spacing:0.5px;
 }
 
+#id{
+  display:none;
+}
+
+@media (max-width:921px)
+{
+  .overlay .center{
+left:50%;
+top:60%;
+transform:translate(-50%,-60%);
+position:relative;
+text-align:center;
+padding:12px;
+}
+
+.center .sort{
+padding:12px;
+}
+  .banner{
+	background:url('images\\studentx.jpg') 100% 100% no-repeat;
+    height:100vh;
+    background-position:center;
+    background-size:cover;
+}
+
+.center .long{
+  font-size:16px;
+  letter-spacing:0.8px;
+}
+
+}
+
 </style>
 </head>
 
@@ -100,10 +132,10 @@ letter-spacing:0.5px;
 <div class="overlay">
 <div class="center" >
 <p data-aos="fade-left" data-aos-offset="200"  data-aos-easing="ease-in-sine" data-aos-duration="800">Apply For our Campus Ambassador Program<br>
-<span class="sort">Represent the fastest growing network of engineers</span><br>
+<span class="sort">Represent the fastest growing <span id="flip"><br></span>network of engineers</span><br>
 <button onclick="show_signup()">Apply</button>
 <button onclick="location.href='index.php'">Exit</button><br>
-<span class="long" onclick="show_log();">already applied ? click here to login</span>
+<span class="long" onclick="show_log();">already applied ? login</span>
 </p>
 </div>
 </div>

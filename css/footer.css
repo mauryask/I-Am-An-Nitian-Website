@@ -116,6 +116,16 @@ html{
 	overflow-x: hidden;
 }
 
+#github a:hover{
+  color:red;
+}
+
+#github a{
+  text-decoration:none;
+  color:rgba(256,256,256,0.7);
+}
+
+
 @media (max-width:721px)
 {
 .datay {
