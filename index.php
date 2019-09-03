@@ -6,10 +6,10 @@ session_start();
 <!DOCTYPE html>
 <html lang="en" oncontextmenu="return false">
 <head>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-8978938770635113",
+    google_ad_client: "ca-pub-4582330600142028",
     enable_page_level_ads: true
   });
 </script>
@@ -37,12 +37,6 @@ crossorigin="anonymous">
 <style>@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');</style>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link href="css/num_counter.css" type="text/css" rel="stylesheet">
-<style>
-.user_defined:hover{
-color:red;
-cursor:pointer;
-}
-</style>
 </head>
 
 <body onload="loadme()">
@@ -67,14 +61,14 @@ style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
 <p id="mnu">MENU</p>
 
 <ul>
-<li><a href="index.php" class="home" ><i class="fas fa-home" style="font-size:21px;"></i> Home</a></li>
+<li><a href="index.php" class="home" >Home</a></li>
 
-<li><a href="more-news.php" class="homex" > News</a></li>
+<li><a href="more-news.php" class="homex" >News</a></li>
 <li ><a href="#updf" class="homex" id="update_nav">Updates</a></li>
 
 <li><a href="#about" class="homex" id="about_nav">About Us</a></li>
 
-<li><a class="homex" id="user"><i class="fas fa-user-graduate" style="font-size:18px;"></i>
+<li><a class="homex" id="user">
 <?php
   if(isset($_SESSION['name'])&& !empty($_SESSION['name']))
   {
@@ -85,7 +79,7 @@ style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
     echo 'User';
   }
 ?>
-</a>
+&nbsp <i class="fas fa-user-graduate"></i></a>
 <ul style="margin-left:-1rem;">
 
 <?php
@@ -132,8 +126,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div class="social">
     <a  target="_blank" href="https://www.facebook.com/iamannitian" alt="facebook"><img  class="svg" src="images/facebook.svg"  ></a>
     <a href="https://www.instagram.com/i_am_an_nitian/" target="_blank"  alt="instagram"><img  class="svg" src="images/instagram.svg" ></a>
-    <a href="#" target="_blank"><img  class="svg" src="images/twitter.svg" alt="twitter"></a>
-    <a href="#" target="_blank"><img  class="svg" src="images/linkedin.svg" alt="linkedin"></a>
+    <a href="https://www.youtube.com/iamannitian" target="_blank"><img  class="svg" src="images/twitter.svg" alt="twitter"></a>
+    
 </div>
 </div>
 <div class="center">
@@ -162,7 +156,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
             <p>Placements </p>
            </div>
 
-  <div class="appx" onclick="location.href='welcomt_to_ca.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="1000">
+  <div class="appx" onclick="location.href='uPDxgdf.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="1000">
         <img src="images/team.svg">
         <p>CA Portal</p>
        </div>
@@ -192,7 +186,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   </div>
 
 
-  <div class="appx_expo" onclick="location.href='welcomt_to_ca.php'" >
+  <div class="appx_expo" onclick="location.href='uPDxgdf.php'" >
         <img src="images/team.svg">
         <p>CA Portal</p>
        </div>
@@ -588,6 +582,8 @@ function updf()
   </div>
    </div>
 
+
+
 <div id="num_count" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>
 <div class="card_count">
   <div>
@@ -622,6 +618,7 @@ function updf()
 </div>
 
 
+
   <!--= Nits Logo =-->
    <div class="nit-logos" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>
     <div class="owl-carousel owl-theme">
@@ -632,7 +629,7 @@ function updf()
     <div class="item"><img src="images\nit-logo\nit durgapur.png"><p>nit Durgapur</p></div>
     <div class="item"><img src="images\nit-logo\nit silchar.png"><p>nit silchar</p></div>
     <div class="item"><img src="images\nit-logo\nit jaipur.png"><p>mnit Jaipur</p></div>
-    <div class="item"><img src="images\nit-logo\nit warangal.png"><p>nit Warangal</p></div>
+    <div class="item"  ><img src="images\nit-logo\nit warangal.png"><p>nit Warangal</p></div>
     <div class="item"><img src="images\nit-logo\nit calicut.png"><p>nit Calicut</p></div>
     <div class="item"><img src="images\nit-logo\nit nagpur.png"><p>vnit Nagpur</p></div>
     <div class="item"><img src="images\nit-logo\nit surat.png"><p>svnit Surat</p></div>
@@ -658,6 +655,7 @@ function updf()
 	<div class="item"><img src="images\nit-logo\nit arunachal.png"><p>nit Arunachal Pradesh</p></div>
     </div>
     </div>
+
   <footer>
 
   <div class="datad">
@@ -671,11 +669,14 @@ function updf()
 </div>
 <div class="container">
 <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
-2019 &nbsp| &nbsp I AM AN NITIAN <span id="developerx">&nbsp | &nbspAll Rights Reserved | <x onclick="location.href='index.php'" class="user_defined">Privacy Policy</x></span></p>
-<p id="and_copy" class="copyright">privacy policy</p>
+2019 &nbsp| &nbsp I AM AN NITIAN <span id="developerx">&nbsp | &nbspAll Rights Reserved | </span><span id="developerx" class="hov" 
+onclick="location.href='https://www.freeprivacypolicy.com/privacy/view/b169e80c9ca0308e3025c2bad81475b9'">Privacy Policy</span></p>
+<p  id="and_copy" class="copyright hov" onclick="location.href='https://www.freeprivacypolicy.com/privacy/view/b169e80c9ca0308e3025c2bad81475b9'">privacy policy</p>
 
-<p class="copyright" id="developer">Developer | Shubham Maurya | NIT Srinagar
- <span id="github">| <a href="https://github.com/pnstech" target="_blank" style="text-decoration:none;color:rgba(256,256,256,0.7);">Github</a></span></p>
+<p class="copyright" id="developer">Developed by | Shubham Maurya | NIT SXR
+<span id="github">| <a  id="hover" href="https://github.com/pnstech" target="_blank" >Github</a></span>
+ <span id="github">| <a  href="https://www.linkedin.com/in/cyberthreatatnit" target="_blank" >Linkedin</a></span>
+ </p>
 
 </div>
 </footer>

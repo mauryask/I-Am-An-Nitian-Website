@@ -52,9 +52,11 @@
     .wrapper #num_count{
          flex-direction: column;
        margin-bottom:4rem;
+       display:none;
      }
      .card_count:nth-child(2){
          margin-top:3rem;
          margin-bottom:3rem;
      }
+  
    }

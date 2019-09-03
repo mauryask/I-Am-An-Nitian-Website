@@ -125,6 +125,11 @@ html{
   color:rgba(256,256,256,0.7);
 }
 
+.hov:hover{
+  cursor:pointer;
+  color:red;
+  }
+
 
 @media (max-width:721px)
 {
