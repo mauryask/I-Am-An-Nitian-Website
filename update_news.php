@@ -27,10 +27,25 @@ include_once('connection.php');
 if(isset($_POST['update']))
 {
     $id=$_GET['update'];
-    $file= addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
+    // for main image
+    $filetmp = $_FILES['image']['tmp_name'];
+    $filename  = $_FILES['image']['name'];
+    $filepath="pics/".$filename;
+
+
+    // for extra image
+    //image 1
+    $filetmp_1 = $_FILES['image_1']['tmp_name'];
+    $filename_1  = $_FILES['image_1']['name'];
+    $filepath_1 ="pics/".$filename_1;
+
+
+
     $head = addslashes($_POST['heading']); 
     $news = addslashes($_POST['news']);
-    $query="update tbl_images set name='$file', heading='$head', text='$news' where id='".$id."'";
+if(uploadey($filetmp,$filepath, $filepath_1, $filetmp_1))
+{
+    $query="update tbl_images set file_path='$filepath', heading='$head', text='$news' where id='".$id."'";
     if(mysqli_query($conn, $query))  
     {
         echo  "<script>alert('Updated successfully')</script>";
@@ -39,6 +54,18 @@ if(isset($_POST['update']))
     {
         echo  "<script>alert('Upadtion Failed')</script>";
     }
+}
+    
+}
+
+function uploadey($filetmp,$filepath, $filepath_1, $filetmp_1)
+{
+    $x = move_uploaded_file($filetmp,$filepath);
+    if($x)
+    {
+        move_uploaded_file($filetmp_1,$filepath_1);
+    }
+    return $x;        
 }
 
 ?>
@@ -67,8 +94,10 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 <p class="mainh" id="mainh" >Update News</p>
 <div class="add-news" id="add-news">
 <form method="post" enctype="multipart/form-data" autocomplete="off">
-
-<input type="file" name="image" id="image"> 
+<div style="display:flex;">
+<input type="file" name="image" id="image" title="compulsory"> 
+<input type="file" name="image_1" id="image_1" title="optional"> 
+</div>
 <?php
 $id = $_GET['update'];
 $query = "select * from tbl_images where id=".$id." ";

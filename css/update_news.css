@@ -57,7 +57,7 @@ body {
     border:1px solid rgba(120,120,120,1);
     box-shadow: rgba(0, 0, 0, 0.8) 0 0px 10px, rgba(0, 0, 0, 0.65) 0 0 10px 1px, inset rgba(255, 255, 255, 0.15) 0 1px 0, inset rgba(0, 0, 0, 0.25) 0 -1px 0;
 }
-.add-news form #news{
+.add-news form #news{  
     font-size:15px;
     color:rgba(0,0,0,1);
     width:52rem;
@@ -70,7 +70,7 @@ body {
     box-shadow: rgba(0, 0, 0, 0.8) 0 0px 10px, rgba(0, 0, 0, 0.65) 0 0 10px 1px, inset rgba(255, 255, 255, 0.15) 0 1px 0, inset rgba(0, 0, 0, 0.25) 0 -1px 0;
  }
 
- .add-news form  #image{
+ .add-news form  #image,.add-news form #image_1{
     margin:0 auto;
     margin:1rem;
     width:16rem;
