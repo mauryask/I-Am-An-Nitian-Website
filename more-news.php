@@ -131,6 +131,7 @@ while($row  = mysqli_fetch_assoc($result))
 </div>
 
 </div>
+
 <script>
 function id1(got_id)
 {

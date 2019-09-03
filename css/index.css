@@ -8,7 +8,7 @@
 	word-wrap: break-word;
 	}
 
-	body{
+  	body{
 	background: rgb(250, 250, 250);	
 	}			
 
@@ -29,6 +29,7 @@
 	height:100%;
 	position:absolute;
 	}
+	
 	
 	.wrapper .banner{
 	width:100%;
@@ -318,8 +319,9 @@ color:gray;
 		margin-bottom:6rem;
 	}
 
-@media (max-width:991px)
-{
+
+	@media (max-width:991px)
+	{
 	.dynamic-text
 	{
 		font-size:32px;

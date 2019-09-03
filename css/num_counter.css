@@ -1,0 +1,60 @@
+
+.wrapper #num_count
+	{
+     margin:0 auto;
+	   width:80%;
+     display:flex;
+     flex-direction:row;
+     align-items:center;
+     justify-content:space-around;
+   margin-bottom:5rem;
+  }
+  
+ .wrapper #num_count .card_count
+  {
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  cursor:pointer;
+  }
+
+  .wrapper #num_count .card_count div span:nth-child(1)
+ {
+   align-self:center;
+   color:rgba(37, 116, 169, 1);
+   font-size:65px;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-weight:bold;
+ }  
+
+ .wrapper #num_count .card_count div span:nth-child(2)
+ {
+   font-size:30px;
+   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   color:rgba(37, 116, 169, 1);
+ }
+
+ .wrapper #num_count .card_count div:nth-child(2) span
+ {
+    font-size:22px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+
+ @media (max-width:921px)
+ {
+
+    .wrapper #num_count .card_count div:nth-child(1) span:nth-child(1)
+    {
+     font-size:60px;
+    } 
+
+    .wrapper #num_count{
+         flex-direction: column;
+       margin-bottom:4rem;
+     }
+     .card_count:nth-child(2){
+         margin-top:3rem;
+         margin-bottom:3rem;
+     }
+   }

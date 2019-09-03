@@ -22,7 +22,7 @@ if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION[
     </div>");
 }
 
-include_once('connection.php');
+include_once('connection.php');   
 
 if(isset($_POST['update']))
 {

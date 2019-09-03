@@ -36,6 +36,13 @@ crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 <style>@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');</style>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link href="css/num_counter.css" type="text/css" rel="stylesheet">
+<style>
+.user_defined:hover{
+color:red;
+cursor:pointer;
+}
+</style>
 </head>
 
 <body onload="loadme()">
@@ -581,6 +588,39 @@ function updf()
   </div>
    </div>
 
+<div id="num_count" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>
+<div class="card_count">
+  <div>
+  <span class='numscroller' data-min='1' data-max='1000' data-delay='6' data-increment='8'>10</span>
+  <span>+</span>
+</div>
+  <div>
+  <span><i class="fas fa-user-graduate"></i> Users</span>
+</div>
+</div>
+
+<div class="card_count">
+<div>
+  <span class='numscroller' data-min='1' data-max='37000' data-delay='6' data-increment='290'>10</span>
+  <span>+</span>
+</div>
+  <div>
+  <span><i class="fab fa-facebook-square"></i> Followers</span>
+</div>
+</div>
+
+<div class="card_count">
+<div>
+  <span class='numscroller' data-min='1' data-max='5500' data-delay='6' data-increment='30'>10</span>
+  <span>+</span>
+</div>
+  <div>
+  <span><i class="fab fa-instagram"></i> Followers</span>
+</div>
+</div>
+
+</div>
+
 
   <!--= Nits Logo =-->
    <div class="nit-logos" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>
@@ -592,7 +632,7 @@ function updf()
     <div class="item"><img src="images\nit-logo\nit durgapur.png"><p>nit Durgapur</p></div>
     <div class="item"><img src="images\nit-logo\nit silchar.png"><p>nit silchar</p></div>
     <div class="item"><img src="images\nit-logo\nit jaipur.png"><p>mnit Jaipur</p></div>
-    <div class="item"  ><img src="images\nit-logo\nit warangal.png"><p>nit Warangal</p></div>
+    <div class="item"><img src="images\nit-logo\nit warangal.png"><p>nit Warangal</p></div>
     <div class="item"><img src="images\nit-logo\nit calicut.png"><p>nit Calicut</p></div>
     <div class="item"><img src="images\nit-logo\nit nagpur.png"><p>vnit Nagpur</p></div>
     <div class="item"><img src="images\nit-logo\nit surat.png"><p>svnit Surat</p></div>
@@ -618,7 +658,6 @@ function updf()
 	<div class="item"><img src="images\nit-logo\nit arunachal.png"><p>nit Arunachal Pradesh</p></div>
     </div>
     </div>
-
   <footer>
 
   <div class="datad">
@@ -632,8 +671,8 @@ function updf()
 </div>
 <div class="container">
 <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
-2019 &nbsp| &nbsp I AM AN NITIAN <span id="developerx">&nbsp | &nbspAll Rights Reserved</span></p>
-<p id="and_copy" class="copyright">All rights reserved</p>
+2019 &nbsp| &nbsp I AM AN NITIAN <span id="developerx">&nbsp | &nbspAll Rights Reserved | <x onclick="location.href='index.php'" class="user_defined">Privacy Policy</x></span></p>
+<p id="and_copy" class="copyright">privacy policy</p>
 
 <p class="copyright" id="developer">Developer | Shubham Maurya | NIT Srinagar
  <span id="github">| <a href="https://github.com/pnstech" target="_blank" style="text-decoration:none;color:rgba(256,256,256,0.7);">Github</a></span></p>
@@ -645,6 +684,7 @@ function updf()
 </html>
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
+<script src="js/num-scroll.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js" type="text/javascript"></script>
 <script src="js/owl.carousel.min.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
