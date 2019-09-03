@@ -43,17 +43,25 @@ if(isset($_POST['update']))
 
     $head = addslashes($_POST['heading']); 
     $news = addslashes($_POST['news']);
+
 if(uploadey($filetmp,$filepath, $filepath_1, $filetmp_1))
 {
+
     $query="update tbl_images set file_path='$filepath', heading='$head', text='$news' where id='".$id."'";
+    $query_x = "update tbl_images set file_path_1='$filepath_1' where id='".$id."'";
     if(mysqli_query($conn, $query))  
     {
-        echo  "<script>alert('Updated successfully')</script>";
+        if($filepath_1 != 'pics/')
+        {
+            mysqli_query($conn,$query_x);
+        }
+        echo  "<script>alert('Upadted Successfully')</script>";      
     }
     else
     {
-        echo  "<script>alert('Upadtion Failed')</script>";
+        echo  "<script>alert('Upadtion Failed!')</script>";      
     }
+       
 }
     
 }
