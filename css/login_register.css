@@ -204,7 +204,7 @@
               .login .log-card div
               {
                 flex:1 1 70%;
-                padding:2% 10% 0 10%;
+                padding:2% 10% 0 14%;
               }
               .login .log-card div input
               {
@@ -235,6 +235,18 @@
                 letter-spacing: 0.5px;
               }
   
+              .login .log-card .forget_div{
+              width:90%;
+              padding:10px 2px 8px 10px;
+              }
+            .login .log-card .forget{
+              text-decoration: none;  
+              color:rgba(58, 83, 155, 0.9);
+            }
+            .login .log-card .forget:hover{
+              color:red;  
+             }
+
               .login .log-card div .signx a{
                 color:rgba(58, 83, 155, 0.9);
                 text-decoration: none;

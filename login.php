@@ -3,7 +3,7 @@
  session_start();
 if(isset($_POST['email']))
 {
-if(empty($_POST['email']) || empty($_POST['pass']))
+if(empty($_POST['email']) || empty($_POST['pass'])) 
 {
   echo 'please fill out the credentials';
   exit;

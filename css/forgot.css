@@ -1,0 +1,65 @@
+body{
+background:rgba(250,250,250,1);
+padding:0;
+margin:0;
+font-family:sans-serif;
+height:100vh;
+}
+
+.forget_password{
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    position:absolute;
+    height:200px;
+    }
+    
+    
+    footer{
+        bottom:0;
+        width:100%;
+        position:absolute;
+    }
+    
+    form{
+        display:flex;
+        flex-direction:column;
+    }
+    
+    form p{
+    color:red;
+    margin-bottom:1rem;
+    font-size:16px;
+    letter-spacing:0.5px;
+    }
+    
+    form input{
+        border:1px solid rgba(140,140,140,1);
+        padding:0.6rem;
+        width:18rem;
+        border-radius:8px;
+        background:transparent;
+        font-size:15px;
+        color:rgba(90,90,90,1);
+    }
+    
+    form .submit
+    {
+       background:#4CAF50;
+       cursor:pointer;
+       margin-top:1.8rem;
+      color:white;
+      letter-spacing:0.5px;
+      font-size:16px;
+      border-color:transparent;
+    }
+    
+    .msg{
+    color:red;
+    margin-top:10.5rem;
+    text-align:center;
+    letter-spacing:0.3px;
+    position:absolute;
+    left:50%;
+    transform:translate(-50%);
+    }
