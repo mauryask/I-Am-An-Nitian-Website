@@ -1,7 +1,5 @@
-
 <!DOCTYPE html>
-<html id="<?php echo $row['id']; ?>" lang="en" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:fb="http://ogp.me/ns/fb#">
+<html lang="en">
 <head>
 <title>I Am An Nitian | Reset Password</title>
 <link rel="icon" href="images\imnitian.png">
@@ -18,7 +16,7 @@
 <div id="loader">
 </div>
 
-<div class="msg"><p style="color:green;">Password changed succesfully</p></div>
+<div id="msg"><p style="color:green;">Password changed succesfully</p></div>
 
 
 <div  class="forgot_password">
@@ -32,7 +30,7 @@
 <form>
 <input type="password" placeholder="New Password" required />
 <input type="password" placeholder="Confirm New Password" required />
-<input type="submit" value="submit"/>
+<button type="button" class="submit">Submit</button>
 </form>
 </div>
  

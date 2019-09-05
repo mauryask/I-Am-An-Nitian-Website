@@ -62,7 +62,7 @@ margin-top:2rem;
 font-size:14px;
 }
 
-.forgot_password .form form input:nth-child(3),.forgot_password .form form .submit {
+.forgot_password .form form .submit {
     background: #4acf4a;
     color:white;
     text-transform: capitalize;
@@ -71,16 +71,19 @@ font-size:14px;
     padding:0.5rem;
     cursor:pointer;
     margin-top:1.5rem;
+    width:16rem;
+    border-radius:7px;
+    outline:none;
   }
 
-.msg{
+#msg{
     left:50%;
     top:22%;
     transform: translate(-50%,-22%);
     position: relative;
     padding:10px;
 }
-.msg p{
+#msg p{
     color:rgba(70,70,70,1);
     font-family: serif;
     font-size:18px;

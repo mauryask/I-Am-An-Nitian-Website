@@ -1,7 +1,6 @@
 
 <!DOCTYPE html>
-<html id="<?php echo $row['id']; ?>" lang="en" xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:fb="http://ogp.me/ns/fb#">
+<html lang="en">
 <head>
 <title>I Am An Nitian | Forgot Password</title>
 <link rel="icon" href="images\imnitian.png">
@@ -18,7 +17,7 @@
 <div id="loader">
 </div>
 
-<div class="msg"><p id="msg"></p></div>
+<div id="msg"></div>
 
 
 <div  class="forgot_password">
@@ -28,10 +27,10 @@
 <p>I Am An Nitian</p>
 </div>
 
-<div class="form"> 
-<form method="post" autocomplete="off" enctype="multipart/fomr-data">
-<input type="email" placeholder="Enter Email" required id="email"/>
-<input type="submit" value="submit" class="submit"/>
+<div class="form" method="post"> 
+<form method="post">
+<input type="text" placeholder="Enter Email"  id="email">
+<button type="button" class="submit">Submit</button>
 </form>
 </div>
  
@@ -43,6 +42,7 @@
 </body>
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<script src="js/main.js"></script>
 
 <script>
 
@@ -50,23 +50,32 @@ $(document).ready(function(){
 $('.submit').click(function(){
 
 var email = $('#email').val().trim();
-if(email != "")
+if(email != '')
 {
 
-    $.ajax({
+   $.ajax({
 		url:'sent_pass_mail.php',
 		type:'post',
 		data: { email:email},
-		success: function(response)
+		success: function(data)
 		{
-		   
+		  if(data==1)
+		  {
+			$('#msg').html('<p style="color:green">Password reset email has been sent successfully</p>');
+			$('form').trigger('reset');
+		  }
+		  else
+		  {
+			$('#msg').html('<p style="color:red">Invalid Email</p>');
+		  }
 		}
 	   
 	});
+	
 }
 else
 {
-    $('#msg').text('Please enter your registered email id');
+    $('#msg').html('<p style="color:red;">Please enter your registered email id</p>');
 }
 
 
