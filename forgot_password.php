@@ -18,7 +18,7 @@
 <div id="loader">
 </div>
 
-<div class="msg"><p>Passsword reset email is sent to your registerd email id</p></div>
+<div class="msg"><p id="msg"></p></div>
 
 
 <div  class="forgot_password">
@@ -29,8 +29,8 @@
 </div>
 
 <div class="form"> 
-<form>
-<input type="email" placeholder="Enter Email" required />
+<form method="post" autocomplete="off" enctype="multipart/fomr-data">
+<input type="email" placeholder="Enter Email" required id="email"/>
 <input type="submit" value="submit" class="submit"/>
 </form>
 </div>
@@ -43,3 +43,34 @@
 </body>
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+$('.submit').click(function(){
+
+var email = $('#email').val().trim();
+if(email != "")
+{
+
+    $.ajax({
+		url:'sent_pass_mail.php',
+		type:'post',
+		data: { email:email},
+		success: function(response)
+		{
+		   
+		}
+	   
+	});
+}
+else
+{
+    $('#msg').text('Please enter your registered email id');
+}
+
+
+})
+})
+
+</script>

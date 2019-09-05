@@ -3,7 +3,7 @@
 <html id="<?php echo $row['id']; ?>" lang="en" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:fb="http://ogp.me/ns/fb#">
 <head>
-<title>I Am An Nitian | Forgot Password</title>
+<title>I Am An Nitian | Reset Password</title>
 <link rel="icon" href="images\imnitian.png">
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
