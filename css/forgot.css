@@ -27,12 +27,12 @@ align-items: center;
     flex-direction: column;
 justify-content: center;
 align-items: center;
+cursor:pointer;
 }
 
 .forgot_password .logo img{
 width:65px;
 height:65x;
-cursor:pointer;
 }
 
 .forgot_password .logo p{
@@ -61,13 +61,39 @@ margin-top:2rem;
 font-size:14px;
 }
 
-.forgot_password .form form input:nth-child(2){
-  background: #4acf4a;
-  color:white;
-  text-transform: capitalize;
-  font-size:15px;
-  border-color:transparent;
-  padding:0.5rem;
-  cursor:pointer;
-  margin-top:1.5rem;
+.forgot_password .form form input:nth-child(3),.forgot_password .form form .submit {
+    background: #4acf4a;
+    color:white;
+    text-transform: capitalize;
+    font-size:15px;
+    border-color:transparent;
+    padding:0.5rem;
+    cursor:pointer;
+    margin-top:1.5rem;
+  }
+
+.msg{
+    left:50%;
+    top:22%;
+    transform: translate(-50%,-22%);
+    position: relative;
+    padding:10px;
+}
+.msg p{
+    color:rgba(70,70,70,1);
+    font-family: serif;
+    font-size:18px;
+    letter-spacing: 0.3px;
+    text-align: center;
+}
+
+.copy_right{
+    bottom:4%;
+    left:50%;
+    margin-left:-110px;
+    position:absolute;
+}
+
+.copy_right p{
+    font-family: serif;
 }

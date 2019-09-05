@@ -18,7 +18,7 @@
 <div id="loader">
 </div>
 
-<div class="msg"><p>Passsword reset email is sent to your registerd email id</p></div>
+<div class="msg"><p style="color:green;">Password changed succesfully</p></div>
 
 
 <div  class="forgot_password">
@@ -30,8 +30,9 @@
 
 <div class="form"> 
 <form>
-<input type="email" placeholder="Enter Email" required />
-<input type="submit" value="submit" class="submit"/>
+<input type="password" placeholder="New Password" required />
+<input type="password" placeholder="Confirm New Password" required />
+<input type="submit" value="submit"/>
 </form>
 </div>
  
