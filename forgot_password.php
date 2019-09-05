@@ -59,12 +59,12 @@ if(email != '')
 		data: { email:email},
 		success: function(data)
 		{
-		  if(data==1)
+		  if(data == 1)
 		  {
 			$('#msg').html('<p style="color:green">Password reset email has been sent successfully</p>');
 			$('form').trigger('reset');
 		  }
-		  else
+		  else if(data == 0)
 		  {
 			$('#msg').html('<p style="color:red">Invalid Email</p>');
 		  }

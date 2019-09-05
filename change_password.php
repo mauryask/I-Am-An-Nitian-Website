@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="<?php echo $_GET['id']; ?>">
 <head>
 <title>I Am An Nitian | Reset Password</title>
 <link rel="icon" href="images\imnitian.png">
@@ -16,7 +16,7 @@
 <div id="loader">
 </div>
 
-<div id="msg"><p style="color:green;">Password changed succesfully</p></div>
+<div id="msg"></div>
 
 
 <div  class="forgot_password">
@@ -28,9 +28,9 @@
 
 <div class="form"> 
 <form>
-<input type="password" placeholder="New Password" required />
-<input type="password" placeholder="Confirm New Password" required />
-<button type="button" class="submit">Submit</button>
+<input type="password" placeholder="New Password"  id="pass"/>
+<input type="password" placeholder="Confirm New Password"  id="cnf_pass"/>
+<button type="button" class="submit" id="submit">Submit</button>
 </form>
 </div>
  
@@ -42,3 +42,43 @@
 </body>
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<script>
+$(document).ready(function(){
+$('#submit').click(function(){
+
+var pass = $('#pass').val().trim();
+var cnf_pass = $('#cnf_pass').val().trim();
+
+if(pass != '' && cnf_pass != '')
+{
+
+ if(pass.length < 6)
+ {
+    $('#msg').html('<p style="color:red">Password must be of atleast 6 characters</p>');
+ }
+ else if(pass != cnf_pass)
+ {
+    $('#msg').html('<p style="color:red">Password didn\'t match</p>');
+ }
+ else
+ {
+   $.ajax({
+
+  type:'post',
+  url:'confirm_change_pass.php',
+  data:{pass : pass},
+    success:function()
+    {
+        
+    }
+   })
+ }
+}
+else
+{
+    $('#msg').html('<p style="color:red">Please fill out the credentials</p>');
+}
+
+})
+})
+</script>
