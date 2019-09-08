@@ -1,6 +1,6 @@
 <?php
 include_once('connection.php');
-session_start();
+session_start(); 
 
 if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])
  && isset($_SESSION['user_type']) && $_SESSION['user_type'] == 2)    

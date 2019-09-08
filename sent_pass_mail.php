@@ -39,24 +39,34 @@ include_once('connection.php');
        </div>';
 
        $id = $row['id'];
-       $url = urldecode("http://localhost/Unknown-Things/change_password.php?userxplftnsp='".$id."'");
+       $url = "http://localhost/Unknown-Things/change_password.php?userxplftnsp='".$id."'";
        $message .= '<p style="margin-left:12px;">Hi ! '.$row['name'].'</p>';
        $message .= '<p style="margin-left:12px;margin-bottom:25px;">We got a request to reset your password.</p>';
        $message .= '<a style="text-align:center;background:#4acf4a;width:15rem;
              text-decoration:none;color:white;margin-left:10px;padding:8px 12px 8px 12px;"
               href="'.$url.'">Reset Password</a>';
-             $message .= '<p style="margin-left:12px;margin-bottom:25px;margin-top:25px;">If you ignore this message your
+       $message .= '<p style="margin-left:12px;margin-bottom:25px;margin-top:25px;">If you ignore this message your
               password won\'t be changed.</p>';
        $message .= '<div style="width:10rem;height:2px;background:#4caf50;margin-left:12px;"></div>';
        $message .= '<p style="margin-left:12px;"><i>This is a system
         genrated email. Please do not reply.</i></p>';
        $message .= "</body></html>";
-       mail($to, $subject, $message, $headers);
-       
+      $rslt =  mail($to, $subject, $message, $headers);
+      if($rslt)
+      {
+        echo 1;
+        exit;
+      }
+      else
+      {
+        echo 0;
+        exit;
+      }
      }
      else
      {
          echo 0;
+         exit;
      }
     }
 

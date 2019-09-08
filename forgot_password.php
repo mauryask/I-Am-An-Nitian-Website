@@ -50,6 +50,7 @@ $(document).ready(function(){
 $('.submit').click(function(){
 
 var email = $('#email').val().trim();
+
 if(email != '')
 {
 

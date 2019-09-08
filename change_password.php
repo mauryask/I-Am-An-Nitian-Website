@@ -1,5 +1,9 @@
+<?php
+session_start();
+$_SESSION['user_idx']  = $_GET['userxplftnsp'];
+?>
 <!DOCTYPE html>
-<html lang="en" id="<?php echo $_GET['id']; ?>">
+<html lang="en">
 <head>
 <title>I Am An Nitian | Reset Password</title>
 <link rel="icon" href="images\imnitian.png">
@@ -27,7 +31,7 @@
 </div>
 
 <div class="form"> 
-<form>
+<form method="post">
 <input type="password" placeholder="New Password"  id="pass"/>
 <input type="password" placeholder="Confirm New Password"  id="cnf_pass"/>
 <button type="button" class="submit" id="submit">Submit</button>
@@ -64,14 +68,27 @@ if(pass != '' && cnf_pass != '')
  {
    $.ajax({
 
-  type:'post',
-  url:'confirm_change_pass.php',
-  data:{pass : pass},
-    success:function()
+    url:'confirm_change_pass.php',
+    type:'post',
+    data:{pass : pass},
+    success:function(data)
     {
-        
+        if(data == 1)
+        {
+            $('#msg').html('<p style="color:green">Password changed successfully</p>');
+
+            setTimeout(function(){
+                window.location.replace('http://localhost/unknown-things/index.php');
+                 // using this you can not return back to previous page
+            },2000);
+        }
+        else if (data == 0)
+        {
+            $('#msg').html('<p style="color:red">Password change request failed</p>');   
+        }
     }
-   })
+
+   });
  }
 }
 else
