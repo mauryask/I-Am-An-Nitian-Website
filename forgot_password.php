@@ -53,7 +53,8 @@ var email = $('#email').val().trim();
 
 if(email != '')
 {
-
+	$('.submit').text("wait...."); 
+	$('.submit').prop("disabled", true);//disabling the button aftter clicking
    $.ajax({
 		url:'sent_pass_mail.php',
 		type:'post',
@@ -61,13 +62,16 @@ if(email != '')
 		success: function(data)
 		{
 		  if(data == 1)
-		  {
+		  { 
 			$('#msg').html('<p style="color:green">Password reset email has been sent successfully</p>');
+			$('.submit').text("submit");
 			$('form').trigger('reset');
 		  }
 		  else if(data == 0)
 		  {
 			$('#msg').html('<p style="color:red">Invalid Email</p>');
+			$('.submit').text("submit");
+			$('.submit').prop("disabled", false); //enabling the button click
 		  }
 		}
 	   

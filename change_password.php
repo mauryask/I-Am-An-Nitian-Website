@@ -76,7 +76,7 @@ if(pass != '' && cnf_pass != '')
         if(data == 1)
         {
             $('#msg').html('<p style="color:green">Password changed successfully</p>');
-
+            $('.submit').prop("disabled", true); //disabling the button
             setTimeout(function(){
                 window.location.replace('http://localhost/unknown-things/index.php');
                  // using this you can not return back to previous page
@@ -84,7 +84,8 @@ if(pass != '' && cnf_pass != '')
         }
         else if (data == 0)
         {
-            $('#msg').html('<p style="color:red">Password change request failed</p>');   
+            $('#msg').html('<p style="color:red">Password change request failed</p>');
+            $('.submit').prop("disabled", false);   
         }
     }
 
