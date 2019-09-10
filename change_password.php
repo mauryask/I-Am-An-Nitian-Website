@@ -46,6 +46,7 @@ $_SESSION['user_idx']  = $_GET['userxplftnsp'];
 </body>
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+<script src="js/main.js"></script>
 <script>
 $(document).ready(function(){
 $('#submit').click(function(){
@@ -75,16 +76,18 @@ if(pass != '' && cnf_pass != '')
     {
         if(data == 1)
         {
+            $('.submit').text("wait....");
             $('#msg').html('<p style="color:green">Password changed successfully</p>');
             $('.submit').prop("disabled", true); //disabling the button
             setTimeout(function(){
-                window.location.replace('http://localhost/unknown-things/index.php');
+                window.location.replace('http://www.iamannitian.co.in/index.php');
                  // using this you can not return back to previous page
             },2000);
         }
         else if (data == 0)
         {
             $('#msg').html('<p style="color:red">Password change request failed</p>');
+            $('.submit').text("Submit");
             $('.submit').prop("disabled", false);   
         }
     }

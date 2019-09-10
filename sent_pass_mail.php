@@ -8,7 +8,6 @@ include_once('connection.php');
     }
     else
     {
-
      $query ="select * from user where email = '".$_POST['email']."' ";
      $result = mysqli_query($conn,$query);
      if($row = mysqli_fetch_array($result))
@@ -39,8 +38,10 @@ include_once('connection.php');
        </div>';
 
        $id = $row['id'];
+        $name = explode(" ",$row['name']); 
+        $name = $name[0]; 
        $url = "http://localhost/Unknown-Things/change_password.php?userxplftnsp='".$id."'";
-       $message .= '<p style="margin-left:12px;">Hi ! '.$row['name'].'</p>';
+       $message .= '<p style="margin-left:12px;">Hi ! '.$name.'</p>';
        $message .= '<p style="margin-left:12px;margin-bottom:25px;">We got a request to reset your password.</p>';
        $message .= '<a style="text-align:center;background:#4acf4a;width:15rem;
              text-decoration:none;color:white;margin-left:10px;padding:8px 12px 8px 12px;"

@@ -63,7 +63,7 @@ if(email != '')
 		{
 		  if(data == 1)
 		  { 
-			$('#msg').html('<p style="color:green">Password reset email has been sent successfully</p>');
+			$('#msg').html('<p style="color:green">Password reset email has been sent successfully<br>It may take 2 minutes or more to reach</p>');
 			$('.submit').text("submit");
 			$('form').trigger('reset');
 		  }
@@ -81,9 +81,11 @@ if(email != '')
 else
 {
     $('#msg').html('<p style="color:red;">Please enter your registered email id</p>');
+	setTimeout(function(){
+              $('#msg').fadeOut();
+            },1000);
 }
-
-
+$('#msg').fadeIn();
 })
 })
 

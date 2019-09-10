@@ -451,7 +451,7 @@ function updf()
 }
  </script>
 
-    <p class="p2"><a href="uPDxgdf.php">privacy policy</a></p>
+    <p class="p2"><a target="_blank" href="https://www.freeprivacypolicy.com/privacy/view/b169e80c9ca0308e3025c2bad81475b9">privacy policy</a></p>
   </div>
  </div>
  <div class="sign-form">
@@ -551,11 +551,11 @@ function updf()
 <div class="log-card">
     <img class="cancel-log"  src="images/cut.png" onclick="cancel_log()">
 <div>
-<div class="log-msg"  ><p id="message"><p></div>
+<div class="log-msg" ><p id="message"><p></div>
   <form  method="post" autocomplete="off">
   <input  id="email" type="text" autocomplete="off" placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
   <input autocomplete="off"  id="pass" type="password" placeholder="Password"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
-<div class="forget_div"><a href="forgot_password.php" class="forget">forgot password ?</a></div>
+<div class="forget_div"><a href="forgot_password.php" class="forget">forgot password?</a></div>
 <div class="select" id="select">
   <input type="radio" name="user" id="usert" value="1" checked>&nbsp <label class="lab1">User</label>
   <input type="radio" name="user" id="admin" value="2">&nbsp <label>Admin</label>

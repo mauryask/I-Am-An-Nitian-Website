@@ -26,7 +26,13 @@ $(document).ready(function(){
 		   else
 		   {
 			   $('#message').html(response);
+				setTimeout(function(){
+					$('#message').fadeOut();	
+				},1400);
+
+				$('#message').fadeIn();
 		   }
+
 		}
 	   
 	});
