@@ -320,7 +320,7 @@ color:gray;
 	}
 
 
-	@media (max-width:991px)
+	@media (max-width:921px)
 	{
 	.dynamic-text
 	{
@@ -334,8 +334,8 @@ color:gray;
 	}
 
 .textx{
-	padding-left:10px;
-	padding-right:10px;
+	padding-left:3px;
+	padding-right:3px;
 }
 	.text
 	{
@@ -344,7 +344,7 @@ color:gray;
 	}	
 
 	.textx .msg{
-		font-size:34px;
+		font-size:33px;
 		line-height:40px;
 	}
 .textx .join{

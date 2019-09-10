@@ -37,6 +37,7 @@ crossorigin="anonymous">
 <style>@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');</style>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <link href="css/num_counter.css" type="text/css" rel="stylesheet">
+
 </head>
 
 <body onload="loadme()">
@@ -126,7 +127,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div class="social">
     <a  target="_blank" href="https://www.facebook.com/iamannitian" alt="facebook"><img  class="svg" src="images/facebook.svg"  ></a>
     <a href="https://www.instagram.com/i_am_an_nitian/" target="_blank"  alt="instagram"><img  class="svg" src="images/instagram.svg" ></a>
-    <a href="https://www.youtube.com/iamannitian" target="_blank"><img  class="svg" src="images/twitter.svg" alt="twitter"></a>
+    <a href="https://www.youtube.com/iamannitian" target="_blank"><img  class="svg" src="images/ytb.jpg" alt="twitter"></a>
     
 </div>
 </div>
@@ -304,7 +305,7 @@ Check out the M.Tech. placements of various NITs
  <img class="slide" src="images/Surathkal.jpg">
  </div>
  <div class="slidex">
-<div id="captionx"><p>NIT Nagpur</p></div>
+<div id="captionx"><p>VNIT Nagpur</p></div>
  <img class="slide" src="images/Nagpur.jpg">
  </div>
 
@@ -551,7 +552,7 @@ function updf()
 <div class="log-card">
     <img class="cancel-log"  src="images/cut.png" onclick="cancel_log()">
 <div>
-<div class="log-msg" ><p id="message"><p></div>
+<div class="log-msg"  ><p id="message"><p></div>
   <form  method="post" autocomplete="off">
   <input  id="email" type="text" autocomplete="off" placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
   <input autocomplete="off"  id="pass" type="password" placeholder="Password"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
@@ -598,7 +599,7 @@ function updf()
 
 <div class="card_count">
 <div>
-  <span class='numscroller' data-min='1' data-max='37000' data-delay='6' data-increment='290'>10</span>
+  <span class='numscroller' data-min='1' data-max='40000' data-delay='6' data-increment='290'>10</span>
   <span>+</span>
 </div>
   <div>
@@ -608,7 +609,7 @@ function updf()
 
 <div class="card_count">
 <div>
-  <span class='numscroller' data-min='1' data-max='5500' data-delay='6' data-increment='30'>10</span>
+  <span class='numscroller' data-min='1' data-max='6000' data-delay='6' data-increment='30'>10</span>
   <span>+</span>
 </div>
   <div>
@@ -661,11 +662,11 @@ function updf()
 
   <div class="datad">
   <p class="x">Feel Free To Contact Us</p>
-  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-6202590504 &nbsp | &nbsp  +91-9055667606</p>
+  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-6202590504 &nbsp | &nbsp  +91-8130512823</p>
  <span id="respo_contact">
  <P>iamannitian@gmail.com</p> 
  <P>+91-6202590504</p> 
- <P>+91-9055667606</p> 
+ <P>+91-8130512823</p> 
    </span>
 </div>
 <div class="container">
