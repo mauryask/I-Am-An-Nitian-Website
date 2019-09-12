@@ -51,18 +51,16 @@ $(document).ready(function(){
                        },1400);
 
                        $('#msgy').fadeIn();
-
-
                        }
                        else
                        {
                         $('#msgx').html(response);
 
-                        setTimeout(function()
+                        /*setTimeout(function()
                         {
                         $('#msgx').fadeOut();
                         },1400);
-                        $('#msgx').fadeIn();
+                        $('#msgx').fadeIn();*/
                        }
                      }
                   }

@@ -17,7 +17,7 @@
              .signup .sign-card{
                  box-shadow:0 0 5px 5px rgba(0,0,0,1);
                  background:rgba(220,220,220,1);
-                  width:60%;
+                 width:60%;
                  height:auto;
                  display:flex;
                  flex-direction: row;
@@ -69,7 +69,7 @@
                text-align: center;
                border-radius: 5px;
                padding:2%;
-               margin: 3px;
+               margin: 3px; 
                background: rgba(230,230,230,1);
                cursor: pointer;
               }
@@ -78,6 +78,7 @@
                 text-decoration:none;
                 font-size: 15px;
                 color:rgba(80,80,80,1);
+                overflow-x: 
                }
                .sign-card .sign-img .links ul a {
                 text-decoration:none;
@@ -342,6 +343,7 @@
               
                       .signup {
                         width:100%;
+                       overflow-y:scroll;
                       }
                       .signup .sign-card{
                          width:92%;
@@ -358,13 +360,15 @@
                       .sign-card .sign-form  .mainh{
                         font-size:24px;
                         margin-bottom:0;
+                        margin-top:30px;
                       }
               
                       .msgx{
-                        height:20px;
+                        height:15px;
                         font-size:14px;
                         padding:0;
                         margin:0;
+                       
                       }
               
                       #msgk{
@@ -374,4 +378,16 @@
                       {
                         padding-top:0rem;
                       }
+
+                      .sign-card .sign-form div form
+                        {
+                        padding-top:0;
+                        }
+                                           
+                      .signup .sign-card .sign-form div form input,select
+                      {
+                          padding:8px 0 8px 2px;
+                      }
+      
+
               }
