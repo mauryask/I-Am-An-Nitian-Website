@@ -12,22 +12,19 @@
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 
-<body onload="loadme()">
+<body onload="loadme()">     
       
 <div id="loader">
 </div>
 
-<div id="msg"></div>
-
-
 <div  class="forgot_password">
-
+<div id="msg"><p id="msgx"></p></div>
 <div class="logo" onclick="location.href='index.php'">
 <img src="images/imnitian.png"/>
 <p>I Am An Nitian</p>
 </div>
 
-<div class="form" method="post"> 
+<div class="form" method="post" autocomplete="off"> 
 <form method="post">
 <input type="text" placeholder="Enter Email"  id="email">
 <button type="button" class="submit">Submit</button>
@@ -63,13 +60,13 @@ if(email != '')
 		{
 		  if(data == 1)
 		  { 
-			$('#msg').html('<p style="color:green">Password reset email has been sent successfully<br>It may take 2 minutes or more to reach</p>');
+			$('#msgx').text("Password reset email has been sent successfully<br>It may take 2 minutes or more to reach");
 			$('.submit').text("submit");
 			$('form').trigger('reset');
 		  }
 		  else if(data == 0)
 		  {
-			$('#msg').html('<p style="color:red">Invalid Email</p>');
+			$('#msgx').text('Invalid Email');
 			$('.submit').text("submit");
 			$('.submit').prop("disabled", false); //enabling the button click
 		  }
@@ -80,12 +77,12 @@ if(email != '')
 }
 else
 {
-    $('#msg').html('<p style="color:red;">Please enter your registered email id</p>');
+    $('#msgx').text('Please enter your registered email id');
 	setTimeout(function(){
-              $('#msg').fadeOut();
+              $('#msgx').fadeOut();
             },1000);
 }
-$('#msg').fadeIn();
+$('#msgx').fadeIn();
 })
 })
 
