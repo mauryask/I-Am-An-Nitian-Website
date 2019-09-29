@@ -24,8 +24,8 @@
 <p>I Am An Nitian</p>
 </div>
 
-<div class="form" method="post" autocomplete="off"> 
-<form method="post">
+<div class="form" method="post"> 
+<form method="post"  autocomplete="off">
 <input type="text" placeholder="Enter Email"  id="email">
 <button type="button" class="submit">Submit</button>
 </form>
@@ -44,7 +44,16 @@
 <script>
 
 $(document).ready(function(){
+
+
+$('#email').click(function(){
+	$('#msg').css({'background':'transparent', 'border':'none', 'color':'transparent'});
+})
+	
 $('.submit').click(function(){
+
+//on button click
+$('#msg').css({'background':'transparent', 'border':'none', 'color':'transparent'});
 
 var email = $('#email').val().trim();
 
@@ -58,14 +67,17 @@ if(email != '')
 		data: { email:email},
 		success: function(data)
 		{
+
 		  if(data == 1)
 		  { 
-			$('#msgx').text("Password reset email has been sent successfully<br>It may take 2 minutes or more to reach");
+			$('#msg').css({'color':'#4F8A10', 'background':'#DFF2BF', 'border':'1px solid'});
+			$('#msgx').text("Password reset email has been sent successfully");
 			$('.submit').text("submit");
 			$('form').trigger('reset');
 		  }
 		  else if(data == 0)
 		  {
+			$('#msg').css({'color':'#D8000C', 'background':'#FFD2D2', 'border':'1px solid'});
 			$('#msgx').text('Invalid Email');
 			$('.submit').text("submit");
 			$('.submit').prop("disabled", false); //enabling the button click
@@ -77,12 +89,10 @@ if(email != '')
 }
 else
 {
-    $('#msgx').text('Please enter your registered email id');
-	setTimeout(function(){
-              $('#msgx').fadeOut();
-            },1000);
+	$('#msg').css({'color':'#D8000C', 'background':'#FFD2D2', 'border':'1px solid'});
+    $('#msgx').text('Please enter your registered email id');		
 }
-$('#msgx').fadeIn();
+
 })
 })
 
