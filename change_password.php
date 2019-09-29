@@ -20,10 +20,10 @@ $_SESSION['user_idx']  = $_GET['userxplftnsp'];
 <div id="loader">
 </div>
 
-<div id="msg"></div>
-
 
 <div  class="forgot_password">
+
+<div id="msg"><p id="msgx"></p></div>
 
 <div class="logo" onclick="location.href='index.php'">
 <img src="images/imnitian.png"/>
@@ -31,7 +31,7 @@ $_SESSION['user_idx']  = $_GET['userxplftnsp'];
 </div>
 
 <div class="form"> 
-<form method="post">
+<form method="post" autocomplete="off">
 <input type="password" placeholder="New Password"  id="pass"/>
 <input type="password" placeholder="Confirm New Password"  id="cnf_pass"/>
 <button type="button" class="submit" id="submit">Submit</button>
@@ -49,7 +49,19 @@ $_SESSION['user_idx']  = $_GET['userxplftnsp'];
 <script src="js/main.js"></script>
 <script>
 $(document).ready(function(){
+
+
+$('#pass').click(function(){
+	$('#msg').css({'background':'transparent', 'border':'none', 'color':'transparent'});
+})
+
+$('#cnf_pass').click(function(){
+	$('#msg').css({'background':'transparent', 'border':'none', 'color':'transparent'});
+})
+
 $('#submit').click(function(){
+
+ $('#msg').css({'background':'transparent', 'border':'none', 'color':'transparent'});
 
 var pass = $('#pass').val().trim();
 var cnf_pass = $('#cnf_pass').val().trim();
@@ -59,11 +71,13 @@ if(pass != '' && cnf_pass != '')
 
  if(pass.length < 6)
  {
-    $('#msg').html('<p style="color:red">Password must be of atleast 6 characters</p>');
+    $('#msg').css({'color':'#D8000C', 'background':'#FFD2D2', 'border':'1px solid'});
+    $('#msgx').text('Password must be of atleast 6 characters');
  }
  else if(pass != cnf_pass)
  {
-    $('#msg').html('<p style="color:red">Password didn\'t match</p>');
+    $('#msg').css({'color':'#D8000C', 'background':'#FFD2D2', 'border':'1px solid'});
+    $('#msgx').text('Password didn\'t match');
  }
  else
  {
@@ -77,7 +91,8 @@ if(pass != '' && cnf_pass != '')
         if(data == 1)
         {
             $('.submit').text("wait....");
-            $('#msg').html('<p style="color:green">Password changed successfully</p>');
+            $('#msg').css({'color':'#4F8A10', 'background':'#DFF2BF', 'border':'1px solid'});
+            $('#msgx').text('Password changed successfully');
             $('.submit').prop("disabled", true); //disabling the button
             setTimeout(function(){
                 window.location.replace('http://www.iamannitian.co.in/index.php');
@@ -86,7 +101,8 @@ if(pass != '' && cnf_pass != '')
         }
         else if (data == 0)
         {
-            $('#msg').html('<p style="color:red">Password change request failed</p>');
+            $('#msg').css({'color':'#D8000C', 'background':'#FFD2D2', 'border':'1px solid'});
+            $('#msgx').text('Password change request failed');
             $('.submit').text("Submit");
             $('.submit').prop("disabled", false);   
         }
@@ -97,7 +113,8 @@ if(pass != '' && cnf_pass != '')
 }
 else
 {
-    $('#msg').html('<p style="color:red">Please fill out the credentials</p>');
+    $('#msg').css({'color':'#D8000C', 'background':'#FFD2D2', 'border':'1px solid'});
+    $('#msgx').text('Please fill out the credentials');
 }
 
 })
