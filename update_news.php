@@ -44,37 +44,89 @@ if(isset($_POST['update']))
     $head = addslashes($_POST['heading']); 
     $news = addslashes($_POST['news']);
 
-if(uploadey($filetmp,$filepath, $filepath_1, $filetmp_1))
-{
-
-    $query="update tbl_images set file_path='$filepath', heading='$head', text='$news' where id='".$id."'";
-    $query_x = "update tbl_images set file_path_1='$filepath_1' where id='".$id."'";
-    if(mysqli_query($conn, $query))  
+    if($filepath == 'pics/' and $filepath_1 !='pics/') // 1st is empty
     {
-        if($filepath_1 != 'pics/')
+        $x = move_uploaded_file($filetmp_1,$filepath_1);
+        if($x)
         {
-            mysqli_query($conn,$query_x);
+        $query = "update tbl_images set file_path_1='$filepath_1', heading='$head', text='$news' where id='".$id."'";
+            if(mysqli_query($conn, $query))
+            {
+                echo  "<script>alert('Upadted Successfully')</script>";      
+            }
+            else
+            {
+                echo  "<script>alert('Upadtion Failed!')</script>";      
+            }
         }
-        echo  "<script>alert('Upadted Successfully')</script>";      
     }
-    else
+
+    if($filepath != 'pics/' and $filepath_1 =='pics/') // 2nd is empty
     {
-        echo  "<script>alert('Upadtion Failed!')</script>";      
+        $x = move_uploaded_file($filetmp,$filepath);
+        if($x)
+        {
+         $query="update tbl_images set file_path='$filepath', heading='$head', text='$news' where id='".$id."'";
+         
+            if(mysqli_query($conn, $query))
+            {
+                echo  "<script>alert('Upadted Successfully')</script>";      
+            }
+            else
+            {
+                echo  "<script>alert('Upadtion Failed!')</script>";      
+            }
+        }
+        
     }
+
+    if($filepath == 'pics/' and $filepath_1 =='pics/') // both are empty
+    {
+       $query="update tbl_images set heading='$head', text='$news' where id='".$id."'";
+        if(mysqli_query($conn, $query))
+        {
+            echo  "<script>alert('Upadted Successfully')</script>";      
+        }
+        else
+        {
+            echo  "<script>alert('Upadtion Failed!')</script>";      
+        }
+    }
+
+    if($filepath != 'pics/' and $filepath_1 !='pics/') // if no one is empty
+    {
+    
+        $x = move_uploaded_file($filetmp,$filepath);
+        if($x)
+        {
+           $y =  move_uploaded_file($filetmp_1,$filepath_1);
+           if($y)
+           {
+            $query="update tbl_images set file_path='$filepath', heading='$head', text='$news' where id='".$id."'";
+            $query_x = "update tbl_images set file_path_1='$filepath_1' where id='".$id."'";
+
+            if($x=mysqli_query($conn, $query))
+            {
+                    if($x)
+                    {
+                       if( mysqli_query($conn, $query_x))
+                       {
+                        echo  "<script>alert('Upadted Successfully')</script>";      
+                    }
+                    else
+                    {
+                        echo  "<script>alert('Upadtion Failed!')</script>";      
+                    }
+                    }
+            }
+
+           }
+        }
+    }
+
        
 }
     
-}
-
-function uploadey($filetmp,$filepath, $filepath_1, $filetmp_1)
-{
-    $x = move_uploaded_file($filetmp,$filepath);
-    if($x)
-    {
-        move_uploaded_file($filetmp_1,$filepath_1);
-    }
-    return $x;        
-}
 
 ?>
 
@@ -211,31 +263,17 @@ $("#demo").on('click',function(){
 
 <script>
 $(document).ready(function(){
-    $('#update').click(function(){
-        var image_name = $('#image').val();
+    $('#update').click(function(){ //check if head anf text is empty
+
         var head = $('#heading').val();
         var text = $('#news').val();
-       if(image_name== '') 
-        {
-            alert('Please choose a file');
-            return false;
-        } 
-        else if( head == '' || text == '')
+
+        if( head == '' || text == '')
         {
             alert('Please fill all the fields');
             return false;
         }
-        else
-        {
-            var extension = $('#image').val().split('.').pop().toLowerCase();
-            if(jQuery.inArray(extension, ['png', 'gif','jpg','tif','jpeg','mp4'])== -1)
-            {
-                alert("invalid image format");
-                $('#image').val('');
-                return false;
-            }
-            
-        }
+        
     })
 })
 </script>

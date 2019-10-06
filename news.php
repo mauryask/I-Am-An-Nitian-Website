@@ -1,6 +1,6 @@
 <?php
 include_once('connection.php');
-session_start();
+session_start();  
 $id = $_GET['id'];
 $sample_rate=1;
 $query="select * from tbl_images where  id='".$id."' ";
@@ -146,14 +146,9 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
            <div class="horizon"></div>
            <p>
              <span ><?php  echo $row['heading'];  ?></span><br></p>
-           <p style="text-align:justify; margin-top:1rem;
-            font-family: 'Playfair Display', serif; font-size:17px;
-            letter-spacing:0.3px; 
-            color:#050505;">
-   <p style="text-align:justify; margin-top:1rem;
-           font-family: 'Playfair Display', serif; font-size:17px;
-           letter-spacing:0.3px; 
-           color:#050505;">
+           <p style="margin-top:1rem;
+           font-family:sans-serif; font-size:17px; 
+            color:rgba(0,0,0,0.8);">
            
          <?php 
          if($row['file_path_1'] == trim("pics/"))
@@ -168,10 +163,10 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
           $news = explode(" ",$row['text']);
 ?>
 
-<p style="text-align:justify; margin-top:1rem;
-           font-family: 'Playfair Display', serif; font-size:17px;
+<p style=" margin-top:1rem;
+           font-family:sans-serif; font-size:17px;
            letter-spacing:0.3px; 
-           color:#050505;">
+           color:rgba(0,0,0,0.8);">
            <?php
 
          for($x = 0; $x<=50;$x++)
@@ -187,10 +182,10 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         ?>        
         </div>
 
-           <p style="text-align:justify; margin-top:1rem;
-           font-family: 'Playfair Display', serif; font-size:17px;
+           <p style=" margin-top:1rem;
+           font-family:sans-serif; font-size:17px;
            letter-spacing:0.3px; 
-           color:#050505;">
+           color:rgba(0,0,0,0.8);">
         
         <?php
         for($y=51;$y<str_word_count($row['text']);$y++)
@@ -237,12 +232,12 @@ class="fb-xfbml-parse-ignore">Share</a></div>
                     while ($row = mysqli_fetch_assoc($rslty))
                      {
                       $id = $row["id"];
-                      $head = implode(' ',array_slice(explode(' ', $row['heading']),0,6)); 
-                      $text = implode(' ',array_slice(explode(' ', $row['text']),0,10)); 
+                      $head = implode(' ',array_slice(explode(' ', $row['heading']),0,11)); 
+                     // $text = implode(' ',array_slice(explode(' ', $row['text']),0,10)); 
                      echo   '<div class="flash">
                      <a href="news.php?id='.$id.'">
                       <div class="nimg"><img alt="news" src="'.$row['file_path'].'"/></div>';
-                     echo    '<div class="ncontent">'."<p>".'<span class="heading">'.$head.'</span>'." ".$text.'..</p></div></a>';
+                     echo    '<div class="ncontent">'."<p>".'<span class="heading">'.$head.'</span></p></div></a>';
                      echo '</div>';
                     
                      }
@@ -406,12 +401,12 @@ function updf()
                     while ($row = mysqli_fetch_assoc($rsltz))
                      {
                       $id = $row["id"];
-                      $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
-                      $text = implode(' ',array_slice(explode(' ', $row['text']),0,12)); //getting fires 19 words from text
+                      $head = implode(' ',array_slice(explode(' ', $row['heading']),0,15)); //getting fires 5 words from heading
+                      //$text = implode(' ',array_slice(explode(' ', $row['text']),0,12)); //getting fires 19 words from text
                       echo   '<div class="flash">
                       <a href="news.php?id='.$id.'">
                        <div class="nimg"><img alt="news" src="'.$row['file_path'].'"/></div>';
-                      echo    '<div class="ncontent">'."<p>".'<span class="heading">'.$head.'</span>'." ".$text.'..</p></div></a>';
+                      echo    '<div class="ncontent">'."<p>".'<span class="heading">'.$head.'</span></p></div></a>';
                       echo '</div>'; 
                      }
                 }

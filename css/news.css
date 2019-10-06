@@ -69,16 +69,15 @@ font-size:15px;
 word-spacing:0.5px;
 letter-spacing:0.5px;
 font-weight: normal;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .news-body .news-content p span{
   font-size:35px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight:bold;
   color:rgba(256,0,0,0.6);
   color:rgba(37, 116, 169, 1);
   line-height: 42px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    }
 
 .news-body .news-content .ldc{
@@ -119,9 +118,7 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    outline:none;
    padding:10px;
    font-size:15px;
-   letter-spacing: 0.4px;
-   color:#050505;
-   font-family: 'Playfair Display', serif;
+   color:rgba(0,0,0,0.8);
 }
 .news-body .txtar .btnx{
    margin-top:10px;
@@ -144,9 +141,7 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .news-body .comments .cmt_got{
-   color:#050505;
-   font-family: 'Playfair Display', serif;
-   letter-spacing:0.2px;
+   color:rgba(0,0,0,0.8);
 }
 
 .news-body .comments div{
@@ -171,7 +166,8 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    flex-direction: column;
    padding:0.5rem 1rem;
    margin-right:13px;
-   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   /*font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
+   
    }
 
    .side-body{ 
@@ -215,9 +211,7 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    .ad-body .flash a .ncontent p, .side-body .flash a .ncontent p{
       font-size:14px;
       line-height:21px;
-      letter-spacing: 0.1px;
-      color:#050505;
-      font-family: 'Playfair Display', serif;
+      color:rgba(0,0,0,0.8);
    }
  
    .ad-body .flash a .ncontent p .heading
@@ -225,7 +219,6 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       color:black;
   font-weight:bold;
   font-size: 15px;
-  font-family: 'Playfair Display', serif;
    }
 
 

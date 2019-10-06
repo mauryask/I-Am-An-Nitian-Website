@@ -4,7 +4,7 @@ session_start();
 ?>
 
 <!DOCTYPE html>
-<html lang="en" oncontextmenu="return false">
+<html lang="en" oncontextmenu="return false">   
 <head>
 <title>I Am An Nitian | News</title>
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
