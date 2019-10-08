@@ -585,40 +585,26 @@ function updf()
    </div>
 
 
-
-<div id="num_count" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>
-<div class="card_count">
-  <div>
-  <span class='numscroller' data-min='1' data-max='1000' data-delay='6' data-increment='8'>10</span>
-  <span>+</span>
-</div>
-  <div>
-  <span><i class="fas fa-user-graduate"></i> Users</span>
-</div>
+<div class="counter">
+<div class="counter-1">
+<div class="counter_img"><img src="images/boy.svg"></div>
+<div class="counter_title"><span>Users</span></div>
+<div class="countx"><span class='numscroller' data-min='1' data-max='6000' data-delay='6' data-increment='30'>10</span><span>+</span></div>
 </div>
 
-<div class="card_count">
-<div>
-  <span class='numscroller' data-min='1' data-max='40000' data-delay='6' data-increment='290'>10</span>
-  <span>+</span>
-</div>
-  <div>
-  <span><i class="fab fa-facebook-square"></i> Followers</span>
-</div>
+<div class="counter-2">
+<div class="counter_img"><img src="images/fbs.svg"></div>
+<div class="counter_title"><span>Followers</span></div>
+<div class="countx"><span class='numscroller' data-min='1' data-max='6000' data-delay='6' data-increment='30'>10</span><span>+</span></div>
 </div>
 
-<div class="card_count">
-<div>
-  <span class='numscroller' data-min='1' data-max='6000' data-delay='6' data-increment='30'>10</span>
-  <span>+</span>
-</div>
-  <div>
-  <span><i class="fab fa-instagram"></i> Followers</span>
-</div>
+<div class="counter-3">
+<div class="counter_img"><img src="images/ins.svg"></div>
+<div class="counter_title"><span>Followers</span></div>
+<div class="countx"><span class='numscroller' data-min='1' data-max='6000' data-delay='6' data-increment='30'>10</span><span>+</span></div>
 </div>
 
 </div>
-
 
 
   <!--= Nits Logo =-->

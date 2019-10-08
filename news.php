@@ -164,8 +164,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 ?>
 
 <p style=" margin-top:1rem;
-           font-family:sans-serif; font-size:17px;
-           letter-spacing:0.3px; 
+           font-family:sans-serif; font-size:17px; 
            color:rgba(0,0,0,0.8);">
            <?php
 
@@ -183,8 +182,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         </div>
 
            <p style=" margin-top:1rem;
-           font-family:sans-serif; font-size:17px;
-           letter-spacing:0.3px; 
+           font-family:sans-serif; font-size:17px; 
            color:rgba(0,0,0,0.8);">
         
         <?php

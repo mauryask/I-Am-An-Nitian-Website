@@ -116,7 +116,9 @@ padding:15px;
   
   .explore .expo  .xnnn {
     width:14rem;
+    height:12.5rem;
     margin-bottom:2.5rem;
+    overflow: hidden;
   }
 
 #ns-art{
@@ -140,19 +142,17 @@ padding:15px;
 
   .explore .expo  .xnnn  p{
       padding:5px 5px 2px 5px;
-      text-align:justify;
       line-height:1.4rem;
       font-size: 15px;
       color:#050505;
-      font-family: 'Playfair Display', serif;
-      letter-spacing: 0.1px;
+      font-family:sans-serif;
   }
   
     .explore .expo  .xnnn p .heading
     {
       font-weight:bold;
-      color:black;
-      font-family: 'Playfair Display', serif;
+      color:rgba(0,0,0,0.8);
+      font-family:sans-serif;
     }
     .explore .expo  .xnnn a:hover  
     {
@@ -248,6 +248,7 @@ display: none;
   margin:0 auto;
   width:100%;
   margin-bottom:3rem;
+  height:15rem;
  }
 
 .explore .expo .xnnn a .zoom{

@@ -156,13 +156,13 @@ function id1(got_id)
           
                 ?>        
           
-              <div class="xnnn" style="box-shadow:none;">
+              <div class="xnnn" style="box-shadow:0 1px 3px rgba(0,0,0,0.3);">
               <?php  echo '<a href="news.php?id='.$id.'">'; ?>
                 <?php echo '<div class="zoom"><img alt="news" src="'.$row['file_path'].'"/></div>'?>
               <?php 
-              $head = implode(' ',array_slice(explode(' ', $row['heading']),0,7)); 
-              $text = implode(' ',array_slice(explode(' ', $row['text']),0,5));
-              echo '<p style="margin-top:2px;">'.'<span class="heading">'.$head.'</span>'." ".$text.'..</p>';
+              $head = implode(' ',array_slice(explode(' ', $row['heading']),0,10)); 
+              //$text = implode(' ',array_slice(explode(' ', $row['text']),0,5));
+              echo '<p style="margin-top:2px;">'.'<span class="heading">'.$head.'</span></p>';
                   ?>   
                   </a>                                            
                 </div>   
