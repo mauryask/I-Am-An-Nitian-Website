@@ -217,7 +217,7 @@
 	{ 
 		line-height:30px;
 		word-spacing:0.5px;
-		font-family: sans-serif;
+		font-family:sans-serif;
 	}
 	
 	.about-ln{
@@ -379,6 +379,7 @@ color:gray;
 
 .explore .expo .xnnn{
 	width:22rem;
+	height:15rem;
 	}
 
 	  .explore .expo .xnnn a .zoom{
@@ -398,8 +399,8 @@ color:gray;
 	}
 
 	  .explore .expo  .xnnn  a p{
-		line-height:1.8rem;
-		color:rgba(80,80,80,1);
+		line-height:1.2rem;
+		color:rgba(0,0,0,0.8);
 	}
 
 
@@ -413,7 +414,7 @@ color:gray;
 
 .about{
 	flex-direction:column;
-	margin-bottom:12rem;
+	margin-bottom:8rem;
 	margin-top:2rem;
 	width:82%;
 }
@@ -438,7 +439,7 @@ padding:0;
 		display:block;
 		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 		color:rgba(37, 116, 169, 1);
-		margin-top:2rem;
+		margin-top:1rem;
 	}
 
 	#ns-art{

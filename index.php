@@ -351,7 +351,7 @@ function startIt()
   </script>
 
 <a id="about"></a>
-    <div style="width:100%;height:5%;margin-top:4%;" ></div>
+    <div style="width:100%;height:5%;margin-top:4%;background:red;" ></div>
     <p class="about-head">About Us</p>
     <div class="about-ln"></div> 
     <div class="about">
