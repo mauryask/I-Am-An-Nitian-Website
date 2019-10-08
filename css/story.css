@@ -116,10 +116,9 @@ overflow: hidden;
 
 .hero p{
     line-height:30px;
-    letter-spacing: 0.3px;
     font-size:17px;
     color:#050505;
-    font-family: 'Playfair Display', serif;
+    font-family:sans-serif;
 }
 
 .child_x:nth-child(odd) .hero .himg{
@@ -169,7 +168,7 @@ text-align:center;
 }
 
 .hero #queryx #query, .hero #showmek #query {
-    font-family: 'Playfair Display', serif;
+    font-family:sans-serif;
     color:rgba(37, 116, 169, 1);
     }
 
@@ -230,7 +229,7 @@ text-align:center;
 
 .next{
     font-size:19px;
-    font-family: 'Playfair Display', serif;
+    font-family:sans-serif;
     color:#282828;
     text-align:center;
     line-height:28px;
@@ -352,7 +351,7 @@ display: none;
                     }
 
                     .hero #queryx #query , .hero #showmek #query {
-                        font-family: 'Playfair Display', serif;
+                        font-family:sans-serif;
                         color:rgba(37, 116, 169, 1);
                         line-height:2px;
                         font-weight: bold;

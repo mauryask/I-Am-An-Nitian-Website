@@ -6,13 +6,17 @@ session_start();
 <!DOCTYPE html>
 <html lang="en" oncontextmenu="return false">
 <head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148115548-1"></script>
 <script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-4582330600142028",
-    enable_page_level_ads: true
-  });
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148115548-1');
 </script>
+
 <title>I Am An Nitian | Home</title>
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <meta name="viewport" content= "width=device-width, user-scalable=no">
@@ -351,7 +355,7 @@ function startIt()
   </script>
 
 <a id="about"></a>
-    <div style="width:100%;height:5%;margin-top:4%;background:red;" ></div>
+    <div style="width:100%;height:5%;margin-top:4%;" ></div>
     <p class="about-head">About Us</p>
     <div class="about-ln"></div> 
     <div class="about">
@@ -363,7 +367,7 @@ function startIt()
     NITs (National Institute Of Technologies) are 
     the most prestigious Engineering Institutions 
     of India after IITs. There are 31 NITs across the various parts of India. 
-   I AM AN NITIAN is a Facebook page which was created in
+   I AM AN NITIAN is a facebook page which was created in
     July 2016 to connect with the Nitians. Now it is not 
     limited to only a Facebook page 
     but has become the biggest student community and a huge source of news and updates related to Engineering.
@@ -375,6 +379,7 @@ function startIt()
 
 <!--= News Section =-->
 <div class="explore exp" style="margin-top:0;">
+
   <p class="main-expo"  data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>News <span id="ns-art">& Articles</span></p>
   <div id="expo-line"  class="expo-line" style="width:15rem;position:relative;margin-bottom:1rem;"
   data-aos="fade-up" data-aos-duration="600" data-aos-once='true'></div>
@@ -400,9 +405,9 @@ function startIt()
               <?php  echo '<a href="news.php?id='.$id.'">'; ?>
                 <?php echo '<div class="zoom"><img alt="news" src="'.$row['file_path'].'"/></div>'?>
               <?php 
-              $head = implode(' ',array_slice(explode(' ', $row['heading']),0,11)); 
-              //$text = implode(' ',array_slice(explode(' ', $row['text']),0,5)); 
-              echo '<p style="margin-top:2px;">'.'<span class="heading">'.$head.'</span></p>';
+              $head = implode(' ',array_slice(explode(' ', $row['heading']),0,15)); 
+             // $text = implode(' ',array_slice(explode(' ', $row['text']),0,5)); 
+              echo '<p style="margin-top:2px;text-align:unset;">'.'<span class="heading">'.$head.'</span></p>';
                   ?>   
                   </a>                                            
                 </div>   
@@ -585,26 +590,31 @@ function updf()
    </div>
 
 
-<div class="counter">
+
+
+<div class="counter" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>
 <div class="counter-1">
-<div class="counter_img"><img src="images/boy.svg"></div>
-<div class="counter_title"><span>Users</span></div>
-<div class="countx"><span class='numscroller' data-min='1' data-max='6000' data-delay='6' data-increment='30'>10</span><span>+</span></div>
+<div class="counter_img"><img src="images/boy.svg"></div><div class="counter_title"><span>Users</span></div>
+<div class="countx"><span class='numscroller' data-min='1' data-max='1000' data-delay='6' data-increment='10'>10</span><span>+</span></div>
 </div>
 
 <div class="counter-2">
-<div class="counter_img"><img src="images/fbs.svg"></div>
-<div class="counter_title"><span>Followers</span></div>
-<div class="countx"><span class='numscroller' data-min='1' data-max='6000' data-delay='6' data-increment='30'>10</span><span>+</span></div>
+<div class="counter_img"><img src="images/fbs.svg"></div><div class="counter_title"><span>Followers</span></div>
+<div class="countx"><span class='numscroller' data-min='1' data-max='43000' data-delay='6' data-increment='300'>10</span><span>+</span></div>
 </div>
 
 <div class="counter-3">
-<div class="counter_img"><img src="images/ins.svg"></div>
-<div class="counter_title"><span>Followers</span></div>
-<div class="countx"><span class='numscroller' data-min='1' data-max='6000' data-delay='6' data-increment='30'>10</span><span>+</span></div>
+<div class="counter_img"><img src="images/ins.svg"></div><div class="counter_title"><span>Followers</span></div>
+<div class="countx"><span class='numscroller' data-min='1' data-max='7000' data-delay='6' data-increment='50'>10</span><span>+</span></div>
 </div>
 
 </div>
+
+
+
+
+
+
 
 
   <!--= Nits Logo =-->
@@ -644,7 +654,7 @@ function updf()
     </div>
     </div>
 
-  <footer>
+    <footer>
 
   <div class="datad">
   <p class="x">Feel Free To Contact Us</p>
