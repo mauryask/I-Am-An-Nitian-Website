@@ -145,7 +145,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         text-align:center;border-radius:20px;height:30px;margin:1rem 0 1rem 0;"><?php  echo $row['inserted_at'] ?></p>
            <div class="horizon"></div>
            <p>
-             <span ><?php  echo $row['heading'];  ?></span><br></p>
+             <span><?php  echo $row['heading'];  ?></span><br></p>
            <p style="margin-top:1rem;
            font-family:sans-serif; font-size:17px; 
             color:rgba(0,0,0,0.8);">
