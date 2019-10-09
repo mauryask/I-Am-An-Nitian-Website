@@ -29,9 +29,9 @@
 } 
 
 .wrapper{
-  background:white;
   width:75%;
   margin:0 auto;
+  margin-top:9rem;
 }
 
 .wrapper .flash{
@@ -119,6 +119,7 @@ padding:15px;
     height:12.5rem;
     margin-bottom:2.5rem;
     overflow: hidden;
+    cursor: pointer;
   }
 
 #ns-art{
@@ -141,7 +142,7 @@ padding:15px;
   }
 
   .explore .expo  .xnnn  p{
-      padding:5px 5px 2px 5px;
+      padding:5px 5px 2px 5px;   
       line-height:1.4rem;
       font-size: 15px;
       color:#050505;

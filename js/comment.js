@@ -29,15 +29,14 @@ if(comment_content != '')
             }
             else
             {
-                setTimeout(function(){
+              
                     $.post('get_comment.php', {post_id : post_id}, function(data, status){  
     
                             $('.comments').html(data);            
     
                        });
         
-                },1000);  
-                
+              
                 $.post('comment_number.php', {post_id : post_id}, function(data, status)
                     {
                     $('#ncmt').text(data);

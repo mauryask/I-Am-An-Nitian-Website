@@ -101,7 +101,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <img src="images/cutk.png" class="cut_nav" style="display:none;">
 </header>
 
-<div class="flash">
+<div class="flash" style="display:none;">
 <?php  
 $sql = "select * from tbl_images order by id desc limit 2";
 $result = mysqli_query($conn, $sql);
@@ -156,7 +156,7 @@ function id1(got_id)
           
                 ?>        
           
-              <div class="xnnn" style="box-shadow:0 1px 3px rgba(0,0,0,0.3);">
+              <div class="xnnn" style="box-shadow:0 1px 3px rgba(0,0,0,0.3);background:white;">
               <?php  echo '<a href="news.php?id='.$id.'">'; ?>
                 <?php echo '<div class="zoom"><img alt="news" src="'.$row['file_path'].'"/></div>'?>
               <?php 

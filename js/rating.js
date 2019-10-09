@@ -12,7 +12,7 @@ $(document).ready(function(){
                 url:'rating_server.php',
                 type:'post',
                 data: {id:id, action:action},     
-              success:function(data)
+              success:function(data)   
                 {
                     if(data == 2)
                    {

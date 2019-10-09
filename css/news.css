@@ -64,7 +64,7 @@ margin-bottom:0.1px;
 .news-body .news-content{
 height:auto;
 padding:0.5rem;
-line-height:34px;
+line-height:34px;   
 font-size:17px;
 word-spacing:0.5px;
 font-weight: normal;
@@ -165,7 +165,6 @@ font-weight: normal;
    flex-direction: column;
    padding:0.5rem 1rem;
    margin-right:13px;
-   /*font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
    
    }
 
@@ -221,10 +220,21 @@ font-weight: normal;
    }
 
 
-   .ad-body .nad,.side-body .nad{
+    .nad{
       width:100%;
-      margin-top:50px;
+      margin-top:40px;
    }
+
+   .nad a{
+     text-decoration:none;
+     font-weight:bold;
+     font-size:18px;
+     transition: 0.2s ease;
+   }
+
+   .nad a:hover{
+      color:red;
+    }
 
    .ad-body .nad .nad-img,.side-body .nad .nad-img{
       width:100%;
@@ -237,6 +247,11 @@ font-weight: normal;
    display: none;
    line-height:1px;
 }
+
+
+
+
+
 
 /*==for mobile==*/    
 .latest{

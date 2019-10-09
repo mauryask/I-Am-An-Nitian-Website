@@ -46,7 +46,6 @@ $result_x = mysqli_query($conn, $query_x);
     mysqli_query($conn, $sql_x);
     mysqli_query($conn, $sql_y);
 
-  
    }
 
 

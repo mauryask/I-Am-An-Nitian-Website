@@ -55,8 +55,10 @@
      display: flex;
     justify-content: center;
    background:#FFD700;
+   background:orange;
    -webkit-clip-path: polygon(100% 0, 100% 79%, 61% 80%, 50% 100%, 39% 80%, 0 79%, 0 0);
    clip-path: polygon(100% 0, 100% 79%, 61% 80%, 50% 100%, 39% 80%, 0 79%, 0 0);
+   padding-top:11px;
    }
 
    .counter .counter-1 .counter_title span,
@@ -65,7 +67,7 @@
    {
      font-weight: bold;
      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-     font-size: 18px;
+     font-size:20px;
    }
 
 

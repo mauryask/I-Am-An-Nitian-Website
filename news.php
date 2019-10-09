@@ -245,8 +245,8 @@ class="fb-xfbml-parse-ignore">Share</a></div>
                  echo '<p style="text-align:center;">No result found</p>';
                }
               ?>      
-                     <div class="nad" style="display:none">
-                   <img src="images/ad-book.gif" class="nad-img" >
+                     <div class="nad">
+                   <a href="more-news.php">More News &nbsp;<i class="fas fa-chevron-circle-right"></i></a>
                       </div>  
     </div>
 
@@ -413,6 +413,10 @@ function updf()
                  echo 'No result found';
                }
               ?>
+
+                  <div class="nad">
+                   <a href="more-news.php">More News &nbsp;<i class="fas fa-chevron-circle-right"></i></a>
+                      </div>
             
     </div>
     <footer>

@@ -117,7 +117,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
  
 <div class="center">
 <p>NITs Ranking 2019</p>
-<p class="courtesy" ><span style="font-family:'Playfair Display', serif;
+<p class="courtesy" ><span style="font-family:sans-serif;
 font-weight:bold;">Courtesy:</span> National institute ranking framework 
 (ministry of human resource development)</p>
 </div>
