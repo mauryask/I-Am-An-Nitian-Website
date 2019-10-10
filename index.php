@@ -7,6 +7,10 @@ session_start();
 <html lang="en" oncontextmenu="return false">
 <head>
 
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0&appId=473134703234415&autoLogAppEvents=1"></script>
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148115548-1"></script>
 <script>
