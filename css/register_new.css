@@ -1,0 +1,128 @@
+*{
+    margin:0;
+    padding:0;
+    word-wrap: break-word;
+    height:100%;
+    font-family: sans-serif;
+}
+
+body{
+    background:rgba(250,250,250,1);
+}
+
+.wrapper{
+    width:100%;
+}
+
+ .form-body{
+     margin:0 auto;
+     width:470px;
+height: auto;
+ margin-top:50px;
+
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:auto;
+    height:110px;
+    cursor:pointer;
+}
+
+.logo img{
+    margin-top:10px;
+    width:65px;
+    height:65px;
+}
+
+.logo p{
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  padding-top:4px;
+  font-weight:bold;
+}
+
+
+.form-body .switch{
+    width:100%;
+    height:50px;
+    background:red;
+    display: flex;
+}
+
+ .login-switch, 
+ .register-switch{
+width:50%;
+background:orange;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+font-size:18px;
+cursor:pointer;
+}
+
+ .login-switch{
+border-right:4px solid red;
+}
+
+.register{
+    background: skyblue;
+    display: flex;
+    flex-direction: column;
+    height:auto;
+    padding:15px;
+}
+
+.register .input-1
+{
+ display: flex;
+ flex-direction: row;
+ padding:5px;
+ margin-top:1rem;
+ width:100%;
+}
+
+.input-1 input{
+width:50%;
+padding:10px;
+margin-right:10px;
+border-radius:5px;
+border:none;
+}
+
+
+ .btn input{
+    width:100%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.social{
+    width:100%;
+    height:auto;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top:1rem;
+    padding:7px;
+}
+
+ .fb, .google, .linkedin, .github
+{
+ border-radius:50%;
+ background:red;
+margin-right:25px;
+width:40px;
+height:40px;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+font-size:18px;
+cursor:pointer;
+border:1px solid rgba(0,0,0,0.2);
+}
