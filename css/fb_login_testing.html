@@ -19,20 +19,45 @@
                       FB.getLoginStatus(function(response){ 
                             if(response.status === 'connected')
                             {
-                                //document.getElementById('status').innerHTML = 'we are connected';
-                                //alert(JSON.stringify(response));
-                                FB.api('/me?fields=id,first_name, last_name, age_range,gender, email, picture.type(large)', function(response) {
+                               
+                                FB.api('/me?fields=id,name,first_name, last_name, age_range,gender, email, picture.type(large)', function(response) {
                                     
                                     var datax = JSON.parse(JSON.stringify(response)); 
                                     
                                                 
-                                                
-                                            $.each(datax, function(key, value){
+                                          /*  $.each(datax, function(key, value){
                                                
                                                
                                                console.log(key+" : "+value);
                                                 
-                                            });
+                                            });*/
+                                 
+                                 
+                                 var name = datax.name;
+                                 var email = datax.email;
+                                 var id = datax.id;
+                                 
+                                 //ajax call
+                                 
+                                $.ajax({
+                                     url:'fb_login.php',
+                                     type:'post',
+                                     data:{name, email, id},
+                                     success:function(response)
+                                     {
+                                         if(response==1){
+                                         alert('Logged in');
+                                         }
+                                         else
+                                         {
+                                         alert("not logged in");
+                                         }
+                                         
+                                     }
+                                     
+                                 });
+                                 
+                                 
                                  
                                  
                                              $('#image').attr('src',datax.picture.data.url); //printing image of the user
