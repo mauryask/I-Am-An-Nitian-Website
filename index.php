@@ -440,7 +440,7 @@ function startIt()
 </div>
 
 <!--= Signup Popup =-->
-<div class="signup" id="sign">
+<div class="signup" id="sign">  
 <div class="sign-card">
  <div class="sign-img">
   <div class="links">

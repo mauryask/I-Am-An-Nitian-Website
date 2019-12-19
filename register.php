@@ -4,7 +4,7 @@ include_once('connection.php'); //including the database connectivity file
 session_start();        //starting session
 $_SESSION['name']='';   // creating a seesion variable
 
-if(isset($_POST['name']))
+if(isset($_POST['name'])) 
 { //checking whether name fieled exits or not
 
    
@@ -140,8 +140,7 @@ else{  //if new user then insert data into database
 
 /// setting up php mail
 
-include_once('php_mail.php');
-
+//include_once('php_mail.php');
 
 // finishing up php mail
 
