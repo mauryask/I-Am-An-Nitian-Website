@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
-
 
 *{
     margin:0;
@@ -9,15 +7,14 @@
     box-sizing: border-box;
 }   
 
-.progress-container{
+.progress-container{        
     top:0;
     position:fixed;
 }
 
 body{
-    background: rgba(250,250,250,1);
+    background: rgb(240,240,240,1);	
 }
-
 
 
 #loader{
@@ -32,64 +29,55 @@ body{
    z-index:555;
 }
 
-
 .center{
     width:100%;
     font-weight:bold;
-    font-size:50px;
-    text-transform: uppercase;
-    margin-top:9rem;
+    font-size:45px;
+    text-transform:capitalize;
     color:rgba(37, 116, 169, 1);
+    padding-top:2rem;
 }
 
  .center p{
-    text-align:center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 #rank_yr{
-    font-size:50px;
+    font-size:45px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.wrapper{
+    width:70%;
+    margin:0 auto;
+  }
 
+  .center .courtesy
+  {
+      font-weight:normal;
+      font-size:17px;
+      text-transform: capitalize;
+      font-family: sans-serif;
+  }
 
-
-body  .clg{
+body  .clg
+  {
     margin: 0 auto;   
-    margin-top:2.5rem;
-   width:70%;
    }   
 
-.clg .wlc-content{
+.clg .wlc-content
+{
     line-height:2.4rem;
-    letter-spacing: 0.7px;
     color:#050505;
-    font-family: 'Playfair Display', serif;
-    text-align: justify;
-    font-size:16px;
+    font-family:sans-serif;
+    font-size:17px;
 }
 
- .center .sub-center{
-   font-size:31px;
-}
-
-.line_rnk{
-    margin:0 auto;
-    margin-top:5px;
-    height:5px;
-    width:25rem;
-    background:rgba(37, 116, 169, 1);
-}
-
-th,td{
-    padding:15px 2px 15px 2px;
-    text-align:center;
-}
-
- .clg table{
+ .clg table
+ {
      margin: 0 auto;
-     width:95%;
+     width:100%;
+     background: orange;
 }
 
 tr{
@@ -99,17 +87,29 @@ tr{
 tbody td{
     font-size:15px;
     color:#050505;
-    font-family: 'Playfair Display', serif;
+    font-family:sans-serif;
+    padding:15px 2px 15px 2px;
+    margin:0;
+    border:0;
 }
+
+th{
+    padding:15px 2px 15px 2px;
+}
+
 
 .clg table,th,td{
     text-transform: capitalize;
-    background: rgba(250,250,250,1);
     border-collapse: collapse;
     color:rgba(90,90,90,1);
+    text-align:center;
 }
 
 
+tr:nth-child(even)
+{
+background:rgba(247,247,247,1);
+}
 
 .clg .search_clg {
  margin:3rem 0 3rem 0;
@@ -120,35 +120,31 @@ tbody td{
     font-weight:bold;
     margin:1rem 0 1rem 0;
     color:rgba(37, 116, 169, 1);
-    font-family: 'Playfair Display', serif;
+    font-family: sans-serif;
 }
 
 .clg .search_clg #search{
-    width:20rem;
-    padding:0.6rem;
+    width:17rem;
+    padding:0.5rem;
     font-size:15px;
     border-radius:7px;
-    border:1px solid rgba(180,180,180,1);
+    border:1px solid rgba(150,150,150,1);
     outline:none;
-    letter-spacing: 0.2px;
+    font-family:sans-serif;
+    background:transparent;
     background:rgba(250,250,250,1);
-    font-family: 'Playfair Display', serif;
 }
-
-
 
 .linkx{
     padding-left:1.7rem;
-    margin-top:5rem;
-    margin-bottom:4rem;
+    margin-top:3rem;
+    padding-bottom:1.5rem;
 }
 .linkx .links{
-    margin:2rem 0 0.2rem 0;
     font-weight: bold;
     color:rgba(37, 116, 169, 1);
-    font-family: 'Playfair Display', serif;
+    font-family:sans-serif;
     font-size:16px;
-    letter-spacing: 0.4px;
 }
 
 
@@ -163,9 +159,8 @@ tbody td{
     text-decoration:none;
     line-height:2rem;
     font-size:15px;
-    letter-spacing: 0.2px;
     color:#050505;
-    font-family: 'Playfair Display', serif;
+    font-family:sans-serif;
 }
 
 .linkx a:hover{
@@ -174,23 +169,14 @@ color:blue;
 text-decoration:underline;
 }
 
-.ad{
-    margin-top:2rem; 
-    width:50rem;
-    height:210px;
-    position:relative;
+
+.footer{
+text-align: center;
+padding:2.5rem;
+font-size:15px;
+font-family: serif;
 }
 
-.center .break{
-    display:none;
-}
-
-.center .sub-center .brk{
-    display:none;
-}
-
-
-/*=============================Responsive design======================*/
 @media (max-width:991px)
 {
     body{
@@ -198,64 +184,62 @@ text-decoration:underline;
     }
 
 
+    .wrapper{
+        width:100%;
+        margin-top:0;
+        padding:10px;
+    }
+
 
 .center{
-    margin-top:7rem;
+    margin-top:1.6rem;
+    width:100%;
+    margin-bottom:0.5rem;
+    font-size:39px;
+    padding:0 10px 0 10px;
 }
 
-    .center .break{
-        display:block;
-        margin-top:-2.8rem;
-    }
+.center .courtesy{
+    margin-top:12px;
+    font-size:16px;
+    letter-spacing:0.4px;
+}
 
-    .center .sub-center{
-        margin-bottom: 0;
-    }
-
-    .center .sub-center .brk{
-        display:block;
-        margin-top:-1.6rem;
-    }
-
-  .center p, #rank_yr{
-font-size:32px;
-  } 
-    
-  .center .sub-center{
-      font-size:24px;
-  }
-
+  
 .center .line_rnk{
     width:8rem;
 }
 
 
 body .clg{
-  width:80%;
+  width:100%;
 }
 
 .clg .wlc-content{
     font-size:15px;
     line-height:1.8rem;
+    text-align: justify; 
+    padding:12px;
 }
 
 .clg .search_clg {
-    margin:2.1rem 0 1.2rem 0;
+    margin:0rem 0 1.2rem 0;
    }
 
 .clg .search_clg #search{
   margin: 0 auto;
-width:17rem;
+width:14rem;
 }
 
+
 table{
-    margin-top:0;
     line-height:21px;
     letter-spacing: 0.1px;
     font-size:14px;
+    width:100%;
 }
 
-table tbody td{
+table tbody td, table th{
     padding:12px 2px 12px 2px;
 }
 
@@ -276,7 +260,8 @@ table tbody td{
   margin: 0 auto;  
 }
 
-
-
+.hid{
+    display:none;
+}
 
 }

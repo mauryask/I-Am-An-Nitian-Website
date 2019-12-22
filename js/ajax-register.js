@@ -44,10 +44,23 @@ $(document).ready(function(){
                        if (window.matchMedia('(max-width:991px)').matches)
                        {
                        $('#msgy').html(response);
+
+                       setTimeout(function()
+                       {
+                       $('#msgy').fadeOut();
+                       },1400);
+
+                       $('#msgy').fadeIn();
                        }
                        else
                        {
                         $('#msgx').html(response);
+
+                        /*setTimeout(function()
+                        {
+                        $('#msgx').fadeOut();
+                        },1400);
+                        $('#msgx').fadeIn();*/
                        }
                      }
                   }

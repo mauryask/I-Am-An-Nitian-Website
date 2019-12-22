@@ -1,0 +1,41 @@
+
+*{
+	outline:none;
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	font-family:sans-serif;
+	word-wrap: break-word;
+	}
+
+  	body{
+	background: rgb(250, 250, 250);	
+	}			
+
+	#loader{
+		width:100%;
+		height:100vh;
+		background:rgb(252,252,252) 
+		url('loaderx.gif');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size:4rem;
+		position: fixed;
+		z-index:555;
+	} 
+    
+    
+
+.main-wrap
+{
+    width:80%;
+    margin:0 auto;
+    background:red;
+    height:500px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: center;
+    margin-top:8rem;
+  }
+	

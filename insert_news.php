@@ -2,26 +2,58 @@
 @ This file consists of code for adding news and links to edit news
 -->
 
-
-
 <?php
-
+include_once('connection.php');
 session_start(); //preventing direct access of this page
 if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION['user_type']!=1)
 {
-  exit('access denied page 404 not found');
+ exit("<div style='
+    top:50%; 
+    left:50%;
+    transform:translate(-50%,-50%);
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    '>
+    <img src='images/access.png' width='200px' height='200px'>
+    <p style='
+  
+    font-size:35px;
+  text-align:center;
+  font-weight:bold;
+    '
+    >Access Denied Page 404 Not Found<p>
+    </div>");
 }
 
-include_once('connection.php');
 if(isset($_POST['submit']))
 {
-    $file= addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
+   // $file= addslashes(file_get_contents($_FILES["image"]["tmp_name"]));
+   // name column from table dropped (longblob type)
+
+// testing
+
+// for main image
+$filetmp = $_FILES['image']['tmp_name'];
+$filename  = $_FILES['image']['name'];
+$filepath="pics/".$filename;
+
+
+// for extra image
+//image 1
+$filetmp_1 = $_FILES['image_1']['tmp_name'];
+$filename_1  = $_FILES['image_1']['name'];
+$filepath_1 ="pics/".$filename_1;
+
+// testing
+
     $head = addslashes($_POST['heading']);
     $news = addslashes($_POST['news']);
-    $views=0;
+   $views=0;
     $likes=0;
     $comments=0;
-    $dislikes=0;
+        $added_by = $_SESSION['user_name'];
 /*===================  Getting time and date ====================*/
 //getting IST
 date_default_timezone_set('Asia/Kolkata');
@@ -41,7 +73,11 @@ $hrs = (int)date('H');
 if($hrs>12)
 {
     $hrs= $hrs-12;
-    $hrs = "0".$hrs;
+    if($hrs<10)
+    {
+        $hrs = "0".$hrs;
+    }
+    
 }
 else
 {
@@ -54,24 +90,45 @@ $full_time = $month." ".$date.", ".$year.", ".$time.", IST";
 
 /*===================  Getting time and date end ====================*/
 
-    $query="insert into tbl_images (name,heading, text,views,likes,dislikes,comments, inserted_at) 
-    values('$file', '$head', '$news','$views','$likes','$dislikes','$comments','$full_time')";
-    if(mysqli_query($conn, $query))  
+
+
+if(uploadex($filetmp,$filepath, $filepath_1, $filetmp_1))
+{
+
+   $query="insert into tbl_images (heading,text,file_path,views,likes,comments,added_by,inserted_at,file_path_1)  
+    values('$head', '$news','$filepath','$views','$likes','$comments','$added_by','$full_time','$filepath_1')";
+   $result = mysqli_query($conn, $query);
+    if($result)  
     {
         echo  "<script>alert('Inserted successfully')</script>";
     }
     else
     {
-        echo  "<script>alert('Insertion Failed')</script>";
+        echo  "<script>alert('Failed To Insert!')</script>";
     }
 }
 
+}
+
+function uploadex($filetmp,$filepath, $filepath_1, $filetmp_1)
+{
+    $x = move_uploaded_file($filetmp,$filepath);
+    if($x)
+    {
+        move_uploaded_file($filetmp_1,$filepath_1);
+    }
+    return $x;        
+}
+
+
 ?>
 
-<!DOCTYPE html>
+<!DOCTYPE
+
+ html>
 <html lang="en">
 <head>
-<title>I Am An Nitian | Admin Panel</title>
+<title>I Am An Nitian | Admin Panel</title>  
 <link rel="icon" href="images/imnitian.png">
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
@@ -97,9 +154,11 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 <!--=================  Adding News  ===================-->
 <div class="add-news" id="add-news">
 
-<form method="post" enctype="multipart/form-data" autocomplete="off">
-
-<input type="file" name="image" id="image"> 
+<form method="post" enctype="multipart/form-data" action="insert_news.php" autocomplete="off">
+<div style="display:flex;align-items:center;">
+<input type="file" name="image" id="image" title="compulsory"> 
+<input type="file" name="image_1" id="image_1" title="optional">
+</div>
 
 <input type="heading" name="heading" id="heading" placeholder="Heading">
 
@@ -113,12 +172,13 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 
 <!--=================  Left Side MAnu Bar   ===================-->
 <div class="left-menu" class="popup" id="demo">
-    <p>Admin Panel</p>
-    <button id="add" type="button" style="display:none;">add news</button>
+<p><?php echo "Hello! ".$_SESSION['user_name'];  ?></p>
+    <div>
     <button id="edit" type="button">edit news</button>
-    <button id="delete" type="button">view news</button>
+    <button id="feedback" type="button">Feedback</button>
     <button id="statics" type="button">statics</button>
     <button id="home" type="button">Home</button>
+</div>
 </div>
 
 </body>
@@ -134,6 +194,8 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
  
 
 $(document).ready(function(){
+
+    //home button
     $("#home").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0}); 
     setTimeout(function() {
@@ -142,8 +204,7 @@ $(document).ready(function(){
   })
 
 
-/*================  Editing News ===================*/   
-
+ //edit news button
   $("#edit").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0});
     setTimeout(function() {
@@ -151,6 +212,26 @@ $(document).ready(function(){
     },500); 
   })
 
+
+ //edit news button
+ $("#statics").click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0});
+    setTimeout(function() {
+        window.location.href="statics.php";
+    },500); 
+  })
+
+
+ //feedback button
+ $("#feedback").click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0});
+    setTimeout(function() {
+        window.location.href="admin_feedback.php";
+    },500); 
+  })
+
+
+//click to background 
 $("#demo").on('click',function(){
     TweenMax.to('#demo',0.5,{scaleX: 0}); 
 })

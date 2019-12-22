@@ -2,9 +2,8 @@
 $charset = "UTF8";
 $servername = "localhost";
 $username = "root";
-$password = "proxyx";
+$password = ""; //testing mode 
 $dbname = "imn";
-
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error)

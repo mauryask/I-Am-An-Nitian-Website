@@ -1,0 +1,130 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    outline:none;
+    box-sizing: border-box;
+    }
+  
+    .progress-container{
+      top:0;
+      position:fixed;
+  }
+  
+    body{
+      background: rgb(240,240,240,1);
+  }
+  
+
+  #loader{
+    top:0;
+    width:100%;
+    height:100vh;
+    background:rgb(252,252,252) 
+    url('loaderx.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:4rem;
+    position: fixed;
+    z-index:555;
+  } 
+  
+  .wrapper{
+    width:75%;
+    margin:0 auto;
+  }
+
+
+  .slide1, .slide2,.slide3,.slide4{
+      display: flex;
+      flex-direction:row;
+      justify-content: space-around;
+      align-items: center;
+      width:100%;
+      height:100vh;
+      cursor:pointer;
+
+  }
+
+  .slide1 .cards, .slide2 .cards{
+      width:230px;
+   height:280px;
+   background:#282828;
+   display: flex;
+   flex-direction:column;
+   align-items: center;
+   box-shadow: 1px 1px 5px 2px rgba(150,150,150,1);
+  }
+
+  .slide1 .cards{
+    justify-content: center;
+  }
+
+  .slide1{
+    margin-top:3rem;
+}
+
+  .slide1 .circle{
+      width:170px;
+      height:170px;
+      border-radius:50%;
+      background:orange;
+      color:white;
+      display: flex;
+      justify-content: center;
+  }
+
+ .slide1 .circle p{
+     align-self: center;
+     text-align: center;
+     font-size:50px;
+     font-family: 'Playfair Display', serif;
+     font-weight:bold;
+    } 
+
+    .slide1 .result{
+        color:white;
+        font-weight:bold;
+        font-family: 'Playfair Display', serif;
+        font-size:18px; 
+        letter-spacing: 0.5px;
+        margin-top:1rem;
+    }
+
+    .slide2 .thumb{
+        width:100%;
+        height:50%;
+        overflow: hidden;
+    }
+
+    .slide2 .thumb img{
+        width:100%;
+        height:100%;
+        transition:0.3s ease all;
+    }
+
+    .slide2 .thumb img:hover{
+        width:112%;
+        height:112%;
+    }
+
+    .slide2 .txt-btn{
+        color:white;
+        text-align:center;
+      height:50%;
+      width:100%;
+      padding:2px;
+    }
+
+    .slide2 .txt-btn p{
+        margin-top:0.6rem;
+        font-family: 'Playfair Display', serif;
+        font-size:16px;
+    }
+
+    .slide3 div p, .slide4 div p{
+        font-family: 'Playfair Display', serif;
+        font-weight:bold;
+        font-size:17px;
+        letter-spacing: 0.5px;
+    }

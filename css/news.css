@@ -1,6 +1,3 @@
-
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
-
 *{
    outline:none;
 	margin:0;
@@ -9,21 +6,10 @@
 	font-family:sans-serif;
 	word-wrap: break-word;
 }
-
-html,body{
-   height:100%;
-}
-
-html{
-   scroll-behavior: smooth;
-   overflow-x: hidden;
-}
-
 body{
    background: rgba(250,250,250,1);
    color:rgba(80,80,80,1);
 }
-
 
 #loader{
    width:100%;
@@ -41,7 +27,7 @@ body{
 	height:100%;
 	position:absolute;
    }
-   
+
 .news-body{
    width:55%;
    height:auto;
@@ -50,14 +36,14 @@ body{
 }
 
 .news-body .horizon{
-   background:rgba(256,0,0,0.5);
+   background:#4CAF50;
    width:28rem;
    height:3px;
    margin-bottom:1.2rem;
 }
 
 .news-body .horizonx{
-margin-top:2rem;
+margin-top:0.8rem;
    width:15rem;
 margin-bottom:0.1px;
 }
@@ -75,39 +61,38 @@ margin-bottom:0.1px;
    border:1px solid rgba(256,0,0,0.1);
 }
 
-
 .news-body .news-content{
 height:auto;
 padding:0.5rem;
-line-height:34px;
-font-size:15px;
+line-height:34px;   
+font-size:17px;
 word-spacing:0.5px;
-letter-spacing:0.5px;
 font-weight: normal;
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .news-body .news-content p span{
   font-size:35px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight:bold;
   color:rgba(256,0,0,0.6);
+  color:rgba(37, 116, 169, 1);
   line-height: 42px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    }
 
 .news-body .news-content .ldc{
    font-size:18px;
    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-style:italic;
 }
 
 .news-body .news-content .ldc .like-btn, .dislike-btn,.fa-eye, .fa-comment{
-   color:rgba(256,0,0,0.6);
+   color:gray;
 }
 
 .news-body .news-content .ldc .x{
    font-size:14px;
    font-family: sans-serif;
-   color:rgba(256,0,0,0.6);
+   color:gray;
 }
 
 .news-body .news-content .cmnt{
@@ -115,6 +100,7 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    margin-top:10px;
    font-family: serif;
    color:rgba(256,0,0,0.6);
+   color:rgba(37, 116, 169, 1);
    margin-bottom:10px;
    letter-spacing: 0;
    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -131,9 +117,7 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    outline:none;
    padding:10px;
    font-size:15px;
-   letter-spacing: 0.4px;
-   color:#050505;
-   font-family: 'Playfair Display', serif;
+   color:rgba(0,0,0,0.8);
 }
 .news-body .txtar .btnx{
    margin-top:10px;
@@ -156,9 +140,7 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .news-body .comments .cmt_got{
-   color:#050505;
-   font-family: 'Playfair Display', serif;
-   letter-spacing:0.2px;
+   color:rgba(0,0,0,0.8);
 }
 
 .news-body .comments div{
@@ -168,13 +150,11 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    margin-top:8px;
 }
 .news-body .comments .cmt-line{
-   width:14rem;
+   width:13rem;
    height:1px;
    background:rgba(134, 96, 206,0.4);;
    margin-top:10px;
 }
-
-
 .ad-body,.side-body{
    width:35%;
    top:7.1rem;
@@ -185,7 +165,7 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    flex-direction: column;
    padding:0.5rem 1rem;
    margin-right:13px;
-   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   
    }
 
    .side-body{ 
@@ -196,7 +176,6 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    }
 
    .ad-body .flash a, .side-body .flash a{
-      background:white;
       width:100%;
       display: flex;
       flex-direction:row;
@@ -230,9 +209,7 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    .ad-body .flash a .ncontent p, .side-body .flash a .ncontent p{
       font-size:14px;
       line-height:21px;
-      letter-spacing: 0.1px;
-      color:#050505;
-      font-family: 'Playfair Display', serif;
+      color:rgba(0,0,0,0.8);
    }
  
    .ad-body .flash a .ncontent p .heading
@@ -240,14 +217,24 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       color:black;
   font-weight:bold;
   font-size: 15px;
-  font-family: 'Playfair Display', serif;
    }
 
 
-   .ad-body .nad,.side-body .nad{
+    .nad{
       width:100%;
-      margin-top:50px;
+      margin-top:40px;
    }
+
+   .nad a{
+     text-decoration:none;
+     font-weight:bold;
+     font-size:18px;
+     transition: 0.2s ease;
+   }
+
+   .nad a:hover{
+      color:red;
+    }
 
    .ad-body .nad .nad-img,.side-body .nad .nad-img{
       width:100%;
@@ -261,18 +248,27 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
    line-height:1px;
 }
 
-/*==for mobile==*/
+
+.imagine{
+max-width:100%;
+height:40%;
+}
+
+
+
+/*==for mobile==*/    
 .latest{
    font-weight: bold;
    font-size:25px;
    color:rgba(256,0,0,0.6);
+   color:rgba(37, 116, 169, 1);
    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .latest-line{
    height:2px;
    width:6.2rem;
-   background:red;
+   background:rgba(37, 116, 169, 1);
    margin-top:4px;
 }
 
@@ -286,16 +282,31 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 .user_icon
 {
    font-size:25px;
-   color:#8860d0;
 }
 
 footer{
    margin-top:16rem;
 }
 
-/*==================== Responsive design for mobile ====================*/
-@media (max-width:991px)
+table,tr,td,th{
+   border:1px solid rgba(0,0,0,0.7);
+   border-collapse:collapse;
+}
+td,th{
+   padding:3px;
+   text-align:center;
+   font-size:15px;
+   color:rgba(0,0,0,0.8);
+}
+
+
+@media (max-width:921px)
 {
+
+   .news-body .news-content{
+     padding:0;
+      }
+
  .news-body .news-content  .horizon{
       width:100%;
       padding:0 1.5rem 0 1.5rem;
@@ -311,15 +322,14 @@ footer{
    }
 
    .news-body{
-      margin-top:6rem;
+      margin-top:5rem;
       width:100%;
       margin-left:0;
-
    }
 
 .news-body .news-content{
    margin: 0 auto;
-   padding:0 2.1rem 0 2.1rem;
+   padding:0 1.3rem 0 1.3rem;
 }
 
 .news-body .news-content p span{
@@ -328,14 +338,13 @@ font-size:29px;
 
    .news-body .news-img{
       width:100%;
-      padding:0 0.8rem 0 0.8rem;
    }
+  
 
 .news-body .news-img img{
-   height:190px;
+   height:200px;
    width:100%;
 }
-
 
 .news-body .txtar{
    width:100%;
@@ -403,8 +412,6 @@ letter-spacing:0;
    .ad-body .nad,.side-body .nad{
       margin-top:25px;
    }
-
-
 #morex{
    display:block;
 }

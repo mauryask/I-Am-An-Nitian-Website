@@ -1,7 +1,7 @@
 
-/*<<<<<<<<<<======= This file consists of incresing like and dislike functionalites =========>>>>>>>>>>>*/
-
 $(document).ready(function(){
+
+    var post_id = $('html').attr('id');
 
     //dealing with like button
     
@@ -11,8 +11,8 @@ $(document).ready(function(){
             $.ajax({
                 url:'rating_server.php',
                 type:'post',
-                data: {id:id, action:action},
-              success:function(data)
+                data: {id:id, action:action},     
+              success:function(data)   
                 {
                     if(data == 2)
                    {
@@ -21,47 +21,48 @@ $(document).ready(function(){
                    else if(data == 1)
                    {
                            adminPop();  // if admin try to like or comment
-                   }
-                      /*document.getElementById(data).classList.add('fa-thumbs-up');
-                        document.getElementById(data).classList.remove('fa-thumbs-down');    
-                        */                           
+                   } 
+                   else
+                   {
+                    $('#x').load('get_likes.php', {id : post_id});
+                    $.post('posetive_rating_state.php', {post_id: post_id}, function(data, status){   
+                        if(data == 1)
+                        {
+                         $('.like-btn').addClass('fas');
+                         $('.dislike-btn').removeClass('fas');
+                        }
+                        else if(data == 0)
+                        {
+                         $('.like-btn').removeClass('fas');
+                         $('.like-btn').addClass('far');
+                        }
+                       });
+                   }                             
               }
                 
             });
             
         });
         
-    
-     //dealing with dislike button   
-    
-        $('.dislike-btn').click(function(){
 
-            var id =  $(this).attr('id');
-            var action = 'dislike';
-            
-            $.ajax({
-                url:'rating_server.php',
-                type:'post',
-                data: {id:id, action:action},
-                success:function(data)
-                {
-                   if(data == 2)
-                   {
-                       alertPopup(); // if user is not logged in 
-                   }
-                   else if(data == 1)
-                   {
-                           adminPop();  // if admin try to like or comment
-                   }
-                }
-                
-            });
-    
-        });
-      
+// getting likes when page loaded
+        $('#x').load('get_likes.php', {id : post_id});
+        $.post('posetive_rating_state.php', {post_id: post_id}, function(data, status){   
+            if(data == 1)
+            {
+             $('.like-btn').addClass('fas');
+             $('.dislike-btn').removeClass('fas');
+            }
+            else if(data == 0)
+            {
+             $('.like-btn').removeClass('fas');
+             $('.like-btn').addClass('far');
+            }
+           });
+  
        }); //end of ready function
     
-    
+
 /*==================   Alert if user is not logged in   =================*/
     function alertPopup()
     {

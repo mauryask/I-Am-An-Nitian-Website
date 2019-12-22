@@ -1,24 +1,28 @@
-<!--
-* I AM AN NITIAN 
-* v1.0
-* May 17 2019
-* Developer: Shubham Maurya
-* National Institute Of Technology Srinagar J&K India 190006
-* GitHub: https://github.com/pnstech
-* LinkedIn: https://www.linkedin.com/in/cyberthreatatnit/
--->
-
 <?php
-include_once('db/connection.php');
-session_start(); //starting session start
+include_once('connection.php');
+session_start(); 
 ?>
 
 <!DOCTYPE html>
 <html lang="en" oncontextmenu="return false">
 <head>
+
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0&appId=473134703234415&autoLogAppEvents=1"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148115548-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148115548-1');
+</script>
+
 <title>I Am An Nitian | Home</title>
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
-<!--  Disabling double tap to zoom in mobile version -->
 <meta name="viewport" content= "width=device-width, user-scalable=no">
 <meta charset="utf-8">
 <meta name="theme-color" content="#000">
@@ -27,7 +31,6 @@ session_start(); //starting session start
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
 crossorigin="anonymous">
 <link rel="icon" href="images/imnitian.png">
-
 <link href="css/ask.css" rel="stylesheet"  type="text/css">
 <link href="css/explore.css" rel="stylesheet" type="text/css">
 <link href="css/index.css" rel="stylesheet"  type="text/css">
@@ -37,24 +40,19 @@ crossorigin="anonymous">
 <link rel="stylesheet" href="css/owl.theme.default.min.css" />
 <link href="css/back-to-top.css" type="text/css" rel="stylesheet">
 <link href="css/footer.css" type="text/css" rel="stylesheet">
-<link href="css/notification.css" type="text/css" rel="stylesheet">
 <link href="css/login_register.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+<style>@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');</style>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<style></style>
+<link href="css/num_counter.css" type="text/css" rel="stylesheet">
+
 </head>
 
 <body onload="loadme()">
-
- <!--================ Back to top Button ====================-->
   <button id="back-to-top" ><i class="fas fa-angle-double-up"></i></button>
-
-  <!--================== Preloader ==========================-->
-<div id="loader">
+<div id="loader">    
 </div>
-
 <div class="wrapper">
- <!--================ Scroll Indicator ======================-->
 <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
   </div>   
@@ -63,29 +61,23 @@ crossorigin="anonymous">
 <div class="logo">
 <ul>
 <li><a href="index.php"><img src="images\imnitian.png"></a></li>
-<li class="logo_txt"> <a href="index.php" style="font-family: 'Dancing Script', cursive;color:white;font-weight:bold;font-size:13px;letter-spacing: 0.7px;" >I AM AN NITIAN</a></li>
+<li class="logo_txt"> <a href="index.php" 
+style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
 </ul>
 </div>
 <nav class="active">
+
+<p id="mnu">MENU</p>
+
 <ul>
 <li><a href="index.php" class="home" >Home</a></li>
-<!--<li><a href="team.html" class="homex">Our team</a></li>-->
+
 <li><a href="more-news.php" class="homex" >News</a></li>
-<li><a href="#updf" class="homex">Updates</a></li>
+<li ><a href="#updf" class="homex" id="update_nav">Updates</a></li>
+
 <li><a href="#about" class="homex" id="about_nav">About Us</a></li>
-<!--<li><a class="sub-menu" style="width:115px;" id="exam">Exams <i class="fas fa-caret-square-down"></i></a>
-<ul>
-<li style="width:115px;"><a href="#">Jee</a></li>
-<li style="width:115px;"><a href="#">Gate</a></li>
-<li style="width:115px;"><a href="#">IES</a></li>
-<li style="width:115px;"><a href="#">UPSC</a></li>
-</ul>
-</li>-->
-<!--
-<li>
-<button onclick="search()" style="text-transform: uppercase;letter-spacing: 0.8px; font-weight: bold;" id="searching">Search <i class="fas fa-search"></i></button>
-</li>-->
-<li><a class="homex" style="cursor:pointer; width:150px;text-align:center;margin-left:-1rem;" id="user">
+
+<li><a class="homex" id="user">
 <?php
   if(isset($_SESSION['name'])&& !empty($_SESSION['name']))
   {
@@ -98,14 +90,16 @@ crossorigin="anonymous">
 ?>
 &nbsp <i class="fas fa-user-graduate"></i></a>
 <ul style="margin-left:-1rem;">
-<!-- Hide and Show login and php buttons -->
 
 <?php
 if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 {
   if($_SESSION['user_type'] == 1)
   {
-    echo '<li><a href="edit_news.php" class="homex">Admin</a></li>';
+    ?>
+    <li><a href="edit_news.php">Admin</a></li>
+
+    <?php
   }
 }
 ?>
@@ -115,29 +109,20 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 ?>
 <li><a style="cursor:pointer;"  href="logout.php" >Logout</a></li>
 <?php }else{ ?>
-<li><a style="cursor:pointer;"  onclick="show_log()" id="login_nav">Login</a></li>
-<li><a style="cursor:pointer;"  onclick="show_signup()" id="register_nav">Register</a></li>
+<li><a style="cursor:pointer;"  onclick="show_log()" id="login_nav" >Login</a></li>
+<li><a style="cursor:pointer;"  onclick="show_signup()" id="register_nav" >Register</a></li>
 <?php } ?>
 
 </ul>
 </li>
 </ul>
 </nav>
-<!--================ Mobile Version Menu ====================-->
 <div class="menu-toggle">
 <i class="fas fa-bars"></i>
 </div>
 <img src="images/cutk.png" class="cut_nav" style="display:none;">
-
-<!--================ Search Box ====================-->
-<div class="search-popup" id="searchx" style="display:none;">
-    <div><input type="text"  placeholder="Search"><button><i class="fas fa-search"></i></button></div>
-  </div>
-
 </header>
 
-
-<!--================ Main Banner ====================-->
 <div class="banner"> 
   <div class="overlay"></div>
 
@@ -150,8 +135,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <div class="social">
     <a  target="_blank" href="https://www.facebook.com/iamannitian" alt="facebook"><img  class="svg" src="images/facebook.svg"  ></a>
     <a href="https://www.instagram.com/i_am_an_nitian/" target="_blank"  alt="instagram"><img  class="svg" src="images/instagram.svg" ></a>
-    <a href="#"><img  class="svg" src="images/twitter.svg" alt="twitter"></a>
-    <a href="#"><img  class="svg" src="images/linkedin.svg" alt="linkedin"></a>
+    <a href="https://www.youtube.com/iamannitian" target="_blank"><img  class="svg" src="images/ytb.jpg" alt="twitter"></a>
+    
 </div>
 </div>
 <div class="center">
@@ -159,166 +144,94 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div> 
 </div>
 </div>
-<!--====================  Notification Bell   ========================-->
-<div class="nt_img" style="display:none;">
-<img src="images/notificationx.svg" class="notify" onclick="show()" >
-<span id="count"></span> 
-</div>
-<!--============== Notification Popup ==================-->
-<div id="notify-popup"></div>
-<!--================ Explore Section ====================-->
+
+<!--= Explore Section =-->
 <div class="explore" >
   <p class="main-expo" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>Explore</p>
   <div class="expo-line" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'></div>
 
   <div class="expo exc" style="margin-top:2rem;">
-  <!--
-   <div class="appx" onclick="sweet_alert()" id="respo" data-aos-once="true"  data-aos="flip-left" data-aos-duration="800" data-aos-delay="300">
-     <img src="images/school.svg">
-     <p>Colleges</p>
-    </div>
-    
- <div class="appx" onclick="sweet_alert()" id="respo" data-aos-once="true" data-aos="flip-left" data-aos-duration="800" data-aos-delay="450">
-      <img src="images/exam.svg">
-      <p>Exams</p>
-     </div>
-     
-     <div class="appx" onclick="sweet_alert()" id="respo" data-aos-once="true" data-aos="flip-left" data-aos-duration="800" data-aos-delay="600">
-          <img src="images/stage.svg" >
-          <p>College Fests</p>
-         </div>  
-       
-   <div class="appx" onclick="sweet_alert()" id="respo" data-aos-once="true" data-aos="flip-left" data-aos-duration="800" data-aos-delay="750">
-      <img src="images/research.svg">
-      <p>Cutoff</p>
-     </div>
-   
-     <div class="appx" onclick="sweet_alert()" id="respo" data-aos-once="true" data-aos="flip-left" data-aos-duration="800" data-aos-delay="900">
-        <img src="images/review.svg">
-        <p>College Reviews</p>
-       </div>
-  </div>
-  <div class="expo exc"> 
-    -->
-  
-
+  <div class="appx" onclick="location.href='story.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="400">
+          <img src="images/growth.svg">
+          <p>Success Stories</p>
+         </div>
     <div class="appx" onclick="location.href='ranking-19.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="700">
       <img src="images/infographic.svg">
       <p>Ranking</p>
      </div>
-       
+      
          <div class="appx" onclick="location.href='placement.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="550">
             <img src="images/reunion.svg">
             <p>Placements </p>
            </div>
-           <div class="appx" onclick="location.href='story.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="400">
-          <img src="images/growth.svg">
-          <p>Success Stories</p>
-         </div>
-
-  <div class="appx" onclick="location.href='uPDxgdf.php'" id="respo" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="850">
-         <img src="images/question.svg">
-         <p>Ask Questions</p>
-        </div>
-
 
   <div class="appx" onclick="location.href='uPDxgdf.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="1000">
-        <img src="images/books.svg">
-        <p>Donate Books</p>
+        <img src="images/team.svg">
+        <p>CA Portal</p>
        </div>
-       
+       <div class="appx" onclick="location.href='uPDxgdf.php'" id="respo" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="850">
+         <img src="images/question.svg">
+         <p>Ask Question</p>
+        </div>
     
      </div>
-  <!--=========================== Mobile version horizontal tabs ======================-->
+  <!--= Mobile version horizontal tabs =-->
 <div class="mob-expo" style="margin-top:3rem;">
-<!--
-<div class="appx_expo" onclick="sweet_alert()"  id="appx_left">
-  <img src="images/school.svg">
-  <p>Colleges</p>
- </div>
- 
-<div  class="appx_expo" onclick="sweet_alert()" >
- <img src="images/exam.svg">
-   <p>Exams</p>
-  </div>
-  
-  <div  class="appx_expo" onclick="sweet_alert()" >
-     <img src="images/stage.svg" >
-       <p>College Fests</p>
-      </div>
 
-    
-<div  class="appx_expo" onclick="sweet_alert()" >
-   <img src="images/research.svg">
-   <p>Cutoff</p>
-  </div>
-
-  <div  class="appx_expo" onclick="sweet_alert()" id="appx_right">
-    <img src="images/review.svg">
-     <p>College Reviews</p>
+<div  class="appx_expo" onclick="location.href='story.php'" id="appx_right">
+  <img src="images/growth.svg">
+          <p>Success Stories</p>
     </div>
 
--->
-<!--================ Second explore tabs ==============-->
 
 <div  class="appx_expo" onclick="location.href='ranking-19.php'" >
   <img src="images/infographic.svg">
       <p>Ranking</p>
       </div>
     
-<div  class="appx_expo" onclick="sweet_alert()" >
+<div  class="appx_expo" onclick="location.href='placement.php'" >
 <img src="images/reunion.svg">
             <p>Placements </p>
   </div>
-  <div  class="appx_expo" onclick="sweet_alert()" id="appx_right">
-  <img src="images/growth.svg">
-          <p>Success Stories</p>
-    </div>
 
-<div  class="appx_expo" onclick="location.href='uPDxgdf.php'" >
+
+  <div class="appx_expo" onclick="location.href='uPDxgdf.php'" >
+        <img src="images/team.svg">
+        <p>CA Portal</p>
+       </div>
+
+
+<div  class="appx_expo" onclick="location.href='uPDxgdf.php'" id="appx_left">
 <img src="images/question.svg">
-         <p>Ask Questions</p>
+         <p>Ask Question</p>
   </div>
 
-<div class="appx_expo" onclick="location.href='uPDxgdf.php'"  id="appx_left">
-<img src="images/books.svg">
-        <p>Donate Books</p>
- </div>
    
 </div>
 </div>
-<!--==================  Mobile version of updates  =================-->
+<!--= Mobile version of updates =-->
+<a id="updf"></a>
+    <div class="mob_break"></div>
 <div class="respo_not">
 <div class="respo_head"><p>Updates</p></div>
 <div id="respo_csp" onmouseover="stop_It()"  onmouseout="start_It()">
-<div class="respo_cont" style="margin-top:9px;">
-  NITs (National Institute Of Technologies) are 
-    the mo <span class="blinker">New</span>
+<div class="respo_cont" onclick="location.href='gate_topper_list.php'" style="margin-top:9px;">
+ List of nitians who cracked GATE - 2019 <span class="blinker" style="display:none;">New</span>
 </div>
-<div class="respo_cont">
-  NITs (National Institute Of Technologies) are 
-    the mo 
+<div class="respo_cont" onclick="location.href='ese_topper_list.php'">
+List of nitians who cracked ESE- 2019
 </div>
-<div class="respo_cont">
-  NITs (National Institute Of Technologies) are 
-    the mo 
+<div class="respo_cont" onclick="location.href='placement.php'">
+Check out the B.Tech. placements of various NITs
 </div>
-<div class="respo_cont">
-  NITs (National Institute Of Technologies) are 
-    the mo 
+
+<div class="respo_cont" onclick="location.href='placement2.php'">
+Check out the M.Tech. placements of various NITs
 </div>
-<div class="respo_cont">
-  NITs (National Institute Of Technologies) are 
-    the mo 
+<div class="respo_cont" onclick="location.href='rank-placement-wise.php'">
+ Check out the ranking of NITs based on placements 
 </div>
-<div class="respo_cont">
-  NITs (National Institute Of Technologies) are 
-    the mo 
-</div>
-<div class="respo_cont">
-  NITs (National Institute Of Technologies) are 
-    the mo 
-</div>
+
 </div>
 </div>
 <script>
@@ -343,74 +256,85 @@ function start_It()
   inter_val = setInterval(start_Ticker, 3000);
 }
   </script>
- <!--===================== Update Section ===================--> 
+ <!--= Update Section =--> 
  <a id="updf"></a>
     <div style="width:100%;height:5%;margin-top:4%;" ></div>
 <div class="upg" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>
 <div class="upx">
 <div class="headingc"><p>Updates</p></div>
 <div id="csp" onmouseover="stopIt()"  onmouseout="startIt()">
-<div class="contentx">
-  NITs (National Institute Of Technologies) are 
-    the mo <span class="blinker" style="display:none;">New</span>
+<div class="contentx" onclick="location.href='gate_topper_list.php'">
+ Click here to see the list of nitians who did splendid performence in
+  GATE - 2019 <span class="blinker" style="display:none;">New</span>
 </div>
-<div class="contentx">
-Lorem Ipsum is simply dummy text of the
- printing and typesetting industry
+<div class="contentx" onclick="location.href='ese_topper_list.php'">
+List of nitians who cracked ESE- 2019
 </div>
-<div class="contentx">
-Lorem Ipsum is simply dummy text of the
- printing and typesetting industry 
+<div class="contentx" onclick="location.href='placement.php'">
+Check out the B.Tech. placements of various NITs <span class="blinker" style="display:none;">New</span>
 </div>
 
-<div class="contentx">
-Lorem Ipsum is simply dummy text of the
- printing and typesetting industry
+<div class="contentx" onclick="location.href='placement2.php'">
+Check out the M.Tech. placements of various NITs
 </div>
-<div class="contentx">
-  NITs (National Institute Of Technologies) are 
-    the mo 
-</div>
-<div class="contentx">
-  NITs (National Institute Of Technologies) are 
-    the most..
+<div class="contentx" onclick="location.href='rank-placement-wise.php'">
+ Check out the ranking of NITs based on placements 
 </div>
 
 </div>
 </div>
-<!--==================  Sliding images  =================-->
+<!--= Sliding images =-->
 <div class="mySlide">
 <div class="slidex">
- <img class="slide" src="images/darkback.jpg">
+ <img class="slide" src="images/Jamshedpur.jpg">
  <div id="caption">
-   <img src="images/techvaganza.png">
-   <p style="margin-bottom:5px;">Techvaganza 2020</p>
-    <p style="margin-left:27px;"> NIT Srinagar</p>
+   <img src="images/imnitian.png">
+   <p style="">I AM AN NITIAN</p>
+    <p style="margin-left:40px;">Presents</p>
   </div>
  </div>
+
  <div class="slidex">
- <div id="captionx"><p>Cultural Night</p></div>
- <img class="slide" src="images/cultural.jpg">
+<div id="captionx"><p>NIT Jamshedpur</p></div>
+ <img class="slide" src="images/Jamshedpur.jpg">
  </div>
-<div class="slidex">
-<div id="captionx"><p>Musical Night</p></div>
- <img class="slide" src="images/musical.jpg">
+
+ <div class="slidex">
+ <div id="captionx"><p>NIT Agartala</p></div>
+ <img class="slide" src="images/Agartala.jpg">
+ </div>
+
+ <div class="slidex">
+<div id="captionx"><p>NIT Meghalaya</p></div>
+ <img class="slide" src="images/Meghalaya.jpg">
  </div>
  <div class="slidex">
-<div id="captionx"><p>Dance Night</p></div>
- <img class="slide" src="images/dancex.jpg">
+<div id="captionx"><p>NIT Surathkal</p></div>
+ <img class="slide" src="images/Surathkal.jpg">
  </div>
  <div class="slidex">
-<div id="captionx"><p>Robotics</p></div>
- <img class="slide" src="images/robotics.jpeg">
+<div id="captionx"><p>VNIT Nagpur</p></div>
+ <img class="slide" src="images/Nagpur.jpg">
  </div>
+
  <div class="slidex">
-<div id="captionx"><p>Coding</p></div>
- <img class="slide" src="images/coding.jpg">
+ <div id="captionx"><p>MANIT Bhopal</p></div>
+ <img class="slide" src="images/Bhopal.jpg">
  </div>
+
+ <div class="slidex">
+ <div id="captionx"><p>NIT Calicut</p></div>
+ <img class="slide" src="images/Calicut.jpg">
+ </div>
+
+ <div class="slidex">
+ <div id="captionx"><p>NIT Raipur</p></div>
+ <img class="slide" src="images/Raipur.jpg">
+ </div>
+
 </div>
 </div>
-<!--==================  Stop & start sliding updates  =================-->
+<!--= Stop & start sliding updates =-->
 <script>
   var interval;
 function startTicker()
@@ -434,7 +358,6 @@ function startIt()
 }
   </script>
 
-<!--================ About Section ====================-->
 <a id="about"></a>
     <div style="width:100%;height:5%;margin-top:4%;" ></div>
     <p class="about-head">About Us</p>
@@ -447,26 +370,26 @@ function startIt()
     <p style="text-align:justify;" >
     NITs (National Institute Of Technologies) are 
     the most prestigious Engineering Institutions 
-    of India after IITs. There are 31 NITs across the various states of India. 
-   I AM AN NITIAN was a facebook page created in
-    July 2016 with an aim to connect all Nitians.  <span id="ab" style="font-family: 'Playfair Display', serif;"> Today It has 30K+ followers on fb & 3K+ followers on Instagram. Now it is not 
-    limited to only a facebook page.
-    But it has become the biggest student community.</span>
-    Here you can check out the news & events related to each and every NIT.</p>
+    of India after IITs. There are 31 NITs across the various parts of India. 
+   I AM AN NITIAN is a facebook page which was created in
+    July 2016 to connect with the Nitians. Now it is not 
+    limited to only a Facebook page 
+    but has become the biggest student community and a huge source of news and updates related to Engineering.
+    Here you can get regular updates of all the NITs.
+    </p>
     </div>
     </div>
 
 
-<!--================ News Section ====================-->
-<div style="width:100%;height:1%;background:transparent;margin-top:4%;"></div>
+<!--= News Section =-->
 <div class="explore exp" style="margin-top:0;">
+
   <p class="main-expo"  data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>News <span id="ns-art">& Articles</span></p>
- 
-  <div id="expo-line"  class="expo-line" style="width:15rem;position:relative;margin-bottom:3rem;"
+  <div id="expo-line"  class="expo-line" style="width:15rem;position:relative;margin-bottom:1rem;"
   data-aos="fade-up" data-aos-duration="600" data-aos-once='true'></div>
-  <div class="about-ln" style="width:15%;margin:0  0 1rem  0;" data-aos="fade-up" data-aos-duration="600"></div>
+  <div class="about-ln" style="width:12%;"  data-aos="fade-up" data-aos-duration="600"></div>
  <?php 
-            $query = "select * from tbl_images order by id desc limit 8";
+            $query = "select * from tbl_images order by id desc limit 4";
              $result = mysqli_query ($conn, $query);
                 if (mysqli_num_rows($result)>0) 
                 {
@@ -482,13 +405,13 @@ function startIt()
           
                 ?>        
           
-              <div class="xnnn" style="box-shadow:none;">
+              <div class="xnnn" style="box-shadow:0 1px 3px rgba(0,0,0,0.3);">
               <?php  echo '<a href="news.php?id='.$id.'">'; ?>
-                <?php echo '<div class="zoom"><img alt="news" src="data:image/jpg;base64,'.base64_encode($row['name']).'"/></div>'?>
+                <?php echo '<div class="zoom"><img alt="news" src="'.$row['file_path'].'"/></div>'?>
               <?php 
-              $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4)); //getting fires 5 words from heading
-              $text = implode(' ',array_slice(explode(' ', $row['text']),0,15)); //getting fires 19 words from text
-              echo '<p style="margin-top:2px;>'.'<span class="heading" >'.$head.'</span>'." ".$text.'..</p>';
+              $head = implode(' ',array_slice(explode(' ', $row['heading']),0,15)); 
+             // $text = implode(' ',array_slice(explode(' ', $row['text']),0,5)); 
+              echo '<p style="margin-top:2px;text-align:unset;">'.'<span class="heading">'.$head.'</span></p>';
                   ?>   
                   </a>                                            
                 </div>   
@@ -496,7 +419,6 @@ function startIt()
           <?php
                       if ($i % 4 == 0) echo "</div>";
               ?>
-          
            <?php
                   }
                   $_SESSION['x']=$ids;
@@ -505,34 +427,41 @@ function startIt()
                else 
                {
               ?>
-              <div>No results found.</div>
+              <div style="text-align:center;margin:0 auto;">No results found</div>
               <?php   
               }
              ?>
                <div class="more_btn" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'> <button type="button" onclick="location.href='more-news.php'">
                More News &nbsp;<i class="fas fa-chevron-circle-right"></i></button></div>
     </div>
-
-<!--============== Side Feedback Button ==================-->
+<!--= Side Feedback Button =-->
 <div id="mySidenav" class="sidenav">
 <a  id="feedback" style=" padding:15px 28px 0 25px;" onclick="fun1()"><span>FEEDBACK</span></a>
 </div>
-<!--============== Signup Popup ==================-->
-<div class="signup" id="sign">
+
+<!--= Signup Popup =-->
+<div class="signup" id="sign">  
 <div class="sign-card">
  <div class="sign-img">
   <div class="links">
     <p class="p1">Quick Links</p>
     <div class="msgx" ><p id="msgx" ></p></div>
     <ul>
-     <a href="#"> <li>Colleges</li></a>
-     <a href="#"> <li>Exams</li></a>
-     <a href="#"> <li>Cutoff</li></a>
-     <a href="#"> <li>News</li></a>
-     <a href="#"> <li>Events</li></a>
-     <a href="#"> <li>Important Dates</li></a>
+     <a href="ranking-19.php"> <li>Ranking</li></a>
+     <a href="placement.php"> <li>Placements</li></a>
+     <a href="story.php"> <li>Success Stories</li></a>
+     <a href="more-news.php"> <li>News</li></a>
+     <a onclick="updf();"> <li>Updates</li></a>
       </ul>
-    <p class="p2"><a href="#">privacy policy</a></p>
+<script>
+function updf()
+{
+  TweenMax.to('.signup',0.5,{scaleY: 0});
+  window.location = "index.php#updf";
+}
+ </script>
+
+    <p class="p2"><a target="_blank" href="https://www.freeprivacypolicy.com/privacy/view/b169e80c9ca0308e3025c2bad81475b9">privacy policy</a></p>
   </div>
  </div>
  <div class="sign-form">
@@ -546,22 +475,78 @@ function startIt()
    <input  type="text"  name="phone" id="phone" placeholder="Mobile Number"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
    <select name="clg" id="clg"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
       <option>Select College</option>
-      <option>National Institute Of technology Srinagar</option> 
-      <option>National Institute Of technology Srinagar Silchar</option>
-      <option>National Institute Of technology Srinagar Trichy</option>
-      <option>Motilal Nehru Institute Of Technology Allahabad</option>
-      <option>Malviya Natioanl Institute Of Technology Jaipur</option>
-      <option>Other</option>
+      <option> NIT Srinagar </option>
+<option> NIT Uttarakhand </option>
+<option> NIT Manipur  </option>
+<option> NIT Mizoram  </option>
+<option> NIT Nagaland </option>
+<option> NIT Agartala </option>
+<option> NIT Meghalaya </option>
+<option> NIT Arunachal Pradesh </option>
+<option> NIT Sikkim </option>
+<option> NIT Silchar </option>
+<option> NIT Hamirpur </option>
+<option> NIT Jamshedpur </option>
+<option> NIT Jalandhar </option>
+<option> NIT Durgapur </option>
+<option> MNIT Jaipur </option>
+<option> NIT Kurukshtera </option>
+<option> NIT Andhra Pradesh </option>
+<option> NIT Patna </option>
+<option> MANIT Bhopal </option>
+<option> NIT Goa </option>
+<option> NIT Puducherry </option>
+<option> NIT Delhi </option>
+<option> NIT Raipur </option>
+<option> NIT Calicut </option>
+<option> NIT Rourkela </option>
+<option> VNIT Nagpur </option>
+<option> NIT Trichy </option>
+<option> NIT Warangal </option>
+<option> MNNIT Allahabad</option>
+<option> SVNIT Surat </option>
+<option> NIT Surathkal </option>
+<option> Other </option>
       </select>
       <select name="state" id="state"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
           <option>Select Your State</option>
-          <option>Uttar Pradesh</option>
-          <option>Jammu and Kashmir</option>
-          <option>Rajsthan</option>
-          <option>Tamilnadu</option>
-          <option>Uttrakhand</option>
-          <option>Bihar</option>
-          </select>
+          <option> Uttar Pradesh </option>
+<option> Bihar </option>
+<option> Rajasthan  </option>
+<option> Madhya Pradesh  </option>
+<option> Maharashtra </option>
+<option> Andhra Pradesh </option>
+<option> Arunachal Pradesh </option>
+<option> Assam</option>
+<option> Chhattisgarh </option>
+<option> Odisha </option>
+<option> Goa </option>
+<option> Gujarat </option>
+<option> Haryana </option>
+<option> Himachal Pradesh </option>
+<option> Jammu and Kashmir </option>
+<option> Jharkhand </option>
+<option>  Karnataka </option>
+<option> Kerala </option>
+<option> Manipur </option>
+<option> Mizoram </option>
+<option> Tripura </option>
+<option> Nagaland </option>
+<option> Punjab </option>
+<option> Sikkim </option>
+<option> Tamilnadu </option>
+<option> Uttarakhand </option>
+<option> West Bengal </option>
+<option> Telangana </option>
+<option> Andaman and Nicobar Islands </option>
+<option> Chandigarh </option>
+<option> Dadar and Nagar Haveli </option>
+<option> Daman and Diu </option>
+<option> Delhi </option>
+<option> Lakshadweep </option>
+<option> Puducherry </option>
+<option> Laddakh </option>
+ </select>
           <input  autocomplete="off" name="user_pass" id="user_pass" type="password" placeholder="Password"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
           <input autocomplete="off" type="password"  id="cnf_pass" name="cnf_pass" placeholder="Confirm Password" onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
           <button name="register" id="register" type="button"   class="register">Register</button>
@@ -571,7 +556,7 @@ function startIt()
  </div>
 </div>
 </div>
-<!--=============== Login Popup =================-->
+<!--= Login Popup =-->
 <div class="login" id="log" >
 <div class="log-card">
     <img class="cancel-log"  src="images/cut.png" onclick="cancel_log()">
@@ -580,8 +565,9 @@ function startIt()
   <form  method="post" autocomplete="off">
   <input  id="email" type="text" autocomplete="off" placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
   <input autocomplete="off"  id="pass" type="password" placeholder="Password"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+<div class="forget_div"><a href="forgot_password.php" class="forget">forgot password?</a></div>
 <div class="select" id="select">
-  <input type="radio" name="user" id="user" value="1" checked>&nbsp <label class="lab1">User</label>
+  <input type="radio" name="user" id="usert" value="1" checked>&nbsp <label class="lab1">User</label>
   <input type="radio" name="user" id="admin" value="2">&nbsp <label>Admin</label>
  </div>
   <button type="button"  name="login" id="login">Login</button>
@@ -590,7 +576,8 @@ function startIt()
 </div>
 </div>
 </div>
-<!--============== Feedback Popup ==================-->
+
+<!--= Feedback Popup =-->
 <div class="popup">
 
     <div class="popup-content">
@@ -607,7 +594,34 @@ function startIt()
    </div>
 
 
-  <!--============== Nits Logo =====================-->
+
+
+<div class="counter" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>
+<div class="counter-1">
+<div class="counter_img"><img src="images/boy.svg"></div><div class="counter_title"><span>Users</span></div>
+<div class="countx"><span class='numscroller' data-min='1' data-max='1000' data-delay='6' data-increment='10'>10</span><span>+</span></div>
+</div>
+
+<div class="counter-2">
+<div class="counter_img"><img src="images/fbs.svg"></div><div class="counter_title"><span>Followers</span></div>
+<div class="countx"><span class='numscroller' data-min='1' data-max='43000' data-delay='6' data-increment='300'>10</span><span>+</span></div>
+</div>
+
+<div class="counter-3">
+<div class="counter_img"><img src="images/ins.svg"></div><div class="counter_title"><span>Followers</span></div>
+<div class="countx"><span class='numscroller' data-min='1' data-max='7000' data-delay='6' data-increment='50'>10</span><span>+</span></div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+  <!--= Nits Logo =-->
    <div class="nit-logos" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>
     <div class="owl-carousel owl-theme">
     <div class="item"><img src="images\nit-logo\nit trichy.png"><p>nit trichy</p></div>
@@ -637,86 +651,56 @@ function startIt()
     <div class="item"><img src="images\nit-logo\nit nagaland.png"><p>nit Nagaland</p></div>
     <div class="item"><img src="images\nit-logo\nit pudu.png"><p>nit Puducherry</p></div>
     <div class="item"><img src="images\nit-logo\nit andhra.png"><p>nit Andhra Pradesh</p></div>
-    <div class="item"><img src="images\nit-logo\nit sikkim.png"><p>nit Sikkim</p></div>
-    <div class="item"><img src="images\nit-logo\nit uttrakhand.png"><p>nit Uttarakhand</p></div>
+    <div class="item"><img src="images\nit-logo\nit sikkim.svg"><p>nit Sikkim</p></div>
+    <div class="item"><img src="images\nit-logo\nit uttrakhand.png"><p>nit Uttrakhand</p></div>
     <div class="item"><img src="images\nit-logo\nit mizoram.png"><p>nit Mizoram</p></div>
+	<div class="item"><img src="images\nit-logo\nit arunachal.png"><p>nit Arunachal Pradesh</p></div>
     </div>
     </div>
- <!--============== Footer Section ==================-->
-  <footer>
-   <!-- <div class="datay">
-              
-      <div><p class="y">Colleges</p>
-        <div class="linex" id="lx"></div>
-      <p><a href="#">IIT</a></p>
-      <p><a href="#">NIT</a></p>
-      <p><a href="#">IIIT</a></p>
-      
-      </div>
-      <div>
-          <p class="y">Exams</p>
-          <div class="linex" id="ly"></div>
-            <p><a href="#">Jee Advance</a></p>
-            <p><a href="#">Jee Mains</a></p>
-            <p><a href="#">Gate</a></p>
-            <p><a href="#">Neet</a></p>  
-          </div>
-      <div><p class="y">Cutoff</p>
-        <div class="linex" id="lz"></div>
-        <p><a href="#">IITs </a></p>
-        <p><a href="#">NITs</a></p>
-        <p><a href="#">IIITs</a></p>
-        </div>
-      <div><p class="y">Links</p>
-        <div class="linex" id="la"></div>
-        <p><a href="#">College Reviews</a></p>
-        <p><a href="#">College Ranking</a></p>
-        <p><a href="#">About Us</a></p>
-        <p><a href="#">News</a></p></div>
-        
-    </div> -->
+
+    <footer>
+
   <div class="datad">
   <p class="x">Feel Free To Contact Us</p>
-  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-9055667606 &nbsp | &nbsp  +91-9055667606</p>
+  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-6202590504 &nbsp | &nbsp  +91-8130512823</p>
  <span id="respo_contact">
  <P>iamannitian@gmail.com</p> 
- <P>+91-9055667606</p> 
- <P>+91-9055667606</p> 
+ <P>+91-6202590504</p> 
+ <P>+91-8130512823</p> 
    </span>
 </div>
-<!--============== Bottom Container =====================-->
- <div class="container">
+<div class="container">
 <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
-2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbsp DESIGNED AND DEVELOPED BY SHUBHAM MAURYA &nbsp|&nbsp NIT SRINAGAR</span></p>
-<p id="and_copy" class="copyright">Developed by Shubham Maurya</p>
+2019 &nbsp| &nbsp I AM AN NITIAN <span id="developerx">&nbsp | &nbspAll Rights Reserved &nbsp | &nbsp</span><span id="developerx" class="hov" 
+onclick="location.href='https://www.freeprivacypolicy.com/privacy/view/b169e80c9ca0308e3025c2bad81475b9'">Privacy Policy</span></p>
+<p id="and_copy" class="copyright hov" onclick="location.href='https://www.freeprivacypolicy.com/privacy/view/b169e80c9ca0308e3025c2bad81475b9'">privacy policy</p>
+
+<p class="copyright" id="developer">Developed by | Shubham Maurya | NIT SXR
+<span id="github">| <a  id="hover" href="https://github.com/pnstech" target="_blank" >Github</a></span>
+ <span id="github">| <a  href="https://www.linkedin.com/in/cyberthreatatnit" target="_blank" >Linkedin</a></span>
+ </p>
+
 </div>
 </footer>
 </div>
 </body>
 </html>
-<!--===============  Microsoft's JQuery CDN =================-->
+
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
-<!--===================  TypedJs CDN  =======================-->
+<script src="js/num-scroll.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js" type="text/javascript"></script>
-<!--================  Owl Carousel Libraray  ==============-->
 <script src="js/owl.carousel.min.js" type="text/javascript"></script>
-<!--==================  TweenMax CDN  ==================-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-<!--==================  SweetAlert2 CDN  ==================-->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8" type="text/javascript"></script>
-<!--==================  aos.js  CDN  ==================-->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<!--==================  Local Js Files  ==================-->
 <script src="js/index.js" type="text/javascript"></script>
 <script   type="text/javascript" src="js/ajax-register.js"></script>
 <script   type="text/javascript" src="js/ajax-login.js"></script>
 <script   type="text/javascript" src="js/main.js"></script>
-<!--===================   Get total Number of notifications   ====================-->
-<script   type="text/javascript" src="js/notification.js"></script>
 <script>
-  AOS.init({ disable: 'mobile' }); //disabling the animations in mobile version
+  AOS.init({ disable: 'mobile' }); 
 </script>
-<script>
+<script>              
 
   </script>
 <script>
@@ -755,104 +739,44 @@ function carousel() {
   {
     TweenMax.to('#caption',0.5,{scaleX: 0});
   }
- /*==================== Menu toggle =========================*/
+
+ /*= Menu toggle =*/
  $(document).ready(function(){
 
 if (window.matchMedia('(max-width:721px)').matches)
 {
-  
-  $('.cut_nav').click(function(){
-    $(this).css('display','none');
-    $('.menu-toggle').css('display','block');
-    TweenMax.to('.active',0.5,{scaleX: 0});
-    $('nav').css('z-index', '1');
-    $('.logo').css('marginLeft', '0px');
-    $('.logo').css('marginTop', '0px');
-    $('.logo_txt').css('marginTop', '0px');
 
-
-    setTimeout(function(){
-      if($(window).scrollTop()!= 0)
-    {
-      $('header').css('background', 'black');
-    }
-    },200)
-
-  })
-
-  $(window).scroll(function(){
-  $('header').css('background', 'black');
-  if($(window).scrollTop() == 0)
-    {
-      $('header').css('background', 'transparent');
-    }
+$('.cut_nav').click(function(){
+  $(this).css('display','none');
+  $('.menu-toggle').css('display','block');
+  TweenMax.to('.active',0.5,{scaleX: 0});
 })
-  
 
 
-  $('.menu-toggle').click(function(){
-    $(this).css('display','none');
-    $('.cut_nav').css('display','block');
+$('.menu-toggle').click(function(){
+  $(this).css('display','none');
+  $('.cut_nav').css('display','block');
+  $('.cut_nav').css('background','black');
+  TweenMax.to('.active',0.4,{scaleX: 1});
+})
 
-    $('nav').css('z-index', '4');
-
-    $('header').css('background', 'transparent');
-    $('.cut_nav').css('background','black');
-    TweenMax.to('.active',0.4,{scaleX: 1});
-
-    setTimeout(function(){
-      $('.logo').css('marginLeft', '62px');
-      $('.logo').css('marginTop', '18px');
-      $('.logo_txt').css('marginTop', '10px');
-    },200);
-
-    setTimeout(function(){
-      $('nav').css('z-index', '-1');
-    },350);
-   
-  })
-$('#login_nav').click(function()
+$('#login_nav,#register_nav,#about_nav,#update_nav').click(function()
 {
-  $('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');
-  TweenMax.to('.active',0.1,{scaleX: 0});  
-  $('.cut_nav').css('display','none');
-  $('.menu-toggle').css('display','block');
-  $('.logo_txt').css('marginTop', '0px');
-})
-
-$('#register_nav').click(function(){
-  $('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');
-  TweenMax.to('.active',0.1,{scaleX: 0});  
-  $('.cut_nav').css('display','none');
-  $('.menu-toggle').css('display','block');
-  $('.logo_txt').css('marginTop', '0px');
-})
-
-$('#about_nav').click(function()
-{
-  $('.logo').css('marginLeft', '0px');
-  $('.logo').css('marginTop', '0px');
-  TweenMax.to('.active',0.1,{scaleX: 0});  
-  $('.cut_nav').css('display','none');
-  $('.menu-toggle').css('display','block');
-  $('.logo_txt').css('marginTop', '0px');
+TweenMax.to('.active',0.1,{scaleX: 0});  
+$('.cut_nav').css('display','none');
+$('.menu-toggle').css('display','block');
 })
 
 }
-
 })
 
-/*========================  Feedback Form Submission  =====================*/
-
+/* Feedback Form Submission */
   $('#user_btn_pop').click(function()
 {
   var user_name = $('#user_name_pop').val().trim();
   var user_email = $('#user_email_pop').val().trim();
   var user_feedback = $('#user_feedback_pop').val().trim();
  
-
 if(user_name != '' && user_email != '' && user_feedback != '')
 {
 

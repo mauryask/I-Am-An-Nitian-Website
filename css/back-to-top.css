@@ -32,6 +32,11 @@
 	}
 }
 
+html{
+	scroll-behavior: smooth;
+	overflow-x: hidden;
+}
+
 /*Zoom in*/
 .btnEntrance{
 	animation-duration: 0.5s;
@@ -49,6 +54,7 @@
 		opacity:1;
 	}
 }
+
 /*Zoom Out*/
 .btnExit{
 	animation-duration: 0.25s;
@@ -66,3 +72,27 @@
 	 transform:scale3d(0.3,0.3,0.3);
  }
 }
+
+
+
+.progress-container { 
+	width: 100%;
+	height: 6px;
+	background:rgba(80,80,80,0.1);
+	z-index: 3;
+	position: fixed;
+  }
+  
+  .progress-container .progress-bar {
+	height: 6px;
+	background:  #4caf50;
+	width:0%;
+  }
+
+  @media (max-width:921px)
+  {
+	.progress-container { 
+		display: none;
+	  }
+	  
+  }

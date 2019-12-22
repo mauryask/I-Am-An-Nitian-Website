@@ -1,9 +1,25 @@
 <?php
-
-session_start(); //preventing direct access of this page
+session_start(); 
 if(!isset($_SESSION['user_type']) || empty($_SESSION['user_type']) || $_SESSION['user_type']!=1)
 {
-  exit('access denied page 404 not found');
+  exit("<div style='
+  top:50%; 
+  left:50%; 
+  transform:translate(-50%,-50%);
+  position:absolute;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  '>
+  <img src='images/access.png' width='200px' height='200px'>
+  <p style='
+
+  font-size:35px;
+text-align:center;
+font-weight:bold;
+  '
+  >Access Denied Page 404 Not Found<p>
+  </div>");
 }
 
 include('connection.php');
@@ -17,10 +33,10 @@ if($result)
 {
     mysqli_query($conn, $query_y);
     mysqli_query($conn, $query_z);
-    header('location:edit_news.php'); //refresh the current page instead of redirecting to same page again
+    header('location:edit_news.php'); 
 }
 else
 {
-    echo 'Failed to delete The record';
+    echo 'Unable to delete the record';
 }
 ?>

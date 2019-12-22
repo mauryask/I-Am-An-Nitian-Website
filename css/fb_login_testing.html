@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <title>FB Login Testing</title>
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js"></script>
+    </head>
+
+    <body>
+<!--=========================  Fb sdk starts ==============================-->
+
+            <script>
+                    window.fbAsyncInit = function() {
+                      FB.init({
+                        appId      : '2358880627700744',
+                        cookie     : true,
+                        xfbml      : true,
+                        version    : 'v4.0'
+                      });
+                        
+                      FB.getLoginStatus(function(response){ 
+                            if(response.status === 'connected')
+                            {
+                               
+                                FB.api('/me?fields=id,name,first_name, last_name, age_range,gender, email, picture.type(large)', function(response) {
+                                    
+                                    var datax = JSON.parse(JSON.stringify(response)); 
+                                    
+                                                
+                                          /*  $.each(datax, function(key, value){
+                                               
+                                               
+                                               console.log(key+" : "+value);
+                                                
+                                            });*/
+                                 
+                                 
+                                 var name = datax.name;
+                                 var email = datax.email;
+                                 var id = datax.id;
+                                 
+                                 //ajax call
+                                 
+                                $.ajax({
+                                     url:'fb_login.php',
+                                     type:'post',
+                                     data:{name, email, id},
+                                     success:function(response)
+                                     {
+                                         if(response==1){
+                                         alert('Logged in');
+                                         }
+                                         else
+                                         {
+                                         alert("not logged in");
+                                         }
+                                         
+                                     }
+                                     
+                                 });
+                                 
+                                 
+                                 
+                                 
+                                             $('#image').attr('src',datax.picture.data.url); //printing image of the user
+                                                  
+                                                });
+                                      
+                             
+                                  
+                                                                }
+                            else if(response.status === 'not_authorized')
+                            {
+                                document.getElementById('status').innerHTML = 'not authorized';
+                            }
+                            else
+                            {
+                              document.getElementById('status').innerHTML="you are not logged in into facebook";
+                            }
+                      }); 
+                        
+                    };
+                  
+                    (function(d, s, id){
+                       var js, fjs = d.getElementsByTagName(s)[0];
+                       if (d.getElementById(id)) {return;}
+                       js = d.createElement(s); js.id = id;
+                       js.src = "https://connect.facebook.net/en_US/sdk.js";
+                       fjs.parentNode.insertBefore(js, fjs);
+                     }(document, 'script', 'facebook-jssdk'));
+
+
+
+//creating a login button response
+
+
+function login(){
+
+FB.login(function(response){
+                          
+    if(response.status === 'connected')
+                            {
+                                document.getElementById('status').innerHTML = 'we are connected';
+                            }
+                            else if(response.status === 'not_authorized')
+                            {
+                                document.getElementById('status').innerHTML = 'not authorized';
+                            }
+                            else
+                            {
+                              document.getElementById('status').innerHTML="you are not logged in into facebook";
+                            }
+
+});
+
+             }          
+             
+                </script>
+
+
+<!--======================= fb sdk ends  =======================-->
+
+
+<div id="status"></div>
+
+<img src="" id="image"/>
+<br><br>
+<button onclick='login()'>Login</button>
+
+        </body>
+</html>

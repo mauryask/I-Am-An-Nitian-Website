@@ -1,13 +1,13 @@
 /*================ Code for comment insertion =================*/
 
-$(document).ready(function()
+$(document).ready(function()  
 {
  
+    var post_id = $('html').attr('id');
+
 $('#comment_btn').click(function(){
 
 var comment_content = $('#comment_content').val().trim();
-var post_id = $('html').attr('id');
-
 
 if(comment_content != '')
 {
@@ -29,14 +29,23 @@ if(comment_content != '')
             }
             else
             {
-                setTimeout(function(){
+              
                     $.post('get_comment.php', {post_id : post_id}, function(data, status){  
     
                             $('.comments').html(data);            
     
                        });
         
-                },1000);    
+              
+                $.post('comment_number.php', {post_id : post_id}, function(data, status)
+                    {
+                    $('#ncmt').text(data);
+                    $('#cmt_color').addClass('fas');
+                    if(data == 0)
+                    {
+                        $('#cmt_color').removeClass('fas');
+                    }
+                    });  
             }
                  
             $("form").trigger("reset"); //to clear the form fieled after submission
@@ -48,11 +57,22 @@ if(comment_content != '')
 
 
 /*Loading comments when page loaded is loaded*/
-
-  var id = $('html').attr('id');
-  $.post('get_comment.php', {post_id : id}, function(data, status){
+  $.post('get_comment.php', {post_id : post_id}, function(data, status){
    $('.comments').html(data);
   })
+
+// loading number of comments when page loaded
+  $.post('comment_number.php', {post_id : post_id}, function(data, status)
+  {
+  $('#ncmt').text(data);
+  $('#cmt_color').addClass('fas');
+  if(data == 0)
+  {
+      $('#cmt_color').removeClass('fas');
+  }
+  }); 
+
+
  
 });
 

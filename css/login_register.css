@@ -1,10 +1,7 @@
-
-         /*Signup popup*/
- 
          .signup{
             background: rgba(0,0,0,0.7);
             width:100%;
-            height: 100vh; /*it covers entire verrical height(full screen)*/
+            height: 100vh; 
             top:0;
             position: fixed;
             z-index:4;
@@ -13,17 +10,21 @@
             align-items: center;
             transform-origin: bottom;
             transform:scaleY(0);
+            padding-top:50px;
+            padding-bottom:50px;
              }
   
              .signup .sign-card{
                  box-shadow:0 0 5px 5px rgba(0,0,0,1);
                  background:rgba(220,220,220,1);
-                  width:60%;
+                 width:60%;
                  height:auto;
                  display:flex;
                  flex-direction: row;
                }
                
+              
+
                .sign-card div{
                  flex:1 1 50%;
                }
@@ -54,11 +55,13 @@
                }
   
                .sign-card .sign-img div ul {
-                 margin:14% 3% 0 3%;
                padding:2%;
                border-radius: 5px;
                background: rgba(200,200,200,1);
                box-shadow: 0 5px 5px 0 rgba(230,230,230,1);
+               top:9rem;
+               position:relative;
+               margin: 0 2rem 0 2rem; 
                }
                .sign-card .sign-img .links ul li{
                list-style-type:none;
@@ -66,7 +69,7 @@
                text-align: center;
                border-radius: 5px;
                padding:2%;
-               margin: 3px;
+               margin: 3px; 
                background: rgba(230,230,230,1);
                cursor: pointer;
               }
@@ -75,6 +78,7 @@
                 text-decoration:none;
                 font-size: 15px;
                 color:rgba(80,80,80,1);
+                overflow-x: 
                }
                .sign-card .sign-img .links ul a {
                 text-decoration:none;
@@ -85,25 +89,23 @@
                }
   
                .sign-card .sign-img div .p1{
-               font-size:18px;
-               font-weight: bold;
-               color:white;
-               background: #1090f8;             
-               -webkit-clip-path: polygon(76% 0, 0 0, 0 44%, 79% 45%, 54% 23%);
-               clip-path: polygon(76% 0, 0 0, 0 44%, 79% 45%, 54% 23%);
-               padding:4.5% 0 22% 8%;
-               
-              }
+                text-align:center;
+                top:8rem;
+                position:relative;
+                font-size:25px;
+                font-weight:bold;
+                color:rgba(80,80,80,1);
+               }
+
               .sign-card .sign-img div .p2{
                 text-decoration: none;
-                top:18%;
-               left:58%;
-                transform: translate(-18%,-58%);
+                text-align:center;
                 position: relative;
+                top:16rem;
               }
               .sign-card .sign-img div .p2 a{
                 text-decoration: none;
-                font-size:16px;
+                font-size:15px;
                 letter-spacing: 0.7px;
                 cursor: pointer;
                 color:rgba(110,110,110,1);
@@ -129,8 +131,7 @@
                   padding-top:1.5rem;
                   align-items: center;
                   }
-                      
-                 
+                                     
                 .signup .sign-card .sign-form div form input,select{
                     margin:6px;
                     width:80%;
@@ -143,6 +144,7 @@
                     color:rgba(100,100,100,1);
                     letter-spacing:0.6px;
                 }
+
                     .sign-card .sign-form div form button{
                       width:80%;
                       margin-top:2rem;
@@ -158,7 +160,7 @@
                     .sign-card .sign-form div p{
                       text-decoration: none;
                       margin:1.3rem 0 1.4rem 0;
-                      font-size:14px;
+                      font-size:13px;
                       letter-spacing:0.6px;
                       cursor: pointer;
                       color:rgba(58, 83, 155, 0.9);
@@ -177,9 +179,7 @@
                 margin-top:35px;
                 text-transform: uppercase;
               }
- 
-  /*Login Popup*/
- 
+
               .login{
                 background: rgba(0,0,0,0.7);
                 width:100%;
@@ -206,7 +206,7 @@
               .login .log-card div
               {
                 flex:1 1 70%;
-                padding:2% 10% 0 10%;
+                padding:2% 5% 0 10%;
               }
               .login .log-card div input
               {
@@ -230,20 +230,33 @@
                 text-transform: uppercase;
               }
   
-              .login .log-card div .signx {
+              .login .log-card div .signx 
+              {
                 font-size: 16px;
                 text-align:center;
                 margin:20px 0 35px 0;
                 letter-spacing: 0.5px;
               }
   
+              .login .log-card .forget_div{
+              width:90%;
+              padding:8px 2px 0 10px;
+              }
+            .login .log-card .forget{
+              text-decoration: none;  
+              color:rgba(58, 83, 155, 0.9);
+              font-size:13px;
+            }
+            .login .log-card .forget:hover{
+              color:red;  
+             }
+
               .login .log-card div .signx a{
                 color:rgba(58, 83, 155, 0.9);
                 text-decoration: none;
-                font-size:14px;
+                font-size:13px;
                 letter-spacing:0.8px;
                 cursor: pointer;
-                
               }
               .login .log-card div .signx a:hover{
                 color:rgba(256,0,0,0.7);
@@ -251,7 +264,7 @@
                 }
   
                .login .log-card div .log-msg{
-                  width:100%;
+                  width:90%;
                   text-align:center;
                   color:red;
                   letter-spacing: 0.5px;
@@ -280,15 +293,14 @@
                 cursor:pointer;
                 opacity:0.8;
               }
- 
- /*======================== Radio Buttons =========================*/
+            
  
               .login .log-card div .select {
                display:flex;
                flex-direction:row;
                align-items: center;
                justify-content: center;
-               width:100%;
+               width:90%;
                margin:5px 0 5px 0;
               }
   
@@ -331,6 +343,7 @@
               
                       .signup {
                         width:100%;
+                       overflow-y:scroll;
                       }
                       .signup .sign-card{
                          width:92%;
@@ -347,13 +360,15 @@
                       .sign-card .sign-form  .mainh{
                         font-size:24px;
                         margin-bottom:0;
+                        margin-top:30px;
                       }
               
                       .msgx{
-                        height:20px;
+                        height:15px;
                         font-size:14px;
                         padding:0;
                         margin:0;
+                       
                       }
               
                       #msgk{
@@ -363,4 +378,16 @@
                       {
                         padding-top:0rem;
                       }
+
+                      .sign-card .sign-form div form
+                        {
+                        padding-top:0;
+                        }
+                                           
+                      .signup .sign-card .sign-form div form input,select
+                      {
+                          padding:8px 0 8px 2px;
+                      }
+      
+
               }

@@ -1,6 +1,4 @@
-   
-/*================  Fooetr Section Common to all  =================*/ 
-    	
+      	
 .datay{
 	background:rgba(0,0,0,0.9);
 	width:100%; 
@@ -52,7 +50,7 @@ letter-spacing: 0.7px;
 
  .datad{
   width:100%;
-  background: rgba(0,0,0,0.8);
+  background: rgba(15,15,15,1);
   box-shadow:1px 0 1px 0 rgba(0,0,0,0.6);
   padding-top: 1.2rem;
   padding-bottom: 1.2rem;
@@ -78,10 +76,10 @@ letter-spacing: 0.7px;
 
 .container
 {
-background:rgba(0,0,0,0.9);
+background:rgba(0,0,0,1);
 width:100%;
 padding-top:1.6rem;
-padding-bottom:1.6rem;
+padding-bottom:1.1rem;
 }
 
 .container .copyright{
@@ -93,65 +91,45 @@ padding-bottom:1.6rem;
   text-transform: uppercase;
 }
 
+.container #developer{
+  line-height:22px;
+  font-size:9px;
+  letter-spacing:1px;
+}
+
 #and_copy{
 line-height:24px;
  display: none;
 }
 
-/*================  Fooeter Section  =================*/ 
-
 footer{
 	margin-top:3%;
 }
 
- 
-
-/*scroll Indicator*/
- .progress-container { 
-   width: 100%;
-   height: 6px;
-   background:rgba(80,80,80,0.1);
-   z-index: 3;
-   position: fixed;
- }
- 
- .progress-container .progress-bar {
-   height: 6px;
-   background:  #4caf50;
-   width:0%;
- }
-
- /*================= Custom Scroll Bar =================*/
-/* width */
-::-webkit-scrollbar {
-    width: 13px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(168, 166, 166); 
-  }
-  
-
-  
   #respo_contact{
     display:none;
     line-height:24px;
   }
-
-/*================  Smooth Scrolling Property  =================*/ 
 
 html{
 	scroll-behavior: smooth;
 	overflow-x: hidden;
 }
 
-/*================  Mobile version responsive  =================*/ 
+#github a:hover{
+  color:red;
+}
+
+#github a{
+  text-decoration:none;
+  color:rgba(256,256,256,0.7);
+}
+
+.hov:hover{
+  cursor:pointer;
+  color:red;
+  }
+
 
 @media (max-width:721px)
 {
@@ -197,9 +175,10 @@ line-height:1.8rem;
       margin-left:-7px;
        }
 
-#developer{
+.container #developerx{
   display:none;
 }
+
 
 #and_copy{
   display: block;
@@ -215,6 +194,17 @@ line-height:1.8rem;
 
 #respo_contact{
   display: block;
+}
+
+.container #github
+{
+display:none;
+}
+
+.container #developer{
+  line-height:12px;
+  font-size:9px;
+  letter-spacing:1px;
 }
 
 }

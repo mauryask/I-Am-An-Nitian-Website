@@ -1,6 +1,8 @@
 $(document).ready(function(){
 
 	$('#login').click(function(){
+
+		$('#login').text("Login"); //by default set text to login
 		
 		var email = $('#email').val().trim();
 		var pass = $('#pass').val().trim();
@@ -12,13 +14,16 @@ $(document).ready(function(){
 		data: { email:email,pass:pass,check:check},
 		success: function(response)
 		{
+
+			$('#login').text("please wait..");
+			
 		   if(response == 1)
 		   {	
 			 fun();	
 			  
 			   setTimeout(function(){ 
 			   
-			   location.reload(true); // instead of redirecting home page reload the current page
+			   location.reload(true); //reloading the current page
 			  			   
 				 },1800);
 	
@@ -26,7 +31,16 @@ $(document).ready(function(){
 		   else
 		   {
 			   $('#message').html(response);
+				setTimeout(function(){
+					$('#message').fadeOut();	
+				},1400);
+
+				$('#message').fadeIn();
+				//enabling the button again
+				$('#login').text("Login");
+
 		   }
+
 		}
 	   
 	});

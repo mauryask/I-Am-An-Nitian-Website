@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
-
 .upg{
   margin:0 auto;
 overflow: hidden;
@@ -21,20 +20,22 @@ border:1px solid rgba(210,210,210,1);
 }
 
 
-.headingc,.respo_head{
+.headingc,.respo_head
+{
   width:100%;
  height:50px;
- background:rgba(255,196,105,0.6);
+ background:rgba(255,196,105,1);
  text-align:center;
  padding-top:10px;
  box-shadow:0 0 2px 2px rgba(210,210,210,1);
 }
+
 .upx .headingc
 {
   border-radius:1px;
 }
 
-.upx .headingc p,  .respo_head p{
+.upx .headingc p, .respo_head p{
 font-size:25px;
 font-weight:bold;
 color:rgba(70,70,70,1);
@@ -45,21 +46,30 @@ cursor:pointer;
 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.upx #csp .contentx{
-    margin:2px 9px 10px 7px;
-    padding:5px 4px 2px 8px;
-    width:58%;
-    line-height:24px;
+.upx #csp{
+  position:fixed;  
+  overflow: hidden;
+}
+
+.upx #csp .contentx
+{
+    margin:2px 9px 10px 4px;
+    padding:5px 4px 2px 5px;
+    width:56%;
+    line-height:20px;
     color:#050505;
     cursor:pointer;
     font-size:15px;
-    font-family: 'Playfair Display', serif;
+    font-family:sans-serif;
+    word-wrap: break-word;
+    text-align:center;
   }
 
-.upx #csp{
-    position:fixed;  
-    overflow: hidden;
-}
+  .upx #csp .contentx:hover{
+ color:blue;
+ text-decoration: underline;
+  }
+
 
 .mySlide{
     width:65%;
@@ -74,7 +84,7 @@ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .mySlide .slidex  #caption{
-  background:	rgba(255,215,0,0.6);
+  background:	rgba(0,0,0,0.8);
   clip-path: polygon(0 0, 15% 0, 32% 100%, 0% 100%);
   z-index:1;
   font-size:20px;
@@ -89,21 +99,25 @@ overflow:hidden;
 }
 
 .mySlide .slidex  #caption img{
- width:85px; 
- height:85px; 
+ width:65px; 
+ height:65px; 
  top:7rem;
  left:4rem;
  position:relative;
 }
 
 .mySlide .slidex  #caption p{
-  font-size:19PX;
+  letter-spacing: 0.2px;
+  font-size:18PX;
   font-weight:bold;
-  color:black;
-  top:38%;
-  left:3%;
-  translate:transform(-2%,-38%);
+  color:white;
+  top:36%;
+  left:2.3%;
+  margin-bottom:5px;
+  margin-left:8px;
+  translate:transform(-3%,-38%);
   position:relative;
+  font-family: 'Lato', sans-serif;
 }
 
 .mySlide .slidex  #captionx{
@@ -112,18 +126,18 @@ overflow:hidden;
   font-size:20px;
   width:100%;
   bottom:0;
- position:absolute;
- height:40px;
-color:white;
-clip-path: polygon(0 0, 15% 0, 20% 100%, 0% 100%);
+  position:absolute;
+  height:40px;
+  color:white;
+  clip-path: polygon(0 0, 15% 0, 20% 100%, 0% 100%);
 }
 
-.mySlide .slidex  #captionx p{
+.mySlide .slidex  #captionx p
+{
   top:9px;
-  left:28px;
+  left:13px;
   position:relative;
 }
-
 
 .mySlide .slidex .slide{
 width:100%;
@@ -162,7 +176,6 @@ position:relative;
     }
     }
 
- /*============ Mobile version of updates =============*/
 .respo_not{
   height:340px;
   display:flex;
@@ -176,7 +189,7 @@ position:relative;
   display: none;
   overflow: hidden;
   border:1px solid rgba(210,210,210,1);
-  margin-bottom:3rem;
+  margin-bottom:2rem;
 }
 
 #respo_csp
@@ -193,19 +206,24 @@ position: fixed;
 }
 
 #respo_csp .respo_cont{
-  line-height:21px;
- color:rgba(90,90,90,1);
+  line-height:20px;
+ color:#050505;
  cursor:pointer;
- margin-top:8px;
- padding:8px 0 8px 20px;
- font-size:15px;
+ margin-top:5px;
+ padding:8px 0 9px 10px;
+ font-size:16px;
+ font-family:sans-serif;
+ text-align:center;
 }
 
-
+#respo_csp .respo_cont:hover{
+  color:blue;
+  text-decoration: underline;
+   }
 
     /*============ Responsive Sreen =============*/
 
-    @media (max-width:721px)
+    @media (max-width:921px)
     {
       .upg{
       width:100%;
@@ -218,7 +236,7 @@ position: fixed;
 
        .mySlide{
         width:90%;
-       margin-top:3rem;
+        height:290px;
        position:relative;
       }
 
@@ -230,19 +248,28 @@ position: fixed;
       }
 
 
-      .mySlide .slidex  #captionx{
+      .mySlide .slidex  #caption p{
+        font-size:18PX;
+        color:white;
+        top:38%;
+        left:3%;
+      }
 
-        -webkit-clip-path: polygon(0 0, 41% 0, 53% 100%, 0% 100%);
-        clip-path: polygon(0 0, 41% 0, 53% 100%, 0% 100%);        
-        height:3rem;
-        padding-bottom:4.2rem;
+
+      .mySlide .slidex  #captionx
+        {
+          -webkit-clip-path: polygon(0 3%, 52% 3%, 68% 100%, 0% 100%);
+          clip-path: polygon(0 3%, 52% 3%, 68% 100%, 0% 100%);
+          height:3rem;
+          padding-bottom:3rem;
            }
 
       .mySlide .slidex  #caption img{
-        left:3rem;
+        left:3.5rem;
        }
+
        .mySlide .slidex  #captionx p{
-       left:15px;
+       left:13px;
        margin-top:5px;
       }
 
