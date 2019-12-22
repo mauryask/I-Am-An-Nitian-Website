@@ -7,20 +7,6 @@ session_start();
 <html lang="en" oncontextmenu="return false">
 <head>
 
-
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v4.0&appId=473134703234415&autoLogAppEvents=1"></script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148115548-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-148115548-1');
-</script>
-
 <title>I Am An Nitian | Home</title>
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <meta name="viewport" content= "width=device-width, user-scalable=no">
@@ -30,6 +16,7 @@ session_start();
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
 crossorigin="anonymous">
+
 <link rel="icon" href="images/imnitian.png">
 <link href="css/ask.css" rel="stylesheet"  type="text/css">
 <link href="css/explore.css" rel="stylesheet" type="text/css">
@@ -49,6 +36,7 @@ crossorigin="anonymous">
 </head>
 
 <body onload="loadme()">
+    
   <button id="back-to-top" ><i class="fas fa-angle-double-up"></i></button>
 <div id="loader">    
 </div>
@@ -75,7 +63,7 @@ style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
 <li><a href="more-news.php" class="homex" >News</a></li>
 <li ><a href="#updf" class="homex" id="update_nav">Updates</a></li>
 
-<li><a href="#about" class="homex" id="about_nav">About Us</a></li>
+<li><a href="#about" class="homex" id="about_nav">Mission</a></li>
 
 <li><a class="homex" id="user">
 <?php
@@ -144,6 +132,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div> 
 </div>
 </div>
+<div></div>
 
 <!--= Explore Section =-->
 <div class="explore" >
@@ -357,29 +346,42 @@ function startIt()
   interval = setInterval(startTicker, 3000);
 }
   </script>
-
+  
+  
 <a id="about"></a>
     <div style="width:100%;height:5%;margin-top:4%;" ></div>
-    <p class="about-head">About Us</p>
-    <div class="about-ln"></div> 
+    
     <div class="about">
-     <div class="about-img" id="about-img" data-aos="fade-right" data-aos-once='true' data-aos-offset="200"  data-aos-easing="ease-in-sine" data-aos-duration="600">
-         <img src="images\us3.png" height="300px" width="100%">
-     </div>
     <div class="about-text" data-aos="fade-left" data-aos-offset="200" data-aos-once='true'  data-aos-easing="ease-in-sine" data-aos-duration="600"> 
-    <p style="text-align:justify;" >
+    <div class="mission">
+      <img src="images/start-up.svg">
+      <p>Mission</p>
+    </div>
+    <p>
     NITs (National Institute Of Technologies) are 
     the most prestigious Engineering Institutions 
     of India after IITs. There are 31 NITs across the various parts of India. 
    I AM AN NITIAN is a facebook page which was created in
-    July 2016 to connect with the Nitians. Now it is not 
-    limited to only a Facebook page 
-    but has become the biggest student community and a huge source of news and updates related to Engineering.
-    Here you can get regular updates of all the NITs.
+    July 2016 to connect with the Nitians. 
+    </p>
+    </div>
+
+    <div class="about-text" data-aos="fade-left" data-aos-offset="200" data-aos-once='true'  data-aos-easing="ease-in-sine" data-aos-duration="600"> 
+    <div class="vision">
+      <img src="images/light-bulb.svg">
+    <p>Vision</p>
+  </div>
+    <p>
+    NITs (National Institute Of Technologies) are 
+    the most prestigious Engineering Institutions 
+    of India after IITs. There are 31 NITs across the various parts of India. 
+   I AM AN NITIAN is a facebook page which was created in
+    July 2016 to connect with the Nitians. 
     </p>
     </div>
     </div>
-
+    
+    
 
 <!--= News Section =-->
 <div class="explore exp" style="margin-top:0;">
@@ -434,13 +436,14 @@ function startIt()
                <div class="more_btn" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'> <button type="button" onclick="location.href='more-news.php'">
                More News &nbsp;<i class="fas fa-chevron-circle-right"></i></button></div>
     </div>
+    
 <!--= Side Feedback Button =-->
 <div id="mySidenav" class="sidenav">
 <a  id="feedback" style=" padding:15px 28px 0 25px;" onclick="fun1()"><span>FEEDBACK</span></a>
 </div>
 
 <!--= Signup Popup =-->
-<div class="signup" id="sign">  
+<div class="signup" id="sign">
 <div class="sign-card">
  <div class="sign-img">
   <div class="links">
@@ -461,7 +464,7 @@ function updf()
 }
  </script>
 
-    <p class="p2"><a target="_blank" href="https://www.freeprivacypolicy.com/privacy/view/b169e80c9ca0308e3025c2bad81475b9">privacy policy</a></p>
+   
   </div>
  </div>
  <div class="sign-form">
@@ -508,7 +511,9 @@ function updf()
 <option> NIT Surathkal </option>
 <option> Other </option>
       </select>
-      <select name="state" id="state"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+      <select name="state" id="state"
+      onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'"
+      onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
           <option>Select Your State</option>
           <option> Uttar Pradesh </option>
 <option> Bihar </option>
@@ -658,22 +663,32 @@ function updf()
     </div>
     </div>
 
-    <footer>
+   
+   <footer>
 
   <div class="datad">
   <p class="x">Feel Free To Contact Us</p>
-  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-6202590504 &nbsp | &nbsp  +91-8130512823</p>
+  <p id="cont">rajeshkmr201@gmail.com &nbsp &nbsp| &nbsp +91-6202590504 &nbsp | &nbsp  +91-8130512823</p>
+    <p id="cont" style="line-height:30px;">
+     <a  href ="Aboutus.html"  >About us</a>&nbsp &nbsp| &nbsp
+     <a  href ="Privacypolicy.html">Privacy policy </a> &nbsp | &nbsp
+     <a  href ="Contactus.html">Contact us </a> &nbsp | &nbsp
+     <a  href ="Term&Condition.html" >Terms & Conditions</a>
+</p>
+
  <span id="respo_contact">
- <P>iamannitian@gmail.com</p> 
+ <P>rajeshkmr201@gmail.com</p> 
  <P>+91-6202590504</p> 
  <P>+91-8130512823</p> 
    </span>
 </div>
 <div class="container">
+<p id="and_copy" class="copyright hov" onclick="location.href='Aboutus.html'">About us</p>
+<p id="and_copy" class="copyright hov" onclick="location.href='Privacypolicy.html'">privacy policy</p>
+<p id="and_copy" class="copyright hov" onclick="location.href='Term&Condition.html'">Terms & Conditions</p>
+
 <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
-2019 &nbsp| &nbsp I AM AN NITIAN <span id="developerx">&nbsp | &nbspAll Rights Reserved &nbsp | &nbsp</span><span id="developerx" class="hov" 
-onclick="location.href='https://www.freeprivacypolicy.com/privacy/view/b169e80c9ca0308e3025c2bad81475b9'">Privacy Policy</span></p>
-<p id="and_copy" class="copyright hov" onclick="location.href='https://www.freeprivacypolicy.com/privacy/view/b169e80c9ca0308e3025c2bad81475b9'">privacy policy</p>
+2019 &nbsp| &nbsp I AM AN NITIAN <span id="developerx">&nbsp | &nbspAll Rights Reserved</span></p>
 
 <p class="copyright" id="developer">Developed by | Shubham Maurya | NIT SXR
 <span id="github">| <a  id="hover" href="https://github.com/pnstech" target="_blank" >Github</a></span>
@@ -682,6 +697,8 @@ onclick="location.href='https://www.freeprivacypolicy.com/privacy/view/b169e80c9
 
 </div>
 </footer>
+   
+   
 </div>
 </body>
 </html>
@@ -697,6 +714,7 @@ onclick="location.href='https://www.freeprivacypolicy.com/privacy/view/b169e80c9
 <script   type="text/javascript" src="js/ajax-register.js"></script>
 <script   type="text/javascript" src="js/ajax-login.js"></script>
 <script   type="text/javascript" src="js/main.js"></script>
+
 <script>
   AOS.init({ disable: 'mobile' }); 
 </script>
@@ -823,7 +841,6 @@ function funfeed()
 setTimeout(function(){
 fun2();
 },2000);  //hide feedback box after 2 seconds
-
 
 Swal.fire({
 				  position: 'center',

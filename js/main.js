@@ -42,8 +42,7 @@ if( check == false)
   
   });
 }
-
-       
+      
         /*==============  Back To Top Button   =============*/
 
         const backToTop = document.querySelector('#back-to-top');

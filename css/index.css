@@ -205,19 +205,45 @@
 	.about .about-text{
 		font-weight: normal;
 		height: auto;
-		flex: 45%;
 		align-self:center;
 		padding:0.7rem 1rem 0 0;
 		color:#050505;
-		text-align:justify;
-		font-size: 16px;
+		font-size: 15px;
+       text-align: justify;
 		}
-	
+
+
+			
 	.about div p
 	{ 
-		line-height:30px;
+		padding:1rem 3rem 0 3rem;
 		word-spacing:0.5px;
+		line-height:25px;
 		font-family:sans-serif;
+	}
+
+	.about-text .mission , .about-text .vision 
+	{
+		display: flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items: center;
+	}
+
+	.about-text .mission p, .about-text .vision p
+	{
+		padding:8px 0 5px 0;
+		font-weight:bold;
+		font-size:20px;
+		text-transform:uppercase;
+	}
+
+	.about-text .mission img, .about-text .vision img
+	{
+		width:90px;
+		height:90px;
+		cursor:pointer;
+		align-self: ;
 	}
 	
 	.about-ln{
@@ -230,15 +256,7 @@
 		display:none;
 	}
 
-	.about-head
-	{
-		text-align: center;
-		font-weight: bold;
-		text-transform: uppercase;
-		color:rgba(120,120,120,1);
-		display:none;
-		font-size:26px;
-	}
+
 	
 footer{
 	margin-top:3%;
@@ -414,9 +432,9 @@ color:gray;
 
 .about{
 	flex-direction:column;
-	margin-bottom:8rem;
+	margin-bottom:36rem;
 	margin-top:2rem;
-	width:82%;
+	width:100%;
 }
 
 
@@ -424,6 +442,11 @@ color:gray;
 margin:0;
 padding:0;
 }
+
+.about .about-text:nth-child(1){
+	margin-bottom: 1rem;
+	}
+	
 
 .about .about-text p{
 	line-height:30px;
@@ -434,13 +457,7 @@ padding:0;
 	background:rgba(37, 116, 169, 1);
 }
 
-.about-head
-	{
-		display:block;
-		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-		color:rgba(37, 116, 169, 1);
-		margin-top:1rem;
-	}
+
 
 	#ns-art{
 		display: none;
