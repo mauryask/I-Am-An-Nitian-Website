@@ -423,7 +423,7 @@ function startIt()
               ?>
            <?php
                   }
-                  $_SESSION['x']=$ids;
+//$_SESSION['x']=$ids;
                   if ($i % 4 != 0) echo "</div>";
                  }
                else 
@@ -597,32 +597,6 @@ function updf()
     </form>
   </div>
    </div>
-
-
-
-
-<div class="counter" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>
-<div class="counter-1">
-<div class="counter_img"><img src="images/boy.svg"></div><div class="counter_title"><span>Users</span></div>
-<div class="countx"><span class='numscroller' data-min='1' data-max='1000' data-delay='6' data-increment='10'>10</span><span>+</span></div>
-</div>
-
-<div class="counter-2">
-<div class="counter_img"><img src="images/fbs.svg"></div><div class="counter_title"><span>Followers</span></div>
-<div class="countx"><span class='numscroller' data-min='1' data-max='43000' data-delay='6' data-increment='300'>10</span><span>+</span></div>
-</div>
-
-<div class="counter-3">
-<div class="counter_img"><img src="images/ins.svg"></div><div class="counter_title"><span>Followers</span></div>
-<div class="countx"><span class='numscroller' data-min='1' data-max='7000' data-delay='6' data-increment='50'>10</span><span>+</span></div>
-</div>
-
-</div>
-
-
-
-
-
 
 
 

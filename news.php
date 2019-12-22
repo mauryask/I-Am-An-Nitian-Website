@@ -1,7 +1,7 @@
 <?php
 include_once('connection.php');
-session_start();  
-$id = $_GET['id'];
+session_start();
+$id = mysqli_real_escape_string($conn,$_GET['id']);
 $sample_rate=1;
 $query="select * from tbl_images where  id='".$id."' ";
 $result = mysqli_query($conn, $query);
@@ -20,12 +20,12 @@ $row=mysqli_fetch_array($result);
       xmlns:fb="http://ogp.me/ns/fb#">
 <head>
     
- <meta property="og:url"            content="<?php  echo 'http://www.iamannitian.co.in'.$_SERVER['REQUEST_URI']; ?>" />
+ <meta property="og:url"            content="<?php  echo 'https://www.iamannitian.co.in'.$_SERVER['REQUEST_URI']; ?>" />
 <meta property="og:type"          content="website" />
 <meta property="og:title"         content="<?php echo $row['heading']; ?>" />
 <meta property="fb:app_id" content="2358880627700744"/>
 <meta property="og:description"   content="" />
-<meta property="og:image"         content="<?php  echo 'http://www.iamannitian.co.in/'.$row['file_path']; ?>" />
+<meta property="og:image"         content="<?php  echo 'https://www.iamannitian.co.in/'.$row['file_path']; ?>" />
 
 
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
@@ -46,11 +46,13 @@ crossorigin="anonymous">
 <title>I Am An Nitian | News</title>
 <link rel="icon" href="images\imnitian.png">
 
+
 </head>
 
 <body onload="loadme()">
     
-
+    
+ 
 <body onload="loadme()">
   <button id="back-to-top" ><i class="fas fa-angle-double-up"></i></button>
 <div id="loader">
@@ -145,10 +147,11 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         text-align:center;border-radius:20px;height:30px;margin:1rem 0 1rem 0;"><?php  echo $row['inserted_at'] ?></p>
            <div class="horizon"></div>
            <p>
-             <span><?php  echo $row['heading'];  ?></span><br></p>
-           <p style="margin-top:1rem;
-           font-family:sans-serif; font-size:17px; 
+             <span ><?php  echo $row['heading'];  ?></span><br></p>
+           <p style=" margin-top:1rem;
+            v font-size:17px;
             color:rgba(0,0,0,0.8);">
+
            
          <?php 
          if($row['file_path_1'] == trim("pics/"))
@@ -163,9 +166,9 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
           $news = explode(" ",$row['text']);
 ?>
 
-<p style=" margin-top:1rem;
-           font-family:sans-serif; font-size:17px; 
-           color:rgba(0,0,0,0.8);">
+<p style="margin-top:1rem;
+           font-family: sans-serif; font-size:17px;
+          color:rgba(0,0,0,0.8);">
            <?php
 
          for($x = 0; $x<=50;$x++)
@@ -181,12 +184,12 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         ?>        
         </div>
 
-           <p style=" margin-top:1rem;
-           font-family:sans-serif; font-size:17px; 
+           <p style="margin-top:1rem;
+           font-family: sans-serif; font-size:17px;
            color:rgba(0,0,0,0.8);">
         
         <?php
-        for($y=51;$y<str_word_count($row['text']);$y++)
+        for($y=51;$y < str_word_count($row['text']); $y++)
         {
           echo $news[$y]." ";
         }
@@ -196,11 +199,13 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
         <?php } ?> 
 
 
-<div style="margin-top:1rem;" class="fb-share-button" data-href="<?php  echo 'http://www.iamannitian.co.in'.$_SERVER['REQUEST_URI']; ?>" data-layout="button_count" data-size="large">
+<div  style="margin-top:1rem;" class="fb-share-button" data-href="<?php  echo 'http://www.iamannitian.co.in'.$_SERVER['REQUEST_URI']; ?>" data-layout="button_count" data-size="large">
     <a target="_blank" 
 href="https://www.facebook.com/sharer/sharer.php?u=<?php  echo 'http://www.iamannitian.co.in'.$_SERVER['REQUEST_URI']; ?>&amp;src=sdkpreparse" 
 class="fb-xfbml-parse-ignore">Share</a></div>
-         
+        
+   
+      
             <div class="horizon horizonx"></div>
          <p class="ldc">
          <i class="far fa-thumbs-up like-btn" style="cursor:pointer;"  id="<?php echo $row['id'];  ?>"></i> <span id="x" class="x">0</span>
@@ -223,15 +228,15 @@ class="fb-xfbml-parse-ignore">Share</a></div>
 <div class="ad-body">
 <p class="latest">Latest News<p>
 <?php 
-            $query = "select * from tbl_images where id!='$id'  order by id asc limit 7 ";
+            $query = "select * from tbl_images where id!='$id'  order by id desc limit 7 ";
              $rslty = mysqli_query ($conn, $query);
                 if (mysqli_num_rows($rslty)>0) 
                 {
                     while ($row = mysqli_fetch_assoc($rslty))
                      {
                       $id = $row["id"];
-                      $head = implode(' ',array_slice(explode(' ', $row['heading']),0,11)); 
-                     // $text = implode(' ',array_slice(explode(' ', $row['text']),0,10)); 
+                      $head = implode(' ',array_slice(explode(' ', $row['heading']),0,15)); 
+                      //$text = implode(' ',array_slice(explode(' ', $row['text']),0,10)); 
                      echo   '<div class="flash">
                      <a href="news.php?id='.$id.'">
                       <div class="nimg"><img alt="news" src="'.$row['file_path'].'"/></div>';
@@ -245,9 +250,9 @@ class="fb-xfbml-parse-ignore">Share</a></div>
                  echo '<p style="text-align:center;">No result found</p>';
                }
               ?>      
-                     <div class="nad">
+                    <div class="nad">
                    <a href="more-news.php">More News &nbsp;<i class="fas fa-chevron-circle-right"></i></a>
-                      </div>  
+                      </div> 
     </div>
 
 <!--= Signup Popup =-->
@@ -272,7 +277,7 @@ function updf()
 }
  </script>
 
-    <p class="p2"><a href="uPDxgdf.php">privacy policy</a></p>
+    <p class="p2"><a target="_blank" href="https://www.freeprivacypolicy.com/privacy/view/b169e80c9ca0308e3025c2bad81475b9">privacy policy</a></p>
   </div>
  </div>
  <div class="sign-form">
@@ -376,6 +381,7 @@ function updf()
   <form  method="post" autocomplete="off">
   <input  id="email" type="text" autocomplete="off" placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
   <input autocomplete="off"  id="pass" type="password" placeholder="Password"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+<div class="forget_div"><a href="forgot_password.php" class="forget">forgot password?</a></div>
 <div class="select" id="select">
   <input type="radio" name="user" id="usert" value="1" checked>&nbsp <label class="lab1">User</label>
   <input type="radio" name="user" id="admin" value="2">&nbsp <label>Admin</label>
@@ -392,19 +398,19 @@ function updf()
 <p class="latest">Latest News<p>
   <div class="latest-line"></div>
 <?php 
-            $query = "select * from tbl_images where id!='$id'  order by id asc limit 7 ";
-             $rsltz = mysqli_query ($conn, $query);
+            $queryx = "select * from tbl_images where id!='".$_GET['id']."'  order by id desc limit 7 ";
+             $rsltz = mysqli_query ($conn, $queryx);
                 if (mysqli_num_rows($rsltz)>0) 
                 {
                     while ($row = mysqli_fetch_assoc($rsltz))
                      {
                       $id = $row["id"];
                       $head = implode(' ',array_slice(explode(' ', $row['heading']),0,15)); //getting fires 5 words from heading
-                      //$text = implode(' ',array_slice(explode(' ', $row['text']),0,12)); //getting fires 19 words from text
+                     // $text = implode(' ',array_slice(explode(' ', $row['text']),0,12)); //getting fires 19 words from text
                       echo   '<div class="flash">
                       <a href="news.php?id='.$id.'">
                        <div class="nimg"><img alt="news" src="'.$row['file_path'].'"/></div>';
-                      echo    '<div class="ncontent">'."<p>".'<span class="heading">'.$head.'</span></p></div></a>';
+                      echo    '<div class="ncontent">'."<p>".'<span class="heading" style="font-weight:bold;">'.$head.'</span></p></div></a>';
                       echo '</div>'; 
                      }
                 }
@@ -413,8 +419,8 @@ function updf()
                  echo 'No result found';
                }
               ?>
-
-                  <div class="nad">
+              
+              <div class="nad">
                    <a href="more-news.php">More News &nbsp;<i class="fas fa-chevron-circle-right"></i></a>
                       </div>
             
@@ -422,11 +428,11 @@ function updf()
     <footer>
    <div class="datad">
   <p class="x">Feel Free To Contact Us</p>
-  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-6202590504 &nbsp | &nbsp  +91-9055667606</p>
+  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-6202590504 &nbsp | &nbsp  +91-8130512823</p>
  <span id="respo_contact">
  <P>iamannitian@gmail.com</p> 
  <P>+91-6202590504</p> 
- <P>+91-9055667606</p> 
+ <P>+91-8130512823</p> 
    </span>
 </div>
  <div class="container">
@@ -434,8 +440,8 @@ function updf()
 2019 &nbsp| &nbsp I AM AN NITIAN <span id="developerx">&nbsp | &nbspAll Rights Reserved</span></p>
 <p id="and_copy" class="copyright">All rights reserved</p>
 <p class="copyright" id="developer">Developed BY | Shubham Maurya | NIT SXR
- <span id="github">| <a  id="hover" href="https://github.com/pnstech" target="_blank" >Github</a></span>
- <span id="github">| <a  href="https://www.linkedin.com/in/cyberthreatatnit" target="_blank" >Linkedin</a></span>
+ <span id="github">| <a href="https://github.com/pnstech" target="_blank" >Github</a></span>
+ <span id="github">| <a href="https://www.linkedin.com/in/cyberthreatatnit" target="_blank" >Linkedin</a></span>
  </p>
 </div>
 </footer>

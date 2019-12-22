@@ -173,7 +173,7 @@ function id1(got_id)
           
            <?php
                   }
-                  $_SESSION['x']=$ids;
+                  //$_SESSION['x']=$ids;
                   if ($i % 4 != 0) echo "</div>";
                  }
                else 

@@ -3,7 +3,7 @@ $charset = "UTF8";
 $servername = "localhost";
 $username = "root";
 $password = ""; //testing mode 
-$dbname = "imn";
+$dbname = "imnx";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error)
