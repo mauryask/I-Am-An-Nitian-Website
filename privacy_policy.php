@@ -8,7 +8,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="en" oncontextmenu="return false">   
 <head>
-<title>I Am An Nitian | About Us</title>
+<title>I Am An Nitian | Privacy Policy</title>
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
 <meta charset="utf-8">
 <meta name="theme-color" content="#000">
@@ -352,7 +352,7 @@ function updf()
      <a  href ="Aboutus.php"  >About us</a>&nbsp &nbsp| &nbsp
      <a  href ="privacy_policy.php">Privacy policy </a> &nbsp | &nbsp
     <!-- <a  href ="Contactus.html">Contact us </a> &nbsp | &nbsp-->
-     <a  href ="Term&Condition.html" >Terms & Conditions</a>
+     <a  href ="terms_conditions.php" >Terms & Conditions</a>
 </p>
 
  <span id="respo_contact">

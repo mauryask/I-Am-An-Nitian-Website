@@ -18,20 +18,24 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 crossorigin="anonymous">
 <link rel="icon" href="images/imnitian.png">
 <link href="css/navbar.css" rel="stylesheet"  type="text/css">
-<link href="css/back-to-top.css" type="text/css" rel="stylesheet">
 <link href="css/footer.css" type="text/css" rel="stylesheet">
 <link href="css/Aboutus.css" type="text/css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 <link href="css/login_register.css" rel="stylesheet"  type="text/css">
+<link href="css/back-to-top.css" type="text/css" rel="stylesheet">
 </head>
 
 <body onload="loadme()">
+    
     <button id="back-to-top" ><i class="fas fa-angle-double-up"></i></button>
+    
   <div id="loader">
   </div>
+  
    <div class="progress-container">
       <div class="progress-bar" id="myBar"></div>
     </div> 
+    
   <div class="wrapper" >
   <header id="f" style="background:black;">
   <div class="logo">
@@ -108,7 +112,7 @@ This line is not just a combination of some words but resembles the feeling of p
 in each one of us that we convey to this world that I AM AN NITian!
 Keeping this same feeling of pride and oneness, a page with same name and zeal 
 was founded about 2 years ago with an objective to bring all the NITians together and 
-provide them a platform on social media where<b>active exchange of ideas/news/information could take place.</b>
+provide them a platform on social media where <b>active exchange of ideas/news/information could take place.</b>
 Founded by an NITian himself at NIT Silchar, this page became one of the fastest growing and liked page on Facebook, 
 having active admins from almost all NITs across India.We know many of you support this initiative on social media, but we
 would like to extend our invitation to each one of you to be a
@@ -154,7 +158,7 @@ function updf()
 }
  </script>
 
-    <p class="p2"><a href="privacy_policy.php">privacy policy</a></p>
+   <p class="p2"><a href="privacy_policy.php">privacy policy</a></p>
   </div>
  </div>
  <div class="sign-form">
@@ -280,9 +284,9 @@ function updf()
   <p id="cont">rajeshkmr201@gmail.com &nbsp &nbsp| &nbsp +91-6202590504 &nbsp | &nbsp  +91-8130512823</p>
     <p id="cont" style="line-height:30px;">
      <a  href ="Aboutus.php"  >About us</a>&nbsp &nbsp| &nbsp
-     <a  href ="Privacypolicy.html">Privacy policy </a> &nbsp | &nbsp
+     <a  href ="privacy_policy.php">Privacy policy </a> &nbsp | &nbsp
     <!-- <a  href ="Contactus.html">Contact us </a> &nbsp | &nbsp-->
-     <a  href ="Term&Condition.html" >Terms & Conditions</a>
+     <a  href ="terms_conditions.php" >Terms & Conditions</a>
 </p>
 
  <span id="respo_contact">

@@ -370,6 +370,7 @@ function startIt()
   
 <!--<script data-ad-client="ca-pub-1063951553266308" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
 
+<a id="about"></a>
     <div style="width:100%;height:5%;margin-top:4%;" ></div>
     
     <div class="about">
@@ -446,7 +447,7 @@ function startIt()
               ?>
            <?php
                   }
-                 // $_SESSION['x']=$ids;
+                  $_SESSION['x']=$ids;
                   if ($i % 4 != 0) echo "</div>";
                  }
                else 
@@ -487,7 +488,7 @@ function updf()
 }
  </script>
 
-   
+   <p class="p2"><a href="privacy_policy.php">privacy policy</a></p>
   </div>
  </div>
  <div class="sign-form">
@@ -671,9 +672,9 @@ function updf()
   <p id="cont">rajeshkmr201@gmail.com &nbsp &nbsp| &nbsp +91-6202590504 &nbsp | &nbsp  +91-8130512823</p>
     <p id="cont" style="line-height:30px;">
      <a  href ="Aboutus.php"  >About us</a>&nbsp &nbsp| &nbsp
-     <a  href ="Privacypolicy.html">Privacy policy </a> &nbsp | &nbsp
+     <a  href ="privacy_policy.php">Privacy policy </a> &nbsp | &nbsp
     <!-- <a  href ="Contactus.html">Contact us </a> &nbsp | &nbsp-->
-     <a  href ="Term&Condition.html" >Terms & Conditions</a>
+     <a  href ="terms_conditions.php" >Terms & Conditions</a>
 </p>
 
  <span id="respo_contact">
