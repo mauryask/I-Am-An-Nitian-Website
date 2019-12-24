@@ -1,0 +1,61 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    outline:none;
+    box-sizing: border-box;
+    }
+  
+    .progress-container{
+      top:0;
+      position:fixed;     
+  }
+  
+    body{
+      background: rgb(240,240,240,1);
+  }
+  
+  #loader{
+    top:0;
+    width:100%;
+    height:100vh;
+    background:rgb(252,252,252) 
+    url('loaderx.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:4rem;
+    position: fixed;
+    z-index:555;
+  } 
+  
+  .wrapper{
+    width:75%;
+    margin:0 auto;
+    margin-top:9rem;
+  }
+
+  pre{
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .about_us{
+      line-height:32px;
+      font-size:16px;
+  }
+
+ a{
+      text-decoration: none;
+  }
+
+ a img{
+      width:38px;
+      height:38px;
+      border-radius: 20px;;
+  }
+
+  

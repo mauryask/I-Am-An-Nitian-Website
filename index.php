@@ -6,6 +6,18 @@ session_start();
 <!DOCTYPE html>
 <html lang="en" oncontextmenu="return false">
 <head>
+    
+ <script data-ad-client="ca-pub-1063951553266308" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+ 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-148115548-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-148115548-1');
+</script>
 
 <title>I Am An Nitian | Home</title>
 <meta name="viewport"  content="width=device-width, initial-scale=1.0">
@@ -16,6 +28,8 @@ session_start();
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
 integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
 crossorigin="anonymous">
+
+
 
 <link rel="icon" href="images/imnitian.png">
 <link href="css/ask.css" rel="stylesheet"  type="text/css">
@@ -63,7 +77,7 @@ style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
 <li><a href="more-news.php" class="homex" >News</a></li>
 <li ><a href="#updf" class="homex" id="update_nav">Updates</a></li>
 
-<li><a href="#about" class="homex" id="about_nav">Mission</a></li>
+<li><a href="Aboutus.php" class="homex" id="about_nav">About Us</a></li>
 
 <li><a class="homex" id="user">
 <?php
@@ -133,6 +147,10 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 </div>
 <div></div>
+
+<!-- Ads By Google -->
+
+<script data-ad-client="ca-pub-1063951553266308" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 <!--= Explore Section =-->
 <div class="explore" >
@@ -348,7 +366,10 @@ function startIt()
   </script>
   
   
-<a id="about"></a>
+  <!-- Ads By Google -->
+  
+<!--<script data-ad-client="ca-pub-1063951553266308" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+
     <div style="width:100%;height:5%;margin-top:4%;" ></div>
     
     <div class="about">
@@ -381,6 +402,9 @@ function startIt()
     </div>
     
     
+    <!-- Ads By Google -->
+    
+
 
 <!--= News Section =-->
 <div class="explore exp" style="margin-top:0;">
@@ -422,7 +446,7 @@ function startIt()
               ?>
            <?php
                   }
-//$_SESSION['x']=$ids;
+                 // $_SESSION['x']=$ids;
                   if ($i % 4 != 0) echo "</div>";
                  }
                else 
@@ -599,6 +623,9 @@ function updf()
 
 
 
+
+
+
   <!--= Nits Logo =-->
    <div class="nit-logos" data-aos="fade-up" data-aos-duration="600" data-aos-once='true'>
     <div class="owl-carousel owl-theme">
@@ -643,9 +670,9 @@ function updf()
   <p class="x">Feel Free To Contact Us</p>
   <p id="cont">rajeshkmr201@gmail.com &nbsp &nbsp| &nbsp +91-6202590504 &nbsp | &nbsp  +91-8130512823</p>
     <p id="cont" style="line-height:30px;">
-     <a  href ="Aboutus.html"  >About us</a>&nbsp &nbsp| &nbsp
+     <a  href ="Aboutus.php"  >About us</a>&nbsp &nbsp| &nbsp
      <a  href ="Privacypolicy.html">Privacy policy </a> &nbsp | &nbsp
-     <a  href ="Contactus.html">Contact us </a> &nbsp | &nbsp
+    <!-- <a  href ="Contactus.html">Contact us </a> &nbsp | &nbsp-->
      <a  href ="Term&Condition.html" >Terms & Conditions</a>
 </p>
 
@@ -656,9 +683,9 @@ function updf()
    </span>
 </div>
 <div class="container">
-<p id="and_copy" class="copyright hov" onclick="location.href='Aboutus.html'">About us</p>
-<p id="and_copy" class="copyright hov" onclick="location.href='Privacypolicy.html'">privacy policy</p>
-<p id="and_copy" class="copyright hov" onclick="location.href='Term&Condition.html'">Terms & Conditions</p>
+<!--<p id="and_copy" class="copyright hov" onclick="location.href='Aboutus.html'">About us</p>-->
+<!--<p id="and_copy" class="copyright hov" onclick="location.href='Privacypolicy.html'">privacy policy</p>-->
+<!--<p id="and_copy" class="copyright hov" onclick="location.href='Term&Condition.html'">Terms & Conditions</p>-->
 
 <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
 2019 &nbsp| &nbsp I AM AN NITIAN <span id="developerx">&nbsp | &nbspAll Rights Reserved</span></p>
