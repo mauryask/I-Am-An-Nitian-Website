@@ -209,8 +209,7 @@
 		padding:0.7rem 1rem 0 0;
 		color:#050505;
 		font-size: 15px;
-       text-align: justify;
-		}
+	}
 
 
 			
@@ -453,7 +452,7 @@ padding:0;
 .about-ln
 {
 	display:block; 
-	background:rgba(37, 116, 169, 1);
+	background:#282828;
 }
 
 

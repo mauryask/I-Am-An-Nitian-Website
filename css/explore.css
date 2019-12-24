@@ -15,14 +15,14 @@
   font-weight: bold;
   font-size:42px;
   text-transform:uppercase;
-  color:rgba(37, 116, 169, 1);
+  color:#282828;
   margin-top:2%;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family:sans-serif;
 }
 .expo-line{
 margin:0 auto;
 margin-top:5px;
-background:rgba(37, 116, 169, 1);
+background:#282828;;
 width:7rem; 
 height:4px;
 }
@@ -44,7 +44,7 @@ box-shadow:1px 1px 1px 1px rgba(70,70,70, 0.4);
 }
 
 #ns-art{
-font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-family:sans-serif;
 }
 
 .explore .expo div img{

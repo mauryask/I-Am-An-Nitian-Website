@@ -352,30 +352,29 @@ function startIt()
     <div style="width:100%;height:5%;margin-top:4%;" ></div>
     
     <div class="about">
-    <div class="about-text" data-aos="fade-left" data-aos-offset="200" data-aos-once='true'  data-aos-easing="ease-in-sine" data-aos-duration="600"> 
-    <div class="mission">
+    <div class="about-text" data-aos="fade-up" data-aos-offset="200" data-aos-once='true'  data-aos-easing="ease-in-sine" data-aos-duration="600"> 
+    <div class="mission" data-aos="fade-up" data-aos-offset="200" data-aos-once='true'  data-aos-easing="ease-in-sine" data-aos-duration="600">
       <img src="images/start-up.svg">
       <p>Mission</p>
     </div>
     <p>
-    NITs (National Institute Of Technologies) are 
-    the most prestigious Engineering Institutions 
-    of India after IITs. There are 31 NITs across the various parts of India. 
-   I AM AN NITIAN is a facebook page which was created in
-    July 2016 to connect with the Nitians. 
+    I Am An Nitian has become the biggest student community 
+    and a huge source of news and updates related to Engineering.
+    Our aim is to keep you updated of all the news and events 
+    of NITs and IITs. 
     </p>
     </div>
 
-    <div class="about-text" data-aos="fade-left" data-aos-offset="200" data-aos-once='true'  data-aos-easing="ease-in-sine" data-aos-duration="600"> 
-    <div class="vision">
+    <div class="about-text" data-aos="fade-up" data-aos-offset="200" data-aos-once='true'  data-aos-easing="ease-in-sine" data-aos-duration="600"> 
+    <div class="vision" data-aos="fade-up" data-aos-offset="200" data-aos-once='true'  data-aos-easing="ease-in-sine" data-aos-duration="600">
       <img src="images/light-bulb.svg">
     <p>Vision</p>
   </div>
     <p>
-    NITs (National Institute Of Technologies) are 
+    NITs are 
     the most prestigious Engineering Institutions 
-    of India after IITs. There are 31 NITs across the various parts of India. 
-   I AM AN NITIAN is a facebook page which was created in
+    after IITs. There are 31 NITs across the various parts of India. 
+   I Am An Nitian is a facebook page which was created in
     July 2016 to connect with the Nitians. 
     </p>
     </div>
