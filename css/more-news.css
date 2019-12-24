@@ -29,83 +29,39 @@
 } 
 
 .wrapper{
-  width:75%;
+  width:100%;
   margin:0 auto;
   margin-top:9rem;
-}
-
-.wrapper .flash{
-  display: flex;
-  flex-direction:row;
-  width:100%;
-  height:370px;
-  margin:0 auto;
-  margin-top:7rem;
-}
-
-.flash .flash_slide{
-width:50%;
-height:100%;
-padding:10px;
-overflow: hidden;
-}
-
-.flash .flash_slide:nth-child(1){
-  padding:10px 0 10px 10px;
-  }
-
-.flash_slide img{
-  width:100%;
-  height:100%;
-}
-
-
-.flash_slide .over{
-width:100%;
-height:100%;
-background:black;
-opacity:0.3;
-top:0;
-left:0;
-bottom:0;
-right:0;
-position:sticky;
-cursor:pointer;
- }
-
-  .flash_slide .cnt{
-   width:100%;
-   height:auto;
-    top:0;
-  left:0;
-  bottom:0;
-  right:0;
-   position:sticky;
-  color:white;
-   background:transparent;
-   padding:0 10px 5px 10px;
-   font-size:16px;
-   line-height: 21px;
-   cursor: pointer;
-font-weight: bold;
 
 }
-
- .flash_slide .cnt{
-padding:15px;
- }
-
 
   .wrapper .explore{
     margin: 0 auto;
-     width:95%;
-     margin-top:3rem
+     width:60%;
+
   }
+
+
+  .for_ad{
+display: flex;
+flex-direction: row;
+  }
+
+   /*================= Ad Side Bar =================*/
+
+   .nad{  
+    width:23%;
+    height:auto;
+    margin-right:1.5rem;
+    background:red;
+}
+
+
   
   .explore .expo{
       display:flex;
       flex-direction:row;
-      justify-content: space-evenly;
+      justify-content:space-evenly;
   }
       
   .explore .expo .xnn a p{
@@ -201,24 +157,7 @@ padding:15px;
     margin-top:2rem;
   }
 
-  /*================= Ad Side Bar =================*/
-
-  .nad{  
-      width:23%;
-      top:8.5rem;
-      right:0;
-      position: absolute;
-      height:auto;
-      margin-right:1.5rem;
-  }
-
-  
-.nad .nad-img{
-    width:100%;
-    height:400px;
-    margin-bottom:10px;
-}
-
+ 
 @media (max-width:991px)
 {
 
@@ -229,13 +168,10 @@ padding:0;
 margin-top:4.2rem;
 }
 
-.wrapper .flash{
-display: none;
-}
 
-  .explore{
- width:100%;
- padding:1.2rem;
+ .wrapper .explore{
+ width:80%;
+padding-top: 1.2rem;
 } 
 
 .explore .expo{
@@ -274,8 +210,12 @@ height:100%;
   }
 
 
-  .nad{
-    display:none;
+  .for_ad{
+    flex-direction: column;
+    width: 100%;
+      }
+.nad{
+  display: none;
 }
 
 footer{

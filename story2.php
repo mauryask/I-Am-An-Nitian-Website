@@ -54,7 +54,7 @@ style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
 <li><a href="more-news.php" class="homex" >News</a></li>
 <li ><a href="index.php#updf" class="homex" id="update_nav">Updates</a></li>
 
-<li><a href="index.php#about" class="homex" id="about_nav">About Us</a></li>
+<li><a href="Aboutus.php" class="homex" id="about_nav">About Us</a></li>
 
 <li><a class="homex" id="user">
 <?php
@@ -353,7 +353,7 @@ function updf()
 }
  </script>
 
-    <p class="p2"><a href="uPDxgdf.php">privacy policy</a></p>
+    <p class="p2"><a href="privacy_policy.php">privacy policy</a></p>
   </div>
  </div>
  <div class="sign-form">
@@ -368,7 +368,7 @@ function updf()
    <select name="clg" id="clg"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
       <option>Select College</option>
       <option> NIT Srinagar </option>
-<option> NIT Uttrakhand </option>
+<option> NIT Uttarakhand </option>
 <option> NIT Manipur  </option>
 <option> NIT Mizoram  </option>
 <option> NIT Nagaland </option>
@@ -391,11 +391,11 @@ function updf()
 <option> NIT Delhi </option>
 <option> NIT Raipur </option>
 <option> NIT Calicut </option>
-<option> NIT Raurkela </option>
+<option> NIT Rourkela </option>
 <option> VNIT Nagpur </option>
 <option> NIT Trichy </option>
 <option> NIT Warangal </option>
-<option> MNNIT Prayagraj (Allahabad) </option>
+<option> MNNIT Allahabad</option>
 <option> SVNIT Surat </option>
 <option> NIT Surathkal </option>
 <option> Other </option>
@@ -404,22 +404,22 @@ function updf()
           <option>Select Your State</option>
           <option> Uttar Pradesh </option>
 <option> Bihar </option>
-<option> Rajsthan  </option>
+<option> Rajasthan  </option>
 <option> Madhya Pradesh  </option>
-<option> Maharastra </option>
+<option> Maharashtra </option>
 <option> Andhra Pradesh </option>
 <option> Arunachal Pradesh </option>
-<option> Aasam</option>
+<option> Assam</option>
 <option> Chhattisgarh </option>
 <option> Odisha </option>
 <option> Goa </option>
-<option> Gujrat </option>
+<option> Gujarat </option>
 <option> Haryana </option>
 <option> Himachal Pradesh </option>
-<option> Jammu & Kashmir </option>
+<option> Jammu and Kashmir </option>
 <option> Jharkhand </option>
-<option>  Karnatka </option>
-<option> Kerla </option>
+<option>  Karnataka </option>
+<option> Kerala </option>
 <option> Manipur </option>
 <option> Mizoram </option>
 <option> Tripura </option>
@@ -427,7 +427,7 @@ function updf()
 <option> Punjab </option>
 <option> Sikkim </option>
 <option> Tamilnadu </option>
-<option> Uttrakhand </option>
+<option> Uttarakhand </option>
 <option> West Bengal </option>
 <option> Telangana </option>
 <option> Andaman and Nicobar Islands </option>
@@ -457,6 +457,7 @@ function updf()
   <form  method="post" autocomplete="off">
   <input  id="email" type="text" autocomplete="off" placeholder="Email"  onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
   <input autocomplete="off"  id="pass" type="password" placeholder="Password"   onmousedown="this.style.paddingLeft='10px';this.style.transition='0.2s'" onmouseout="this.style.paddingLeft='2px';this.style.transition='0.2s'">
+<div class="forget_div"><a href="forgot_password.php" class="forget">forgot password?</a></div>
 <div class="select" id="select">
   <input type="radio" name="user" id="usert" value="1" checked>&nbsp <label class="lab1">User</label>
   <input type="radio" name="user" id="admin" value="2">&nbsp <label>Admin</label>
@@ -468,27 +469,40 @@ function updf()
 </div>
 </div>
 
-  <footer>
+<footer>
+
   <div class="datad">
   <p class="x">Feel Free To Contact Us</p>
-  <p id="cont">iamannitian@gmail.com &nbsp &nbsp| &nbsp +91-6202590504 &nbsp | &nbsp  +91-9055667606</p>
- 
-  <span id="respo_contact">
- <P>iamannitian@gmail.com</p> 
+  <p id="cont">rajeshkmr201@gmail.com &nbsp &nbsp| &nbsp +91-6202590504 &nbsp | &nbsp  +91-8130512823</p>
+    <p id="cont" style="line-height:30px;">
+     <a  href ="Aboutus.php"  >About us</a>&nbsp &nbsp| &nbsp
+     <a  href ="privacy_policy.php">Privacy policy </a> &nbsp | &nbsp
+    <!-- <a  href ="Contactus.html">Contact us </a> &nbsp | &nbsp-->
+     <a  href ="terms_conditions.php" >Terms & Conditions</a>
+</p>
+
+ <span id="respo_contact">
+ <P>rajeshkmr201@gmail.com</p> 
  <P>+91-6202590504</p> 
- <P>+91-9055667606</p> 
+ <P>+91-8130512823</p> 
    </span>
 </div>
- <div class="container">
- <p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
-2019 &nbsp| &nbsp I AM AN NITIAN <span id="developer">&nbsp | &nbspAll Rights Reserved</span></p>
-<p id="and_copy" class="copyright">All rights reserved</p>
+<div class="container">
+<!--<p id="and_copy" class="copyright hov" onclick="location.href='Aboutus.html'">About us</p>-->
+<!--<p id="and_copy" class="copyright hov" onclick="location.href='Privacypolicy.html'">privacy policy</p>-->
+<!--<p id="and_copy" class="copyright hov" onclick="location.href='Term&Condition.html'">Terms & Conditions</p>-->
 
-<p class="copyright" id="developer">Developer | Shubham Maurya | NIT Srinagar
- <span id="github">| <a href="https://github.com/pnstech" target="_blank" style="text-decoration:none;color:rgba(256,256,256,0.7);">Github</a></span></p>
+<p class="copyright">COPYRIGHT&nbsp<i class="far fa-copyright"></i>
+2019 &nbsp| &nbsp I AM AN NITIAN <span id="developerx">&nbsp | &nbspAll Rights Reserved</span></p>
+
+<p class="copyright" id="developer">Developed by | Shubham Maurya | NIT SXR
+<span id="github">| <a  id="hover" href="https://github.com/pnstech" target="_blank" >Github</a></span>
+ <span id="github">| <a  href="https://www.linkedin.com/in/cyberthreatatnit" target="_blank" >Linkedin</a></span>
+ </p>
 
 </div>
 </footer>
+
 </body>
 
 </html>
@@ -502,7 +516,7 @@ function updf()
 <script   type="text/javascript" src="js/main.js"></script>
 
 <script>
-  AOS.init({ disable: 'mobile' }); 
+  AOS.init(); 
 </script>
 
 

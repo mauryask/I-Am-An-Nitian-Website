@@ -34,7 +34,7 @@ crossorigin="anonymous">
  <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
   </div> 
-<div class="wrapper" >
+  <div class="wrapper">
 <header id="f" style="background:black;">
 <div class="logo">
 <ul>
@@ -101,36 +101,6 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 <img src="images/cutk.png" class="cut_nav" style="display:none;">
 </header>
 
-<div class="flash" style="display:none;">
-<?php  
-$sql = "select * from tbl_images order by id desc limit 2";
-$result = mysqli_query($conn, $sql);
-$i= 0;
-$arr_head = array();
-$arr_id = array();
-$arr_img = array();
-while($row  = mysqli_fetch_assoc($result))
-{
-  $arr_head[$i] = $row['heading'];
-  $arr_img[$i] =$row['file_path'];
-  $arr_id[$i]= $row['id'];
-  $i++;
-}
-?>
-
-<div class="flash_slide" id = "<?php echo $arr_id[1] ?>"  onclick= "id1(this.id)">
-<?php echo '<img   src="'.$arr_img[1].'" >' ?>;
-<div class="over"></div>
-<div class="cnt"><?php echo $arr_head[1]; ?></div>
-</div>
-
-<div class="flash_slide" id = "<?php echo $arr_id[0] ?>"  onclick= "id1(this.id)">
-<?php echo '<img   src="'.$arr_img[0].'" >' ?>;
-<div class="over"></div>
-<div class="cnt"><?php echo $arr_head[0]; ?></div>
-</div>
-
-</div>
 
 <script>
 function id1(got_id)
@@ -139,6 +109,7 @@ function id1(got_id)
   window.location= url;
 }
 </script>
+<div class="for_ad">
 <div class="explore">
  <?php 
             $query = "select * from tbl_images order by id desc";
@@ -165,7 +136,7 @@ function id1(got_id)
               echo '<p style="margin-top:2px;">'.'<span class="heading">'.$head.'</span></p>';
                   ?>   
                   </a>                                            
-                </div>   
+                </div>    
           
           <?php
                       if ($i % 3 == 0) echo "</div>";
@@ -185,12 +156,13 @@ function id1(got_id)
              ?>
                   
     </div>
-          
- <div class="nad" style="display:none;">
-  <img src="images/ad-book.gif"  class="nad-img">
-  </div>
 
   </div>
+
+  <div class="nad">
+ <!--Ads By Google-->
+  </div>
+    </div>
 </div>
 
 <!--= Signup Popup =-->
