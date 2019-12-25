@@ -430,7 +430,7 @@ color:gray;
 
 .about{
 	flex-direction:column;
-	margin-bottom:36rem;
+	margin-bottom:30rem;
 	margin-top:2rem;
 	width:100%;
 }
@@ -446,7 +446,7 @@ padding:0;
 	}
 	
 
-.about .about-text p{
+.about .about-text p{   
 	line-height:30px;
 }
 .about-ln
@@ -497,3 +497,4 @@ padding:0;
 	    position: relative;
 }
 }
+

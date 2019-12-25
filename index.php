@@ -368,11 +368,14 @@ function startIt()
   
   <!-- Ads By Google -->
   
-<!--<script data-ad-client="ca-pub-1063951553266308" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+<!--
+  <script data-ad-client="ca-pub-1063951553266308"
+  async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
+  </script>
+  -->
 
-<a id="about"></a>
     <div style="width:100%;height:5%;margin-top:4%;" ></div>
-    
+  
     <div class="about">
     <div class="about-text" data-aos="fade-up" data-aos-offset="200" data-aos-once='true'  data-aos-easing="ease-in-sine" data-aos-duration="600"> 
     <div class="mission" data-aos="fade-up" data-aos-offset="200" data-aos-once='true'  data-aos-easing="ease-in-sine" data-aos-duration="600">
@@ -447,7 +450,7 @@ function startIt()
               ?>
            <?php
                   }
-                  $_SESSION['x']=$ids;
+                 // $_SESSION['x']=$ids;
                   if ($i % 4 != 0) echo "</div>";
                  }
                else 
@@ -621,9 +624,6 @@ function updf()
     </form>
   </div>
    </div>
-
-
-
 
 
 
@@ -828,7 +828,7 @@ else
 
 }
 
-});
+});   
 
 }
 else
