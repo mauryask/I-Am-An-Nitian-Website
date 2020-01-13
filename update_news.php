@@ -182,11 +182,14 @@ if(mysqli_num_rows($result)>0)
 <div class="left-menu" class="popup" id="demo">
     <p><?php echo "Hello! ".$_SESSION['user_name'];  ?></p>
     <div>
-    <button id="add" type="button" >add news</button>
-    <button id="edit" type="button">edit news</button>
-    <button id="feedback" type="button">feedback</button>
-    <button id="statics" type="button">statics</button>
     <button id="home" type="button">Home</button>
+    <button id="add" type="button" >Add news</button>
+    <button id="edit" type="button">Edit news</button>
+    <button id="add_fb_posts" type="button">Add fb posts</button>
+    <button id="edit_fb_posts" type="button">Edit fb posts</button>
+    <button id="feedback" type="button">Feedback</button>
+    <button id="statics" type="button">Statics</button>
+
 </div>
 </div>
 
@@ -243,6 +246,23 @@ $("#statics").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0});
     setTimeout(function() {
         window.location.href="statics.php";
+    },500); 
+  })
+
+
+// edit fb posts button  
+$("#edit_fb_posts").click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0});
+    setTimeout(function() {
+        window.location.href="edit_fb_posts.php";
+    },500); 
+  })
+
+// add fb posts button  
+$("#add_fb_posts").click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0});
+    setTimeout(function() {
+        window.location.href="upload_posts.php";
     },500); 
   })
 

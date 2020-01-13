@@ -174,10 +174,13 @@ integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7
 <div class="left-menu" class="popup" id="demo">
 <p><?php echo "Hello! ".$_SESSION['user_name'];  ?></p>
     <div>
-    <button id="edit" type="button">edit news</button>
-    <button id="feedback" type="button">Feedback</button>
-    <button id="statics" type="button">statics</button>
     <button id="home" type="button">Home</button>
+    <button id="edit" type="button">Edit news</button>
+    <button id="add_fb_posts" type="button">Add fb posts</button>
+    <button id="edit_fb_posts" type="button">Edit fb posts</button>
+    <button id="statics" type="button">Statics</button>
+    <button id="feedback" type="button">Feedback</button>
+    
 </div>
 </div>
 
@@ -229,7 +232,23 @@ $(document).ready(function(){
         window.location.href="admin_feedback.php";
     },500); 
   })
+  
 
+    // edit fb posts button  
+$("#edit_fb_posts").click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0});
+    setTimeout(function() {
+        window.location.href="edit_fb_posts.php";
+    },500); 
+  })
+
+// add fb posts button  
+$("#add_fb_posts").click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0});
+    setTimeout(function() {
+        window.location.href="upload_posts.php";
+    },500); 
+  })
 
 //click to background 
 $("#demo").on('click',function(){

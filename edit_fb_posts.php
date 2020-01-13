@@ -127,6 +127,14 @@ $(document).ready(function(){
   })
 
 
+ //edit news button
+ $("#edit").click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0});
+    setTimeout(function() {
+        window.location.href="edit_news.php";
+    },500); 
+  })
+
 //static button
 $("#statics").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0});   

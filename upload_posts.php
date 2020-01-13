@@ -190,6 +190,13 @@ $(document).ready(function(){
     },500);  
   })
 
+// insert  news  button
+$('#add').click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0}); 
+     setTimeout(function() {
+         window.location.href="insert_news.php";
+     },500); 
+   })
 
  //edit news button
   $("#edit").click(function(){
