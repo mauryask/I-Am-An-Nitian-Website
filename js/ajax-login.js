@@ -1,3 +1,5 @@
+var redirect_to_cax = false; //creating a global variable
+
 $(document).ready(function(){
 
 	$('#login').click(function(){
@@ -24,9 +26,11 @@ $(document).ready(function(){
 			   setTimeout(function(){ 
 			   
 			   location.reload(true); //reloading the current page
-			  			   
+			   			   
 				 },1800);
-	
+
+				 redirect_to_cax = true;
+			  
 		   }
 		   else
 		   {

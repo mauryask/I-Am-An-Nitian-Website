@@ -705,7 +705,6 @@ function updf()
 </html>
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js" type="text/javascript"></script>
-<script src="js/num-scroll.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js" type="text/javascript"></script>
 <script src="js/owl.carousel.min.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
@@ -864,11 +863,11 @@ function check_for_login()
 		{
 		   if(response == 1)
 		   {	
-        window.location.href='cax_portal.php';
+        window.location.href='welcome_to_ca.php';
 		   }
 		   else
 		   {
-			   show_log();
+			  alertPopup();
 		   }
 
 		}
@@ -876,5 +875,22 @@ function check_for_login()
 	});
 	
 }
+
+
+function alertPopup()
+    {
+        Swal.fire({
+            title: '<strong>You Are Not Logged In</strong>',
+            type: 'info',
+            html:
+              'login first then click to ca portal',
+            showCloseButton:false,
+            showCancelButton: false,
+            focusConfirm: false,
+          }).then(function()
+          {
+              show_log();
+          })
+    }
 
 </script>

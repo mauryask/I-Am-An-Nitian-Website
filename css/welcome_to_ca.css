@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), 
+    url(man.jpg) 100% 100% no-repeat;
+    background-size:cover;
+  background-position: center center;
+}
+
+.main
+{
+   top:50%;
+   left:50%;
+   position: relative;
+   transform:translate(-50%,-50%);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.main p
+{
+    color:white;
+    font-size:52px;
+    font-weight:bold;
+    text-transform: capitalize;
+    word-wrap: break-word;
+    text-align: center;
+    font-family:serif;
+}
+
+.main button{
+    margin-top:3rem;
+ font-size:21px;
+    height:45px;
+    width:15rem;
+    cursor: pointer;
+    border:2px solid white;
+    border-radius:25px;
+    outline:none;
+    box-shadow: 0 1px 2ps rgba(250,0,0,0.7);
+    background: transparent;
+    color: white;
+}
+
+button:hover 
+{
+    color:black;
+    background:white;
+    transition: 0.2s;
+}
