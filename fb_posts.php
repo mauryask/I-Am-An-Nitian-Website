@@ -120,7 +120,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
 <div class="container">
-
+<!--
 <div class="card">
 
 <div class="img-container">
@@ -134,6 +134,52 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
   <span class="f">f</span> <span class="share">share</share>
 </button>
 </div>
+
+-->
+<?php
+
+$query = "select * from fb_posts limit 3";
+$result = mysqli_query($conn, $query);
+
+if(mysqli_num_rows($result)>0)
+{
+ while($row = mysqli_fetch_assoc($result))
+ {
+
+  $id = $row["id"];
+   $head = implode(' ',array_slice(explode(' ', $row['heading']),0,4));
+  ?>
+  
+  <div class="card">
+
+ <div class="img-container">
+   <?php
+ echo '<img src="'.$row['url'].'" >';
+ ?>
+</div>
+
+<div class="heading">
+<?php echo '<p>'.$head.' ....</p>';?>
+</div>
+<button type="button">
+  <span class="f">f</span> <span class="share">share</share>
+</button>
+</div>
+
+  <?php
+ }
+    
+}
+else
+{
+  echo '<p class="no_post_found">facebook posts will be updated soon<p>';
+}
+
+
+?>
+
+
+<!--
 
 <div class="card">
 <div class="img-container">
@@ -159,6 +205,8 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </button>
 
 </div>
+
+-->
 
 </div>
 
@@ -205,4 +253,45 @@ $('.menu-toggle').css('display','block');
 
 }
 })
+
+
+//facebook posts sharing
+
+            
+            function share(){
+                   window.fbAsyncInit = function() {
+                     FB.init({
+                       appId      : '2572988066315608',
+                       xfbml      : true,
+                       version    : 'v5.0'
+                     });
+                     FB.AppEvents.logPageView();
+                     
+                      FB.ui({
+                     method: 'share',
+                     href: 'https://iamannitian.co.in/news.php?id=46'
+                     }, function(response){
+                        if (response && !response.error_message)
+                        {
+                                   alert('Posting completed.');
+                        } 
+                        else 
+                        {
+                                   alert('Error while posting.');
+                        }
+                     });
+                     
+                   };
+                 
+                 
+                  (function(d, s, id){
+                      var js, fjs = d.getElementsByTagName(s)[0];
+                      if (d.getElementById(id)) {return;}
+                      js = d.createElement(s); js.id = id;
+                      js.src = "https://connect.facebook.net/en_US/sdk.js";
+                      fjs.parentNode.insertBefore(js, fjs);
+                    }(document, 'script', 'facebook-jssdk'));
+                    
+                     }
+    
 </script>

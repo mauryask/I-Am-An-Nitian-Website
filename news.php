@@ -180,7 +180,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
        
          <div id="news-img" class="news-img" style="margin-top:13px;margin-bottom:-15px;">
      <?php
-      echo  '<img alt="news" src="'.$row['file_path_1'].'"/>';
+      echo  '<img alt="news" src="'.$row['file_path_1'].'"/>';  
         ?>        
         </div>
 
