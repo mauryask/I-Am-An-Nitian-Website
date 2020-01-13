@@ -45,39 +45,65 @@
 }
 
 .card{
-  width:180px;
-  height:200px;
+  width:190px;
+  height:230px;
   background:#282828;
   cursor:pointer;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
   box-shadow: 0 2px 3px rgb(100, 100, 97);
 }
 
-.card .circle{
-  border-radius: 50%;
-  width:140px;
-  height:140px;
-  background:#ffa500;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.card .img-container{
+  width:190px;
+  height:130px;
   overflow: hidden;
 }
 
-.card p{
-  color:rgb(240, 231, 231);
-  padding:10px;
-  font-weight: bold;
+.img-container img{
+    width:190px;
+    height:160px;
+    
 }
 
-.circle p{
-  font-weight:bold;
-  font-size: 40px;
-  color:rgb(255, 255, 255);
+
+.card .heading 
+{
+  overflow: hidden;
+    height:2.8rem;
+    padding-top:12px;
+    padding-left:8px;
+    border-bottom:1px solid rgb(177, 170, 170);
 }
+
+.heading p{
+    color:rgb(223, 210, 210);
+    font-size:15px;
+}
+
+.card button{
+    background: rgb(40, 40, 189);
+    color:white;
+    cursor: pointer;
+    font-weight: bold;
+    height:35px;
+    width:100px;
+    border: none;
+    align-self: center;
+    border-radius: 18px;
+    margin-top:10px;
+}
+button .f{
+font-weight: bold;
+font-size: 18px;
+}
+
+button .share{
+    font-size:15px;
+}
+
+
 
 .copyright
 {
@@ -104,6 +130,8 @@
   margin-bottom:2rem;
 }
 
-
+.copyright{
+    display: none;
+}
 
 }

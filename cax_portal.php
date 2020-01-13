@@ -66,8 +66,8 @@ style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
 <ul>
 <li><a href="index.php" class="homex"><i class="fas fa-home" style="font-size:21px;"></i>  Home</a></li>
 
-<li><a href="more-news.php" class="home" ><i class="fab fa-dashcube" style="font-size:20px;"></i>  Leaderboard</a></li>
-<li ><a href="index.php#updf" class="homex" id="update_nav"><i  style="font-size:20px;" class="fas fa-share-alt"></i>  fb posts</a></li>
+<li><a href="cax_portal.php" class="home" ><i class="fab fa-dashcube" style="font-size:20px;"></i>  Leaderboard</a></li>
+<li ><a href="fb_posts.php" class="homex" id="update_nav"><i  style="font-size:20px;" class="fas fa-share-alt"></i>  fb posts</a></li>
 
 <li><a href="index.php#about" class="homex" id="about_nav"><i class="fab fa-fantasy-flight-games" style="font-size:21px;"></i>  tasks</a></li>
 <li><a href="index.php#about" class="homex" id="about_nav"><i class="fas fa-poll-h" style="font-size:20px;"></i>  guidelines</a></li>
@@ -122,7 +122,43 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
 
+<div class="container">
 
+<div class="card">
+
+<div class="circle">
+<p>12</p>
+</div>
+
+<p>Your Rank</p>
+
+</div>
+
+<div class="card">
+<div class="circle">
+<p>20</p>
+</div>
+<p>Posts Shared</p>
+</div>
+
+<div class="card">
+<div class="circle">
+<p>32</p>
+</div>
+<p>Tasks Completed</p>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+<p class="copyright">Copyright &copy; 2019 &nbsp; | &nbsp; I Am An Nitian</p>
 
 </div>
 </body>
