@@ -23,7 +23,6 @@ font-weight:bold;
 }
 
 include_once('connection.php');
-
 ?>
 
 <!DOCTYPE html>
@@ -52,41 +51,30 @@ td{
 </div>
 <button id="show"><i class="fas fa-bars"></i></button>
 <div class="mainx"  id="mainx">
-    <p class="mainh">Edit News</p>
+    <p class="mainh">Edit fb posts</p>
  <div class="edit-news">
 <table>
 <tr>
  <th>Id</th>
-<th>Image-1</th>
-<th>Image-2</th>
+<th>Image</th>
 <th>Heading</th>
 <th>News</th>
-<th>Edit</th>
 <th>Delete</th>
 </tr>
 
 <?php
-$query = "select * from tbl_images order by id desc";
+$query = "select * from fb_posts order by id desc";
 $result=mysqli_query($conn, $query);
 while($row=mysqli_fetch_array($result))
 {
   ?>
   <tr>
     <td style="font-weight:bold;"><?php echo $row['id']  ?></td>
-    <td><?php echo '<img class="imgx" alt="news" src="'.$row['file_path'].'"/>' ?></td>
-
-    <td><?php 
-    if($row['file_path_1'] != trim("pics/"))
-    echo '<img class="imgx" alt="news" src="'.$row['file_path_1'].'"/>';
-    else
-    echo '<img  alt="news" src="images/query.svg" width="70px" height="70px"/>';
-    ?></td>
+    <td><?php echo '<img class="imgx" alt="news" src="'.$row['url'].'"/>' ?></td>
     
     <td class="thead"><?php  echo $row['heading']  ?></td>
-    <td><?php echo $row['text'] ?></td>
-    <td> <a href="update_news.php?update=<?php echo  $row['id']; ?>">Edit</a> </td>
-
-    <td> <button name="delete" onclick="location.href='delete_news.php?del=<?php echo $row['id']; ?>'">Delete</button>
+    <td><?php echo $row['desp'] ?></td>
+    <td> <button name="delete" onclick="location.href='delete_fb_posts.php?del=<?php echo $row['id']; ?>'">Delete</button>
   </tr>
   <?php 
 }
@@ -101,11 +89,11 @@ while($row=mysqli_fetch_array($result))
     <div>
     <button id="home" type="button">Home</button>
     <button id="add" type="button" >Add news</button>
+    <button id="edit" type="button">Edit news</button>
     <button id="add_fb_posts" type="button">Add fb posts</button>
-    <button id="edit_fb_posts" type="button">Edit fb posts</button>
     <button id="feedback" type="button" >Feedback</button>
     <button id="statics" type="button">Statics</button>
-   
+ 
 </div>
 </div>
 
@@ -148,15 +136,6 @@ $("#statics").click(function(){
   })
 
 
-
-  // edit fb posts button  
-  $("#edit_fb_posts").click(function(){
-    TweenMax.to('#demo',0.5,{scaleX: 0});
-    setTimeout(function() {
-        window.location.href="edit_fb_posts.php";
-    },500); 
-  })
-
 // add fb posts button  
 $("#add_fb_posts").click(function(){
     TweenMax.to('#demo',0.5,{scaleX: 0});
@@ -164,6 +143,7 @@ $("#add_fb_posts").click(function(){
         window.location.href="upload_posts.php";
     },500); 
   })
+
 
 
 

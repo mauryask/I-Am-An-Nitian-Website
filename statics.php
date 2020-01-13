@@ -58,9 +58,13 @@ $query_x = "select count(*) as total_users from user";
 
 $query_y = "select count(*) as total_admins from admin";
 
+$query_z = "select count(*) as total_cas from ca";
+
 $result_x = mysqli_query($conn, $query_x);
 
 $result_y = mysqli_query($conn, $query_y);
+
+$result_z = mysqli_query($conn,$query_z);
 
 //total users
 
@@ -84,12 +88,24 @@ else
     $total_admins = 0;
 }
 
+
+//total cas
+
+if($row = mysqli_fetch_assoc($result_z))
+{
+  $total_cas = $row['total_cas'];
+}
+else
+{
+  $total_cas = 0;
+}
+
 ?>
 
 <div class="circle">
 <div><p><?php echo  $total_admins; ?></p><p style="font-size:18px;font-family:sans-serif;">Admin</p></div>
 <div><p><?php echo  $total_users; ?></p><p style="font-size:18px;font-family:sans-serif;">User</p></div>
-<div><p>0</p><p style="font-size:18px;font-family:sans-serif;">CA</p></div>
+<div><p><?php echo $total_cas ; ?></p><p style="font-size:18px;font-family:sans-serif;">CA</p></div>
 <div><p>0</p><p style="font-size:18px;font-family:sans-serif;">Others</p></div>
 </div>
 
@@ -99,10 +115,13 @@ else
 <div class="left-menu"  id="demo">
 <p><?php echo "Hello! ".$_SESSION['user_name'];  ?></p>
     <div>
-    <button id="add" type="button">add news</button>
-    <button id="edit" type="button">edit news</button>
-    <button id="feedback" type="button">feedback</button>
     <button id="home" type="button">Home</button>
+    <button id="add" type="button">Add news</button>
+    <button id="edit" type="button">Edit news</button>
+    <button id="add_fb_posts" type="button">Add fb posts</button>
+    <button id="edit_fb_posts" type="button">Edit fb posts</button>
+    <button id="feedback" type="button">Feedback</button>
+ 
    </div>
 </div>
 
@@ -153,6 +172,22 @@ else
     TweenMax.to('#demo',0.5,{scaleX: 0});
     setTimeout(function() {
         window.location.href="edit_news.php";
+    },500); 
+  })
+
+// edit fb posts button  
+$("#edit_fb_posts").click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0});
+    setTimeout(function() {
+        window.location.href="edit_fb_posts.php";
+    },500); 
+  })
+
+// add fb posts button  
+$("#add_fb_posts").click(function(){
+    TweenMax.to('#demo',0.5,{scaleX: 0});
+    setTimeout(function() {
+        window.location.href="upload_posts.php";
     },500); 
   })
 
