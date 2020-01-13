@@ -120,22 +120,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 
 <div class="container">
-<!--
-<div class="card">
 
-<div class="img-container">
-<img src="images/Bhopal.jpg" >
-</div>
-
-<div class="heading">
-<p>This is my heading of...</p>
-</div>
-<button type="button">
-  <span class="f">f</span> <span class="share">share</share>
-</button>
-</div>
-
--->
 <?php
 
 $query = "select * from fb_posts limit 3";
@@ -161,7 +146,7 @@ if(mysqli_num_rows($result)>0)
 <div class="heading">
 <?php echo '<p>'.$head.' ....</p>';?>
 </div>
-<button type="button">
+<button type="button" onclick="share()">
   <span class="f">f</span> <span class="share">share</share>
 </button>
 </div>
@@ -178,38 +163,7 @@ else
 
 ?>
 
-
-<!--
-
-<div class="card">
-<div class="img-container">
-<img src="images/Agartala.jpg" >
 </div>
-<div class="heading">
-<p>This is my heading of...</p>
-</div>
-<button type="button">
-  <span class="f">f</span> <span class="share">share</share>
-</button>
-</div>
-
-<div class="card">
-<div class="img-container">
-<img src="images/Meghalaya.jpg" >
-</div>
-<div class="heading">
-<p>This is my heading of...</p>
-</div>
-<button type="button">
-  <span class="f">f</span> <span class="share">share</share>
-</button>
-
-</div>
-
--->
-
-</div>
-
 
 <p class="copyright">Copyright &copy; 2019 &nbsp; | &nbsp; I Am An Nitian</p>
 
@@ -259,7 +213,7 @@ $('.menu-toggle').css('display','block');
 
             
             function share(){
-                   window.fbAsyncInit = function() {
+                  window.fbAsyncInit = function() {
                      FB.init({
                        appId      : '2572988066315608',
                        xfbml      : true,
@@ -282,8 +236,7 @@ $('.menu-toggle').css('display','block');
                      });
                      
                    };
-                 
-                 
+                                  
                   (function(d, s, id){
                       var js, fjs = d.getElementsByTagName(s)[0];
                       if (d.getElementById(id)) {return;}
@@ -291,7 +244,7 @@ $('.menu-toggle').css('display','block');
                       js.src = "https://connect.facebook.net/en_US/sdk.js";
                       fjs.parentNode.insertBefore(js, fjs);
                     }(document, 'script', 'facebook-jssdk'));
-                    
+
                      }
     
 </script>
