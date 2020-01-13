@@ -28,37 +28,54 @@
 
 
         <script>
-            function share(){
-                window.fbAsyncInit = function() {
-                  FB.init({
-                    appId      : 2358880627700744,
-                    cookie     : true,
-                    xfbml      : true,
-                    version    : 'v4.0'
-                  });
-                    
-                  FB.ui({
+            
+               function share(){
+                      window.fbAsyncInit = function() {
+                        FB.init({
+                          appId      : '2572988066315608',
+                          xfbml      : true,
+                          version    : 'v5.0'
+                        });
+                        FB.AppEvents.logPageView();
+                        
+                         FB.ui({
                         method: 'share',
                         href: 'https://iamannitian.co.in/news.php?id=46'
                         }, function(response){
-                            alert("Shared successfully!");
+                           if (response && !response.error_message)
+                           {
+                                      alert('Posting completed.');
+                           } 
+                           else 
+                           {
+                                      alert('Error while posting.');
+                           }
                         });
-                };
-              
-                (function(d, s, id){
-                   var js, fjs = d.getElementsByTagName(s)[0];
-                   if (d.getElementById(id)) {return;}
-                   js = d.createElement(s); js.id = id;
-                   js.src = "https://connect.facebook.net/en_US/sdk.js";
-                   fjs.parentNode.insertBefore(js, fjs);
-                 }(document, 'script', 'facebook-jssdk'));
+                        
+                      };
+                    
+                    
+                     (function(d, s, id){
+                         var js, fjs = d.getElementsByTagName(s)[0];
+                         if (d.getElementById(id)) {return;}
+                         js = d.createElement(s); js.id = id;
+                         js.src = "https://connect.facebook.net/en_US/sdk.js";
+                         fjs.parentNode.insertBefore(js, fjs);
+                       }(document, 'script', 'facebook-jssdk'));
+                       
+                        }
+                    
+                    
+                     
 
-                }
+
+                
               </script>
 
 
 
 <button id="btn" onclick="share()"><img src="images/facebook.svg" style="width:100%;height:100%;"></button>
+
 
 
 </body>

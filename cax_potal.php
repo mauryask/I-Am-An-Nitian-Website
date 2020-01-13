@@ -66,7 +66,7 @@ style="font-family: 'Dancing Script', cursive;" >I AM AN NITIAN</a></li>
 <ul>
 <li><a href="index.php" class="homex"><i class="fas fa-home" style="font-size:21px;"></i>  Home</a></li>
 
-<li><a href="more-news.php" class="homex" ><i class="fab fa-dashcube" style="font-size:20px;"></i>  Leaderboard</a></li>
+<li><a href="more-news.php" class="home" ><i class="fab fa-dashcube" style="font-size:20px;"></i>  Leaderboard</a></li>
 <li ><a href="index.php#updf" class="homex" id="update_nav"><i  style="font-size:20px;" class="fas fa-share-alt"></i>  fb posts</a></li>
 
 <li><a href="index.php#about" class="homex" id="about_nav"><i class="fab fa-fantasy-flight-games" style="font-size:21px;"></i>  tasks</a></li>
@@ -116,6 +116,10 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 </div>
 <img src="images/cutk.png" class="cut_nav" style="display:none;">
 </header>
+
+
+
+
 
 
 
