@@ -172,7 +172,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
             <p>Placements </p>
            </div>
 
-  <div class="appx" onclick="location.href='cax_portal.php'" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="1000">
+  <div class="appx" onclick="check_for_login()" data-aos-once="true" data-aos="flip-right" data-aos-duration="800" data-aos-delay="1000">
         <img src="images/team.svg">
         <p>CA Portal</p>
        </div>
@@ -855,5 +855,26 @@ Swal.fire({
 }
 
 });
+
+function check_for_login()
+{
+  $.ajax({
+		url:'check_for_login_to_access_ca_potal.php',
+		success: function(response)
+		{
+		   if(response == 1)
+		   {	
+        window.location.href='cax_portal.php';
+		   }
+		   else
+		   {
+			   show_log();
+		   }
+
+		}
+	   
+	});
+	
+}
 
 </script>

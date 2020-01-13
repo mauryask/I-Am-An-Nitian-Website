@@ -189,18 +189,20 @@ function cancel()
 {
   TweenMax.to('.signup',0.5,{scaleY: 0});
 }
+
 function show_log()
  {
   TweenMax.to('.login',0.5,{scaleY: 1});
  }
+ 
 function cancel_log()
 {
   TweenMax.to('.login',0.5,{scaleY: 0});
 }
 
+
 function show_signup()
 {
-
   TweenLite.to('.signup',0.5, { scaleY: 1});
 }
 
