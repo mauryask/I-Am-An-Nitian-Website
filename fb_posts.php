@@ -123,7 +123,7 @@ if( isset($_SESSION['user_type']) && !empty($_SESSION['user_type']))
 
 <?php
 
-$query = "select * from fb_posts limit 3";
+$query = "select * from fb_posts order by id desc limit 3";
 $result = mysqli_query($conn, $query);
 
 if(mysqli_num_rows($result)>0)
@@ -147,7 +147,7 @@ if(mysqli_num_rows($result)>0)
 <?php echo '<p>'.$head.' ....</p>';?>
 </div>
 <button type="button" onclick="share()">
-  <span class="f"> <span class="share">share</share>
+  <span class="f"> <span class="share">Share</share>
 </button>
 </div>
 
