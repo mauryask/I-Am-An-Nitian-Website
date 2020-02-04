@@ -1,42 +1,7 @@
-*{
-    margin:0;
-    padding:0;
-    font-family: sans-serif;
-    outline:none;
-    box-sizing: border-box;
-    }
-  
-    .progress-container{
-      top:0;
-      position:fixed;
-  }
-  
-    body{
-      background: rgb(240,240,240,1);
-  }
-  
 
-  #loader{
-    top:0;
-    width:100%;
-    height:100vh;
-    background:rgb(252,252,252) 
-    url('loaderx.gif');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:4rem;
-    position: fixed;
-    z-index:555;
-  } 
-  
-  .wrapper{
-    width:75%;
-    margin:0 auto;
-  }
-
-.wrapper .container 
+ .wrap_y .container 
 {
-  margin-top:13rem;
+  margin-top:7rem;
   display: flex;
   flex-direction:row;
   align-items: center;
@@ -45,15 +10,17 @@
 }
 
 .card{
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
   width:180px;
-  height:200px;
-  background:#282828;
+  height:250px;
+  background:rgba(80,80,80,1);
   cursor:pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 3px rgb(100, 100, 97);
+   border-radius: 7px;;
 }
 
 .card .circle{
@@ -93,9 +60,10 @@
 
 @media (max-width:921px)
 {
+
   .wrapper .container 
 {
-  margin-top:7rem;
+  margin-top:2rem;
   flex-direction: column;
   margin-bottom: 5rem;
 }

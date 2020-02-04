@@ -147,7 +147,7 @@ if(mysqli_num_rows($result)>0)
 <?php echo '<p>'.$head.' ....</p>';?>
 </div>
 <button type="button" onclick="share()">
-  <span class="f">f</span> <span class="share">share</share>
+  <span class="f"> <span class="share">share</share>
 </button>
 </div>
 
@@ -164,6 +164,8 @@ else
 ?>
 
 </div>
+
+<div class="earn"><p>share these posts on facebook to earn points<p></div>
 
 <p class="copyright">Copyright &copy; 2019 &nbsp; | &nbsp; I Am An Nitian</p>
 

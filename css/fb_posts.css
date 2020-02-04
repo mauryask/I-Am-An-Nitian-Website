@@ -127,6 +127,15 @@ button .share{
   position: absolute;
 }
 
+.earn{
+color:#282828fb;
+font-size: 18px;
+margin-top: 2rem;
+align-items: center;
+display: flex;
+justify-content: center;
+}
+
 @media (max-width:921px)
 {
   .wrapper .container 
