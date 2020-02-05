@@ -20,7 +20,6 @@ crossorigin="anonymous">
 <link href="css/welcome_to_ca.css" type="text/css" rel="stylesheet">
 
 
-
 </head>
 
 <body onload="loadme()">
@@ -31,7 +30,7 @@ crossorigin="anonymous">
 
 <div class="main">
 <p>Represent the fastest growing <br>community of engineers</p>
-<button onclick="location.href='cax_portal.php'">Continue</button>
+<button onclick="location.href='ca_portal.php'">Continue</button>
 </div>
 
 
