@@ -1,5 +1,2 @@
-# UNOFFICIAL
-
-Here I am testing something are you ready for this aliens
-
-SSH key added to your github account are you reday for this
+# I Am An NITian
+This is the web app which was developed for the biggest student community I Am an NITian.
